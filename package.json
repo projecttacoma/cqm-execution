@@ -1,22 +1,22 @@
 {
   "name": "js-ecqm-engine",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/executor.js",
   "scripts": {
     "test": "jasmine"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/projectcypress/js-ecqm-engine.git"
-  },
-  "author": "",
-  "license": "ISC",
+  "repository": "git+https://github.com/projectcypress/js-ecqm-engine.git",
+  "contributors": ["Louis Ades <lades@mitre.org>", "Michael O'Keefe <mokeefe@mitre.org>", "Adam Holmes <aholmes@mitre.org>"],
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/projectcypress/js-ecqm-engine/issues"
   },
   "homepage": "https://github.com/projectcypress/js-ecqm-engine#readme",
   "devDependencies": {
     "jasmine": "^2.9.0"
+  },
+  "dependencies": {
+    "mongoose": "^5.0.3"
   }
 }
