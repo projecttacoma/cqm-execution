@@ -4,7 +4,8 @@
   "description": "",
   "main": "lib/executor.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "lint": "eslint 'lib/*.js' 'lib/**/*.js'"
   },
   "repository": "git+https://github.com/projectcypress/js-ecqm-engine.git",
   "contributors": ["Louis Ades <lades@mitre.org>", "Michael O'Keefe <mokeefe@mitre.org>", "Adam Holmes <aholmes@mitre.org>"],
@@ -14,7 +15,10 @@
   },
   "homepage": "https://github.com/projectcypress/js-ecqm-engine#readme",
   "devDependencies": {
-    "jasmine": "^2.9.0"
+    "jasmine": "^2.9.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
     "mongoose": "^5.0.3"
