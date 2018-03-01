@@ -8,7 +8,11 @@
     "lint": "eslint 'lib/*.js' 'lib/**/*.js'"
   },
   "repository": "git+https://github.com/projectcypress/js-ecqm-engine.git",
-  "contributors": ["Louis Ades <lades@mitre.org>", "Michael O'Keefe <mokeefe@mitre.org>", "Adam Holmes <aholmes@mitre.org>"],
+  "contributors": [
+    "Louis Ades <lades@mitre.org>",
+    "Michael O'Keefe <mokeefe@mitre.org>",
+    "Adam Holmes <aholmes@mitre.org>"
+  ],
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/projectcypress/js-ecqm-engine/issues"
