@@ -1,5 +1,3 @@
-"use strict" ;
-
 var Handler = require('../lib/handler.js');
 var Result = require('../lib/models/result.js');
 
