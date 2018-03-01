@@ -1,8 +1,6 @@
-"use strict" ;
+const Result = require('../../lib/models/result.js');
 
-var Result = require('../../lib/models/result.js');
-
-describe("A result", function() {
+describe('A result', function() {
   const connectionInfo = "mongodb://127.0.0.1:27017/js-ecqme-test";
   let result = new Result(connectionInfo);
 
