@@ -50,10 +50,15 @@ describe("A MongoDB Patient Soure", function() {
 
     patient_mongo.save(function (err, doc) {
       if (err) return console.error(err);
+
+      patient_source.findPatients(patient_id_1, function(patient_source) {
+        if (err) return console.error(err);
+        
+        expect(patient_source.next().family_name).toBe('C');
+        expect(patient_source.next()).toBeNull();
+      });
+
     });
 
-    patient_source.findPatients(patient_id_1);
-    
-    expect(patient_source.next().family_name).toBe('C');
   });
 });

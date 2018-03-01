@@ -33,7 +33,7 @@ concat-map@0.0.1:
 
 cqm-models@projecttacoma/cqm-models#packagify:
   version "0.0.1"
-  resolved "https://codeload.github.com/projecttacoma/cqm-models/tar.gz/f114c48480feccfef007717e26a54c4434f6cb54"
+  resolved "https://codeload.github.com/projecttacoma/cqm-models/tar.gz/4d946b3886ce382fead463e7caa9f4fe9949fc2e"
   dependencies:
     mongoose "^5.0.7"
 
