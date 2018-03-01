@@ -11,12 +11,12 @@ describe('A MongoDB Patient Source', () => {
     ];
 
     patientSource.reset();
-    const patientId1 = patientSource.next().family_name;
-    const patientId2 = patientSource.next().family_name;
+    const patientId1 = patientSource.nextPatient().family_name;
+    const patientId2 = patientSource.nextPatient().family_name;
 
     expect(patientId1).not.toBe(patientId2);
 
-    const patient3 = patientSource.next();
+    const patient3 = patientSource.nextPatient();
 
     expect(patient3).toBeNull();
   });
@@ -28,15 +28,15 @@ describe('A MongoDB Patient Source', () => {
     ];
 
     patientSource.reset();
-    const patientId1 = patientSource.next().id;
+    const patientId1 = patientSource.nextPatient().id;
 
-    let patient2 = patientSource.next();
+    let patient2 = patientSource.nextPatient();
     while (patient2 != null) {
-      patient2 = patientSource.next();
+      patient2 = patientSource.nextPatient();
     }
 
     patientSource.reset();
-    const patientId2 = patientSource.next().id;
+    const patientId2 = patientSource.nextPatient().id;
 
     expect(patientId1).toBe(patientId2);
   });
@@ -50,8 +50,8 @@ describe('A MongoDB Patient Source', () => {
       if (err) return Error(err);
 
       patientSource.findPatients(patientId1, (self) => {
-        expect(self.next().family_name).toBe('C');
-        expect(self.next()).toBeNull();
+        expect(self.nextPatient().family_name).toBe('C');
+        expect(self.nextPatient()).toBeNull();
       });
       return null;
     });

@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jasmine",
-    "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/.js'"
+    "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js'"
   },
   "repository": "git+https://github.com/projectcypress/js-ecqm-engine.git",
   "contributors": [
@@ -25,8 +25,8 @@
     "jasmine": "^2.9.0"
   },
   "dependencies": {
-    "cqm-models": "projecttacoma/cqm-models#packagify",
+    "cqm-models": "projecttacoma/cqm-models",
     "lodash": "^4.17.5",
-    "mongoose": "^5.0.3"
+    "mongoose": "^5.0.7"
   }
 }
