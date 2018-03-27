@@ -13,3 +13,6 @@ node_modules/
 
 # Optional npm cache directory
 .npm
+
+# Editor files
+.vscode/
