@@ -1,6 +1,6 @@
 {
   "name": "js-ecqm-engine",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -22,7 +22,9 @@
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "jasmine": "^2.9.0"
+    "jasmine": "^2.9.0",
+    "sinon-mongoose": "^2.1.1",
+    "sinon": "^4"
   },
   "dependencies": {
     "cqm-models": "projecttacoma/cqm-models",

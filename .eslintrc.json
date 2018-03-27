@@ -1,7 +1,24 @@
 {
   "extends": "airbnb-base",
   "rules": {
-    "max-len": ["error", {"code": 100, "ignoreComments": true}]
+    "max-len": [
+      "error",
+      {
+        "code": 100,
+        "ignoreComments": true
+      }
+    ],
+    "prefer-destructuring": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ]
   },
   "env": {
     "jasmine": true
