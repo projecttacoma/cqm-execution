@@ -28,7 +28,7 @@ describe('A MongoDB Patient Source', () => {
     ];
 
     patientSource.reset();
-    const patientId1 = patientSource.nextPatient().id;
+    const patientId1 = patientSource.nextPatient()._id;
 
     let patient2 = patientSource.nextPatient();
     while (patient2 != null) {
@@ -36,15 +36,16 @@ describe('A MongoDB Patient Source', () => {
     }
 
     patientSource.reset();
-    const patientId2 = patientSource.nextPatient().id;
+    const patientId2 = patientSource.nextPatient()._id;
 
+    expect(patientId1, patientId2).toBeDefined();
     expect(patientId1).toBe(patientId2);
   });
 
   it('gets a list of MongoDB patients by one or more patient IDs', () => {
     const patientMongo = patientSource.QDMPatient({ given_names: ['A', 'B'], family_name: 'C' });
 
-    const patientId1 = patientMongo.id;
+    const patientId1 = patientMongo._id;
 
     patientMongo.save((err) => {
       if (err) return Error(err);
