@@ -1,0 +1,3879 @@
+{
+  "bundle_id": "5abb9cf2aeac507a9c761e5e",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "105401000119101",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus due to pancreatic injury (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "106281000119103",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pre-existing diabetes mellitus in mother complicating childbirth (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "111552007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus without complication (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "127012008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Lipoatrophic diabetes (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1481000119100",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus type 2 without retinopathy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "190330002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type 1 diabetes mellitus with hyperosmolar coma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "190331003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type 2 diabetes mellitus with hyperosmolar coma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "190368000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type I diabetes mellitus with ulcer (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "190369008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type I diabetes mellitus with gangrene (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "190372001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type I diabetes mellitus maturity onset (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "190389009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type II diabetes mellitus with ulcer (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "190390000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type II diabetes mellitus with gangrene (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "199229001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pre-existing type 1 diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "199230006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pre-existing type 2 diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "23045005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Insulin dependent diabetes mellitus type IA (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "237599002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Insulin treated type 2 diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "237604008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity onset diabetes of the young, type 2 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "237618001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Insulin-dependent diabetes mellitus secretory diarrhea syndrome (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "237619009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes-deafness syndrome maternally transmitted (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.00",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.01",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes mellitus without mention of complication, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.02",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes mellitus without mention of complication, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.03",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes mellitus without mention of complication, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.10",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with ketoacidosis, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.11",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with ketoacidosis, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.12",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with ketoacidosis, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.13",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with ketoacidosis, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.20",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with hyperosmolarity, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.21",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with hyperosmolarity, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.22",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with hyperosmolarity, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.23",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with hyperosmolarity, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.30",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with other coma, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.31",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with other coma, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.32",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with other coma, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.33",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with other coma, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.40",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with renal manifestations, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.41",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with renal manifestations, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.42",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with renal manifestations, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.43",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with renal manifestations, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.50",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with ophthalmic manifestations, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.51",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with ophthalmic manifestations, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.52",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with ophthalmic manifestations, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.53",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with ophthalmic manifestations, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.60",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with neurological manifestations, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.61",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with neurological manifestations, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.62",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with neurological manifestations, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.63",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with neurological manifestations, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.70",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with peripheral circulatory disorders, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.71",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with peripheral circulatory disorders, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.72",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with peripheral circulatory disorders, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.73",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with peripheral circulatory disorders, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.80",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with other specified manifestations, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.81",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with other specified manifestations, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.82",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with other specified manifestations, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.83",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with other specified manifestations, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.90",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with unspecified complication, type II or unspecified type, not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.91",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with unspecified complication, type I [juvenile type], not stated as uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.92",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with unspecified complication, type II or unspecified type, uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "250.93",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes with unspecified complication, type I [juvenile type], uncontrolled",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "2751001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Fibrocalculous pancreatic diabetes (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "28032008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Insulin dependent diabetes mellitus type IB (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "31321000119102",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus type 1 without retinopathy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "313435000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type I diabetes mellitus without complication (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "313436004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type II diabetes mellitus without complication (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314771006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type I diabetes mellitus with hypoglycemic coma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314772004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2016-09",
+      "display_name": "Type II diabetes mellitus with hypoglycemic coma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314893005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type I diabetes mellitus with arthropathy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314894004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2014-09",
+      "display_name": "Type I diabetes mellitus with neuropathic arthropathy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314902007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type II diabetes mellitus with peripheral angiopathy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314903002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type II diabetes mellitus with arthropathy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314904008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type II diabetes mellitus with neuropathic arthropathy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "33559001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pineal hyperplasia AND diabetes mellitus syndrome (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "357.2",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Polyneuropathy in diabetes",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "359642000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus type 2 in nonobese (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "362.01",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Background diabetic retinopathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "362.02",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Proliferative diabetic retinopathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "362.03",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Nonproliferative diabetic retinopathy NOS",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "362.04",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Mild nonproliferative diabetic retinopathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "362.05",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Moderate nonproliferative diabetic retinopathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "362.06",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Severe nonproliferative diabetic retinopathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "362.07",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetic macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "366.41",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetic cataract",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "426875007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Latent autoimmune diabetes mellitus in adult (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "427089005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus due to cystic fibrosis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "42954008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus associated with receptor abnormality (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "44054006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus type 2 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "445260006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Posttransplant diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "446641003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-03",
+      "display_name": "Renal cysts and diabetes syndrome (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "46635009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus type 1 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "4783006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "51002006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus associated with pancreatic disease (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "59079001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus associated with hormonal etiology (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "5969009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus associated with genetic syndrome (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609561005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609562003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity onset diabetes of the young, type 1 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609563008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pre-existing diabetes mellitus in pregnancy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609564002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pre-existing type 1 diabetes mellitus in pregnancy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609566000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pregnancy and type 1 diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609567009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pre-existing type 2 diabetes mellitus in pregnancy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609568004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus due to genetic defect in beta cell function (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609569007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus due to genetic defect in insulin action (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609570008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young, type 3 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609571007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young, type 4 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609572000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young, type 5 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609573005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young, type 6 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609574004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young, type 7 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609575003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young, type 8 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609576002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young, type 9 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609577006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young, type 10 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "609578001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maturity-onset diabetes of the young, type 11 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "648.00",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes mellitus of mother, complicating pregnancy, childbirth, or the puerperium, unspecified as to episode of care or not applicable",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "648.01",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes mellitus of mother, complicating pregnancy, childbirth, or the puerperium, delivered, with or without mention of antepartum condition",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "648.02",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes mellitus of mother, complicating pregnancy, childbirth, or the puerperium, delivered, with mention of postpartum complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "648.03",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes mellitus of mother, complicating pregnancy, childbirth, or the puerperium, antepartum condition or complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "648.04",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Diabetes mellitus of mother, complicating pregnancy, childbirth, or the puerperium, postpartum condition or complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "70694009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus AND insipidus with optic atrophy AND deafness (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "709147009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Gingivitis co-occurrent with diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "716362006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Gingival disease co-occurrent with diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "71791000119104",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Peripheral neuropathy co-occurrent and due to type 1 diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "719216001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypoglycemic coma co-occurrent and due to diabetes mellitus type II (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "75524006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Malnutrition related diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "75682002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus caused by insulin receptor antibodies (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "76751001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus in mother complicating pregnancy, childbirth AND/OR puerperium (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "81531005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus type 2 in obese (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "91352004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diabetes mellitus due to structurally abnormal insulin (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "9859006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Type 2 diabetes mellitus with acanthosis nigricans (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.10",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with ketoacidosis without coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.11",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with ketoacidosis with coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.21",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic nephropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.22",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic chronic kidney disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.29",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with other diabetic kidney complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.311",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with unspecified diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.319",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with unspecified diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.321",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3211",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3212",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3213",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3219",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.329",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3291",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3292",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3293",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3299",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.331",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3311",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3312",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3313",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3319",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.339",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3391",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3392",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3393",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3399",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.341",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3411",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3412",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3413",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3419",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.349",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3491",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3492",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3493",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3499",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.351",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3511",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3512",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3513",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3519",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3521",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3522",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3523",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3529",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3531",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3532",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3533",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3539",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3541",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3542",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3543",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3549",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3551",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3552",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3553",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3559",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.359",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3591",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3592",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3593",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.3599",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.36",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic cataract",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.37X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.37X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.37X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.37X9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.39",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with other diabetic ophthalmic complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.40",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic neuropathy, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.41",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic mononeuropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.42",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic polyneuropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.43",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic autonomic (poly)neuropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.44",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic amyotrophy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.49",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with other diabetic neurological complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.51",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic peripheral angiopathy without gangrene",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.52",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic peripheral angiopathy with gangrene",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.59",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with other circulatory complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.610",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic neuropathic arthropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.618",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with other diabetic arthropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.620",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with diabetic dermatitis",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.621",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with foot ulcer",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.622",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with other skin ulcer",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.628",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with other skin complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.630",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with periodontal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.638",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with other oral complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.641",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with hypoglycemia with coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.649",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with hypoglycemia without coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.65",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with hyperglycemia",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.69",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with other specified complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.8",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus with unspecified complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E10.9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 1 diabetes mellitus without complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.00",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.01",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with hyperosmolarity with coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.10",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with ketoacidosis without coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.11",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with ketoacidosis with coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.21",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic nephropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.22",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.29",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with other diabetic kidney complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.311",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with unspecified diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.319",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.321",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3211",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3212",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3213",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3219",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.329",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3291",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3292",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3293",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3299",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.331",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3311",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3312",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3313",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3319",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.339",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3391",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3392",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3393",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3399",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.341",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3411",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3412",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3413",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3419",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.349",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3491",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3492",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3493",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3499",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.351",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3511",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3512",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3513",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3519",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3521",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3522",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3523",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3529",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3531",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3532",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3533",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3539",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3541",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3542",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3543",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3549",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3551",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3552",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3553",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3559",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.359",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3591",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3592",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3593",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.3599",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.36",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic cataract",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.37X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.37X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.37X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.37X9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.39",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with other diabetic ophthalmic complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.40",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic neuropathy, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.41",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic mononeuropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.42",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.43",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic autonomic (poly)neuropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.44",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic amyotrophy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.49",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with other diabetic neurological complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.51",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic peripheral angiopathy without gangrene",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.52",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.59",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with other circulatory complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.610",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic neuropathic arthropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.618",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with other diabetic arthropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.620",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with diabetic dermatitis",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.621",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with foot ulcer",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.622",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with other skin ulcer",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.628",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with other skin complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.630",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with periodontal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.638",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with other oral complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.641",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with hypoglycemia with coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.649",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with hypoglycemia without coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.65",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with hyperglycemia",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.69",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with other specified complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.8",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus with unspecified complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E11.9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Type 2 diabetes mellitus without complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.00",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.01",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with hyperosmolarity with coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.10",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with ketoacidosis without coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.11",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with ketoacidosis with coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.21",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic nephropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.22",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic chronic kidney disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.29",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with other diabetic kidney complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.311",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with unspecified diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.319",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with unspecified diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.321",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3211",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3212",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3213",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3219",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.329",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3291",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3292",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3293",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3299",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.331",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3311",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3312",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3313",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3319",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.339",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3391",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3392",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3393",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3399",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.341",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3411",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3412",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3413",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3419",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.349",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3491",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3492",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3493",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3499",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.351",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3511",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3512",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3513",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3519",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3521",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3522",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3523",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3529",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3531",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3532",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3533",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3539",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3541",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3542",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3543",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3549",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3551",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3552",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3553",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3559",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.359",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3591",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3592",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3593",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.3599",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.36",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic cataract",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.37X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.37X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.37X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.37X9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.39",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with other diabetic ophthalmic complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.40",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic neuropathy, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.41",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic mononeuropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.42",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic polyneuropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.43",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic autonomic (poly)neuropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.44",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic amyotrophy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.49",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with other diabetic neurological complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.51",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic peripheral angiopathy without gangrene",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.52",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic peripheral angiopathy with gangrene",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.59",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with other circulatory complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.610",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic neuropathic arthropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.618",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with other diabetic arthropathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.620",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with diabetic dermatitis",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.621",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with foot ulcer",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.622",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with other skin ulcer",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.628",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with other skin complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.630",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with periodontal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.638",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with other oral complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.641",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with hypoglycemia with coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.649",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with hypoglycemia without coma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.65",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with hyperglycemia",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.69",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with other specified complication",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.8",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus with unspecified complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E13.9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified diabetes mellitus without complications",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.011",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 1 diabetes mellitus, in pregnancy, first trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.012",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 1 diabetes mellitus, in pregnancy, second trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.013",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 1 diabetes mellitus, in pregnancy, third trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.019",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 1 diabetes mellitus, in pregnancy, unspecified trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.02",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 1 diabetes mellitus, in childbirth",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.03",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 1 diabetes mellitus, in the puerperium",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.111",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 2 diabetes mellitus, in pregnancy, first trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.112",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 2 diabetes mellitus, in pregnancy, second trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.113",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 2 diabetes mellitus, in pregnancy, third trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.119",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 2 diabetes mellitus, in pregnancy, unspecified trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.12",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 2 diabetes mellitus, in childbirth",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.13",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pre-existing type 2 diabetes mellitus, in the puerperium",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.311",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified pre-existing diabetes mellitus in pregnancy, first trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.312",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified pre-existing diabetes mellitus in pregnancy, second trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.313",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified pre-existing diabetes mellitus in pregnancy, third trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.319",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified pre-existing diabetes mellitus in pregnancy, unspecified trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.32",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified pre-existing diabetes mellitus in childbirth",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.33",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified pre-existing diabetes mellitus in the puerperium",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.811",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other pre-existing diabetes mellitus in pregnancy, first trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.812",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other pre-existing diabetes mellitus in pregnancy, second trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.813",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other pre-existing diabetes mellitus in pregnancy, third trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.819",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other pre-existing diabetes mellitus in pregnancy, unspecified trimester",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.82",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other pre-existing diabetes mellitus in childbirth",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "O24.83",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other pre-existing diabetes mellitus in the puerperium",
+      "white_list": false
+    }
+  ],
+  "display_name": "Diabetes",
+  "oid": "2.16.840.1.113883.3.464.1003.103.12.1001",
+  "version": "Draft-F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC"
+}

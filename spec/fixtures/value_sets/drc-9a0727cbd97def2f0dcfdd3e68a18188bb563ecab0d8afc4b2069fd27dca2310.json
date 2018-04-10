@@ -1,0 +1,18 @@
+{
+  "bundle_id": null,
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "371828006",
+      "code_system": null,
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "urn:hl7:version:2013-09",
+      "display_name": "Patient deceased during stay (discharge status = dead) (finding)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Patient deceased during stay (discharge status = dead) (finding)",
+  "oid": "drc-9a0727cbd97def2f0dcfdd3e68a18188bb563ecab0d8afc4b2069fd27dca2310",
+  "version": ""
+}

@@ -12,10 +12,12 @@ describe('A MongoDB ValueSet Source', () => {
   const valueSetSource = new ValueSetSource(connectionInfo);
   const vs1 = new ValueSet({
     oid: '12345-67890-cba',
+    version: '',
     display_name: 'Test Valueset A',
   });
   const vs2 = new ValueSet({
     oid: '1122334455-6677889900-abc',
+    version: '',
     display_name: 'Test Valueset B',
   });
   const mes1 = new Measure({
@@ -33,10 +35,10 @@ describe('A MongoDB ValueSet Source', () => {
     it('returns a list of value sets', () => {
       mock.yields(null, [vs1]);
 
-      Promise.resolve(valueSetSource.findValueSetsByOidForMeasures(mes1))
+      Promise.resolve(valueSetSource.findValueSetsByMongoidForMeasures(mes1))
         .then((response) => {
           expect(response[0]).toBe(vs1);
-          expect(valueSetSource.valueSetsByOid['12345-67890-cba']).toBe(vs1);
+          expect(valueSetSource.valueSetsByMongoid[vs1.id]).toBe(vs1);
         });
     });
   });
@@ -45,10 +47,10 @@ describe('A MongoDB ValueSet Source', () => {
     it('returns a list of value sets', () => {
       mock.yields(null, [vs1, vs2]);
 
-      Promise.resolve(valueSetSource.findValueSetsByOidForMeasures([mes1, mes2]))
+      Promise.resolve(valueSetSource.findValueSetsByMongoidForMeasures([mes1, mes2]))
         .then((response) => {
           expect(response.length).toBe(2);
-          expect(valueSetSource.valueSetsByOid['12345-67890-cba']);
+          expect(valueSetSource.valueSetsByMongoid[vs2.id]).toBe(vs2);
         });
     });
   });

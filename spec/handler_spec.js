@@ -10,7 +10,7 @@ describe('A handler', () => {
   });
 
   it('stores and keeps track of calculation results by patient and by measure id', () => {
-    const dummyPatient = { id: 12345 };
+    const dummyPatient = { _id: 12345 };
 
     const dummyResult = new Result(connectionInfo);
     dummyResult.embedded.test_id = '11111';
@@ -21,7 +21,7 @@ describe('A handler', () => {
   });
 
   it('wraps up result storage to the db, both indidivual and aggregate', () => {
-    const dummyPatient = { id: 12345 };
+    const dummyPatient = { _id: 12345 };
     const dummyResult = new Result(connectionInfo);
     dummyResult.embedded.test_id = '11111';
     dummyResult.embedded.measure_id = '54321';

@@ -1,0 +1,18 @@
+{
+  "bundle_id": null,
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "428371000124100",
+      "code_system": null,
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "urn:hl7:version:2017-09",
+      "display_name": "Discharge to healthcare facility for hospice care (procedure)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Discharge to healthcare facility for hospice care (procedure)",
+  "oid": "drc-2bbe231b80adbbda1f62e54d2e939c81babe4ae2c40bf6e55b22e5b6d44f4e02",
+  "version": ""
+}

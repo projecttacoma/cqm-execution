@@ -23,8 +23,9 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "jasmine": "^2.9.0",
-    "sinon-mongoose": "^2.1.1",
-    "sinon": "^4"
+    "require-directory": "^2.1.1",
+    "sinon": "^4",
+    "sinon-mongoose": "^2.1.1"
   },
   "dependencies": {
     "cql-execution": "^1.2.0",

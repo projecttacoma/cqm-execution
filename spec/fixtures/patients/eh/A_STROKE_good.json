@@ -1,0 +1,281 @@
+{
+  "birth_datetime": "1937-03-06T10:30:00.000-05:00",
+  "bundle_id": "5abb9cd8aeac507a9c761e5c",
+  "data_element_codes": [
+
+  ],
+  "data_elements": [
+    {
+      "anatomical_location_site": null,
+      "author_datetime": "2012-05-21T11:30:00.000-04:00",
+      "category": "condition",
+      "data_element_codes": [
+        {
+          "code_system": "ICD-9-CM",
+          "code": "427.31"
+        },
+        {
+          "code_system": "ICD-10-CM",
+          "code": "I48.1"
+        },
+        {
+          "code_system": "SNOMED-CT",
+          "code": "233911009"
+        }
+      ],
+      "description": "Diagnosis: Atrial Fibrillation/Flutter",
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalence_period": {
+        "low": "2012-05-21T15:30:00.00+0000",
+        "high": "9999-12-31T23:59:59.99+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "qdm_version": "5.3",
+      "qrda_oid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "admission_source": null,
+      "author_datetime": "2012-04-02T13:00:00.000-04:00",
+      "category": "encounter",
+      "data_element_codes": [
+        {
+          "code_system": "SNOMED-CT",
+          "code": "4525004"
+        }
+      ],
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnoses": [
+
+      ],
+      "discharge_disposition": null,
+      "facility_locations": [
+
+      ],
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.5",
+      "length_of_stay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negation_rationale": null,
+      "principal_diagnosis": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "relevant_period": {
+        "low": "2012-04-02T17:00:00.00+0000",
+        "high": "2012-04-02T21:00:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admission_source": null,
+      "author_datetime": "2012-05-21T11:00:00.000-04:00",
+      "category": "encounter",
+      "data_element_codes": [
+        {
+          "code_system": "SNOMED-CT",
+          "code": "4525004"
+        }
+      ],
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnoses": [
+
+      ],
+      "discharge_disposition": null,
+      "facility_locations": [
+
+      ],
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.5",
+      "length_of_stay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negation_rationale": null,
+      "principal_diagnosis": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "relevant_period": {
+        "low": "2012-05-21T15:00:00.00+0000",
+        "high": "2012-05-21T16:30:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admission_source": null,
+      "author_datetime": "2012-05-21T13:00:00.000-04:00",
+      "category": "encounter",
+      "data_element_codes": [
+        {
+          "code_system": "SNOMED-CT",
+          "code": "32485007"
+        }
+      ],
+      "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+      "diagnoses": [
+
+      ],
+      "discharge_disposition": null,
+      "facility_locations": [
+
+      ],
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.5",
+      "length_of_stay": {
+        "value": 3,
+        "unit": "days"
+      },
+      "negation_rationale": null,
+      "principal_diagnosis": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "relevant_period": {
+        "low": "2012-05-21T17:00:00.00+0000",
+        "high": "2012-05-24T18:00:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "author_datetime": "2012-05-21T12:15:00.000-04:00",
+      "category": "encounter",
+      "data_element_codes": [
+        {
+          "code_system": "SNOMED-CT",
+          "code": "19951005"
+        }
+      ],
+      "description": "Encounter, Order: Decision to Admit to Hospital Inpatient",
+      "facility_location": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.27",
+      "negation_rationale": null,
+      "qdm_status": "order",
+      "qdm_version": "5.3",
+      "reason": null,
+      "_type": "QDM::EncounterOrder"
+    },
+    {
+      "author_datetime": "2012-05-21T17:00:00.000-04:00",
+      "category": "laboratory_test",
+      "components": [
+
+      ],
+      "data_element_codes": [
+        {
+          "code_system": "LOINC",
+          "code": "18261-8"
+        }
+      ],
+      "description": "Laboratory Test, Performed: LDL-c",
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.42",
+      "method": null,
+      "negation_rationale": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "reason": null,
+      "reference_range": null,
+      "relevant_period": {
+        "low": "2012-05-21T21:00:00.00+0000",
+        "high": "2012-05-21T21:00:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "result": {
+        "unit": "mg/dL",
+        "value": 110
+      },
+      "result_datetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
+    },
+    {
+      "birth_datetime": "1937-03-06T10:30:00.000-05:00",
+      "category": "patient_characteristic",
+      "data_element_codes": [
+
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdm_status": "birthdate",
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "data_element_codes": [
+        {
+          "code": "2186-5",
+          "code_system": "CDC Race",
+          "descriptor": "Not Hispanic or Latino",
+          "code_system_oid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdm_status": "ethnicity",
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "data_element_codes": [
+
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.58",
+      "qdm_status": "payer",
+      "qdm_version": "5.3",
+      "relevant_period": {
+        "low": "2008-01-01T05:00:00.000+00:00",
+        "high": null,
+        "low_closed": true,
+        "high_closed": true
+      },
+      "_type": "QDM::PatientCharacteristicPayer"
+    },
+    {
+      "category": "patient_characteristic",
+      "data_element_codes": [
+        {
+          "code": "1002-5",
+          "code_system": "CDC Race",
+          "descriptor": "American Indian or Alaska Native",
+          "code_system_oid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdm_status": "race",
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "data_element_codes": [
+        {
+          "code": "M",
+          "code_system": "Administrative sex (HL7)",
+          "descriptor": null,
+          "code_system_oid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "description": null,
+  "family_name": "STROKE",
+  "given_names": [
+    "A"
+  ],
+  "qdm_version": "5.3",
+  "_type": "QDM::Patient"
+}

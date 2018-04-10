@@ -1,0 +1,27 @@
+{
+  "bundle_id": "5abb9cf2aeac507a9c761e5e",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "2135-2",
+      "code_system": "2.16.840.1.113883.6.238",
+      "code_system_name": "CDC Race",
+      "code_system_version": "1.1",
+      "display_name": "Hispanic or Latino",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "2186-5",
+      "code_system": "2.16.840.1.113883.6.238",
+      "code_system_name": "CDC Race",
+      "code_system_version": "1.1",
+      "display_name": "Not Hispanic or Latino",
+      "white_list": false
+    }
+  ],
+  "display_name": "Ethnicity",
+  "oid": "2.16.840.1.114222.4.11.837",
+  "version": "Draft-F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC"
+}

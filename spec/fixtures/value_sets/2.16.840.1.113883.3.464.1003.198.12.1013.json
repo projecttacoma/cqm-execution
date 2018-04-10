@@ -1,0 +1,36 @@
+{
+  "bundle_id": "5abb9cf2aeac507a9c761e5e",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "17856-6",
+      "code_system": "2.16.840.1.113883.6.1",
+      "code_system_name": "LOINC",
+      "code_system_version": "2.63",
+      "display_name": "Hemoglobin A1c/Hemoglobin.total in Blood by HPLC",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "4548-4",
+      "code_system": "2.16.840.1.113883.6.1",
+      "code_system_name": "LOINC",
+      "code_system_version": "2.63",
+      "display_name": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "4549-2",
+      "code_system": "2.16.840.1.113883.6.1",
+      "code_system_name": "LOINC",
+      "code_system_version": "2.63",
+      "display_name": "Hemoglobin A1c/Hemoglobin.total in Blood by Electrophoresis",
+      "white_list": false
+    }
+  ],
+  "display_name": "HbA1c Laboratory Test",
+  "oid": "2.16.840.1.113883.3.464.1003.198.12.1013",
+  "version": "Draft-F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC"
+}
