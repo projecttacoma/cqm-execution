@@ -201,9 +201,9 @@ cql-execution@^1.2.0:
     moment "^2.20.1"
     ucum "0.0.7"
 
-cqm-models@projecttacoma/cqm-models:
-  version "0.3.0"
-  resolved "https://codeload.github.com/projecttacoma/cqm-models/tar.gz/7cdfae4c96666dad16fa1119ae8d696dabbc5eb2"
+cqm-models@projecttacoma/cqm-models#patient_fix:
+  version "0.6.0"
+  resolved "https://codeload.github.com/projecttacoma/cqm-models/tar.gz/58688591af835b91ea69c2b33fbb9245e4163608"
   dependencies:
     mongoose "^5.0.7"
 
