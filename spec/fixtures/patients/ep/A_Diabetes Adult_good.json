@@ -1,0 +1,378 @@
+{
+  "birth_datetime": "1965-02-01T10:00:00.000-05:00",
+  "bundle_id": "5abb9cf2aeac507a9c761e5e",
+  "data_element_codes": [
+
+  ],
+  "data_elements": [
+    {
+      "anatomical_location_site": null,
+      "author_datetime": "2007-03-04T03:00:00.000-05:00",
+      "category": "condition",
+      "data_element_codes": [
+        {
+          "code_system": "ICD-9-CM",
+          "code": "897.6"
+        },
+        {
+          "code_system": "ICD-10-CM",
+          "code": "Q72.03"
+        }
+      ],
+      "description": "Diagnosis: Bilateral amputation of leg below or above knee",
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalence_period": {
+        "low": "2007-03-04T08:00:00.00+0000",
+        "high": "9999-12-31T23:59:59.99+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "qdm_version": "5.3",
+      "qrda_oid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomical_location_site": null,
+      "author_datetime": "2012-02-26T10:00:00.000-05:00",
+      "category": "condition",
+      "data_element_codes": [
+        {
+          "code_system": "SNOMED-CT",
+          "code": "298674008"
+        },
+        {
+          "code_system": "ICD-10-CM",
+          "code": "M54.5"
+        }
+      ],
+      "description": "Diagnosis: Uncomplicated Low Back Pain",
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalence_period": {
+        "low": "2012-02-26T15:00:00.00+0000",
+        "high": "2012-09-07T15:00:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "qdm_version": "5.3",
+      "qrda_oid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomical_location_site": null,
+      "author_datetime": "1992-02-26T10:00:00.000-05:00",
+      "category": "condition",
+      "data_element_codes": [
+        {
+          "code_system": "SNOMED-CT",
+          "code": "313435000"
+        },
+        {
+          "code_system": "ICD-9-CM",
+          "code": "250.01"
+        },
+        {
+          "code_system": "ICD-10-CM",
+          "code": "E13.9"
+        }
+      ],
+      "description": "Diagnosis: Diabetes",
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalence_period": {
+        "low": "1992-02-26T15:00:00.00+0000",
+        "high": "9999-12-31T23:59:59.99+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "qdm_version": "5.3",
+      "qrda_oid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "admission_source": null,
+      "author_datetime": "2012-02-26T09:00:00.000-05:00",
+      "category": "encounter",
+      "data_element_codes": [
+        {
+          "code_system": "CPT",
+          "code": "99203"
+        }
+      ],
+      "description": "Encounter, Performed: Office Visit",
+      "diagnoses": [
+
+      ],
+      "discharge_disposition": null,
+      "facility_locations": [
+
+      ],
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.5",
+      "length_of_stay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negation_rationale": null,
+      "principal_diagnosis": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "relevant_period": {
+        "low": "2012-02-26T14:00:00.00+0000",
+        "high": "2012-02-26T15:00:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admission_source": null,
+      "author_datetime": "2012-03-23T11:00:00.000-04:00",
+      "category": "encounter",
+      "data_element_codes": [
+        {
+          "code_system": "CPT",
+          "code": "98942"
+        }
+      ],
+      "description": "Encounter, Performed: Osteopathic or Chiropractic Manipulative Treatment",
+      "diagnoses": [
+
+      ],
+      "discharge_disposition": null,
+      "facility_locations": [
+
+      ],
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.5",
+      "length_of_stay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negation_rationale": null,
+      "principal_diagnosis": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "relevant_period": {
+        "low": "2012-03-23T15:00:00.00+0000",
+        "high": "2012-03-23T15:30:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "author_datetime": "2012-07-22T04:30:00.000-04:00",
+      "category": "diagnostic_study",
+      "components": [
+
+      ],
+      "data_element_codes": [
+        {
+          "code_system": "LOINC",
+          "code": "42410-1"
+        }
+      ],
+      "description": "Diagnostic Study, Performed: X-Ray of Lower Spine",
+      "facility_location": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.23",
+      "method": null,
+      "negation_rationale": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "reason": null,
+      "relevant_period": {
+        "low": "2012-07-22T08:30:00.00+0000",
+        "high": "2012-07-22T09:00:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "result": null,
+      "result_datetime": null,
+      "status": null,
+      "_type": "QDM::DiagnosticStudyPerformed"
+    },
+    {
+      "author_datetime": "2012-02-26T09:00:00.000-05:00",
+      "category": "laboratory_test",
+      "components": [
+
+      ],
+      "data_element_codes": [
+        {
+          "code_system": "LOINC",
+          "code": "17856-6"
+        }
+      ],
+      "description": "Laboratory Test, Performed: HbA1c Laboratory Test",
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.42",
+      "method": null,
+      "negation_rationale": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "reason": null,
+      "reference_range": null,
+      "relevant_period": {
+        "low": "2012-02-26T14:00:00.00+0000",
+        "high": "2012-02-26T14:00:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "result": {
+        "unit": "%",
+        "value": 8
+      },
+      "result_datetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
+    },
+    {
+      "author_datetime": "2012-02-26T09:00:00.000-05:00",
+      "category": "laboratory_test",
+      "components": [
+
+      ],
+      "data_element_codes": [
+        {
+          "code_system": "LOINC",
+          "code": "1753-3"
+        }
+      ],
+      "description": "Laboratory Test, Performed: Urine Protein Tests",
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.42",
+      "method": null,
+      "negation_rationale": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "reason": null,
+      "reference_range": null,
+      "relevant_period": {
+        "low": "2012-02-26T14:00:00.00+0000",
+        "high": "2012-02-26T14:00:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "result": null,
+      "result_datetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
+    },
+    {
+      "author_datetime": "2012-02-26T09:00:00.000-05:00",
+      "category": "laboratory_test",
+      "components": [
+
+      ],
+      "data_element_codes": [
+        {
+          "code_system": "LOINC",
+          "code": "2089-1"
+        }
+      ],
+      "description": "Laboratory Test, Performed: LDL Test",
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.42",
+      "method": null,
+      "negation_rationale": null,
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "reason": null,
+      "reference_range": null,
+      "relevant_period": {
+        "low": "2012-02-26T14:00:00.00+0000",
+        "high": "2012-02-26T14:00:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "result": {
+        "unit": "mg/dL",
+        "value": 98
+      },
+      "result_datetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
+    },
+    {
+      "birth_datetime": "1965-02-01T10:00:00.000-05:00",
+      "category": "patient_characteristic",
+      "data_element_codes": [
+
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdm_status": "birthdate",
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "data_element_codes": [
+        {
+          "code": "2186-5",
+          "code_system": "CDC Race",
+          "descriptor": "Not Hispanic or Latino",
+          "code_system_oid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdm_status": "ethnicity",
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "data_element_codes": [
+
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.58",
+      "qdm_status": "payer",
+      "qdm_version": "5.3",
+      "relevant_period": {
+        "low": "2008-01-01T05:00:00.000+00:00",
+        "high": null,
+        "low_closed": true,
+        "high_closed": true
+      },
+      "_type": "QDM::PatientCharacteristicPayer"
+    },
+    {
+      "category": "patient_characteristic",
+      "data_element_codes": [
+        {
+          "code": "1002-5",
+          "code_system": "CDC Race",
+          "descriptor": "American Indian or Alaska Native",
+          "code_system_oid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdm_status": "race",
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "data_element_codes": [
+        {
+          "code": "F",
+          "code_system": "Administrative sex (HL7)",
+          "descriptor": null,
+          "code_system_oid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "description": null,
+  "family_name": "Diabetes Adult",
+  "given_names": [
+    "A"
+  ],
+  "qdm_version": "5.3",
+  "_type": "QDM::Patient"
+}

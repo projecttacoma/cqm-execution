@@ -1,0 +1,18 @@
+{
+  "bundle_id": null,
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "428361000124107",
+      "code_system": null,
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "urn:hl7:version:2017-09",
+      "display_name": "Discharge to home for hospice care (procedure)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Discharge to home for hospice care (procedure)",
+  "oid": "drc-7e63a6e0afd51d085689e8824f313c508a0f9b1c39974cc93b34536627eed531",
+  "version": ""
+}

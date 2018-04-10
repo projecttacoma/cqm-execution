@@ -203,7 +203,7 @@ cql-execution@^1.2.0:
 
 cqm-models@projecttacoma/cqm-models:
   version "0.3.0"
-  resolved "https://codeload.github.com/projecttacoma/cqm-models/tar.gz/e5e68b76c2de0147efa82bf99fc05f5405eb8a07"
+  resolved "https://codeload.github.com/projecttacoma/cqm-models/tar.gz/7cdfae4c96666dad16fa1119ae8d696dabbc5eb2"
   dependencies:
     mongoose "^5.0.7"
 
@@ -945,6 +945,10 @@ readable-stream@^2.2.2:
 regexp-clone@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/regexp-clone/-/regexp-clone-0.0.1.tgz#a7c2e09891fdbf38fbb10d376fb73003e68ac589"
+
+require-directory@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
 
 require-uncached@^1.0.3:
   version "1.0.3"

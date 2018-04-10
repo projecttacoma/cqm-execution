@@ -1,0 +1,137 @@
+{
+  "birth_datetime": "1998-10-11T10:00:00.000-04:00",
+  "bundle_id": "5abb9cd8aeac507a9c761e5c",
+  "data_element_codes": [
+
+  ],
+  "data_elements": [
+    {
+      "admission_source": null,
+      "author_datetime": "2012-04-06T04:00:00.000-04:00",
+      "category": "encounter",
+      "data_element_codes": [
+        {
+          "code_system": "SNOMED-CT",
+          "code": "4525004"
+        }
+      ],
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnoses": [
+        {
+          "code": "10278007",
+          "code_system": "SNOMED-CT"
+        }
+      ],
+      "discharge_disposition": null,
+      "facility_locations": [
+
+      ],
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.5",
+      "length_of_stay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negation_rationale": null,
+      "principal_diagnosis": {
+        "code": "10278007",
+        "code_system": "SNOMED-CT",
+        "descriptor": null,
+        "code_system_oid": null,
+        "version": null
+      },
+      "qdm_status": "performed",
+      "qdm_version": "5.3",
+      "relevant_period": {
+        "low": "2012-04-06T08:00:00.00+0000",
+        "high": "2012-04-06T09:15:00.00+0000",
+        "low_closed": true,
+        "high_closed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "birth_datetime": "1998-10-11T10:00:00.000-04:00",
+      "category": "patient_characteristic",
+      "data_element_codes": [
+
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdm_status": "birthdate",
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "data_element_codes": [
+        {
+          "code": "2135-2",
+          "code_system": "CDC Race",
+          "descriptor": "Hispanic Or Latino",
+          "code_system_oid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdm_status": "ethnicity",
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "data_element_codes": [
+
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.58",
+      "qdm_status": "payer",
+      "qdm_version": "5.3",
+      "relevant_period": {
+        "low": "2008-01-01T05:00:00.000+00:00",
+        "high": null,
+        "low_closed": true,
+        "high_closed": true
+      },
+      "_type": "QDM::PatientCharacteristicPayer"
+    },
+    {
+      "category": "patient_characteristic",
+      "data_element_codes": [
+        {
+          "code": "2131-1",
+          "code_system": "CDC Race",
+          "descriptor": "Other",
+          "code_system_oid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdm_status": "race",
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "data_element_codes": [
+        {
+          "code": "F",
+          "code_system": "Administrative sex (HL7)",
+          "descriptor": null,
+          "code_system_oid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "qdm_version": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "description": null,
+  "family_name": "ED",
+  "given_names": [
+    "4"
+  ],
+  "qdm_version": "5.3",
+  "_type": "QDM::Patient"
+}
