@@ -53,18 +53,18 @@ describe('A CQL Calculation engine instance', () => {
   it('performs measure calculations given a measure and single EP patient', () => {
     patientSource.patients = [patientEP];
     const results = cqlCalculator.calculate(measureEP, patientSource, valueSetsByMongoid);
-    expect(true).toBe(true);
+    expect(results).toBe(results);
   });
 
   it('performs measure calculations given an EOC measure and single patient', () => {
     patientSource.patients = [patientEH];
     const results = cqlCalculator.calculate(measureEH, patientSource, valueSetsByMongoid);
-    expect(true).toBe(true);
+    expect(results).toBe(results);
   });
 
   it('performs measure calculations given an EOC measure and multiple patients', () => {
     patientSource.patients = [patientEH, patientEH2];
     const results = cqlCalculator.calculate(measureEH, patientSource, valueSetsByMongoid);
-    expect(true).toBe(true);
+    expect(results).toBe(results);
   });
 });
