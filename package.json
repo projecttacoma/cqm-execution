@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "cql-execution": "^1.2.0",
-    "cqm-models": "projecttacoma/cqm-models#patient_fix",
+    "cqm-models": "projecttacoma/cqm-models#data_element_fix",
     "lodash": "^4.17.5",
     "moment": "^2.21.0",
     "mongoose": "^5.0.7"
