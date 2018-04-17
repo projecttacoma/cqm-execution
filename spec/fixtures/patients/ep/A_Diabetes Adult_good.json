@@ -294,7 +294,13 @@
       "birth_datetime": "1965-02-01T10:00:00.000-05:00",
       "category": "patient_characteristic",
       "data_element_codes": [
-
+        {
+          "code": "21112-8",
+          "code_system": "LOINC",
+          "descriptor": "",
+          "code_system_oid": null,
+          "version": null
+        }
       ],
       "description": null,
       "hqmf_oid": "2.16.840.1.113883.10.20.28.3.54",
