@@ -238,12 +238,13 @@ cql-execution@^1.2.0:
     moment "^2.20.1"
     ucum "0.0.7"
 
-cqm-models@projecttacoma/cqm-models:
-  version "0.6.1"
-  resolved "https://codeload.github.com/projecttacoma/cqm-models/tar.gz/f42d7a1cef9023c8f990ce3d415a7f5d8fa3e376"
+cqm-models@projecttacoma/cqm-models#cql_link:
+  version "0.7.0"
+  resolved "https://codeload.github.com/projecttacoma/cqm-models/tar.gz/fc0d2a26088efec49c3f88647f07b91c88baf64a"
   dependencies:
     change-case "^3.0.2"
     cql-execution "^1.2.0"
+    moment "^2.22.1"
     mongoose "^5.0.7"
 
 cross-spawn@^5.1.0:
@@ -784,6 +785,10 @@ mkdirp@^0.5.1:
 moment@^2.20.1, moment@^2.21.0:
   version "2.21.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.21.0.tgz#2a114b51d2a6ec9e6d83cf803f838a878d8a023a"
+
+moment@^2.22.1:
+  version "2.22.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz#529a2e9bf973f259c9643d237fda84de3a26e8ad"
 
 mongodb-core@3.0.4:
   version "3.0.4"
