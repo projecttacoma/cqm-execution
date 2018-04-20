@@ -23,7 +23,8 @@ describe('A CQL Calculation engine instance', () => {
 
   const patientEP = patientSource.QDMPatient(PatientEP);
   const patientEH = patientSource.QDMPatient(PatientEH);
-  const patientEH2 = new Patient(PatientEH2);
+  const patientEH2 = patientSource.QDMPatient(PatientEH2);
+  const patientEH3 = patientSource.QDMPatient(PatientEH);
   const measureEP = new Measure(MeasureEP);
   const measureEH = new Measure(MeasureEH);
 
@@ -53,18 +54,24 @@ describe('A CQL Calculation engine instance', () => {
   it('performs measure calculations given a measure and single EP patient', () => {
     patientSource.patients = [patientEP];
     const results = cqlCalculator.calculate(measureEP, patientSource, valueSetsByMongoid);
+    console.log(results);
+    // TODO: Modify these to actually check fields
     expect(results).toBe(results);
   });
 
   it('performs measure calculations given an EOC measure and single patient', () => {
     patientSource.patients = [patientEH];
     const results = cqlCalculator.calculate(measureEH, patientSource, valueSetsByMongoid);
+    console.log(results);
+    // TODO: Modify these to actually check fields
     expect(results).toBe(results);
   });
 
   it('performs measure calculations given an EOC measure and multiple patients', () => {
-    patientSource.patients = [patientEH, patientEH2];
+    patientSource.patients = [patientEH, patientEH2, patientEH3];
     const results = cqlCalculator.calculate(measureEH, patientSource, valueSetsByMongoid);
+    console.log(results);
+    // TODO: Modify these to actually check fields
     expect(results).toBe(results);
   });
 });
