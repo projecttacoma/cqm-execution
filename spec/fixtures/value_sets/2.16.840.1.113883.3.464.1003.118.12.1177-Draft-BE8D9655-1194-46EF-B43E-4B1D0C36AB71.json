@@ -1,0 +1,27 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "72026-8",
+      "code_system": "2.16.840.1.113883.6.1",
+      "code_system_name": "LOINC",
+      "code_system_version": "2.63",
+      "display_name": "VR-12 Mental component summary (MCS) score - oblique method T-score",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "72028-4",
+      "code_system": "2.16.840.1.113883.6.1",
+      "code_system_name": "LOINC",
+      "code_system_version": "2.63",
+      "display_name": "VR-12 Mental component summary (MCS) score - orthogonal method T-score",
+      "white_list": false
+    }
+  ],
+  "display_name": "VR12 Mental Component T Score",
+  "oid": "2.16.840.1.113883.3.464.1003.118.12.1177",
+  "version": "Draft-BE8D9655-1194-46EF-B43E-4B1D0C36AB71"
+}

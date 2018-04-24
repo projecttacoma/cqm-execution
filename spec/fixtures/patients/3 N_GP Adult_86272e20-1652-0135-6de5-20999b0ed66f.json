@@ -1,0 +1,1506 @@
+{
+  "birthDatetime": "1952-05-07T08:45:00.000+00:00",
+  "dataElements": [
+    {
+      "authorDatetime": "2012-11-09T08:00:00.000+00:00",
+      "category": "assessment",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "39240-7"
+        }
+      ],
+      "description": "Assessment, Performed: Tobacco Use Screening",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.117",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relatedTo": [
+
+      ],
+      "result": [
+        {
+          "code": "160603005",
+          "codeSystem": "SNOMED-CT",
+          "version": null,
+          "descriptor": "Tobacco User"
+        }
+      ],
+      "_type": "QDM::AssessmentPerformed"
+    },
+    {
+      "authorDatetime": "2011-12-01T08:00:00.000+00:00",
+      "category": "allergy",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CVX",
+          "code": "135"
+        }
+      ],
+      "description": "Allergy/Intolerance: Influenza Vaccine",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.119",
+      "prevalencePeriod": {
+        "low": "2011-12-01T08:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmStatus": "intolerance",
+      "qdmVersion": "5.3",
+      "severity": null,
+      "type": null,
+      "_type": "QDM::AllergyIntolerance"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2002-02-07T08:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "429009003"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "Z90.12"
+        }
+      ],
+      "description": "Diagnosis: Status Post Left Mastectomy",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2002-02-07T08:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2011-12-01T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "HCPCS",
+          "code": "G0438"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "99213"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "390906007"
+        }
+      ],
+      "description": "Encounter, Performed: Encounter-Influenza",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2011-12-01T08:00:00+00:00",
+        "high": "2011-12-01T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-02-04T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "96152"
+        }
+      ],
+      "description": "Encounter, Performed: Health & Behavioral Assessment - Individual",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-02-04T08:00:00+00:00",
+        "high": "2012-02-04T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-04-06T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99201"
+        }
+      ],
+      "description": "Encounter, Performed: Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-04-06T08:00:00+00:00",
+        "high": "2012-04-06T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-06-14T08:15:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99213"
+        }
+      ],
+      "description": "Encounter, Performed: Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-06-14T08:15:00+00:00",
+        "high": "2012-06-14T08:30:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-08-04T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "96151"
+        }
+      ],
+      "description": "Encounter, Performed: Health and Behavioral Assessment, Reassessment",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-08-04T08:00:00+00:00",
+        "high": "2012-08-04T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-11-09T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "92540"
+        }
+      ],
+      "description": "Encounter, Performed: Speech and Hearing Evaluation",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-11-09T08:00:00+00:00",
+        "high": "2012-11-09T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "authorDatetime": "2011-12-01T08:00:00.000+00:00",
+      "category": "immunization",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CVX",
+          "code": "135"
+        }
+      ],
+      "description": "Immunization, Administered: Influenza Vaccine",
+      "dosage": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.112",
+      "negationRationale": {
+        "code": "183932001",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": null,
+        "codeSystemOid": null,
+        "version": null
+      },
+      "qdmStatus": "administered",
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.140",
+      "reason": null,
+      "route": null,
+      "supply": null,
+      "_type": "QDM::ImmunizationAdministered"
+    },
+    {
+      "activeDatetime": null,
+      "authorDatetime": "2012-02-04T08:15:00.000+00:00",
+      "category": "medication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "860221"
+        }
+      ],
+      "description": "Medication, Order: Below Normal Medications",
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.17",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "refills": null,
+      "relevantPeriod": {
+        "low": "2012-02-04T08:15:00+00:00",
+        "high": "2012-02-04T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationOrder"
+    },
+    {
+      "category": "medication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "993557"
+        }
+      ],
+      "description": "Medication, Active: Tobacco Use Cessation Pharmacotherapy",
+      "dosage": {
+        "value": 1,
+        "unit": "{tablet(s)}"
+      },
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.13",
+      "qdmStatus": "active",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-11-09T08:10:00+00:00",
+        "high": "2013-01-09T08:10:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationActive"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-02-04T08:05:00.000+00:00",
+      "category": "physical_exam",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "39156-5"
+        }
+      ],
+      "description": "Physical Exam, Performed: Body mass index (BMI) [Ratio]",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.57",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-02-04T08:05:00+00:00",
+        "high": "2012-02-04T08:05:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": {
+        "unit": "kg/m2",
+        "value": 17
+      },
+      "_type": "QDM::PhysicalExamPerformed"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-06-14T08:15:00.000+00:00",
+      "category": "physical_exam",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "8480-6"
+        }
+      ],
+      "description": "Physical Exam, Performed: Systolic blood pressure",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.57",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-06-14T08:15:00+00:00",
+        "high": "2012-06-14T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "_type": "QDM::PhysicalExamPerformed"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-06-14T08:15:00.000+00:00",
+      "category": "physical_exam",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "8462-4"
+        }
+      ],
+      "description": "Physical Exam, Performed: Diastolic blood pressure",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.57",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-06-14T08:15:00+00:00",
+        "high": "2012-06-14T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "_type": "QDM::PhysicalExamPerformed"
+    },
+    {
+      "authorDatetime": "2012-02-04T08:10:00.000+00:00",
+      "category": "intervention",
+      "dataElementCodes": [
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "Z71.3"
+        },
+        {
+          "codeSystem": "HCPCS",
+          "code": "S9470"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "410177006"
+        }
+      ],
+      "description": "Intervention, Order: Below Normal Follow up",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.45",
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "_type": "QDM::InterventionOrder"
+    },
+    {
+      "authorDatetime": "2012-02-04T08:15:00.000+00:00",
+      "category": "intervention",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "103699006"
+        }
+      ],
+      "description": "Intervention, Order: Referrals where weight assessment may occur",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.45",
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "_type": "QDM::InterventionOrder"
+    },
+    {
+      "authorDatetime": "2012-06-14T08:15:00.000+00:00",
+      "category": "intervention",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "313204009"
+        }
+      ],
+      "description": "Intervention, Order: Lifestyle Recommendation",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.45",
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "_type": "QDM::InterventionOrder"
+    },
+    {
+      "authorDatetime": "2012-06-14T08:15:00.000+00:00",
+      "category": "intervention",
+      "dataElementCodes": [
+        {
+          "codeSystem": "HCPCS",
+          "code": "S9451"
+        },
+        {
+          "codeSystem": "ICD-9-CM",
+          "code": "V65.41"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "304507003"
+        }
+      ],
+      "description": "Intervention, Order: Physical Activity Recommendation",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.45",
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "_type": "QDM::InterventionOrder"
+    },
+    {
+      "authorDatetime": "2012-06-14T08:15:00.000+00:00",
+      "category": "intervention",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "308470006"
+        }
+      ],
+      "description": "Intervention, Order: Referral to Alternative Provider / Primary Care Provider",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.45",
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "_type": "QDM::InterventionOrder"
+    },
+    {
+      "authorDatetime": "2012-06-14T08:15:00.000+00:00",
+      "category": "diagnostic_study",
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "11524-6"
+        }
+      ],
+      "description": "Diagnostic Study, Order: ECG 12 lead or study order",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.40",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "_type": "QDM::DiagnosticStudyOrder"
+    },
+    {
+      "authorDatetime": "2012-11-09T08:10:00.000+00:00",
+      "category": "intervention",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99406"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "185795007"
+        }
+      ],
+      "description": "Intervention, Performed: Tobacco Use Cessation Counseling",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.46",
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-11-09T08:10:00+00:00",
+        "high": "2012-11-09T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::InterventionPerformed"
+    },
+    {
+      "authorDatetime": "2012-06-14T08:15:00.000+00:00",
+      "category": "laboratory_test",
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "58410-2"
+        }
+      ],
+      "description": "Laboratory Test, Order: Laboratory Tests for Hypertension",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.50",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "_type": "QDM::LaboratoryTestOrder"
+    },
+    {
+      "birthDatetime": "1952-05-07T08:45:00.000+00:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2186-5",
+          "codeSystem": "CDC Race",
+          "descriptor": "Not Hispanic or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2028-9",
+          "codeSystem": "CDC Race",
+          "descriptor": "Asian",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "F",
+          "codeSystem": "AdministrativeSex",
+          "descriptor": "2.16.840.1.113883.18.2",
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "measure_ids": [
+      "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+      "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+      "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+      "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+      "0DAC1DEC-E011-493B-A281-7C28964872DD",
+      "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+      "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+      "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+      "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+      "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+      "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+      "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+      "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+      "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "500E4792-7F94-4E34-8546-EE71C56FE463",
+      "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+      "59657B9B-01BF-4979-A090-8534DA1D0516",
+      "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "60176FBF-BFDC-4892-9C9E-604F206553C8",
+      "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+      "703CC49B-B653-4885-80E8-245A057F5AE9",
+      "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+      "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+      "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+      "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+      "8479F6D6-4200-4FD0-9438-30048EBE3E29",
+      "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+      "8924F2B3-EC06-4650-B634-D70A53DEE577",
+      "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+      "95FB767E-0CB2-4778-B5FF-6BA9A53FA28E",
+      "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+      "9A031E24-3D9B-11E1-8634-00237D5BF174",
+      "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+      "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+      "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "9A033A94-3D9B-11E1-8634-00237D5BF174",
+      "A244AA29-7D11-4616-888A-86E376BFCC6F",
+      "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+      "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "A5E96A45-8132-4E72-BF4F-E8C81DB9E641",
+      "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+      "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+      "AC639794-CB3F-4F4F-8FA6-680300D5ED4E",
+      "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+      "B6016B47-B65D-4BE0-866F-1D397886CA89",
+      "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+      "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+      "BC5B4A57-B964-4399-9D40-667C896F31EA",
+      "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+      "BEB1C33C-2549-4E7F-9567-05ED38448464",
+      "C0D72444-7C26-4863-9B51-8080F8928A85",
+      "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+      "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+      "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+      "E0A07809-7B74-473F-BCC4-1891BE506AAA",
+      "E35791DF-5B25-41BB-B260-673337BC44A8",
+      "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+      "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+      "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+      "F70B2984-AF4A-4072-AE0D-CEC677A7FF8F",
+      null,
+      "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+      "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+      "1C05C6C0-8099-4270-83CE-292CF6E35C51",
+      "ED78899D-2375-4D68-AA63-58E1734F5694",
+      "A3CE125D-C238-42CE-862E-DBA0055DFC66"
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "StatusPostLeftMastectomy",
+        "description": "Diagnosis: Status Post Left Mastectomy",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.198.12.1069",
+        "type": "conditions",
+        "id": "StatusPostLeftMastectomy_Diagnosis_d9eabb61_0233_4921_822d_2285c9a8bdd0_source",
+        "start_date": 1013068800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+        "cms_id": "CMS125v7",
+        "criteria_id": "162530822b6Tl",
+        "codes": {
+          "SNOMED-CT": [
+            "429009003"
+          ],
+          "ICD-10-CM": [
+            "Z90.12"
+          ]
+        },
+        "coded_entry_id": "5ac51541aeac50408e260214",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "allergy_intolerance",
+        "title": "InfluenzaVaccine",
+        "description": "Allergy/Intolerance: Influenza Vaccine",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1254",
+        "type": "allergies_intolerances",
+        "id": "InfluenzaVaccine_Allergy_Intolerance_04557595_d343_4a70_bc08_ea9a758dc187_source",
+        "start_date": 1322726400000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "A244AA29-7D11-4616-888A-86E376BFCC6F",
+        "cms_id": "CMS147v8",
+        "criteria_id": "16253246892Gh",
+        "codes": {
+          "CVX": [
+            "135"
+          ]
+        },
+        "coded_entry_id": "5ac51541aeac50408e260213",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": true,
+        "definition": "immunization",
+        "status": "administered",
+        "title": "InfluenzaVaccine",
+        "description": "Immunization, Administered: Influenza Vaccine",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1254",
+        "type": "immunizations",
+        "id": "InfluenzaVaccine_ImmunizationAdministered_04557595_d343_4a70_bc08_ea9a758dc187_source",
+        "start_date": 1322726400000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "A244AA29-7D11-4616-888A-86E376BFCC6F",
+        "cms_id": "CMS147v8",
+        "criteria_id": "1625324bce3gj",
+        "codes": {
+          "CVX": [
+            "135"
+          ]
+        },
+        "negation_code_list_id": "2.16.840.1.113883.3.526.3.1007",
+        "coded_entry_id": "5ac51541aeac50408e26021b",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "Encounter-Influenza",
+        "description": "Encounter, Performed: Encounter-Influenza",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1252",
+        "type": "encounters",
+        "id": "Encounter_Influenza_EncounterPerformed_1ff2b6e8_612d_4b50_8458_507c7729f2aa_source",
+        "start_date": 1322726400000,
+        "end_date": 1322727300000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "A244AA29-7D11-4616-888A-86E376BFCC6F",
+        "cms_id": "CMS147v8",
+        "criteria_id": "16253238d0eqO",
+        "codes": {
+          "HCPCS": [
+            "G0438"
+          ],
+          "CPT": [
+            "99213"
+          ],
+          "SNOMED-CT": [
+            "390906007"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260215",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "Health&BehavioralAssessment-Individual",
+        "description": "Encounter, Performed: Health & Behavioral Assessment - Individual",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1020",
+        "type": "encounters",
+        "id": "Health_BehavioralAssessment_Individual_EncounterPerformed_8a4d92b2_3946_cdae_0139_77de6f845ee0_source",
+        "start_date": 1328342400000,
+        "end_date": 1328343300000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "cms_id": "CMS138v7",
+        "criteria_id": "16263145300zz",
+        "codes": {
+          "CPT": [
+            "96152"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260216",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "physical_exam",
+        "status": "performed",
+        "title": "Physical Exam, Performed: Physical Exam, Performed",
+        "description": "Physical Exam, Performed: Body mass index (BMI) [Ratio]",
+        "code_list_id": "drc-621554fd50dfa0671e3df85b25b41bf2248240ea00fca90101a3567b0e38f466",
+        "type": "physical_exams",
+        "id": "prefix_39156_5_PhysicalExamPerformed_3F8CFC39_4FC4_4EA7_B5CE_CB78BA8A4C9B_source",
+        "start_date": 1328342700000,
+        "end_date": 1328342700000,
+        "value": [
+          {
+            "type": "PQ",
+            "value": "17",
+            "unit": "kg/m2"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS69v7",
+        "criteria_id": "162634b17eazJ",
+        "codes": {
+          "LOINC": [
+            "39156-5"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26021e",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "intervention",
+        "status": "ordered",
+        "title": "BelowNormalFollowup",
+        "description": "Intervention, Order: Below Normal Follow up",
+        "code_list_id": "2.16.840.1.113883.3.600.1.1528",
+        "type": "interventions",
+        "id": "BelowNormalFollowup_InterventionOrder_40280381_3e93_d1af_013e_d6e2b78f1532_source",
+        "start_date": 1328343000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS69v7",
+        "criteria_id": "1626349485a6O",
+        "codes": {
+          "ICD-10-CM": [
+            "Z71.3"
+          ],
+          "HCPCS": [
+            "S9470"
+          ],
+          "SNOMED-CT": [
+            "410177006"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260220",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "intervention",
+        "status": "ordered",
+        "title": "Referralswhereweightassessmentmayoccur",
+        "description": "Intervention, Order: Referrals where weight assessment may occur",
+        "code_list_id": "2.16.840.1.113883.3.600.1.1527",
+        "type": "interventions",
+        "id": "Referralswhereweightassessmentmayoccur_InterventionOrder_74de7ca4_e8a0_46a9_9979_c0f0e13026a4_source",
+        "start_date": 1328343300000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS69v7",
+        "criteria_id": "1626349debafZ",
+        "codes": {
+          "SNOMED-CT": [
+            "103699006"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260221",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "medication",
+        "status": "ordered",
+        "title": "BelowNormalMedications",
+        "description": "Medication, Order: Below Normal Medications",
+        "code_list_id": "2.16.840.1.113883.3.600.1.1499",
+        "type": "medications",
+        "id": "BelowNormalMedications_MedicationOrder_40280381_3e93_d1af_013e_d6e2b78f152c_source",
+        "start_date": 1328343300000,
+        "end_date": 1328343300000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS69v7",
+        "criteria_id": "162634a5e4aSf",
+        "codes": {
+          "RxNorm": [
+            "860221"
+          ]
+        },
+        "fulfillments": null,
+        "administrations_value": "1",
+        "frequency_value": "1",
+        "frequency_unit": "d",
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26021c",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "OfficeVisit",
+        "description": "Encounter, Performed: Office Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+        "type": "encounters",
+        "id": "OfficeVisit_EncounterPerformed_8a4d92b2_3946_cdae_0139_77de6f845ee2_source",
+        "start_date": 1333699200000,
+        "end_date": 1333700100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "cms_id": "CMS138v7",
+        "criteria_id": "162631521b6QV",
+        "codes": {
+          "CPT": [
+            "99201"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260217",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnostic_study",
+        "status": "ordered",
+        "title": "ECG12leadorstudyorder",
+        "description": "Diagnostic Study, Order: ECG 12 lead or study order",
+        "code_list_id": "2.16.840.1.113883.3.600.2448",
+        "type": "diagnostic_studies",
+        "id": "ECG12leadorstudyorder_DiagnosticStudyOrder_40280381_3e93_d1af_013e_af14fc8d5649_source",
+        "start_date": 1339661700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A033A94-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS22v7",
+        "criteria_id": "162632bfc5eZR",
+        "codes": {
+          "LOINC": [
+            "11524-6"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260222",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "intervention",
+        "status": "ordered",
+        "title": "LifestyleRecommendation",
+        "description": "Intervention, Order: Lifestyle Recommendation",
+        "code_list_id": "2.16.840.1.113883.3.600.1508",
+        "type": "interventions",
+        "id": "LifestyleRecommendation_InterventionOrder_40280381_3e93_d1af_013e_af14fc8f566e_source",
+        "start_date": 1339661700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A033A94-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS22v7",
+        "criteria_id": "162632c5498fU",
+        "codes": {
+          "SNOMED-CT": [
+            "313204009"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260223",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "intervention",
+        "status": "ordered",
+        "title": "PhysicalActivityRecommendation",
+        "description": "Intervention, Order: Physical Activity Recommendation",
+        "code_list_id": "2.16.840.1.113883.3.600.1518",
+        "type": "interventions",
+        "id": "PhysicalActivityRecommendation_InterventionOrder_40280381_3e93_d1af_013e_af14fc8f5671_source",
+        "start_date": 1339661700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A033A94-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS22v7",
+        "criteria_id": "162632c868cTc",
+        "codes": {
+          "HCPCS": [
+            "S9451"
+          ],
+          "ICD-9-CM": [
+            "V65.41"
+          ],
+          "SNOMED-CT": [
+            "304507003"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260224",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "intervention",
+        "status": "ordered",
+        "title": "ReferraltoAlternativeProvider/PrimaryCareProvider",
+        "description": "Intervention, Order: Referral to Alternative Provider / Primary Care Provider",
+        "code_list_id": "2.16.840.1.113883.3.600.1475",
+        "type": "interventions",
+        "id": "ReferraltoAlternativeProvider_PrimaryCareProvider_InterventionOrder_40280381_3e93_d1af_013e_af14fc8f566c_source",
+        "start_date": 1339661700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A033A94-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS22v7",
+        "criteria_id": "162632cea26kN",
+        "codes": {
+          "SNOMED-CT": [
+            "308470006"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260225",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "laboratory_test",
+        "status": "ordered",
+        "title": "LaboratoryTestsforHypertension",
+        "description": "Laboratory Test, Order: Laboratory Tests for Hypertension",
+        "code_list_id": "2.16.840.1.113883.3.600.1482",
+        "type": "laboratory_tests",
+        "id": "LaboratoryTestsforHypertension_LaboratoryTestOrder_40280381_3e93_d1af_013e_af14fc8f566a_source",
+        "start_date": 1339661700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A033A94-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS22v7",
+        "criteria_id": "162632d87detJ",
+        "codes": {
+          "LOINC": [
+            "58410-2"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260229",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "physical_exam",
+        "status": "performed",
+        "title": "Physical Exam, Performed: Physical Exam, Performed",
+        "description": "Physical Exam, Performed: Systolic blood pressure",
+        "code_list_id": "drc-5288c3d17d0f24d203a005a7643c2d10bb205b6e62a79b2bc10f9b7757191637",
+        "type": "physical_exams",
+        "id": "prefix_8480_6_PhysicalExamPerformed_D782A7E9_2523_43DC_9DB9_4D76BA06E5BB_source",
+        "start_date": 1339661700000,
+        "end_date": 1339661700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A033A94-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS22v7",
+        "criteria_id": "162632ded76dK",
+        "codes": {
+          "LOINC": [
+            "8480-6"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260226",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "physical_exam",
+        "status": "performed",
+        "title": "Physical Exam, Performed: Physical Exam, Performed",
+        "description": "Physical Exam, Performed: Diastolic blood pressure",
+        "code_list_id": "drc-ba4dc2b21ad1d768fa71f36e9e434e7df32e8fde38abaaa61c2e04134eb798bb",
+        "type": "physical_exams",
+        "id": "prefix_8462_4_PhysicalExamPerformed_BEABCB81_1C2C_480A_8987_A17165DC9C66_source",
+        "start_date": 1339661700000,
+        "end_date": 1339661700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "9A033A94-3D9B-11E1-8634-00237D5BF174",
+        "cms_id": "CMS22v7",
+        "criteria_id": "162632e2a689V",
+        "codes": {
+          "LOINC": [
+            "8462-4"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260227",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "OfficeVisit",
+        "description": "Encounter, Performed: Office Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+        "type": "encounters",
+        "id": "OfficeVisit_EncounterPerformed_8a4d92b2_3946_cdae_0139_77de6f845ee2_source",
+        "start_date": 1339661700000,
+        "end_date": 1339662600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "cms_id": "CMS138v7",
+        "criteria_id": "1626315bc40be",
+        "codes": {
+          "CPT": [
+            "99213"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260218",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "HealthandBehavioralAssessmentReassessment",
+        "description": "Encounter, Performed: Health and Behavioral Assessment, Reassessment",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1529",
+        "type": "encounters",
+        "id": "HealthandBehavioralAssessmentReassessment_EncounterPerformed_e0046067_5a0f_4b02_86dc_4cc29f8abfe1_source",
+        "start_date": 1344067200000,
+        "end_date": 1344068100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "cms_id": "CMS138v7",
+        "criteria_id": "1626314ca50dM",
+        "codes": {
+          "CPT": [
+            "96151"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260219",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "assessment",
+        "status": "performed",
+        "title": "TobaccoUseScreening",
+        "description": "Assessment, Performed: Tobacco Use Screening",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1278",
+        "type": "assessments",
+        "id": "TobaccoUseScreening_AssessmentPerformed_40280381_3d61_56a7_013e_5cba622c625a_source",
+        "start_date": 1352448000000,
+        "value": [
+          {
+            "type": "CD",
+            "type_cmp": "CD",
+            "code_list_id": "2.16.840.1.113883.3.526.3.1170",
+            "title": "Tobacco User"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "cms_id": "CMS138v7",
+        "criteria_id": "162631887dckB",
+        "codes": {
+          "LOINC": [
+            "39240-7"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26022a",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "SpeechandHearingEvaluation",
+        "description": "Encounter, Performed: Speech and Hearing Evaluation",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1530",
+        "type": "encounters",
+        "id": "SpeechandHearingEvaluation_EncounterPerformed_f630e391_cb27_48f0_924f_ec84d0d1c04e_source",
+        "start_date": 1352448000000,
+        "end_date": 1352448900000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "cms_id": "CMS138v7",
+        "criteria_id": "16263163eb69i",
+        "codes": {
+          "CPT": [
+            "92540"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26021a",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "intervention",
+        "status": "performed",
+        "title": "TobaccoUseCessationCounseling",
+        "description": "Intervention, Performed: Tobacco Use Cessation Counseling",
+        "code_list_id": "2.16.840.1.113883.3.526.3.509",
+        "type": "interventions",
+        "id": "TobaccoUseCessationCounseling_InterventionPerformed_8a4d92b2_3946_cdae_0139_77de6f845eef_source",
+        "start_date": 1352448600000,
+        "end_date": 1352448900000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "cms_id": "CMS138v7",
+        "criteria_id": "16263169f5cct",
+        "codes": {
+          "CPT": [
+            "99406"
+          ],
+          "SNOMED-CT": [
+            "185795007"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260228",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "medication",
+        "status": "active",
+        "title": "TobaccoUseCessationPharmacotherapy",
+        "description": "Medication, Active: Tobacco Use Cessation Pharmacotherapy",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1190",
+        "type": "medications",
+        "id": "TobaccoUseCessationPharmacotherapy_MedicationActive_8a4d92b2_3946_cdae_0139_77de6f855ef0_source",
+        "start_date": 1352448600000,
+        "end_date": 1357719000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "cms_id": "CMS138v7",
+        "criteria_id": "162631733d0JY",
+        "codes": {
+          "RxNorm": [
+            "993557"
+          ]
+        },
+        "fulfillments": null,
+        "dose_value": "1",
+        "dose_unit": "{tablet(s)}",
+        "frequency_value": "1",
+        "frequency_unit": "d",
+        "coded_entry_id": "5ac51541aeac50408e26021d",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": {
+    },
+    "notes": "60yo female\n*23qdes\n*Tobacco user w h/o L mastectomy. Underweight pt who receives exercise/diet intervention.",
+    "is_shared": false,
+    "origin_data": [
+
+    ],
+    "medical_record_number": "86272e20-1652-0135-6de5-20999b0ed66f",
+    "medical_record_assigner": "Bonnie",
+    "description": "",
+    "description_category": "DENOM",
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":null,\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1420070400,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+  },
+  "familyName": "GP Adult",
+  "givenNames": [
+    "3 N"
+  ],
+  "qdmVersion": "5.3"
+}

@@ -1,0 +1,72 @@
+{
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "301542",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "rosuvastatin",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "36567",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Simvastatin",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "41127",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "fluvastatin",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "42463",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Pravastatin",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "6472",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Lovastatin",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "83367",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "atorvastatin",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "861634",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "pitavastatin",
+      "white_list": false
+    }
+  ],
+  "display_name": "Statin Allergen",
+  "oid": "2.16.840.1.113883.3.117.1.7.1.423",
+  "version": "Draft-1F503318-BB8D-4B91-AF63-223AE0A2328E"
+}

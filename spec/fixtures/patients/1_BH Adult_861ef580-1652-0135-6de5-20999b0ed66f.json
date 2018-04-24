@@ -1,0 +1,1833 @@
+{
+  "birthDatetime": "1977-01-21T16:39:00.000+00:00",
+  "dataElements": [
+    {
+      "authorDatetime": "2011-05-31T08:15:00.000+00:00",
+      "category": "assessment",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "44261-6"
+        }
+      ],
+      "description": "Assessment, Performed: Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.117",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relatedTo": [
+
+      ],
+      "result": 10,
+      "_type": "QDM::AssessmentPerformed"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2011-05-31T08:30:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "F34.1"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "78667006"
+        }
+      ],
+      "description": "Diagnosis: Dysthymia",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2011-05-31T08:30:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-01-06T22:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "5602001"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "F11.129"
+        }
+      ],
+      "description": "Diagnosis: Alcohol and Drug Dependence",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-01-06T22:00:00+00:00",
+        "high": "2012-01-25T16:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-02-26T08:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "14183003"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "F32.0"
+        }
+      ],
+      "description": "Diagnosis: Major Depression",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-02-26T08:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2011-05-31T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99205"
+        }
+      ],
+      "description": "Encounter, Performed: Contact or Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2011-05-31T08:00:00+00:00",
+        "high": "2011-05-31T09:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-01-06T16:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99283"
+        }
+      ],
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-01-06T16:00:00+00:00",
+        "high": "2012-01-06T23:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-01-06T23:15:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99221"
+        }
+      ],
+      "description": "Encounter, Performed: Hospital Inpatient Visit - Initial",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-01-06T23:15:00+00:00",
+        "high": "2012-01-06T23:45:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-01-09T11:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99238"
+        }
+      ],
+      "description": "Encounter, Performed: Discharge Services - Hospital Inpatient",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-01-09T11:00:00+00:00",
+        "high": "2012-01-09T11:30:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-01-10T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "56876005"
+        }
+      ],
+      "description": "Encounter, Performed: Detoxification Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-01-10T08:00:00+00:00",
+        "high": "2012-01-10T08:30:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-02-26T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "HCPCS",
+          "code": "G0438"
+        }
+      ],
+      "description": "Encounter, Performed: Annual Wellness Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-02-26T08:00:00+00:00",
+        "high": "2012-02-26T08:30:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-12-02T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99203"
+        }
+      ],
+      "description": "Encounter, Performed: Contact or Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-12-02T08:00:00+00:00",
+        "high": "2012-12-02T08:30:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "category": "medication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "993541"
+        }
+      ],
+      "description": "Medication, Active: Antidepressant Medication",
+      "dosage": {
+        "value": 1,
+        "unit": "{tablet(s)}"
+      },
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.13",
+      "qdmStatus": "active",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-01-06T22:00:00+00:00",
+        "high": "2012-01-25T16:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationActive"
+    },
+    {
+      "category": "medication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "476179"
+        }
+      ],
+      "description": "Medication, Active: BH Mood Stabilizer Medication",
+      "dosage": {
+        "value": 1,
+        "unit": "{tablet(s)}"
+      },
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.13",
+      "qdmStatus": "active",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-12-02T08:30:00+00:00",
+        "high": "2012-12-22T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationActive"
+    },
+    {
+      "authorDatetime": "2012-02-26T16:00:00.000+00:00",
+      "category": "medication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "993541"
+        }
+      ],
+      "description": "Medication, Dispensed: Antidepressant Medication",
+      "dosage": {
+        "value": 1,
+        "unit": "{capsule(s)}"
+      },
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.8",
+      "negationRationale": null,
+      "qdmStatus": "dispensed",
+      "qdmVersion": "5.3",
+      "refills": null,
+      "relevantPeriod": {
+        "low": "2012-02-26T16:00:00+00:00",
+        "high": "2012-02-26T16:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationDispensed"
+    },
+    {
+      "birthDatetime": "1977-01-21T16:39:00.000+00:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2135-2",
+          "codeSystem": "CDC Race",
+          "descriptor": "Hispanic Or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2131-1",
+          "codeSystem": "CDC Race",
+          "descriptor": "Other",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "M",
+          "codeSystem": "AdministrativeSex",
+          "descriptor": "2.16.840.1.113883.18.2",
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "measure_ids": [
+      "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+      "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+      "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+      "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+      "0DAC1DEC-E011-493B-A281-7C28964872DD",
+      "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+      "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+      "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+      "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+      "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+      "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+      "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+      "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+      "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "500E4792-7F94-4E34-8546-EE71C56FE463",
+      "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+      "59657B9B-01BF-4979-A090-8534DA1D0516",
+      "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "60176FBF-BFDC-4892-9C9E-604F206553C8",
+      "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+      "703CC49B-B653-4885-80E8-245A057F5AE9",
+      "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+      "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+      "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+      "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+      "8479F6D6-4200-4FD0-9438-30048EBE3E29",
+      "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+      "8924F2B3-EC06-4650-B634-D70A53DEE577",
+      "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+      "95FB767E-0CB2-4778-B5FF-6BA9A53FA28E",
+      "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+      "9A031E24-3D9B-11E1-8634-00237D5BF174",
+      "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+      "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+      "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "9A033A94-3D9B-11E1-8634-00237D5BF174",
+      "A244AA29-7D11-4616-888A-86E376BFCC6F",
+      "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+      "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "A5E96A45-8132-4E72-BF4F-E8C81DB9E641",
+      "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+      "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+      "AC639794-CB3F-4F4F-8FA6-680300D5ED4E",
+      "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+      "B6016B47-B65D-4BE0-866F-1D397886CA89",
+      "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+      "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+      "BC5B4A57-B964-4399-9D40-667C896F31EA",
+      "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+      "BEB1C33C-2549-4E7F-9567-05ED38448464",
+      "C0D72444-7C26-4863-9B51-8080F8928A85",
+      "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+      "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+      "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+      "E0A07809-7B74-473F-BCC4-1891BE506AAA",
+      "E35791DF-5B25-41BB-B260-673337BC44A8",
+      "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+      "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+      "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+      "F70B2984-AF4A-4072-AE0D-CEC677A7FF8F",
+      "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+      null,
+      "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+      "1C05C6C0-8099-4270-83CE-292CF6E35C51",
+      "ED78899D-2375-4D68-AA63-58E1734F5694",
+      "A3CE125D-C238-42CE-862E-DBA0055DFC66"
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "ContactorOfficeVisit",
+        "description": "Encounter, Performed: Contact or Office Visit",
+        "code_list_id": "2.16.840.1.113762.1.4.1080.5",
+        "type": "encounters",
+        "id": "ContactorOfficeVisit_EncounterPerformed_ce116525_40a6_4e97_be48_beff717e267a_source",
+        "start_date": 1306828800000,
+        "end_date": 1306832400000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+        "cms_id": "CMS159v7",
+        "criteria_id": "16267b61c86B8",
+        "codes": {
+          "CPT": [
+            "99205"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51540aeac50408e26019f",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "assessment",
+        "status": "performed",
+        "title": "Assessment, Performed: Assessment, Performed",
+        "description": "Assessment, Performed: Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
+        "code_list_id": "drc-da9071720e893683cdde0cc3aaa1bc49e05e169bdeda96800c723f8563830965",
+        "type": "assessments",
+        "id": "prefix_44261_6_AssessmentPerformed_DD6DAAED_29F8_476F_B830_E889F8209C89_source",
+        "start_date": 1306829700000,
+        "value": [
+          {
+            "type": "PQ",
+            "type_cmp": "CD",
+            "value": "10",
+            "unit": ""
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+        "cms_id": "CMS159v7",
+        "criteria_id": "16267b4ea9aJv",
+        "codes": {
+          "LOINC": [
+            "44261-6"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51540aeac50408e2601a9",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "Dysthymia",
+        "description": "Diagnosis: Dysthymia",
+        "code_list_id": "2.16.840.1.113883.3.67.1.101.1.254",
+        "type": "conditions",
+        "id": "Dysthymia_Diagnosis_c8089c2f_6d58_483e_9147_c43453e70cb6_source",
+        "start_date": 1306830600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+        "cms_id": "CMS159v7",
+        "criteria_id": "16267b548c270",
+        "codes": {
+          "ICD-10-CM": [
+            "F34.1"
+          ],
+          "SNOMED-CT": [
+            "78667006"
+          ]
+        },
+        "coded_entry_id": "5ac51540aeac50408e26019c",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "EmergencyDepartmentVisit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1010",
+        "type": "encounters",
+        "id": "EmergencyDepartmentVisit_EncounterPerformed_85cfc8b8_99fd_4b17_aa84_86df4adc4f4f_source",
+        "start_date": 1325865600000,
+        "end_date": 1325890800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "cms_id": "CMS137v7",
+        "criteria_id": "16267a259deFx",
+        "codes": {
+          "CPT": [
+            "99283"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51540aeac50408e2601a0",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "AlcoholandDrugDependence",
+        "description": "Diagnosis: Alcohol and Drug Dependence",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.106.12.1001",
+        "type": "conditions",
+        "id": "AlcoholandDrugDependence_Diagnosis_8a4d92b2_3946_cdae_0139_7944acc200ce_source",
+        "start_date": 1325887200000,
+        "end_date": 1327507200000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "cms_id": "CMS137v7",
+        "criteria_id": "16267970f5e47",
+        "codes": {
+          "SNOMED-CT": [
+            "5602001"
+          ],
+          "ICD-10-CM": [
+            "F11.129"
+          ]
+        },
+        "coded_entry_id": "5ac51540aeac50408e26019d",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "medication",
+        "status": "active",
+        "title": "AntidepressantMedication",
+        "description": "Medication, Active: Antidepressant Medication",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.196.12.1213",
+        "type": "medications",
+        "id": "AntidepressantMedication_MedicationActive_40280381_3d61_56a7_013e_7af6125a640d_source",
+        "start_date": 1325887200000,
+        "end_date": 1327507200000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8924F2B3-EC06-4650-B634-D70A53DEE577",
+        "cms_id": "CMS128v7",
+        "criteria_id": "16287fe71e8ZS",
+        "codes": {
+          "RxNorm": [
+            "993541"
+          ]
+        },
+        "fulfillments": null,
+        "dose_value": "1",
+        "dose_unit": "{tablet(s)}",
+        "frequency_value": "1",
+        "frequency_unit": "d",
+        "coded_entry_id": "5ac51540aeac50408e2601a6",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "HospitalInpatientVisit-Initial",
+        "description": "Encounter, Performed: Hospital Inpatient Visit - Initial",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1004",
+        "type": "encounters",
+        "id": "HospitalInpatientVisit_Initial_EncounterPerformed_dc632872_b1cb_488e_95e0_3d0a5dec1b57_source",
+        "start_date": 1325891700000,
+        "end_date": 1325893500000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "cms_id": "CMS137v7",
+        "criteria_id": "16267a2bb3aEd",
+        "codes": {
+          "CPT": [
+            "99221"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51540aeac50408e2601a1",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "DischargeServices-HospitalInpatient",
+        "description": "Encounter, Performed: Discharge Services - Hospital Inpatient",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1007",
+        "type": "encounters",
+        "id": "DischargeServices_HospitalInpatient_EncounterPerformed_65c71cb8_0f87_4348_8312_29afa720def8_source",
+        "start_date": 1326106800000,
+        "end_date": 1326108600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "cms_id": "CMS137v7",
+        "criteria_id": "162679fb2e80B",
+        "codes": {
+          "CPT": [
+            "99238"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51540aeac50408e2601a2",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "DetoxificationVisit",
+        "description": "Encounter, Performed: Detoxification Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1059",
+        "type": "encounters",
+        "id": "DetoxificationVisit_EncounterPerformed_0fdcf490_3fed_4b78_aa86_13a49be95c3a_source",
+        "start_date": 1326182400000,
+        "end_date": 1326184200000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "cms_id": "CMS137v7",
+        "criteria_id": "162679f48e61D",
+        "codes": {
+          "SNOMED-CT": [
+            "56876005"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51540aeac50408e2601a3",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "MajorDepression",
+        "description": "Diagnosis: Major Depression",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.105.12.1007",
+        "type": "conditions",
+        "id": "MajorDepression_Diagnosis_803dee17_fee5_468e_8bfd_b84aaa114703_source",
+        "start_date": 1330243200000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8924F2B3-EC06-4650-B634-D70A53DEE577",
+        "cms_id": "CMS128v7",
+        "criteria_id": "16287fddf64eH",
+        "codes": {
+          "SNOMED-CT": [
+            "14183003"
+          ],
+          "ICD-10-CM": [
+            "F32.0"
+          ]
+        },
+        "coded_entry_id": "5ac51540aeac50408e26019e",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "AnnualWellnessVisit",
+        "description": "Encounter, Performed: Annual Wellness Visit",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1240",
+        "type": "encounters",
+        "id": "AnnualWellnessVisit_EncounterPerformed_40280381_3d61_56a7_013e_7af6125a6412_source",
+        "start_date": 1330243200000,
+        "end_date": 1330245000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8924F2B3-EC06-4650-B634-D70A53DEE577",
+        "cms_id": "CMS128v7",
+        "criteria_id": "16287fe26feuJ",
+        "codes": {
+          "HCPCS": [
+            "G0438"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51540aeac50408e2601a4",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "medication",
+        "status": "dispensed",
+        "title": "AntidepressantMedication",
+        "description": "Medication, Dispensed: Antidepressant Medication",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.196.12.1213",
+        "type": "medications",
+        "id": "AntidepressantMedication_MedicationDispensed_40280381_3d61_56a7_013e_7af6125a640d_source",
+        "start_date": 1330272000000,
+        "end_date": 1330272000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8924F2B3-EC06-4650-B634-D70A53DEE577",
+        "cms_id": "CMS128v7",
+        "criteria_id": "16290e5eefcsy",
+        "codes": {
+          "RxNorm": [
+            "993541"
+          ]
+        },
+        "fulfillments": null,
+        "dose_value": "1",
+        "dose_unit": "{capsule(s)}",
+        "frequency_value": "1",
+        "frequency_unit": "d",
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51540aeac50408e2601a7",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "ContactorOfficeVisit",
+        "description": "Encounter, Performed: Contact or Office Visit",
+        "code_list_id": "2.16.840.1.113762.1.4.1080.5",
+        "type": "encounters",
+        "id": "ContactorOfficeVisit_EncounterPerformed_ce116525_40a6_4e97_be48_beff717e267a_source",
+        "start_date": 1354435200000,
+        "end_date": 1354437000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+        "cms_id": "CMS159v7",
+        "criteria_id": "16267b671c8g0",
+        "codes": {
+          "CPT": [
+            "99203"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51540aeac50408e2601a5",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "medication",
+        "status": "active",
+        "title": "BHMoodStabilizerMedication",
+        "description": "Medication, Active: BH Mood Stabilizer Medication",
+        "code_list_id": "2.16.840.1.113883.3.1257.1.950",
+        "type": "medications",
+        "id": "BHMoodStabilizerMedication_MedicationActive_40280381_3d61_56a7_013e_658bc7bb3cae_source",
+        "start_date": 1354437000000,
+        "end_date": 1356164100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+        "cms_id": "CMS169v7",
+        "criteria_id": "16267c00120Jd",
+        "codes": {
+          "RxNorm": [
+            "476179"
+          ]
+        },
+        "fulfillments": null,
+        "dose_value": "1",
+        "dose_unit": "{tablet(s)}",
+        "frequency_value": "1",
+        "frequency_unit": "d",
+        "coded_entry_id": "5ac51540aeac50408e2601a8",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": [
+      {
+        "measure_id": "60176FBF-BFDC-4892-9C9E-604F206553C8",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "8924F2B3-EC06-4650-B634-D70A53DEE577",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "8924F2B3-EC06-4650-B634-D70A53DEE577",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "BEB1C33C-2549-4E7F-9567-05ED38448464",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A3CE125D-C238-42CE-862E-DBA0055DFC66",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+        "population_index": 1,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+        "population_index": 2,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+        "population_index": 1,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+        "population_index": 2,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+        "population_index": 2,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+        "population_index": 3,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+        "population_index": 4,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+        "population_index": 5,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+        "population_index": 6,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+        "population_index": 7,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+        "population_index": 8,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C0D72444-7C26-4863-9B51-8080F8928A85",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "BC5B4A57-B964-4399-9D40-667C896F31EA",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "703CC49B-B653-4885-80E8-245A057F5AE9",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "703CC49B-B653-4885-80E8-245A057F5AE9",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "ED78899D-2375-4D68-AA63-58E1734F5694",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+        "population_index": 2,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "population_index": 2,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "population_index": 3,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "population_index": 4,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+        "population_index": 5,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "1C05C6C0-8099-4270-83CE-292CF6E35C51",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "59657B9B-01BF-4979-A090-8534DA1D0516",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "A244AA29-7D11-4616-888A-86E376BFCC6F",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "9A031E24-3D9B-11E1-8634-00237D5BF174",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "9A033A94-3D9B-11E1-8634-00237D5BF174",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+        "population_index": 2,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+        "population_index": 1,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+        "population_index": 2,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+        "population_index": 3,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+        "population_index": 2,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+        "population_index": 2,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+        "population_index": 3,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+        "population_index": 4,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+        "population_index": 5,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+        "population_index": 6,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+        "population_index": 7,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      },
+      {
+        "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+        "population_index": 8,
+        "STRAT": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0
+      }
+    ],
+    "notes": "35yo male\n*15qdes\n*Pt w h/o depression and recurrent ETOH/Drug dependence leading to several office visits, ED visits, detox and antidepressants.",
+    "is_shared": false,
+    "origin_data": [
+
+    ],
+    "medical_record_number": "861ef580-1652-0135-6de5-20999b0ed66f",
+    "medical_record_assigner": "Bonnie",
+    "description": "",
+    "description_category": "DENOM",
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":null,\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1420070400,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+  },
+  "familyName": "BH Adult",
+  "givenNames": [
+    "1"
+  ],
+  "qdmVersion": "5.3"
+}

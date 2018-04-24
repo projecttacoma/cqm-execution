@@ -1,0 +1,981 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "102932008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Fear of hypertension (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "10725009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Benign hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "10964002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Progressive pulmonary hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1201005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Benign essential hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "123799005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Renovascular hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "123800009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Goldblatt hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "14973001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Renal sclerosis with hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "170577003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Good hypertension control (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "170578008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Poor hypertension control (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "170579000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypertension:follow-up default (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "170586008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Treatment for hypertension started (situation)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "185264001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Seen in hypertension clinic (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "185716009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Attends hypertension monitoring (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "185717000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Refuses hypertension monitoring (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "194783001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary malignant renovascular hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "194785008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary benign hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "194788005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypertension secondary to endocrine disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "194791005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypertension caused by drug (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "19769006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "High-renin essential hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "23130000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Paroxysmal hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "233815004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Persistent pulmonary hypertension of the newborn (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "233941006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Solitary pulmonary hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "233942004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Small vessel pulmonary hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "233943009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Sporadic primary pulmonary hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "233944003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Familial primary pulmonary hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "233945002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary hypertension caused by drug (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "233946001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Large vessel pulmonary hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "234072000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Venous hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "234073005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Venous hypertension of upper limb (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "234075003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Venous hypertension of lower limb (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "237279007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Transient hypertension of pregnancy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "270440008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypertension monitoring check done (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "28119000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Renal hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "288250001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maternal hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "31992008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "34742003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Portal hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "371125006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Labile essential hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "371622005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Elevated blood pressure reading without diagnosis of hypertension (situation)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "38341003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypertensive disorder, systemic arterial (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "39018007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Renal arterial hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "395050009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypertension monitoring not required (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "397748008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypertension with albuminuria (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "398254007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pre-eclampsia (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "401.1",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Benign essential hypertension",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "401.9",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Unspecified essential hypertension",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "401117004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Moderate hypertension control (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "402.01",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Malignant hypertensive heart disease with heart failure",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "402.11",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Benign hypertensive heart disease with heart failure",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "402.91",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Unspecified hypertensive heart disease with heart failure",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "402832006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Telangiectasia due to venous hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "403.01",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive chronic kidney disease, malignant, with chronic kidney disease stage V or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "403.11",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive chronic kidney disease, benign, with chronic kidney disease stage V or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "403.91",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive chronic kidney disease, unspecified, with chronic kidney disease stage V or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404.01",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive heart and chronic kidney disease, malignant, with heart failure and with chronic kidney disease stage I through stage IV, or unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404.02",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive heart and chronic kidney disease, malignant, without heart failure and with chronic kidney disease stage V or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404.03",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive heart and chronic kidney disease, malignant, with heart failure and with chronic kidney disease stage V or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404.11",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive heart and chronic kidney disease, benign, with heart failure and with chronic kidney disease stage I through stage IV, or unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404.12",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive heart and chronic kidney disease, benign, without heart failure and with chronic kidney disease stage V or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404.13",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive heart and chronic kidney disease, benign, with heart failure and chronic kidney disease stage V or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404.91",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive heart and chronic kidney disease, unspecified, with heart failure and with chronic kidney disease stage I through stage IV, or unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404.92",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive heart and chronic kidney disease, unspecified, without heart failure and with chronic kidney disease stage V or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404.93",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypertensive heart and chronic kidney disease, unspecified, with heart failure and chronic kidney disease stage V or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "405.01",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Malignant renovascular hypertension",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "405.11",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Benign renovascular hypertension",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "405.19",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Other benign secondary hypertension",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "405.91",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Unspecified renovascular hypertension",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "405.99",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Other unspecified secondary hypertension",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "4210003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Ocular hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "423674003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Chronic peripheral venous hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "428575007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypertension secondary to kidney transplant (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "429198000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Exertional hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "429457004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Systolic essential hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "44772007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Maternal obesity syndrome (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "46481004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Low-renin essential hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "46764007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Severe pre-eclampsia (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "48146000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Diastolic hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "48194001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pregnancy-induced hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "52698002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Transient hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "56218007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Systolic hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "57684003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Parenchymal renal hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "59621000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Essential hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "59720008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Sustained diastolic hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "59997006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Endocrine hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "65518004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Labile diastolic hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "68267002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Benign intracranial hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "70272006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Malignant hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "73410007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Benign secondary renovascular hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "74451002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary diastolic hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "78975002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Malignant essential hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "81626002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Malignant hypertension in obstetric context (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "84094009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Rebound hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "8762007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Chronic hypertension in obstetric context (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "89242004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Malignant secondary hypertension (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H35.039",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive retinopathy, unspecified eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I10",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Essential (primary) hypertension",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I11.0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive heart disease with heart failure",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I11.9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive heart disease without heart failure",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I12.0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I12.9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I13.0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I13.10",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I13.11",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive heart and chronic kidney disease without heart failure, with stage 5 chronic kidney disease, or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I13.2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I15.0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Renovascular hypertension",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I16.0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive urgency",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I16.1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive emergency",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I16.9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive crisis, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I67.4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypertensive encephalopathy",
+      "white_list": false
+    }
+  ],
+  "display_name": "Diagnosis of hypertension",
+  "oid": "2.16.840.1.113883.3.600.263",
+  "version": "Draft-9A033A94-3D9B-11E1-8634-00237D5BF174"
+}

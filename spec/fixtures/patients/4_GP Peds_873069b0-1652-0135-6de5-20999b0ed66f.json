@@ -1,0 +1,1650 @@
+{
+  "birthDatetime": "2010-09-21T09:00:00.000+00:00",
+  "dataElements": [
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-09-12T08:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "40468003"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "B15.9"
+        }
+      ],
+      "description": "Diagnosis: Hepatitis A",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-09-12T08:00:00+00:00",
+        "high": "2012-10-02T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-06-24T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99392"
+        }
+      ],
+      "description": "Encounter, Performed: Preventive Care, Established Office Visit, 0 to 17",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-06-24T08:00:00+00:00",
+        "high": "2012-06-24T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2010-09-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "170370000"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90744"
+        }
+      ],
+      "description": "Procedure, Performed: Hepatitis B Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2010-09-24T08:00:00+00:00",
+        "high": "2010-09-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2010-11-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "412755006"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90700"
+        }
+      ],
+      "description": "Procedure, Performed: DTaP Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2010-11-24T08:00:00+00:00",
+        "high": "2010-11-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2010-11-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "170371001"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90744"
+        }
+      ],
+      "description": "Procedure, Performed: Hepatitis B Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2010-11-24T08:00:00+00:00",
+        "high": "2010-11-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2010-11-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "434751000124102"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90670"
+        }
+      ],
+      "description": "Procedure, Performed: Pneumococcal Conjugate Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2010-11-24T08:00:00+00:00",
+        "high": "2010-11-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2010-11-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "90680"
+        }
+      ],
+      "description": "Procedure, Performed: Rotavirus vaccine, pentavalent (RV5), 3 dose schedule, live, for oral use",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2010-11-24T08:00:00+00:00",
+        "high": "2010-11-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2011-01-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "412756007"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90700"
+        }
+      ],
+      "description": "Procedure, Performed: DTaP Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2011-01-24T08:00:00+00:00",
+        "high": "2011-01-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2011-01-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "170372008"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90744"
+        }
+      ],
+      "description": "Procedure, Performed: Hepatitis B Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2011-01-24T08:00:00+00:00",
+        "high": "2011-01-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2011-01-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "434751000124102"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90670"
+        }
+      ],
+      "description": "Procedure, Performed: Pneumococcal Conjugate Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2011-01-24T08:00:00+00:00",
+        "high": "2011-01-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2011-03-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "412757003"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90700"
+        }
+      ],
+      "description": "Procedure, Performed: DTaP Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2011-03-24T08:00:00+00:00",
+        "high": "2011-03-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2011-03-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "434751000124102"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90670"
+        }
+      ],
+      "description": "Procedure, Performed: Pneumococcal Conjugate Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2011-03-24T08:00:00+00:00",
+        "high": "2011-03-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2011-09-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "86198006"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90655"
+        }
+      ],
+      "description": "Procedure, Performed: Influenza Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2011-09-24T08:00:00+00:00",
+        "high": "2011-09-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-01-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "90707"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "38598009"
+        }
+      ],
+      "description": "Procedure, Performed: Measles, Mumps and Rubella (MMR) Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-01-24T08:00:00+00:00",
+        "high": "2012-01-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-01-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "434751000124102"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90670"
+        }
+      ],
+      "description": "Procedure, Performed: Pneumococcal Conjugate Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-01-24T08:00:00+00:00",
+        "high": "2012-01-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-01-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "90680"
+        }
+      ],
+      "description": "Procedure, Performed: Rotavirus vaccine, pentavalent (RV5), 3 dose schedule, live, for oral use",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-01-24T08:00:00+00:00",
+        "high": "2012-01-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "390846000"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90700"
+        }
+      ],
+      "description": "Procedure, Performed: DTaP Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-03-24T08:00:00+00:00",
+        "high": "2012-03-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-24T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "90680"
+        }
+      ],
+      "description": "Procedure, Performed: Rotavirus vaccine, pentavalent (RV5), 3 dose schedule, live, for oral use",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-03-24T08:00:00+00:00",
+        "high": "2012-03-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-09-02T08:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "86198006"
+        },
+        {
+          "codeSystem": "CPT",
+          "code": "90655"
+        }
+      ],
+      "description": "Procedure, Performed: Influenza Vaccine Administered",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-09-02T08:00:00+00:00",
+        "high": "2012-09-02T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "authorDatetime": "2012-06-24T08:00:00.000+00:00",
+      "category": "laboratory_test",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "21595-4"
+        }
+      ],
+      "description": "Laboratory Test, Performed: Varicella Zoster Antibody Test (IgG Antibody Titer)",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.5",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": {
+        "low": "2012-06-24T08:00:00+00:00",
+        "high": "2012-06-24T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
+    },
+    {
+      "authorDatetime": "2012-08-12T08:00:00.000+00:00",
+      "category": "laboratory_test",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "25514-1"
+        }
+      ],
+      "description": "Laboratory Test, Performed: Rubella Antibody Test (IgG Antibody presence)",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.5",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": {
+        "low": "2012-08-12T08:00:00+00:00",
+        "high": "2012-08-12T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": [
+        {
+          "code": "441773004",
+          "codeSystem": "SNOMED-CT",
+          "version": null,
+          "descriptor": "Positive Finding"
+        }
+      ],
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
+    },
+    {
+      "authorDatetime": "2012-09-12T08:00:00.000+00:00",
+      "category": "laboratory_test",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "32018-4"
+        }
+      ],
+      "description": "Laboratory Test, Performed: Anti Hepatitis A IgG Antigen Test",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.5",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": {
+        "low": "2012-09-12T08:00:00+00:00",
+        "high": "2012-09-12T08:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": [
+        {
+          "code": "441773004",
+          "codeSystem": "SNOMED-CT",
+          "version": null,
+          "descriptor": "Positive Finding"
+        }
+      ],
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
+    },
+    {
+      "birthDatetime": "2010-09-21T09:00:00.000+00:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2135-2",
+          "codeSystem": "CDC Race",
+          "descriptor": "Hispanic Or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2106-3",
+          "codeSystem": "CDC Race",
+          "descriptor": "White",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "F",
+          "codeSystem": "AdministrativeSex",
+          "descriptor": "2.16.840.1.113883.18.2",
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "measure_ids": [
+      "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+      "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+      "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+      "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+      "0DAC1DEC-E011-493B-A281-7C28964872DD",
+      "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+      "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+      "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+      "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+      "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+      "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+      "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+      "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+      "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "500E4792-7F94-4E34-8546-EE71C56FE463",
+      "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+      "59657B9B-01BF-4979-A090-8534DA1D0516",
+      "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "60176FBF-BFDC-4892-9C9E-604F206553C8",
+      "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+      "703CC49B-B653-4885-80E8-245A057F5AE9",
+      "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+      "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+      "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+      "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+      "8479F6D6-4200-4FD0-9438-30048EBE3E29",
+      "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+      "8924F2B3-EC06-4650-B634-D70A53DEE577",
+      "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+      "95FB767E-0CB2-4778-B5FF-6BA9A53FA28E",
+      "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+      "9A031E24-3D9B-11E1-8634-00237D5BF174",
+      "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+      "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+      "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "9A033A94-3D9B-11E1-8634-00237D5BF174",
+      "A244AA29-7D11-4616-888A-86E376BFCC6F",
+      "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+      "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "A5E96A45-8132-4E72-BF4F-E8C81DB9E641",
+      "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+      "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+      "AC639794-CB3F-4F4F-8FA6-680300D5ED4E",
+      "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+      "B6016B47-B65D-4BE0-866F-1D397886CA89",
+      "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+      "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+      "BC5B4A57-B964-4399-9D40-667C896F31EA",
+      "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+      "BEB1C33C-2549-4E7F-9567-05ED38448464",
+      "C0D72444-7C26-4863-9B51-8080F8928A85",
+      "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+      "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+      "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+      "E0A07809-7B74-473F-BCC4-1891BE506AAA",
+      "E35791DF-5B25-41BB-B260-673337BC44A8",
+      "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+      "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+      "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+      "F70B2984-AF4A-4072-AE0D-CEC677A7FF8F",
+      null,
+      "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+      "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+      "1C05C6C0-8099-4270-83CE-292CF6E35C51",
+      "ED78899D-2375-4D68-AA63-58E1734F5694",
+      "A3CE125D-C238-42CE-862E-DBA0055DFC66"
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "HepatitisBVaccineAdministered",
+        "description": "Procedure, Performed: Hepatitis B Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1042",
+        "type": "procedures",
+        "id": "HepatitisBVaccineAdministered_ProcedurePerformed_d0fa549e_13d9_4d2f_8a2c_907160873757_source",
+        "start_date": 1285315200000,
+        "end_date": 1285315200000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a11674qY",
+        "codes": {
+          "SNOMED-CT": [
+            "170370000"
+          ],
+          "CPT": [
+            "90744"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260265",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "DTaPVaccineAdministered",
+        "description": "Procedure, Performed: DTaP Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1022",
+        "type": "procedures",
+        "id": "DTaPVaccineAdministered_ProcedurePerformed_e40376e4_0b34_499a_a6e8_4aa287b2df87_source",
+        "start_date": 1290585600000,
+        "end_date": 1290585600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "162879eae0eVg",
+        "codes": {
+          "SNOMED-CT": [
+            "412755006"
+          ],
+          "CPT": [
+            "90700"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260266",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "HepatitisBVaccineAdministered",
+        "description": "Procedure, Performed: Hepatitis B Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1042",
+        "type": "procedures",
+        "id": "HepatitisBVaccineAdministered_ProcedurePerformed_d0fa549e_13d9_4d2f_8a2c_907160873757_source",
+        "start_date": 1290585600000,
+        "end_date": 1290585600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a1a8e0SH",
+        "codes": {
+          "SNOMED-CT": [
+            "170371001"
+          ],
+          "CPT": [
+            "90744"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260267",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "PneumococcalConjugateVaccineAdministered",
+        "description": "Procedure, Performed: Pneumococcal Conjugate Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1046",
+        "type": "procedures",
+        "id": "PneumococcalConjugateVaccineAdministered_ProcedurePerformed_e8794586_ac11_439d_9cea_71f833e8df12_source",
+        "start_date": 1290585600000,
+        "end_date": 1290585600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a3ef36JE",
+        "codes": {
+          "SNOMED-CT": [
+            "434751000124102"
+          ],
+          "CPT": [
+            "90670"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260268",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "Procedure, Performed: Procedure, Performed",
+        "description": "Procedure, Performed: Rotavirus vaccine, pentavalent (RV5), 3 dose schedule, live, for oral use",
+        "code_list_id": "drc-da0526efb838d456869a95aeb48c08b75f3c3085226eb236b6584feb0b80023d",
+        "type": "procedures",
+        "id": "prefix_90680_ProcedurePerformed_C7FC0381_4DA7_4176_B301_C7BE7CDEC124_source",
+        "start_date": 1290585600000,
+        "end_date": 1290585600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a4c464pO",
+        "codes": {
+          "CPT": [
+            "90680"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260269",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "DTaPVaccineAdministered",
+        "description": "Procedure, Performed: DTaP Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1022",
+        "type": "procedures",
+        "id": "DTaPVaccineAdministered_ProcedurePerformed_e40376e4_0b34_499a_a6e8_4aa287b2df87_source",
+        "start_date": 1295856000000,
+        "end_date": 1295856000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "162879f48ecu4",
+        "codes": {
+          "SNOMED-CT": [
+            "412756007"
+          ],
+          "CPT": [
+            "90700"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26026a",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "HepatitisBVaccineAdministered",
+        "description": "Procedure, Performed: Hepatitis B Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1042",
+        "type": "procedures",
+        "id": "HepatitisBVaccineAdministered_ProcedurePerformed_d0fa549e_13d9_4d2f_8a2c_907160873757_source",
+        "start_date": 1295856000000,
+        "end_date": 1295856000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a2004a9e",
+        "codes": {
+          "SNOMED-CT": [
+            "170372008"
+          ],
+          "CPT": [
+            "90744"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26026b",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "PneumococcalConjugateVaccineAdministered",
+        "description": "Procedure, Performed: Pneumococcal Conjugate Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1046",
+        "type": "procedures",
+        "id": "PneumococcalConjugateVaccineAdministered_ProcedurePerformed_e8794586_ac11_439d_9cea_71f833e8df12_source",
+        "start_date": 1295856000000,
+        "end_date": 1295856000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a441041T",
+        "codes": {
+          "SNOMED-CT": [
+            "434751000124102"
+          ],
+          "CPT": [
+            "90670"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26026c",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "DTaPVaccineAdministered",
+        "description": "Procedure, Performed: DTaP Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1022",
+        "type": "procedures",
+        "id": "DTaPVaccineAdministered_ProcedurePerformed_e40376e4_0b34_499a_a6e8_4aa287b2df87_source",
+        "start_date": 1300953600000,
+        "end_date": 1300953600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "162879fba2aDU",
+        "codes": {
+          "SNOMED-CT": [
+            "412757003"
+          ],
+          "CPT": [
+            "90700"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26026d",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "PneumococcalConjugateVaccineAdministered",
+        "description": "Procedure, Performed: Pneumococcal Conjugate Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1046",
+        "type": "procedures",
+        "id": "PneumococcalConjugateVaccineAdministered_ProcedurePerformed_e8794586_ac11_439d_9cea_71f833e8df12_source",
+        "start_date": 1300953600000,
+        "end_date": 1300953600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a46b50MS",
+        "codes": {
+          "SNOMED-CT": [
+            "434751000124102"
+          ],
+          "CPT": [
+            "90670"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26026e",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "InfluenzaVaccineAdministered",
+        "description": "Procedure, Performed: Influenza Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1044",
+        "type": "procedures",
+        "id": "InfluenzaVaccineAdministered_ProcedurePerformed_6f8cc55f_ac46_44f1_950f_c19cdfda07f1_source",
+        "start_date": 1316851200000,
+        "end_date": 1316851200000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a2bf12Cy",
+        "codes": {
+          "SNOMED-CT": [
+            "86198006"
+          ],
+          "CPT": [
+            "90655"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e26026f",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "MeaslesMumpsandRubella(MMR)VaccineAdministered",
+        "description": "Procedure, Performed: Measles, Mumps and Rubella (MMR) Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1031",
+        "type": "procedures",
+        "id": "MeaslesMumpsandRubella_MMR_VaccineAdministered_ProcedurePerformed_40280381_3d61_56a7_013e_6224e2cc2612_source",
+        "start_date": 1327392000000,
+        "end_date": 1327392000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a37ffe1d",
+        "codes": {
+          "CPT": [
+            "90707"
+          ],
+          "SNOMED-CT": [
+            "38598009"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260270",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "PneumococcalConjugateVaccineAdministered",
+        "description": "Procedure, Performed: Pneumococcal Conjugate Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1046",
+        "type": "procedures",
+        "id": "PneumococcalConjugateVaccineAdministered_ProcedurePerformed_e8794586_ac11_439d_9cea_71f833e8df12_source",
+        "start_date": 1327392000000,
+        "end_date": 1327392000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a49498ZQ",
+        "codes": {
+          "SNOMED-CT": [
+            "434751000124102"
+          ],
+          "CPT": [
+            "90670"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260271",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "Procedure, Performed: Procedure, Performed",
+        "description": "Procedure, Performed: Rotavirus vaccine, pentavalent (RV5), 3 dose schedule, live, for oral use",
+        "code_list_id": "drc-da0526efb838d456869a95aeb48c08b75f3c3085226eb236b6584feb0b80023d",
+        "type": "procedures",
+        "id": "prefix_90680_ProcedurePerformed_C7FC0381_4DA7_4176_B301_C7BE7CDEC124_source",
+        "start_date": 1327392000000,
+        "end_date": 1327392000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a4f248P5",
+        "codes": {
+          "CPT": [
+            "90680"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260272",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "DTaPVaccineAdministered",
+        "description": "Procedure, Performed: DTaP Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1022",
+        "type": "procedures",
+        "id": "DTaPVaccineAdministered_ProcedurePerformed_e40376e4_0b34_499a_a6e8_4aa287b2df87_source",
+        "start_date": 1332576000000,
+        "end_date": 1332576000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a06582zg",
+        "codes": {
+          "SNOMED-CT": [
+            "390846000"
+          ],
+          "CPT": [
+            "90700"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260273",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "Procedure, Performed: Procedure, Performed",
+        "description": "Procedure, Performed: Rotavirus vaccine, pentavalent (RV5), 3 dose schedule, live, for oral use",
+        "code_list_id": "drc-da0526efb838d456869a95aeb48c08b75f3c3085226eb236b6584feb0b80023d",
+        "type": "procedures",
+        "id": "prefix_90680_ProcedurePerformed_C7FC0381_4DA7_4176_B301_C7BE7CDEC124_source",
+        "start_date": 1332576000000,
+        "end_date": 1332576000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a513f2tM",
+        "codes": {
+          "CPT": [
+            "90680"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260274",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "laboratory_test",
+        "status": "performed",
+        "title": "VaricellaZosterAntibodyTest(IgGAntibodyTiter)",
+        "description": "Laboratory Test, Performed: Varicella Zoster Antibody Test (IgG Antibody Titer)",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.198.12.1066",
+        "type": "laboratory_tests",
+        "id": "VaricellaZosterAntibodyTest_IgGAntibodyTiter__LaboratoryTestPerformed_70eca092_0d96_4867_94a7_92e33811f20c_source",
+        "start_date": 1340524800000,
+        "end_date": 1340524800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "162879e4e98qA",
+        "codes": {
+          "LOINC": [
+            "21595-4"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260276",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "PreventiveCareEstablishedOfficeVisit0to17",
+        "description": "Encounter, Performed: Preventive Care, Established Office Visit, 0 to 17",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1024",
+        "type": "encounters",
+        "id": "PreventiveCareEstablishedOfficeVisit0to17_EncounterPerformed_40280381_3d61_56a7_013e_6224e2cf2661_source",
+        "start_date": 1340524800000,
+        "end_date": 1340525700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "162879c8b04mN",
+        "codes": {
+          "CPT": [
+            "99392"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260264",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "laboratory_test",
+        "status": "performed",
+        "title": "RubellaAntibodyTest(IgGAntibodypresence)",
+        "description": "Laboratory Test, Performed: Rubella Antibody Test (IgG Antibody presence)",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.198.12.1064",
+        "type": "laboratory_tests",
+        "id": "RubellaAntibodyTest_IgGAntibodypresence__LaboratoryTestPerformed_e6441378_2f6d_4a58_bff9_e9eecf62453c_source",
+        "start_date": 1344758400000,
+        "end_date": 1344758400000,
+        "value": [
+          {
+            "type": "CD",
+            "type_cmp": "CD",
+            "code_list_id": "2.16.840.1.113883.3.464.1003.121.12.1016",
+            "title": "Positive Finding"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "162879e04fci7",
+        "codes": {
+          "LOINC": [
+            "25514-1"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260277",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "InfluenzaVaccineAdministered",
+        "description": "Procedure, Performed: Influenza Vaccine Administered",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1044",
+        "type": "procedures",
+        "id": "InfluenzaVaccineAdministered_ProcedurePerformed_6f8cc55f_ac46_44f1_950f_c19cdfda07f1_source",
+        "start_date": 1346572800000,
+        "end_date": 1346572800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "16287a32416Rm",
+        "codes": {
+          "SNOMED-CT": [
+            "86198006"
+          ],
+          "CPT": [
+            "90655"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260275",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "laboratory_test",
+        "status": "performed",
+        "title": "AntiHepatitisAIgGAntigenTest",
+        "description": "Laboratory Test, Performed: Anti Hepatitis A IgG Antigen Test",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.198.12.1033",
+        "type": "laboratory_tests",
+        "id": "AntiHepatitisAIgGAntigenTest_LaboratoryTestPerformed_4f790a32_4ba5_4ba0_9370_6fbde7a7cc54_source",
+        "start_date": 1347436800000,
+        "end_date": 1347436800000,
+        "value": [
+          {
+            "type": "CD",
+            "type_cmp": "CD",
+            "code_list_id": "2.16.840.1.113883.3.464.1003.121.12.1016",
+            "title": "Positive Finding"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "162879d1908Wc",
+        "codes": {
+          "LOINC": [
+            "32018-4"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51541aeac50408e260279",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "HepatitisA",
+        "description": "Diagnosis: Hepatitis A",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1024",
+        "type": "conditions",
+        "id": "HepatitisA_Diagnosis_40280381_3d61_56a7_013e_6224e2ce2646_source",
+        "start_date": 1347436800000,
+        "end_date": 1349164800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+        "cms_id": "CMS117v7",
+        "criteria_id": "162879c12c0r3",
+        "codes": {
+          "SNOMED-CT": [
+            "40468003"
+          ],
+          "ICD-10-CM": [
+            "B15.9"
+          ]
+        },
+        "coded_entry_id": "5ac51541aeac50408e260263",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": {
+    },
+    "notes": "2yo female; \n*22qdes\n*Pt received several immunizations. Acquired hepatitis A this measurement period through ingestion of contaminated food. ",
+    "is_shared": false,
+    "origin_data": [
+
+    ],
+    "medical_record_number": "873069b0-1652-0135-6de5-20999b0ed66f",
+    "medical_record_assigner": "Bonnie",
+    "description": "",
+    "description_category": "DENOM",
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":null,\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1420070400,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+  },
+  "familyName": "GP Peds",
+  "givenNames": [
+    "4"
+  ],
+  "qdmVersion": "5.3"
+}

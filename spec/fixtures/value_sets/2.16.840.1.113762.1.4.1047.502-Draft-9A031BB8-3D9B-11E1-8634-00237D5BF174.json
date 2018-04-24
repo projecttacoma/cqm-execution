@@ -1,0 +1,171 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "162690006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "On examination - obese (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "162863004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Body mass index 25-29 - overweight (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "162864005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Body mass index 30+ - obesity (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "238131007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Overweight (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "238136002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Morbid obesity (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "275947003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "On examination - overweight (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "408512008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Body mass index 40+ - severely obese (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "414915002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Obese (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "414916001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Obesity (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "415530009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Simple obesity (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "83911000119104",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Severe obesity (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E66.01",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Morbid (severe) obesity due to excess calories",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E66.09",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other obesity due to excess calories",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E66.1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Drug-induced obesity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E66.2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Morbid (severe) obesity with alveolar hypoventilation",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E66.3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Overweight",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E66.8",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other obesity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "E66.9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Obesity, unspecified",
+      "white_list": false
+    }
+  ],
+  "display_name": "Overweight or Obese",
+  "oid": "2.16.840.1.113762.1.4.1047.502",
+  "version": "Draft-9A031BB8-3D9B-11E1-8634-00237D5BF174"
+}

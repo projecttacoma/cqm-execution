@@ -1,0 +1,999 @@
+{
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "1001000119102",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary embolism with pulmonary infarction (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "11029002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary apoplexy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "128053003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Deep venous thrombosis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "128055005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Deep venous thrombosis of pelvic vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "132251000119101",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute deep venous thrombosis of popliteal vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "132291000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute deep venous thrombosis of femoral vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "132301000119107",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute deep venous thrombosis of iliofemoral vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "134399007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Deep vein thrombosis of leg related to air travel (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "16750002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Deep thrombophlebitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1748006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of deep femoral vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "194883006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Postoperative pulmonary embolus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195394007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis and thrombophlebitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195405004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of popliteal vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195408002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of the posterior tibial vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195410000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of the femoral vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195411001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of the popliteal vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195421009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of the common iliac vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195422002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of the internal iliac vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195423007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of the external iliac vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195425000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of the common iliac vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195426004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of the internal iliac vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195427008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of the external iliac vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "195437003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Embolism and thrombosis of the vena cava (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "213220000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Postoperative deep vein thrombosis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "233935004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary thromboembolism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "233936003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute massive pulmonary embolism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "234044007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Iliofemoral deep vein thrombosis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "234049002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Venous embolism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "25114006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of deep veins of lower extremity (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "266267005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Deep vein phlebitis and thrombophlebitis of the leg (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "276494008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis and/or thrombophlebitis of iliac vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "281595001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombosis of inferior vena cava (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312584000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombosis of vein of trunk (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312588002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of lower limb vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "31295000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of iliac vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "35979000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of femoropopliteal vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "40198004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of deep veins of lower extremity (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404223003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Deep venous thrombosis of lower extremity (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "413956008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Deep vein thrombosis of leg related to intravenous drug use (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "427775006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Deep venous thrombosis of profunda femoris vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "427776007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombosis of the popliteal vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "42861008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of iliac vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "429098002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thromboembolism of vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "441746000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Infarction of lung due to iatrogenic pulmonary embolism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "444325005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Deep vein thrombosis of bilateral lower extremities (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "46253008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of lower extremities (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "50817002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Embolism of vena cava (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "52496006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of femoropopliteal vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "57834008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary artery thrombosis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "58309001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phlebitis of tibial vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "59282003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary embolism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "64662007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary infarction (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "69357003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary thrombosis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "7387004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of tibial vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "74315008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary microemboli (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "77892009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pulmonary venous thrombosis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "83727005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hemorrhagic pulmonary infarction (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "83938003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombosis of vena cava (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "95448006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombosis of pelvic vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "95449003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Thrombophlebitis of pelvic vein (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I26.02",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Saddle embolus of pulmonary artery with acute cor pulmonale",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I26.09",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other pulmonary embolism with acute cor pulmonale",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I26.92",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Saddle embolus of pulmonary artery without acute cor pulmonale",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I26.99",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other pulmonary embolism without acute cor pulmonale",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.10",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of unspecified femoral vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.11",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of right femoral vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.12",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of left femoral vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.13",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of femoral vein, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.201",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of unspecified deep vessels of right lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.202",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of unspecified deep vessels of left lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.203",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of unspecified deep vessels of lower extremities, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.209",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of unspecified deep vessels of unspecified lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.211",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of right iliac vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.212",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of left iliac vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.213",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of iliac vein, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.219",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of unspecified iliac vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.221",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of right popliteal vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.222",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of left popliteal vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.223",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of popliteal vein, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.229",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of unspecified popliteal vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.291",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of other deep vessels of right lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.292",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of other deep vessels of left lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.293",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of other deep vessels of lower extremity, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.299",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of other deep vessels of unspecified lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of lower extremities, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I80.9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Phlebitis and thrombophlebitis of unspecified site",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.220",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of inferior vena cava",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.290",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of other thoracic veins",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.401",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified deep veins of right lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.402",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified deep veins of left lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.403",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified deep veins of lower extremity, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.409",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified deep veins of unspecified lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.411",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of right femoral vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.412",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of left femoral vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.413",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of femoral vein, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.419",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified femoral vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.421",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of right iliac vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.422",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of left iliac vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.423",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of iliac vein, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.429",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified iliac vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.431",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of right popliteal vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.432",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of left popliteal vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.433",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of popliteal vein, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.439",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified popliteal vein",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.4Y1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified deep veins of right proximal lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.4Y2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified deep veins of left proximal lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.4Y3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified deep veins of proximal lower extremity, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.4Y9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified deep veins of unspecified proximal lower extremity",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.890",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of other specified veins",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "I82.90",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute embolism and thrombosis of unspecified vein",
+      "white_list": false
+    }
+  ],
+  "display_name": "Venous Thromboembolism",
+  "oid": "2.16.840.1.113883.3.117.1.7.1.279",
+  "version": "Draft-38B0B5EC-0F63-466F-8FE3-2CD20DDD1622"
+}

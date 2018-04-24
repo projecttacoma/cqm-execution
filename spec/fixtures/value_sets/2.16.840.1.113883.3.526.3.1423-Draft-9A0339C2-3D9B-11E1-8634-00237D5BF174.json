@@ -1,0 +1,2889 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "10100008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Malignant glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "111513000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Advanced open-angle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "111514006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pseudoexfoliation glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "12239301000119102",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Bilateral open-angle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "12239341000119100",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Open-angle glaucoma of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "12239381000119105",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Open-angle glaucoma of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "12239421000119101",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Bilateral glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "12239461000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "12239501000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15633281000119103",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Bilateral primary open angle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15633321000119108",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary open angle glaucoma of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15640441000119104",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary open angle glaucoma of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15673001000119103",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital glaucoma of bilateral eyes (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15673081000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital glaucoma of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736441000119108",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary angle-closure glaucoma of bilateral eyes (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736481000119103",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary angle-closure glaucoma of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736521000119103",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary angle-closure glaucoma of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736561000119108",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Neovascular glaucoma of bilateral eyes (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736601000119108",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Neovascular glaucoma of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736641000119105",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Neovascular glaucoma of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736681000119100",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Narrow-angle glaucoma of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736721000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Angle-closure glaucoma of bilateral eyes (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736761000119101",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Narrow angle glaucoma of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15738841000119105",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of bilateral eyes due to combination of mechanisms (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15738881000119100",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of left eye due to combination of mechanisms (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15738921000119107",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of right eye due to combination of mechanisms (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739041000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of bilateral eyes due to iris anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739081000119101",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of bilateral eyes due to anterior segment anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739121000119104",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of right eye due to anterior segment anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739161000119109",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of left eye due to anterior segment anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739201000119104",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of left eye due to ocular vascular disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739241000119102",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of right eye due to ocular vascular disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739281000119107",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of bilateral eyes due to ocular vascular disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739321000119102",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of right eye due to chamber angle anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739361000119107",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of bilateral eyes due to chamber angle anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739401000119103",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of left eye due to chamber angle anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739441000119101",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of right eye due to trauma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739481000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of left eye due to trauma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739561000119101",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of right eye due to lens disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739641000119104",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of left eye due to lens disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739681000119109",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of right eye due to systemic disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739721000119103",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of left eye due to systemic disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739761000119108",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma of bilateral eyes due to systemic disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15739841000119103",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Open-angle glaucoma of bilateral eyes co-occurrent with cupping of optic disc (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15993671000119108",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Open-angle glaucoma of right eye caused by steroid (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15993711000119107",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Open-angle glaucoma of left eye caused by steroid (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15993751000119108",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Open-angle glaucoma of bilateral eyes caused by steroid (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1654001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Corticosteroid-induced glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "19144002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Absolute glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "19309007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma associated with vascular disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193546005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary angle-closure glaucoma residual stage (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193548006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Steroid-induced glaucoma glaucomatous stage (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193549003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Steroid-induced glaucoma residual stage (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193551004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to another disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193552006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to chamber angle anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193553001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to iris anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193555008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to systemic syndrome (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193561006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary angle-closure glaucoma with pupil block (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193562004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to ocular vascular disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "204113001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "206248004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Traumatic glaucoma due to birth trauma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "21571006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary angle-closure glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "21928008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary open-angle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "232081005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Iatrogenic glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "232082003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Iatrogenic angle-closure glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "232086000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Neovascular glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "232087009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma with intraocular hemorrhage (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "232088004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Ghost cell glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "232090003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma following surgery (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "23986001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "24151000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Steroid-induced open angle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "267625001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to ocular tumor or cyst (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "275477002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to ocular cyst (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "27735002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma associated with tumors AND/OR cysts (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "29369005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hypersecretion glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "30041005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute angle-closure glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314017009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute-on-chronic glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314033007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Uveitic glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314784002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary angle-closure glaucoma - synechial (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "32893002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phacolytic glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "33647009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Anatomical narrow angle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "336611000119109",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute angle-closure glaucoma of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "336631000119104",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Absolute glaucoma right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "342221000119104",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute angle-closure glaucoma of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "342241000119105",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Absolute glaucoma left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "34623005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma with increased episcleral venous pressure (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "347381000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Bilateral acute angle-closure glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "347401000119106",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Bilateral absolute glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.10",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Open-angle glaucoma, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.11",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Primary open angle glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.12",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Low tension open-angle glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.13",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Pigmentary open-angle glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.14",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Glaucoma of childhood",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.15",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Residual stage of open angle glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.20",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Primary angle-closure glaucoma, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.21",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Intermittent angle-closure glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.22",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Acute angle-closure glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.23",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Chronic angle-closure glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.24",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Residual stage of angle-closure glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.31",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Corticosteroid-induced glaucoma, glaucomatous stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.32",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Corticosteroid-induced glaucoma, residual stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.51",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Phacolytic glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.52",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Pseudoexfoliation glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.59",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Glaucoma associated with other lens disorders",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.60",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Glaucoma associated with unspecified ocular disorder",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.61",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Glaucoma associated with pupillary block",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.62",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Glaucoma associated with ocular inflammations",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.63",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Glaucoma associated with vascular disorders",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.64",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Glaucoma associated with tumors or cysts",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.65",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Glaucoma associated with ocular trauma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.81",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypersecretion glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.82",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Glaucoma with increased episcleral venous pressure",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.83",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Aqueous misdirection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "365.89",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Other specified glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "367360002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Ciliary block glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "37155002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma associated with ocular inflammation (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "392030001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Hemolytic glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "392288006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary angle-closure glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "392291006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Angle-closure glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "392300000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phacomorphic glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "392352004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Angle recession glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404634005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma associated with iridocorneal endothelial syndrome (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "404648005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Lens particle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "415176004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary congenital glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "41911000119107",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to type 2 diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "444863008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Anatomical narrow angle glaucoma with borderline intraocular pressure (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "45623002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma associated with anterior segment anomaly (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "46168003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pigmentary glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "50485007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Low tension glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "53667005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma associated with systemic syndromes (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "55129006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Residual stage angle-closure glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "60981000119103",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to diabetes mellitus type 1 (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "65460003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Intermittent angle-closure glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66725002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to perforating injury (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66747002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma associated with ocular disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66990007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Residual stage of open angle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "68241007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma associated with ocular trauma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "698840003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Neovascular glaucoma due to hyphema (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "713457002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Neovascular glaucoma due to diabetes mellitus (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "715144004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma caused by silicone oil (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "716166002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Microcornea with glaucoma and absent frontal sinus syndrome (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "721898008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Corticosteroid-induced glaucoma of bilateral eyes (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "722321001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Corticosteroid-induced glaucoma of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "722329004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Corticosteroid-induced glaucoma of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "77075001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary open angle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "84333006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma associated with lens disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "84494001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Open-angle glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "89215000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Postoperative angle-closure glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "92829008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucoma due to combination of mechanisms (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "95213001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary glaucoma due to combination of mechanisms (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "95250000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary glaucoma due to combination mechanisms (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "95717004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary glaucoma (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.10X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified open-angle glaucoma, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.10X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified open-angle glaucoma, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.10X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified open-angle glaucoma, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.10X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified open-angle glaucoma, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.10X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified open-angle glaucoma, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1110",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, right eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1111",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, right eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1112",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, right eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1113",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, right eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1114",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, right eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1120",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, left eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1121",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, left eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1122",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, left eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1123",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, left eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1124",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, left eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1130",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, bilateral, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1131",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, bilateral, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1132",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, bilateral, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1133",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, bilateral, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1134",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary open-angle glaucoma, bilateral, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1210",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, right eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1211",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, right eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1212",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, right eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1213",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, right eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1214",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, right eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1220",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, left eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1221",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, left eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1222",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, left eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1223",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, left eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1224",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, left eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1230",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, bilateral, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1231",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, bilateral, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1232",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, bilateral, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1233",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, bilateral, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1234",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Low-tension glaucoma, bilateral, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1310",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, right eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1311",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, right eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1312",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, right eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1313",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, right eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1314",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, right eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1320",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, left eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1321",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, left eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1322",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, left eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1323",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, left eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1324",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, left eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1330",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, bilateral, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1331",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, bilateral, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1332",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, bilateral, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1333",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, bilateral, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1334",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pigmentary glaucoma, bilateral, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1410",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, right eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1411",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, right eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1412",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, right eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1413",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, right eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1414",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, right eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1420",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, left eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1421",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, left eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1422",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, left eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1423",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, left eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1424",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, left eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1430",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, bilateral, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1431",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, bilateral, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1432",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, bilateral, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1433",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, bilateral, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.1434",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Capsular glaucoma with pseudoexfoliation of lens, bilateral, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.151",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Residual stage of open-angle glaucoma, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.152",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Residual stage of open-angle glaucoma, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.153",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Residual stage of open-angle glaucoma, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.20X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified primary angle-closure glaucoma, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.20X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified primary angle-closure glaucoma, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.20X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified primary angle-closure glaucoma, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.20X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified primary angle-closure glaucoma, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.20X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified primary angle-closure glaucoma, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.211",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute angle-closure glaucoma, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.212",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute angle-closure glaucoma, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.213",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Acute angle-closure glaucoma, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2210",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, right eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2211",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, right eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2212",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, right eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2213",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, right eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2214",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, right eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2220",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, left eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2221",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, left eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2222",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, left eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2223",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, left eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2224",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, left eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2230",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, bilateral, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2231",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, bilateral, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2232",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, bilateral, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2233",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, bilateral, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.2234",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Chronic angle-closure glaucoma, bilateral, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.231",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Intermittent angle-closure glaucoma, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.232",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Intermittent angle-closure glaucoma, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.233",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Intermittent angle-closure glaucoma, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.241",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Residual stage of angle-closure glaucoma, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.242",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Residual stage of angle-closure glaucoma, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.243",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Residual stage of angle-closure glaucoma, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.31X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, right eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.31X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, right eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.31X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, right eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.31X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, right eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.31X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, right eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.32X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, left eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.32X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, left eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.32X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, left eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.32X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, left eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.32X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, left eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.33X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, bilateral, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.33X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, bilateral, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.33X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, bilateral, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.33X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, bilateral, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.33X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye trauma, bilateral, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.41X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, right eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.41X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, right eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.41X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, right eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.41X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, right eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.41X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, right eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.42X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, left eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.42X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, left eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.42X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, left eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.42X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, left eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.42X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, left eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.43X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, bilateral, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.43X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, bilateral, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.43X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, bilateral, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.43X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, bilateral, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.43X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to eye inflammation, bilateral, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.51X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, right eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.51X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, right eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.51X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, right eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.51X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, right eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.51X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, right eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.52X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, left eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.52X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, left eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.52X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, left eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.52X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, left eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.52X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, left eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.53X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, bilateral, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.53X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, bilateral, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.53X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, bilateral, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.53X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, bilateral, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.53X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to other eye disorders, bilateral, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.61X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, right eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.61X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, right eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.61X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, right eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.61X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, right eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.61X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, right eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.62X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, left eye, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.62X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, left eye, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.62X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, left eye, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.62X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, left eye, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.62X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, left eye, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.63X0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, bilateral, stage unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.63X1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, bilateral, mild stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.63X2",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, bilateral, moderate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.63X3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, bilateral, severe stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.63X4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma secondary to drugs, bilateral, indeterminate stage",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.811",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma with increased episcleral venous pressure, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.812",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma with increased episcleral venous pressure, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.813",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Glaucoma with increased episcleral venous pressure, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.821",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypersecretion glaucoma, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.822",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypersecretion glaucoma, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.823",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypersecretion glaucoma, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.831",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Aqueous misdirection, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.832",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Aqueous misdirection, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.833",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Aqueous misdirection, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H40.89",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other specified glaucoma",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "Q15.0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Congenital glaucoma",
+      "white_list": false
+    }
+  ],
+  "display_name": "Glaucoma",
+  "oid": "2.16.840.1.113883.3.526.3.1423",
+  "version": "Draft-9A0339C2-3D9B-11E1-8634-00237D5BF174"
+}

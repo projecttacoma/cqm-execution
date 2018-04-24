@@ -1,0 +1,90 @@
+{
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "855288",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Warfarin Sodium 1 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "855296",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Warfarin Sodium 10 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "855302",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Warfarin Sodium 2 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "855312",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Warfarin Sodium 2.5 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "855318",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Warfarin Sodium 3 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "855324",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Warfarin Sodium 4 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "855332",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Warfarin Sodium 5 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "855338",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Warfarin Sodium 6 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "855344",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Warfarin Sodium 7.5 MG Oral Tablet",
+      "white_list": false
+    }
+  ],
+  "display_name": "Warfarin",
+  "oid": "2.16.840.1.113883.3.117.1.7.1.232",
+  "version": "Draft-38B0B5EC-0F63-466F-8FE3-2CD20DDD1622"
+}

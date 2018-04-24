@@ -1,0 +1,27 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "71961-7",
+      "code_system": "2.16.840.1.113883.6.1",
+      "code_system_name": "LOINC",
+      "code_system_version": "2.63",
+      "display_name": "PROMIS-29 Pain interference score T-score",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "71962-5",
+      "code_system": "2.16.840.1.113883.6.1",
+      "code_system_name": "LOINC",
+      "code_system_version": "2.63",
+      "display_name": "PROMIS-29 Pain interference score",
+      "white_list": false
+    }
+  ],
+  "display_name": "PROMIS 29 Pain Interference Score",
+  "oid": "2.16.840.1.113883.3.464.1003.118.12.1213",
+  "version": "Draft-BB9B8EF7-0354-40E0-BEC7-D6891B7DF519"
+}

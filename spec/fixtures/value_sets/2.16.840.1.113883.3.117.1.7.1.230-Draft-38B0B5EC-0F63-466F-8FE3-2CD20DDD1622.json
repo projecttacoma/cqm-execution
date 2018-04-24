@@ -1,0 +1,18 @@
+{
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "442023007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Venous foot pump, device (physical object)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Venous foot pumps (VFP)",
+  "oid": "2.16.840.1.113883.3.117.1.7.1.230",
+  "version": "Draft-38B0B5EC-0F63-466F-8FE3-2CD20DDD1622"
+}

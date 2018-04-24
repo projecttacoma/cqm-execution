@@ -1,0 +1,108 @@
+{
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "309904001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "309905000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Adult intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "309907008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Cardiac intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "309908003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Metabolic intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "309909006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Neurological intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "309910001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pediatric intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "309911002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Respiratory intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "418433008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Surgical intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "426439001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Burns intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "441994008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Medical intensive care unit (environment)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "448391000124102",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Trauma intensive care unit (environment)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Intensive Care Unit",
+  "oid": "2.16.840.1.113762.1.4.1110.23",
+  "version": "Draft-9A033274-3D9B-11E1-8634-00237D5BF174"
+}

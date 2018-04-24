@@ -1,0 +1,207 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "90791",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Psychiatric diagnostic evaluation",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "90792",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Psychiatric diagnostic evaluation with medical services",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "90832",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Psychotherapy, 30 minutes with patient",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "90834",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Psychotherapy, 45 minutes with patient",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "90837",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Psychotherapy, 60 minutes with patient",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99201",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A problem focused history; A problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are self limited or minor. Typically, 10 minutes are spent face-to-face with the patient and/or family.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99202",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: An expanded problem focused history; An expanded problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of low to moderate severity. Typically, 20 minutes are spent face-to-face with the patient and/or family.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99203",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A detailed history; A detailed examination; Medical decision making of low complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate severity. Typically, 30 minutes are spent face-to-face with the patient and/or family.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99204",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A comprehensive history; A comprehensive examination; Medical decision making of moderate complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate to high severity. Typically, 45 minutes are spent face-to-face with the patient and/or family.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99205",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A comprehensive history; A comprehensive examination; Medical decision making of high complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate to high severity. Typically, 60 minutes are spent face-to-face with the patient and/or family.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99211",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of an established patient, that may not require the presence of a physician or other qualified health care professional. Usually, the presenting problem(s) are minimal. Typically, 5 minutes are spent performing or supervising these services.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99212",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: A problem focused history; A problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are self limited or minor. Typically, 10 minutes are spent face-to-face with the patient and/or family.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99213",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: An expanded problem focused history; An expanded problem focused examination; Medical decision making of low complexity. Counseling and coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of low to moderate severity. Typically, 15 minutes are spent face-to-face with the patient and/or family.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99214",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: A detailed history; A detailed examination; Medical decision making of moderate complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate to high severity. Typically, 25 minutes are spent face-to-face with the patient and/or family.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99215",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Office or other outpatient visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: A comprehensive history; A comprehensive examination; Medical decision making of high complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate to high severity. Typically, 40 minutes are spent face-to-face with the patient and/or family.",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99441",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Telephone evaluation and management service by a physician or other qualified health care professional who may report evaluation and management services provided to an established patient, parent, or guardian not originating from a related E/M service provided within the previous 7 days nor leading to an E/M service or procedure within the next 24 hours or soonest available appointment; 5-10 minutes of medical discussion",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99442",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Telephone evaluation and management service by a physician or other qualified health care professional who may report evaluation and management services provided to an established patient, parent, or guardian not originating from a related E/M service provided within the previous 7 days nor leading to an E/M service or procedure within the next 24 hours or soonest available appointment; 11-20 minutes of medical discussion",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99443",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Telephone evaluation and management service by a physician or other qualified health care professional who may report evaluation and management services provided to an established patient, parent, or guardian not originating from a related E/M service provided within the previous 7 days nor leading to an E/M service or procedure within the next 24 hours or soonest available appointment; 21-30 minutes of medical discussion",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "99444",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Online evaluation and management service provided by a physician or other qualified health care professional who may report evaluation and management services provided to an established patient or guardian, not originating from a related E/M service provided within the previous 7 days, using the Internet or similar electronic communications network",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "G0402",
+      "code_system": "2.16.840.1.113883.6.285",
+      "code_system_name": "HCPCS",
+      "code_system_version": "2017",
+      "display_name": "Initial preventive physical examination; face-to-face visit, services limited to new beneficiary during the first 12 months of medicare enrollment",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "G0438",
+      "code_system": "2.16.840.1.113883.6.285",
+      "code_system_name": "HCPCS",
+      "code_system_version": "2017",
+      "display_name": "Annual wellness visit; includes a personalized prevention plan of service (pps), initial visit",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "G0439",
+      "code_system": "2.16.840.1.113883.6.285",
+      "code_system_name": "HCPCS",
+      "code_system_version": "2017",
+      "display_name": "Annual wellness visit, includes a personalized prevention plan of service (pps), subsequent visit",
+      "white_list": false
+    }
+  ],
+  "display_name": "Contact or Office Visit",
+  "oid": "2.16.840.1.113762.1.4.1080.5",
+  "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
+}

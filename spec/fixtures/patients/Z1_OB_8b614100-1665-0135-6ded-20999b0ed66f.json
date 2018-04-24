@@ -1,0 +1,593 @@
+{
+  "birthDatetime": "1982-07-25T23:00:00.000+00:00",
+  "dataElements": [
+    {
+      "authorDatetime": "2012-05-18T05:00:00.000+00:00",
+      "category": "assessment",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "444135009"
+        }
+      ],
+      "description": "Assessment, Performed: Estimated Gestational Age at Delivery",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.117",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relatedTo": [
+
+      ],
+      "result": {
+        "unit": "weeks",
+        "value": 37
+      },
+      "_type": "QDM::AssessmentPerformed"
+    },
+    {
+      "authorDatetime": "2012-05-18T05:15:00.000+00:00",
+      "category": "assessment",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "397836004"
+        }
+      ],
+      "description": "Assessment, Performed: Time of Delivery",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.117",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relatedTo": [
+
+      ],
+      "result": null,
+      "_type": "QDM::AssessmentPerformed"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-04-02T10:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "200233001"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "O22.30"
+        }
+      ],
+      "description": "Diagnosis: Obstetrics VTE",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-04-02T10:00:00+00:00",
+        "high": "2012-04-05T12:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-05-18T05:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "15938005"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "O15.03"
+        }
+      ],
+      "description": "Diagnosis: Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-05-18T05:00:00+00:00",
+        "high": "2012-05-20T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-04-02T10:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "32485007"
+        }
+      ],
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnoses": [
+        {
+          "code": "13943000",
+          "codeSystem": "SNOMED-CT",
+          "version": null,
+          "descriptor": "Obstetrics VTE"
+        }
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 3,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-04-02T10:00:00+00:00",
+        "high": "2012-04-05T12:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-05-18T05:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "32485007"
+        }
+      ],
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnoses": [
+        {
+          "code": "10562009",
+          "codeSystem": "SNOMED-CT",
+          "version": null,
+          "descriptor": "Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation"
+        }
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 2,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-05-18T05:00:00+00:00",
+        "high": "2012-05-20T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-05-18T05:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "ICD-10-PCS",
+          "code": "10D00Z1"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "177143000"
+        }
+      ],
+      "description": "Procedure, Performed: Cesarean Birth",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-05-18T05:00:00+00:00",
+        "high": "2012-05-18T06:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "birthDatetime": "1982-07-25T23:00:00.000+00:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2135-2",
+          "codeSystem": "CDC Race",
+          "descriptor": "Hispanic Or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2054-5",
+          "codeSystem": "CDC Race",
+          "descriptor": "Black or African American",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "F",
+          "codeSystem": "AdministrativeSex",
+          "descriptor": "2.16.840.1.113883.18.2",
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "measure_ids": [
+      "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+      "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+      "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+      "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+      "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+      "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+      "03876D69-085B-415C-AE9D-9924171040C2",
+      "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+      "7DC26160-E615-4CC2-879C-75985189EC1A",
+      "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+      "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+      "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+      "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+      "9A033274-3D9B-11E1-8634-00237D5BF174",
+      "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+      "EBFA203E-ACC1-4228-906C-855C4BF11310",
+      "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+      "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+      "32CFC834-843A-4F45-B359-8E158EAC4396",
+      "BB481284-30DD-4383-928C-82385BBF1B17",
+      "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+      "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+      "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+      "D78CE034-8288-4012-A31E-7F485A74F2A9",
+      "7D374C6A-3821-4333-A1BC-4531005D77B8",
+      null
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "EncounterInpatient",
+        "description": "Encounter, Performed: Encounter Inpatient",
+        "code_list_id": "2.16.840.1.113883.3.666.5.307",
+        "type": "encounters",
+        "id": "EncounterInpatient_EncounterPerformed_c8060e96_dc7d_4780_a5cd_0aff93854cf3_source",
+        "start_date": 1333360800000,
+        "end_date": 1333628100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "DIAGNOSIS": {
+            "type": "COL",
+            "values": [
+              {
+                "type": "CD",
+                "key": "DIAGNOSIS",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.264",
+                "field_title": "Diagnosis",
+                "title": "Obstetrics VTE"
+              }
+            ],
+            "field_title": "Diagnosis"
+          }
+        },
+        "hqmf_set_id": "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+        "cms_id": "CMS190v7",
+        "criteria_id": "1624eacff98Tp",
+        "codes": {
+          "SNOMED-CT": [
+            "32485007"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ab3fab0aeac503a2e663df7",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "ObstetricsVTE",
+        "description": "Diagnosis: Obstetrics VTE",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.264",
+        "type": "conditions",
+        "id": "ObstetricsVTE_Diagnosis_98661cc3_b760_46e8_89d5_4b145d344a9a_source",
+        "start_date": 1333360800000,
+        "end_date": 1333628100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+        "cms_id": "CMS108v7",
+        "criteria_id": "1624ed945cbpA",
+        "codes": {
+          "SNOMED-CT": [
+            "200233001"
+          ],
+          "ICD-10-CM": [
+            "O22.30"
+          ]
+        },
+        "coded_entry_id": "5ab3fab0aeac503a2e663df5",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "assessment",
+        "status": "performed",
+        "title": "EstimatedGestationalAgeatDelivery",
+        "description": "Assessment, Performed: Estimated Gestational Age at Delivery",
+        "code_list_id": "2.16.840.1.113762.1.4.1045.26",
+        "type": "assessments",
+        "id": "EstimatedGestationalAgeatDelivery_AssessmentPerformed_30da8e92_bcd9_4dd9_a57b_2e85864a9544_source",
+        "start_date": 1337317200000,
+        "value": [
+          {
+            "type": "PQ",
+            "type_cmp": "CD",
+            "value": "37",
+            "unit": "weeks"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+        "cms_id": "CMS113v7",
+        "criteria_id": "1624df012f39f",
+        "codes": {
+          "SNOMED-CT": [
+            "444135009"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ab3fab0aeac503a2e663dfa",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "CesareanBirth",
+        "description": "Procedure, Performed: Cesarean Birth",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.282",
+        "type": "procedures",
+        "id": "CesareanBirth_ProcedurePerformed_03321e5d_74e7_4b22_b3e1_6f933f4dd6a3_source",
+        "start_date": 1337317200000,
+        "end_date": 1337320800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+        "cms_id": "CMS113v7",
+        "criteria_id": "1624df1caa99U",
+        "codes": {
+          "ICD-10-PCS": [
+            "10D00Z1"
+          ],
+          "SNOMED-CT": [
+            "177143000"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ab3fab0aeac503a2e663df9",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "ConditionsPossiblyJustifyingElectiveDeliveryPriorto39WeeksGestation",
+        "description": "Diagnosis: Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.286",
+        "type": "conditions",
+        "id": "ConditionsPossiblyJustifyingElectiveDeliveryPriorto39WeeksGestation_Diagnosis_50b03724_f417_48ac_a0e2_b99e06de5425_source",
+        "start_date": 1337317200000,
+        "end_date": 1337501700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+        "cms_id": "CMS113v7",
+        "criteria_id": "1624df08110Nk",
+        "codes": {
+          "SNOMED-CT": [
+            "15938005"
+          ],
+          "ICD-10-CM": [
+            "O15.03"
+          ]
+        },
+        "coded_entry_id": "5ab3fab0aeac503a2e663df6",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "EncounterInpatient",
+        "description": "Encounter, Performed: Encounter Inpatient",
+        "code_list_id": "2.16.840.1.113883.3.666.5.307",
+        "type": "encounters",
+        "id": "EncounterInpatient_EncounterPerformed_c8060e96_dc7d_4780_a5cd_0aff93854cf3_source",
+        "start_date": 1337317200000,
+        "end_date": 1337501700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "DIAGNOSIS": {
+            "type": "COL",
+            "values": [
+              {
+                "type": "CD",
+                "key": "DIAGNOSIS",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.286",
+                "field_title": "Diagnosis",
+                "title": "Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation"
+              }
+            ],
+            "field_title": "Diagnosis"
+          }
+        },
+        "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+        "cms_id": "CMS113v7",
+        "criteria_id": "1624e8d8b4bav",
+        "codes": {
+          "SNOMED-CT": [
+            "32485007"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ab3fab0aeac503a2e663df8",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "assessment",
+        "status": "performed",
+        "title": "TimeofDelivery",
+        "description": "Assessment, Performed: Time of Delivery",
+        "code_list_id": "2.16.840.1.113762.1.4.1045.28",
+        "type": "assessments",
+        "id": "TimeofDelivery_AssessmentPerformed_673faafb_84bb_4893_a38a_ef1710a77585_source",
+        "start_date": 1337318100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+        "cms_id": "CMS113v7",
+        "criteria_id": "1624df055181O",
+        "codes": {
+          "SNOMED-CT": [
+            "397836004"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ab3fab0aeac503a2e663dfc",
+        "code_source": "DEFAULT"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": {
+    },
+    "notes": "30yo female\n*7qdes\n*Pt w elampsia delivered by c section.",
+    "is_shared": false,
+    "origin_data": [
+
+    ],
+    "medical_record_number": "8b614100-1665-0135-6ded-20999b0ed66f",
+    "medical_record_assigner": "Bonnie",
+    "description": "",
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":null,\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1420070400,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+  },
+  "familyName": "OB",
+  "givenNames": [
+    "Z1"
+  ],
+  "qdmVersion": "5.3"
+}

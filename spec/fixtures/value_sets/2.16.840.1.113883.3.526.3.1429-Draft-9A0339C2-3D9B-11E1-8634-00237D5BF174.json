@@ -1,0 +1,135 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "231751005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Exchange of intraocular lens (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "231752003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Repositioning of intraocular lens (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312705004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of retained lens matter (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312706003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of retained lens nucleus (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312707007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of soft lens matter (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312714009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Relocation of intraocular lens from vitreous cavity (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "46562009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Incisional discission of secondary membranous cataract and anterior hyaloid (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "65812008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of secondary membranous cataract with iridectomy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66820",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Discission of secondary membranous cataract (opacified posterior lens capsule and/or anterior hyaloid); stab incision technique (Ziegler or Wheeler knife)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66825",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Repositioning of intraocular lens prosthesis, requiring an incision (separate procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66830",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Removal of secondary membranous cataract (opacified posterior lens capsule and/or anterior hyaloid) with corneo-scleral section, with or without iridectomy (iridocapsulotomy, iridocapsulectomy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66852",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Removal of lens material; pars plana approach, with or without vitrectomy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66986",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Exchange of intraocular lens",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "9137006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Discission of membranous cataract, secondary (procedure)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Lens Procedure",
+  "oid": "2.16.840.1.113883.3.526.3.1429",
+  "version": "Draft-9A0339C2-3D9B-11E1-8634-00237D5BF174"
+}

@@ -1,0 +1,27 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "11524-6",
+      "code_system": "2.16.840.1.113883.6.1",
+      "code_system_name": "LOINC",
+      "code_system_version": "2.63",
+      "display_name": "EKG study",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "34534-8",
+      "code_system": "2.16.840.1.113883.6.1",
+      "code_system_name": "LOINC",
+      "code_system_version": "2.63",
+      "display_name": "EKG 12 channel panel",
+      "white_list": false
+    }
+  ],
+  "display_name": "ECG 12 lead or study order",
+  "oid": "2.16.840.1.113883.3.600.2448",
+  "version": "Draft-9A033A94-3D9B-11E1-8634-00237D5BF174"
+}

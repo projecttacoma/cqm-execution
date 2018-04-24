@@ -1,0 +1,396 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "10698009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Herpes zoster iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "11226001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Fuchs' heterochromic cyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "12630008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "13608004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Herpes simplex iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "14427009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Subacute iritis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "186266008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Tuberculous chronic iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193487008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary infected iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193488003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary non-infected iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193493000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Chronic iridocyclitis due to another disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "23798003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Translucency of iris (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "267618008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute and subacute iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "29538005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Glaucomatocyclitic crisis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "30080002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary syphilitic iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.00",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Acute and subacute iridocyclitis, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.01",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Primary iridocyclitis",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.02",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Recurrent iridocyclitis",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.03",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Secondary iridocyclitis, infectious",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.04",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Secondary iridocyclitis, noninfectious",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.05",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Hypopyon",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "416449002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Chronic iridocyclitis in young girls (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "420485005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Herpetic iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "46916006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Noninfectious secondary iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "6869001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Recurrent iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "70461003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Lens-induced iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "77971008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "89114005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Infectious secondary iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "9091006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Gonococcal iridocyclitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.00",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified acute and subacute iridocyclitis",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.011",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary iridocyclitis, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.012",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary iridocyclitis, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.013",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary iridocyclitis, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.021",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Recurrent acute iridocyclitis, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.022",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Recurrent acute iridocyclitis, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.023",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Recurrent acute iridocyclitis, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.031",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Secondary infectious iridocyclitis, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.032",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Secondary infectious iridocyclitis, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.033",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Secondary infectious iridocyclitis, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.041",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Secondary noninfectious iridocyclitis, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.042",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Secondary noninfectious iridocyclitis, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.043",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Secondary noninfectious iridocyclitis, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.051",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypopyon, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.052",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypopyon, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H20.053",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Hypopyon, bilateral",
+      "white_list": false
+    }
+  ],
+  "display_name": "Acute and Subacute Iridocyclitis",
+  "oid": "2.16.840.1.113883.3.526.3.1241",
+  "version": "Draft-9A0339C2-3D9B-11E1-8634-00237D5BF174"
+}

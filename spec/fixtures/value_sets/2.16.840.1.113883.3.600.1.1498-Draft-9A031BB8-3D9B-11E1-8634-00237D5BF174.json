@@ -1,0 +1,180 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "1112982",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phentermine Hydrochloride 15 MG Disintegrating Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1112987",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phentermine Hydrochloride 30 MG Disintegrating Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1249083",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phentermine Hydrochloride 37.5 MG Disintegrating Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1300706",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "lorcaserin hydrochloride 10 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1302827",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "24 HR Phentermine 7.5 MG / topiramate 46 MG Extended Release Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1302839",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "24 HR Phentermine 3.75 MG / topiramate 23 MG Extended Release Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1302850",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "24 HR Phentermine 15 MG / topiramate 92 MG Extended Release Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1313059",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "24 HR Phentermine 11.25 MG / topiramate 69 MG Extended Release Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1808549",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "24 HR lorcaserin hydrochloride 20 MG Extended Release Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314153",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "orlistat 120 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "692876",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "orlistat 60 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "803348",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phentermine Hydrochloride 37.5 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "803353",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phentermine Hydrochloride 37.5 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "826131",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phentermine Hydrochloride 18.8 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "826919",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phentermine Hydrochloride 8 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "900038",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phentermine Hydrochloride 30 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "968766",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phentermine Hydrochloride 15 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "978654",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Diethylpropion Hydrochloride 25 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "978668",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "24 HR Diethylpropion Hydrochloride 75 MG Extended Release Oral Tablet",
+      "white_list": false
+    }
+  ],
+  "display_name": "Above Normal Medications",
+  "oid": "2.16.840.1.113883.3.600.1.1498",
+  "version": "Draft-9A031BB8-3D9B-11E1-8634-00237D5BF174"
+}

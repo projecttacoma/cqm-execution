@@ -1,0 +1,342 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "129627002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Keratitis bullosa (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736081000119108",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Microcystic edema of cornea of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736161000119100",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Microcystic edema of cornea of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736201000119105",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Edema of cornea of left eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736241000119107",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Edema of cornea of bilateral eyes (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15736281000119102",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Edema of cornea of right eye (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1794009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Idiopathic corneal edema (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "231921008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phakic corneal edema (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "231922001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pseudophakic corneal edema (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "231923006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Aphakic corneal edema (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "248503005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Fine corneal edema (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "27194006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Corneal edema (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "27536004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary corneal edema (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "371.20",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Corneal edema, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "371.21",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Idiopathic corneal edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "371.22",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Secondary corneal edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "371.23",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Bullous keratopathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "371.43",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Band-shaped keratopathy",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "371.44",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Other calcerous degenerations of cornea",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "373428006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Corneal epithelial edema (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "373430008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Corneal stromal edema (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "49362009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Corneal edema caused by wearing of contact lenses (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "57207003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Bullous keratopathy (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.11",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Bullous keratopathy, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.12",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Bullous keratopathy, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.13",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Bullous keratopathy, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.20",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Unspecified corneal edema",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.221",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Idiopathic corneal edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.222",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Idiopathic corneal edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.223",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Idiopathic corneal edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.231",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Secondary corneal edema, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.232",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Secondary corneal edema, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.233",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Secondary corneal edema, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.421",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Band keratopathy, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.422",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Band keratopathy, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.423",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Band keratopathy, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H18.43",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other calcerous corneal degeneration",
+      "white_list": false
+    }
+  ],
+  "display_name": "Corneal Edema",
+  "oid": "2.16.840.1.113883.3.526.3.1418",
+  "version": "Draft-9A0339C2-3D9B-11E1-8634-00237D5BF174"
+}

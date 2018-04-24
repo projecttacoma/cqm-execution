@@ -1,0 +1,216 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "191689008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Active infantile autism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "191690004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Residual infantile autism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "231536004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Atypical autism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "299.00",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Autistic disorder, current or active state",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "299.01",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Autistic disorder, residual state",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "299.10",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Childhood disintegrative disorder, current or active state",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "299.11",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Childhood disintegrative disorder, residual state",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "299.80",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Other specified pervasive developmental disorders, current or active state",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "299.81",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Other specified pervasive developmental disorders, residual state",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "299.90",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Unspecified pervasive developmental disorder, current or active state",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "299.91",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Unspecified pervasive developmental disorder, residual state",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "35919005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pervasive developmental disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "373618009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Autistic spectrum disorder with isolated skills (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "39951000119105",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pervasive developmental disorder of residual state (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "408856003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Autistic disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "408857007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Infantile autism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "43614003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Autistic disorder of childhood onset (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "442314000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Active but odd autism (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "71961003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Childhood disintegrative disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F84.0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Autistic disorder",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F84.3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other childhood disintegrative disorder",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F84.8",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Other pervasive developmental disorders",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F84.9",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Pervasive developmental disorder, unspecified",
+      "white_list": false
+    }
+  ],
+  "display_name": "Pervasive Developmental Disorder",
+  "oid": "2.16.840.1.113883.3.464.1003.105.12.1152",
+  "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
+}

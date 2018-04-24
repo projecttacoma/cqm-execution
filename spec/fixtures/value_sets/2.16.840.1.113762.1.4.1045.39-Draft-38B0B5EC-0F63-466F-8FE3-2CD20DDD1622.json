@@ -1,0 +1,126 @@
+{
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "1361226",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "heparin sodium, porcine 1000 UNT/ML Injectable Solution",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1361568",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "5 ML heparin sodium, porcine 2000 UNT/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1361574",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "heparin sodium, porcine 20000 UNT/ML Injectable Solution",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1361577",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "10 ML heparin sodium, porcine 2500 UNT/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1361615",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "heparin sodium, porcine 5000 UNT/ML Injectable Solution",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1361853",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "0.5 ML heparin sodium, porcine 10000 UNT/ML Cartridge",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1362831",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "heparin sodium, porcine 10000 UNT/ML Injectable Solution",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1658634",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "0.5 ML heparin sodium, porcine 10000 UNT/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1658637",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "1 ML heparin sodium, porcine 10000 UNT/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1658647",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "2 ML heparin sodium, porcine 1000 UNT/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1658659",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "1 ML heparin sodium, porcine 1000 UNT/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1659260",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "1 ML heparin sodium, porcine 5000 UNT/ML Cartridge",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1659263",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "1 ML heparin sodium, porcine 5000 UNT/ML Injection",
+      "white_list": false
+    }
+  ],
+  "display_name": "Low Dose Unfractionated Heparin for VTE Prophylaxis",
+  "oid": "2.16.840.1.113762.1.4.1045.39",
+  "version": "Draft-38B0B5EC-0F63-466F-8FE3-2CD20DDD1622"
+}

@@ -1,0 +1,860 @@
+{
+  "birthDatetime": "1963-01-24T00:00:00.000+00:00",
+  "dataElements": [
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2004-08-07T08:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "I10"
+        },
+        {
+          "codeSystem": "ICD-9-CM",
+          "code": "401.9"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "59621000"
+        }
+      ],
+      "description": "Diagnosis: Essential Hypertension",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2004-08-07T08:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2010-03-01T08:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "42343007"
+        },
+        {
+          "codeSystem": "ICD-9-CM",
+          "code": "428.0"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "I50.9"
+        }
+      ],
+      "description": "Diagnosis: Heart Failure",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2010-03-01T08:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-05-01T08:30:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "279039007"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "M54.5"
+        }
+      ],
+      "description": "Diagnosis: Uncomplicated Low Back Pain",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-05-01T08:30:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-03-04T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99213"
+        }
+      ],
+      "description": "Encounter, Performed: Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-03-04T08:00:00+00:00",
+        "high": "2012-03-04T08:30:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-05-01T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99214"
+        }
+      ],
+      "description": "Encounter, Performed: Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-05-01T08:00:00+00:00",
+        "high": "2012-05-01T09:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-05-06T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "32485007"
+        }
+      ],
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": {
+        "code": "428361000124107",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": "Discharge to home for hospice care (procedure)",
+        "codeSystemOid": null,
+        "version": null
+      },
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 5,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-05-06T08:00:00+00:00",
+        "high": "2012-05-11T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "activeDatetime": null,
+      "authorDatetime": "2012-05-07T08:00:00.000+00:00",
+      "category": "medication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "200031"
+        }
+      ],
+      "description": "Medication, Order: Beta Blocker Therapy for LVSD",
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.78",
+      "method": null,
+      "negationRationale": {
+        "code": "183932001",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": null,
+        "codeSystemOid": null,
+        "version": null
+      },
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "refills": null,
+      "relevantPeriod": {
+        "low": "2012-05-07T08:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationOrder"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-04T08:15:00.000+00:00",
+      "category": "physical_exam",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "8480-6"
+        }
+      ],
+      "description": "Physical Exam, Performed: Systolic blood pressure",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.57",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-03-04T08:15:00+00:00",
+        "high": "2012-03-04T08:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": {
+        "unit": "mm[Hg]",
+        "value": 158
+      },
+      "_type": "QDM::PhysicalExamPerformed"
+    },
+    {
+      "authorDatetime": "2012-05-01T08:00:00.000+00:00",
+      "category": "diagnostic_study",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "10230-1"
+        }
+      ],
+      "description": "Diagnostic Study, Performed: Ejection Fraction",
+      "facilityLocation": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.3",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-05-01T08:00:00+00:00",
+        "high": "2012-05-01T08:30:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": {
+        "unit": "%",
+        "value": 24
+      },
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::DiagnosticStudyPerformed"
+    },
+    {
+      "authorDatetime": "2012-05-11T08:00:00.000+00:00",
+      "category": "intervention",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "385763009"
+        }
+      ],
+      "description": "Intervention, Order: Hospice care ambulatory",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.45",
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "_type": "QDM::InterventionOrder"
+    },
+    {
+      "authorDatetime": "2012-05-11T18:00:00.000+00:00",
+      "category": "intervention",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "385763009"
+        }
+      ],
+      "description": "Intervention, Performed: Hospice care ambulatory",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.46",
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-05-11T18:00:00+00:00",
+        "high": "2012-05-11T18:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::InterventionPerformed"
+    },
+    {
+      "birthDatetime": "1963-01-24T00:00:00.000+00:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2186-5",
+          "codeSystem": "CDC Race",
+          "descriptor": "Not Hispanic or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2028-9",
+          "codeSystem": "CDC Race",
+          "descriptor": "Asian",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "M",
+          "codeSystem": "AdministrativeSex",
+          "descriptor": "2.16.840.1.113883.18.2",
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "measure_ids": [
+      "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+      "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+      "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+      "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+      "0DAC1DEC-E011-493B-A281-7C28964872DD",
+      "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+      "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+      "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+      "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+      "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+      "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+      "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+      "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+      "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "500E4792-7F94-4E34-8546-EE71C56FE463",
+      "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+      "59657B9B-01BF-4979-A090-8534DA1D0516",
+      "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "60176FBF-BFDC-4892-9C9E-604F206553C8",
+      "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+      "703CC49B-B653-4885-80E8-245A057F5AE9",
+      "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+      "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+      "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+      "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+      "8479F6D6-4200-4FD0-9438-30048EBE3E29",
+      "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+      "8924F2B3-EC06-4650-B634-D70A53DEE577",
+      "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+      "95FB767E-0CB2-4778-B5FF-6BA9A53FA28E",
+      "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+      "9A031E24-3D9B-11E1-8634-00237D5BF174",
+      "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+      "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+      "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "9A033A94-3D9B-11E1-8634-00237D5BF174",
+      "A244AA29-7D11-4616-888A-86E376BFCC6F",
+      "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+      "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "A5E96A45-8132-4E72-BF4F-E8C81DB9E641",
+      "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+      "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+      "AC639794-CB3F-4F4F-8FA6-680300D5ED4E",
+      "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+      "B6016B47-B65D-4BE0-866F-1D397886CA89",
+      "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+      "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+      "BC5B4A57-B964-4399-9D40-667C896F31EA",
+      "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+      "BEB1C33C-2549-4E7F-9567-05ED38448464",
+      "C0D72444-7C26-4863-9B51-8080F8928A85",
+      "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+      "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+      "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+      "E0A07809-7B74-473F-BCC4-1891BE506AAA",
+      "E35791DF-5B25-41BB-B260-673337BC44A8",
+      "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+      "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+      "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+      "F70B2984-AF4A-4072-AE0D-CEC677A7FF8F",
+      null,
+      "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+      "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+      "1C05C6C0-8099-4270-83CE-292CF6E35C51",
+      "ED78899D-2375-4D68-AA63-58E1734F5694",
+      "A3CE125D-C238-42CE-862E-DBA0055DFC66"
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "EssentialHypertension",
+        "description": "Diagnosis: Essential Hypertension",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.104.12.1011",
+        "type": "conditions",
+        "id": "EssentialHypertension_Diagnosis_bb600ec1_fe38_445f_898b_0f80f597ceac_source",
+        "start_date": 1091865600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+        "cms_id": "CMS165v7",
+        "criteria_id": "162736af67eOq",
+        "codes": {
+          "ICD-10-CM": [
+            "I10"
+          ],
+          "ICD-9-CM": [
+            "401.9"
+          ],
+          "SNOMED-CT": [
+            "59621000"
+          ]
+        },
+        "coded_entry_id": "5ac51546aeac50408e2604d2",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "HeartFailure",
+        "description": "Diagnosis: Heart Failure",
+        "code_list_id": "2.16.840.1.113883.3.526.3.376",
+        "type": "conditions",
+        "id": "HeartFailure_Diagnosis_63569d9f_9ca4_4842_989f_544624bbc5de_source",
+        "start_date": 1267430400000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+        "cms_id": "CMS135v7",
+        "criteria_id": "162638a5dc4te",
+        "codes": {
+          "SNOMED-CT": [
+            "42343007"
+          ],
+          "ICD-9-CM": [
+            "428.0"
+          ],
+          "ICD-10-CM": [
+            "I50.9"
+          ]
+        },
+        "coded_entry_id": "5ac51546aeac50408e2604d3",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "OfficeVisit",
+        "description": "Encounter, Performed: Office Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+        "type": "encounters",
+        "id": "OfficeVisit_EncounterPerformed_40280381_3e93_d1af_013e_a49caa184016_source",
+        "start_date": 1330848000000,
+        "end_date": 1330849800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+        "cms_id": "CMS90v8",
+        "criteria_id": "1626e460c06qM",
+        "codes": {
+          "CPT": [
+            "99213"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51546aeac50408e2604d5",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "physical_exam",
+        "status": "performed",
+        "title": "Physical Exam, Performed: Physical Exam, Performed",
+        "description": "Physical Exam, Performed: Systolic blood pressure",
+        "code_list_id": "drc-f6a92d7503c3bf27d99920eb885363b716972c2aeeac8a6e69d4d8682291e7f4",
+        "type": "physical_exams",
+        "id": "prefix_8480_6_PhysicalExamPerformed_5F2AC5CB_166B_4FEE_8BDA_CDF3DB9A19DE_source",
+        "start_date": 1330848900000,
+        "end_date": 1330848900000,
+        "value": [
+          {
+            "type": "PQ",
+            "type_cmp": "CD",
+            "value": "158",
+            "unit": "mm[Hg]"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+        "cms_id": "CMS65v8",
+        "criteria_id": "1626e67c8369W",
+        "codes": {
+          "LOINC": [
+            "8480-6"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51546aeac50408e2604d9",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "diagnostic_study",
+        "status": "performed",
+        "title": "EjectionFraction",
+        "description": "Diagnostic Study, Performed: Ejection Fraction",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1134",
+        "type": "diagnostic_studies",
+        "id": "EjectionFraction_DiagnosticStudyPerformed_40280381_3d61_56a7_013e_666032ca450d_source",
+        "start_date": 1335859200000,
+        "end_date": 1335861000000,
+        "value": [
+          {
+            "type": "PQ",
+            "type_cmp": "CD",
+            "value": "24",
+            "unit": "%"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+        "cms_id": "CMS144v7",
+        "criteria_id": "1628723614aBW",
+        "codes": {
+          "LOINC": [
+            "10230-1"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51546aeac50408e2604db",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "OfficeVisit",
+        "description": "Encounter, Performed: Office Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+        "type": "encounters",
+        "id": "OfficeVisit_EncounterPerformed_40280381_3e93_d1af_013e_a49caa184016_source",
+        "start_date": 1335859200000,
+        "end_date": 1335862800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+        "cms_id": "CMS90v8",
+        "criteria_id": "1626e46463eqL",
+        "codes": {
+          "CPT": [
+            "99214"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51546aeac50408e2604d6",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "Uncomplicated Low Back Pain",
+        "description": "Diagnosis: Uncomplicated Low Back Pain",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1001",
+        "type": "conditions",
+        "id": "OccurrenceA_UncomplicatedLowBackPain_Diagnosis_8a2757c3_def7_432a_946a_e7892ed7a4e0_source",
+        "start_date": 1335861000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "B6016B47-B65D-4BE0-866F-1D397886CA89",
+        "cms_id": "CMS166v7",
+        "criteria_id": "15c3116be9cdY",
+        "codes": {
+          "SNOMED-CT": [
+            "279039007"
+          ],
+          "ICD-10-CM": [
+            "M54.5"
+          ]
+        },
+        "coded_entry_id": "5ac51546aeac50408e2604d4",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "EncounterInpatient",
+        "description": "Encounter, Performed: Encounter Inpatient",
+        "code_list_id": "2.16.840.1.113883.3.666.5.307",
+        "type": "encounters",
+        "id": "EncounterInpatient_EncounterPerformed_59c3933e_c568_4119_b89d_c29b7c752ef3_source",
+        "start_date": 1336291200000,
+        "end_date": 1336724100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "drc-b307f994e96ff769537f9ed549f54c0b75dbe2788a7209f2e3a85bc43197e033",
+            "field_title": "Discharge Disposition",
+            "title": "Discharge to home for hospice care (procedure)"
+          }
+        },
+        "hqmf_set_id": "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+        "cms_id": "CMS90v8",
+        "criteria_id": "1626e46a266x2",
+        "codes": {
+          "SNOMED-CT": [
+            "32485007"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51546aeac50408e2604d7",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": true,
+        "definition": "medication",
+        "status": "ordered",
+        "title": "BetaBlockerTherapyforLVSD",
+        "description": "Medication, Order: Beta Blocker Therapy for LVSD",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1184",
+        "type": "medications",
+        "id": "BetaBlockerTherapyforLVSD_MedicationOrder_40280381_3d61_56a7_013e_666032ca4513_source",
+        "start_date": 1336377600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+        "cms_id": "CMS144v7",
+        "criteria_id": "1628723aeeaV5",
+        "codes": {
+          "RxNorm": [
+            "200031"
+          ]
+        },
+        "fulfillments": null,
+        "administrations_value": "",
+        "frequency_value": "",
+        "frequency_unit": "min",
+        "negation_code_list_id": "2.16.840.1.113883.3.526.3.1007",
+        "coded_entry_id": "5ac51546aeac50408e2604d8",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "intervention",
+        "status": "ordered",
+        "title": "Hospicecareambulatory",
+        "description": "Intervention, Order: Hospice care ambulatory",
+        "code_list_id": "2.16.840.1.113762.1.4.1108.15",
+        "type": "interventions",
+        "id": "Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098_source",
+        "start_date": 1336723200000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+        "cms_id": "CMS90v8",
+        "criteria_id": "1626e472c7aQ2",
+        "codes": {
+          "SNOMED-CT": [
+            "385763009"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51546aeac50408e2604dd",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "intervention",
+        "status": "performed",
+        "title": "Hospicecareambulatory",
+        "description": "Intervention, Performed: Hospice care ambulatory",
+        "code_list_id": "2.16.840.1.113762.1.4.1108.15",
+        "type": "interventions",
+        "id": "Hospicecareambulatory_InterventionPerformed_95cca057_9695_4ee4_a5bd_eff4b54c6098_source",
+        "start_date": 1336759200000,
+        "end_date": 1336759200000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+        "cms_id": "CMS90v8",
+        "criteria_id": "1626e4749b4Dh",
+        "codes": {
+          "SNOMED-CT": [
+            "385763009"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac51546aeac50408e2604de",
+        "code_source": "DEFAULT"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": {
+    },
+    "notes": "49yo male; \n*10qdes\n*Pt w h/o HTN and CHF. Worsening CHF noted during office visits. Admitted with difficulty breathing. Declining health required discharge to home hospice.",
+    "is_shared": false,
+    "origin_data": [
+
+    ],
+    "medical_record_number": "873b6440-1652-0135-6de5-20999b0ed66f",
+    "medical_record_assigner": "Bonnie",
+    "description": "",
+    "description_category": "DENOM",
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":null,\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1420070400,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+  },
+  "familyName": "Heart Adult",
+  "givenNames": [
+    "Z6 N"
+  ],
+  "qdmVersion": "5.3"
+}

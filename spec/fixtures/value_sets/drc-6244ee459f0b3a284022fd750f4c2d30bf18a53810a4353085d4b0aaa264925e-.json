@@ -1,0 +1,18 @@
+{
+  "bundle_id": null,
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "72102-7",
+      "code_system": null,
+      "code_system_name": "LOINC",
+      "code_system_version": "urn:hl7:version:2.50",
+      "display_name": "Pain score [KOOS]",
+      "white_list": false
+    }
+  ],
+  "display_name": "Pain score [KOOS]",
+  "oid": "drc-6244ee459f0b3a284022fd750f4c2d30bf18a53810a4353085d4b0aaa264925e",
+  "version": ""
+}
