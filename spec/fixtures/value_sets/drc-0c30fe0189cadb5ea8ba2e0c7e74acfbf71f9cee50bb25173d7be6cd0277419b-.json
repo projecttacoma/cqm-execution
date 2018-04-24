@@ -1,0 +1,18 @@
+{
+  "bundle_id": null,
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "428351000124105",
+      "code_system": null,
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "urn:hl7:version:2017-03",
+      "display_name": "Severe dementia (disorder)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Severe dementia (disorder)",
+  "oid": "drc-0c30fe0189cadb5ea8ba2e0c7e74acfbf71f9cee50bb25173d7be6cd0277419b",
+  "version": ""
+}

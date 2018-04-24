@@ -1,0 +1,18 @@
+{
+  "bundle_id": null,
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "72100-1",
+      "code_system": null,
+      "code_system_name": "LOINC",
+      "code_system_version": "urn:hl7:version:2.46",
+      "display_name": "Activities of daily living score [KOOS]",
+      "white_list": false
+    }
+  ],
+  "display_name": "Activities of daily living score [KOOS]",
+  "oid": "drc-9df300aaf75315479f6a6c784d64e9bd617e89cb8467b01af571426549d135ff",
+  "version": ""
+}

@@ -1,0 +1,180 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "204128001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital lamellar cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "204130004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Total and subtotal congenital cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "204138006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital blue dot cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "204139003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital membranous cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "21590003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital zonular cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "253223002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital polar cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "253224008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital anterior polar cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "253225009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital posterior polar cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "253226005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital sutural cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "253227001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Rubella cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "268159001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital cataract and lens anomalies (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "28550007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital capsular cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "29590001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital total cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "63912009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital subtotal cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66499004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital cortical cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "743.30",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Congenital cataract, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "76562003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital subcapsular cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "79410001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Congenital cataract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "Q12.0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Congenital cataract",
+      "white_list": false
+    }
+  ],
+  "display_name": "Cataract, Congenital",
+  "oid": "2.16.840.1.113883.3.526.3.1412",
+  "version": "Draft-9A0339C2-3D9B-11E1-8634-00237D5BF174"
+}

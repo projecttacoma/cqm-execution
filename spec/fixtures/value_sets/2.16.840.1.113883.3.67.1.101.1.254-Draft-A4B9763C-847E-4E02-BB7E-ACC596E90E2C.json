@@ -1,0 +1,99 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "19694002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Late onset dysthymia (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "2506003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Early onset dysthymia (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "3109008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary dysthymia early onset (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "36170009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary dysthymia late onset (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "38451003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary dysthymia early onset (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "67711008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary dysthymia late onset (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "78667006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Dysthymia (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "83176005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary dysthymia (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "85080004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary dysthymia (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F34.1",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Dysthymic disorder",
+      "white_list": false
+    }
+  ],
+  "display_name": "Dysthymia",
+  "oid": "2.16.840.1.113883.3.67.1.101.1.254",
+  "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
+}

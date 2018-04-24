@@ -1,0 +1,369 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "108313002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Family psychotherapy procedure (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1555005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Brief group psychotherapy (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "15558000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Expressive psychotherapy (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "18512000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Individual psychotherapy (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "229065009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Exercise therapy (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "28868002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Interactive group medical psychotherapy (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "304891004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Cognitive - behavior therapy (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "372067001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Implementation of measures to provide psychological support (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "385721005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Coping support assessment (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "385724002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Coping support management (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "385725001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Emotional support assessment (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "385726000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Emotional support education (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "385727009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Emotional support management (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "385887004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health history taking assessment (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "385889001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health history taking education (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "385890005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health history taking management (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "386472008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Telephone consultation (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "401277000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Completion of mental health crisis plan (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "405780009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Dialectical behavior therapy (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410223002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health care assessment (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410224008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health care education (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410225009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health care management (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410226005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health promotion assessment (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410227001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health promotion education (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410228006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health promotion management (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410229003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health screening assessment (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410230008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health screening education (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410231007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health screening management (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410232000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health treatment assessment (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410233005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Mental health treatment education (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410234004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Management of mental health treatment (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "425604002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Case management follow up (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "439141002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Discharge by mental health primary care worker (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "5694008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Crisis intervention with follow-up (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "75516001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Psychotherapy (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "76168009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Group psychotherapy (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "76740001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Psychiatric telephone consultation or therapy with patient (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "81294000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Patient referral for psychotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "88848003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Psychiatric follow-up (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "91310009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Patient follow-up to return when and if necessary (procedure)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Follow-up for depression - adolescent",
+  "oid": "2.16.840.1.113883.3.600.467",
+  "version": "Draft-9A031E24-3D9B-11E1-8634-00237D5BF174"
+}

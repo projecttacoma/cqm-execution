@@ -1,0 +1,387 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "169396008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Radiomimetic chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "24977001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Topical chemotherapy for malignant neoplasm (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "265760000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Intravenous chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "265761001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Intramuscular chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "265762008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Subcutaneous chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "266719004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Oral chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "268500004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Prophylactic chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "315601005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Ambulatory chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "31652009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Intracavitary chemotherapy for malignant neoplasm (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "367336001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "38216008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Infusion chemotherapy for malignant neoplasm (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "394894008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pre-operative chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "394895009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Postoperative chemotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "394935005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Combined post-operative chemotherapy and radiotherapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "4114003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Parenteral chemotherapy for malignant neoplasm (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "51534007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Oral chemotherapy for malignant neoplasm (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "51720",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Bladder instillation of anticarcinogenic agent (including retention time)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "6872008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Perfusion chemotherapy for malignant neoplasm (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "716872004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Antineoplastic chemotherapy regimen (regime/therapy)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "77738002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Local chemotherapy for malignant neoplasm (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96401",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, subcutaneous or intramuscular; non-hormonal anti-neoplastic",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96402",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, subcutaneous or intramuscular; hormonal anti-neoplastic",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96405",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration; intralesional, up to and including 7 lesions",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96406",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration; intralesional, more than 7 lesions",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96409",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration; intravenous, push technique, single or initial substance/drug",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96411",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration; intravenous, push technique, each additional substance/drug (List separately in addition to code for primary procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96413",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, intravenous infusion technique; up to 1 hour, single or initial substance/drug",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96415",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, intravenous infusion technique; each additional hour (List separately in addition to code for primary procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96416",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, intravenous infusion technique; initiation of prolonged chemotherapy infusion (more than 8 hours), requiring use of a portable or implantable pump",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96417",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, intravenous infusion technique; each additional sequential infusion (different substance/drug), up to 1 hour (List separately in addition to code for primary procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96420",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, intra-arterial; push technique",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96422",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, intra-arterial; infusion technique, up to 1 hour",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96423",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, intra-arterial; infusion technique, each additional hour (List separately in addition to code for primary procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96425",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, intra-arterial; infusion technique, initiation of prolonged infusion (more than 8 hours), requiring the use of a portable or implantable pump",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96440",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration into pleural cavity, requiring and including thoracentesis",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96446",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration into the peritoneal cavity via indwelling port or catheter",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96450",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy administration, into CNS (eg, intrathecal), requiring and including spinal puncture",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96521",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Refilling and maintenance of portable pump",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96522",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Refilling and maintenance of implantable pump or reservoir for drug delivery, systemic (eg, intravenous, intra-arterial)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96523",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Irrigation of implanted venous access device for drug delivery systems",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96542",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Chemotherapy injection, subarachnoid or intraventricular via subcutaneous reservoir, single or multiple agents",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "96549",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Unlisted chemotherapy procedure",
+      "white_list": false
+    }
+  ],
+  "display_name": "Chemotherapy Administration",
+  "oid": "2.16.840.1.113883.3.526.3.1027",
+  "version": "Draft-9A0330D0-3D9B-11E1-8634-00237D5BF174"
+}

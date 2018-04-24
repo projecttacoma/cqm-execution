@@ -1,0 +1,277 @@
+{
+  "birthDatetime": "2002-10-18T14:00:00.000+00:00",
+  "dataElements": [
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-04-06T15:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "32485007"
+        }
+      ],
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnoses": [
+        {
+          "code": "10674711000119105",
+          "codeSystem": "SNOMED-CT",
+          "version": null,
+          "descriptor": "Asthma"
+        }
+      ],
+      "dischargeDisposition": {
+        "code": "10161009",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": "Discharge To Home Or Police Custody",
+        "codeSystemOid": null,
+        "version": null
+      },
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 3,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": {
+        "code": "10674711000119105",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": "Asthma",
+        "codeSystemOid": null,
+        "version": null
+      },
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-04-06T15:00:00+00:00",
+        "high": "2012-04-09T09:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "authorDatetime": "2012-04-09T09:00:00.000+00:00",
+      "category": "communication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "69981-9"
+        }
+      ],
+      "description": "Communication From Provider To Patient: Asthma action plan",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.131",
+      "negationRationale": {
+        "code": "105480006",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": null,
+        "codeSystemOid": null,
+        "version": null
+      },
+      "qdmStatus": "from_provider_to_patient",
+      "qdmVersion": "5.3",
+      "relatedTo": [
+
+      ],
+      "_type": "QDM::CommunicationFromProviderToPatient"
+    },
+    {
+      "birthDatetime": "2002-10-18T14:00:00.000+00:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2135-2",
+          "codeSystem": "CDC Race",
+          "descriptor": "Hispanic Or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "1002-5",
+          "codeSystem": "CDC Race",
+          "descriptor": "American Indian or Alaska Native",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "M",
+          "codeSystem": "AdministrativeSex",
+          "descriptor": "2.16.840.1.113883.18.2",
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "measure_ids": [
+      "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+      "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+      "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+      "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+      "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+      "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+      "03876D69-085B-415C-AE9D-9924171040C2",
+      "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+      "7DC26160-E615-4CC2-879C-75985189EC1A",
+      "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+      "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+      "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+      "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+      "9A033274-3D9B-11E1-8634-00237D5BF174",
+      "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+      "EBFA203E-ACC1-4228-906C-855C4BF11310",
+      "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+      "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+      "32CFC834-843A-4F45-B359-8E158EAC4396",
+      "BB481284-30DD-4383-928C-82385BBF1B17",
+      "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+      "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+      "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+      "D78CE034-8288-4012-A31E-7F485A74F2A9",
+      "7D374C6A-3821-4333-A1BC-4531005D77B8",
+      null
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "EncounterInpatient",
+        "description": "Encounter, Performed: Encounter Inpatient",
+        "code_list_id": "2.16.840.1.113883.3.666.5.307",
+        "type": "encounters",
+        "id": "EncounterInpatient_EncounterPerformed_c8060e96_dc7d_4780_a5cd_0aff93854cf3_source",
+        "start_date": 1333724400000,
+        "end_date": 1333962900000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.82",
+            "field_title": "Discharge Disposition",
+            "title": "Discharge To Home Or Police Custody"
+          },
+          "PRINCIPAL_DIAGNOSIS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.271",
+            "field_title": "Principal Diagnosis",
+            "title": "Asthma"
+          }
+        },
+        "hqmf_set_id": "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+        "cms_id": "CMS26v6",
+        "criteria_id": "1624e8c281bFL",
+        "codes": {
+          "SNOMED-CT": [
+            "32485007"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ab3fab2aeac503a2e663ea1",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": true,
+        "definition": "communication_from_provider_to_patient",
+        "title": "Communication: From Provider To Patient: Communication: From Provider To Patient",
+        "description": "Communication From Provider To Patient: Asthma action plan",
+        "code_list_id": "drc-0b4e501256dea10e614683faecb602ae078e6d7aec8d85908d2c4fcce0613359",
+        "type": "communications",
+        "id": "prefix_69981_9_Communication_FromProviderToPatient_A84534EB_7866_46C1_94CF_1F246AFAFC8A_source",
+        "start_date": 1333962000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+        "cms_id": "CMS26v6",
+        "criteria_id": "1624e8c9235sh",
+        "codes": {
+          "LOINC": [
+            "69981-9"
+          ]
+        },
+        "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+        "coded_entry_id": "5ab3fab2aeac503a2e663ea3",
+        "code_source": "DEFAULT"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": {
+    },
+    "notes": "10yo male; Num 26\n* 2qdes\n* pt admitted w principal dx severe asthma exacerbation. Pt refused asthma action plan prior to discharge.",
+    "is_shared": false,
+    "origin_data": [
+
+    ],
+    "medical_record_number": "8ee7ef20-1665-0135-6ded-20999b0ed66f",
+    "medical_record_assigner": "Bonnie",
+    "description": "",
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":null,\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1420070400,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+  },
+  "familyName": "ASTHMA",
+  "givenNames": [
+    "Z1 N"
+  ],
+  "qdmVersion": "5.3"
+}

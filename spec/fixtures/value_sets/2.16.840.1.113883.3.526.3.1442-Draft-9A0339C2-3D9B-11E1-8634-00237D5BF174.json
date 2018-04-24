@@ -1,0 +1,216 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "197625",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Doxazosin 1 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "197626",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Doxazosin 2 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "197627",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Doxazosin 4 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "197628",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Doxazosin 8 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "198141",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Prazosin 5 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "199797",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Prazosin 1 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "199798",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Prazosin 2 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "199799",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Prazosin 5 MG Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "260376",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Terazosin 10 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312481",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Polythiazide 0.5 MG / Prazosin 1 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312482",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Polythiazide 0.5 MG / Prazosin 2 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312483",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Polythiazide 0.5 MG / Prazosin 5 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312593",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Prazosin 1 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "312594",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Prazosin 2 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "313215",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Terazosin 1 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "313217",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Terazosin 2 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "313219",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Terazosin 5 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "636360",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "24 HR Doxazosin 4 MG Extended Release Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "636361",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "24 HR Doxazosin 8 MG Extended Release Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "861132",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "24 HR Alfuzosin hydrochloride 10 MG Extended Release Oral Tablet",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "861402",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Phenoxybenzamine Hydrochloride 10 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "863669",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Tamsulosin hydrochloride 0.4 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "996097",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "Dutasteride 0.5 MG / Tamsulosin hydrochloride 0.4 MG Oral Capsule",
+      "white_list": false
+    }
+  ],
+  "display_name": "Use of Systemic Sympathetic alpha-1a Antagonist Medication for Treatment of Prostatic Hypertrophy",
+  "oid": "2.16.840.1.113883.3.526.3.1442",
+  "version": "Draft-9A0339C2-3D9B-11E1-8634-00237D5BF174"
+}

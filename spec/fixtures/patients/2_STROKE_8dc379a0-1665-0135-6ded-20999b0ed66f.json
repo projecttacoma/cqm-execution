@@ -1,0 +1,384 @@
+{
+  "birthDatetime": "1953-07-15T19:00:00.000+00:00",
+  "dataElements": [
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-05-01T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "305351004"
+        }
+      ],
+      "description": "Encounter, Performed: Icu Admission Or Transfer",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-05-01T08:00:00+00:00",
+        "high": "2012-05-01T22:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-05-01T08:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "32485007"
+        }
+      ],
+      "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+      "diagnoses": [
+        {
+          "code": "195155004",
+          "codeSystem": "SNOMED-CT",
+          "version": null,
+          "descriptor": "Hemorrhagic Stroke"
+        }
+      ],
+      "dischargeDisposition": {
+        "code": "433591000124103",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": "Discharged to Rehabilitation Facility",
+        "codeSystemOid": null,
+        "version": null
+      },
+      "facilityLocations": [
+        {
+          "Code": {
+            "code": "309904001",
+            "codeSystem": "SNOMED-CT",
+            "version": null,
+            "descriptor": "Intensive Care Unit"
+          },
+          "Locationperiod": {
+            "low": "2012-05-01T08:00:00+00:00",
+            "high": "2012-05-01T22:15:00+00:00",
+            "lowClosed": true,
+            "highClosed": true
+          }
+        }
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 7,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": {
+        "code": "195155004",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": "Hemorrhagic Stroke",
+        "codeSystemOid": null,
+        "version": null
+      },
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-05-01T08:00:00+00:00",
+        "high": "2012-05-08T10:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-05-02T15:00:00.000+00:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "410158009"
+        }
+      ],
+      "description": "Procedure, Performed: Rehabilitation Assessment",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-05-02T15:00:00+00:00",
+        "high": "2012-05-02T16:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "birthDatetime": "1953-07-15T19:00:00.000+00:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2186-5",
+          "codeSystem": "CDC Race",
+          "descriptor": "Not Hispanic or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2028-9",
+          "codeSystem": "CDC Race",
+          "descriptor": "Asian",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "F",
+          "codeSystem": "AdministrativeSex",
+          "descriptor": "2.16.840.1.113883.18.2",
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "measure_ids": [
+      "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+      "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+      "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+      "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+      "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+      "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+      "03876D69-085B-415C-AE9D-9924171040C2",
+      "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+      "7DC26160-E615-4CC2-879C-75985189EC1A",
+      "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+      "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+      "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+      "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+      "9A033274-3D9B-11E1-8634-00237D5BF174",
+      "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+      "EBFA203E-ACC1-4228-906C-855C4BF11310",
+      "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+      "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+      "32CFC834-843A-4F45-B359-8E158EAC4396",
+      "BB481284-30DD-4383-928C-82385BBF1B17",
+      "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+      "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+      "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+      "D78CE034-8288-4012-A31E-7F485A74F2A9",
+      "7D374C6A-3821-4333-A1BC-4531005D77B8",
+      null
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "ICU Admission or Transfer",
+        "description": "Encounter, Performed: Icu Admission Or Transfer",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.305",
+        "type": "encounters",
+        "id": "OccurrenceA_ICUAdmissionorTransfer_EncounterPerformed_923456e8_628b_4339_9be2_245809ad5043_source",
+        "start_date": 1335859200000,
+        "end_date": 1335910500000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+        "cms_id": "CMS190v5",
+        "criteria_id": "15bedc25193gk",
+        "codes": {
+          "SNOMED-CT": [
+            "305351004"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ab3fe80aeac503a2e6640d2",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "Non-ElectiveInpatientEncounter",
+        "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.424",
+        "type": "encounters",
+        "id": "Non_ElectiveInpatientEncounter_EncounterPerformed_f31f4e2b_6cb3_4ed7_bf7e_197bf6453c3f_source",
+        "start_date": 1335859200000,
+        "end_date": 1336472100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "PRINCIPAL_DIAGNOSIS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.212",
+            "field_title": "Principal Diagnosis",
+            "title": "Hemorrhagic Stroke"
+          },
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.132",
+            "field_title": "Discharge Disposition",
+            "title": "Discharged to Rehabilitation Facility"
+          },
+          "FACILITY_LOCATION": {
+            "type": "COL",
+            "values": [
+              {
+                "type": "FAC",
+                "key": "FACILITY_LOCATION",
+                "code_list_id": "2.16.840.1.113762.1.4.1110.23",
+                "field_title": "Facility Location",
+                "start_date": "05/01/2012",
+                "start_time": "8:00 AM",
+                "end_date": "05/01/2012",
+                "end_time": "10:15 PM",
+                "value": 1335859200000,
+                "locationPeriodLow": "05/01/2012 8:00 AM",
+                "locationPeriodHigh": "05/01/2012 10:15 PM",
+                "end_value": 1335910500000,
+                "title": "Intensive Care Unit"
+              }
+            ]
+          }
+        },
+        "hqmf_set_id": "7DC26160-E615-4CC2-879C-75985189EC1A",
+        "cms_id": "CMS102v7",
+        "criteria_id": "1624517c220f7",
+        "codes": {
+          "SNOMED-CT": [
+            "32485007"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ab3fe80aeac503a2e6640d3",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "RehabilitationAssessment",
+        "description": "Procedure, Performed: Rehabilitation Assessment",
+        "code_list_id": "2.16.840.1.113762.1.4.1045.18",
+        "type": "procedures",
+        "id": "RehabilitationAssessment_ProcedurePerformed_122ec0a3_e128_42c5_8d1b_3c97994e135b_source",
+        "start_date": 1335970800000,
+        "end_date": 1335974400000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "7DC26160-E615-4CC2-879C-75985189EC1A",
+        "cms_id": "CMS102v7",
+        "criteria_id": "16245197081hS",
+        "codes": {
+          "SNOMED-CT": [
+            "410158009"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ab3fe80aeac503a2e6640d5",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": {
+    },
+    "notes": "59yo female; DExcl 108, Num 102 DExcep 190\n*3qdes\n*Pt admitted to ICU with subarachnoid hemorrhage. Transferred out of ICU after stabilizing to step down neuro unit for monitoring. DC to rehab.",
+    "is_shared": false,
+    "origin_data": [
+
+    ],
+    "medical_record_number": "8dc379a0-1665-0135-6ded-20999b0ed66f",
+    "medical_record_assigner": "Bonnie",
+    "description": "",
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+  },
+  "familyName": "STROKE",
+  "givenNames": [
+    "2"
+  ],
+  "qdmVersion": "5.3"
+}

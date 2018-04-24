@@ -1,0 +1,72 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "24165007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Alcoholism counseling (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "38670004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Patient referral for alcoholism rehabilitation (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "390857005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to community alcohol team (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "408947007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Alcohol abuse prevention education (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "413473000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Counseling about alcohol consumption (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "417096006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to community drug and alcohol team (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "431260004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to specialist alcohol treatment service (procedure)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Moderation of ETOH Consumption Recommendation",
+  "oid": "2.16.840.1.113883.3.600.823",
+  "version": "Draft-9A033A94-3D9B-11E1-8634-00237D5BF174"
+}

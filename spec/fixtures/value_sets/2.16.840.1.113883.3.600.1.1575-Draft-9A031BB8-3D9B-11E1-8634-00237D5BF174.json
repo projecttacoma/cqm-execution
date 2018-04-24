@@ -1,0 +1,18 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "Z51.5",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Encounter for palliative care",
+      "white_list": false
+    }
+  ],
+  "display_name": "Palliative care encounter",
+  "oid": "2.16.840.1.113883.3.600.1.1575",
+  "version": "Draft-9A031BB8-3D9B-11E1-8634-00237D5BF174"
+}

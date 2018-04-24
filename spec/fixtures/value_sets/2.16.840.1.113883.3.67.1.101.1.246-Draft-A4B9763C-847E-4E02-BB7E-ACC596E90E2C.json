@@ -1,0 +1,126 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "20010003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Borderline personality disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "301.13",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Cyclothymic disorder",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "301.50",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Histrionic personality disorder, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "301.51",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Chronic factitious illness with physical symptoms",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "301.83",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Borderline personality disorder",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "55341008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Histrionic personality disorder (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F34.0",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Cyclothymic disorder",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F60.3",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Borderline personality disorder",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F60.4",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Histrionic personality disorder",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F68.10",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Factitious disorder, unspecified",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F68.11",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Factitious disorder with predominantly psychological signs and symptoms",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F68.12",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Factitious disorder with predominantly physical signs and symptoms",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "F68.13",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Factitious disorder with combined psychological and physical signs and symptoms",
+      "white_list": false
+    }
+  ],
+  "display_name": "Personality Disorder",
+  "oid": "2.16.840.1.113883.3.67.1.101.1.246",
+  "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
+}

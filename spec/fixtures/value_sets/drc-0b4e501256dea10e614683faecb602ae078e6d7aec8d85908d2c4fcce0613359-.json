@@ -1,0 +1,18 @@
+{
+  "bundle_id": null,
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "69981-9",
+      "code_system": null,
+      "code_system_name": "LOINC",
+      "code_system_version": "urn:hl7:version:2.63",
+      "display_name": "Asthma action plan",
+      "white_list": false
+    }
+  ],
+  "display_name": "Asthma action plan",
+  "oid": "drc-0b4e501256dea10e614683faecb602ae078e6d7aec8d85908d2c4fcce0613359",
+  "version": ""
+}

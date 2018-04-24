@@ -1,0 +1,288 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "193511002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Idiopathic cyst of iris, ciliary body or anterior chamber (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "193515006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Exudative cyst of iris or anterior chamber (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "267621005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Cysts of iris, ciliary body and/or anterior chamber (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.60",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Idiopathic cysts of iris, ciliary body, and anterior chamber",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.61",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Implantation cysts of iris, ciliary body, and anterior chamber",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.62",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Exudative cysts of iris or anterior chamber",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.63",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Primary cyst of pars plana",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "364.64",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Exudative cyst of pars plana",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "400958004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary iris cyst (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "400959007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary iris cyst (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "47269005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Primary cyst of pars plana (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "63317005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Exudative cyst of pars plana (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "95251001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary cyst of pars plana (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.301",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Idiopathic cysts of iris, ciliary body or anterior chamber, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.302",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Idiopathic cysts of iris, ciliary body or anterior chamber, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.303",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Idiopathic cysts of iris, ciliary body or anterior chamber, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.311",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Exudative cysts of iris or anterior chamber, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.312",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Exudative cysts of iris or anterior chamber, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.313",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Exudative cysts of iris or anterior chamber, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.321",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Implantation cysts of iris, ciliary body or anterior chamber, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.322",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Implantation cysts of iris, ciliary body or anterior chamber, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.323",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Implantation cysts of iris, ciliary body or anterior chamber, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.331",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Parasitic cyst of iris, ciliary body or anterior chamber, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.332",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Parasitic cyst of iris, ciliary body or anterior chamber, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.333",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Parasitic cyst of iris, ciliary body or anterior chamber, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.341",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary cyst of pars plana, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.342",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary cyst of pars plana, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.343",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Primary cyst of pars plana, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.351",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Exudative cyst of pars plana, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.352",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Exudative cyst of pars plana, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H21.353",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Exudative cyst of pars plana, bilateral",
+      "white_list": false
+    }
+  ],
+  "display_name": "Cysts of Iris, Ciliary Body, and Anterior Chamber",
+  "oid": "2.16.840.1.113883.3.526.3.1420",
+  "version": "Draft-9A0339C2-3D9B-11E1-8634-00237D5BF174"
+}

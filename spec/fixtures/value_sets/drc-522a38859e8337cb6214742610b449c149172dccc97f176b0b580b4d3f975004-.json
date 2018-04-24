@@ -1,0 +1,18 @@
+{
+  "bundle_id": null,
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "72136-5",
+      "code_system": null,
+      "code_system_name": "LOINC",
+      "code_system_version": "urn:hl7:version:2.63",
+      "display_name": "Risk for venous thromboembolism",
+      "white_list": false
+    }
+  ],
+  "display_name": "Risk for venous thromboembolism",
+  "oid": "drc-522a38859e8337cb6214742610b449c149172dccc97f176b0b580b4d3f975004",
+  "version": ""
+}

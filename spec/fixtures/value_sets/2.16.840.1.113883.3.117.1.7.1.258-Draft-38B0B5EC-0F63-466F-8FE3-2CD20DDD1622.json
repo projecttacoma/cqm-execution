@@ -1,0 +1,144 @@
+{
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "0SQ90ZZ",
+      "code_system": "2.16.840.1.113883.6.4",
+      "code_system_name": "ICD-10-PCS",
+      "code_system_version": "2018",
+      "display_name": "Repair Right Hip Joint, Open Approach",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "0SQ9XZZ",
+      "code_system": "2.16.840.1.113883.6.4",
+      "code_system_name": "ICD-10-PCS",
+      "code_system_version": "2018",
+      "display_name": "Repair Right Hip Joint, External Approach",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "0SQB0ZZ",
+      "code_system": "2.16.840.1.113883.6.4",
+      "code_system_name": "ICD-10-PCS",
+      "code_system_version": "2018",
+      "display_name": "Repair Left Hip Joint, Open Approach",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "0SQBXZZ",
+      "code_system": "2.16.840.1.113883.6.4",
+      "code_system_name": "ICD-10-PCS",
+      "code_system_version": "2018",
+      "display_name": "Repair Left Hip Joint, External Approach",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "16174006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acetabuloplasty with use of methyl methacrylate (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "239499008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Excision arthroplasty of the hip (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "239500004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Interposition arthroplasty of the hip (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "265745003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Secondary arthroplasty of hip for correction of congenital deformity (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "32972004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acetabuloplasty, Whitman type procedure (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "44167006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Shelf operation, arthroplasty of hip (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "47458005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Repair of hip joint (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "61509005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acetabuloplasty, Colonna type procedure (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "73764009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Repair of acetabulum (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "83381006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Arthroplasty of hip with bone graft (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "87618002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acetabuloplasty with resection of femoral head (procedure)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Hip Fracture Surgery",
+  "oid": "2.16.840.1.113883.3.117.1.7.1.258",
+  "version": "Draft-38B0B5EC-0F63-466F-8FE3-2CD20DDD1622"
+}

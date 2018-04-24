@@ -1,0 +1,549 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "13767004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from choroid without use of magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "172426003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from cornea (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "172498005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from iris (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "172548007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Surgical removal of foreign body from lens (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "18752000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of intraocular foreign body from anterior chamber of eye (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "20647004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from vitreous without use of magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "21491001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of ciliary body without use of magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "223217009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of embedded foreign body from conjunctiva by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "224227005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of subconjunctival foreign body (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "225184003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of embedded foreign body from conjunctiva (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "287233001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Anterior chamber foreign body removal by magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "287236009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Conjunctival foreign body removal by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "287242008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Posterior chamber of eye foreign body removal by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "30113009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of anterior chamber of eye by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "31530007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of iris without use of magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "35552007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Repair of nonperforating laceration of cornea with removal of foreign body (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "360405005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of lens by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "360411008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Capsulotomy of lens with removal of foreign body (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "363726008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of cornea by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "37332006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of foreign body from sclera (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "37958004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of sclera by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "417297006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of viscoelastic from anterior chamber (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "430833007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of rust ring from cornea (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "43908008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of foreign body from choroid (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "444600006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of magnetic foreign body from eye (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "445023004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of penetrating foreign body from eye by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "445024005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of penetrating foreign body from eye using magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "4503005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of sclera without use of magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "45817009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from retina by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "48933009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from posterior segment of eye (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "50737005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of foreign body from vitreous (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "51281007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of superficial foreign body from conjunctiva (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "53570002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from eye (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "54085006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of ciliary body by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "54211003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Nonmagnetic extraction of foreign body from lens without extraction of lens (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "54362002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of intraocular foreign body from anterior segment of eye (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "5671007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of foreign body from ciliary body (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "58689006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of foreign body from lens (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "61220009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of external eye, scleral nonperforating (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "64340000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from retina without use of magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "65235",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Removal of foreign body, intraocular; from anterior chamber of eye or lens",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "65900",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Removal of epithelial downgrowth, anterior chamber of eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "65920",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Removal of implanted material, anterior segment of eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "65930",
+      "code_system": "2.16.840.1.113883.6.12",
+      "code_system_name": "CPT",
+      "code_system_version": "2018",
+      "display_name": "Removal of blood clot, anterior segment of eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "66134002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of foreign body from cornea (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "67546003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of penetrating foreign body from eye (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "72199008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from vitreous by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "74948004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of foreign body from retina (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "75734004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from choroid by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "78191003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Capsulotomy of lens with removal of foreign body by magnet extraction (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "78290008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of foreign body from iris (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "78362007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from conjunctiva (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "84016007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from lens (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "84542000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of anterior chamber of eye by incision with use of magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "85145001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of cornea with slit lamp (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "8813000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of intraocular foreign body from anterior segment of eye with use of magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "89788006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Magnet extraction of foreign body from posterior segment of eye (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "89942008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body of iris by incision (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "90997007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from posterior segment of eye without use of magnet (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "9255007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Removal of foreign body from anterior chamber of eye without use of magnet (procedure)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Removal Procedures",
+  "oid": "2.16.840.1.113883.3.526.3.1436",
+  "version": "Draft-9A0339C2-3D9B-11E1-8634-00237D5BF174"
+}

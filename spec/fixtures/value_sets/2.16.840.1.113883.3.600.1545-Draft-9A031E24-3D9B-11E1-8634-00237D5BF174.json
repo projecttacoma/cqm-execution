@@ -1,0 +1,99 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "10197000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Psychiatric interview and evaluation (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "10997001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Psychiatric evaluation of patient for testimentary capacity with report (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "165171009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Initial psychiatric evaluation (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "165190001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Psychiatric evaluation for rehabilitation (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "370803007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Evaluation of psychosocial impact on plan of care (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "38756009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Psychiatric evaluation of patient for criminal responsibility with report (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "429441000124107",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Assessment for bipolar disorder (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "45392008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Psychologic evaluation or test procedure (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "79094001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Initial psychiatric interview with mental status and evaluation (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "90407005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Evaluation of psychiatric state of patient (procedure)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Additional evaluation for depression - adult",
+  "oid": "2.16.840.1.113883.3.600.1545",
+  "version": "Draft-9A031E24-3D9B-11E1-8634-00237D5BF174"
+}

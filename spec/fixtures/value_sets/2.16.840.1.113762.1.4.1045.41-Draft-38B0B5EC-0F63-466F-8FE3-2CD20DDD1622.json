@@ -1,0 +1,72 @@
+{
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "1736470",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "10 ML eptifibatide 2 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1736477",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "100 ML eptifibatide 2 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1737466",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "100 ML tirofiban 0.05 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1737471",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "250 ML tirofiban 0.05 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1813035",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "15 ML tirofiban 0.25 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "200349",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "100 ML eptifibatide 0.75 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "241162",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "5 ML abciximab 2 MG/ML Injection",
+      "white_list": false
+    }
+  ],
+  "display_name": "Glycoprotein IIb/IIIa Inhibitors",
+  "oid": "2.16.840.1.113762.1.4.1045.41",
+  "version": "Draft-38B0B5EC-0F63-466F-8FE3-2CD20DDD1622"
+}

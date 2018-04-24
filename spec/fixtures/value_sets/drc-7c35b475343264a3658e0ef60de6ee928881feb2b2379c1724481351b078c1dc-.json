@@ -1,0 +1,18 @@
+{
+  "bundle_id": null,
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "72101-9",
+      "code_system": null,
+      "code_system_name": "LOINC",
+      "code_system_version": "urn:hl7:version:2.50",
+      "display_name": "Symptoms score [KOOS]",
+      "white_list": false
+    }
+  ],
+  "display_name": "Symptoms score [KOOS]",
+  "oid": "drc-7c35b475343264a3658e0ef60de6ee928881feb2b2379c1724481351b078c1dc",
+  "version": ""
+}

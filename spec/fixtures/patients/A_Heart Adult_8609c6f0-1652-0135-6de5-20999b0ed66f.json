@@ -1,0 +1,1185 @@
+{
+  "birthDatetime": "1942-02-01T11:30:00.000+00:00",
+  "dataElements": [
+    {
+      "authorDatetime": "2012-03-01T18:00:00.000+00:00",
+      "category": "allergy",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "1998"
+        }
+      ],
+      "description": "Allergy/Intolerance: ACE Inhibitor or ARB Ingredient",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.119",
+      "prevalencePeriod": {
+        "low": "2012-03-01T18:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmStatus": "intolerance",
+      "qdmVersion": "5.3",
+      "severity": null,
+      "type": null,
+      "_type": "QDM::AllergyIntolerance"
+    },
+    {
+      "authorDatetime": "2012-03-01T18:00:00.000+00:00",
+      "category": "allergy",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "1202"
+        }
+      ],
+      "description": "Allergy/Intolerance: Beta Blocker Therapy Ingredient",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.119",
+      "prevalencePeriod": {
+        "low": "2012-03-01T18:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmStatus": "intolerance",
+      "qdmVersion": "5.3",
+      "severity": null,
+      "type": null,
+      "_type": "QDM::AllergyIntolerance"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-01T17:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "364006"
+        },
+        {
+          "codeSystem": "ICD-9-CM",
+          "code": "428.1"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "I50.1"
+        }
+      ],
+      "description": "Diagnosis: Heart Failure",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-03-01T17:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-01T17:05:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "10725009"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "I10"
+        },
+        {
+          "codeSystem": "ICD-9-CM",
+          "code": "401.1"
+        }
+      ],
+      "description": "Diagnosis: Essential Hypertension",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-03-01T17:05:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-01T17:05:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "I20.0"
+        },
+        {
+          "codeSystem": "ICD-9-CM",
+          "code": "413.9"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "194828000"
+        }
+      ],
+      "description": "Diagnosis: Ischemic Vascular Disease",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-03-01T17:05:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-01T17:05:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "443502000"
+        },
+        {
+          "codeSystem": "ICD-9-CM",
+          "code": "414.01"
+        },
+        {
+          "codeSystem": "ICD-10-CM",
+          "code": "I25.110"
+        }
+      ],
+      "description": "Diagnosis: Coronary Artery Disease No MI",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-03-01T17:05:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-01T17:05:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "981000124106"
+        }
+      ],
+      "description": "Diagnosis: Moderate or Severe LVSD",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-03-01T17:05:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-01T18:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "293501008"
+        }
+      ],
+      "description": "Diagnosis: Intolerance to ACE Inhibitor or ARB",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-03-01T18:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-01T18:00:00.000+00:00",
+      "category": "condition",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "418370000"
+        }
+      ],
+      "description": "Diagnosis: Intolerance to Beta Blocker Therapy",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
+        "low": "2012-03-01T18:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2011-05-10T14:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99201"
+        }
+      ],
+      "description": "Encounter, Performed: Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2011-05-10T14:00:00+00:00",
+        "high": "2011-05-10T15:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-03-01T17:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99213"
+        }
+      ],
+      "description": "Encounter, Performed: Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-03-01T17:00:00+00:00",
+        "high": "2012-03-01T18:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-07-01T16:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99213"
+        }
+      ],
+      "description": "Encounter, Performed: Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-07-01T16:00:00+00:00",
+        "high": "2012-07-01T17:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-12-20T17:00:00.000+00:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99213"
+        }
+      ],
+      "description": "Encounter, Performed: Office Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-12-20T17:00:00+00:00",
+        "high": "2012-12-20T18:00:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "category": "medication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "855332"
+        }
+      ],
+      "description": "Medication, Active: Anticoagulant Medications",
+      "dosage": {
+        "value": 1,
+        "unit": "{tablet(s)}"
+      },
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.13",
+      "qdmStatus": "active",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2011-05-10T14:00:00+00:00",
+        "high": "2012-06-04T14:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationActive"
+    },
+    {
+      "activeDatetime": null,
+      "authorDatetime": "2012-03-01T18:00:00.000+00:00",
+      "category": "medication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "1191185"
+        }
+      ],
+      "description": "Medication, Order: Beta Blocker Therapy",
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.78",
+      "method": null,
+      "negationRationale": {
+        "code": "105480006",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": null,
+        "codeSystemOid": null,
+        "version": null
+      },
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "refills": null,
+      "relevantPeriod": {
+        "low": "2012-03-01T18:00:00+00:00",
+        "high": "9999-12-31T23:59:59+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationOrder"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-01T17:15:00.000+00:00",
+      "category": "physical_exam",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "8480-6"
+        }
+      ],
+      "description": "Physical Exam, Performed: Systolic blood pressure",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.57",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-03-01T17:15:00+00:00",
+        "high": "2012-03-01T17:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": {
+        "unit": "mm[Hg]",
+        "value": 150
+      },
+      "_type": "QDM::PhysicalExamPerformed"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-03-01T17:15:00.000+00:00",
+      "category": "physical_exam",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "8462-4"
+        }
+      ],
+      "description": "Physical Exam, Performed: Diastolic blood pressure",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.57",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-03-01T17:15:00+00:00",
+        "high": "2012-03-01T17:15:00+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": {
+        "unit": "mm[Hg]",
+        "value": 90
+      },
+      "_type": "QDM::PhysicalExamPerformed"
+    },
+    {
+      "birthDatetime": "1942-02-01T11:30:00.000+00:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2186-5",
+          "codeSystem": "CDC Race",
+          "descriptor": "Not Hispanic or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "1002-5",
+          "codeSystem": "CDC Race",
+          "descriptor": "American Indian or Alaska Native",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "M",
+          "codeSystem": "AdministrativeSex",
+          "descriptor": "2.16.840.1.113883.18.2",
+          "codeSystemOid": null,
+          "version": null
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "measure_ids": [
+      "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+      "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+      "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+      "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+      "0DAC1DEC-E011-493B-A281-7C28964872DD",
+      "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+      "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+      "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+      "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+      "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+      "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+      "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+      "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+      "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "500E4792-7F94-4E34-8546-EE71C56FE463",
+      "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+      "59657B9B-01BF-4979-A090-8534DA1D0516",
+      "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "60176FBF-BFDC-4892-9C9E-604F206553C8",
+      "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+      "703CC49B-B653-4885-80E8-245A057F5AE9",
+      "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+      "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+      "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+      "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+      "8479F6D6-4200-4FD0-9438-30048EBE3E29",
+      "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+      "8924F2B3-EC06-4650-B634-D70A53DEE577",
+      "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+      "95FB767E-0CB2-4778-B5FF-6BA9A53FA28E",
+      "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+      "9A031E24-3D9B-11E1-8634-00237D5BF174",
+      "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+      "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+      "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "9A033A94-3D9B-11E1-8634-00237D5BF174",
+      "A244AA29-7D11-4616-888A-86E376BFCC6F",
+      "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+      "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "A5E96A45-8132-4E72-BF4F-E8C81DB9E641",
+      "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+      "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+      "AC639794-CB3F-4F4F-8FA6-680300D5ED4E",
+      "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+      "B6016B47-B65D-4BE0-866F-1D397886CA89",
+      "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+      "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+      "BC5B4A57-B964-4399-9D40-667C896F31EA",
+      "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+      "BEB1C33C-2549-4E7F-9567-05ED38448464",
+      "C0D72444-7C26-4863-9B51-8080F8928A85",
+      "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+      "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+      "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+      "E0A07809-7B74-473F-BCC4-1891BE506AAA",
+      "E35791DF-5B25-41BB-B260-673337BC44A8",
+      "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+      "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+      "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+      "F70B2984-AF4A-4072-AE0D-CEC677A7FF8F",
+      "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+      "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+      "1C05C6C0-8099-4270-83CE-292CF6E35C51",
+      "ED78899D-2375-4D68-AA63-58E1734F5694",
+      "A3CE125D-C238-42CE-862E-DBA0055DFC66"
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "OfficeVisit",
+        "description": "Encounter, Performed: Office Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+        "type": "encounters",
+        "id": "OfficeVisit_EncounterPerformed_ccaea27f_c786_41f6_9f67_90ed125d1c0d_source",
+        "start_date": 1305036000000,
+        "end_date": 1305039600000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+        "cms_id": "CMS164v7",
+        "criteria_id": "16273716a8ahA",
+        "codes": {
+          "CPT": [
+            "99201"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac5153eaeac50408e25ffe9",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "medication",
+        "status": "active",
+        "title": "AnticoagulantMedications",
+        "description": "Medication, Active: Anticoagulant Medications",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.196.12.1283",
+        "type": "medications",
+        "id": "AnticoagulantMedications_MedicationActive_85d30fc7_a7af_4c68_916d_816a6dd1592d_source",
+        "start_date": 1305036000000,
+        "end_date": 1338819300000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+        "cms_id": "CMS164v7",
+        "criteria_id": "1627372c090Bu",
+        "codes": {
+          "RxNorm": [
+            "855332"
+          ]
+        },
+        "fulfillments": null,
+        "dose_value": "1",
+        "dose_unit": "{tablet(s)}",
+        "frequency_value": "1",
+        "frequency_unit": "d",
+        "coded_entry_id": "5ac5153eaeac50408e25ffed",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "HeartFailure",
+        "description": "Diagnosis: Heart Failure",
+        "code_list_id": "2.16.840.1.113883.3.526.3.376",
+        "type": "conditions",
+        "id": "HeartFailure_Diagnosis_6f251fa6_0b44_4c8a_b09f_c918590542f3_source",
+        "start_date": 1330621200000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+        "cms_id": "CMS144v7",
+        "criteria_id": "1628719be84aG",
+        "codes": {
+          "SNOMED-CT": [
+            "364006"
+          ],
+          "ICD-9-CM": [
+            "428.1"
+          ],
+          "ICD-10-CM": [
+            "I50.1"
+          ]
+        },
+        "coded_entry_id": "5ac5153eaeac50408e25ffe2",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "OfficeVisit",
+        "description": "Encounter, Performed: Office Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+        "type": "encounters",
+        "id": "OfficeVisit_EncounterPerformed_ccaea27f_c786_41f6_9f67_90ed125d1c0d_source",
+        "start_date": 1330621200000,
+        "end_date": 1330624800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+        "cms_id": "CMS164v7",
+        "criteria_id": "1627371a86a57",
+        "codes": {
+          "CPT": [
+            "99213"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac5153eaeac50408e25ffea",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "EssentialHypertension",
+        "description": "Diagnosis: Essential Hypertension",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.104.12.1011",
+        "type": "conditions",
+        "id": "EssentialHypertension_Diagnosis_bb600ec1_fe38_445f_898b_0f80f597ceac_source",
+        "start_date": 1330621500000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+        "cms_id": "CMS165v7",
+        "criteria_id": "16273610266TB",
+        "codes": {
+          "SNOMED-CT": [
+            "10725009"
+          ],
+          "ICD-10-CM": [
+            "I10"
+          ],
+          "ICD-9-CM": [
+            "401.1"
+          ]
+        },
+        "coded_entry_id": "5ac5153eaeac50408e25ffe3",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "IschemicVascularDisease",
+        "description": "Diagnosis: Ischemic Vascular Disease",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.104.12.1003",
+        "type": "conditions",
+        "id": "IschemicVascularDisease_Diagnosis_538dc50f_b91c_429a_86af_02f9e167151f_source",
+        "start_date": 1330621500000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+        "cms_id": "CMS164v7",
+        "criteria_id": "1627370adf0dR",
+        "codes": {
+          "ICD-10-CM": [
+            "I20.0"
+          ],
+          "ICD-9-CM": [
+            "413.9"
+          ],
+          "SNOMED-CT": [
+            "194828000"
+          ]
+        },
+        "coded_entry_id": "5ac5153eaeac50408e25ffe4",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "CoronaryArteryDiseaseNoMI",
+        "description": "Diagnosis: Coronary Artery Disease No MI",
+        "code_list_id": "2.16.840.1.113883.3.526.3.369",
+        "type": "conditions",
+        "id": "CoronaryArteryDiseaseNoMI_Diagnosis_a6479a0b_277b_4940_8dbe_9115c5b628ce_source",
+        "start_date": 1330621500000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+        "cms_id": "CMS145v7",
+        "criteria_id": "16286d9b424zy",
+        "codes": {
+          "SNOMED-CT": [
+            "443502000"
+          ],
+          "ICD-9-CM": [
+            "414.01"
+          ],
+          "ICD-10-CM": [
+            "I25.110"
+          ]
+        },
+        "coded_entry_id": "5ac5153eaeac50408e25ffe5",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "ModerateorSevereLVSD",
+        "description": "Diagnosis: Moderate or Severe LVSD",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1090",
+        "type": "conditions",
+        "id": "ModerateorSevereLVSD_Diagnosis_26b99bd6_c6f3_4923_b4cb_ac939c812c9a_source",
+        "start_date": 1330621500000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+        "cms_id": "CMS145v7",
+        "criteria_id": "16286db0afcBe",
+        "codes": {
+          "SNOMED-CT": [
+            "981000124106"
+          ]
+        },
+        "coded_entry_id": "5ac5153eaeac50408e25ffe6",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "physical_exam",
+        "status": "performed",
+        "title": "Physical Exam, Performed: Physical Exam, Performed",
+        "description": "Physical Exam, Performed: Systolic blood pressure",
+        "code_list_id": "drc-f6a92d7503c3bf27d99920eb885363b716972c2aeeac8a6e69d4d8682291e7f4",
+        "type": "physical_exams",
+        "id": "prefix_8480_6_PhysicalExamPerformed_5BC5E776_67CA_40F0_B6F3_75AB5807606A_source",
+        "start_date": 1330622100000,
+        "end_date": 1330622100000,
+        "value": [
+          {
+            "type": "PQ",
+            "type_cmp": "CD",
+            "value": "150",
+            "unit": "mm[Hg]"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+        "cms_id": "CMS165v7",
+        "criteria_id": "1627361695cyH",
+        "codes": {
+          "LOINC": [
+            "8480-6"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac5153eaeac50408e25ffef",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "physical_exam",
+        "status": "performed",
+        "title": "Physical Exam, Performed: Physical Exam, Performed",
+        "description": "Physical Exam, Performed: Diastolic blood pressure",
+        "code_list_id": "drc-b4bdff81834575092e7f8d5dea158c56df03b046f06adfb7ce4cf4741507294a",
+        "type": "physical_exams",
+        "id": "prefix_8462_4_PhysicalExamPerformed_C3206886_AE2E_486B_9B83_1414BD512CC6_source",
+        "start_date": 1330622100000,
+        "end_date": 1330622100000,
+        "value": [
+          {
+            "type": "PQ",
+            "type_cmp": "CD",
+            "value": "90",
+            "unit": "mm[Hg]"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+        "cms_id": "CMS165v7",
+        "criteria_id": "1627361c80c1X",
+        "codes": {
+          "LOINC": [
+            "8462-4"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac5153eaeac50408e25fff1",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "IntolerancetoACEInhibitororARB",
+        "description": "Diagnosis: Intolerance to ACE Inhibitor or ARB",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1212",
+        "type": "conditions",
+        "id": "IntolerancetoACEInhibitororARB_Diagnosis_e18e3f7f_7a7d_4171_a284_21519e734ac2_source",
+        "start_date": 1330624800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+        "cms_id": "CMS135v7",
+        "criteria_id": "1626376be56LV",
+        "codes": {
+          "SNOMED-CT": [
+            "293501008"
+          ]
+        },
+        "coded_entry_id": "5ac5153eaeac50408e25ffe7",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "allergy_intolerance",
+        "title": "ACEInhibitororARBIngredient",
+        "description": "Allergy/Intolerance: ACE Inhibitor or ARB Ingredient",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1489",
+        "type": "allergies_intolerances",
+        "id": "ACEInhibitororARBIngredient_Allergy_Intolerance_40280381_3d61_56a7_013e_62367ba02986_source",
+        "start_date": 1330624800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+        "cms_id": "CMS135v7",
+        "criteria_id": "1626377383eY5",
+        "codes": {
+          "RxNorm": [
+            "1998"
+          ]
+        },
+        "coded_entry_id": "5ac5153eaeac50408e25ffe0",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "diagnosis",
+        "title": "IntolerancetoBetaBlockerTherapy",
+        "description": "Diagnosis: Intolerance to Beta Blocker Therapy",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1178",
+        "type": "conditions",
+        "id": "IntolerancetoBetaBlockerTherapy_Diagnosis_97bbd204_8daf_49c0_b4e7_cf8c494b0f4b_source",
+        "start_date": 1330624800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+        "cms_id": "CMS145v7",
+        "criteria_id": "16286dab00efi",
+        "codes": {
+          "SNOMED-CT": [
+            "418370000"
+          ]
+        },
+        "coded_entry_id": "5ac5153eaeac50408e25ffe8",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "allergy_intolerance",
+        "title": "BetaBlockerTherapyIngredient",
+        "description": "Allergy/Intolerance: Beta Blocker Therapy Ingredient",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1493",
+        "type": "allergies_intolerances",
+        "id": "BetaBlockerTherapyIngredient_Allergy_Intolerance_40280381_3d61_56a7_013e_658031d33c36_source",
+        "start_date": 1330624800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+        "cms_id": "CMS145v7",
+        "criteria_id": "16286db6f32ir",
+        "codes": {
+          "RxNorm": [
+            "1202"
+          ]
+        },
+        "coded_entry_id": "5ac5153eaeac50408e25ffe1",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": true,
+        "definition": "medication",
+        "status": "ordered",
+        "title": "BetaBlockerTherapy",
+        "description": "Medication, Order: Beta Blocker Therapy",
+        "code_list_id": "2.16.840.1.113883.3.526.3.1174",
+        "type": "medications",
+        "id": "BetaBlockerTherapy_MedicationOrder_8a4d92b2_3946_cdae_0139_78e023917ba8_source",
+        "start_date": 1330624800000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+        "cms_id": "CMS145v7",
+        "criteria_id": "16286dc21fcxY",
+        "codes": {
+          "RxNorm": [
+            "1191185"
+          ]
+        },
+        "fulfillments": null,
+        "administrations_value": "",
+        "frequency_value": "",
+        "frequency_unit": "min",
+        "negation_code_list_id": "2.16.840.1.113883.3.526.3.1008",
+        "coded_entry_id": "5ac5153eaeac50408e25ffee",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "OfficeVisit",
+        "description": "Encounter, Performed: Office Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+        "type": "encounters",
+        "id": "OfficeVisit_EncounterPerformed_ccaea27f_c786_41f6_9f67_90ed125d1c0d_source",
+        "start_date": 1341158400000,
+        "end_date": 1341162000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+        "cms_id": "CMS164v7",
+        "criteria_id": "1627371f678IO",
+        "codes": {
+          "CPT": [
+            "99213"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac5153eaeac50408e25ffeb",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "OfficeVisit",
+        "description": "Encounter, Performed: Office Visit",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+        "type": "encounters",
+        "id": "OfficeVisit_EncounterPerformed_ccaea27f_c786_41f6_9f67_90ed125d1c0d_source",
+        "start_date": 1356022800000,
+        "end_date": 1356026400000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+        "cms_id": "CMS164v7",
+        "criteria_id": "16273724278Ba",
+        "codes": {
+          "CPT": [
+            "99213"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5ac5153eaeac50408e25ffec",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": {
+    },
+    "notes": "70yo male; DExcl 22,164 DExcep 135,144,145\n*17qdes\n*Pt on long term warfarin. Developed multiple cardiac conditions with heart failure, HTN, vascular disease. Allergies to cardiac meds.",
+    "is_shared": false,
+    "origin_data": [
+
+    ],
+    "medical_record_number": "8609c6f0-1652-0135-6de5-20999b0ed66f",
+    "medical_record_assigner": "Bonnie",
+    "description": "",
+    "description_category": "DENOM",
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":null,\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1420070400,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+  },
+  "familyName": "Heart Adult",
+  "givenNames": [
+    "A"
+  ],
+  "qdmVersion": "5.3"
+}

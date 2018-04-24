@@ -1,0 +1,81 @@
+{
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "1037045",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "dabigatran etexilate 150 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1037179",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "dabigatran etexilate 75 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1723476",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "dabigatran etexilate 110 MG Oral Capsule",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1804735",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "50 ML argatroban 1 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1804737",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "125 ML argatroban 1 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "1804738",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "250 ML argatroban 1 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "308351",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "2.5 ML argatroban 100 MG/ML Injection",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "308769",
+      "code_system": "2.16.840.1.113883.6.88",
+      "code_system_name": "RxNorm",
+      "code_system_version": "2018-01",
+      "display_name": "bivalirudin 250 MG Injection",
+      "white_list": false
+    }
+  ],
+  "display_name": "Direct Thrombin Inhibitor",
+  "oid": "2.16.840.1.113883.3.117.1.7.1.205",
+  "version": "Draft-38B0B5EC-0F63-466F-8FE3-2CD20DDD1622"
+}

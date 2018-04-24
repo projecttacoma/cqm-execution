@@ -1,0 +1,288 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "103698003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Patient referral to non-physician provider (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "103699006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Patient referral to dietitian (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "183515008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to physician (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "183524004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to psychiatry service (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "183583007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Refer to mental health worker (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "185359002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referred by another general practitioner (finding)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "305922005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral by mental health counselor (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306136006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to liaison psychiatry service (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306163007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to dietetics service (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306164001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to community-based dietetics service (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306165000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to hospital-based dietetics service (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306166004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to occupational therapy service (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306167008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to community-based occupational therapy service (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306168003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to hospital-based occupational therapy service (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306226009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to mental health counseling service (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306227000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral for mental health counseling (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306252003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to mental health counselor (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306344004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to professional allied to medicine (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306353006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to community-based dietitian (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "306354000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to hospital-based dietitian (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "308459004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to psychologist (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "308470006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to general physician (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "308477009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to psychiatrist (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "390864007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral for exercise therapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "390866009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to mental health team (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "390893007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral to physical activity program (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "408289007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Refer to weight management program (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410160006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Physical therapy management (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "416790000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Referral for home physical therapy (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "424203006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Physical therapy education, guidance and counseling (procedure)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "91251008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Physical therapy procedure (regime/therapy)",
+      "white_list": false
+    }
+  ],
+  "display_name": "Referrals where weight assessment may occur",
+  "oid": "2.16.840.1.113883.3.600.1.1527",
+  "version": "Draft-9A031BB8-3D9B-11E1-8634-00237D5BF174"
+}

@@ -1,0 +1,351 @@
+{
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "categories": null,
+  "concepts": [
+    {
+      "black_list": false,
+      "code": "128473001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "16553002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Choroiditis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "186854007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Uveitis due to secondary syphilis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "314029000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Tuberculous uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "33382000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Panophthalmitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "360.11",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Sympathetic uveitis",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "360.12",
+      "code_system": "2.16.840.1.113883.6.103",
+      "code_system_name": "ICD-9-CM",
+      "code_system_version": "2013",
+      "display_name": "Panuveitis",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "398155003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Chronic anterior uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410473001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Lyme uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410476009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Uveitis due to leptospirosis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410477000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Infective uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410494003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Lens-induced uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410501000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Drug-induced uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "410692006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Anterior uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "413716003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Brucellosis uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "413851004",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Cidofovir-induced anterior uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "414600000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Lepromatous anterior uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "414689001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Metipranolol-induced anterior uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "414996002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Pamidronic acid-induced uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "415344002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Rifabutin-induced anterior uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "415359008",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Sarcoid uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "416491000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Immune recovery uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "416666007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Anterior uveitis in juvenile idiopathic arthritis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "417321001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Human T-cell Lymphoma Virus Type -1 associated uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "418839003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Tubulointerstitial nephritis with uveitis syndrome (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "428676003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Uveitis caused by ranibizumab (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "43363007",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Posterior uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "444248002",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Chronic inflammation of uveal tract (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "4927003",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Acute anterior uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "64015001",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Subacute anterior uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "95706000",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phacoantigenic uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "95707009",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "code_system_version": "2017-09",
+      "display_name": "Phacotoxic uveitis (disorder)",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H44.111",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Panuveitis, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H44.112",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Panuveitis, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H44.113",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Panuveitis, bilateral",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H44.131",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Sympathetic uveitis, right eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H44.132",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Sympathetic uveitis, left eye",
+      "white_list": false
+    },
+    {
+      "black_list": false,
+      "code": "H44.133",
+      "code_system": "2.16.840.1.113883.6.90",
+      "code_system_name": "ICD-10-CM",
+      "code_system_version": "2018",
+      "display_name": "Sympathetic uveitis, bilateral",
+      "white_list": false
+    }
+  ],
+  "display_name": "Uveitis",
+  "oid": "2.16.840.1.113883.3.526.3.1444",
+  "version": "Draft-9A0339C2-3D9B-11E1-8634-00237D5BF174"
+}
