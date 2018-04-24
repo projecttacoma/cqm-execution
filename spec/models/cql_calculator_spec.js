@@ -15,6 +15,7 @@ describe('A CQL Calculation engine instance', () => {
   const valueSetsByMongoid = {};
   const valueSetsByOid = {};
   const patientsMongoized = [];
+  const patientMongoidToName = {};
   const measuresMongoized = {};
   const cqlCalculator = new CQLCalculator();
   const patientSource = new PatientSource(connectionInfo);
@@ -33,8 +34,10 @@ describe('A CQL Calculation engine instance', () => {
       valueSetsByOid[valueSet.oid][valueSet.version] = valueSetMongo;
     });
 
-    Object.values(patientsHash).forEach((patient) => {
-      patientsMongoized.push(patientSource.QDMPatient(patient));
+    Object.keys(patientsHash).forEach((patientKey) => {
+      const patientMongo = patientSource.QDMPatient(patientsHash[patientKey]);
+      patientsMongoized.push(patientMongo);
+      patientMongoidToName[patientMongo._id] = patientKey;
     });
 
     Object.keys(measuresHash).forEach((mesKey) => {
@@ -64,7 +67,8 @@ describe('A CQL Calculation engine instance', () => {
     });
     Object.keys(resultsByMeasure).forEach((resKey) => {
       console.log(`${resKey}\n`);
-      console.log(resultsByMeasure[resKey][0]);
+      console.log(`${patientMongoidToName[patientSource.patients[0]._id]}\n`);
+      console.log(resultsByMeasure[resKey]);
     });
     // TODO: Modify these to actually check fields
     expect(true).toBe(true);
