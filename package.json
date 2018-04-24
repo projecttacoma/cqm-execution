@@ -28,7 +28,7 @@
     "sinon-mongoose": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "projecttacoma/cqm-models#cql_link",
+    "cqm-models": "projecttacoma/cqm-models#temp_results",
     "lodash": "^4.17.5",
     "moment": "^2.21.0",
     "mongoose": "^5.0.7"
