@@ -26,7 +26,7 @@ describe('A CQL Calculation engine instance', () => {
     ValueSet = Mongoose.model('ValueSet', ValueSetSchema);
     Object.values(valueSetsHash).forEach((valueSet) => {
       valueSetMongo = ValueSet(valueSet);
-      valueSetsByMongoid[valueSetMongo.id] = valueSetMongo;
+      valueSetsByMongoid[valueSetMongo._id] = valueSetMongo;
 
       if (!(valueSet.oid in valueSetsByOid)) {
         valueSetsByOid[valueSet.oid] = {};
@@ -43,7 +43,7 @@ describe('A CQL Calculation engine instance', () => {
     Object.keys(measuresHash).forEach((mesKey) => {
       const mesMongoized = new Measure(measuresHash[mesKey]);
       measuresHash[mesKey].value_set_oid_version_objects.forEach((versionObject) => {
-        mesMongoized.value_sets.push(valueSetsByOid[versionObject.oid][versionObject.version].id);
+        mesMongoized.value_sets.push(valueSetsByOid[versionObject.oid][versionObject.version]._id);
       });
       measuresMongoized[mesKey] = mesMongoized;
     });
