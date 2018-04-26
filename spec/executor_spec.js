@@ -16,12 +16,19 @@ describe('A Javascript CQL Calculation Executor', () => {
   let testMeasureIds;
   const testValueSets = [];
 
-  const mockMeasures = Sinon.mock(executor.measureSource.CQLMeasure).expects('findOne').exactly(2);
-  const mockPatients = Sinon.mock(executor.patientSource.QDMPatient).expects('find').exactly(2);
-  const mockValueSets = Sinon.mock(executor.valueSetSource.ValueSet).expects('find').exactly(2);
+  const mockMeasures = Sinon.mock(executor.measureSource.CQLMeasure);
+  let mockMeasuresExpects;
+  const mockPatients = Sinon.mock(executor.patientSource.QDMPatient);
+  let mockPatientsExpects;
+  const mockValueSets = Sinon.mock(executor.valueSetSource.ValueSet);
+  let mockValueSetsExpects;
 
 
   beforeAll(() => {
+    mockMeasuresExpects = mockMeasures.expects('findOne').exactly(2);
+    mockPatientsExpects = mockPatients.expects('find').exactly(2);
+    mockValueSetsExpects = mockValueSets.expects('find').exactly(2);
+
     // Initialize patients and measures and value_sets, similar way as cql_calculator_spec.js
     let valueSetMongo;
     Object.values(valueSetsHash).forEach((valueSet) => {
@@ -51,10 +58,16 @@ describe('A Javascript CQL Calculation Executor', () => {
     testMeasureIds = [testMeasure._id.toString()];
   });
 
+  afterAll(() => {
+    mockMeasures.restore();
+    mockPatients.restore();
+    mockValueSets.restore();
+  });
+
   it('runs and returns CQL Measure calculations given patient IDs and measure IDs', async () => {
-    mockMeasures.yields(null, testMeasure);
-    mockPatients.yields(null, testPatients);
-    mockValueSets.yields(null, testValueSets);
+    mockMeasuresExpects.yields(null, testMeasure);
+    mockPatientsExpects.yields(null, testPatients);
+    mockValueSetsExpects.yields(null, testValueSets);
 
     Promise.resolve(executor.execute(testPatientIds, testMeasureIds))
       .then((allResults) => {
@@ -66,9 +79,9 @@ describe('A Javascript CQL Calculation Executor', () => {
   });
 
   it('runs and returns CQL Measure calculations with effective_date option', () => {
-    mockMeasures.yields(null, testMeasure);
-    mockPatients.yields(null, testPatients);
-    mockValueSets.yields(null, testValueSets);
+    mockMeasuresExpects.yields(null, testMeasure);
+    mockPatientsExpects.yields(null, testPatients);
+    mockValueSetsExpects.yields(null, testValueSets);
 
     Promise.resolve(executor.execute(
       testPatientIds,

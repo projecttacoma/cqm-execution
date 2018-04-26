@@ -12,7 +12,15 @@ describe('A MongoDB Measure Source', () => {
   const mes = new Measure({
     cms_id: 'CMS123',
   });
-  Sinon.mock(measureSource.CQLMeasure).expects('findOne').exactly(4).yields(null, mes);
+  const mock = Sinon.mock(measureSource.CQLMeasure);
+
+  beforeAll(() => {
+    mock.expects('findOne').exactly(4).yields(null, mes);
+  });
+
+  afterAll(() => {
+    mock.restore();
+  });
 
   describe('Finding a measure given an ID', () => {
     it('returns a measure given an ID (as a string)', () => {
