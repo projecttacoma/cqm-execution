@@ -23,7 +23,7 @@ describe('A CQL Calculation engine instance', () => {
   beforeAll(() => {
     let valueSetMongo;
     Mongoose.connect(connectionInfo);
-    ValueSet = Mongoose.model('ValueSet', ValueSetSchema);
+    ValueSet = Mongoose.model('Health_Data_Standards_SVS_Value_Set', ValueSetSchema);
     Object.values(valueSetsHash).forEach((valueSet) => {
       valueSetMongo = ValueSet(valueSet);
       valueSetsByMongoid[valueSetMongo._id] = valueSetMongo;
