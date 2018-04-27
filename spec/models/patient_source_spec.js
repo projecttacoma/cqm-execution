@@ -1,8 +1,14 @@
 const PatientSource = require('../../lib/models/patient_source.js');
+const Sinon = require('sinon');
+require('sinon-mongoose');
 
 describe('A MongoDB Patient Source', () => {
   const connectionInfo = 'mongodb://127.0.0.1:27017/js-ecqme-test';
   const patientSource = new PatientSource(connectionInfo);
+
+  beforeAll(() => {
+    Sinon.mock(patientSource.QDMPatient).restore();
+  });
 
   it('iterates through and returns a stored patient list', () => {
     patientSource.patients = [
