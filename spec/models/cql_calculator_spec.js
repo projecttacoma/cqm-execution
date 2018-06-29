@@ -91,5 +91,4 @@ describe('Calculates', () => {
 
   });
 
-
 });
