@@ -1,109 +1,95 @@
 const CQLCalculator = require('../../lib/models/cql_calculator.js');
-const Measure = require('cqm-models').Measure;
-const ValueSetSchema = require('cqm-models').ValueSetSchema;
 const QDMPatientSchema = require('cqm-models').PatientSchema;
 const PatientSource = require('../../lib/models/patient_source.js');
 const Mongoose = require('mongoose');
-const _ = require('lodash');
+const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 
-const valueSetsHash = require('../fixtures').value_sets;
-const patientsHash = require('../fixtures').patients;
-const measuresHash = require('../fixtures').measures;
-
-describe('A CQL Calculation engine instance', () => {
-  const connectionInfo = 'mongodb://127.0.0.1:27017/js-ecqme-test';
-  let ValueSet;
-  const valueSetsByMongoid = {};
-  const valueSetsByOid = {};
-  const patientsMongoized = [];
-  const patientMongoidToName = {};
-  let patientsMongoizedAndSourced = [];
-  const measuresMongoized = {};
+describe('Calculates', () => {
   const cqlCalculator = new CQLCalculator();
 
-  beforeAll(() => {
-    let valueSetMongo;
-    Mongoose.connect(connectionInfo);
-    ValueSet = Mongoose.model('Health_Data_Standards_SVS_Value_Set', ValueSetSchema);
-    // Initialize every ValueSet fixture, hash by Mongoid, and in another hash by Oid and Version
-    Object.values(valueSetsHash).forEach((valueSet) => {
-      valueSetMongo = ValueSet(valueSet);
-      valueSetsByMongoid[valueSetMongo._id] = valueSetMongo;
+  it('multiple population measure correctly', () => {
+    const valueSetsByOid = getJSONFixture('measure_data/core_measures/CMS160/value_sets.json');
+    const measure = getJSONFixture('measure_data/core_measures/CMS160/CMS160v6.json');
+    // Build raw patients array
+    const expiredDenex = getJSONFixture('records/core_measures/CMS160v6/Expired_DENEX.json');
+    const passNumer2 = getJSONFixture('records/core_measures/CMS160v6/Pass_NUM2.json');
+    const patients = [];
+    patients.push(expiredDenex);
+    patients.push(passNumer2);
+    // Convert patients into patients that use QDM patient schema
+    QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
+    qdmPatients = patients.map(patient => new QDMPatient(patient));
+    // Wrap QDMPatients in PatientSchema so execution engine has functions it needs
+    qdmPatientsSource = new PatientSource(qdmPatients);
+    calculationResults = cqlCalculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
 
-      if (!(valueSet.oid in valueSetsByOid)) {
-        valueSetsByOid[valueSet.oid] = {};
-      }
-      valueSetsByOid[valueSet.oid][valueSet.version] = valueSetMongo;
-    });
+    // There's not a way to get the patient out by a patient ID
+    expiredDenexResults = calculationResults[Object.keys(calculationResults)[0]];
+    passNumer2Results = calculationResults[Object.keys(calculationResults)[1]];
 
-    // Initialize every Patient fixture, hash their names by MongoId for debugging purposes
-    Object.keys(patientsHash).forEach((patientKey) => {
-      QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
-      const patientMongo = new QDMPatient(patientsHash[patientKey]);
-      patientsMongoized.push(patientMongo);
-      patientMongoidToName[patientMongo._id] = patientKey;
-    });
+    // Patient expiredDenexResults Population Set 1
+    expect(expiredDenexResults['PopulationCriteria1'].IPP).toBe(1);
+    expect(expiredDenexResults['PopulationCriteria1'].DENOM).toBe(1);
+    expect(expiredDenexResults['PopulationCriteria1'].DENEX).toBe(1);
+    expect(expiredDenexResults['PopulationCriteria1'].NUMER).toBe(0);
+    // Patient expiredDenexResults Population Set 2
+    expect(expiredDenexResults['PopulationCriteria2'].IPP).toBe(0);
+    expect(expiredDenexResults['PopulationCriteria2'].DENOM).toBe(0);
+    expect(expiredDenexResults['PopulationCriteria2'].DENEX).toBe(0);
+    expect(expiredDenexResults['PopulationCriteria2'].NUMER).toBe(0);
+    // Patient expiredDenexResults Population Set 3
+    expect(expiredDenexResults['PopulationCriteria3'].IPP).toBe(0);
+    expect(expiredDenexResults['PopulationCriteria3'].DENOM).toBe(0);
+    expect(expiredDenexResults['PopulationCriteria3'].DENEX).toBe(0);
+    expect(expiredDenexResults['PopulationCriteria3'].NUMER).toBe(0);
     
-    patientsMongoizedAndSourced = new PatientSource(patientsMongoized);
-    // Initialize every Measure fixture, push value_sets by evaluating their oid_version_objects
-    // on the measure
-    Object.keys(measuresHash).forEach((mesKey) => {
-      const mesMongoized = new Measure(measuresHash[mesKey]);
-      measuresHash[mesKey].value_set_oid_version_objects.forEach((versionObject) => {
-        mesMongoized.value_sets.push(valueSetsByOid[versionObject.oid][versionObject.version]._id);
-      });
-      measuresMongoized[mesKey] = mesMongoized;
-    });
+    // Patient passNumer2Results Population Set 1
+    expect(passNumer2Results['PopulationCriteria1'].IPP).toBe(0);
+    expect(passNumer2Results['PopulationCriteria1'].DENOM).toBe(0);
+    expect(passNumer2Results['PopulationCriteria1'].DENEX).toBe(0);
+    expect(passNumer2Results['PopulationCriteria1'].NUMER).toBe(0);
+    // Patient passNumer2Results Population Set 2
+    expect(passNumer2Results['PopulationCriteria2'].IPP).toBe(1);
+    expect(passNumer2Results['PopulationCriteria2'].DENOM).toBe(1);
+    expect(passNumer2Results['PopulationCriteria2'].DENEX).toBe(0);
+    expect(passNumer2Results['PopulationCriteria2'].NUMER).toBe(1);
+    // Patient passNumer2Results Population Set 3
+    expect(passNumer2Results['PopulationCriteria3'].IPP).toBe(0);
+    expect(passNumer2Results['PopulationCriteria3'].DENOM).toBe(0);
+    expect(passNumer2Results['PopulationCriteria3'].DENEX).toBe(0);
+    expect(passNumer2Results['PopulationCriteria3'].NUMER).toBe(0);
+  });
+  
+  it('single population EOC measure correctly', () => {
+    const valueSetsByOid = getJSONFixture('measure_data/core_measures/CMS177/value_sets.json');
+    const measure = getJSONFixture('measure_data/core_measures/CMS177/CMS177v6.json');
+    const failIPP = getJSONFixture('records/core_measures/CMS177v6/Fail_IPP.json');
+    const passNumer = getJSONFixture('records/core_measures/CMS177v6/Pass_Numer.json');
+  
+    const patients = [];
+    patients.push(failIPP);
+    patients.push(passNumer);
+  
+    QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
+    qdmPatients = patients.map(patient => new QDMPatient(patient));
+    qdmPatientsSource = new PatientSource(qdmPatients);
+    calculationResults = cqlCalculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+
+    // There's not a way to get the patient out by a patient ID
+    failIPPResults = calculationResults[Object.keys(calculationResults)[0]];
+    passNumerResults = calculationResults[Object.keys(calculationResults)[1]];
+
+    // Patiente failIPP Population Set 1
+    expect(failIPPResults['PopulationCriteria1'].IPP).toBe(0);
+    expect(failIPPResults['PopulationCriteria1'].DENOM).toBe(0);
+    expect(failIPPResults['PopulationCriteria1'].NUMER).toBe(0);
+    
+    // Patiente failIPP Population Set 1
+    expect(passNumerResults['PopulationCriteria1'].IPP).toBe(1);
+    expect(passNumerResults['PopulationCriteria1'].DENOM).toBe(1);
+    expect(passNumerResults['PopulationCriteria1'].NUMER).toBe(1);
+
   });
 
-  // Test one patient per measure fixture
-  // Note: This test is to ensure measure calculations happen without crashing, not evaluating
-  // specific expected results. ../executor_spec.js has test cases that evaluate specific
-  // expected results
-  it('performs measure calculations given a measure and a single patient', () => {
-    const resultsByMeasure = {};
-    Object.keys(measuresMongoized).forEach((mesKey) => {
-      /*patientSource.patients = [_.find(
-        patientsMongoized,
-        p => _.find(
-          p.extendedData.measure_ids,
-          m => m === measuresMongoized[mesKey].hqmf_set_id
-        )
-      )];*/
-      resultsByMeasure[mesKey] = cqlCalculator.calculate(
-        measuresMongoized[mesKey],
-        patientsMongoizedAndSourced, valueSetsByMongoid
-      );
-    });
-    // Near impossible to check specific results because there are so many,
-    // but many of these have been hand-verified.
-    // These will return failures if the calculation breaks at any point.
-    expect(true).toBe(true);
-  });
 
-  // Test every patient per measure fixture.
-  // Note: This test is to ensure measure calculations happen without crashing, not evaluating
-  // specific expected results. ../executor_spec.js has test cases that evaluate specific
-  // expected results
-  /*it('performs measure calculations given all measures against all patients', () => {
-    const resultsByMeasure = {};
-    Object.keys(measuresMongoized).forEach((mesKey) => {
-      patientSource.patients = _.filter(
-        patientsMongoized,
-        p => _.find(
-          p.extendedData.measure_ids,
-          m => m === measuresMongoized[mesKey].hqmf_set_id
-        )
-      );
-
-      resultsByMeasure[mesKey] = cqlCalculator.calculate(
-        measuresMongoized[mesKey],
-        patientSource, valueSetsByMongoid
-      );
-    });
-    // Near impossible to check specific results because there are so many,
-    // but many of these have been hand-verified
-    // These will return failures if the calculation breaks at any point.
-    expect(true).toBe(true);
-  });*/
 });
