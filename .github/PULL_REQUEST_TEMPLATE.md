@@ -1,4 +1,4 @@
-Pull requests into js-ecqm-engine require the following. Submitter and reviewer should :white_check_mark: when done. For items that are not-applicable, note it's not-applicable ("N/A") and :white_check_mark:.
+Pull requests into cqm-execution require the following. Submitter and reviewer should :white_check_mark: when done. For items that are not-applicable, note it's not-applicable ("N/A") and :white_check_mark:.
 
 **Submitter:**
 - [ ] This pull request describes why these changes were made.

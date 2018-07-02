@@ -1,34 +1,52 @@
 {
-  "name": "js-ecqm-engine",
-  "version": "0.0.2",
-  "description": "",
+  "name": "cqm-execution",
+  "version": "0.1.0",
+  "description": "NPM module for calculating eCQMs (electronic clinical quality measures) written in CQL (clinical quality language).",
   "main": "lib/index.js",
   "scripts": {
     "test": "jasmine",
     "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js'"
   },
-  "repository": "git+https://github.com/projectcypress/js-ecqm-engine.git",
+  "repository": "git+https://github.com/projecttacoma/cqm-execution.git",
   "contributors": [
-    "Louis Ades <lades@mitre.org>",
-    "Michael O'Keefe <mokeefe@mitre.org>",
-    "Adam Holmes <aholmes@mitre.org>"
+    {
+      "name": "Adam Holmes",
+      "email": "aholmes@mitre.org"
+    },
+    {
+      "name": "Matt Mayer",
+      "email": "mmayer@mitre.org"
+    },
+    {
+      "name": "Michael O'Keefe",
+      "email": "mokeefe@mitre.org"
+    },
+    {
+      "name": "James Bradley",
+      "email": "jhbradley@mitre.org"
+    },
+    {
+      "name": "Luke Osborne",
+      "email": "lwosborne@mitre.org"
+    },
+    {
+      "name": "Louis Ades"
+    }
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/projectcypress/js-ecqm-engine/issues"
+    "url": "https://github.com/projecttacoma/cqm-execution/issues"
   },
-  "homepage": "https://github.com/projectcypress/js-ecqm-engine#readme",
+  "homepage": "https://github.com/projecttacoma/cqm-execution#readme",
   "devDependencies": {
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "jasmine": "^2.9.0",
-    "require-directory": "^2.1.1",
-    "sinon": "^4",
-    "sinon-mongoose": "^2.1.1"
+    "require-directory": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "projecttacoma/cqm-models#temp_results",
+    "cqm-models": "file:../cqm-models",
     "lodash": "^4.17.5",
     "moment": "^2.21.0",
     "mongoose": "^5.0.7"

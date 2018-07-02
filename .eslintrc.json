@@ -4,11 +4,12 @@
     "max-len": [
       "error",
       {
-        "code": 100,
+        "code": 200,
         "ignoreComments": true
       }
     ],
     "prefer-destructuring": "off",
+    "no-param-reassign": "off",
     "comma-dangle": [
       "error",
       {
