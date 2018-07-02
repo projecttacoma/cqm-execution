@@ -1,0 +1,495 @@
+{
+  "birthDatetime": "1960-01-02T03:00:00.000-05:00",
+  "bundleId": "582c7dca6c5d1c1cf10006e6",
+  "dataElements": [
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-01-11T03:00:00.000-05:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "4525004"
+        }
+      ],
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+        {
+          "dataElementCodes": [
+
+          ],
+          "description": null,
+          "_type": "QDM::FacilityLocation",
+          "code": {
+            "code": "4525004",
+            "codeSystem": "SNOMED-CT",
+            "descriptor": "Emergency Department Visit",
+            "codeSystemOid": null,
+            "version": null,
+            "_type": "QDM::Code"
+          },
+          "locationPeriod": {
+            "low": "2012-01-11T08:00:00.000+00:00",
+            "high": "2012-01-11T10:00:00.000+00:00",
+            "lowClosed": true,
+            "highClosed": true,
+            "_type": "QDM::Interval"
+          },
+          "qdmVersion": "5.3"
+        }
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-01-11T08:00:00.000+00:00",
+        "high": "2012-01-11T09:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-05-23T14:00:00.000-04:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "4525004"
+        }
+      ],
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": {
+        "code": "306701001",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": "Discharge To Acute Care Facility",
+        "codeSystemOid": null,
+        "version": null
+      },
+      "facilityLocations": [
+        {
+          "dataElementCodes": [
+
+          ],
+          "description": null,
+          "_type": "QDM::FacilityLocation",
+          "code": {
+            "code": "4525004",
+            "codeSystem": "SNOMED-CT",
+            "descriptor": "Emergency Department Visit",
+            "codeSystemOid": null,
+            "version": null,
+            "_type": "QDM::Code"
+          },
+          "locationPeriod": {
+            "low": "2012-05-23T18:00:00.000+00:00",
+            "high": "2012-05-23T20:15:00.000+00:00",
+            "lowClosed": true,
+            "highClosed": true,
+            "_type": "QDM::Interval"
+          },
+          "qdmVersion": "5.3"
+        }
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-05-23T18:00:00.000+00:00",
+        "high": "2012-05-23T20:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-07-09T21:00:00.000-04:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "4525004"
+        }
+      ],
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+        {
+          "dataElementCodes": [
+
+          ],
+          "description": null,
+          "_type": "QDM::FacilityLocation",
+          "code": {
+            "code": "4525004",
+            "codeSystem": "SNOMED-CT",
+            "descriptor": "Emergency Department Visit",
+            "codeSystemOid": null,
+            "version": null,
+            "_type": "QDM::Code"
+          },
+          "locationPeriod": {
+            "low": "2012-07-10T01:00:00.000+00:00",
+            "high": "2012-07-10T05:00:00.000+00:00",
+            "lowClosed": true,
+            "highClosed": true,
+            "_type": "QDM::Interval"
+          },
+          "qdmVersion": "5.3"
+        }
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-07-10T01:00:00.000+00:00",
+        "high": "2012-07-10T03:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "birthDatetime": "1960-01-02T03:00:00.000-05:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2186-5",
+          "codeSystem": "cdcrec",
+          "descriptor": "Not Hispanic or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "1002-5",
+          "codeSystem": "cdcrec",
+          "descriptor": "American Indian or Alaska Native",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "M",
+          "codeSystem": "AdministrativeGender",
+          "descriptor": "M",
+          "codeSystemOid": "2.16.840.1.113883.5.1",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "type": null,
+    "measure_ids": [
+      "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      null
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "EmergencyDepartmentVisit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+        "type": "encounters",
+        "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+        "start_date": 1326268800000,
+        "end_date": 1326273300000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "FACILITY_LOCATION": {
+            "type": "COL",
+            "values": [
+              {
+                "type": "FAC",
+                "key": "FACILITY_LOCATION",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+                "field_title": "Facility Location",
+                "start_date": "01/11/2012",
+                "start_time": "8:00 AM",
+                "end_date": "01/11/2012",
+                "end_time": "10:00 AM",
+                "value": 1326268800000,
+                "locationPeriodLow": "01/11/2012 8:00 AM",
+                "locationPeriodHigh": "01/11/2012 10:00 AM",
+                "end_value": 1326276000000,
+                "title": "Emergency Department Visit"
+              }
+            ],
+            "field_title": "Facility Location"
+          }
+        },
+        "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+        "cms_id": "CMS32v7",
+        "criteria_id": "160e6e090c48q",
+        "codes": {
+          "SNOMED-CT": [
+            "4525004"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77c6b848463d625b5a79",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "EmergencyDepartmentVisit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+        "type": "encounters",
+        "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+        "start_date": 1337796000000,
+        "end_date": 1337804100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+            "field_title": "Discharge Disposition",
+            "title": "Discharge To Acute Care Facility"
+          },
+          "FACILITY_LOCATION": {
+            "type": "COL",
+            "values": [
+              {
+                "type": "FAC",
+                "key": "FACILITY_LOCATION",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+                "field_title": "Facility Location",
+                "start_date": "05/23/2012",
+                "start_time": "6:00 PM",
+                "end_date": "05/23/2012",
+                "end_time": "8:15 PM",
+                "value": 1337796000000,
+                "locationPeriodLow": "05/23/2012 6:00 PM",
+                "locationPeriodHigh": "05/23/2012 8:15 PM",
+                "end_value": 1337804100000,
+                "title": "Emergency Department Visit"
+              }
+            ],
+            "field_title": "Facility Location"
+          }
+        },
+        "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+        "cms_id": "CMS32v7",
+        "criteria_id": "160e6db8c4ePL",
+        "codes": {
+          "SNOMED-CT": [
+            "4525004"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77c6b848463d625b5a7a",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "EmergencyDepartmentVisit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+        "type": "encounters",
+        "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+        "start_date": 1341882000000,
+        "end_date": 1341890100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "FACILITY_LOCATION": {
+            "type": "COL",
+            "values": [
+              {
+                "type": "FAC",
+                "key": "FACILITY_LOCATION",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+                "field_title": "Facility Location",
+                "start_date": "07/10/2012",
+                "start_time": "1:00 AM",
+                "end_date": "07/10/2012",
+                "end_time": "5:00 AM",
+                "value": 1341882000000,
+                "locationPeriodLow": "07/10/2012 1:00 AM",
+                "locationPeriodHigh": "07/10/2012 5:00 AM",
+                "end_value": 1341896400000,
+                "title": "Emergency Department Visit"
+              }
+            ],
+            "field_title": "Facility Location"
+          }
+        },
+        "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+        "cms_id": "CMS32v7",
+        "criteria_id": "160e6dbd55fMA",
+        "codes": {
+          "SNOMED-CT": [
+            "4525004"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77c6b848463d625b5a7b",
+        "code_source": "DEFAULT"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": [
+      {
+        "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+        "population_index": 0,
+        "IPP": 3,
+        "MSRPOPL": 3,
+        "MSRPOPLEX": 0,
+        "OBSERV_UNIT": " mins",
+        "OBSERV": [
+          120,
+          135,
+          240
+        ]
+      },
+      {
+        "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+        "population_index": 1,
+        "STRAT": 0,
+        "IPP": 0,
+        "MSRPOPL": 0,
+        "MSRPOPLEX": 0,
+        "OBSERV_UNIT": " mins",
+        "OBSERV": [
+
+        ]
+      },
+      {
+        "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+        "population_index": 2,
+        "STRAT": 1,
+        "IPP": 1,
+        "MSRPOPL": 1,
+        "MSRPOPLEX": 0,
+        "OBSERV_UNIT": " mins",
+        "OBSERV": [
+          135
+        ]
+      },
+      {
+        "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+        "population_index": 3,
+        "STRAT": 2,
+        "IPP": 2,
+        "MSRPOPL": 2,
+        "MSRPOPLEX": 0,
+        "OBSERV_UNIT": " mins",
+        "OBSERV": [
+          120,
+          240
+        ]
+      }
+    ],
+    "notes": "",
+    "is_shared": null,
+    "origin_data": [
+
+    ],
+    "test_id": null,
+    "medical_record_number": "fff16ded4ecdd789b6a92abcc0d884ee2ba306bb44f7a15358c039590cad5a88",
+    "medical_record_assigner": "Bonnie",
+    "description": null,
+    "description_category": null,
+    "insurance_providers": "[]"
+  },
+  "familyName": "Strat2&3Pass",
+  "givenNames": [
+    "MultipleEDEnc"
+  ],
+  "qdmVersion": "5.3"
+}
