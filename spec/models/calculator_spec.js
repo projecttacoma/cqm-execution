@@ -126,11 +126,31 @@ describe('Calculator', function() {
     expect(passNumer2Results['PopulationCriteria3'].NUMER).toBe(0);
   });
 
+  xit('does not drop any fields when calling JSON.stringify', function() {
+    const valueSetsByOid = getJSONFixture('measures/CMS32v7/value_sets.json');
+    const measure = getJSONFixture('measures/CMS32v7/CMS32v7.json');
+    const p1 = getJSONFixture('patients/CMS32v7/Visit_1ED.json');
+    const p2 = getJSONFixture('patients/CMS32v7/Visits_1Excl_2ED.json');
+    const p3 = getJSONFixture('patients/CMS32v7/Visits_2ED.json');
+    const p4 = getJSONFixture('patients/CMS32v7/Visits_2Excl_2ED.json');
+    const patients = [];
+    patients.push(p1);
+    patients.push(p2);
+    patients.push(p3);
+    patients.push(p4);
+    QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
+    qdmPatients = patients.map(patient => new QDMPatient(patient));
+    qdmPatientsSource = new PatientSource(qdmPatients);
+    calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid, {doPretty: true});
+    stringifiedResults = JSON.parse(JSON.stringify(calculationResults));
+    // TODO: verify the stringified version has everything we need
+  });
+
   it('multiple observation measure correctly', function() {
     const valueSetsByOid = getJSONFixture('measures/CMS721v0/value_sets.json');
     const measure = getJSONFixture('measures/CMS721v0/CMS721v0.json');
     const multipleEDEncStrat23Pass = getJSONFixture('patients/CMS721v0/MultipleEDEnc_Strat2-3Pass.json');
-    const visit1Ed = getJSONFixture('patients/CMS721v0/Visit_1ED.json');
+    const visit1Ed = getJSONFixture('patients/CMS32v7/Visit_1ED.json');
     const patients = [];
     patients.push(multipleEDEncStrat23Pass);
     patients.push(visit1Ed);
