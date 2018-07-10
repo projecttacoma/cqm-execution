@@ -80,20 +80,20 @@ describe('MeasureHelpers', function() {
         expect(result.get('statement_results').PD0329.IntervalWithTZOffsets.pretty).toEqual('Interval: 08/01/2012 12:00 AM - 12/31/2012 12:00 AM');
       });
 
-      it('for CMS721v0 correctly', function() {
-        const valueSetsByOid = getJSONFixture('measures/CMS721v0/value_sets.json');
-        const measure = getJSONFixture('measures/CMS721v0/CMS721v0.json');
+      it('for CMS32v7 correctly', function() {
+        const valueSetsByOid = getJSONFixture('measures/CMS32v7/value_sets.json');
+        const measure = getJSONFixture('measures/CMS32v7/CMS32v7.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS721v0/Visit_1ED.json'));
+        patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json'));
         const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
         const qdmPatients = patients.map(patient => new QDMPatient(patient));
         const qdmPatientsSource = new PatientSource(qdmPatients);
         const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid, {doPretty: true});
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
-        expect(result.get('statement_results').Test32['Measure Observation'].pretty).toEqual('FUNCTION');
-        expect(result.get('statement_results').Test32['ED Visit'].pretty).toEqual('[Encounter, Performed: Emergency department patient visit (procedure)\nSTART: 11/22/2012 8:00 AM\nSTOP: 11/22/2012 8:15 AM\nCODE: SNOMED-CT 4525004]');
-        expect(result.get('statement_results').Test32['Measure Population Exclusions'].pretty).toEqual('FALSE ([])');
+        expect(result.get('statement_results').MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Observation'].pretty).toEqual('FUNCTION');
+        expect(result.get('statement_results').MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['ED Visit'].pretty).toEqual('[Encounter, Performed: Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMED-CT 4525004]');
+        expect(result.get('statement_results').MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Population Exclusions'].pretty).toEqual('FALSE ([])');
       });
 
       it('for CMS735v0 correctly', function() {
