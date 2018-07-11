@@ -152,9 +152,13 @@ describe('Calculator', function() {
     const measure = getJSONFixture('measures/CMS32v7/CMS32v7.json');
     const visit2Ed = getJSONFixture('patients/CMS32v7/Visits_2ED.json');
     const visit1Ed = getJSONFixture('patients/CMS32v7/Visit_1ED.json');
+    const visit1excl = getJSONFixture('patients/CMS32v7/Visits_1Excl_2ED.json');
+    const visit2excl = getJSONFixture('patients/CMS32v7/Visits_2Excl_2ED.json');
     const patients = [];
     patients.push(visit1Ed);
     patients.push(visit2Ed);
+    patients.push(visit1excl);
+    patients.push(visit2excl);
     QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
     qdmPatients = patients.map(patient => new QDMPatient(patient));
     qdmPatientsSource = new PatientSource(qdmPatients);
@@ -162,6 +166,8 @@ describe('Calculator', function() {
     calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
     visit1EdResults = calculationResults[Object.keys(calculationResults)[0]];
     visit2EdResults = calculationResults[Object.keys(calculationResults)[1]];
+    visit1exclResults = calculationResults[Object.keys(calculationResults)[2]];
+    visit2exclResults = calculationResults[Object.keys(calculationResults)[3]];
 
     // Patient visit1EdResults Population Set 1
     expect(visit1EdResults['PopulationCriteria1'].IPP).toBe(1);
@@ -210,7 +216,124 @@ describe('Calculator', function() {
     expect(visit2EdResults['PopulationCriteria1 - Stratification 3'].MSRPOPL).toBe(0);
     expect(visit2EdResults['PopulationCriteria1 - Stratification 3'].MSRPOPLEX).toBe(0);
     expect(getEpisodeResults(visit2EdResults['PopulationCriteria1 - Stratification 3'].episode_results)).toEqual([]);
- 
+
+    // Patient visit1exclResults Population Set 1
+    expect(visit1exclResults['PopulationCriteria1'].IPP).toBe(2);
+    expect(visit1exclResults['PopulationCriteria1'].MSRPOPL).toBe(2);
+    expect(visit1exclResults['PopulationCriteria1'].MSRPOPLEX).toBe(1);
+    expect(getEpisodeResults(visit1exclResults['PopulationCriteria1'].episode_results)).toEqual([25]);
+    // Patient visit1exclResults Population Set 1 Stratification 1
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 1'].STRAT).toBe(2);
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 1'].IPP).toBe(2);
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 1'].MSRPOPL).toBe(2);
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 1'].MSRPOPLEX).toBe(1);
+    expect(getEpisodeResults(visit1exclResults['PopulationCriteria1 - Stratification 1'].episode_results)).toEqual([25]);
+    // Patient visit1exclResults Population Set 1 Stratification 2
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 2'].STRAT).toBe(0);
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 2'].IPP).toBe(0);
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 2'].MSRPOPL).toBe(0);
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 2'].MSRPOPLEX).toBe(0);
+    expect(getEpisodeResults(visit1exclResults['PopulationCriteria1 - Stratification 2'].episode_results)).toEqual([]);
+    // Patient visit1exclResults Population Set 1 Stratification 3
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 3'].STRAT).toBe(0);
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 3'].IPP).toBe(0);
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 3'].MSRPOPL).toBe(0);
+    expect(visit1exclResults['PopulationCriteria1 - Stratification 3'].MSRPOPLEX).toBe(0);
+    expect(getEpisodeResults(visit1exclResults['PopulationCriteria1 - Stratification 3'].episode_results)).toEqual([]);
+
+    // Patient visit2exclResults Population Set 1
+    expect(visit2exclResults['PopulationCriteria1'].IPP).toBe(2);
+    expect(visit2exclResults['PopulationCriteria1'].MSRPOPL).toBe(2);
+    expect(visit2exclResults['PopulationCriteria1'].MSRPOPLEX).toBe(2);
+    expect(getEpisodeResults(visit2exclResults['PopulationCriteria1'].episode_results)).toEqual([]);
+    // Patient visit2exclResults Population Set 1 Stratification 1
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 1'].STRAT).toBe(2);
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 1'].IPP).toBe(2);
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 1'].MSRPOPL).toBe(2);
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 1'].MSRPOPLEX).toBe(2);
+    expect(getEpisodeResults(visit2exclResults['PopulationCriteria1 - Stratification 1'].episode_results)).toEqual([]);
+    // Patient visit2exclResults Population Set 1 Stratification 2
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 2'].STRAT).toBe(0);
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 2'].IPP).toBe(0);
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 2'].MSRPOPL).toBe(0);
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 2'].MSRPOPLEX).toBe(0);
+    expect(getEpisodeResults(visit2exclResults['PopulationCriteria1 - Stratification 2'].episode_results)).toEqual([]);
+    // Patient visit2exclResults Population Set 1 Stratification 3
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 3'].STRAT).toBe(0);
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 3'].IPP).toBe(0);
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 3'].MSRPOPL).toBe(0);
+    expect(visit2exclResults['PopulationCriteria1 - Stratification 3'].MSRPOPLEX).toBe(0);
+    expect(getEpisodeResults(visit2exclResults['PopulationCriteria1 - Stratification 3'].episode_results)).toEqual([]);
+
+
+    // Check Statement Relevance for Population Criteria 1
+    expect(visit1EdResults.PopulationCriteria1.extendedData.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+      "ED Visit":"TRUE",
+      "Initial Population":"TRUE",
+      "Measure Observation":"TRUE",
+      "Measure Population":"TRUE",
+      "Measure Population Exclusions":"TRUE",
+      "Patient":"NA",
+      "SDE Ethnicity":"NA",
+      "SDE Payer":"NA",
+      "SDE Race":"NA",
+      "SDE Sex":"NA",
+      "Stratification 1":"NA",
+      "Stratification 2":"NA",
+      "Stratification 3":"NA"
+    });
+
+    // Check Statement Relevance for Population Set 1 Stratification 1
+    expect(visit1EdResults['PopulationCriteria1 - Stratification 1'].extendedData.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+      "ED Visit":"TRUE",
+      "Initial Population":"TRUE",
+      "Measure Observation":"TRUE",
+      "Measure Population":"TRUE",
+      "Measure Population Exclusions":"TRUE",
+      "Patient":"NA",
+      "SDE Ethnicity":"NA",
+      "SDE Payer":"NA",
+      "SDE Race":"NA",
+      "SDE Sex":"NA",
+      "Stratification 1":"TRUE",
+      "Stratification 2":"NA",
+      "Stratification 3":"NA"
+    });
+
+
+    // Check Statement Relevance for Population Set 1 Stratification 2
+    expect(visit1EdResults['PopulationCriteria1 - Stratification 2'].extendedData.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+      "ED Visit":"TRUE",
+      "Initial Population":"FALSE",
+      "Measure Observation":"FALSE",
+      "Measure Population":"FALSE",
+      "Measure Population Exclusions":"FALSE",
+      "Patient":"NA",
+      "SDE Ethnicity":"NA",
+      "SDE Payer":"NA",
+      "SDE Race":"NA",
+      "SDE Sex":"NA",
+      "Stratification 1":"NA",
+      "Stratification 2":"TRUE",
+      "Stratification 3":"NA"
+    })
+
+    // Check Statement Relevance for Population Set 1 Stratification 3
+    expect(visit1EdResults['PopulationCriteria1 - Stratification 3'].extendedData.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+      "ED Visit":"TRUE",
+      "Initial Population":"FALSE",
+      "Measure Observation":"FALSE",
+      "Measure Population":"FALSE",
+      "Measure Population Exclusions":"FALSE",
+      "Patient":"NA",
+      "SDE Ethnicity":"NA",
+      "SDE Payer":"NA",
+      "SDE Race":"NA",
+      "SDE Sex":"NA",
+      "Stratification 1":"NA",
+      "Stratification 2":"NA",
+      "Stratification 3":"TRUE"
+    })
   });
 
   it('single population EOC measure correctly', function() {
