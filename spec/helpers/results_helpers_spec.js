@@ -3,7 +3,6 @@ const cql = require('cqm-models').CQL;
 const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 const Mongoose = require('mongoose');
 const QDMPatientSchema = require('cqm-models').PatientSchema;
-const PatientSource = require('../../lib/models/patient_source.js');
 const Calculator = require('../../lib/models/calculator.js');
 
 describe('MeasureHelpers', function() {
@@ -58,8 +57,7 @@ describe('MeasureHelpers', function() {
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
         const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
         const qdmPatients = patients.map(patient => new QDMPatient(patient));
-        const qdmPatientsSource = new PatientSource(qdmPatients);
-        const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid, {doPretty: true});
+        const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid, {doPretty: true});
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
         expect(result.get('statement_results').TJC_Overall['Encounter with Principal Diagnosis and Age'].pretty).toEqual('[Encounter, Performed: Non-Elective Inpatient Encounter\nSTART: 10/10/2012 9:30 AM\nSTOP: 10/12/2012 12:15 AM\nCODE: SNOMED-CT 32485007]');
@@ -73,8 +71,7 @@ describe('MeasureHelpers', function() {
         patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
         const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
         const qdmPatients = patients.map(patient => new QDMPatient(patient));
-        const qdmPatientsSource = new PatientSource(qdmPatients);
-        const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid, {doPretty: true});
+        const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid, {doPretty: true});
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
         expect(result.get('statement_results').PD0329.IntervalWithTZOffsets.pretty).toEqual('Interval: 08/01/2012 12:00 AM - 12/31/2012 12:00 AM');
@@ -87,8 +84,7 @@ describe('MeasureHelpers', function() {
         patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json'));
         const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
         const qdmPatients = patients.map(patient => new QDMPatient(patient));
-        const qdmPatientsSource = new PatientSource(qdmPatients);
-        const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid, {doPretty: true});
+        const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid, {doPretty: true});
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
         expect(result.get('statement_results').MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Observation'].pretty).toEqual('FUNCTION');
@@ -103,8 +99,7 @@ describe('MeasureHelpers', function() {
         patients.push(getJSONFixture('patients/CMS735v0/first_last.json'));
         const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
         const qdmPatients = patients.map(patient => new QDMPatient(patient));
-        const qdmPatientsSource = new PatientSource(qdmPatients);
-        const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid, {doPretty: true});
+        const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid, {doPretty: true});
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
         expect(result.get('statement_results').StatinTherapy['In Demographic'].pretty).toEqual('true');
@@ -117,8 +112,7 @@ describe('MeasureHelpers', function() {
         patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json'));
         const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
         const qdmPatients = patients.map(patient => new QDMPatient(patient));
-        const qdmPatientsSource = new PatientSource(qdmPatients);
-        const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid, {doPretty: true});
+        const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid, {doPretty: true});
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
         expect(result.get('statement_results').DayMonthTimings['Months Containing 29 Days'].pretty).toEqual('[1,\n2,\n3,\n4,\n5,\n6,\n7,\n8,\n9,\n10,\n11,\n12,\n13,\n14,\n15,\n16,\n17,\n18,\n19,\n20,\n21,\n22,\n23,\n24,\n25,\n26,\n27,\n28,\n29]');
@@ -139,8 +133,7 @@ describe('MeasureHelpers', function() {
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
         const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
         const qdmPatients = patients.map(patient => new QDMPatient(patient));
-        const qdmPatientsSource = new PatientSource(qdmPatients);
-        const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+        const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
         expect(result.get('statement_results').TJC_Overall['Encounter with Principal Diagnosis and Age'].pretty).toEqual(undefined);
