@@ -1,6 +1,5 @@
 const Calculator = require('../../lib/models/calculator.js');
 const QDMPatientSchema = require('cqm-models').PatientSchema;
-const PatientSource = require('../../lib/models/patient_source.js');
 const Mongoose = require('mongoose');
 const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 const getEpisodeResults = require('../support/spec_helper.js').getEpisodeResults;
@@ -14,8 +13,7 @@ describe('Calculator', function() {
       patients.push(getJSONFixture('patients/CMS107v6/IPPFail_LOS=121Days.json'));
       const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
       const qdmPatients = patients.map(patient => new QDMPatient(patient));
-      const qdmPatientsSource = new PatientSource(qdmPatients);
-      const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+      const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
       // No results will be in the episode_results
@@ -31,8 +29,7 @@ describe('Calculator', function() {
       patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
       const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
       const qdmPatients = patients.map(patient => new QDMPatient(patient));
-      const qdmPatientsSource = new PatientSource(qdmPatients);
-      const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+      const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
       // There will be a single result in the episode_results
@@ -51,8 +48,7 @@ describe('Calculator', function() {
       patients.push(getJSONFixture('patients/CMS735v0/first_last.json'));
       const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
       const qdmPatients = patients.map(patient => new QDMPatient(patient));
-      const qdmPatientsSource = new PatientSource(qdmPatients);
-      const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+      const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
       // There will not be episode_results on the result object
@@ -70,8 +66,7 @@ describe('Calculator', function() {
       patients.push(getJSONFixture('patients/CMS53v7/PCIat60min_NUMERPass.json'));
       const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
       const qdmPatients = patients.map(patient => new QDMPatient(patient));
-      const qdmPatientsSource = new PatientSource(qdmPatients);
-      const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+      const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
 
       numerPass = calculationResults[Object.keys(calculationResults)[0]];
 
@@ -91,8 +86,7 @@ describe('Calculator', function() {
       patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
       const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
       const qdmPatients = patients.map(patient => new QDMPatient(patient));
-      const qdmPatientsSource = new PatientSource(qdmPatients);
-      const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+      const calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
       // The IPP should fail
@@ -110,8 +104,7 @@ describe('Calculator', function() {
     patients.push(passNumer2);
     QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
     qdmPatients = patients.map(patient => new QDMPatient(patient));
-    qdmPatientsSource = new PatientSource(qdmPatients);
-    calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+    calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
     expiredDenexResults = calculationResults[Object.keys(calculationResults)[0]];
     passNumer2Results = calculationResults[Object.keys(calculationResults)[1]];
 
@@ -162,8 +155,7 @@ describe('Calculator', function() {
     patients.push(p4);
     QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
     qdmPatients = patients.map(patient => new QDMPatient(patient));
-    qdmPatientsSource = new PatientSource(qdmPatients);
-    calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid, {doPretty: true});
+    calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid, {doPretty: true});
     stringifiedResults = JSON.parse(JSON.stringify(calculationResults));
     // TODO: verify the stringified version has everything we need
   });
@@ -182,9 +174,8 @@ describe('Calculator', function() {
     patients.push(visit2excl);
     QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
     qdmPatients = patients.map(patient => new QDMPatient(patient));
-    qdmPatientsSource = new PatientSource(qdmPatients);
 
-    calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+    calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
     visit1EdResults = calculationResults[Object.keys(calculationResults)[0]];
     visit2EdResults = calculationResults[Object.keys(calculationResults)[1]];
     visit1exclResults = calculationResults[Object.keys(calculationResults)[2]];
@@ -367,8 +358,7 @@ describe('Calculator', function() {
     patients.push(passNumer);
     QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
     qdmPatients = patients.map(patient => new QDMPatient(patient));
-    qdmPatientsSource = new PatientSource(qdmPatients);
-    calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+    calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
     failIPPResults = calculationResults[Object.keys(calculationResults)[0]];
     passNumerResults = calculationResults[Object.keys(calculationResults)[1]];
 
@@ -393,8 +383,7 @@ describe('Calculator', function() {
     patients.push(passNumer);
     QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
     qdmPatients = patients.map(patient => new QDMPatient(patient));
-    qdmPatientsSource = new PatientSource(qdmPatients);
-    calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+    calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
     failHospiceNotPerformedDenexResults = calculationResults[Object.keys(calculationResults)[0]];
     passNumerResults = calculationResults[Object.keys(calculationResults)[1]];
 
@@ -417,8 +406,7 @@ describe('Calculator', function() {
     patients.push(passIppDenomNumer);
     QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
     qdmPatients = patients.map(patient => new QDMPatient(patient));
-    qdmPatientsSource = new PatientSource(qdmPatients);
-    calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+    calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
     passIppDenomNumerResults = calculationResults[Object.keys(calculationResults)[0]];
 
     expect(passIppDenomNumerResults['PopulationCriteria1'].IPP).toBe(1);
@@ -438,8 +426,7 @@ describe('Calculator', function() {
     patients.push(pop1_1318Pass);
     QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
     qdmPatients = patients.map(patient => new QDMPatient(patient));
-    qdmPatientsSource = new PatientSource(qdmPatients);
-    calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+    calculationResults = Calculator.calculate(measure, qdmPatients, valueSetsByOid);
 
     ippPopFailResults = calculationResults[Object.keys(calculationResults)[0]];
     denexPop18StratPassResults = calculationResults[Object.keys(calculationResults)[1]];
