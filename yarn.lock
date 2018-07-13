@@ -193,18 +193,18 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cql-execution@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/cql-execution/-/cql-execution-1.2.1.tgz#9dbf19a7da400ee4236c4f5037b927c884a1fb46"
+cql-execution@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/cql-execution/-/cql-execution-1.2.2.tgz#2d8933e96edc2c0ff04992444fc8d79e3cb556bb"
   dependencies:
     moment "^2.20.1"
     ucum "0.0.7"
 
 "cqm-models@https://github.com/projecttacoma/cqm-models.git#generator_changes":
   version "0.8.1"
-  resolved "https://github.com/projecttacoma/cqm-models.git#f8cb16c683d6084140623aaee3f6d2a022bcb9f5"
+  resolved "https://github.com/projecttacoma/cqm-models.git#c412094f602abdaa1c04f435c89dfe43ce91b72e"
   dependencies:
-    cql-execution "1.2.1"
+    cql-execution "1.2.2"
     mongoose "^5.0.7"
 
 cross-spawn@^5.1.0:
@@ -306,8 +306,8 @@ eslint-restricted-globals@^0.1.1:
   resolved "https://registry.yarnpkg.com/eslint-restricted-globals/-/eslint-restricted-globals-0.1.1.tgz#35f0d5cbc64c2e3ed62e93b4b1a7af05ba7ed4d7"
 
 eslint-scope@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.3.tgz#bb507200d3d17f60247636160b4826284b108535"
   dependencies:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
@@ -367,8 +367,8 @@ espree@^3.5.4:
     acorn-jsx "^3.0.0"
 
 esprima@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.0.tgz#4499eddcd1110e0b218bacf2fa7f7f59f55ca804"
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
 
 esquery@^1.0.0:
   version "1.0.1"
@@ -508,8 +508,8 @@ has@^1.0.1:
     function-bind "^1.1.1"
 
 hosted-git-info@^2.1.4:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.6.1.tgz#6e4cee78b01bb849dcf93527708c69fdbee410df"
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
 
 iconv-lite@^0.4.17:
   version "0.4.23"
@@ -707,9 +707,9 @@ mongodb-core@3.1.0:
   optionalDependencies:
     saslprep "^1.0.0"
 
-mongodb@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.0.tgz#20cd836381a4d8a6b1c5a194bb9c8dde852163bb"
+mongodb@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.1.tgz#c018c4b277614e8b1e08426d5bcbe1a7e5cdbd74"
   dependencies:
     mongodb-core "3.1.0"
 
@@ -718,14 +718,14 @@ mongoose-legacy-pluralize@1.0.2:
   resolved "https://registry.yarnpkg.com/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz#3ba9f91fa507b5186d399fb40854bff18fb563e4"
 
 mongoose@^5.0.7:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.2.1.tgz#f49d730d2ccf23a07ffcf05ccc44e0dfc19d6e6a"
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.2.3.tgz#667b92c394a6aa81c3c9f2f45f3a8f28cea28e9c"
   dependencies:
     async "2.6.1"
     bson "~1.0.5"
     kareem "2.2.1"
     lodash.get "4.4.2"
-    mongodb "3.1.0"
+    mongodb "3.1.1"
     mongodb-core "3.1.0"
     mongoose-legacy-pluralize "1.0.2"
     mpath "0.4.1"
