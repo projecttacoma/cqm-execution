@@ -1,0 +1,432 @@
+{
+  "birthDatetime": "1955-11-24T03:00:00.000-05:00",
+  "bundleId": "582c7dca6c5d1c1cf10006e6",
+  "dataElements": [
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-11-12T03:00:00.000-05:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "8715000"
+        }
+      ],
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnoses": [
+        {
+          "code": "10273003",
+          "codeSystem": "SNOMED-CT",
+          "version": null,
+          "descriptor": "Acute or Evolving MI"
+        }
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+        {
+          "dataElementCodes": [
+
+          ],
+          "description": null,
+          "_type": "QDM::FacilityLocation",
+          "code": {
+            "code": "183452005",
+            "codeSystem": "SNOMED-CT",
+            "descriptor": "Encounter Inpatient",
+            "codeSystemOid": null,
+            "version": null,
+            "_type": "QDM::Code"
+          },
+          "locationPeriod": {
+            "low": "2012-11-12T08:00:00.00+0000",
+            "high": null,
+            "lowClosed": true,
+            "highClosed": true,
+            "_type": "QDM::Interval"
+          },
+          "qdmVersion": "5.3"
+        }
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": {
+        "code": "10273003",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": "Acute or Evolving MI",
+        "codeSystemOid": null,
+        "version": null
+      },
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-11-12T08:00:00.00+0000",
+        "high": "2012-11-12T08:15:00.00+0000",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "authorDatetime": "2012-11-12T04:00:00.000-05:00",
+      "category": "medication",
+      "dataElementCodes": [
+        {
+          "codeSystem": "RxNorm",
+          "code": "1804799"
+        }
+      ],
+      "description": "Medication, Administered: Fibrinolytic Therapy",
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.14",
+      "negationRationale": null,
+      "qdmStatus": "administered",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-11-12T09:00:00.00+0000",
+        "high": "2012-11-12T09:15:00.00+0000",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationAdministered"
+    },
+    {
+      "authorDatetime": "2012-11-12T03:15:00.000-05:00",
+      "category": "diagnostic_study",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "164847006"
+        }
+      ],
+      "description": "Diagnostic Study, Performed: Electrocardiogram (ECG)",
+      "facilityLocation": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.3",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-11-12T08:15:00.00+0000",
+        "high": "2012-11-12T08:30:00.00+0000",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::DiagnosticStudyPerformed"
+    },
+    {
+      "anatomicalApproachSite": null,
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-11-12T04:00:00.000-05:00",
+      "category": "procedure",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "ICD-10-PCS",
+          "code": "0270346"
+        },
+        {
+          "codeSystem": "SNOMED-CT",
+          "code": "11101003"
+        }
+      ],
+      "description": "Procedure, Performed: PCI",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.6",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-11-12T09:00:00.00+0000",
+        "high": "2012-11-12T09:15:00.00+0000",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
+    },
+    {
+      "birthDatetime": "1955-11-24T03:00:00.000-05:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2186-5",
+          "codeSystem": "cdcrec",
+          "descriptor": "Not Hispanic or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "1002-5",
+          "codeSystem": "cdcrec",
+          "descriptor": "American Indian or Alaska Native",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "M",
+          "codeSystem": "AdministrativeGender",
+          "descriptor": "M",
+          "codeSystemOid": "2.16.840.1.113883.5.1",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "type": null,
+    "measure_ids": [
+      "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+      null
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "Encounter Inpatient",
+        "description": "Encounter, Performed: Encounter Inpatient",
+        "code_list_id": "2.16.840.1.113883.3.666.5.307",
+        "type": "encounters",
+        "id": "EncounterPerformedEncounterInpatient",
+        "start_date": 1352707200000,
+        "end_date": 1352708100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "PRINCIPAL_DIAGNOSIS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.3022",
+            "title": "Acute Or Evolving Mi",
+            "field_title": "Principal Diagnosis"
+          },
+          "FACILITY_LOCATION": {
+            "type": "COL",
+            "values": [
+              {
+                "type": "FAC",
+                "key": "FACILITY_LOCATION",
+                "code_list_id": "2.16.840.1.113883.3.666.5.307",
+                "field_title": "Facility Location",
+                "start_date": "11/12/2012",
+                "start_time": "8:00 AM",
+                "end_date": "",
+                "end_time": "8:00 AM",
+                "value": 1352707200000,
+                "locationPeriodLow": "11/12/2012 8:00 AM",
+                "title": "Encounter Inpatient"
+              }
+            ]
+          }
+        },
+        "hqmf_set_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+        "cms_id": "CMSv0",
+        "criteria_id": "150fd2c5439ko",
+        "codes": {
+          "SNOMED-CT": [
+            "8715000"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77d0b848463d625b5e6c",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "diagnostic_study",
+        "status": "performed",
+        "title": "Electrocardiogram (ECG)",
+        "description": "Diagnostic Study, Performed: Electrocardiogram (ECG)",
+        "code_list_id": "2.16.840.1.113883.3.666.5.735",
+        "type": "diagnostic_studies",
+        "id": "DiagnosticStudyPerformedElectrocardiogramEcg",
+        "start_date": 1352708100000,
+        "end_date": 1352709000000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+        "cms_id": "CMSv0",
+        "criteria_id": "150fd2ddc66ZW",
+        "codes": {
+          "SNOMED-CT": [
+            "164847006"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77d0b848463d625b5e6f",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "procedure",
+        "status": "performed",
+        "title": "PCI",
+        "description": "Procedure, Performed: PCI",
+        "code_list_id": "2.16.840.1.113762.1.4.1045.67",
+        "type": "procedures",
+        "id": "OccurrenceA_PCI_ProcedurePerformed_0b5c0da8_5890_4134_87f9_4d261371bf1a_source",
+        "start_date": 1352710800000,
+        "end_date": 1352711700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+        "cms_id": "CMSv0",
+        "criteria_id": "15c5ed868aemV",
+        "codes": {
+          "ICD-10-PCS": [
+            "0270346"
+          ],
+          "SNOMED-CT": [
+            "11101003"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77d0b848463d625b5e70",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "medication",
+        "status": "administered",
+        "title": "FibrinolyticTherapy",
+        "description": "Medication, Administered: Fibrinolytic Therapy",
+        "code_list_id": "2.16.840.1.113883.3.666.5.736",
+        "type": "medications",
+        "id": "FibrinolyticTherapy_MedicationAdministered_70f1ae0a_0a6b_4d61_88d8_62cc37ee972b_source",
+        "start_date": 1352710800000,
+        "end_date": 1352711700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+        "cms_id": "CMS747v0",
+        "criteria_id": "15d9faa6beeXG",
+        "codes": {
+          "RxNorm": [
+            "1804799"
+          ]
+        },
+        "fulfillments": null,
+        "dose_value": "",
+        "dose_unit": "{Capsule}",
+        "frequency_value": "",
+        "frequency_unit": "min",
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77d0b848463d625b5e6e",
+        "code_source": "DEFAULT"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": [
+      {
+        "measure_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+        "population_index": 0,
+        "IPP": 1,
+        "DENOM": 1,
+        "DENEX": 0,
+        "NUMER": 1,
+        "DENEXCEP": 0
+      }
+    ],
+    "notes": "Correct age, enc., MP, ECG, PCI done at 60 minutes of arrival ",
+    "is_shared": false,
+    "origin_data": [
+
+    ],
+    "test_id": null,
+    "medical_record_number": "9cf4590afce52f2ad1e61da74c5d51ae",
+    "medical_record_assigner": "Bonnie",
+    "description": null,
+    "description_category": null,
+    "insurance_providers": "[]"
+  },
+  "familyName": "NUMERPass",
+  "givenNames": [
+    "PCIat60min"
+  ],
+  "qdmVersion": "5.3"
+}

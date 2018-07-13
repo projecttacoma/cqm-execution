@@ -62,6 +62,27 @@ describe('Calculator', function() {
     });
   });
 
+  describe('measure that uses intersect function', function() {
+    it('is correct', function() {
+      const valueSetsByOid = getJSONFixture('measures/CMS53v7/value_sets.json');
+      const measure = getJSONFixture('measures/CMS53v7/CMS53v7.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS53v7/PCIat60min_NUMERPass.json'));
+      const QDMPatient = Mongoose.model('QDMPatient', QDMPatientSchema);
+      const qdmPatients = patients.map(patient => new QDMPatient(patient));
+      const qdmPatientsSource = new PatientSource(qdmPatients);
+      const calculationResults = Calculator.calculate(measure, qdmPatientsSource, valueSetsByOid);
+
+      numerPass = calculationResults[Object.keys(calculationResults)[0]];
+
+      // Patient numerPass Population Set 1
+      expect(numerPass['PopulationCriteria1'].IPP).toBe(1);
+      expect(numerPass['PopulationCriteria1'].DENOM).toBe(1);
+      expect(numerPass['PopulationCriteria1'].DENEX).toBe(0);
+      expect(numerPass['PopulationCriteria1'].NUMER).toBe(1);
+    });
+  });
+
   describe('execution engine using passed in timezone offset', function() {
     it('is correct', function() {
       const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
