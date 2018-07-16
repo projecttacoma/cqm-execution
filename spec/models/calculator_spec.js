@@ -2,8 +2,6 @@
 /* eslint quote-props: 0 */ // --> OFF
 
 const Calculator = require('../../lib/models/calculator.js');
-const QDMPatientSchema = require('cqm-models').PatientSchema;
-const Mongoose = require('mongoose');
 const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 const getEpisodeResults = require('../support/spec_helper.js').getEpisodeResults;
 
