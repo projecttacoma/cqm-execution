@@ -78,7 +78,7 @@ describe('Calculator', () => {
     });
   });
 
-  describe('execution engine using passed in timezone offset', () => {
+  describe('execution engine using default timezone offset', () => {
     it('is correct', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
@@ -87,8 +87,22 @@ describe('Calculator', () => {
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
-      // The IPP should fail
+      // The IPP should not be in the IPP
       expect(result.IPP).toEqual(0);
+    });
+  });
+
+  describe('execution engine using passed in timezone offset', () => {
+    it('is correct', () => {
+      const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
+      const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { timezone_offset: -4 });
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+      // The patient should be in the IPP now that the end of the measure period is 4 hours in the future
+      expect(result.IPP).toEqual(1);
     });
   });
 
@@ -137,7 +151,7 @@ describe('Calculator', () => {
     expect(passNumer2Results['PopulationCriteria3'].NUMER).toBe(0);
   });
 
-  xit('does not drop any fields when calling JSON.stringify', () => {
+  it('does not drop any fields when calling JSON.stringify', () => {
     const valueSetsByOid = getJSONFixture('measures/CMS32v7/value_sets.json');
     const measure = getJSONFixture('measures/CMS32v7/CMS32v7.json');
     const p1 = getJSONFixture('patients/CMS32v7/Visit_1ED.json');
