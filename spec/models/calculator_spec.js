@@ -106,6 +106,34 @@ describe('Calculator', () => {
     });
   });
 
+  describe('execution engine using passed in timezone offset and good effective_date', () => {
+    it('is correct', () => {
+      const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
+      const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { effective_date: '201201010000', timezone_offset: -4 });
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+      // The patient should be in the IPP now that the end of the measure period is 4 hours in the future
+      expect(result.IPP).toEqual(1);
+    });
+  });
+
+  describe('execution engine using passed in timezone offset and bad effective_date', () => {
+    it('is correct', () => {
+      const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
+      const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { effective_date: '201701010000', timezone_offset: -4 });
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+      // The patient should be in the IPP now that the end of the measure period is 4 hours in the future
+      expect(result.IPP).toEqual(0);
+    });
+  });
+
   it('multiple population measure correctly', () => {
     const valueSetsByOid = getJSONFixture('measures/CMS160v6/value_sets.json');
     const measure = getJSONFixture('measures/CMS160v6/CMS160v6.json');
