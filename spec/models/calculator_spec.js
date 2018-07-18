@@ -179,24 +179,6 @@ describe('Calculator', () => {
     expect(passNumer2Results['PopulationCriteria3'].NUMER).toBe(0);
   });
 
-  it('does not drop any fields when calling JSON.stringify', () => {
-    const valueSetsByOid = getJSONFixture('measures/CMS32v7/value_sets.json');
-    const measure = getJSONFixture('measures/CMS32v7/CMS32v7.json');
-    const p1 = getJSONFixture('patients/CMS32v7/Visit_1ED.json');
-    const p2 = getJSONFixture('patients/CMS32v7/Visits_1Excl_2ED.json');
-    const p3 = getJSONFixture('patients/CMS32v7/Visits_2ED.json');
-    const p4 = getJSONFixture('patients/CMS32v7/Visits_2Excl_2ED.json');
-    const patients = [];
-    patients.push(p1);
-    patients.push(p2);
-    patients.push(p3);
-    patients.push(p4);
-    const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
-    const stringifiedResults = JSON.parse(JSON.stringify(calculationResults));
-    // TODO: verify the stringified version has everything we need
-    expect(stringifiedResults).toEqual(stringifiedResults);
-  });
-
   it('multiple observation measure correctly', () => {
     const valueSetsByOid = getJSONFixture('measures/CMS32v7/value_sets.json');
     const measure = getJSONFixture('measures/CMS32v7/CMS32v7.json');
