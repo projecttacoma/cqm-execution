@@ -117,6 +117,43 @@ describe('MeasureHelpers', () => {
         expect(result.get('statement_results').PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('rxNormCode: Code: RxNorm: 1053647');
         expect(result.get('statement_results').OpioidData.DrugIngredients.pretty).toContain('drugName: "72 HR Fentanyl 0.075 MG/HR Transdermal System"');
       });
+
+      it('should use prevalencePeriod for START and END dates for Diagnosis', () => {
+        const valueSetsByOid = getJSONFixture('measures/CMS134v6/value_sets.json');
+        const measure = getJSONFixture('measures/CMS134v6/CMS134v6.json');
+        const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
+        const patients = [];
+        patients.push(passNumer);
+        const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
+        const passNumerResults = calculationResults[Object.keys(calculationResults)[0]];
+
+        expect(passNumerResults.PopulationCriteria1.statement_results.DiabetesMedicalAttentionforNephropathy['Nephropathy Diagnoses'].pretty).toContain('START: 04/03/2012 12:00 PM');
+        expect(passNumerResults.PopulationCriteria1.statement_results.DiabetesMedicalAttentionforNephropathy['Nephropathy Diagnoses'].pretty).toContain('STOP: 12/31/9999 11:59 PM');
+      });
+
+      it('should use relevantPeriod for START and END dates for Encounter', () => {
+        const valueSetsByOid = getJSONFixture('measures/CMS134v6/value_sets.json');
+        const measure = getJSONFixture('measures/CMS134v6/CMS134v6.json');
+        const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
+        const patients = [];
+        patients.push(passNumer);
+        const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
+        const passNumerResults = calculationResults[Object.keys(calculationResults)[0]];
+
+        expect(passNumerResults.PopulationCriteria1.statement_results.DiabetesMedicalAttentionforNephropathy['Qualifying Encounters'].pretty).toContain('START: 02/02/2012 8:45 AM');
+        expect(passNumerResults.PopulationCriteria1.statement_results.DiabetesMedicalAttentionforNephropathy['Qualifying Encounters'].pretty).toContain('STOP: 02/02/2012 8:45 AM');
+      });
+
+      it('should use authorDatetime for START date for Intervention Order', () => {
+        const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
+        const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
+        const patients = [];
+        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
+        const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
+        const denexPassresult = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+        expect(denexPassresult.statement_results.StrokeEducation['Intervention Comfort Measures'].pretty).toContain('START: 10/10/2012 8:00 AM');
+      });
     });
 
     describe('no pretty statement results when not requested', () =>
