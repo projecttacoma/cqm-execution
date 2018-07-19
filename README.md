@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/projecttacoma/cqm-execution.svg?branch=master)](https://travis-ci.org/projecttacoma/cqm-execution)
+
 # cqm-execution
 
 This repository contains an npm module for calculating eCQMs (electronic clinical quality measures) written in CQL (clinical quality language), using the Project Tacoma CQM models (https://github.com/projecttacoma/cqm-models).
