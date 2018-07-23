@@ -98,7 +98,7 @@ describe('Calculator', () => {
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
       const patients = [];
       patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
-      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { timezone_offset: -4 });
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { timezoneOffset: -4 });
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
       // The patient should be in the IPP now that the end of the measure period is 4 hours in the future
@@ -112,7 +112,7 @@ describe('Calculator', () => {
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
       const patients = [];
       patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
-      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { effective_date: '201201010000', timezone_offset: -4 });
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { effectiveDate: '201201010000', timezoneOffset: -4 });
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
       // The patient should be in the IPP now that the end of the measure period is 4 hours in the future
@@ -563,6 +563,22 @@ describe('Calculator', () => {
       '\n}]';
 
       expect(result.statement_results['PotentialOpioidOveruse']['Periods With and Without 7 Day Gap With Cumulative Med Duration 90 days or Greater']['pretty']).toEqual(indentedResult);
+    });
+  });
+
+  describe('results include clause results', () => {
+    it('only if requested', () => {
+      const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
+      const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
+      const patients = [getJSONFixture('patients/CMS760v0/Correct_Timezone.json')];
+      const calculationResultsNoClauses = Calculator.calculate(measure, patients, valueSetsByOid, { includeClauseResults: false });
+      const resultNoClauses = Object.values(calculationResultsNoClauses[Object.keys(calculationResultsNoClauses)[0]])[0];
+
+      const calculationResultsWithClauses = Calculator.calculate(measure, patients, valueSetsByOid, { includeClauseResults: true });
+      const resultWithClauses = Object.values(calculationResultsWithClauses[Object.keys(calculationResultsWithClauses)[0]])[0];
+
+      expect(resultNoClauses.clause_results).toEqual('These will be included if you set includeClauseResults to true in the request options.');
+      expect(resultWithClauses.clause_results).toEqual(jasmine.any(Object));
     });
   });
 });
