@@ -593,11 +593,11 @@ describe('Calculator', () => {
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
       // The expected strings are from the front end on branch use_calc_svc
-      expect(result['statement_results']['DiabetesFootExam']['SDE Ethnicity']).toEqual('[PatientCharacteristicEthnicity]');
+      expect(result['statement_results']['DiabetesFootExam']['SDE Ethnicity']['pretty']).toEqual('[PatientCharacteristicEthnicity]');
       const expectedPayer = '[Patient Characteristic Payer: Payer\nSTART: 07/25/2012 8:00 AM\nSTOP: 07/25/2012 8:15 AM\nCODE: Source of Payment Typology 1]'
-      expect(result['statement_results']['DiabetesFootExam']['SDE Payer']).toEqual(expectedPayer);
-      expect(result['statement_results']['DiabetesFootExam']['SDE Race']).toEqual('[PatientCharacteristicRace]');
-      expect(result['statement_results']['DiabetesFootExam']['SDE Sex']).toEqual('[PatientCharacteristicSex]');
+      expect(result['statement_results']['DiabetesFootExam']['SDE Payer']['pretty']).toEqual(expectedPayer);
+      expect(result['statement_results']['DiabetesFootExam']['SDE Race']['pretty']).toEqual('[PatientCharacteristicRace]');
+      expect(result['statement_results']['DiabetesFootExam']['SDE Sex']['pretty']).toEqual('[PatientCharacteristicSex]');
     });
   });
 });
