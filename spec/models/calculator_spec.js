@@ -581,4 +581,23 @@ describe('Calculator', () => {
       expect(resultWithClauses.clause_results).toEqual(jasmine.any(Object));
     });
   });
+
+  describe('patient characteristics', () => {
+    it('calculate and display correctly', () => {
+      const valueSetsByOid = getJSONFixture('measures/CMS123v7/value_sets.json');
+      const measure = getJSONFixture('measures/CMS123v7/CMS123v7.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS123v7/Test_PatientCharacteristic.json'));
+      const options = { doPretty: true };
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+      // The expected strings are from the front end on branch use_calc_svc
+      expect(result['statement_results']['DiabetesFootExam']['SDE Ethnicity']).toEqual('[PatientCharacteristicEthnicity]');
+      const expectedPayer = '[Patient Characteristic Payer: Payer\nSTART: 07/25/2012 8:00 AM\nSTOP: 07/25/2012 8:15 AM\nCODE: Source of Payment Typology 1]'
+      expect(result['statement_results']['DiabetesFootExam']['SDE Payer']).toEqual(expectedPayer);
+      expect(result['statement_results']['DiabetesFootExam']['SDE Race']).toEqual('[PatientCharacteristicRace]');
+      expect(result['statement_results']['DiabetesFootExam']['SDE Sex']).toEqual('[PatientCharacteristicSex]');
+    });
+  });
 });
