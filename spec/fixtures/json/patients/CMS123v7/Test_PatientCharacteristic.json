@@ -121,13 +121,13 @@
         },
         "hqmf_set_id": "C0D72444-7C26-4863-9B51-8080F8928A85",
         "cms_id": "CMS123v7",
-        "criteria_id": "164d1c6c080vS",
+        "criteria_id": "164d286c2fdZX",
         "codes": {
           "Source of Payment Typology": [
             "1"
           ]
         },
-        "coded_entry_id": "5b5884d6d7c8ac5299cfe717",
+        "coded_entry_id": "5b58b5f8d7c8ac639fd96159",
         "code_source": "DEFAULT"
       },
       {
@@ -153,7 +153,7 @@
 
     ],
     "test_id": null,
-    "medical_record_number": "5b9484852ecfd4cf733d2d59a109d3fe564bd397eb9e791fd2c89a3a18025db9",
+    "medical_record_number": "eed627cbddcd3321ff6174ac3828187660c3bb04a96c17e3e48f1debed3bcc05",
     "medical_record_assigner": "Bonnie",
     "description": null,
     "description_category": null,

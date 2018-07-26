@@ -1,7 +1,5 @@
 {
-  "_id": {
-    "$oid": "5b5884b2d7c8ac5299cfe708"
-  },
+  "_id": "5b58b5cdd7c8ac639fd9614a",
   "bundle_id": "5a57e977942c6d1e61d32f14",
   "calculate_sdes": true,
   "category": "Miscellaneous",
@@ -279,7 +277,7 @@
       ]
     }
   },
-  "created_at": "2018-07-25T14:09:54.914Z",
+  "created_at": "2018-07-25T17:39:25.818Z",
   "data_criteria": {
     "Payer_PatientCharacteristicPayer_028e6363_f1a0_4340_ade5_e8b4d2a93072": {
       "title": "Payer",
@@ -604,7 +602,7 @@
       "source_data_criteria": "Ethnicity_PatientCharacteristicEthnicity_e4e02661_985d_426a_bcf5_2f0cec17a4ee_source",
       "variable": false,
       "inline_code_list": {
-        "CDC Race": [
+        "cdcrec": [
           "2135-2",
           "2186-5"
         ]
@@ -670,7 +668,7 @@
       "source_data_criteria": "Race_PatientCharacteristicRace_6e87b116_0957_4da7_8aa1_c92a307d2294_source",
       "variable": false,
       "inline_code_list": {
-        "CDC Race": [
+        "cdcrec": [
           "1002-5",
           "2028-9",
           "2054-5",
@@ -19293,7 +19291,7 @@
   "hqmf_id": "40280382-62C4-DE26-0162-FE2505800CC9",
   "hqmf_set_id": "C0D72444-7C26-4863-9B51-8080F8928A85",
   "hqmf_version_number": 7,
-  "id": "5b5884b2d7c8ac5299cfe708",
+  "id": "5b58b5cdd7c8ac639fd9614a",
   "main_cql_library": "DiabetesFootExam",
   "measure_attributes": [
     {
@@ -20199,7 +20197,7 @@
       "source_data_criteria": "Ethnicity_PatientCharacteristicEthnicity_e4e02661_985d_426a_bcf5_2f0cec17a4ee_source",
       "variable": false,
       "inline_code_list": {
-        "CDC Race": [
+        "cdcrec": [
           "2135-2",
           "2186-5"
         ]
@@ -20265,7 +20263,7 @@
       "source_data_criteria": "Race_PatientCharacteristicRace_6e87b116_0957_4da7_8aa1_c92a307d2294_source",
       "variable": false,
       "inline_code_list": {
-        "CDC Race": [
+        "cdcrec": [
           "1002-5",
           "2028-9",
           "2054-5",
@@ -20352,8 +20350,8 @@
   },
   "title": "Diabetes: Foot Exam",
   "type": "ep",
-  "updated_at": "2018-07-25T14:09:54.914Z",
-  "user_id": "501fdba3044a111b98000001",
+  "updated_at": "2018-07-25T17:39:25.818Z",
+  "user_id": "5a57e975942c6d1e61d32f13",
   "value_set_oid_version_objects": [
     {
       "oid": "2.16.840.1.113762.1.4.1",
