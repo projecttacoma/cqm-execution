@@ -577,7 +577,7 @@ describe('Calculator', () => {
       const calculationResultsWithClauses = Calculator.calculate(measure, patients, valueSetsByOid, { includeClauseResults: true });
       const resultWithClauses = Object.values(calculationResultsWithClauses[Object.keys(calculationResultsWithClauses)[0]])[0];
 
-      expect(resultNoClauses.clause_results).toEqual('These will be included if you set includeClauseResults to true in the request options.');
+      expect(resultNoClauses.clause_results).toEqual(null);
       expect(resultWithClauses.clause_results).toEqual(jasmine.any(Object));
     });
   });
