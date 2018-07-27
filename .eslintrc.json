@@ -1,0 +1,39 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 200,
+        "ignoreComments": true
+      }
+    ],
+    "prefer-destructuring": "off",
+    "no-param-reassign": "off",
+    "guard-for-in": "off",
+    "no-restricted-syntax": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id",
+	  "_type",
+	  "__guard__"
+        ]
+      }
+    ]
+  },
+  "env": {
+    "jasmine": true
+  }
+}
