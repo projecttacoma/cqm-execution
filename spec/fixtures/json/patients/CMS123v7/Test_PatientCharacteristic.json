@@ -51,14 +51,6 @@
           "codeSystemOid": "2.16.840.1.113883.6.238",
           "version": null,
           "_type": "QDM::Code"
-        },
-        {
-          "code": "2186-5",
-          "codeSystem": "cdcrec",
-          "descriptor": "Not Hispanic or Latino",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null,
-          "_type": "QDM::Code"
         }
       ],
       "description": null,
@@ -73,14 +65,6 @@
         {
           "code": "1002-5",
           "codeSystem": "CDC Race",
-          "descriptor": "American Indian or Alaska Native",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null,
-          "_type": "QDM::Code"
-        },
-        {
-          "code": "1002-5",
-          "codeSystem": "cdcrec",
           "descriptor": "American Indian or Alaska Native",
           "codeSystemOid": "2.16.840.1.113883.6.238",
           "version": null,
