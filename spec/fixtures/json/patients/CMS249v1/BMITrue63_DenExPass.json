@@ -1,0 +1,336 @@
+{
+  "birthDatetime": "1948-12-31T03:00:00.000-05:00",
+  "bundleId": "582c7c0e6c5d1c1cf10006d2",
+  "dataElements": [
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-01-10T03:00:00.000-05:00",
+      "category": "encounter",
+      "dataElementCodes": [
+        {
+          "codeSystem": "CPT",
+          "code": "99241"
+        }
+      ],
+      "description": "Encounter, Performed: Outpatient Consultation",
+      "diagnoses": [
+
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
+        "low": "2012-01-10T08:00:00.000+00:00",
+        "high": "2012-01-10T08:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-01-10T03:00:00.000-05:00",
+      "category": "physical_exam",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "39156-5"
+        }
+      ],
+      "description": "Physical Exam, Performed: BMI Ratio",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.57",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-01-10T08:00:00.000+00:00",
+        "high": "2012-01-10T08:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": {
+        "unit": "kg/m2",
+        "value": 19
+      },
+      "_type": "QDM::PhysicalExamPerformed"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-01-11T03:00:00.000-05:00",
+      "category": "physical_exam",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "codeSystem": "LOINC",
+          "code": "39156-5"
+        }
+      ],
+      "description": "Physical Exam, Performed: BMI Ratio",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.57",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "relevantPeriod": {
+        "low": "2012-01-11T08:00:00.000+00:00",
+        "high": "2012-01-11T08:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": {
+        "unit": "kg/m2",
+        "value": 22
+      },
+      "_type": "QDM::PhysicalExamPerformed"
+    },
+    {
+      "birthDatetime": "1948-12-31T03:00:00.000-05:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2186-5",
+          "codeSystem": "CDC Race",
+          "descriptor": "Not Hispanic or Latino",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "cause": null,
+      "dataElementCodes": [
+        {
+          "code": "419099009",
+          "codeSystem": "SNOMED-CT",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "expiredDatetime": "1969-12-31T19:00:00.000-05:00",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.57",
+      "qdmStatus": "expired",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicExpired"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2106-3",
+          "codeSystem": "CDC Race",
+          "descriptor": "White",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "F",
+          "codeSystem": "AdministrativeGender",
+          "descriptor": "F",
+          "codeSystemOid": "2.16.840.1.113883.5.1",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "type": null,
+    "measure_ids": [
+      "A3CE125D-C238-42CE-862E-DBA0055DFC66",
+      null
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "physical_exam",
+        "status": "performed",
+        "title": "BMIRatio",
+        "description": "Physical Exam, Performed: BMI Ratio",
+        "code_list_id": "2.16.840.1.113883.3.600.1.1490",
+        "type": "physical_exams",
+        "id": "BMIRatio_PhysicalExamPerformed_099b2068_efdc_4572_8a7b_655a0c282782_source",
+        "start_date": 1326182400000,
+        "end_date": 1326183300000,
+        "value": [
+          {
+            "type": "PQ",
+            "type_cmp": "CD",
+            "value": "19",
+            "unit": "kg/m2"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "A3CE125D-C238-42CE-862E-DBA0055DFC66",
+        "cms_id": "CMS249v0",
+        "criteria_id": "160e2276b3bvV",
+        "codes": {
+          "LOINC": [
+            "39156-5"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77c5b848463d625b5a42",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "OutpatientConsultation",
+        "description": "Encounter, Performed: Outpatient Consultation",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1008",
+        "type": "encounters",
+        "id": "OutpatientConsultation_EncounterPerformed_0de16ae3_faff_47b3_b2b9_9cf7b0612b57_source",
+        "start_date": 1326182400000,
+        "end_date": 1326183300000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "A3CE125D-C238-42CE-862E-DBA0055DFC66",
+        "cms_id": "CMS249v0",
+        "criteria_id": "160e2299bcapH",
+        "codes": {
+          "CPT": [
+            "99241"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77c5b848463d625b5a41",
+        "code_source": "DEFAULT"
+      },
+      {
+        "negation": false,
+        "definition": "physical_exam",
+        "status": "performed",
+        "title": "BMIRatio",
+        "description": "Physical Exam, Performed: BMI Ratio",
+        "code_list_id": "2.16.840.1.113883.3.600.1.1490",
+        "type": "physical_exams",
+        "id": "BMIRatio_PhysicalExamPerformed_099b2068_efdc_4572_8a7b_655a0c282782_source",
+        "start_date": 1326268800000,
+        "end_date": 1326269700000,
+        "value": [
+          {
+            "type": "PQ",
+            "type_cmp": "CD",
+            "value": "22",
+            "unit": "kg/m2"
+          }
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "A3CE125D-C238-42CE-862E-DBA0055DFC66",
+        "cms_id": "CMS249v0",
+        "criteria_id": "160e59288e4d9",
+        "codes": {
+          "LOINC": [
+            "39156-5"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5aeb77c5b848463d625b5a44",
+        "code_source": "DEFAULT"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": [
+      {
+        "measure_id": "A3CE125D-C238-42CE-862E-DBA0055DFC66",
+        "population_index": 0,
+        "IPP": 1,
+        "DENOM": 1,
+        "DENEX": 1,
+        "NUMER": 0
+      }
+    ],
+    "notes": "Age category 60-64. Race is white.  2 BMI tests, first one below 20 and second above.",
+    "is_shared": null,
+    "origin_data": [
+
+    ],
+    "test_id": null,
+    "medical_record_number": "88ebab9f7fdd7a6ffa17ded509f88a6b8597bd51b841e67bba5550ae2ed40779",
+    "medical_record_assigner": "Bonnie",
+    "description": null,
+    "description_category": null,
+    "insurance_providers": "[]"
+  },
+  "familyName": "DenExPass",
+  "givenNames": [
+    "BMITrue63"
+  ],
+  "qdmVersion": "5.3"
+}

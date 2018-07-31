@@ -584,4 +584,19 @@ describe('Calculator', () => {
       expect(result['statement_results']['DiabetesFootExam']['SDE Sex']['pretty']).toEqual('[PatientCharacteristicSex\nCODE: AdministrativeGender M]');
     });
   });
+
+  describe('patient characteristics', () => {
+    it('calculate and display correctly', () => {
+      const valueSetsByOid = getJSONFixture('measures/CMS249v1/value_sets.json');
+      const measure = getJSONFixture('measures/CMS249v1/CMS249v1.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS249v1/BMITrue63_DenExPass.json'));
+      const options = { doPretty: true };
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+      // The expected strings are from the front end with PatientCharacteristic CODEs fixed
+      expect(result['statement_results']['AppropriateUseofDXAScansinWomenUnder65YearsWhoDoNotMeettheRiskFactorProfileforOsteoporoticFracture']['Age Dependent Combination Risk Factors']['pretty']).toEqual('[null,\nPhysical Exam, Performed: BMI Ratio\nSTART: 01/10/2012 8:00 AM\nSTOP: 01/10/2012 8:15 AM\nCODE: LOINC 39156-5,\nPatientCharacteristicRace\nCODE: CDC Race 2106-3]');
+    });
+  });
 });
