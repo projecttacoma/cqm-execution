@@ -43,7 +43,7 @@
           "black_list": false,
           "code": "1002-5",
           "code_system": "2.16.840.1.113883.6.238",
-          "code_system_name": "cdcrec",
+          "code_system_name": "CDC Race",
           "code_system_version": "1.2",
           "display_name": "American Indian or Alaska Native",
           "white_list": false
@@ -53,7 +53,7 @@
           "black_list": false,
           "code": "2028-9",
           "code_system": "2.16.840.1.113883.6.238",
-          "code_system_name": "cdcrec",
+          "code_system_name": "CDC Race",
           "code_system_version": "1.2",
           "display_name": "Asian",
           "white_list": false
@@ -63,7 +63,7 @@
           "black_list": false,
           "code": "2054-5",
           "code_system": "2.16.840.1.113883.6.238",
-          "code_system_name": "cdcrec",
+          "code_system_name": "CDC Race",
           "code_system_version": "1.2",
           "display_name": "Black or African American",
           "white_list": false
@@ -73,7 +73,7 @@
           "black_list": false,
           "code": "2076-8",
           "code_system": "2.16.840.1.113883.6.238",
-          "code_system_name": "cdcrec",
+          "code_system_name": "CDC Race",
           "code_system_version": "1.2",
           "display_name": "Native Hawaiian or Other Pacific Islander",
           "white_list": false
@@ -83,7 +83,7 @@
           "black_list": false,
           "code": "2106-3",
           "code_system": "2.16.840.1.113883.6.238",
-          "code_system_name": "cdcrec",
+          "code_system_name": "CDC Race",
           "code_system_version": "1.2",
           "display_name": "White",
           "white_list": false
@@ -93,7 +93,7 @@
           "black_list": false,
           "code": "2131-1",
           "code_system": "2.16.840.1.113883.6.238",
-          "code_system_name": "cdcrec",
+          "code_system_name": "CDC Race",
           "code_system_version": "1.2",
           "display_name": "Other Race",
           "white_list": false
@@ -116,7 +116,7 @@
           "black_list": false,
           "code": "2135-2",
           "code_system": "2.16.840.1.113883.6.238",
-          "code_system_name": "cdcrec",
+          "code_system_name": "CDC Race",
           "code_system_version": "1.2",
           "display_name": "Hispanic or Latino",
           "white_list": false
@@ -126,7 +126,7 @@
           "black_list": false,
           "code": "2186-5",
           "code_system": "2.16.840.1.113883.6.238",
-          "code_system_name": "cdcrec",
+          "code_system_name": "CDC Race",
           "code_system_version": "1.2",
           "display_name": "Not Hispanic or Latino",
           "white_list": false

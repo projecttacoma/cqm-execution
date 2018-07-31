@@ -72,7 +72,7 @@
       "dataElementCodes": [
         {
           "code": "2135-2",
-          "codeSystem": "cdcrec",
+          "codeSystem": "CDC Race",
           "descriptor": "Hispanic Or Latino",
           "codeSystemOid": "2.16.840.1.113883.6.238",
           "version": null,
@@ -90,7 +90,7 @@
       "dataElementCodes": [
         {
           "code": "2076-8",
-          "codeSystem": "cdcrec",
+          "codeSystem": "CDC Race",
           "descriptor": "Native Hawaiian or Other Pacific Islander",
           "codeSystemOid": "2.16.840.1.113883.6.238",
           "version": null,
