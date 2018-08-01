@@ -588,6 +588,7 @@ describe('Calculator', () => {
       const measure = getJSONFixture('measures/CMS123v7/CMS123v7.json');
       const patients = [];
       patients.push(getJSONFixture('patients/CMS123v7/Test_PatientCharacteristic.json'));
+
       const options = { doPretty: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
@@ -598,6 +599,18 @@ describe('Calculator', () => {
       expect(result['statement_results']['DiabetesFootExam']['SDE Payer']['pretty']).toEqual(expectedPayer);
       expect(result['statement_results']['DiabetesFootExam']['SDE Race']['pretty']).toEqual('[PatientCharacteristicRace\nCODE: CDC Race 1002-5]');
       expect(result['statement_results']['DiabetesFootExam']['SDE Sex']['pretty']).toEqual('[PatientCharacteristicSex\nCODE: AdministrativeGender M]');
+    });
+  });
+
+  describe('namingsystem', () => {
+    it('is not null', () => {
+      const valueSetsByOid = getJSONFixture('measures/CMS108v7/value_sets.json');
+      const measure = getJSONFixture('measures/CMS108v7/CMS108v7.json');
+      const patients = [getJSONFixture('patients/CMS108v7/INR4no_decimal_DayOfAnes_NUMERPass.json')];
+      const options = { doPretty: true };
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      expect(result['statement_results']['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant']['pretty']).toEqual('[{\n  id: {\n    value: \"5aeb77b0b848463d625b509b\",\n    namingSystem: null\n  },\n  authorDatetime: 11/01/2012 10:00 AM\n}]')
     });
   });
 });
