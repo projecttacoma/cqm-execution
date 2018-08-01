@@ -602,7 +602,7 @@
       "source_data_criteria": "Ethnicity_PatientCharacteristicEthnicity_e4e02661_985d_426a_bcf5_2f0cec17a4ee_source",
       "variable": false,
       "inline_code_list": {
-        "cdcrec": [
+        "CDC Race": [
           "2135-2",
           "2186-5"
         ]
@@ -668,7 +668,7 @@
       "source_data_criteria": "Race_PatientCharacteristicRace_6e87b116_0957_4da7_8aa1_c92a307d2294_source",
       "variable": false,
       "inline_code_list": {
-        "cdcrec": [
+        "CDC Race": [
           "1002-5",
           "2028-9",
           "2054-5",
@@ -20197,7 +20197,7 @@
       "source_data_criteria": "Ethnicity_PatientCharacteristicEthnicity_e4e02661_985d_426a_bcf5_2f0cec17a4ee_source",
       "variable": false,
       "inline_code_list": {
-        "cdcrec": [
+        "CDC Race": [
           "2135-2",
           "2186-5"
         ]
@@ -20263,7 +20263,7 @@
       "source_data_criteria": "Race_PatientCharacteristicRace_6e87b116_0957_4da7_8aa1_c92a307d2294_source",
       "variable": false,
       "inline_code_list": {
-        "cdcrec": [
+        "CDC Race": [
           "1002-5",
           "2028-9",
           "2054-5",
