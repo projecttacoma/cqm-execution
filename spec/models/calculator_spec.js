@@ -610,7 +610,10 @@ describe('Calculator', () => {
       const options = { doPretty: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
-      expect(result['statement_results']['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant']['pretty']).toEqual('[{\n  id: {\n    value: \"5aeb77b0b848463d625b509b\",\n    namingSystem: null\n  },\n  authorDatetime: 11/01/2012 10:00 AM\n}]')
+
+      const sampleResult = result['statement_results']['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant'];
+      const sampleResultId = sampleResult.raw[0].id.value;
+      expect(sampleResult['pretty']).toEqual(`[{\n  id: {\n    value: "${sampleResultId}",\n    namingSystem: null\n  },\n  authorDatetime: 11/01/2012 10:00 AM\n}]`);
     });
   });
 });
