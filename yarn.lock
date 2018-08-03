@@ -247,9 +247,9 @@ cql-execution@1.2.3:
     moment "^2.20.1"
     ucum "0.0.7"
 
-cqm-models@projecttacoma/cqm-models#dependency_update:
+cqm-models@^0.8.3:
   version "0.8.3"
-  resolved "https://codeload.github.com/projecttacoma/cqm-models/tar.gz/5257ebb2cbd6ccc9fa50da49aeacf4a6e3aa7fb3"
+  resolved "https://registry.yarnpkg.com/cqm-models/-/cqm-models-0.8.3.tgz#b1b8720dc5ee29b9f31474f1323ae1a6bd7ed505"
   dependencies:
     cql-execution "1.2.3"
     mongoose "^5.0.7"
