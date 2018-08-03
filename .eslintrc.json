@@ -8,6 +8,7 @@
         "ignoreComments": true
       }
     ],
+    "no-continue": "off",
     "prefer-destructuring": "off",
     "no-param-reassign": "off",
     "guard-for-in": "off",
