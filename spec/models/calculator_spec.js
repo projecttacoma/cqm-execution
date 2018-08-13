@@ -602,8 +602,8 @@ describe('Calculator', () => {
     });
   });
 
-  describe('namingsystem', () => {
-    it('is not null', () => {
+  describe('Id objects', () => {
+    it('properly calculate and print', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS108v7/value_sets.json');
       const measure = getJSONFixture('measures/CMS108v7/CMS108v7.json');
       const patients = [getJSONFixture('patients/CMS108v7/INR4no_decimal_DayOfAnes_NUMERPass.json')];
