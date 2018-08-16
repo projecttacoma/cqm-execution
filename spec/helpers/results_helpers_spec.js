@@ -72,7 +72,7 @@ describe('MeasureHelpers', () => {
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
-        expect(result.get('statement_results').PD0329.IntervalWithTZOffsets.pretty).toEqual('Interval: 08/01/2012 12:00 AM - 12/31/2012 12:00 AM');
+        expect(result.get('statement_results').PD0329.IntervalWithTZOffsets.pretty).toEqual('INTERVAL: 08/01/2012 12:00 AM - 12/31/2012 12:00 AM');
       });
 
       it('for CMS32v7 correctly', () => {
@@ -113,7 +113,7 @@ describe('MeasureHelpers', () => {
         expect(result.get('statement_results').PotentialOpioidOveruse['Prescription Days'].pretty).toContain('05/09/2012 12:00 AM');
         expect(result.get('statement_results').PotentialOpioidOveruse['Prescription Days'].pretty).toContain('rxNormCode: Code: RxNorm: 1053647');
         expect(result.get('statement_results').PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('conversionFactor: 0.13');
-        expect(result.get('statement_results').PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('effectivePeriod: Interval: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM');
+        expect(result.get('statement_results').PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('effectivePeriod: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM');
         expect(result.get('statement_results').PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('rxNormCode: Code: RxNorm: 1053647');
         expect(result.get('statement_results').OpioidData.DrugIngredients.pretty).toContain('drugName: "72 HR Fentanyl 0.075 MG/HR Transdermal System"');
       });
