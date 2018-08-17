@@ -14,9 +14,14 @@
       ],
       "description": "Diagnosis: Diabetes",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b75b60aef33a5bcb4d20d40"
+      },
       "prevalencePeriod": {
         "low": "1949-02-17T09:00:00.000+00:00",
-        "high": "9999-12-31T23:59:59.990+00:00",
+        "high": "9999-12-31T23:59:59.999+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -37,9 +42,14 @@
       ],
       "description": "Diagnosis: Diabetic Nephropathy",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b75b60aef33a5bcb4d20d41"
+      },
       "prevalencePeriod": {
         "low": "2012-04-03T12:00:00.000+00:00",
-        "high": "9999-12-31T23:59:59.990+00:00",
+        "high": "9999-12-31T23:59:59.999+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -112,6 +122,11 @@
         }
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b75b60aef33a5bcb4d20d42"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -146,7 +161,7 @@
         },
         {
           "result": {
-            "unit": "cm3",
+            "unit": "mg",
             "value": 33
           },
           "code": {
@@ -165,6 +180,11 @@
       ],
       "description": "Laboratory Test, Performed: Urine Protein Tests",
       "hqmfOid": "2.16.840.1.113883.3.560.1.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b75b60aef33a5bcb4d20d45"
+      },
       "method": null,
       "negationRationale": null,
       "qdmStatus": "performed",
@@ -177,26 +197,12 @@
         "lowClosed": true,
         "highClosed": true
       },
-      "result": [
-        {
-          "code": "129151000119102",
-          "codeSystem": "SNOMED-CT",
-          "version": null,
-          "descriptor": "Kidney Failure"
-        },
-        {
-          "code": "584.5",
-          "codeSystem": "ICD-9-CM",
-          "version": null,
-          "descriptor": "Kidney Failure"
-        },
-        {
-          "code": "N17.0",
-          "codeSystem": "ICD-10-CM",
-          "version": null,
-          "descriptor": "Kidney Failure"
-        }
-      ],
+      "result": {
+        "code": "129151000119102",
+        "codeSystem": "SNOMED-CT",
+        "version": null,
+        "descriptor": "Kidney Failure"
+      },
       "resultDatetime": null,
       "status": null,
       "_type": "QDM::LaboratoryTestPerformed"
@@ -215,6 +221,11 @@
       ],
       "description": "Laboratory Test, Performed: Urine Protein Tests",
       "hqmfOid": "2.16.840.1.113883.3.560.1.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b75b60aef33a5bcb4d20d46"
+      },
       "method": null,
       "negationRationale": null,
       "qdmStatus": "performed",
@@ -250,6 +261,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b75b60aef33a5bcb4d20d47"
+      },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicBirthdate"
@@ -268,6 +284,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b75b60aef33a5bcb4d20d48"
+      },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicEthnicity"
@@ -286,6 +307,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b75b60aef33a5bcb4d20d49"
+      },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicRace"
@@ -304,6 +330,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b75b60aef33a5bcb4d20d4a"
+      },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicSex"
@@ -491,7 +522,7 @@
                 "referenceRangeHigh_unit": "",
                 "title": "Kidney Failure",
                 "value": "33",
-                "unit": "cm3"
+                "unit": "mg"
               }
             ],
             "field_title": "Component"

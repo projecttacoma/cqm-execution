@@ -18,7 +18,7 @@
           "code": "10278007",
           "codeSystem": "SNOMED-CT",
           "version": null,
-          "descriptor": "Psychiatric/Mental Health Patient"
+          "descriptor": "Psychiatric/Mental Health Diagnosis"
         }
       ],
       "dischargeDisposition": null,
@@ -26,6 +26,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b758423ef33a5ad1fc6dba6"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -34,15 +39,15 @@
       "principalDiagnosis": {
         "code": "10278007",
         "codeSystem": "SNOMED-CT",
-        "descriptor": "Psychiatric/Mental Health Patient",
+        "descriptor": "Psychiatric/Mental Health Diagnosis",
         "codeSystemOid": null,
         "version": null
       },
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-06-10T05:00:00.00+0000",
-        "high": "2012-06-10T05:25:00.00+0000",
+        "low": "2012-06-10T05:00:00.000+00:00",
+        "high": "2012-06-10T05:25:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -64,7 +69,7 @@
           "code": "10278007",
           "codeSystem": "SNOMED-CT",
           "version": null,
-          "descriptor": "Psychiatric/Mental Health Patient"
+          "descriptor": "Psychiatric/Mental Health Diagnosis"
         }
       ],
       "dischargeDisposition": {
@@ -78,6 +83,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b758423ef33a5ad1fc6dba7"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -86,15 +96,15 @@
       "principalDiagnosis": {
         "code": "10278007",
         "codeSystem": "SNOMED-CT",
-        "descriptor": "Psychiatric/Mental Health Patient",
+        "descriptor": "Psychiatric/Mental Health Diagnosis",
         "codeSystemOid": null,
         "version": null
       },
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-06-10T09:00:00.00+0000",
-        "high": "2012-06-10T09:15:00.00+0000",
+        "low": "2012-06-10T09:00:00.000+00:00",
+        "high": "2012-06-10T09:15:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -119,6 +129,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b758423ef33a5ad1fc6dba8"
+      },
       "lengthOfStay": {
         "value": 3,
         "unit": "days"
@@ -128,8 +143,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-06-11T09:15:00.00+0000",
-        "high": "2012-06-14T08:15:00.00+0000",
+        "low": "2012-06-11T09:15:00.000+00:00",
+        "high": "2012-06-14T08:15:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -150,6 +165,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b758423ef33a5ad1fc6dba9"
+      },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicBirthdate"
@@ -168,6 +188,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b758423ef33a5ad1fc6dbaa"
+      },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicEthnicity"
@@ -186,6 +211,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b758423ef33a5ad1fc6dbab"
+      },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicRace"
@@ -204,6 +234,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b758423ef33a5ad1fc6dbac"
+      },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicSex"
@@ -248,7 +283,7 @@
           ]
         },
         "negation_code_list_id": "",
-        "coded_entry_id": "5a59405f942c6d0773593e15",
+        "coded_entry_id": "5aeb77ccb848463d625b5d4d",
         "code_source": "DEFAULT"
       },
       {
@@ -289,7 +324,7 @@
           ]
         },
         "negation_code_list_id": "",
-        "coded_entry_id": "5a59405f942c6d0773593e17",
+        "coded_entry_id": "5aeb77ccb848463d625b5d4f",
         "code_source": "DEFAULT"
       },
       {
@@ -318,7 +353,7 @@
           ]
         },
         "negation_code_list_id": "",
-        "coded_entry_id": "5a59405f942c6d0773593e19",
+        "coded_entry_id": "5aeb77ccb848463d625b5d51",
         "code_source": "DEFAULT"
       },
       {
@@ -383,7 +418,7 @@
     "medical_record_assigner": "Bonnie",
     "description": null,
     "description_category": null,
-    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199145600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+    "insurance_providers": "[]"
   },
   "familyName": "2 ED",
   "givenNames": [
