@@ -249,7 +249,7 @@ cql-execution@1.2.3:
 
 "cqm-models@http://github.com/projecttacoma/cqm-models.git#datatype_id_use_schema":
   version "0.8.3"
-  resolved "http://github.com/projecttacoma/cqm-models.git#62921b48616a47ef68ef3d03480993520e7a3c62"
+  resolved "http://github.com/projecttacoma/cqm-models.git#765d936a50710d9a1f9772778774ec11ec462392"
   dependencies:
     cql-execution "1.2.3"
     mongoose "^5.0.7"
