@@ -554,7 +554,7 @@ describe('Calculator', () => {
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
       const indentedResult = '[{' +
-      '\n  period: Interval: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM,' +
+      '\n  period: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM,' +
       '\n  meds: [Medication, Order: Opioid Medications' +
       '\n        START: 05/09/2012 8:00 AM' +
       '\n        STOP: 12/28/2012 8:15 AM' +
