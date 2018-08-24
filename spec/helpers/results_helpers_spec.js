@@ -25,8 +25,8 @@ describe('MeasureHelpers', () => {
 
     it('should properly indent nested objects', () => {
       const nestedObject = { one: 'single item', two: { nested: 'item', nested2: 'item' }, three: { doubleNested: { a: '1', b: '2', c: '3' }, nested: 'item' } };
-      const prettyNestedObject = '{\n  one: "single item",\n  two: {\n    nested: "item",\n    nested2:' +
-      ' "item"\n  },\n  three: {\n    doubleNested: {\n      a: "1",\n      b: "2",\n      c: "3"\n    },\n    nested: "item"\n  }\n}';
+      const prettyNestedObject = '{\n  one: "single item",\n  three: {\n    doubleNested: {\n      a: "1",\n      b: "2",\n      c: "3"\n    },\n    nested: "item"\n  },\n' +
+      '  two: {\n    nested: "item",\n    nested2: "item"\n  }\n}';
       expect(ResultsHelpers.prettyResult(nestedObject)).toEqual(prettyNestedObject);
     });
 

@@ -554,12 +554,12 @@ describe('Calculator', () => {
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
       const indentedResult = '[{' +
-      '\n  period: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM,' +
+      '\n  cmd: 233,' +
       '\n  meds: [Medication, Order: Opioid Medications' +
       '\n        START: 05/09/2012 8:00 AM' +
       '\n        STOP: 12/28/2012 8:15 AM' +
       '\n        CODE: RxNorm 1053647],' +
-      '\n  cmd: 233' +
+      '\n  period: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM' +
       '\n}]';
 
       expect(result.statement_results['PotentialOpioidOveruse']['Periods With and Without 7 Day Gap With Cumulative Med Duration 90 days or Greater']['pretty']).toEqual(indentedResult);
@@ -613,7 +613,7 @@ describe('Calculator', () => {
 
       const sampleResult = result['statement_results']['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant'];
       const sampleResultId = sampleResult.raw[0].id.value;
-      expect(sampleResult['pretty']).toEqual(`[{\n  id: {\n    value: "${sampleResultId}",\n    namingSystem: null\n  },\n  authorDatetime: 11/01/2012 10:00 AM\n}]`);
+      expect(sampleResult['pretty']).toEqual(`[{\n  authorDatetime: 11/01/2012 10:00 AM,\n  id: {\n    namingSystem: null,\n    value: "${sampleResultId}"\n  }\n}]`);
     });
   });
 });
