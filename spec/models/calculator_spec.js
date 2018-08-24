@@ -554,12 +554,12 @@ describe('Calculator', () => {
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
       const indentedResult = '[{' +
-      '\n  period: Interval: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM,' +
+      '\n  cmd: 233,' +
       '\n  meds: [Medication, Order: Opioid Medications' +
       '\n        START: 05/09/2012 8:00 AM' +
       '\n        STOP: 12/28/2012 8:15 AM' +
       '\n        CODE: RxNorm 1053647],' +
-      '\n  cmd: 233' +
+      '\n  period: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM' +
       '\n}]';
 
       expect(result.statement_results['PotentialOpioidOveruse']['Periods With and Without 7 Day Gap With Cumulative Med Duration 90 days or Greater']['pretty']).toEqual(indentedResult);
@@ -588,6 +588,7 @@ describe('Calculator', () => {
       const measure = getJSONFixture('measures/CMS123v7/CMS123v7.json');
       const patients = [];
       patients.push(getJSONFixture('patients/CMS123v7/Test_PatientCharacteristic.json'));
+
       const options = { doPretty: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
@@ -598,6 +599,21 @@ describe('Calculator', () => {
       expect(result['statement_results']['DiabetesFootExam']['SDE Payer']['pretty']).toEqual(expectedPayer);
       expect(result['statement_results']['DiabetesFootExam']['SDE Race']['pretty']).toEqual('[PatientCharacteristicRace\nCODE: CDC Race 1002-5]');
       expect(result['statement_results']['DiabetesFootExam']['SDE Sex']['pretty']).toEqual('[PatientCharacteristicSex\nCODE: AdministrativeGender M]');
+    });
+  });
+
+  describe('Id objects', () => {
+    it('properly calculate and print', () => {
+      const valueSetsByOid = getJSONFixture('measures/CMS108v7/value_sets.json');
+      const measure = getJSONFixture('measures/CMS108v7/CMS108v7.json');
+      const patients = [getJSONFixture('patients/CMS108v7/INR4no_decimal_DayOfAnes_NUMERPass.json')];
+      const options = { doPretty: true };
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+      const sampleResult = result['statement_results']['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant'];
+      const sampleResultId = sampleResult.raw[0].id.value;
+      expect(sampleResult['pretty']).toEqual(`[{\n  authorDatetime: 11/01/2012 10:00 AM,\n  id: {\n    namingSystem: null,\n    value: "${sampleResultId}"\n  }\n}]`);
     });
   });
 });

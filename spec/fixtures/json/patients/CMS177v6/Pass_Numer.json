@@ -26,6 +26,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5a58f529942c6d5479457abc"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -41,8 +46,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-02-11T08:00:00.00+0000",
-        "high": "2012-02-11T08:15:00.00+0000",
+        "low": "2012-02-11T08:00:00.000+00:00",
+        "high": "2012-02-11T08:15:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -59,13 +64,18 @@
       ],
       "description": "Intervention, Performed: Suicide Risk Assessment",
       "hqmfOid": "2.16.840.1.113883.3.560.1.46",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5a58f529942c6d5479457abe"
+      },
       "negationRationale": null,
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "reason": null,
       "relevantPeriod": {
-        "low": "2012-02-11T08:00:00.00+0000",
-        "high": "2012-02-11T08:15:00.00+0000",
+        "low": "2012-02-11T08:00:00.000+00:00",
+        "high": "2012-02-11T08:15:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -88,6 +98,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb842ef33a580a6cfcfc6"
+      },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicBirthdate"
@@ -106,6 +121,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb842ef33a580a6cfcfc7"
+      },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicEthnicity"
@@ -124,6 +144,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb842ef33a580a6cfcfc8"
+      },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicRace"
@@ -142,6 +167,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb842ef33a580a6cfcfc9"
+      },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicSex"

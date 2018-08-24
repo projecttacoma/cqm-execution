@@ -25,6 +25,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5a9eddfbb84846563e7d5798"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -34,8 +39,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-03-06T08:00:00.00+0000",
-        "high": "2012-03-06T08:15:00.00+0000",
+        "low": "2012-03-06T08:00:00.000+00:00",
+        "high": "2012-03-06T08:15:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -56,6 +61,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb837ef33a5807eeb5dde"
+      },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicBirthdate"
@@ -74,6 +84,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb837ef33a5807eeb5ddf"
+      },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicEthnicity"
@@ -92,6 +107,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb837ef33a5807eeb5de0"
+      },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicRace"
@@ -110,6 +130,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb837ef33a5807eeb5de1"
+      },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicSex"

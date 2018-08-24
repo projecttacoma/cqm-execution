@@ -21,6 +21,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "59cbf4f0942c6d40640067ce"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -67,6 +72,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "59cbf4f0942c6d40640067cf"
+      },
       "lengthOfStay": {
         "value": 2,
         "unit": "days"
@@ -100,6 +110,11 @@
       ],
       "description": "Intervention, Order: Comfort Measures ",
       "hqmfOid": "2.16.840.1.113883.3.560.1.45",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "59cbf4f0942c6d40640067d1"
+      },
       "negationRationale": null,
       "qdmStatus": "order",
       "qdmVersion": "5.3",
@@ -121,6 +136,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb7ecef33a57f62054398"
+      },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicBirthdate"
@@ -139,6 +159,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb7ecef33a57f62054399"
+      },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicEthnicity"
@@ -157,6 +182,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb7ecef33a57f6205439a"
+      },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicRace"
@@ -175,6 +205,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb7ecef33a57f6205439b"
+      },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicSex"

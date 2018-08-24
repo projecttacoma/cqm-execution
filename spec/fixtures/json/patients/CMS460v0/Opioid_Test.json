@@ -25,6 +25,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b2a7bfeb8484678da8c686c"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -58,6 +63,11 @@
       },
       "frequency": null,
       "hqmfOid": "2.16.840.1.113883.3.560.1.17",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b2a7bfeb8484678da8c686d"
+      },
       "method": null,
       "negationRationale": null,
       "qdmStatus": "order",
@@ -72,8 +82,8 @@
       },
       "route": null,
       "supply": {
-        "value": null,
-        "unit": null
+        "value": 120,
+        "unit": ""
       },
       "_type": "QDM::MedicationOrder"
     },
@@ -92,6 +102,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb84cef33a580dc8d8b9c"
+      },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicBirthdate"
@@ -110,6 +125,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb84cef33a580dc8d8b9d"
+      },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicEthnicity"
@@ -128,6 +148,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb84cef33a580dc8d8b9e"
+      },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicRace"
@@ -146,6 +171,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb84cef33a580dc8d8b9f"
+      },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicSex"

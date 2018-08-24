@@ -18,9 +18,14 @@
       ],
       "description": "Diagnosis: Dysthymia",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5a9ee716b848465b0064f52d"
+      },
       "prevalencePeriod": {
-        "low": "2012-04-12T08:00:00.00+0000",
-        "high": "9999-12-31T23:59:59.99+0000",
+        "low": "2012-04-12T08:00:00.000+00:00",
+        "high": "9999-12-31T23:59:59.999+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -48,6 +53,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5a9ee716b848465b0064f52e"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -57,8 +67,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-11-04T08:00:00.00+0000",
-        "high": "2012-11-04T08:15:00.00+0000",
+        "low": "2012-11-04T08:00:00.000+00:00",
+        "high": "2012-11-04T08:15:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -79,6 +89,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb823ef33a5802d5862b3"
+      },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicBirthdate"
@@ -97,6 +112,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb823ef33a5802d5862b4"
+      },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicEthnicity"
@@ -117,6 +137,11 @@
       "description": null,
       "expiredDatetime": "2012-12-04T03:00:00.000-05:00",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.57",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb823ef33a5802d5862b5"
+      },
       "qdmStatus": "expired",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicExpired"
@@ -135,6 +160,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb823ef33a5802d5862b6"
+      },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicRace"
@@ -153,6 +183,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb823ef33a5802d5862b7"
+      },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicSex"

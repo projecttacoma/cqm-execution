@@ -16,14 +16,16 @@
       ],
       "description": "Assessment, Performed: PHQ-9 Tool",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.117",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5a58f6d9942c6d58e8eb6d4f"
+      },
       "method": null,
       "negationRationale": null,
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "reason": null,
-      "relatedTo": [
-
-      ],
       "result": 10,
       "_type": "QDM::AssessmentPerformed"
     },
@@ -39,9 +41,14 @@
       ],
       "description": "Diagnosis: Major Depression Including Remission",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5a58f6d9942c6d58e8eb6d4c"
+      },
       "prevalencePeriod": {
-        "low": "2012-06-08T14:35:00.00+0000",
-        "high": "9999-12-31T23:59:59.99+0000",
+        "low": "2012-06-08T14:35:00.000+00:00",
+        "high": "9999-12-31T23:59:59.999+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -62,9 +69,14 @@
       ],
       "description": "Diagnosis: Bipolar Disorder",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5a58f6d9942c6d58e8eb6d4d"
+      },
       "prevalencePeriod": {
-        "low": "2013-11-08T14:35:00.00+0000",
-        "high": "9999-12-31T23:59:59.99+0000",
+        "low": "2013-11-08T14:35:00.000+00:00",
+        "high": "9999-12-31T23:59:59.999+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -92,6 +104,11 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5a58f6d9942c6d58e8eb6d4e"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -101,8 +118,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-06-08T14:30:00.00+0000",
-        "high": "2012-06-08T14:50:00.00+0000",
+        "low": "2012-06-08T14:30:00.000+00:00",
+        "high": "2012-06-08T14:50:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -123,6 +140,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb82def33a580562f4a06"
+      },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicBirthdate"
@@ -141,6 +163,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb82def33a580562f4a07"
+      },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicEthnicity"
@@ -159,6 +186,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb82def33a580562f4a08"
+      },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicRace"
@@ -177,6 +209,11 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.3",
+        "value": "5b7eb82def33a580562f4a09"
+      },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicSex"
