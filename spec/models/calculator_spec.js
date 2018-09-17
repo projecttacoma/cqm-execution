@@ -550,9 +550,11 @@ describe('Calculator', () => {
       const measure = getJSONFixture('measures/CMS460v0/CMS460v0.json');
       const patients = [];
       patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json'));
+      patients.push(getJSONFixture('patients/CMS460v0/MethadoneLessThan90MME_NUMERFail.json'));
       const options = { doPretty: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      const conversionFactorResult = Object.values(calculationResults[Object.keys(calculationResults)[1]])[0];
       const indentedResult = '[{' +
       '\n  cmd: 233,' +
       '\n  meds: [Medication, Order: Opioid Medications' +
@@ -563,6 +565,7 @@ describe('Calculator', () => {
       '\n}]';
 
       expect(result.statement_results['PotentialOpioidOveruse']['Periods With and Without 7 Day Gap With Cumulative Med Duration 90 days or Greater']['pretty']).toEqual(indentedResult);
+      expect(conversionFactorResult.statement_results['PotentialOpioidOveruse']['Prescriptions with MME']['pretty']).toContain('conversionFactor: 4,');
     });
   });
 
