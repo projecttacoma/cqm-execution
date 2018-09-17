@@ -61,7 +61,13 @@
         "value": 0.5,
         "unit": "mg"
       },
-      "frequency": null,
+      "frequency": {
+        "code": "229799001",
+        "codeSystem": "SNOMED-CT",
+        "descriptor": "Twice a day (qualifier value)",
+        "codeSystemOid": null,
+        "version": null
+      },
       "hqmfOid": "2.16.840.1.113883.3.560.1.17",
       "id": {
         "namingSystem": null,
@@ -73,7 +79,7 @@
       "qdmStatus": "order",
       "qdmVersion": "5.3",
       "reason": null,
-      "refills": null,
+      "refills": 2,
       "relevantPeriod": {
         "low": "2012-05-09T08:00:00.000+00:00",
         "high": "2012-12-28T08:15:00.000+00:00",
@@ -105,7 +111,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5b7eb84cef33a580dc8d8b9c"
+        "value": "5ba00d11d7c8acbd312c1500"
       },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
@@ -128,7 +134,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5b7eb84cef33a580dc8d8b9d"
+        "value": "5ba00d11d7c8acbd312c1501"
       },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
@@ -151,7 +157,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5b7eb84cef33a580dc8d8b9e"
+        "value": "5ba00d11d7c8acbd312c1502"
       },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
@@ -174,7 +180,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5b7eb84cef33a580dc8d8b9f"
+        "value": "5ba00d11d7c8acbd312c1503"
       },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
