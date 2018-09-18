@@ -190,9 +190,9 @@ describe('Calculator', () => {
     const numPassResults = calculationResults[Object.keys(calculationResults)[0]];
 
     // Patient expiredDenexResults Population Set 1
-    const pop2_strat1 = numPassResults['PopulationCriteria2 - Stratification 1'];
-    const pop2_strat1_statement_results = pop2_strat1.statement_results.DepressionUtilizationofthePHQ9Tool;
-    expect(pop2_strat1_statement_results['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
+    const pop2Strat1 = numPassResults['PopulationCriteria2 - Stratification 1'];
+    const pop2Strat1StatementResults = pop2Strat1.statement_results.DepressionUtilizationofthePHQ9Tool;
+    expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
   });
 
   it('multiple observation measure correctly', () => {
