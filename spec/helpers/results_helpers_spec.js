@@ -111,10 +111,10 @@ describe('MeasureHelpers', () => {
         expect(result.get('statement_results').DayMonthTimings['Months Containing 29 Days'].pretty).toEqual('[1,\n2,\n3,\n4,\n5,\n6,\n7,\n8,\n9,\n10,\n11,\n12,\n13,\n14,\n15,\n16,' +
           '\n17,\n18,\n19,\n20,\n21,\n22,\n23,\n24,\n25,\n26,\n27,\n28,\n29]');
         expect(result.get('statement_results').PotentialOpioidOveruse['Prescription Days'].pretty).toContain('05/09/2012 12:00 AM');
-        expect(result.get('statement_results').PotentialOpioidOveruse['Prescription Days'].pretty).toContain('rxNormCode: CODE: RxNorm: 1053647');
+        expect(result.get('statement_results').PotentialOpioidOveruse['Prescription Days'].pretty).toContain('rxNormCode: CODE: RxNorm 1053647');
         expect(result.get('statement_results').PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('conversionFactor: 0.13');
         expect(result.get('statement_results').PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('effectivePeriod: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM');
-        expect(result.get('statement_results').PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('rxNormCode: CODE: RxNorm: 1053647');
+        expect(result.get('statement_results').PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('rxNormCode: CODE: RxNorm 1053647');
         expect(result.get('statement_results').OpioidData.DrugIngredients.pretty).toContain('drugName: "72 HR Fentanyl 0.075 MG/HR Transdermal System"');
       });
 

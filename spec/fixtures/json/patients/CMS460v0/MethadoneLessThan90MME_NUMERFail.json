@@ -1,10 +1,10 @@
 {
-  "birthDatetime": "1980-06-10T04:00:00.000-04:00",
+  "birthDatetime": "1958-05-14T04:00:00.000-04:00",
   "bundleId": "5a57e977942c6d1e61d32f14",
   "dataElements": [
     {
       "admissionSource": null,
-      "authorDatetime": "2012-05-09T04:00:00.000-04:00",
+      "authorDatetime": "2012-05-04T04:00:00.000-04:00",
       "category": "encounter",
       "dataElementCodes": [
         {
@@ -28,10 +28,10 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5b2a7bfeb8484678da8c686c"
+        "value": "5b9fe2ddd7c8acf1740e5c68"
       },
       "lengthOfStay": {
-        "value": 0,
+        "value": 136,
         "unit": "days"
       },
       "negationRationale": null,
@@ -39,8 +39,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-05-09T08:00:00.000+00:00",
-        "high": "2012-05-09T08:15:00.000+00:00",
+        "low": "2012-05-04T08:00:00.000+00:00",
+        "high": "2012-09-17T08:15:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -48,23 +48,23 @@
     },
     {
       "activeDatetime": null,
-      "authorDatetime": "2012-05-09T04:00:00.000-04:00",
+      "authorDatetime": "2012-05-04T04:00:00.000-04:00",
       "category": "medication",
       "dataElementCodes": [
         {
           "codeSystem": "RxNorm",
-          "code": "1053647"
+          "code": "864978"
         }
       ],
       "description": "Medication, Order: Opioid Medications",
       "dosage": {
-        "value": 0.5,
+        "value": 20,
         "unit": "mg"
       },
       "frequency": {
-        "code": "229799001",
+        "code": "229797004",
         "codeSystem": "SNOMED-CT",
-        "descriptor": "Twice a day (qualifier value)",
+        "descriptor": "Once daily (qualifier value)",
         "codeSystemOid": null,
         "version": null
       },
@@ -72,29 +72,26 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5b2a7bfeb8484678da8c686d"
+        "value": "5b9fe2ddd7c8acf1740e5c67"
       },
       "method": null,
       "negationRationale": null,
       "qdmStatus": "order",
       "qdmVersion": "5.3",
       "reason": null,
-      "refills": 2,
+      "refills": null,
       "relevantPeriod": {
-        "low": "2012-05-09T08:00:00.000+00:00",
-        "high": "2012-12-28T08:15:00.000+00:00",
+        "low": "2012-05-04T08:00:00.000+00:00",
+        "high": "2012-09-03T08:15:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
       "route": null,
-      "supply": {
-        "value": 120,
-        "unit": ""
-      },
+      "supply": null,
       "_type": "QDM::MedicationOrder"
     },
     {
-      "birthDatetime": "1980-06-10T04:00:00.000-04:00",
+      "birthDatetime": "1958-05-14T04:00:00.000-04:00",
       "category": "patient_characteristic",
       "dataElementCodes": [
         {
@@ -111,7 +108,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5ba00d11d7c8acbd312c1500"
+        "value": "5b9fe9a7d7c8ac2f8dcd003d"
       },
       "qdmStatus": "birthdate",
       "qdmVersion": "5.3",
@@ -134,7 +131,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5ba00d11d7c8acbd312c1501"
+        "value": "5b9fe9a7d7c8ac2f8dcd003e"
       },
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.3",
@@ -157,7 +154,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5ba00d11d7c8acbd312c1502"
+        "value": "5b9fe9a7d7c8ac2f8dcd003f"
       },
       "qdmStatus": "race",
       "qdmVersion": "5.3",
@@ -180,7 +177,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.3",
-        "value": "5ba00d11d7c8acbd312c1503"
+        "value": "5b9fe9a7d7c8ac2f8dcd0040"
       },
       "qdmStatus": "gender",
       "qdmVersion": "5.3",
@@ -196,6 +193,48 @@
     "source_data_criteria": [
       {
         "negation": false,
+        "definition": "medication",
+        "status": "ordered",
+        "title": "OpioidMedications",
+        "description": "Medication, Order: Opioid Medications",
+        "code_list_id": "2.16.840.1.113883.3.3157.1004.26",
+        "type": "medications",
+        "id": "OpioidMedications_MedicationOrder_9fa72c11_9e0b_481f_a2bb_5ac13e6ddd90_source",
+        "start_date": 1336118400000,
+        "end_date": 1346660100000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+          "FREQUENCY": {
+            "type": "CD",
+            "code_list_id": "drc-e6b5e12d54357f2eff60055d5aa19fbe4c458e863b9a4bb551a5ba5b3c8ca1c5",
+            "field_title": "Frequency",
+            "title": "Once daily (qualifier value)"
+          },
+          "DOSE": {
+            "type": "PQ",
+            "code_list_id": "",
+            "field_title": "Dosage",
+            "value": "20",
+            "unit": "mg"
+          }
+        },
+        "hqmf_set_id": "442EDEF2-7347-4080-988F-16C9D1998803",
+        "cms_id": "CMS460v0",
+        "criteria_id": "165e88ca914NW",
+        "codes": {
+          "RxNorm": [
+            "864978"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "5b9fe2ddd7c8acf1740e5c67",
+        "code_source": "USER_DEFINED"
+      },
+      {
+        "negation": false,
         "definition": "encounter",
         "status": "performed",
         "title": "OutpatientConsultation",
@@ -203,8 +242,8 @@
         "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1008",
         "type": "encounters",
         "id": "OutpatientConsultation_EncounterPerformed_48dc260e_53e9_4934_91fc_958ce91f1008_source",
-        "start_date": 1336550400000,
-        "end_date": 1336551300000,
+        "start_date": 1336118400000,
+        "end_date": 1347869700000,
         "value": [
 
         ],
@@ -213,7 +252,7 @@
         },
         "hqmf_set_id": "442EDEF2-7347-4080-988F-16C9D1998803",
         "cms_id": "CMS460v0",
-        "criteria_id": "1634649dc54ED",
+        "criteria_id": "165e88c226dWY",
         "codes": {
           "SNOMED-CT": [
             "17436001"
@@ -223,63 +262,7 @@
           ]
         },
         "negation_code_list_id": "",
-        "coded_entry_id": "5b2a7bfeb8484678da8c686c",
-        "code_source": "DEFAULT"
-      },
-      {
-        "negation": false,
-        "definition": "medication",
-        "status": "ordered",
-        "title": "OpioidMedications",
-        "description": "Medication, Order: Opioid Medications",
-        "code_list_id": "2.16.840.1.113762.1.4.1111.144",
-        "type": "medications",
-        "id": "OpioidMedications_MedicationOrder_9fa72c11_9e0b_481f_a2bb_5ac13e6ddd90_source",
-        "start_date": 1336550400000,
-        "end_date": 1356682500000,
-        "value": [
-
-        ],
-        "references": null,
-        "field_values": {
-          "DOSE": {
-            "type": "PQ",
-            "value": "0.5",
-            "unit": "mg",
-            "field_title": "Dosage"
-          },
-          "FREQUENCY": {
-            "type": "CD",
-            "code_list_id": "drc-5d724671c39b58f85c450e49e712099c7c7ddc12096bd8b026a451dc75735b45",
-            "field_title": "Frequency",
-            "title": "Twice a day (qualifier value)"
-          },
-          "SUPPLY": {
-            "type": "PQ",
-            "code_list_id": "",
-            "field_title": "Supply",
-            "value": "120",
-            "unit": ""
-          },
-          "REFILLS": {
-            "type": "PQ",
-            "code_list_id": "",
-            "field_title": "Refills",
-            "value": "2",
-            "unit": ""
-          }
-        },
-        "hqmf_set_id": "442EDEF2-7347-4080-988F-16C9D1998803",
-        "cms_id": "CMS460v0",
-        "criteria_id": "163464a0518ET",
-        "codes": {
-          "RxNorm": [
-            "1053647"
-          ]
-        },
-        "fulfillments": null,
-        "negation_code_list_id": "",
-        "coded_entry_id": "5b2a7bfeb8484678da8c686d",
+        "coded_entry_id": "5b9fe2ddd7c8acf1740e5c68",
         "code_source": "DEFAULT"
       },
       {
@@ -299,21 +282,21 @@
         "NUMER": 0
       }
     ],
-    "notes": "",
+    "notes": "methadone 40 mg oral tab does not exceed 90 MME (total daily dose is half a tablet (20 mg) which is 80 MME). Case does not meet NUMER criteria since MME is less than 90.",
     "is_shared": null,
     "origin_data": [
 
     ],
     "test_id": null,
-    "medical_record_number": "5c9bee7e9c8628990b49657d9314673e61f3c211d838a8ae7d4ec8042c6966b6",
+    "medical_record_number": "d152573c8e7a7718ec92f179ec1ffe97fa874d8e3a7a06877d188a6f67ad5e24",
     "medical_record_assigner": "Bonnie",
     "description": null,
     "description_category": null,
-    "insurance_providers": "[]"
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
   },
-  "familyName": "Test",
+  "familyName": "NUMERFail",
   "givenNames": [
-    "Opioid"
+    "MethadoneLessThan90MME"
   ],
   "qdmVersion": "5.3"
 }
