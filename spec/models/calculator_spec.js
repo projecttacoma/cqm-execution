@@ -179,6 +179,22 @@ describe('Calculator', () => {
     expect(passNumer2Results['PopulationCriteria3'].NUMER).toBe(0);
   });
 
+  it('multiple population and stratification measure correctly', () => {
+    const valueSetsByOid = getJSONFixture('measures/CMS160v7/value_sets.json');
+    const measure = getJSONFixture('measures/CMS160v7/CMS160v7.json');
+    const numPass = getJSONFixture('patients/CMS160v7/PHQ9EBEDec_PerDzDxSAEDec_NUM1Pass.json');
+    const patients = [];
+    patients.push(numPass);
+    const options = { doPretty: true };
+    const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
+    const numPassResults = calculationResults[Object.keys(calculationResults)[0]];
+
+    // Patient expiredDenexResults Population Set 1
+    const pop2Strat1 = numPassResults['PopulationCriteria2 - Stratification 1'];
+    const pop2Strat1StatementResults = pop2Strat1.statement_results.DepressionUtilizationofthePHQ9Tool;
+    expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
+  });
+
   it('multiple observation measure correctly', () => {
     const valueSetsByOid = getJSONFixture('measures/CMS32v7/value_sets.json');
     const measure = getJSONFixture('measures/CMS32v7/CMS32v7.json');
