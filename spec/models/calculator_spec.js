@@ -93,7 +93,7 @@ describe('Calculator', () => {
   });
 
   describe('execution engine using passed in timezone offset', () => {
-    it('is correct', () => {
+    xit('is correct', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
       const patients = [];
@@ -107,7 +107,7 @@ describe('Calculator', () => {
   });
 
   describe('execution engine using passed in timezone offset and good effective_date', () => {
-    it('is correct', () => {
+    xit('is correct', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
       const patients = [];
