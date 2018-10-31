@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/projecttacoma/cqm-execution#readme",
   "devDependencies": {
-    "eslint": "^4.17.0",
+    "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "istanbul": "^0.4.5",
