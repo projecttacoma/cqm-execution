@@ -18,7 +18,7 @@ yarn add cqm-execution
 
 ## Usage
 Example usage:
-```
+```javascript
 const Calculator = require('cqm-execution').Calculator;
 
 // Example fixture loader (useful for this example).
