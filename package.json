@@ -4,7 +4,7 @@
   "description": "NPM module for calculating eCQMs (electronic clinical quality measures) written in CQL (clinical quality language).",
   "main": "lib/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/istanbul cover --reporter=html --reporter=text --include-all-sources ./node_modules/.bin/jasmine-node spec",
+    "test": "./node_modules/.bin/istanbul cover -x **/spec/** --reporter=text-lcov --reporter=html ./node_modules/.bin/jasmine-node spec",
     "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js'"
   },
   "repository": "git+https://github.com/projecttacoma/cqm-execution.git",
