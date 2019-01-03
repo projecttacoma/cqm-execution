@@ -243,13 +243,14 @@ core-util-is@~1.0.0:
 cql-execution@1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/cql-execution/-/cql-execution-1.3.2.tgz#3599ef31a0196e8ee679a37e1eee1911d731360b"
+  integrity sha512-AkMbMmbxeqM5AMDF9yZswAVBq1ERsuTTnG1KQ9dKtLtmlf7swm4QtgfN5eNhHLWlNsWqF1O++MoTQXJ4S+AHRw==
   dependencies:
     moment "^2.20.1"
     ucum "0.0.7"
 
 "cqm-models@https://github.com/projecttacoma/cqm-models#patient_expected_values":
   version "1.0.2"
-  resolved "https://github.com/projecttacoma/cqm-models#38c476d083b65f8289f70b3ecc3f63ad57ad9439"
+  resolved "https://github.com/projecttacoma/cqm-models#d47ead4fc69e6f9ad35e042dd8a87aca537d6118"
   dependencies:
     cql-execution "1.3.2"
     mongoose "^5.0.7"
@@ -860,7 +861,12 @@ mkdirp@~0.3.5:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.3.5.tgz#de3e5f8961c88c787ee1368df849ac4413eca8d7"
 
-moment@^2.20.1, moment@^2.21.0:
+moment@^2.20.1:
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
+  integrity sha512-3IE39bHVqFbWWaPOMHZF98Q9c3LDKGTmypMiTM2QygGXXElkFWIH7GxfmlwmY2vwa+wmNsoYZmG2iusf1ZjJoA==
+
+moment@^2.21.0:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
@@ -1355,6 +1361,7 @@ typedarray@^0.0.6:
 ucum@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ucum/-/ucum-0.0.7.tgz#cd07efe5599a17ef7fb327778bf838e832dfd1a4"
+  integrity sha1-zQfv5VmaF+9/syd3i/g46DLf0aQ=
 
 uglify-js@^2.6:
   version "2.8.29"
