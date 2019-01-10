@@ -1,11 +1,9 @@
 {
   "birthDatetime": "1980-06-10T04:00:00.000-04:00",
-  "bundleId": "5a57e977942c6d1e61d32f14",
   "dataElements": [
     {
       "admissionSource": null,
       "authorDatetime": "2012-05-09T04:00:00.000-04:00",
-      "category": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -27,7 +25,7 @@
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5b2a7bfeb8484678da8c686c"
       },
       "lengthOfStay": {
@@ -36,8 +34,9 @@
       },
       "negationRationale": null,
       "principalDiagnosis": null,
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "relevantPeriod": {
         "low": "2012-05-09T08:00:00.000+00:00",
         "high": "2012-05-09T08:15:00.000+00:00",
@@ -47,15 +46,14 @@
       "_type": "QDM::EncounterPerformed"
     },
     {
-      "activeDatetime": null,
       "authorDatetime": "2012-05-09T04:00:00.000-04:00",
-      "category": "medication",
       "dataElementCodes": [
         {
           "codeSystem": "RxNorm",
           "code": "1053647"
         }
       ],
+      "daysSupplied": null,
       "description": "Medication, Order: Opioid Medications",
       "dosage": {
         "value": 0.5,
@@ -71,13 +69,14 @@
       "hqmfOid": "2.16.840.1.113883.3.560.1.17",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5b2a7bfeb8484678da8c686d"
       },
-      "method": null,
       "negationRationale": null,
+      "prescriberId": null,
+      "qdmCategory": "medication",
       "qdmStatus": "order",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "reason": null,
       "refills": 2,
       "relevantPeriod": {
@@ -87,6 +86,7 @@
         "highClosed": true
       },
       "route": null,
+      "setting": null,
       "supply": {
         "value": 120,
         "unit": ""
@@ -95,7 +95,6 @@
     },
     {
       "birthDatetime": "1980-06-10T04:00:00.000-04:00",
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "21112-8",
@@ -110,15 +109,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5ba00d11d7c8acbd312c1500"
+        "qdmVersion": "5.4",
+        "value": "5c3760ab57a11e7cf4276b06"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicBirthdate"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2186-5",
@@ -133,15 +132,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5ba00d11d7c8acbd312c1501"
+        "qdmVersion": "5.4",
+        "value": "5c3760ab57a11e7cf4276b07"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "1002-5",
@@ -156,15 +155,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5ba00d11d7c8acbd312c1502"
+        "qdmVersion": "5.4",
+        "value": "5c3760ab57a11e7cf4276b08"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "M",
@@ -179,11 +178,12 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5ba00d11d7c8acbd312c1503"
+        "qdmVersion": "5.4",
+        "value": "5c3760ab57a11e7cf4276b09"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicSex"
     }
   ],
@@ -289,17 +289,6 @@
         "references": null
       }
     ],
-    "expected_values": [
-      {
-        "measure_id": "442EDEF2-7347-4080-988F-16C9D1998803",
-        "population_index": 0,
-        "IPP": 1,
-        "DENOM": 1,
-        "DENEX": 0,
-        "NUMER": 0
-      }
-    ],
-    "notes": "",
     "is_shared": null,
     "origin_data": [
 
@@ -311,9 +300,5 @@
     "description_category": null,
     "insurance_providers": "[]"
   },
-  "familyName": "Test",
-  "givenNames": [
-    "Opioid"
-  ],
-  "qdmVersion": "5.3"
+  "qdmVersion": "5.4"
 }
