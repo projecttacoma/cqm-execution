@@ -11,7 +11,7 @@ describe('Calculator', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
       const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
       const patients = [];
-      patients.push(getJSONFixture('patients/CMS107v6/IPPFail_LOS=121Days.json'));
+      patients.push(getJSONFixture('patients/CMS107v6/IPPFail_LOS=121Days.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -27,7 +27,7 @@ describe('Calculator', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
       const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
       const patients = [];
-      patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
+      patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -66,7 +66,7 @@ describe('Calculator', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS53v7/value_sets.json');
       const measure = getJSONFixture('measures/CMS53v7/CMS53v7.json');
       const patients = [];
-      patients.push(getJSONFixture('patients/CMS53v7/PCIat60min_NUMERPass.json'));
+      patients.push(getJSONFixture('patients/CMS53v7/PCIat60min_NUMERPass.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
       const numerPass = calculationResults[Object.keys(calculationResults)[0]];
 
@@ -83,7 +83,7 @@ describe('Calculator', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
       const patients = [];
-      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
+      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -97,7 +97,7 @@ describe('Calculator', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
       const patients = [];
-      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
+      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { timezoneOffset: -4 });
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -111,7 +111,7 @@ describe('Calculator', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
       const patients = [];
-      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
+      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { effectiveDate: '201201010000', timezoneOffset: -4 });
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -125,7 +125,7 @@ describe('Calculator', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
       const patients = [];
-      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
+      patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { effective_date: '201701010000', timezone_offset: -4 });
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -140,8 +140,8 @@ describe('Calculator', () => {
     const expiredDenex = getJSONFixture('patients/CMS160v6/Expired_DENEX.json');
     const passNumer2 = getJSONFixture('patients/CMS160v6/Pass_NUM2.json');
     const patients = [];
-    patients.push(expiredDenex);
-    patients.push(passNumer2);
+    patients.push(expiredDenex.qdmPatient);
+    patients.push(passNumer2.qdmPatient);
     const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
     const expiredDenexResults = calculationResults[Object.keys(calculationResults)[0]];
     const passNumer2Results = calculationResults[Object.keys(calculationResults)[1]];
@@ -184,7 +184,7 @@ describe('Calculator', () => {
     const measure = getJSONFixture('measures/CMS160v7/CMS160v7.json');
     const numPass = getJSONFixture('patients/CMS160v7/PHQ9EBEDec_PerDzDxSAEDec_NUM1Pass.json');
     const patients = [];
-    patients.push(numPass);
+    patients.push(numPass.qdmPatient);
     const options = { doPretty: true };
     const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
     const numPassResults = calculationResults[Object.keys(calculationResults)[0]];
@@ -203,10 +203,10 @@ describe('Calculator', () => {
     const visit1excl = getJSONFixture('patients/CMS32v7/Visits_1Excl_2ED.json');
     const visit2excl = getJSONFixture('patients/CMS32v7/Visits_2Excl_2ED.json');
     const patients = [];
-    patients.push(visit1Ed);
-    patients.push(visit2Ed);
-    patients.push(visit1excl);
-    patients.push(visit2excl);
+    patients.push(visit1Ed.qdmPatient);
+    patients.push(visit2Ed.qdmPatient);
+    patients.push(visit1excl.qdmPatient);
+    patients.push(visit2excl.qdmPatient);
 
     const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
     const visit1EdResults = calculationResults[Object.keys(calculationResults)[0]];
@@ -387,8 +387,8 @@ describe('Calculator', () => {
     const failIPP = getJSONFixture('patients/CMS177v6/Fail_IPP.json');
     const passNumer = getJSONFixture('patients/CMS177v6/Pass_Numer.json');
     const patients = [];
-    patients.push(failIPP);
-    patients.push(passNumer);
+    patients.push(failIPP.qdmPatient);
+    patients.push(passNumer.qdmPatient);
     const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
     const failIPPResults = calculationResults[Object.keys(calculationResults)[0]];
     const passNumerResults = calculationResults[Object.keys(calculationResults)[1]];
@@ -410,8 +410,8 @@ describe('Calculator', () => {
     const failHospiceNotPerformedDenex = getJSONFixture('patients/CMS134v6/Fail_Hospice_Not_Performed_Denex.json');
     const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
     const patients = [];
-    patients.push(failHospiceNotPerformedDenex);
-    patients.push(passNumer);
+    patients.push(failHospiceNotPerformedDenex.qdmPatient);
+    patients.push(passNumer.qdmPatient);
     const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
     const failHospiceNotPerformedDenexResults = calculationResults[Object.keys(calculationResults)[0]];
     const passNumerResults = calculationResults[Object.keys(calculationResults)[1]];
@@ -432,7 +432,7 @@ describe('Calculator', () => {
     const measure = getJSONFixture('measures/CMS529v0/CMS529v0.json');
     const passIppDenomNumer = getJSONFixture('patients/CMS529v0/Pass_IPP-DENOM-NUMER.json');
     const patients = [];
-    patients.push(passIppDenomNumer);
+    patients.push(passIppDenomNumer.qdmPatient);
     const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
     const passIppDenomNumerResults = calculationResults[Object.keys(calculationResults)[0]];
 
@@ -565,8 +565,8 @@ describe('Calculator', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS460v0/value_sets.json');
       const measure = getJSONFixture('measures/CMS460v0/CMS460v0.json');
       const patients = [];
-      patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json'));
-      patients.push(getJSONFixture('patients/CMS460v0/MethadoneLessThan90MME_NUMERFail.json'));
+      patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json').qdmPatient);
+      patients.push(getJSONFixture('patients/CMS460v0/MethadoneLessThan90MME_NUMERFail.json').qdmPatient);
       const options = { doPretty: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
@@ -589,7 +589,7 @@ describe('Calculator', () => {
     it('only if requested', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
-      const patients = [getJSONFixture('patients/CMS760v0/Correct_Timezone.json')];
+      const patients = [getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient];
       const calculationResultsNoClauses = Calculator.calculate(measure, patients, valueSetsByOid, { includeClauseResults: false });
       const resultNoClauses = Object.values(calculationResultsNoClauses[Object.keys(calculationResultsNoClauses)[0]])[0];
 
@@ -606,7 +606,7 @@ describe('Calculator', () => {
       const valueSetsByOid = getJSONFixture('measures/CMS123v7/value_sets.json');
       const measure = getJSONFixture('measures/CMS123v7/CMS123v7.json');
       const patients = [];
-      patients.push(getJSONFixture('patients/CMS123v7/Test_PatientCharacteristic.json'));
+      patients.push(getJSONFixture('patients/CMS123v7/Test_PatientCharacteristic.json').qdmPatient);
 
       const options = { doPretty: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);

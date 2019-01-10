@@ -1,210 +1,1248 @@
 {
-  "birthDatetime": "1985-09-18T04:00:00.000-04:00",
-  "dataElements": [
+  "bundleId": "578565956c5d1c3d49000007",
+  "expectedValues": [
     {
-      "admissionSource": null,
-      "authorDatetime": "2012-06-10T05:00:00.000-04:00",
-      "dataElementCodes": [
-        {
-          "codeSystem": "SNOMED-CT",
-          "code": "32485007"
-        }
-      ],
-      "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
-      "diagnoses": [
-        {
-          "code": "111297002",
-          "codeSystem": "SNOMED-CT",
-          "version": null,
-          "descriptor": "Ischemic Stroke"
-        }
-      ],
-      "dischargeDisposition": null,
-      "facilityLocations": [
-
-      ],
-      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "59cbf4e7942c6d4064006399"
-      },
-      "lengthOfStay": {
-        "value": 121,
-        "unit": "days"
-      },
-      "negationRationale": null,
-      "principalDiagnosis": {
-        "code": "111297002",
-        "codeSystem": "SNOMED-CT",
-        "descriptor": "Ischemic Stroke",
-        "codeSystemOid": null,
-        "version": null
-      },
-      "qdmCategory": "encounter",
-      "qdmStatus": "performed",
-      "qdmVersion": "5.4",
-      "relevantPeriod": {
-        "low": "2012-06-10T09:00:00.000+00:00",
-        "high": "2012-10-09T00:15:00.000+00:00",
-        "lowClosed": true,
-        "highClosed": true
-      },
-      "_type": "QDM::EncounterPerformed"
-    },
-    {
-      "birthDatetime": "1985-09-18T04:00:00.000-04:00",
-      "dataElementCodes": [
-        {
-          "code": "21112-8",
-          "codeSystem": "LOINC",
-          "descriptor": null,
-          "codeSystemOid": null,
-          "version": null,
-          "_type": "QDM::Code"
-        }
-      ],
-      "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5c37608357a11e7bbadfaa78"
-      },
-      "qdmCategory": "patient_characteristic",
-      "qdmStatus": "birthdate",
-      "qdmVersion": "5.4",
-      "_type": "QDM::PatientCharacteristicBirthdate"
-    },
-    {
-      "dataElementCodes": [
-        {
-          "code": "2135-2",
-          "codeSystem": "CDC Race",
-          "descriptor": "Hispanic Or Latino",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null,
-          "_type": "QDM::Code"
-        }
-      ],
-      "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5c37608357a11e7bbadfaa79"
-      },
-      "qdmCategory": "patient_characteristic",
-      "qdmStatus": "ethnicity",
-      "qdmVersion": "5.4",
-      "_type": "QDM::PatientCharacteristicEthnicity"
-    },
-    {
-      "dataElementCodes": [
-        {
-          "code": "2076-8",
-          "codeSystem": "CDC Race",
-          "descriptor": "Native Hawaiian or Other Pacific Islander",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null,
-          "_type": "QDM::Code"
-        }
-      ],
-      "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5c37608357a11e7bbadfaa7a"
-      },
-      "qdmCategory": "patient_characteristic",
-      "qdmStatus": "race",
-      "qdmVersion": "5.4",
-      "_type": "QDM::PatientCharacteristicRace"
-    },
-    {
-      "dataElementCodes": [
-        {
-          "code": "F",
-          "codeSystem": "AdministrativeGender",
-          "descriptor": "F",
-          "codeSystemOid": "2.16.840.1.113883.5.1",
-          "version": null,
-          "_type": "QDM::Code"
-        }
-      ],
-      "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5c37608357a11e7bbadfaa7b"
-      },
-      "qdmCategory": "patient_characteristic",
-      "qdmStatus": "gender",
-      "qdmVersion": "5.4",
-      "_type": "QDM::PatientCharacteristicSex"
+      "measure_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
     }
   ],
-  "extendedData": {
-    "type": null,
-    "measure_ids": [
-      "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
-      null
-    ],
-    "source_data_criteria": [
+  "familyName": "IPPFail",
+  "givenNames": [
+    "LOS=121Days"
+  ],
+  "notes": "Patient is > 18 years, principal dx ischemic stroke, LOS > 120 days (121 days)",
+  "qdmPatient": {
+    "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+    "dataElements": [
       {
-        "negation": false,
-        "definition": "encounter",
-        "status": "performed",
-        "title": "Non-Elective Inpatient Encounter",
+        "admissionSource": null,
+        "authorDatetime": "2012-06-10T05:00:00.000-04:00",
+        "dataElementCodes": [
+          {
+            "codeSystem": "SNOMED-CT",
+            "code": "32485007"
+          }
+        ],
         "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
-        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.424",
-        "type": "encounters",
-        "id": "OccurrenceANonElectiveInpatientEncounter2",
-        "start_date": 1339318800000,
-        "end_date": 1349741700000,
-        "value": [
+        "diagnoses": [
+          {
+            "code": "111297002",
+            "codeSystem": "SNOMED-CT",
+            "version": null,
+            "descriptor": "Ischemic Stroke"
+          }
+        ],
+        "dischargeDisposition": null,
+        "facilityLocations": [
 
         ],
-        "field_values": {
-          "PRINCIPAL_DIAGNOSIS": {
-            "type": "CD",
-            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
-            "field_title": "Principal Diagnosis",
-            "title": "Ischemic Stroke"
-          }
+        "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "59cbf4e7942c6d4064006399"
         },
-        "hqmf_set_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
-        "cms_id": "CMS107v6",
-        "codes": {
-          "SNOMED-CT": [
-            "32485007"
-          ]
+        "lengthOfStay": {
+          "value": 121,
+          "unit": "days"
         },
-        "negation_code_list_id": "",
-        "coded_entry_id": "59cbf4e7942c6d4064006399",
-        "code_source": "DEFAULT",
-        "references": null,
-        "criteria_id": "15318bef86dQ9"
+        "negationRationale": null,
+        "principalDiagnosis": {
+          "code": "111297002",
+          "codeSystem": "SNOMED-CT",
+          "descriptor": "Ischemic Stroke",
+          "codeSystemOid": null,
+          "version": null
+        },
+        "qdmCategory": "encounter",
+        "qdmStatus": "performed",
+        "qdmVersion": "5.4",
+        "relevantPeriod": {
+          "low": "2012-06-10T09:00:00.000+00:00",
+          "high": "2012-10-09T00:15:00.000+00:00",
+          "lowClosed": true,
+          "highClosed": true
+        },
+        "patient": {
+          "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-06-10T05:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "32485007"
+                }
+              ],
+              "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+              "diagnoses": [
+                {
+                  "code": "111297002",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Ischemic Stroke"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "59cbf4e7942c6d4064006399"
+              },
+              "lengthOfStay": {
+                "value": 121,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "111297002",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Ischemic Stroke",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-06-10T09:00:00.000+00:00",
+                "high": "2012-10-09T00:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933caa"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cab"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2076-8",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Native Hawaiian or Other Pacific Islander",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cac"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cad"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "type": null,
+            "measure_ids": [
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "Non-Elective Inpatient Encounter",
+                "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.424",
+                "type": "encounters",
+                "id": "OccurrenceANonElectiveInpatientEncounter2",
+                "start_date": 1339318800000,
+                "end_date": 1349741700000,
+                "value": [
+
+                ],
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Ischemic Stroke"
+                  }
+                },
+                "hqmf_set_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+                "cms_id": "CMS107v6",
+                "codes": {
+                  "SNOMED-CT": [
+                    "32485007"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "59cbf4e7942c6d4064006399",
+                "code_source": "DEFAULT",
+                "references": null,
+                "criteria_id": "15318bef86dQ9"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": null,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "10a9d6418821c8a753da1c0498b79381",
+            "medical_record_assigner": "Bonnie",
+            "description": null,
+            "description_category": null,
+            "insurance_providers": "[]"
+          },
+          "qdmVersion": "5.4"
+        }
       },
       {
-        "id": "MeasurePeriod",
-        "start_date": 0,
-        "end_date": 0,
-        "references": null
+        "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+        "dataElementCodes": [
+          {
+            "code": "21112-8",
+            "codeSystem": "LOINC",
+            "descriptor": null,
+            "codeSystemOid": null,
+            "version": null,
+            "_type": "QDM::Code"
+          }
+        ],
+        "description": null,
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5c3798ff57a11ecd2e933caa"
+        },
+        "qdmCategory": "patient_characteristic",
+        "qdmStatus": "birthdate",
+        "qdmVersion": "5.4",
+        "patient": {
+          "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-06-10T05:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "32485007"
+                }
+              ],
+              "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+              "diagnoses": [
+                {
+                  "code": "111297002",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Ischemic Stroke"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "59cbf4e7942c6d4064006399"
+              },
+              "lengthOfStay": {
+                "value": 121,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "111297002",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Ischemic Stroke",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-06-10T09:00:00.000+00:00",
+                "high": "2012-10-09T00:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933caa"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cab"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2076-8",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Native Hawaiian or Other Pacific Islander",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cac"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cad"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "type": null,
+            "measure_ids": [
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "Non-Elective Inpatient Encounter",
+                "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.424",
+                "type": "encounters",
+                "id": "OccurrenceANonElectiveInpatientEncounter2",
+                "start_date": 1339318800000,
+                "end_date": 1349741700000,
+                "value": [
+
+                ],
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Ischemic Stroke"
+                  }
+                },
+                "hqmf_set_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+                "cms_id": "CMS107v6",
+                "codes": {
+                  "SNOMED-CT": [
+                    "32485007"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "59cbf4e7942c6d4064006399",
+                "code_source": "DEFAULT",
+                "references": null,
+                "criteria_id": "15318bef86dQ9"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": null,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "10a9d6418821c8a753da1c0498b79381",
+            "medical_record_assigner": "Bonnie",
+            "description": null,
+            "description_category": null,
+            "insurance_providers": "[]"
+          },
+          "qdmVersion": "5.4"
+        }
+      },
+      {
+        "dataElementCodes": [
+          {
+            "code": "2135-2",
+            "codeSystem": "CDC Race",
+            "descriptor": "Hispanic Or Latino",
+            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "version": null,
+            "_type": "QDM::Code"
+          }
+        ],
+        "description": null,
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5c3798ff57a11ecd2e933cab"
+        },
+        "qdmCategory": "patient_characteristic",
+        "qdmStatus": "ethnicity",
+        "qdmVersion": "5.4",
+        "patient": {
+          "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-06-10T05:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "32485007"
+                }
+              ],
+              "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+              "diagnoses": [
+                {
+                  "code": "111297002",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Ischemic Stroke"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "59cbf4e7942c6d4064006399"
+              },
+              "lengthOfStay": {
+                "value": 121,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "111297002",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Ischemic Stroke",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-06-10T09:00:00.000+00:00",
+                "high": "2012-10-09T00:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933caa"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cab"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2076-8",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Native Hawaiian or Other Pacific Islander",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cac"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cad"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "type": null,
+            "measure_ids": [
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "Non-Elective Inpatient Encounter",
+                "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.424",
+                "type": "encounters",
+                "id": "OccurrenceANonElectiveInpatientEncounter2",
+                "start_date": 1339318800000,
+                "end_date": 1349741700000,
+                "value": [
+
+                ],
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Ischemic Stroke"
+                  }
+                },
+                "hqmf_set_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+                "cms_id": "CMS107v6",
+                "codes": {
+                  "SNOMED-CT": [
+                    "32485007"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "59cbf4e7942c6d4064006399",
+                "code_source": "DEFAULT",
+                "references": null,
+                "criteria_id": "15318bef86dQ9"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": null,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "10a9d6418821c8a753da1c0498b79381",
+            "medical_record_assigner": "Bonnie",
+            "description": null,
+            "description_category": null,
+            "insurance_providers": "[]"
+          },
+          "qdmVersion": "5.4"
+        }
+      },
+      {
+        "dataElementCodes": [
+          {
+            "code": "2076-8",
+            "codeSystem": "CDC Race",
+            "descriptor": "Native Hawaiian or Other Pacific Islander",
+            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "version": null,
+            "_type": "QDM::Code"
+          }
+        ],
+        "description": null,
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5c3798ff57a11ecd2e933cac"
+        },
+        "qdmCategory": "patient_characteristic",
+        "qdmStatus": "race",
+        "qdmVersion": "5.4",
+        "patient": {
+          "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-06-10T05:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "32485007"
+                }
+              ],
+              "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+              "diagnoses": [
+                {
+                  "code": "111297002",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Ischemic Stroke"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "59cbf4e7942c6d4064006399"
+              },
+              "lengthOfStay": {
+                "value": 121,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "111297002",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Ischemic Stroke",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-06-10T09:00:00.000+00:00",
+                "high": "2012-10-09T00:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933caa"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cab"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2076-8",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Native Hawaiian or Other Pacific Islander",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cac"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cad"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "type": null,
+            "measure_ids": [
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "Non-Elective Inpatient Encounter",
+                "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.424",
+                "type": "encounters",
+                "id": "OccurrenceANonElectiveInpatientEncounter2",
+                "start_date": 1339318800000,
+                "end_date": 1349741700000,
+                "value": [
+
+                ],
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Ischemic Stroke"
+                  }
+                },
+                "hqmf_set_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+                "cms_id": "CMS107v6",
+                "codes": {
+                  "SNOMED-CT": [
+                    "32485007"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "59cbf4e7942c6d4064006399",
+                "code_source": "DEFAULT",
+                "references": null,
+                "criteria_id": "15318bef86dQ9"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": null,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "10a9d6418821c8a753da1c0498b79381",
+            "medical_record_assigner": "Bonnie",
+            "description": null,
+            "description_category": null,
+            "insurance_providers": "[]"
+          },
+          "qdmVersion": "5.4"
+        }
+      },
+      {
+        "dataElementCodes": [
+          {
+            "code": "F",
+            "codeSystem": "AdministrativeGender",
+            "descriptor": "F",
+            "codeSystemOid": "2.16.840.1.113883.5.1",
+            "version": null,
+            "_type": "QDM::Code"
+          }
+        ],
+        "description": null,
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5c3798ff57a11ecd2e933cad"
+        },
+        "qdmCategory": "patient_characteristic",
+        "qdmStatus": "gender",
+        "qdmVersion": "5.4",
+        "patient": {
+          "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-06-10T05:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "32485007"
+                }
+              ],
+              "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+              "diagnoses": [
+                {
+                  "code": "111297002",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Ischemic Stroke"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "59cbf4e7942c6d4064006399"
+              },
+              "lengthOfStay": {
+                "value": 121,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "111297002",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Ischemic Stroke",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-06-10T09:00:00.000+00:00",
+                "high": "2012-10-09T00:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933caa"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cab"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2076-8",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Native Hawaiian or Other Pacific Islander",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cac"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c3798ff57a11ecd2e933cad"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "type": null,
+            "measure_ids": [
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "Non-Elective Inpatient Encounter",
+                "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.424",
+                "type": "encounters",
+                "id": "OccurrenceANonElectiveInpatientEncounter2",
+                "start_date": 1339318800000,
+                "end_date": 1349741700000,
+                "value": [
+
+                ],
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Ischemic Stroke"
+                  }
+                },
+                "hqmf_set_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+                "cms_id": "CMS107v6",
+                "codes": {
+                  "SNOMED-CT": [
+                    "32485007"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "59cbf4e7942c6d4064006399",
+                "code_source": "DEFAULT",
+                "references": null,
+                "criteria_id": "15318bef86dQ9"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": null,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "10a9d6418821c8a753da1c0498b79381",
+            "medical_record_assigner": "Bonnie",
+            "description": null,
+            "description_category": null,
+            "insurance_providers": "[]"
+          },
+          "qdmVersion": "5.4"
+        }
       }
     ],
-    "is_shared": null,
-    "origin_data": [
+    "extendedData": {
+      "type": null,
+      "measure_ids": [
+        "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+        null
+      ],
+      "source_data_criteria": [
+        {
+          "negation": false,
+          "definition": "encounter",
+          "status": "performed",
+          "title": "Non-Elective Inpatient Encounter",
+          "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.424",
+          "type": "encounters",
+          "id": "OccurrenceANonElectiveInpatientEncounter2",
+          "start_date": 1339318800000,
+          "end_date": 1349741700000,
+          "value": [
 
-    ],
-    "test_id": null,
-    "medical_record_number": "10a9d6418821c8a753da1c0498b79381",
-    "medical_record_assigner": "Bonnie",
-    "description": null,
-    "description_category": null,
-    "insurance_providers": "[]"
-  },
-  "qdmVersion": "5.4"
+          ],
+          "field_values": {
+            "PRINCIPAL_DIAGNOSIS": {
+              "type": "CD",
+              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+              "field_title": "Principal Diagnosis",
+              "title": "Ischemic Stroke"
+            }
+          },
+          "hqmf_set_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+          "cms_id": "CMS107v6",
+          "codes": {
+            "SNOMED-CT": [
+              "32485007"
+            ]
+          },
+          "negation_code_list_id": "",
+          "coded_entry_id": "59cbf4e7942c6d4064006399",
+          "code_source": "DEFAULT",
+          "references": null,
+          "criteria_id": "15318bef86dQ9"
+        },
+        {
+          "id": "MeasurePeriod",
+          "start_date": 0,
+          "end_date": 0,
+          "references": null
+        }
+      ],
+      "is_shared": null,
+      "origin_data": [
+
+      ],
+      "test_id": null,
+      "medical_record_number": "10a9d6418821c8a753da1c0498b79381",
+      "medical_record_assigner": "Bonnie",
+      "description": null,
+      "description_category": null,
+      "insurance_providers": "[]"
+    },
+    "qdmVersion": "5.4"
+  }
 }
