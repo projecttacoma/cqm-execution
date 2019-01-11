@@ -190,7 +190,7 @@ describe('Calculator', () => {
     const numPassResults = calculationResults[Object.keys(calculationResults)[0]];
 
     // Patient expiredDenexResults Population Set 1
-    const pop2Strat1 = numPassResults['PopulationCriteria2 - Stratification 1'];
+    const pop2Strat1 = numPassResults['PopulationCriteria2'];
     const pop2Strat1StatementResults = pop2Strat1.statement_results.DepressionUtilizationofthePHQ9Tool;
     expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
   });
@@ -630,7 +630,7 @@ describe('Calculator', () => {
       const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
-      const sampleResult = result['statement_results']['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant'];
+      const sampleResult = result.statement_results['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant'];
       const sampleResultId = sampleResult.raw[0].id.value;
       expect(sampleResult['pretty']).toEqual(`[{\n  authorDatetime: 11/01/2012 10:00 AM,\n  id: {\n    namingSystem: null,\n    value: "${sampleResultId}"\n  }\n}]`);
     });

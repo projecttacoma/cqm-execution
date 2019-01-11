@@ -5,7 +5,7 @@ const cql = require('cqm-models').CQL;
 const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 const Calculator = require('../../lib/models/calculator.js');
 
-describe('MeasureHelpers', () => {
+describe('ResultsHelpers', () => {
   describe('prettyResult', () => {
     it('should not destroy objects passed in', () => {
       const before = { a: 1, b: 2 };
@@ -52,8 +52,8 @@ describe('MeasureHelpers', () => {
 
     describe('pretty statement results when requested', () => {
       it('for CMS107v6 correctly', () => {
-        const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
-        const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
+        const valueSetsByOid = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
@@ -65,8 +65,8 @@ describe('MeasureHelpers', () => {
       });
 
       it('for CMS760v0 correctly', () => {
-        const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
-        const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
+        const valueSetsByOid = getJSONFixture('cqm_measures/CMS760v0/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS760v0/CMS760v0.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
@@ -76,8 +76,8 @@ describe('MeasureHelpers', () => {
       });
 
       it('for CMS32v7 correctly', () => {
-        const valueSetsByOid = getJSONFixture('measures/CMS32v7/value_sets.json');
-        const measure = getJSONFixture('measures/CMS32v7/CMS32v7.json');
+        const valueSetsByOid = getJSONFixture('cqm_measures/CMS32v7/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS32v7/CMS32v7.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
@@ -90,8 +90,8 @@ describe('MeasureHelpers', () => {
       });
 
       it('for CMS735v0 correctly', () => {
-        const valueSetsByOid = getJSONFixture('measures/CMS735v0/value_sets.json');
-        const measure = getJSONFixture('measures/CMS735v0/CMS735v0.json');
+        const valueSetsByOid = getJSONFixture('cqm_measures/CMS735v0/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS735v0/CMS735v0.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS735v0/first_last.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
@@ -101,8 +101,8 @@ describe('MeasureHelpers', () => {
       });
 
       it('for CMS460v0 correctly', () => {
-        const valueSetsByOid = getJSONFixture('measures/CMS460v0/value_sets.json');
-        const measure = getJSONFixture('measures/CMS460v0/CMS460v0.json');
+        const valueSetsByOid = getJSONFixture('cqm_measures/CMS460v0/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS460v0/CMS460v0.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
@@ -119,8 +119,8 @@ describe('MeasureHelpers', () => {
       });
 
       it('should use prevalencePeriod for Diagnosis and infinity dates should not be included', () => {
-        const valueSetsByOid = getJSONFixture('measures/CMS134v6/value_sets.json');
-        const measure = getJSONFixture('measures/CMS134v6/CMS134v6.json');
+        const valueSetsByOid = getJSONFixture('cqm_measures/CMS134v6/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS134v6/CMS134v6.json');
         const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
         const patients = [];
         patients.push(passNumer.qdmPatient);
@@ -132,8 +132,8 @@ describe('MeasureHelpers', () => {
       });
 
       it('should use relevantPeriod for START and END dates for Encounter', () => {
-        const valueSetsByOid = getJSONFixture('measures/CMS134v6/value_sets.json');
-        const measure = getJSONFixture('measures/CMS134v6/CMS134v6.json');
+        const valueSetsByOid = getJSONFixture('cqm_measures/CMS134v6/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS134v6/CMS134v6.json');
         const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
         const patients = [];
         patients.push(passNumer.qdmPatient);
@@ -145,8 +145,8 @@ describe('MeasureHelpers', () => {
       });
 
       it('should use authorDatetime for START date for Intervention Order', () => {
-        const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
-        const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
+        const valueSetsByOid = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
@@ -158,8 +158,8 @@ describe('MeasureHelpers', () => {
 
     describe('no pretty statement results when not requested', () =>
       it('for CMS107 correctly', () => {
-        const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
-        const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
+        const valueSetsByOid = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
