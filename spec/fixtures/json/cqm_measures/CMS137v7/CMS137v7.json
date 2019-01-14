@@ -18880,7 +18880,7 @@
   },
   "population_sets": [
     {
-      "id": "PopulationCriteria1",
+      "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
@@ -18902,26 +18902,26 @@
       },
       "stratifications": [
         {
-          "id": "PopulationCriteria1 - Stratification 1",
           "statement": {
             "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
             "statement_name": "Stratification 1"
           },
+          "stratification_id": "PopulationCriteria1 - Stratification 1",
           "title": "Stratification 1"
         },
         {
-          "id": "PopulationCriteria1 - Stratification 2",
           "statement": {
             "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
             "statement_name": "Stratification 2"
           },
+          "stratification_id": "PopulationCriteria1 - Stratification 2",
           "title": "Stratification 2"
         }
       ],
       "title": "Population Criteria Section 1"
     },
     {
-      "id": "PopulationCriteria2",
+      "population_set_id": "PopulationCriteria2",
       "populations": {
         "DENEX": {
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
@@ -18943,19 +18943,19 @@
       },
       "stratifications": [
         {
-          "id": "PopulationCriteria2 - Stratification 1",
           "statement": {
             "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
             "statement_name": "Stratification 1"
           },
+          "stratification_id": "PopulationCriteria2 - Stratification 1",
           "title": "Stratification 1"
         },
         {
-          "id": "PopulationCriteria2 - Stratification 2",
           "statement": {
             "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
             "statement_name": "Stratification 2"
           },
+          "stratification_id": "PopulationCriteria2 - Stratification 2",
           "title": "Stratification 2"
         }
       ],
@@ -19358,27 +19358,27 @@
   "title": "Initiation and Engagement of Alcohol and Other Drug Dependence Treatment",
   "updated_at": null,
   "value_set_ids": [
-    "5c37b055ef33a54e7970dee5",
-    "5c37b055ef33a54e7970dee6",
-    "5c37b055ef33a54e7970dee7",
-    "5c37b055ef33a54e7970dee8",
-    "5c37b055ef33a54e7970dee9",
-    "5c37b055ef33a54e7970deea",
-    "5c37b055ef33a54e7970deeb",
-    "5c37b055ef33a54e7970deec",
-    "5c37b055ef33a54e7970deed",
-    "5c37b055ef33a54e7970deee",
-    "5c37b055ef33a54e7970deef",
-    "5c37b055ef33a54e7970def0",
-    "5c37b055ef33a54e7970def1",
-    "5c37b055ef33a54e7970def2",
-    "5c37b055ef33a54e7970def3",
-    "5c37b055ef33a54e7970def4",
-    "5c37b055ef33a54e7970def5",
-    "5c37b055ef33a54e7970def6",
-    "5c37b055ef33a54e7970def7",
-    "5c37b055ef33a54e7970def8",
-    "5c37b055ef33a54e7970def9",
-    "5c37b055ef33a54e7970defa"
+    "5c3cf6d1ef33a5d37f355500",
+    "5c3cf6d1ef33a5d37f355501",
+    "5c3cf6d1ef33a5d37f355502",
+    "5c3cf6d1ef33a5d37f355503",
+    "5c3cf6d1ef33a5d37f355504",
+    "5c3cf6d1ef33a5d37f355505",
+    "5c3cf6d1ef33a5d37f355506",
+    "5c3cf6d1ef33a5d37f355507",
+    "5c3cf6d1ef33a5d37f355508",
+    "5c3cf6d1ef33a5d37f355509",
+    "5c3cf6d1ef33a5d37f35550a",
+    "5c3cf6d1ef33a5d37f35550b",
+    "5c3cf6d1ef33a5d37f35550c",
+    "5c3cf6d1ef33a5d37f35550d",
+    "5c3cf6d1ef33a5d37f35550e",
+    "5c3cf6d1ef33a5d37f35550f",
+    "5c3cf6d1ef33a5d37f355510",
+    "5c3cf6d1ef33a5d37f355511",
+    "5c3cf6d1ef33a5d37f355512",
+    "5c3cf6d1ef33a5d37f355513",
+    "5c3cf6d1ef33a5d37f355514",
+    "5c3cf6d1ef33a5d37f355515"
   ]
 }

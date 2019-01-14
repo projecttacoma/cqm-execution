@@ -17855,7 +17855,7 @@
   },
   "population_sets": [
     {
-      "id": "PopulationCriteria1",
+      "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
           "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
@@ -18230,26 +18230,26 @@
   "title": "Primary PCI Received Within 90 Minutes of Hospital Arrival",
   "updated_at": null,
   "value_set_ids": [
-    "5c37b080ef33a54e95c6b1d5",
-    "5c37b080ef33a54e95c6b1d6",
-    "5c37b080ef33a54e95c6b1d7",
-    "5c37b080ef33a54e95c6b1d8",
-    "5c37b080ef33a54e95c6b1d9",
-    "5c37b080ef33a54e95c6b1da",
-    "5c37b080ef33a54e95c6b1db",
-    "5c37b080ef33a54e95c6b1dc",
-    "5c37b080ef33a54e95c6b1dd",
-    "5c37b080ef33a54e95c6b1de",
-    "5c37b080ef33a54e95c6b1df",
-    "5c37b080ef33a54e95c6b1e0",
-    "5c37b080ef33a54e95c6b1e1",
-    "5c37b080ef33a54e95c6b1e2",
-    "5c37b080ef33a54e95c6b1e3",
-    "5c37b080ef33a54e95c6b1e4",
-    "5c37b080ef33a54e95c6b1e5",
-    "5c37b080ef33a54e95c6b1e6",
-    "5c37b080ef33a54e95c6b1e7",
-    "5c37b080ef33a54e95c6b1e8",
-    "5c37b080ef33a54e95c6b1e9"
+    "5c3cf6f8ef33a5d39b4c06db",
+    "5c3cf6f8ef33a5d39b4c06dc",
+    "5c3cf6f8ef33a5d39b4c06dd",
+    "5c3cf6f8ef33a5d39b4c06de",
+    "5c3cf6f8ef33a5d39b4c06df",
+    "5c3cf6f8ef33a5d39b4c06e0",
+    "5c3cf6f8ef33a5d39b4c06e1",
+    "5c3cf6f8ef33a5d39b4c06e2",
+    "5c3cf6f8ef33a5d39b4c06e3",
+    "5c3cf6f8ef33a5d39b4c06e4",
+    "5c3cf6f8ef33a5d39b4c06e5",
+    "5c3cf6f8ef33a5d39b4c06e6",
+    "5c3cf6f8ef33a5d39b4c06e7",
+    "5c3cf6f8ef33a5d39b4c06e8",
+    "5c3cf6f8ef33a5d39b4c06e9",
+    "5c3cf6f8ef33a5d39b4c06ea",
+    "5c3cf6f8ef33a5d39b4c06eb",
+    "5c3cf6f8ef33a5d39b4c06ec",
+    "5c3cf6f8ef33a5d39b4c06ed",
+    "5c3cf6f8ef33a5d39b4c06ee",
+    "5c3cf6f8ef33a5d39b4c06ef"
   ]
 }

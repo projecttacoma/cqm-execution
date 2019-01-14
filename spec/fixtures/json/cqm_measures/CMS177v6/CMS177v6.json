@@ -3937,7 +3937,7 @@
   },
   "population_sets": [
     {
-      "id": "PopulationCriteria1",
+      "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENOM": {
           "library_name": "ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment",
@@ -4297,19 +4297,19 @@
   "title": "Child and Adolescent Major Depressive Disorder (MDD): Suicide Risk Assessment",
   "updated_at": null,
   "value_set_ids": [
-    "5c37b065ef33a54e86e44130",
-    "5c37b065ef33a54e86e44131",
-    "5c37b065ef33a54e86e44132",
-    "5c37b065ef33a54e86e44133",
-    "5c37b065ef33a54e86e44134",
-    "5c37b065ef33a54e86e44135",
-    "5c37b065ef33a54e86e44136",
-    "5c37b065ef33a54e86e44137",
-    "5c37b065ef33a54e86e44138",
-    "5c37b065ef33a54e86e44139",
-    "5c37b065ef33a54e86e4413a",
-    "5c37b065ef33a54e86e4413b",
-    "5c37b065ef33a54e86e4413c",
-    "5c37b065ef33a54e86e4413d"
+    "5c3cf6dfef33a5d38da6228b",
+    "5c3cf6dfef33a5d38da6228c",
+    "5c3cf6dfef33a5d38da6228d",
+    "5c3cf6dfef33a5d38da6228e",
+    "5c3cf6dfef33a5d38da6228f",
+    "5c3cf6dfef33a5d38da62290",
+    "5c3cf6dfef33a5d38da62291",
+    "5c3cf6dfef33a5d38da62292",
+    "5c3cf6dfef33a5d38da62293",
+    "5c3cf6dfef33a5d38da62294",
+    "5c3cf6dfef33a5d38da62295",
+    "5c3cf6dfef33a5d38da62296",
+    "5c3cf6dfef33a5d38da62297",
+    "5c3cf6dfef33a5d38da62298"
   ]
 }

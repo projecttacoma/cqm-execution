@@ -4474,7 +4474,6 @@
   },
   "population_sets": [
     {
-      "id": "PopulationCriteria1",
       "observations": [
         {
           "aggregation_type": null,
@@ -4488,6 +4487,7 @@
           }
         }
       ],
+      "population_set_id": "PopulationCriteria1",
       "populations": {
         "IPP": {
           "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
@@ -4505,27 +4505,27 @@
       },
       "stratifications": [
         {
-          "id": "PopulationCriteria1 - Stratification 1",
           "statement": {
             "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
             "statement_name": "Stratification 1"
           },
+          "stratification_id": "PopulationCriteria1 - Stratification 1",
           "title": "Stratification 1"
         },
         {
-          "id": "PopulationCriteria1 - Stratification 2",
           "statement": {
             "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
             "statement_name": "Stratification 2"
           },
+          "stratification_id": "PopulationCriteria1 - Stratification 2",
           "title": "Stratification 2"
         },
         {
-          "id": "PopulationCriteria1 - Stratification 3",
           "statement": {
             "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
             "statement_name": "Stratification 3"
           },
+          "stratification_id": "PopulationCriteria1 - Stratification 3",
           "title": "Stratification 3"
         }
       ],
@@ -4789,14 +4789,14 @@
   "title": "Median Time from ED Arrival to ED Departure for Discharged ED Patients",
   "updated_at": null,
   "value_set_ids": [
-    "5c37b069ef33a54e8a43d574",
-    "5c37b069ef33a54e8a43d575",
-    "5c37b069ef33a54e8a43d576",
-    "5c37b069ef33a54e8a43d577",
-    "5c37b069ef33a54e8a43d578",
-    "5c37b069ef33a54e8a43d579",
-    "5c37b069ef33a54e8a43d57a",
-    "5c37b069ef33a54e8a43d57b",
-    "5c37b069ef33a54e8a43d57c"
+    "5c3cf6e4ef33a5d39073253c",
+    "5c3cf6e4ef33a5d39073253d",
+    "5c3cf6e4ef33a5d39073253e",
+    "5c3cf6e4ef33a5d39073253f",
+    "5c3cf6e4ef33a5d390732540",
+    "5c3cf6e4ef33a5d390732541",
+    "5c3cf6e4ef33a5d390732542",
+    "5c3cf6e4ef33a5d390732543",
+    "5c3cf6e4ef33a5d390732544"
   ]
 }

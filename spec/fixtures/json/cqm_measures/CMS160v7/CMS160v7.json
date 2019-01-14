@@ -31327,7 +31327,7 @@
   },
   "population_sets": [
     {
-      "id": "PopulationCriteria1",
+      "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
           "library_name": "DepressionUtilizationofthePHQ9Tool",
@@ -31349,26 +31349,26 @@
       },
       "stratifications": [
         {
-          "id": "PopulationCriteria1 - Stratification 1",
           "statement": {
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 1_1"
           },
+          "stratification_id": "PopulationCriteria1 - Stratification 1",
           "title": "Population 1 Strata 1"
         },
         {
-          "id": "PopulationCriteria1 - Stratification 2",
           "statement": {
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 1_2"
           },
+          "stratification_id": "PopulationCriteria1 - Stratification 2",
           "title": "Population 1 Strata 2"
         }
       ],
       "title": "Population 1 - Sept thru Dec"
     },
     {
-      "id": "PopulationCriteria2",
+      "population_set_id": "PopulationCriteria2",
       "populations": {
         "DENEX": {
           "library_name": "DepressionUtilizationofthePHQ9Tool",
@@ -31390,26 +31390,26 @@
       },
       "stratifications": [
         {
-          "id": "PopulationCriteria2 - Stratification 1",
           "statement": {
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 2_1"
           },
+          "stratification_id": "PopulationCriteria2 - Stratification 1",
           "title": "Population 2 Strata 1"
         },
         {
-          "id": "PopulationCriteria2 - Stratification 2",
           "statement": {
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 2_2"
           },
+          "stratification_id": "PopulationCriteria2 - Stratification 2",
           "title": "Population 2 Strata 2"
         }
       ],
       "title": "Population 2 - May thru Aug"
     },
     {
-      "id": "PopulationCriteria3",
+      "population_set_id": "PopulationCriteria3",
       "populations": {
         "DENEX": {
           "library_name": "DepressionUtilizationofthePHQ9Tool",
@@ -31431,19 +31431,19 @@
       },
       "stratifications": [
         {
-          "id": "PopulationCriteria3 - Stratification 1",
           "statement": {
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 3_1"
           },
+          "stratification_id": "PopulationCriteria3 - Stratification 1",
           "title": "Population 3 Strata 1"
         },
         {
-          "id": "PopulationCriteria3 - Stratification 2",
           "statement": {
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 3_2"
           },
+          "stratification_id": "PopulationCriteria3 - Stratification 2",
           "title": "Population 3 Strata 2"
         }
       ],
@@ -31822,25 +31822,25 @@
   "title": "Depression Utilization of the PHQ-9 Tool",
   "updated_at": null,
   "value_set_ids": [
-    "5c37b061ef33a54e83b9e359",
-    "5c37b061ef33a54e83b9e35a",
-    "5c37b061ef33a54e83b9e35b",
-    "5c37b061ef33a54e83b9e35c",
-    "5c37b061ef33a54e83b9e35d",
-    "5c37b061ef33a54e83b9e35e",
-    "5c37b061ef33a54e83b9e35f",
-    "5c37b061ef33a54e83b9e360",
-    "5c37b061ef33a54e83b9e361",
-    "5c37b061ef33a54e83b9e362",
-    "5c37b061ef33a54e83b9e363",
-    "5c37b061ef33a54e83b9e364",
-    "5c37b061ef33a54e83b9e365",
-    "5c37b061ef33a54e83b9e366",
-    "5c37b061ef33a54e83b9e367",
-    "5c37b061ef33a54e83b9e368",
-    "5c37b061ef33a54e83b9e369",
-    "5c37b061ef33a54e83b9e36a",
-    "5c37b061ef33a54e83b9e36b",
-    "5c37b061ef33a54e83b9e36c"
+    "5c3cf6dcef33a5d3895a94ff",
+    "5c3cf6dcef33a5d3895a9500",
+    "5c3cf6dcef33a5d3895a9501",
+    "5c3cf6dcef33a5d3895a9502",
+    "5c3cf6dcef33a5d3895a9503",
+    "5c3cf6dcef33a5d3895a9504",
+    "5c3cf6dcef33a5d3895a9505",
+    "5c3cf6dcef33a5d3895a9506",
+    "5c3cf6dcef33a5d3895a9507",
+    "5c3cf6dcef33a5d3895a9508",
+    "5c3cf6dcef33a5d3895a9509",
+    "5c3cf6dcef33a5d3895a950a",
+    "5c3cf6dcef33a5d3895a950b",
+    "5c3cf6dcef33a5d3895a950c",
+    "5c3cf6dcef33a5d3895a950d",
+    "5c3cf6dcef33a5d3895a950e",
+    "5c3cf6dcef33a5d3895a950f",
+    "5c3cf6dcef33a5d3895a9510",
+    "5c3cf6dcef33a5d3895a9511",
+    "5c3cf6dcef33a5d3895a9512"
   ]
 }

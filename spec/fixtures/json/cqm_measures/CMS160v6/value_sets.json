@@ -1,9 +1,9 @@
 [
   {
-    "_id": "5c37b05cef33a54e7fd3edd1",
+    "_id": "5c3cf6d8ef33a5d3869d34bd",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3ede1",
+        "_id": "5c3cf6d8ef33a5d3869d34cd",
         "code": "F",
         "code_system_name": "AdministrativeGender",
         "code_system_oid": "2.16.840.1.113883.5.1",
@@ -11,7 +11,7 @@
         "display_name": "Female"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ede2",
+        "_id": "5c3cf6d8ef33a5d3869d34ce",
         "code": "M",
         "code_system_name": "AdministrativeGender",
         "code_system_oid": "2.16.840.1.113883.5.1",
@@ -24,10 +24,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edd2",
+    "_id": "5c3cf6d8ef33a5d3869d34be",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3ede3",
+        "_id": "5c3cf6d8ef33a5d3869d34cf",
         "code": "1002-5",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -35,7 +35,7 @@
         "display_name": "American Indian or Alaska Native"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ede4",
+        "_id": "5c3cf6d8ef33a5d3869d34d0",
         "code": "2028-9",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -43,7 +43,7 @@
         "display_name": "Asian"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ede5",
+        "_id": "5c3cf6d8ef33a5d3869d34d1",
         "code": "2054-5",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -51,7 +51,7 @@
         "display_name": "Black or African American"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ede6",
+        "_id": "5c3cf6d8ef33a5d3869d34d2",
         "code": "2076-8",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -59,7 +59,7 @@
         "display_name": "Native Hawaiian or Other Pacific Islander"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ede7",
+        "_id": "5c3cf6d8ef33a5d3869d34d3",
         "code": "2106-3",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -67,7 +67,7 @@
         "display_name": "White"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ede8",
+        "_id": "5c3cf6d8ef33a5d3869d34d4",
         "code": "2131-1",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -80,10 +80,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edd3",
+    "_id": "5c3cf6d8ef33a5d3869d34bf",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3ede9",
+        "_id": "5c3cf6d8ef33a5d3869d34d5",
         "code": "2135-2",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -91,7 +91,7 @@
         "display_name": "Hispanic or Latino"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edea",
+        "_id": "5c3cf6d8ef33a5d3869d34d6",
         "code": "2186-5",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -104,10 +104,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edd4",
+    "_id": "5c3cf6d8ef33a5d3869d34c0",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3edeb",
+        "_id": "5c3cf6d8ef33a5d3869d34d7",
         "code": "1",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -115,7 +115,7 @@
         "display_name": "MEDICARE"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edec",
+        "_id": "5c3cf6d8ef33a5d3869d34d8",
         "code": "11",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -123,7 +123,7 @@
         "display_name": "Medicare (Managed Care)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eded",
+        "_id": "5c3cf6d8ef33a5d3869d34d9",
         "code": "111",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -131,7 +131,7 @@
         "display_name": "Medicare HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edee",
+        "_id": "5c3cf6d8ef33a5d3869d34da",
         "code": "112",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -139,7 +139,7 @@
         "display_name": "Medicare PPO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edef",
+        "_id": "5c3cf6d8ef33a5d3869d34db",
         "code": "113",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -147,7 +147,7 @@
         "display_name": "Medicare POS"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf0",
+        "_id": "5c3cf6d8ef33a5d3869d34dc",
         "code": "119",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -155,7 +155,7 @@
         "display_name": "Medicare Managed Care Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf1",
+        "_id": "5c3cf6d8ef33a5d3869d34dd",
         "code": "12",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -163,7 +163,7 @@
         "display_name": "Medicare (Non-managed Care)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf2",
+        "_id": "5c3cf6d8ef33a5d3869d34de",
         "code": "121",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -171,7 +171,7 @@
         "display_name": "Medicare FFS"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf3",
+        "_id": "5c3cf6d8ef33a5d3869d34df",
         "code": "122",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -179,7 +179,7 @@
         "display_name": "Medicare Drug Benefit"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf4",
+        "_id": "5c3cf6d8ef33a5d3869d34e0",
         "code": "123",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -187,7 +187,7 @@
         "display_name": "Medicare Medical Savings Account (MSA)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf5",
+        "_id": "5c3cf6d8ef33a5d3869d34e1",
         "code": "129",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -195,7 +195,7 @@
         "display_name": "Medicare Non-managed Care Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf6",
+        "_id": "5c3cf6d8ef33a5d3869d34e2",
         "code": "13",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -203,7 +203,7 @@
         "display_name": "Medicare Hospice"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf7",
+        "_id": "5c3cf6d8ef33a5d3869d34e3",
         "code": "14",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -211,7 +211,7 @@
         "display_name": "Dual Eligibility Medicare/Medicaid Organization"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf8",
+        "_id": "5c3cf6d8ef33a5d3869d34e4",
         "code": "19",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -219,7 +219,7 @@
         "display_name": "Medicare Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edf9",
+        "_id": "5c3cf6d8ef33a5d3869d34e5",
         "code": "191",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -227,7 +227,7 @@
         "display_name": "Medicare Pharmacy Benefit Manager"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edfa",
+        "_id": "5c3cf6d8ef33a5d3869d34e6",
         "code": "2",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -235,7 +235,7 @@
         "display_name": "MEDICAID"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edfb",
+        "_id": "5c3cf6d8ef33a5d3869d34e7",
         "code": "21",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -243,7 +243,7 @@
         "display_name": "Medicaid (Managed Care)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edfc",
+        "_id": "5c3cf6d8ef33a5d3869d34e8",
         "code": "211",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -251,7 +251,7 @@
         "display_name": "Medicaid HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edfd",
+        "_id": "5c3cf6d8ef33a5d3869d34e9",
         "code": "212",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -259,7 +259,7 @@
         "display_name": "Medicaid PPO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edfe",
+        "_id": "5c3cf6d8ef33a5d3869d34ea",
         "code": "213",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -267,7 +267,7 @@
         "display_name": "Medicaid PCCM (Primary Care Case Management)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3edff",
+        "_id": "5c3cf6d8ef33a5d3869d34eb",
         "code": "219",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -275,7 +275,7 @@
         "display_name": "Medicaid Managed Care Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee00",
+        "_id": "5c3cf6d8ef33a5d3869d34ec",
         "code": "22",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -283,7 +283,7 @@
         "display_name": "Medicaid (Non-managed Care Plan)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee01",
+        "_id": "5c3cf6d8ef33a5d3869d34ed",
         "code": "23",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -291,7 +291,7 @@
         "display_name": "Medicaid/SCHIP"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee02",
+        "_id": "5c3cf6d8ef33a5d3869d34ee",
         "code": "24",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -299,7 +299,7 @@
         "display_name": "Medicaid Applicant"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee03",
+        "_id": "5c3cf6d8ef33a5d3869d34ef",
         "code": "25",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -307,7 +307,7 @@
         "display_name": "Medicaid - Out of State"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee04",
+        "_id": "5c3cf6d8ef33a5d3869d34f0",
         "code": "26",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -315,7 +315,7 @@
         "display_name": "Medicaid -- Long Term Care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee05",
+        "_id": "5c3cf6d8ef33a5d3869d34f1",
         "code": "29",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -323,7 +323,7 @@
         "display_name": "Medicaid Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee06",
+        "_id": "5c3cf6d8ef33a5d3869d34f2",
         "code": "291",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -331,7 +331,7 @@
         "display_name": "Medicaid Pharmacy Benefit Manager"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee07",
+        "_id": "5c3cf6d8ef33a5d3869d34f3",
         "code": "3",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -339,7 +339,7 @@
         "display_name": "OTHER GOVERNMENT (Federal/State/Local) (excluding Department of Corrections)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee08",
+        "_id": "5c3cf6d8ef33a5d3869d34f4",
         "code": "31",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -347,7 +347,7 @@
         "display_name": "Department of Defense"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee09",
+        "_id": "5c3cf6d8ef33a5d3869d34f5",
         "code": "311",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -355,7 +355,7 @@
         "display_name": "TRICARE (CHAMPUS)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee0a",
+        "_id": "5c3cf6d8ef33a5d3869d34f6",
         "code": "3111",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -363,7 +363,7 @@
         "display_name": "TRICARE Prime--HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee0b",
+        "_id": "5c3cf6d8ef33a5d3869d34f7",
         "code": "3112",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -371,7 +371,7 @@
         "display_name": "TRICARE Extra--PPO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee0c",
+        "_id": "5c3cf6d8ef33a5d3869d34f8",
         "code": "3113",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -379,7 +379,7 @@
         "display_name": "TRICARE Standard - Fee For Service"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee0d",
+        "_id": "5c3cf6d8ef33a5d3869d34f9",
         "code": "3114",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -387,7 +387,7 @@
         "display_name": "TRICARE For Life--Medicare Supplement"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee0e",
+        "_id": "5c3cf6d8ef33a5d3869d34fa",
         "code": "3115",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -395,7 +395,7 @@
         "display_name": "TRICARE Reserve Select"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee0f",
+        "_id": "5c3cf6d8ef33a5d3869d34fb",
         "code": "3116",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -403,7 +403,7 @@
         "display_name": "Uniformed Services Family Health Plan (USFHP) -- HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee10",
+        "_id": "5c3cf6d8ef33a5d3869d34fc",
         "code": "3119",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -411,7 +411,7 @@
         "display_name": "Department of Defense - (other)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee11",
+        "_id": "5c3cf6d8ef33a5d3869d34fd",
         "code": "312",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -419,7 +419,7 @@
         "display_name": "Military Treatment Facility"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee12",
+        "_id": "5c3cf6d8ef33a5d3869d34fe",
         "code": "3121",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -427,7 +427,7 @@
         "display_name": "Enrolled Prime--HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee13",
+        "_id": "5c3cf6d8ef33a5d3869d34ff",
         "code": "3122",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -435,7 +435,7 @@
         "display_name": "Non-enrolled Space Available"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee14",
+        "_id": "5c3cf6d8ef33a5d3869d3500",
         "code": "3123",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -443,7 +443,7 @@
         "display_name": "TRICARE For Life (TFL)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee15",
+        "_id": "5c3cf6d8ef33a5d3869d3501",
         "code": "313",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -451,7 +451,7 @@
         "display_name": "Dental --Stand Alone"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee16",
+        "_id": "5c3cf6d8ef33a5d3869d3502",
         "code": "32",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -459,7 +459,7 @@
         "display_name": "Department of Veterans Affairs"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee17",
+        "_id": "5c3cf6d8ef33a5d3869d3503",
         "code": "321",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -467,7 +467,7 @@
         "display_name": "Veteran care--Care provided to Veterans"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee18",
+        "_id": "5c3cf6d8ef33a5d3869d3504",
         "code": "3211",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -475,7 +475,7 @@
         "display_name": "Direct Care--Care provided in VA facilities"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee19",
+        "_id": "5c3cf6d8ef33a5d3869d3505",
         "code": "3212",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -483,7 +483,7 @@
         "display_name": "Indirect Care--Care provided outside VA facilities"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee1a",
+        "_id": "5c3cf6d8ef33a5d3869d3506",
         "code": "32121",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -491,7 +491,7 @@
         "display_name": "Fee Basis"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee1b",
+        "_id": "5c3cf6d8ef33a5d3869d3507",
         "code": "32122",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -499,7 +499,7 @@
         "display_name": "Foreign Fee/Foreign Medical Program(FMP)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee1c",
+        "_id": "5c3cf6d8ef33a5d3869d3508",
         "code": "32123",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -507,7 +507,7 @@
         "display_name": "Contract Nursing Home/Community Nursing Home"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee1d",
+        "_id": "5c3cf6d8ef33a5d3869d3509",
         "code": "32124",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -515,7 +515,7 @@
         "display_name": "State Veterans Home"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee1e",
+        "_id": "5c3cf6d8ef33a5d3869d350a",
         "code": "32125",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -523,7 +523,7 @@
         "display_name": "Sharing Agreements"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee1f",
+        "_id": "5c3cf6d8ef33a5d3869d350b",
         "code": "32126",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -531,7 +531,7 @@
         "display_name": "Other Federal Agency"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee20",
+        "_id": "5c3cf6d8ef33a5d3869d350c",
         "code": "322",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -539,7 +539,7 @@
         "display_name": "Non-veteran care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee21",
+        "_id": "5c3cf6d8ef33a5d3869d350d",
         "code": "3221",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -547,7 +547,7 @@
         "display_name": "Civilian Health and Medical Program for the VA (CHAMPVA)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee22",
+        "_id": "5c3cf6d8ef33a5d3869d350e",
         "code": "3222",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -555,7 +555,7 @@
         "display_name": "Spina Bifida Health Care Program (SB)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee23",
+        "_id": "5c3cf6d8ef33a5d3869d350f",
         "code": "3223",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -563,7 +563,7 @@
         "display_name": "Children of Women Vietnam Veterans (CWVV)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee24",
+        "_id": "5c3cf6d8ef33a5d3869d3510",
         "code": "3229",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -571,7 +571,7 @@
         "display_name": "Other non-veteran care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee25",
+        "_id": "5c3cf6d8ef33a5d3869d3511",
         "code": "33",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -579,7 +579,7 @@
         "display_name": "Indian Health Service or Tribe"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee26",
+        "_id": "5c3cf6d8ef33a5d3869d3512",
         "code": "331",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -587,7 +587,7 @@
         "display_name": "Indian Health Service -- Regular"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee27",
+        "_id": "5c3cf6d8ef33a5d3869d3513",
         "code": "332",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -595,7 +595,7 @@
         "display_name": "Indian Health Service -- Contract"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee28",
+        "_id": "5c3cf6d8ef33a5d3869d3514",
         "code": "333",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -603,7 +603,7 @@
         "display_name": "Indian Health Service - Managed Care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee29",
+        "_id": "5c3cf6d8ef33a5d3869d3515",
         "code": "334",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -611,7 +611,7 @@
         "display_name": "Indian Tribe - Sponsored Coverage"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee2a",
+        "_id": "5c3cf6d8ef33a5d3869d3516",
         "code": "34",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -619,7 +619,7 @@
         "display_name": "HRSA Program"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee2b",
+        "_id": "5c3cf6d8ef33a5d3869d3517",
         "code": "341",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -627,7 +627,7 @@
         "display_name": "Title V (MCH Block Grant)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee2c",
+        "_id": "5c3cf6d8ef33a5d3869d3518",
         "code": "342",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -635,7 +635,7 @@
         "display_name": "Migrant Health Program"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee2d",
+        "_id": "5c3cf6d8ef33a5d3869d3519",
         "code": "343",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -643,7 +643,7 @@
         "display_name": "Ryan White Act"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee2e",
+        "_id": "5c3cf6d8ef33a5d3869d351a",
         "code": "349",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -651,7 +651,7 @@
         "display_name": "Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee2f",
+        "_id": "5c3cf6d8ef33a5d3869d351b",
         "code": "35",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -659,7 +659,7 @@
         "display_name": "Black Lung"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee30",
+        "_id": "5c3cf6d8ef33a5d3869d351c",
         "code": "36",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -667,7 +667,7 @@
         "display_name": "State Government"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee31",
+        "_id": "5c3cf6d8ef33a5d3869d351d",
         "code": "361",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -675,7 +675,7 @@
         "display_name": "State SCHIP program (codes for individual states)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee32",
+        "_id": "5c3cf6d8ef33a5d3869d351e",
         "code": "362",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -683,7 +683,7 @@
         "display_name": "Specific state programs (list/ local code)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee33",
+        "_id": "5c3cf6d8ef33a5d3869d351f",
         "code": "369",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -691,7 +691,7 @@
         "display_name": "State, not otherwise specified (other state)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee34",
+        "_id": "5c3cf6d8ef33a5d3869d3520",
         "code": "37",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -699,7 +699,7 @@
         "display_name": "Local Government"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee35",
+        "_id": "5c3cf6d8ef33a5d3869d3521",
         "code": "371",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -707,7 +707,7 @@
         "display_name": "Local - Managed care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee36",
+        "_id": "5c3cf6d8ef33a5d3869d3522",
         "code": "3711",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -715,7 +715,7 @@
         "display_name": "HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee37",
+        "_id": "5c3cf6d8ef33a5d3869d3523",
         "code": "3712",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -723,7 +723,7 @@
         "display_name": "PPO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee38",
+        "_id": "5c3cf6d8ef33a5d3869d3524",
         "code": "3713",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -731,7 +731,7 @@
         "display_name": "POS"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee39",
+        "_id": "5c3cf6d8ef33a5d3869d3525",
         "code": "372",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -739,7 +739,7 @@
         "display_name": "FFS/Indemnity"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee3a",
+        "_id": "5c3cf6d8ef33a5d3869d3526",
         "code": "379",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -747,7 +747,7 @@
         "display_name": "Local, not otherwise specified (other local, county)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee3b",
+        "_id": "5c3cf6d8ef33a5d3869d3527",
         "code": "38",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -755,7 +755,7 @@
         "display_name": "Other Government (Federal, State, Local not specified)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee3c",
+        "_id": "5c3cf6d8ef33a5d3869d3528",
         "code": "381",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -763,7 +763,7 @@
         "display_name": "Federal, State, Local not specified managed care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee3d",
+        "_id": "5c3cf6d8ef33a5d3869d3529",
         "code": "3811",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -771,7 +771,7 @@
         "display_name": "Federal, State, Local not specified - HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee3e",
+        "_id": "5c3cf6d8ef33a5d3869d352a",
         "code": "3812",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -779,7 +779,7 @@
         "display_name": "Federal, State, Local not specified - PPO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee3f",
+        "_id": "5c3cf6d8ef33a5d3869d352b",
         "code": "3813",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -787,7 +787,7 @@
         "display_name": "Federal, State, Local not specified - POS"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee40",
+        "_id": "5c3cf6d8ef33a5d3869d352c",
         "code": "3819",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -795,7 +795,7 @@
         "display_name": "Federal, State, Local not specified - not specified managed care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee41",
+        "_id": "5c3cf6d8ef33a5d3869d352d",
         "code": "382",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -803,7 +803,7 @@
         "display_name": "Federal, State, Local not specified - FFS"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee42",
+        "_id": "5c3cf6d8ef33a5d3869d352e",
         "code": "389",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -811,7 +811,7 @@
         "display_name": "Federal, State, Local not specified - Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee43",
+        "_id": "5c3cf6d8ef33a5d3869d352f",
         "code": "39",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -819,7 +819,7 @@
         "display_name": "Other Federal"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee44",
+        "_id": "5c3cf6d8ef33a5d3869d3530",
         "code": "4",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -827,7 +827,7 @@
         "display_name": "DEPARTMENTS OF CORRECTIONS"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee45",
+        "_id": "5c3cf6d8ef33a5d3869d3531",
         "code": "41",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -835,7 +835,7 @@
         "display_name": "Corrections Federal"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee46",
+        "_id": "5c3cf6d8ef33a5d3869d3532",
         "code": "42",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -843,7 +843,7 @@
         "display_name": "Corrections State"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee47",
+        "_id": "5c3cf6d8ef33a5d3869d3533",
         "code": "43",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -851,7 +851,7 @@
         "display_name": "Corrections Local"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee48",
+        "_id": "5c3cf6d8ef33a5d3869d3534",
         "code": "44",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -859,7 +859,7 @@
         "display_name": "Corrections Unknown Level"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee49",
+        "_id": "5c3cf6d8ef33a5d3869d3535",
         "code": "5",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -867,7 +867,7 @@
         "display_name": "PRIVATE HEALTH INSURANCE"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee4a",
+        "_id": "5c3cf6d8ef33a5d3869d3536",
         "code": "51",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -875,7 +875,7 @@
         "display_name": "Managed Care (Private)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee4b",
+        "_id": "5c3cf6d8ef33a5d3869d3537",
         "code": "511",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -883,7 +883,7 @@
         "display_name": "Commercial Managed Care - HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee4c",
+        "_id": "5c3cf6d8ef33a5d3869d3538",
         "code": "512",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -891,7 +891,7 @@
         "display_name": "Commercial Managed Care - PPO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee4d",
+        "_id": "5c3cf6d8ef33a5d3869d3539",
         "code": "513",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -899,7 +899,7 @@
         "display_name": "Commercial Managed Care - POS"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee4e",
+        "_id": "5c3cf6d8ef33a5d3869d353a",
         "code": "514",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -907,7 +907,7 @@
         "display_name": "Exclusive Provider Organization"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee4f",
+        "_id": "5c3cf6d8ef33a5d3869d353b",
         "code": "515",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -915,7 +915,7 @@
         "display_name": "Gatekeeper PPO (GPPO)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee50",
+        "_id": "5c3cf6d8ef33a5d3869d353c",
         "code": "516",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -923,7 +923,7 @@
         "display_name": "Commercial Managed Care - Pharmacy Benefit Manager"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee51",
+        "_id": "5c3cf6d8ef33a5d3869d353d",
         "code": "519",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -931,7 +931,7 @@
         "display_name": "Managed Care, Other (non HMO)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee52",
+        "_id": "5c3cf6d8ef33a5d3869d353e",
         "code": "52",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -939,7 +939,7 @@
         "display_name": "Private Health Insurance - Indemnity"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee53",
+        "_id": "5c3cf6d8ef33a5d3869d353f",
         "code": "521",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -947,7 +947,7 @@
         "display_name": "Commercial Indemnity"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee54",
+        "_id": "5c3cf6d8ef33a5d3869d3540",
         "code": "522",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -955,7 +955,7 @@
         "display_name": "Self-insured (ERISA) Administrative Services Only (ASO) plan"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee55",
+        "_id": "5c3cf6d8ef33a5d3869d3541",
         "code": "523",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -963,7 +963,7 @@
         "display_name": "Medicare supplemental policy (as second payer)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee56",
+        "_id": "5c3cf6d8ef33a5d3869d3542",
         "code": "529",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -971,7 +971,7 @@
         "display_name": "Private health insurance--other commercial Indemnity"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee57",
+        "_id": "5c3cf6d8ef33a5d3869d3543",
         "code": "53",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -979,7 +979,7 @@
         "display_name": "Managed Care (private) or private health insurance (indemnity), not otherwise specified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee58",
+        "_id": "5c3cf6d8ef33a5d3869d3544",
         "code": "54",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -987,7 +987,7 @@
         "display_name": "Organized Delivery System"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee59",
+        "_id": "5c3cf6d8ef33a5d3869d3545",
         "code": "55",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -995,7 +995,7 @@
         "display_name": "Small Employer Purchasing Group"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee5a",
+        "_id": "5c3cf6d8ef33a5d3869d3546",
         "code": "56",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1003,7 +1003,7 @@
         "display_name": "Specialized Stand Alone Plan"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee5b",
+        "_id": "5c3cf6d8ef33a5d3869d3547",
         "code": "561",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1011,7 +1011,7 @@
         "display_name": "Dental"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee5c",
+        "_id": "5c3cf6d8ef33a5d3869d3548",
         "code": "562",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1019,7 +1019,7 @@
         "display_name": "Vision"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee5d",
+        "_id": "5c3cf6d8ef33a5d3869d3549",
         "code": "59",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1027,7 +1027,7 @@
         "display_name": "Other Private Insurance"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee5e",
+        "_id": "5c3cf6d8ef33a5d3869d354a",
         "code": "6",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1035,7 +1035,7 @@
         "display_name": "BLUE CROSS/BLUE SHIELD"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee5f",
+        "_id": "5c3cf6d8ef33a5d3869d354b",
         "code": "61",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1043,7 +1043,7 @@
         "display_name": "BC Managed Care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee60",
+        "_id": "5c3cf6d8ef33a5d3869d354c",
         "code": "611",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1051,7 +1051,7 @@
         "display_name": "BC Managed Care -- HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee61",
+        "_id": "5c3cf6d8ef33a5d3869d354d",
         "code": "612",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1059,7 +1059,7 @@
         "display_name": "BC Managed Care -- PPO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee62",
+        "_id": "5c3cf6d8ef33a5d3869d354e",
         "code": "613",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1067,7 +1067,7 @@
         "display_name": "BC Managed Care -- POS"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee63",
+        "_id": "5c3cf6d8ef33a5d3869d354f",
         "code": "619",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1075,7 +1075,7 @@
         "display_name": "BC Managed Care -- Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee64",
+        "_id": "5c3cf6d8ef33a5d3869d3550",
         "code": "62",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1083,7 +1083,7 @@
         "display_name": "BC Indemnity"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee65",
+        "_id": "5c3cf6d8ef33a5d3869d3551",
         "code": "63",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1091,7 +1091,7 @@
         "display_name": "BC (Indemnity or Managed Care) - Out of State"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee66",
+        "_id": "5c3cf6d8ef33a5d3869d3552",
         "code": "64",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1099,7 +1099,7 @@
         "display_name": "BC (Indemnity or Managed Care) - Unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee67",
+        "_id": "5c3cf6d8ef33a5d3869d3553",
         "code": "69",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1107,7 +1107,7 @@
         "display_name": "BC (Indemnity or Managed Care) - Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee68",
+        "_id": "5c3cf6d8ef33a5d3869d3554",
         "code": "7",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1115,7 +1115,7 @@
         "display_name": "MANAGED CARE, UNSPECIFIED (to be used only if one can't distinguish public from private)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee69",
+        "_id": "5c3cf6d8ef33a5d3869d3555",
         "code": "71",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1123,7 +1123,7 @@
         "display_name": "HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee6a",
+        "_id": "5c3cf6d8ef33a5d3869d3556",
         "code": "72",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1131,7 +1131,7 @@
         "display_name": "PPO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee6b",
+        "_id": "5c3cf6d8ef33a5d3869d3557",
         "code": "73",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1139,7 +1139,7 @@
         "display_name": "POS"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee6c",
+        "_id": "5c3cf6d8ef33a5d3869d3558",
         "code": "79",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1147,7 +1147,7 @@
         "display_name": "Other Managed Care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee6d",
+        "_id": "5c3cf6d8ef33a5d3869d3559",
         "code": "8",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1155,7 +1155,7 @@
         "display_name": "NO PAYMENT from an Organization/Agency/Program/Private Payer Listed"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee6e",
+        "_id": "5c3cf6d8ef33a5d3869d355a",
         "code": "81",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1163,7 +1163,7 @@
         "display_name": "Self-pay"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee6f",
+        "_id": "5c3cf6d8ef33a5d3869d355b",
         "code": "82",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1171,7 +1171,7 @@
         "display_name": "No Charge"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee70",
+        "_id": "5c3cf6d8ef33a5d3869d355c",
         "code": "821",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1179,7 +1179,7 @@
         "display_name": "Charity"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee71",
+        "_id": "5c3cf6d8ef33a5d3869d355d",
         "code": "822",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1187,7 +1187,7 @@
         "display_name": "Professional Courtesy"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee72",
+        "_id": "5c3cf6d8ef33a5d3869d355e",
         "code": "823",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1195,7 +1195,7 @@
         "display_name": "Research/Clinical Trial"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee73",
+        "_id": "5c3cf6d8ef33a5d3869d355f",
         "code": "83",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1203,7 +1203,7 @@
         "display_name": "Refusal to Pay/Bad Debt"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee74",
+        "_id": "5c3cf6d8ef33a5d3869d3560",
         "code": "84",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1211,7 +1211,7 @@
         "display_name": "Hill Burton Free Care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee75",
+        "_id": "5c3cf6d8ef33a5d3869d3561",
         "code": "85",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1219,7 +1219,7 @@
         "display_name": "Research/Donor"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee76",
+        "_id": "5c3cf6d8ef33a5d3869d3562",
         "code": "89",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1227,7 +1227,7 @@
         "display_name": "No Payment, Other"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee77",
+        "_id": "5c3cf6d8ef33a5d3869d3563",
         "code": "9",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1235,7 +1235,7 @@
         "display_name": "MISCELLANEOUS/OTHER"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee78",
+        "_id": "5c3cf6d8ef33a5d3869d3564",
         "code": "91",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1243,7 +1243,7 @@
         "display_name": "Foreign National"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee79",
+        "_id": "5c3cf6d8ef33a5d3869d3565",
         "code": "92",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1251,7 +1251,7 @@
         "display_name": "Other (Non-government)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee7a",
+        "_id": "5c3cf6d8ef33a5d3869d3566",
         "code": "93",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1259,7 +1259,7 @@
         "display_name": "Disability Insurance"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee7b",
+        "_id": "5c3cf6d8ef33a5d3869d3567",
         "code": "94",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1267,7 +1267,7 @@
         "display_name": "Long-term Care Insurance"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee7c",
+        "_id": "5c3cf6d8ef33a5d3869d3568",
         "code": "95",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1275,7 +1275,7 @@
         "display_name": "Worker's Compensation"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee7d",
+        "_id": "5c3cf6d8ef33a5d3869d3569",
         "code": "951",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1283,7 +1283,7 @@
         "display_name": "Worker's Comp HMO"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee7e",
+        "_id": "5c3cf6d8ef33a5d3869d356a",
         "code": "953",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1291,7 +1291,7 @@
         "display_name": "Worker's Comp Fee-for-Service"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee7f",
+        "_id": "5c3cf6d8ef33a5d3869d356b",
         "code": "954",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1299,7 +1299,7 @@
         "display_name": "Worker's Comp Other Managed Care"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee80",
+        "_id": "5c3cf6d8ef33a5d3869d356c",
         "code": "959",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1307,7 +1307,7 @@
         "display_name": "Worker's Comp, Other unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee81",
+        "_id": "5c3cf6d8ef33a5d3869d356d",
         "code": "96",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1315,7 +1315,7 @@
         "display_name": "Auto Insurance (includes no fault)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee82",
+        "_id": "5c3cf6d8ef33a5d3869d356e",
         "code": "97",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1323,7 +1323,7 @@
         "display_name": "Legal Liability / Liability Insurance"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee83",
+        "_id": "5c3cf6d8ef33a5d3869d356f",
         "code": "98",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1331,7 +1331,7 @@
         "display_name": "Other specified but not otherwise classifiable (includes Hospice - Unspecified plan)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee84",
+        "_id": "5c3cf6d8ef33a5d3869d3570",
         "code": "99",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1339,7 +1339,7 @@
         "display_name": "No Typology Code available for payment source"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee85",
+        "_id": "5c3cf6d8ef33a5d3869d3571",
         "code": "9999",
         "code_system_name": "Source of Payment Typology",
         "code_system_oid": "2.16.840.1.113883.3.221.5",
@@ -1352,10 +1352,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edd5",
+    "_id": "5c3cf6d8ef33a5d3869d34c1",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3ee86",
+        "_id": "5c3cf6d8ef33a5d3869d3572",
         "code": "10875004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1363,7 +1363,7 @@
         "display_name": "Severe mixed bipolar I disorder with psychotic features, mood-incongruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee87",
+        "_id": "5c3cf6d8ef33a5d3869d3573",
         "code": "10981006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1371,7 +1371,7 @@
         "display_name": "Severe mixed bipolar I disorder with psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee88",
+        "_id": "5c3cf6d8ef33a5d3869d3574",
         "code": "111485001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1379,7 +1379,7 @@
         "display_name": "Mixed bipolar I disorder in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee89",
+        "_id": "5c3cf6d8ef33a5d3869d3575",
         "code": "1196001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1387,7 +1387,7 @@
         "display_name": "Chronic bipolar II disorder, most recent episode major depressive (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee8a",
+        "_id": "5c3cf6d8ef33a5d3869d3576",
         "code": "12969000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1395,7 +1395,7 @@
         "display_name": "Severe bipolar II disorder, most recent episode major depressive, in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee8b",
+        "_id": "5c3cf6d8ef33a5d3869d3577",
         "code": "13313007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1403,7 +1403,7 @@
         "display_name": "Mild bipolar disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee8c",
+        "_id": "5c3cf6d8ef33a5d3869d3578",
         "code": "13581000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1411,7 +1411,7 @@
         "display_name": "Severe bipolar I disorder, single manic episode with psychotic features, mood-congruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee8d",
+        "_id": "5c3cf6d8ef33a5d3869d3579",
         "code": "13746004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1419,7 +1419,7 @@
         "display_name": "Bipolar disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee8e",
+        "_id": "5c3cf6d8ef33a5d3869d357a",
         "code": "14495005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1427,7 +1427,7 @@
         "display_name": "Severe bipolar I disorder, single manic episode without psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee8f",
+        "_id": "5c3cf6d8ef33a5d3869d357b",
         "code": "1499003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1435,7 +1435,7 @@
         "display_name": "Bipolar I disorder, single manic episode with postpartum onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee90",
+        "_id": "5c3cf6d8ef33a5d3869d357c",
         "code": "162004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1443,7 +1443,7 @@
         "display_name": "Severe manic bipolar I disorder without psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee91",
+        "_id": "5c3cf6d8ef33a5d3869d357d",
         "code": "16295005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1451,7 +1451,7 @@
         "display_name": "Bipolar II disorder, most recent episode major depressive (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee92",
+        "_id": "5c3cf6d8ef33a5d3869d357e",
         "code": "16506000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1459,7 +1459,7 @@
         "display_name": "Mixed bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee93",
+        "_id": "5c3cf6d8ef33a5d3869d357f",
         "code": "17782008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1467,7 +1467,7 @@
         "display_name": "Bipolar I disorder, most recent episode manic with catatonic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee94",
+        "_id": "5c3cf6d8ef33a5d3869d3580",
         "code": "191618007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1475,7 +1475,7 @@
         "display_name": "Bipolar affective disorder, current episode manic (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee95",
+        "_id": "5c3cf6d8ef33a5d3869d3581",
         "code": "191620005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1483,7 +1483,7 @@
         "display_name": "Bipolar affective disorder, currently manic, mild (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee96",
+        "_id": "5c3cf6d8ef33a5d3869d3582",
         "code": "191621009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1491,7 +1491,7 @@
         "display_name": "Bipolar affective disorder, currently manic, moderate (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee97",
+        "_id": "5c3cf6d8ef33a5d3869d3583",
         "code": "191623007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1499,7 +1499,7 @@
         "display_name": "Bipolar affective disorder, currently manic, severe, with psychosis (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee98",
+        "_id": "5c3cf6d8ef33a5d3869d3584",
         "code": "191625000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1507,7 +1507,7 @@
         "display_name": "Bipolar affective disorder, currently manic, in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee99",
+        "_id": "5c3cf6d8ef33a5d3869d3585",
         "code": "191627008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1515,7 +1515,7 @@
         "display_name": "Bipolar affective disorder, current episode depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee9a",
+        "_id": "5c3cf6d8ef33a5d3869d3586",
         "code": "191629006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1523,7 +1523,7 @@
         "display_name": "Bipolar affective disorder, currently depressed, mild (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee9b",
+        "_id": "5c3cf6d8ef33a5d3869d3587",
         "code": "191630001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1531,7 +1531,7 @@
         "display_name": "Bipolar affective disorder, currently depressed, moderate (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee9c",
+        "_id": "5c3cf6d8ef33a5d3869d3588",
         "code": "191632009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1539,7 +1539,7 @@
         "display_name": "Bipolar affective disorder, currently depressed, severe, with psychosis (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee9d",
+        "_id": "5c3cf6d8ef33a5d3869d3589",
         "code": "191634005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1547,7 +1547,7 @@
         "display_name": "Bipolar affective disorder, currently depressed, in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee9e",
+        "_id": "5c3cf6d8ef33a5d3869d358a",
         "code": "191636007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1555,7 +1555,7 @@
         "display_name": "Mixed bipolar affective disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ee9f",
+        "_id": "5c3cf6d8ef33a5d3869d358b",
         "code": "191638008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1563,7 +1563,7 @@
         "display_name": "Mixed bipolar affective disorder, mild (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea0",
+        "_id": "5c3cf6d8ef33a5d3869d358c",
         "code": "191639000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1571,7 +1571,7 @@
         "display_name": "Mixed bipolar affective disorder, moderate (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea1",
+        "_id": "5c3cf6d8ef33a5d3869d358d",
         "code": "191641004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1579,7 +1579,7 @@
         "display_name": "Mixed bipolar affective disorder, severe, with psychosis (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea2",
+        "_id": "5c3cf6d8ef33a5d3869d358e",
         "code": "191643001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1587,7 +1587,7 @@
         "display_name": "Mixed bipolar affective disorder, in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea3",
+        "_id": "5c3cf6d8ef33a5d3869d358f",
         "code": "192362008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1595,7 +1595,7 @@
         "display_name": "Bipolar affective disorder, current episode mixed (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea4",
+        "_id": "5c3cf6d8ef33a5d3869d3590",
         "code": "19300006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1603,7 +1603,7 @@
         "display_name": "Severe bipolar II disorder, most recent episode major depressive with psychotic features, mood-congruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea5",
+        "_id": "5c3cf6d8ef33a5d3869d3591",
         "code": "20960007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1611,7 +1611,7 @@
         "display_name": "Severe bipolar II disorder, most recent episode major depressive with psychotic features, mood-incongruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea6",
+        "_id": "5c3cf6d8ef33a5d3869d3592",
         "code": "21900002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1619,7 +1619,7 @@
         "display_name": "Bipolar I disorder, most recent episode depressed with catatonic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea7",
+        "_id": "5c3cf6d8ef33a5d3869d3593",
         "code": "22121000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1627,7 +1627,7 @@
         "display_name": "Depressed bipolar I disorder in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea8",
+        "_id": "5c3cf6d8ef33a5d3869d3594",
         "code": "22407005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1635,7 +1635,7 @@
         "display_name": "Bipolar II disorder, most recent episode major depressive with catatonic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eea9",
+        "_id": "5c3cf6d8ef33a5d3869d3595",
         "code": "26203008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1643,7 +1643,7 @@
         "display_name": "Severe depressed bipolar I disorder with psychotic features, mood-incongruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeaa",
+        "_id": "5c3cf6d8ef33a5d3869d3596",
         "code": "26530004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1651,7 +1651,7 @@
         "display_name": "Severe bipolar disorder with psychotic features, mood-incongruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeab",
+        "_id": "5c3cf6d8ef33a5d3869d3597",
         "code": "28663008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1659,7 +1659,7 @@
         "display_name": "Severe manic bipolar I disorder with psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeac",
+        "_id": "5c3cf6d8ef33a5d3869d3598",
         "code": "28884001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1667,7 +1667,7 @@
         "display_name": "Moderate bipolar I disorder, single manic episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eead",
+        "_id": "5c3cf6d8ef33a5d3869d3599",
         "code": "296.00",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1675,7 +1675,7 @@
         "display_name": "Bipolar I disorder, single manic episode, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeae",
+        "_id": "5c3cf6d8ef33a5d3869d359a",
         "code": "296.01",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1683,7 +1683,7 @@
         "display_name": "Bipolar I disorder, single manic episode, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeaf",
+        "_id": "5c3cf6d8ef33a5d3869d359b",
         "code": "296.02",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1691,7 +1691,7 @@
         "display_name": "Bipolar I disorder, single manic episode, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb0",
+        "_id": "5c3cf6d8ef33a5d3869d359c",
         "code": "296.03",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1699,7 +1699,7 @@
         "display_name": "Bipolar I disorder, single manic episode, severe, without mention of psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb1",
+        "_id": "5c3cf6d8ef33a5d3869d359d",
         "code": "296.04",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1707,7 +1707,7 @@
         "display_name": "Bipolar I disorder, single manic episode, severe, specified as with psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb2",
+        "_id": "5c3cf6d8ef33a5d3869d359e",
         "code": "296.05",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1715,7 +1715,7 @@
         "display_name": "Bipolar I disorder, single manic episode, in partial or unspecified remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb3",
+        "_id": "5c3cf6d8ef33a5d3869d359f",
         "code": "296.06",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1723,7 +1723,7 @@
         "display_name": "Bipolar I disorder, single manic episode, in full remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb4",
+        "_id": "5c3cf6d8ef33a5d3869d35a0",
         "code": "296.10",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1731,7 +1731,7 @@
         "display_name": "Manic affective disorder, recurrent episode, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb5",
+        "_id": "5c3cf6d8ef33a5d3869d35a1",
         "code": "296.11",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1739,7 +1739,7 @@
         "display_name": "Manic affective disorder, recurrent episode, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb6",
+        "_id": "5c3cf6d8ef33a5d3869d35a2",
         "code": "296.12",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1747,7 +1747,7 @@
         "display_name": "Manic affective disorder, recurrent episode, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb7",
+        "_id": "5c3cf6d8ef33a5d3869d35a3",
         "code": "296.13",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1755,7 +1755,7 @@
         "display_name": "Manic affective disorder, recurrent episode, severe, without mention of psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb8",
+        "_id": "5c3cf6d8ef33a5d3869d35a4",
         "code": "296.14",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1763,7 +1763,7 @@
         "display_name": "Manic affective disorder, recurrent episode, severe, specified as with psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeb9",
+        "_id": "5c3cf6d8ef33a5d3869d35a5",
         "code": "296.15",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1771,7 +1771,7 @@
         "display_name": "Manic affective disorder, recurrent episode, in partial or unspecified remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeba",
+        "_id": "5c3cf6d8ef33a5d3869d35a6",
         "code": "296.16",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1779,7 +1779,7 @@
         "display_name": "Manic affective disorder, recurrent episode, in full remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eebb",
+        "_id": "5c3cf6d8ef33a5d3869d35a7",
         "code": "296.40",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1787,7 +1787,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) manic, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eebc",
+        "_id": "5c3cf6d8ef33a5d3869d35a8",
         "code": "296.41",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1795,7 +1795,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) manic, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eebd",
+        "_id": "5c3cf6d8ef33a5d3869d35a9",
         "code": "296.42",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1803,7 +1803,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) manic, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eebe",
+        "_id": "5c3cf6d8ef33a5d3869d35aa",
         "code": "296.43",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1811,7 +1811,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) manic, severe, without mention of psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eebf",
+        "_id": "5c3cf6d8ef33a5d3869d35ab",
         "code": "296.44",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1819,7 +1819,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) manic, severe, specified as with psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec0",
+        "_id": "5c3cf6d8ef33a5d3869d35ac",
         "code": "296.45",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1827,7 +1827,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) manic, in partial or unspecified remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec1",
+        "_id": "5c3cf6d8ef33a5d3869d35ad",
         "code": "296.46",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1835,7 +1835,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) manic, in full remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec2",
+        "_id": "5c3cf6d8ef33a5d3869d35ae",
         "code": "296.50",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1843,7 +1843,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) depressed, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec3",
+        "_id": "5c3cf6d8ef33a5d3869d35af",
         "code": "296.51",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1851,7 +1851,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) depressed, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec4",
+        "_id": "5c3cf6d8ef33a5d3869d35b0",
         "code": "296.52",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1859,7 +1859,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) depressed, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec5",
+        "_id": "5c3cf6d8ef33a5d3869d35b1",
         "code": "296.53",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1867,7 +1867,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) depressed, severe, without mention of psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec6",
+        "_id": "5c3cf6d8ef33a5d3869d35b2",
         "code": "296.54",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1875,7 +1875,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) depressed, severe, specified as with psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec7",
+        "_id": "5c3cf6d8ef33a5d3869d35b3",
         "code": "296.55",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1883,7 +1883,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) depressed, in partial or unspecified remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec8",
+        "_id": "5c3cf6d8ef33a5d3869d35b4",
         "code": "296.56",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1891,7 +1891,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) depressed, in full remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eec9",
+        "_id": "5c3cf6d8ef33a5d3869d35b5",
         "code": "296.60",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1899,7 +1899,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) mixed, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeca",
+        "_id": "5c3cf6d8ef33a5d3869d35b6",
         "code": "296.61",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1907,7 +1907,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) mixed, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eecb",
+        "_id": "5c3cf6d8ef33a5d3869d35b7",
         "code": "296.62",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1915,7 +1915,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) mixed, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eecc",
+        "_id": "5c3cf6d8ef33a5d3869d35b8",
         "code": "296.63",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1923,7 +1923,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) mixed, severe, without mention of psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eecd",
+        "_id": "5c3cf6d8ef33a5d3869d35b9",
         "code": "296.64",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1931,7 +1931,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) mixed, severe, specified as with psychotic behavior"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eece",
+        "_id": "5c3cf6d8ef33a5d3869d35ba",
         "code": "296.65",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1939,7 +1939,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) mixed, in partial or unspecified remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eecf",
+        "_id": "5c3cf6d8ef33a5d3869d35bb",
         "code": "296.66",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1947,7 +1947,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) mixed, in full remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed0",
+        "_id": "5c3cf6d8ef33a5d3869d35bc",
         "code": "296.7",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1955,7 +1955,7 @@
         "display_name": "Bipolar I disorder, most recent episode (or current) unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed1",
+        "_id": "5c3cf6d8ef33a5d3869d35bd",
         "code": "296.80",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1963,7 +1963,7 @@
         "display_name": "Bipolar disorder, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed2",
+        "_id": "5c3cf6d8ef33a5d3869d35be",
         "code": "296.81",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1971,7 +1971,7 @@
         "display_name": "Atypical manic disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed3",
+        "_id": "5c3cf6d8ef33a5d3869d35bf",
         "code": "296.82",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1979,7 +1979,7 @@
         "display_name": "Atypical depressive disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed4",
+        "_id": "5c3cf6d8ef33a5d3869d35c0",
         "code": "296.89",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -1987,7 +1987,7 @@
         "display_name": "Other bipolar disorders"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed5",
+        "_id": "5c3cf6d8ef33a5d3869d35c1",
         "code": "29929003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1995,7 +1995,7 @@
         "display_name": "Bipolar I disorder, most recent episode depressed with atypical features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed6",
+        "_id": "5c3cf6d8ef33a5d3869d35c2",
         "code": "30520009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2003,7 +2003,7 @@
         "display_name": "Severe bipolar II disorder, most recent episode major depressive with psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed7",
+        "_id": "5c3cf6d8ef33a5d3869d35c3",
         "code": "30687003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2011,7 +2011,7 @@
         "display_name": "Bipolar II disorder, most recent episode major depressive with postpartum onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed8",
+        "_id": "5c3cf6d8ef33a5d3869d35c4",
         "code": "30935000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2019,7 +2019,7 @@
         "display_name": "Manic bipolar I disorder in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eed9",
+        "_id": "5c3cf6d8ef33a5d3869d35c5",
         "code": "31446002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2027,7 +2027,7 @@
         "display_name": "Bipolar I disorder, most recent episode hypomanic (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeda",
+        "_id": "5c3cf6d8ef33a5d3869d35c6",
         "code": "33380008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2035,7 +2035,7 @@
         "display_name": "Severe manic bipolar I disorder with psychotic features, mood-incongruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eedb",
+        "_id": "5c3cf6d8ef33a5d3869d35c7",
         "code": "34315001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2043,7 +2043,7 @@
         "display_name": "Bipolar II disorder, most recent episode major depressive with melancholic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eedc",
+        "_id": "5c3cf6d8ef33a5d3869d35c8",
         "code": "3530005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2051,7 +2051,7 @@
         "display_name": "Bipolar I disorder, single manic episode, in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eedd",
+        "_id": "5c3cf6d8ef33a5d3869d35c9",
         "code": "35481005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2059,7 +2059,7 @@
         "display_name": "Mixed bipolar I disorder in remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eede",
+        "_id": "5c3cf6d8ef33a5d3869d35ca",
         "code": "35722002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2067,7 +2067,7 @@
         "display_name": "Severe bipolar II disorder, most recent episode major depressive, in remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eedf",
+        "_id": "5c3cf6d8ef33a5d3869d35cb",
         "code": "35846004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2075,7 +2075,7 @@
         "display_name": "Moderate bipolar II disorder, most recent episode major depressive (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee0",
+        "_id": "5c3cf6d8ef33a5d3869d35cc",
         "code": "36583000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2083,7 +2083,7 @@
         "display_name": "Mixed bipolar I disorder in partial remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee1",
+        "_id": "5c3cf6d8ef33a5d3869d35cd",
         "code": "371596008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2091,7 +2091,7 @@
         "display_name": "Bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee2",
+        "_id": "5c3cf6d8ef33a5d3869d35ce",
         "code": "371599001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2099,7 +2099,7 @@
         "display_name": "Severe bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee3",
+        "_id": "5c3cf6d8ef33a5d3869d35cf",
         "code": "371600003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2107,7 +2107,7 @@
         "display_name": "Severe bipolar disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee4",
+        "_id": "5c3cf6d8ef33a5d3869d35d0",
         "code": "371604007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2115,7 +2115,7 @@
         "display_name": "Severe bipolar II disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee5",
+        "_id": "5c3cf6d8ef33a5d3869d35d1",
         "code": "40926005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2123,7 +2123,7 @@
         "display_name": "Moderate mixed bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee6",
+        "_id": "5c3cf6d8ef33a5d3869d35d2",
         "code": "41552001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2131,7 +2131,7 @@
         "display_name": "Mild bipolar I disorder, single manic episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee7",
+        "_id": "5c3cf6d8ef33a5d3869d35d3",
         "code": "41832009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2139,7 +2139,7 @@
         "display_name": "Severe bipolar I disorder, single manic episode with psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee8",
+        "_id": "5c3cf6d8ef33a5d3869d35d4",
         "code": "41836007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2147,7 +2147,7 @@
         "display_name": "Bipolar disorder in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eee9",
+        "_id": "5c3cf6d8ef33a5d3869d35d5",
         "code": "43568002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2155,7 +2155,7 @@
         "display_name": "Bipolar II disorder, most recent episode major depressive with atypical features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeea",
+        "_id": "5c3cf6d8ef33a5d3869d35d6",
         "code": "43769008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2163,7 +2163,7 @@
         "display_name": "Mild mixed bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeeb",
+        "_id": "5c3cf6d8ef33a5d3869d35d7",
         "code": "4441000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2171,7 +2171,7 @@
         "display_name": "Severe bipolar disorder with psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeec",
+        "_id": "5c3cf6d8ef33a5d3869d35d8",
         "code": "45479006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2179,7 +2179,7 @@
         "display_name": "Manic bipolar I disorder in remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeed",
+        "_id": "5c3cf6d8ef33a5d3869d35d9",
         "code": "46229002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2187,7 +2187,7 @@
         "display_name": "Severe mixed bipolar I disorder without psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeee",
+        "_id": "5c3cf6d8ef33a5d3869d35da",
         "code": "48937005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2195,7 +2195,7 @@
         "display_name": "Bipolar II disorder, most recent episode hypomanic (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeef",
+        "_id": "5c3cf6d8ef33a5d3869d35db",
         "code": "49468007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2203,7 +2203,7 @@
         "display_name": "Depressed bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef0",
+        "_id": "5c3cf6d8ef33a5d3869d35dc",
         "code": "49512000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2211,7 +2211,7 @@
         "display_name": "Depressed bipolar I disorder in partial remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef1",
+        "_id": "5c3cf6d8ef33a5d3869d35dd",
         "code": "51637008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2219,7 +2219,7 @@
         "display_name": "Chronic bipolar I disorder, most recent episode depressed (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef2",
+        "_id": "5c3cf6d8ef33a5d3869d35de",
         "code": "53049002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2227,7 +2227,7 @@
         "display_name": "Severe bipolar disorder without psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef3",
+        "_id": "5c3cf6d8ef33a5d3869d35df",
         "code": "53607008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2235,7 +2235,7 @@
         "display_name": "Depressed bipolar I disorder in remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef4",
+        "_id": "5c3cf6d8ef33a5d3869d35e0",
         "code": "54761006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2243,7 +2243,7 @@
         "display_name": "Severe depressed bipolar I disorder with psychotic features, mood-congruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef5",
+        "_id": "5c3cf6d8ef33a5d3869d35e1",
         "code": "55516002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2251,7 +2251,7 @@
         "display_name": "Bipolar I disorder, most recent episode manic with postpartum onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef6",
+        "_id": "5c3cf6d8ef33a5d3869d35e2",
         "code": "5703000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2259,7 +2259,7 @@
         "display_name": "Bipolar disorder in partial remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef7",
+        "_id": "5c3cf6d8ef33a5d3869d35e3",
         "code": "59617007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2267,7 +2267,7 @@
         "display_name": "Severe depressed bipolar I disorder with psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef8",
+        "_id": "5c3cf6d8ef33a5d3869d35e4",
         "code": "61403008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2275,7 +2275,7 @@
         "display_name": "Severe depressed bipolar I disorder without psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eef9",
+        "_id": "5c3cf6d8ef33a5d3869d35e5",
         "code": "63249007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2283,7 +2283,7 @@
         "display_name": "Manic bipolar I disorder in partial remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eefa",
+        "_id": "5c3cf6d8ef33a5d3869d35e6",
         "code": "64731001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2291,7 +2291,7 @@
         "display_name": "Severe mixed bipolar I disorder with psychotic features, mood-congruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eefb",
+        "_id": "5c3cf6d8ef33a5d3869d35e7",
         "code": "65042007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2299,7 +2299,7 @@
         "display_name": "Bipolar I disorder, most recent episode mixed with postpartum onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eefc",
+        "_id": "5c3cf6d8ef33a5d3869d35e8",
         "code": "66631006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2307,7 +2307,7 @@
         "display_name": "Moderate depressed bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eefd",
+        "_id": "5c3cf6d8ef33a5d3869d35e9",
         "code": "67002003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2315,7 +2315,7 @@
         "display_name": "Severe bipolar II disorder, most recent episode major depressive, in partial remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eefe",
+        "_id": "5c3cf6d8ef33a5d3869d35ea",
         "code": "68569003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2323,7 +2323,7 @@
         "display_name": "Manic bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eeff",
+        "_id": "5c3cf6d8ef33a5d3869d35eb",
         "code": "70546001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2331,7 +2331,7 @@
         "display_name": "Severe bipolar disorder with psychotic features, mood-congruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef00",
+        "_id": "5c3cf6d8ef33a5d3869d35ec",
         "code": "71294008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2339,7 +2339,7 @@
         "display_name": "Mild bipolar II disorder, most recent episode major depressive (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef01",
+        "_id": "5c3cf6d8ef33a5d3869d35ed",
         "code": "71984005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2347,7 +2347,7 @@
         "display_name": "Mild manic bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef02",
+        "_id": "5c3cf6d8ef33a5d3869d35ee",
         "code": "73471000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2355,7 +2355,7 @@
         "display_name": "Bipolar I disorder, most recent episode mixed with catatonic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef03",
+        "_id": "5c3cf6d8ef33a5d3869d35ef",
         "code": "74686005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2363,7 +2363,7 @@
         "display_name": "Mild depressed bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef04",
+        "_id": "5c3cf6d8ef33a5d3869d35f0",
         "code": "75360000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2371,7 +2371,7 @@
         "display_name": "Bipolar I disorder, single manic episode, in remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef05",
+        "_id": "5c3cf6d8ef33a5d3869d35f1",
         "code": "75752004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2379,7 +2379,7 @@
         "display_name": "Bipolar I disorder, most recent episode depressed with melancholic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef06",
+        "_id": "5c3cf6d8ef33a5d3869d35f2",
         "code": "78269000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2387,7 +2387,7 @@
         "display_name": "Bipolar I disorder, single manic episode, in partial remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef07",
+        "_id": "5c3cf6d8ef33a5d3869d35f3",
         "code": "78640000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2395,7 +2395,7 @@
         "display_name": "Severe manic bipolar I disorder with psychotic features, mood-congruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef08",
+        "_id": "5c3cf6d8ef33a5d3869d35f4",
         "code": "79584002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2403,7 +2403,7 @@
         "display_name": "Moderate bipolar disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef09",
+        "_id": "5c3cf6d8ef33a5d3869d35f5",
         "code": "81319007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2411,7 +2411,7 @@
         "display_name": "Severe bipolar II disorder, most recent episode major depressive without psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef0a",
+        "_id": "5c3cf6d8ef33a5d3869d35f6",
         "code": "82998009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2419,7 +2419,7 @@
         "display_name": "Moderate manic bipolar I disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef0b",
+        "_id": "5c3cf6d8ef33a5d3869d35f7",
         "code": "83225003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2427,7 +2427,7 @@
         "display_name": "Bipolar II disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef0c",
+        "_id": "5c3cf6d8ef33a5d3869d35f8",
         "code": "85248005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2435,7 +2435,7 @@
         "display_name": "Bipolar disorder in remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef0d",
+        "_id": "5c3cf6d8ef33a5d3869d35f9",
         "code": "86058007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2443,7 +2443,7 @@
         "display_name": "Severe bipolar I disorder, single manic episode with psychotic features, mood-incongruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef0e",
+        "_id": "5c3cf6d8ef33a5d3869d35fa",
         "code": "87203005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2451,7 +2451,7 @@
         "display_name": "Bipolar I disorder, most recent episode depressed with postpartum onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef0f",
+        "_id": "5c3cf6d8ef33a5d3869d35fb",
         "code": "87950005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2459,7 +2459,7 @@
         "display_name": "Bipolar I disorder, single manic episode with catatonic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef10",
+        "_id": "5c3cf6d8ef33a5d3869d35fc",
         "code": "9340000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2467,7 +2467,7 @@
         "display_name": "Bipolar I disorder, single manic episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef11",
+        "_id": "5c3cf6d8ef33a5d3869d35fd",
         "code": "F30.10",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2475,7 +2475,7 @@
         "display_name": "Manic episode without psychotic symptoms, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef12",
+        "_id": "5c3cf6d8ef33a5d3869d35fe",
         "code": "F30.11",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2483,7 +2483,7 @@
         "display_name": "Manic episode without psychotic symptoms, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef13",
+        "_id": "5c3cf6d8ef33a5d3869d35ff",
         "code": "F30.12",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2491,7 +2491,7 @@
         "display_name": "Manic episode without psychotic symptoms, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef14",
+        "_id": "5c3cf6d8ef33a5d3869d3600",
         "code": "F30.13",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2499,7 +2499,7 @@
         "display_name": "Manic episode, severe, without psychotic symptoms"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef15",
+        "_id": "5c3cf6d8ef33a5d3869d3601",
         "code": "F30.2",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2507,7 +2507,7 @@
         "display_name": "Manic episode, severe with psychotic symptoms"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef16",
+        "_id": "5c3cf6d8ef33a5d3869d3602",
         "code": "F30.3",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2515,7 +2515,7 @@
         "display_name": "Manic episode in partial remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef17",
+        "_id": "5c3cf6d8ef33a5d3869d3603",
         "code": "F30.4",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2523,7 +2523,7 @@
         "display_name": "Manic episode in full remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef18",
+        "_id": "5c3cf6d8ef33a5d3869d3604",
         "code": "F30.8",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2531,7 +2531,7 @@
         "display_name": "Other manic episodes"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef19",
+        "_id": "5c3cf6d8ef33a5d3869d3605",
         "code": "F30.9",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2539,7 +2539,7 @@
         "display_name": "Manic episode, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef1a",
+        "_id": "5c3cf6d8ef33a5d3869d3606",
         "code": "F31.0",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2547,7 +2547,7 @@
         "display_name": "Bipolar disorder, current episode hypomanic"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef1b",
+        "_id": "5c3cf6d8ef33a5d3869d3607",
         "code": "F31.10",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2555,7 +2555,7 @@
         "display_name": "Bipolar disorder, current episode manic without psychotic features, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef1c",
+        "_id": "5c3cf6d8ef33a5d3869d3608",
         "code": "F31.11",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2563,7 +2563,7 @@
         "display_name": "Bipolar disorder, current episode manic without psychotic features, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef1d",
+        "_id": "5c3cf6d8ef33a5d3869d3609",
         "code": "F31.12",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2571,7 +2571,7 @@
         "display_name": "Bipolar disorder, current episode manic without psychotic features, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef1e",
+        "_id": "5c3cf6d8ef33a5d3869d360a",
         "code": "F31.13",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2579,7 +2579,7 @@
         "display_name": "Bipolar disorder, current episode manic without psychotic features, severe"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef1f",
+        "_id": "5c3cf6d8ef33a5d3869d360b",
         "code": "F31.2",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2587,7 +2587,7 @@
         "display_name": "Bipolar disorder, current episode manic severe with psychotic features"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef20",
+        "_id": "5c3cf6d8ef33a5d3869d360c",
         "code": "F31.30",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2595,7 +2595,7 @@
         "display_name": "Bipolar disorder, current episode depressed, mild or moderate severity, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef21",
+        "_id": "5c3cf6d8ef33a5d3869d360d",
         "code": "F31.31",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2603,7 +2603,7 @@
         "display_name": "Bipolar disorder, current episode depressed, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef22",
+        "_id": "5c3cf6d8ef33a5d3869d360e",
         "code": "F31.32",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2611,7 +2611,7 @@
         "display_name": "Bipolar disorder, current episode depressed, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef23",
+        "_id": "5c3cf6d8ef33a5d3869d360f",
         "code": "F31.4",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2619,7 +2619,7 @@
         "display_name": "Bipolar disorder, current episode depressed, severe, without psychotic features"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef24",
+        "_id": "5c3cf6d8ef33a5d3869d3610",
         "code": "F31.5",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2627,7 +2627,7 @@
         "display_name": "Bipolar disorder, current episode depressed, severe, with psychotic features"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef25",
+        "_id": "5c3cf6d8ef33a5d3869d3611",
         "code": "F31.60",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2635,7 +2635,7 @@
         "display_name": "Bipolar disorder, current episode mixed, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef26",
+        "_id": "5c3cf6d8ef33a5d3869d3612",
         "code": "F31.61",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2643,7 +2643,7 @@
         "display_name": "Bipolar disorder, current episode mixed, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef27",
+        "_id": "5c3cf6d8ef33a5d3869d3613",
         "code": "F31.62",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2651,7 +2651,7 @@
         "display_name": "Bipolar disorder, current episode mixed, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef28",
+        "_id": "5c3cf6d8ef33a5d3869d3614",
         "code": "F31.63",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2659,7 +2659,7 @@
         "display_name": "Bipolar disorder, current episode mixed, severe, without psychotic features"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef29",
+        "_id": "5c3cf6d8ef33a5d3869d3615",
         "code": "F31.64",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2667,7 +2667,7 @@
         "display_name": "Bipolar disorder, current episode mixed, severe, with psychotic features"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef2a",
+        "_id": "5c3cf6d8ef33a5d3869d3616",
         "code": "F31.70",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2675,7 +2675,7 @@
         "display_name": "Bipolar disorder, currently in remission, most recent episode unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef2b",
+        "_id": "5c3cf6d8ef33a5d3869d3617",
         "code": "F31.71",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2683,7 +2683,7 @@
         "display_name": "Bipolar disorder, in partial remission, most recent episode hypomanic"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef2c",
+        "_id": "5c3cf6d8ef33a5d3869d3618",
         "code": "F31.72",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2691,7 +2691,7 @@
         "display_name": "Bipolar disorder, in full remission, most recent episode hypomanic"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef2d",
+        "_id": "5c3cf6d8ef33a5d3869d3619",
         "code": "F31.73",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2699,7 +2699,7 @@
         "display_name": "Bipolar disorder, in partial remission, most recent episode manic"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef2e",
+        "_id": "5c3cf6d8ef33a5d3869d361a",
         "code": "F31.74",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2707,7 +2707,7 @@
         "display_name": "Bipolar disorder, in full remission, most recent episode manic"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef2f",
+        "_id": "5c3cf6d8ef33a5d3869d361b",
         "code": "F31.75",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2715,7 +2715,7 @@
         "display_name": "Bipolar disorder, in partial remission, most recent episode depressed"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef30",
+        "_id": "5c3cf6d8ef33a5d3869d361c",
         "code": "F31.76",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2723,7 +2723,7 @@
         "display_name": "Bipolar disorder, in full remission, most recent episode depressed"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef31",
+        "_id": "5c3cf6d8ef33a5d3869d361d",
         "code": "F31.77",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2731,7 +2731,7 @@
         "display_name": "Bipolar disorder, in partial remission, most recent episode mixed"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef32",
+        "_id": "5c3cf6d8ef33a5d3869d361e",
         "code": "F31.78",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2739,7 +2739,7 @@
         "display_name": "Bipolar disorder, in full remission, most recent episode mixed"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef33",
+        "_id": "5c3cf6d8ef33a5d3869d361f",
         "code": "F31.81",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2747,7 +2747,7 @@
         "display_name": "Bipolar II disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef34",
+        "_id": "5c3cf6d8ef33a5d3869d3620",
         "code": "F31.89",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2755,7 +2755,7 @@
         "display_name": "Other bipolar disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef35",
+        "_id": "5c3cf6d8ef33a5d3869d3621",
         "code": "F31.9",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2768,10 +2768,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edd6",
+    "_id": "5c3cf6d8ef33a5d3869d34c2",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3ef36",
+        "_id": "5c3cf6d8ef33a5d3869d3622",
         "code": "209099002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2779,7 +2779,7 @@
         "display_name": "History and physical examination with management of domiciliary or rest home patient (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef37",
+        "_id": "5c3cf6d8ef33a5d3869d3623",
         "code": "210098006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2787,7 +2787,7 @@
         "display_name": "Domiciliary or rest home patient evaluation and management (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef38",
+        "_id": "5c3cf6d8ef33a5d3869d3624",
         "code": "99324",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -2795,7 +2795,7 @@
         "display_name": "Domiciliary or rest home visit for the evaluation and management of a new patient, which requires these 3 key components: A problem focused history; A problem focused examination; and Straightforward medical decision making. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of low severity. Typically, 20 minutes are spent with the patient and/or family or caregiver."
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef39",
+        "_id": "5c3cf6d8ef33a5d3869d3625",
         "code": "99325",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -2803,7 +2803,7 @@
         "display_name": "Domiciliary or rest home visit for the evaluation and management of a new patient, which requires these 3 key components: An expanded problem focused history; An expanded problem focused examination; and Medical decision making of low complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate severity. Typically, 30 minutes are spent with the patient and/or family or caregiver."
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef3a",
+        "_id": "5c3cf6d8ef33a5d3869d3626",
         "code": "99326",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -2811,7 +2811,7 @@
         "display_name": "Domiciliary or rest home visit for the evaluation and management of a new patient, which requires these 3 key components: A detailed history; A detailed examination; and Medical decision making of moderate complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate to high severity. Typically, 45 minutes are spent with the patient and/or family or caregiver."
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef3b",
+        "_id": "5c3cf6d8ef33a5d3869d3627",
         "code": "99327",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -2819,7 +2819,7 @@
         "display_name": "Domiciliary or rest home visit for the evaluation and management of a new patient, which requires these 3 key components: A comprehensive history; A comprehensive examination; and Medical decision making of moderate complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of high severity. Typically, 60 minutes are spent with the patient and/or family or caregiver."
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef3c",
+        "_id": "5c3cf6d8ef33a5d3869d3628",
         "code": "99328",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -2827,7 +2827,7 @@
         "display_name": "Domiciliary or rest home visit for the evaluation and management of a new patient, which requires these 3 key components: A comprehensive history; A comprehensive examination; and Medical decision making of high complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the patient is unstable or has developed a significant new problem requiring immediate physician attention. Typically, 75 minutes are spent with the patient and/or family or caregiver."
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef3d",
+        "_id": "5c3cf6d8ef33a5d3869d3629",
         "code": "99334",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -2835,7 +2835,7 @@
         "display_name": "Domiciliary or rest home visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: A problem focused interval history; A problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are self-limited or minor. Typically, 15 minutes are spent with the patient and/or family or caregiver."
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef3e",
+        "_id": "5c3cf6d8ef33a5d3869d362a",
         "code": "99335",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -2843,7 +2843,7 @@
         "display_name": "Domiciliary or rest home visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: An expanded problem focused interval history; An expanded problem focused examination; Medical decision making of low complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of low to moderate severity. Typically, 25 minutes are spent with the patient and/or family or caregiver."
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef3f",
+        "_id": "5c3cf6d8ef33a5d3869d362b",
         "code": "99336",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -2851,7 +2851,7 @@
         "display_name": "Domiciliary or rest home visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: A detailed interval history; A detailed examination; Medical decision making of moderate complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate to high severity. Typically, 40 minutes are spent with the patient and/or family or caregiver."
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef40",
+        "_id": "5c3cf6d8ef33a5d3869d362c",
         "code": "99337",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -2864,10 +2864,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edd7",
+    "_id": "5c3cf6d8ef33a5d3869d34c3",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3ef41",
+        "_id": "5c3cf6d8ef33a5d3869d362d",
         "code": "19694002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2875,7 +2875,7 @@
         "display_name": "Late onset dysthymia (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef42",
+        "_id": "5c3cf6d8ef33a5d3869d362e",
         "code": "2506003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2883,7 +2883,7 @@
         "display_name": "Early onset dysthymia (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef43",
+        "_id": "5c3cf6d8ef33a5d3869d362f",
         "code": "3109008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2891,7 +2891,7 @@
         "display_name": "Secondary dysthymia early onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef44",
+        "_id": "5c3cf6d8ef33a5d3869d3630",
         "code": "36170009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2899,7 +2899,7 @@
         "display_name": "Secondary dysthymia late onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef45",
+        "_id": "5c3cf6d8ef33a5d3869d3631",
         "code": "38451003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2907,7 +2907,7 @@
         "display_name": "Primary dysthymia early onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef46",
+        "_id": "5c3cf6d8ef33a5d3869d3632",
         "code": "67711008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2915,7 +2915,7 @@
         "display_name": "Primary dysthymia late onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef47",
+        "_id": "5c3cf6d8ef33a5d3869d3633",
         "code": "78667006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2923,7 +2923,7 @@
         "display_name": "Dysthymia (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef48",
+        "_id": "5c3cf6d8ef33a5d3869d3634",
         "code": "83176005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2931,7 +2931,7 @@
         "display_name": "Primary dysthymia (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef49",
+        "_id": "5c3cf6d8ef33a5d3869d3635",
         "code": "85080004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2939,7 +2939,7 @@
         "display_name": "Secondary dysthymia (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef4a",
+        "_id": "5c3cf6d8ef33a5d3869d3636",
         "code": "F34.1",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -2952,10 +2952,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edd8",
+    "_id": "5c3cf6d8ef33a5d3869d34c4",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3ef4b",
+        "_id": "5c3cf6d8ef33a5d3869d3637",
         "code": "185349003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2963,7 +2963,7 @@
         "display_name": "Encounter for check up (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef4c",
+        "_id": "5c3cf6d8ef33a5d3869d3638",
         "code": "185463005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2971,7 +2971,7 @@
         "display_name": "Visit out of hours (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef4d",
+        "_id": "5c3cf6d8ef33a5d3869d3639",
         "code": "185465003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2979,7 +2979,7 @@
         "display_name": "Weekend visit (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef4e",
+        "_id": "5c3cf6d8ef33a5d3869d363a",
         "code": "19681004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2987,7 +2987,7 @@
         "display_name": "Nursing evaluation of patient and report (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef4f",
+        "_id": "5c3cf6d8ef33a5d3869d363b",
         "code": "207195004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -2995,7 +2995,7 @@
         "display_name": "History and physical examination with evaluation and management of nursing facility patient (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef50",
+        "_id": "5c3cf6d8ef33a5d3869d363c",
         "code": "270427003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3003,7 +3003,7 @@
         "display_name": "Patient-initiated encounter (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef51",
+        "_id": "5c3cf6d8ef33a5d3869d363d",
         "code": "270430005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3011,7 +3011,7 @@
         "display_name": "Provider-initiated encounter (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef52",
+        "_id": "5c3cf6d8ef33a5d3869d363e",
         "code": "308335008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3019,7 +3019,7 @@
         "display_name": "Patient encounter procedure (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef53",
+        "_id": "5c3cf6d8ef33a5d3869d363f",
         "code": "390906007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3027,7 +3027,7 @@
         "display_name": "Follow-up encounter (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef54",
+        "_id": "5c3cf6d8ef33a5d3869d3640",
         "code": "406547006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3035,7 +3035,7 @@
         "display_name": "Urgent follow-up (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef55",
+        "_id": "5c3cf6d8ef33a5d3869d3641",
         "code": "439708006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3043,7 +3043,7 @@
         "display_name": "Home visit (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef56",
+        "_id": "5c3cf6d8ef33a5d3869d3642",
         "code": "90526000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3056,10 +3056,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edd9",
+    "_id": "5c3cf6d8ef33a5d3869d34c5",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3ef57",
+        "_id": "5c3cf6d8ef33a5d3869d3643",
         "code": "14183003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3067,7 +3067,7 @@
         "display_name": "Chronic major depressive disorder, single episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef58",
+        "_id": "5c3cf6d8ef33a5d3869d3644",
         "code": "15193003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3075,7 +3075,7 @@
         "display_name": "Severe recurrent major depression with psychotic features, mood-incongruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef59",
+        "_id": "5c3cf6d8ef33a5d3869d3645",
         "code": "15639000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3083,7 +3083,7 @@
         "display_name": "Moderate major depression, single episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef5a",
+        "_id": "5c3cf6d8ef33a5d3869d3646",
         "code": "18818009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3091,7 +3091,7 @@
         "display_name": "Moderate recurrent major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef5b",
+        "_id": "5c3cf6d8ef33a5d3869d3647",
         "code": "191601008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3099,7 +3099,7 @@
         "display_name": "Single major depressive episode, mild (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef5c",
+        "_id": "5c3cf6d8ef33a5d3869d3648",
         "code": "191602001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3107,7 +3107,7 @@
         "display_name": "Single major depressive episode, moderate (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef5d",
+        "_id": "5c3cf6d8ef33a5d3869d3649",
         "code": "191604000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3115,7 +3115,7 @@
         "display_name": "Single major depressive episode, severe, with psychosis (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef5e",
+        "_id": "5c3cf6d8ef33a5d3869d364a",
         "code": "191606003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3123,7 +3123,7 @@
         "display_name": "Single major depressive episode, in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef5f",
+        "_id": "5c3cf6d8ef33a5d3869d364b",
         "code": "191610000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3131,7 +3131,7 @@
         "display_name": "Recurrent major depressive episodes, mild (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef60",
+        "_id": "5c3cf6d8ef33a5d3869d364c",
         "code": "191611001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3139,7 +3139,7 @@
         "display_name": "Recurrent major depressive episodes, moderate (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef61",
+        "_id": "5c3cf6d8ef33a5d3869d364d",
         "code": "191613003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3147,7 +3147,7 @@
         "display_name": "Recurrent major depressive episodes, severe, with psychosis (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef62",
+        "_id": "5c3cf6d8ef33a5d3869d364e",
         "code": "191615005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3155,7 +3155,7 @@
         "display_name": "Recurrent major depressive episodes, in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef63",
+        "_id": "5c3cf6d8ef33a5d3869d364f",
         "code": "19527009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3163,7 +3163,7 @@
         "display_name": "Single episode of major depression in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef64",
+        "_id": "5c3cf6d8ef33a5d3869d3650",
         "code": "20250007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3171,7 +3171,7 @@
         "display_name": "Severe major depression, single episode, with psychotic features, mood-incongruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef65",
+        "_id": "5c3cf6d8ef33a5d3869d3651",
         "code": "231499006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3179,7 +3179,7 @@
         "display_name": "Endogenous depression first episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef66",
+        "_id": "5c3cf6d8ef33a5d3869d3652",
         "code": "251000119105",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3187,7 +3187,7 @@
         "display_name": "Severe major depression, single episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef67",
+        "_id": "5c3cf6d8ef33a5d3869d3653",
         "code": "25922000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3195,7 +3195,7 @@
         "display_name": "Major depressive disorder, single episode with postpartum onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef68",
+        "_id": "5c3cf6d8ef33a5d3869d3654",
         "code": "2618002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3203,7 +3203,7 @@
         "display_name": "Chronic recurrent major depressive disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef69",
+        "_id": "5c3cf6d8ef33a5d3869d3655",
         "code": "268620009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3211,7 +3211,7 @@
         "display_name": "Single major depressive episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef6a",
+        "_id": "5c3cf6d8ef33a5d3869d3656",
         "code": "268621008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3219,7 +3219,7 @@
         "display_name": "Recurrent major depressive episodes (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef6b",
+        "_id": "5c3cf6d8ef33a5d3869d3657",
         "code": "274948002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3227,7 +3227,7 @@
         "display_name": "Endogenous depression - recurrent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef6c",
+        "_id": "5c3cf6d8ef33a5d3869d3658",
         "code": "281000119103",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3235,7 +3235,7 @@
         "display_name": "Severe recurrent major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef6d",
+        "_id": "5c3cf6d8ef33a5d3869d3659",
         "code": "28475009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3243,7 +3243,7 @@
         "display_name": "Severe recurrent major depression with psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef6e",
+        "_id": "5c3cf6d8ef33a5d3869d365a",
         "code": "300706003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3251,7 +3251,7 @@
         "display_name": "Endogenous depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef6f",
+        "_id": "5c3cf6d8ef33a5d3869d365b",
         "code": "30605009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3259,7 +3259,7 @@
         "display_name": "Major depression in partial remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef70",
+        "_id": "5c3cf6d8ef33a5d3869d365c",
         "code": "319768000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3267,7 +3267,7 @@
         "display_name": "Recurrent major depressive disorder with melancholic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef71",
+        "_id": "5c3cf6d8ef33a5d3869d365d",
         "code": "320751009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3275,7 +3275,7 @@
         "display_name": "Major depression, melancholic type (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef72",
+        "_id": "5c3cf6d8ef33a5d3869d365e",
         "code": "321717001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3283,7 +3283,7 @@
         "display_name": "Involutional depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef73",
+        "_id": "5c3cf6d8ef33a5d3869d365f",
         "code": "33078009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3291,7 +3291,7 @@
         "display_name": "Severe recurrent major depression with psychotic features, mood-congruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef74",
+        "_id": "5c3cf6d8ef33a5d3869d3660",
         "code": "33135002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3299,7 +3299,7 @@
         "display_name": "Recurrent major depression in partial remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef75",
+        "_id": "5c3cf6d8ef33a5d3869d3661",
         "code": "33736005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3307,7 +3307,7 @@
         "display_name": "Severe major depression with psychotic features, mood-congruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef76",
+        "_id": "5c3cf6d8ef33a5d3869d3662",
         "code": "36474008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3315,7 +3315,7 @@
         "display_name": "Severe recurrent major depression without psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef77",
+        "_id": "5c3cf6d8ef33a5d3869d3663",
         "code": "36923009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3323,7 +3323,7 @@
         "display_name": "Major depression, single episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef78",
+        "_id": "5c3cf6d8ef33a5d3869d3664",
         "code": "370143000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3331,7 +3331,7 @@
         "display_name": "Major depressive disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef79",
+        "_id": "5c3cf6d8ef33a5d3869d3665",
         "code": "38694004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3339,7 +3339,7 @@
         "display_name": "Recurrent major depressive disorder with atypical features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef7a",
+        "_id": "5c3cf6d8ef33a5d3869d3666",
         "code": "39809009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3347,7 +3347,7 @@
         "display_name": "Recurrent major depressive disorder with catatonic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef7b",
+        "_id": "5c3cf6d8ef33a5d3869d3667",
         "code": "40379007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3355,7 +3355,7 @@
         "display_name": "Mild recurrent major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef7c",
+        "_id": "5c3cf6d8ef33a5d3869d3668",
         "code": "42810003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3363,7 +3363,7 @@
         "display_name": "Major depression in remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef7d",
+        "_id": "5c3cf6d8ef33a5d3869d3669",
         "code": "42925002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3371,7 +3371,7 @@
         "display_name": "Major depressive disorder, single episode with atypical features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef7e",
+        "_id": "5c3cf6d8ef33a5d3869d366a",
         "code": "430852001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3379,7 +3379,7 @@
         "display_name": "Severe major depression, single episode, with psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef7f",
+        "_id": "5c3cf6d8ef33a5d3869d366b",
         "code": "450714000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3387,7 +3387,7 @@
         "display_name": "Severe major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef80",
+        "_id": "5c3cf6d8ef33a5d3869d366c",
         "code": "46244001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3395,7 +3395,7 @@
         "display_name": "Recurrent major depression in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef81",
+        "_id": "5c3cf6d8ef33a5d3869d366d",
         "code": "60099002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3403,7 +3403,7 @@
         "display_name": "Severe major depression with psychotic features, mood-incongruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef82",
+        "_id": "5c3cf6d8ef33a5d3869d366e",
         "code": "63412003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3411,7 +3411,7 @@
         "display_name": "Major depression in full remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef83",
+        "_id": "5c3cf6d8ef33a5d3869d366f",
         "code": "63778009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3419,7 +3419,7 @@
         "display_name": "Major depressive disorder, single episode with melancholic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef84",
+        "_id": "5c3cf6d8ef33a5d3869d3670",
         "code": "66344007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3427,7 +3427,7 @@
         "display_name": "Recurrent major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef85",
+        "_id": "5c3cf6d8ef33a5d3869d3671",
         "code": "68019004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3435,7 +3435,7 @@
         "display_name": "Recurrent major depression in remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef86",
+        "_id": "5c3cf6d8ef33a5d3869d3672",
         "code": "69392006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3443,7 +3443,7 @@
         "display_name": "Major depressive disorder, single episode with catatonic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef87",
+        "_id": "5c3cf6d8ef33a5d3869d3673",
         "code": "70747007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3451,7 +3451,7 @@
         "display_name": "Major depression single episode, in partial remission (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef88",
+        "_id": "5c3cf6d8ef33a5d3869d3674",
         "code": "71336009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3459,7 +3459,7 @@
         "display_name": "Recurrent major depressive disorder with postpartum onset (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef89",
+        "_id": "5c3cf6d8ef33a5d3869d3675",
         "code": "719592004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3467,7 +3467,7 @@
         "display_name": "Moderately severe major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef8a",
+        "_id": "5c3cf6d8ef33a5d3869d3676",
         "code": "720451004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3475,7 +3475,7 @@
         "display_name": "Minimal recurrent major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef8b",
+        "_id": "5c3cf6d8ef33a5d3869d3677",
         "code": "720452006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3483,7 +3483,7 @@
         "display_name": "Moderately severe recurrent major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef8c",
+        "_id": "5c3cf6d8ef33a5d3869d3678",
         "code": "720453001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3491,7 +3491,7 @@
         "display_name": "Moderately severe major depression single episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef8d",
+        "_id": "5c3cf6d8ef33a5d3869d3679",
         "code": "720454007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3499,7 +3499,7 @@
         "display_name": "Minimal major depression single episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef8e",
+        "_id": "5c3cf6d8ef33a5d3869d367a",
         "code": "720455008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3507,7 +3507,7 @@
         "display_name": "Minimal major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef8f",
+        "_id": "5c3cf6d8ef33a5d3869d367b",
         "code": "73867007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3515,7 +3515,7 @@
         "display_name": "Severe major depression with psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef90",
+        "_id": "5c3cf6d8ef33a5d3869d367c",
         "code": "75084000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3523,7 +3523,7 @@
         "display_name": "Severe major depression without psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef91",
+        "_id": "5c3cf6d8ef33a5d3869d367d",
         "code": "76441001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3531,7 +3531,7 @@
         "display_name": "Severe major depression, single episode, without psychotic features (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef92",
+        "_id": "5c3cf6d8ef33a5d3869d367e",
         "code": "77911002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3539,7 +3539,7 @@
         "display_name": "Severe major depression, single episode, with psychotic features, mood-congruent (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef93",
+        "_id": "5c3cf6d8ef33a5d3869d367f",
         "code": "79298009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3547,7 +3547,7 @@
         "display_name": "Mild major depression, single episode (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef94",
+        "_id": "5c3cf6d8ef33a5d3869d3680",
         "code": "832007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3555,7 +3555,7 @@
         "display_name": "Moderate major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef95",
+        "_id": "5c3cf6d8ef33a5d3869d3681",
         "code": "87512008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3563,7 +3563,7 @@
         "display_name": "Mild major depression (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef96",
+        "_id": "5c3cf6d8ef33a5d3869d3682",
         "code": "F32.0",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3571,7 +3571,7 @@
         "display_name": "Major depressive disorder, single episode, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef97",
+        "_id": "5c3cf6d8ef33a5d3869d3683",
         "code": "F32.1",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3579,7 +3579,7 @@
         "display_name": "Major depressive disorder, single episode, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef98",
+        "_id": "5c3cf6d8ef33a5d3869d3684",
         "code": "F32.2",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3587,7 +3587,7 @@
         "display_name": "Major depressive disorder, single episode, severe without psychotic features"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef99",
+        "_id": "5c3cf6d8ef33a5d3869d3685",
         "code": "F32.3",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3595,7 +3595,7 @@
         "display_name": "Major depressive disorder, single episode, severe with psychotic features"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef9a",
+        "_id": "5c3cf6d8ef33a5d3869d3686",
         "code": "F32.4",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3603,7 +3603,7 @@
         "display_name": "Major depressive disorder, single episode, in partial remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef9b",
+        "_id": "5c3cf6d8ef33a5d3869d3687",
         "code": "F32.5",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3611,7 +3611,7 @@
         "display_name": "Major depressive disorder, single episode, in full remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef9c",
+        "_id": "5c3cf6d8ef33a5d3869d3688",
         "code": "F32.9",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3619,7 +3619,7 @@
         "display_name": "Major depressive disorder, single episode, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef9d",
+        "_id": "5c3cf6d8ef33a5d3869d3689",
         "code": "F33.0",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3627,7 +3627,7 @@
         "display_name": "Major depressive disorder, recurrent, mild"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef9e",
+        "_id": "5c3cf6d8ef33a5d3869d368a",
         "code": "F33.1",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3635,7 +3635,7 @@
         "display_name": "Major depressive disorder, recurrent, moderate"
       },
       {
-        "_id": "5c37b05def33a54e7fd3ef9f",
+        "_id": "5c3cf6d8ef33a5d3869d368b",
         "code": "F33.2",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3643,7 +3643,7 @@
         "display_name": "Major depressive disorder, recurrent severe without psychotic features"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efa0",
+        "_id": "5c3cf6d8ef33a5d3869d368c",
         "code": "F33.3",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3651,7 +3651,7 @@
         "display_name": "Major depressive disorder, recurrent, severe with psychotic symptoms"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efa1",
+        "_id": "5c3cf6d8ef33a5d3869d368d",
         "code": "F33.40",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3659,7 +3659,7 @@
         "display_name": "Major depressive disorder, recurrent, in remission, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efa2",
+        "_id": "5c3cf6d8ef33a5d3869d368e",
         "code": "F33.41",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3667,7 +3667,7 @@
         "display_name": "Major depressive disorder, recurrent, in partial remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efa3",
+        "_id": "5c3cf6d8ef33a5d3869d368f",
         "code": "F33.42",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3675,7 +3675,7 @@
         "display_name": "Major depressive disorder, recurrent, in full remission"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efa4",
+        "_id": "5c3cf6d8ef33a5d3869d3690",
         "code": "F33.9",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -3688,10 +3688,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edda",
+    "_id": "5c3cf6d8ef33a5d3869d34c6",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3efa5",
+        "_id": "5c3cf6d8ef33a5d3869d3691",
         "code": "185463005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3699,7 +3699,7 @@
         "display_name": "Visit out of hours (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efa6",
+        "_id": "5c3cf6d8ef33a5d3869d3692",
         "code": "185464004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3707,7 +3707,7 @@
         "display_name": "Out of hours visit - not night visit (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efa7",
+        "_id": "5c3cf6d8ef33a5d3869d3693",
         "code": "185465003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3715,7 +3715,7 @@
         "display_name": "Weekend visit (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efa8",
+        "_id": "5c3cf6d8ef33a5d3869d3694",
         "code": "30346009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3723,7 +3723,7 @@
         "display_name": "Evaluation and management of established outpatient in office or other outpatient facility (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efa9",
+        "_id": "5c3cf6d8ef33a5d3869d3695",
         "code": "3391000175108",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3731,7 +3731,7 @@
         "display_name": "Office visit for pediatric care and assessment (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efaa",
+        "_id": "5c3cf6d8ef33a5d3869d3696",
         "code": "37894004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3739,7 +3739,7 @@
         "display_name": "Evaluation and management of new outpatient in office or other outpatient facility (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efab",
+        "_id": "5c3cf6d8ef33a5d3869d3697",
         "code": "439740005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3747,7 +3747,7 @@
         "display_name": "Postoperative follow-up visit (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efac",
+        "_id": "5c3cf6d8ef33a5d3869d3698",
         "code": "99201",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -3755,7 +3755,7 @@
         "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A problem focused history; A problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are self limited or minor. Typically, 10 minutes are spent face-to-face with the patient and/or family."
       },
       {
-        "_id": "5c37b05def33a54e7fd3efad",
+        "_id": "5c3cf6d8ef33a5d3869d3699",
         "code": "99202",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -3763,7 +3763,7 @@
         "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: An expanded problem focused history; An expanded problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of low to moderate severity. Typically, 20 minutes are spent face-to-face with the patient and/or family."
       },
       {
-        "_id": "5c37b05def33a54e7fd3efae",
+        "_id": "5c3cf6d8ef33a5d3869d369a",
         "code": "99203",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -3771,7 +3771,7 @@
         "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A detailed history; A detailed examination; Medical decision making of low complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate severity. Typically, 30 minutes are spent face-to-face with the patient and/or family."
       },
       {
-        "_id": "5c37b05def33a54e7fd3efaf",
+        "_id": "5c3cf6d8ef33a5d3869d369b",
         "code": "99204",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -3779,7 +3779,7 @@
         "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A comprehensive history; A comprehensive examination; Medical decision making of moderate complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate to high severity. Typically, 45 minutes are spent face-to-face with the patient and/or family."
       },
       {
-        "_id": "5c37b05def33a54e7fd3efb0",
+        "_id": "5c3cf6d8ef33a5d3869d369c",
         "code": "99205",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -3787,7 +3787,7 @@
         "display_name": "Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A comprehensive history; A comprehensive examination; Medical decision making of high complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate to high severity. Typically, 60 minutes are spent face-to-face with the patient and/or family."
       },
       {
-        "_id": "5c37b05def33a54e7fd3efb1",
+        "_id": "5c3cf6d8ef33a5d3869d369d",
         "code": "99212",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -3795,7 +3795,7 @@
         "display_name": "Office or other outpatient visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: A problem focused history; A problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are self limited or minor. Typically, 10 minutes are spent face-to-face with the patient and/or family."
       },
       {
-        "_id": "5c37b05def33a54e7fd3efb2",
+        "_id": "5c3cf6d8ef33a5d3869d369e",
         "code": "99213",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -3803,7 +3803,7 @@
         "display_name": "Office or other outpatient visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: An expanded problem focused history; An expanded problem focused examination; Medical decision making of low complexity. Counseling and coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of low to moderate severity. Typically, 15 minutes are spent face-to-face with the patient and/or family."
       },
       {
-        "_id": "5c37b05def33a54e7fd3efb3",
+        "_id": "5c3cf6d8ef33a5d3869d369f",
         "code": "99214",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -3811,7 +3811,7 @@
         "display_name": "Office or other outpatient visit for the evaluation and management of an established patient, which requires at least 2 of these 3 key components: A detailed history; A detailed examination; Medical decision making of moderate complexity. Counseling and/or coordination of care with other physicians, other qualified health care professionals, or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of moderate to high severity. Typically, 25 minutes are spent face-to-face with the patient and/or family."
       },
       {
-        "_id": "5c37b05def33a54e7fd3efb4",
+        "_id": "5c3cf6d8ef33a5d3869d36a0",
         "code": "99215",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -3824,10 +3824,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3eddb",
+    "_id": "5c3cf6d8ef33a5d3869d34c7",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3efb5",
+        "_id": "5c3cf6d8ef33a5d3869d36a1",
         "code": "103735009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3835,7 +3835,7 @@
         "display_name": "Palliative care (regime/therapy)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efb6",
+        "_id": "5c3cf6d8ef33a5d3869d36a2",
         "code": "133918004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3843,7 +3843,7 @@
         "display_name": "Comfort measures (regime/therapy)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efb7",
+        "_id": "5c3cf6d8ef33a5d3869d36a3",
         "code": "182964004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3851,7 +3851,7 @@
         "display_name": "Terminal care (regime/therapy)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efb8",
+        "_id": "5c3cf6d8ef33a5d3869d36a4",
         "code": "305284002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3859,7 +3859,7 @@
         "display_name": "Admission by palliative care physician (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efb9",
+        "_id": "5c3cf6d8ef33a5d3869d36a5",
         "code": "305381007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3867,7 +3867,7 @@
         "display_name": "Admission to palliative care department (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efba",
+        "_id": "5c3cf6d8ef33a5d3869d36a6",
         "code": "305981001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3875,7 +3875,7 @@
         "display_name": "Referral by palliative care physician (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efbb",
+        "_id": "5c3cf6d8ef33a5d3869d36a7",
         "code": "306237005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3883,7 +3883,7 @@
         "display_name": "Referral to palliative care service (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efbc",
+        "_id": "5c3cf6d8ef33a5d3869d36a8",
         "code": "306288008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3891,7 +3891,7 @@
         "display_name": "Referral to palliative care physician (procedure)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efbd",
+        "_id": "5c3cf6d8ef33a5d3869d36a9",
         "code": "385736008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3899,7 +3899,7 @@
         "display_name": "Dying care (regime/therapy)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efbe",
+        "_id": "5c3cf6d8ef33a5d3869d36aa",
         "code": "385763009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3912,10 +3912,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3eddc",
+    "_id": "5c3cf6d8ef33a5d3869d34c8",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3efbf",
+        "_id": "5c3cf6d8ef33a5d3869d36ab",
         "code": "13601005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3923,7 +3923,7 @@
         "display_name": "Paranoid personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc0",
+        "_id": "5c3cf6d8ef33a5d3869d36ac",
         "code": "1376001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3931,7 +3931,7 @@
         "display_name": "Obsessive compulsive personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc1",
+        "_id": "5c3cf6d8ef33a5d3869d36ad",
         "code": "16805009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3939,7 +3939,7 @@
         "display_name": "Cluster A personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc2",
+        "_id": "5c3cf6d8ef33a5d3869d36ae",
         "code": "191753006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3947,7 +3947,7 @@
         "display_name": "Hypomanic personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc3",
+        "_id": "5c3cf6d8ef33a5d3869d36af",
         "code": "191765005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3955,7 +3955,7 @@
         "display_name": "Emotionally unstable personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc4",
+        "_id": "5c3cf6d8ef33a5d3869d36b0",
         "code": "191766006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3963,7 +3963,7 @@
         "display_name": "Psychoinfantile personality (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc5",
+        "_id": "5c3cf6d8ef33a5d3869d36b1",
         "code": "191772006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3971,7 +3971,7 @@
         "display_name": "Eccentric personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc6",
+        "_id": "5c3cf6d8ef33a5d3869d36b2",
         "code": "191773001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3979,7 +3979,7 @@
         "display_name": "Immature personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc7",
+        "_id": "5c3cf6d8ef33a5d3869d36b3",
         "code": "191774007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3987,7 +3987,7 @@
         "display_name": "Masochistic personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc8",
+        "_id": "5c3cf6d8ef33a5d3869d36b4",
         "code": "20010003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -3995,7 +3995,7 @@
         "display_name": "Borderline personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efc9",
+        "_id": "5c3cf6d8ef33a5d3869d36b5",
         "code": "231525006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4003,7 +4003,7 @@
         "display_name": "Manipulative personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efca",
+        "_id": "5c3cf6d8ef33a5d3869d36b6",
         "code": "231527003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4011,7 +4011,7 @@
         "display_name": "Explosive personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efcb",
+        "_id": "5c3cf6d8ef33a5d3869d36b7",
         "code": "26665006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4019,7 +4019,7 @@
         "display_name": "Antisocial personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efcc",
+        "_id": "5c3cf6d8ef33a5d3869d36b8",
         "code": "268633003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4027,7 +4027,7 @@
         "display_name": "Introverted personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efcd",
+        "_id": "5c3cf6d8ef33a5d3869d36b9",
         "code": "268634009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4035,7 +4035,7 @@
         "display_name": "Psychoneurotic personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efce",
+        "_id": "5c3cf6d8ef33a5d3869d36ba",
         "code": "301.0",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4043,7 +4043,7 @@
         "display_name": "Paranoid personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efcf",
+        "_id": "5c3cf6d8ef33a5d3869d36bb",
         "code": "301.10",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4051,7 +4051,7 @@
         "display_name": "Affective personality disorder, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd0",
+        "_id": "5c3cf6d8ef33a5d3869d36bc",
         "code": "301.11",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4059,7 +4059,7 @@
         "display_name": "Chronic hypomanic personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd1",
+        "_id": "5c3cf6d8ef33a5d3869d36bd",
         "code": "301.12",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4067,7 +4067,7 @@
         "display_name": "Chronic depressive personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd2",
+        "_id": "5c3cf6d8ef33a5d3869d36be",
         "code": "301.13",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4075,7 +4075,7 @@
         "display_name": "Cyclothymic disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd3",
+        "_id": "5c3cf6d8ef33a5d3869d36bf",
         "code": "301.20",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4083,7 +4083,7 @@
         "display_name": "Schizoid personality disorder, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd4",
+        "_id": "5c3cf6d8ef33a5d3869d36c0",
         "code": "301.21",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4091,7 +4091,7 @@
         "display_name": "Introverted personality"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd5",
+        "_id": "5c3cf6d8ef33a5d3869d36c1",
         "code": "301.22",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4099,7 +4099,7 @@
         "display_name": "Schizotypal personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd6",
+        "_id": "5c3cf6d8ef33a5d3869d36c2",
         "code": "301.3",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4107,7 +4107,7 @@
         "display_name": "Explosive personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd7",
+        "_id": "5c3cf6d8ef33a5d3869d36c3",
         "code": "301.4",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4115,7 +4115,7 @@
         "display_name": "Obsessive-compulsive personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd8",
+        "_id": "5c3cf6d8ef33a5d3869d36c4",
         "code": "301.50",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4123,7 +4123,7 @@
         "display_name": "Histrionic personality disorder, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efd9",
+        "_id": "5c3cf6d8ef33a5d3869d36c5",
         "code": "301.51",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4131,7 +4131,7 @@
         "display_name": "Chronic factitious illness with physical symptoms"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efda",
+        "_id": "5c3cf6d8ef33a5d3869d36c6",
         "code": "301.59",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4139,7 +4139,7 @@
         "display_name": "Other histrionic personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efdb",
+        "_id": "5c3cf6d8ef33a5d3869d36c7",
         "code": "301.6",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4147,7 +4147,7 @@
         "display_name": "Dependent personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efdc",
+        "_id": "5c3cf6d8ef33a5d3869d36c8",
         "code": "301.7",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4155,7 +4155,7 @@
         "display_name": "Antisocial personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efdd",
+        "_id": "5c3cf6d8ef33a5d3869d36c9",
         "code": "301.81",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4163,7 +4163,7 @@
         "display_name": "Narcissistic personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efde",
+        "_id": "5c3cf6d8ef33a5d3869d36ca",
         "code": "301.82",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4171,7 +4171,7 @@
         "display_name": "Avoidant personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efdf",
+        "_id": "5c3cf6d8ef33a5d3869d36cb",
         "code": "301.83",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4179,7 +4179,7 @@
         "display_name": "Borderline personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe0",
+        "_id": "5c3cf6d8ef33a5d3869d36cc",
         "code": "301.84",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4187,7 +4187,7 @@
         "display_name": "Passive-aggressive personality"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe1",
+        "_id": "5c3cf6d8ef33a5d3869d36cd",
         "code": "301.89",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4195,7 +4195,7 @@
         "display_name": "Other personality disorders"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe2",
+        "_id": "5c3cf6d8ef33a5d3869d36ce",
         "code": "301.9",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -4203,7 +4203,7 @@
         "display_name": "Unspecified personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe3",
+        "_id": "5c3cf6d8ef33a5d3869d36cf",
         "code": "31027006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4211,7 +4211,7 @@
         "display_name": "Schizotypal personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe4",
+        "_id": "5c3cf6d8ef33a5d3869d36d0",
         "code": "33449004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4219,7 +4219,7 @@
         "display_name": "Personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe5",
+        "_id": "5c3cf6d8ef33a5d3869d36d1",
         "code": "37746008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4227,7 +4227,7 @@
         "display_name": "Avoidant personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe6",
+        "_id": "5c3cf6d8ef33a5d3869d36d2",
         "code": "4306003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4235,7 +4235,7 @@
         "display_name": "Cluster B personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe7",
+        "_id": "5c3cf6d8ef33a5d3869d36d3",
         "code": "442245003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4243,7 +4243,7 @@
         "display_name": "Chronic hypomanic personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe8",
+        "_id": "5c3cf6d8ef33a5d3869d36d4",
         "code": "44966003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4251,7 +4251,7 @@
         "display_name": "Passive aggressive personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efe9",
+        "_id": "5c3cf6d8ef33a5d3869d36d5",
         "code": "52954000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4259,7 +4259,7 @@
         "display_name": "Schizoid personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efea",
+        "_id": "5c3cf6d8ef33a5d3869d36d6",
         "code": "55341008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4267,7 +4267,7 @@
         "display_name": "Histrionic personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efeb",
+        "_id": "5c3cf6d8ef33a5d3869d36d7",
         "code": "80711002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4275,7 +4275,7 @@
         "display_name": "Narcissistic personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efec",
+        "_id": "5c3cf6d8ef33a5d3869d36d8",
         "code": "83890006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4283,7 +4283,7 @@
         "display_name": "Cluster C personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efed",
+        "_id": "5c3cf6d8ef33a5d3869d36d9",
         "code": "84466009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -4291,7 +4291,7 @@
         "display_name": "Dependent personality disorder (disorder)"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efee",
+        "_id": "5c3cf6d8ef33a5d3869d36da",
         "code": "F21",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4299,7 +4299,7 @@
         "display_name": "Schizotypal disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3efef",
+        "_id": "5c3cf6d8ef33a5d3869d36db",
         "code": "F34.0",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4307,7 +4307,7 @@
         "display_name": "Cyclothymic disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff0",
+        "_id": "5c3cf6d8ef33a5d3869d36dc",
         "code": "F60.0",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4315,7 +4315,7 @@
         "display_name": "Paranoid personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff1",
+        "_id": "5c3cf6d8ef33a5d3869d36dd",
         "code": "F60.1",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4323,7 +4323,7 @@
         "display_name": "Schizoid personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff2",
+        "_id": "5c3cf6d8ef33a5d3869d36de",
         "code": "F60.2",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4331,7 +4331,7 @@
         "display_name": "Antisocial personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff3",
+        "_id": "5c3cf6d8ef33a5d3869d36df",
         "code": "F60.3",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4339,7 +4339,7 @@
         "display_name": "Borderline personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff4",
+        "_id": "5c3cf6d8ef33a5d3869d36e0",
         "code": "F60.4",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4347,7 +4347,7 @@
         "display_name": "Histrionic personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff5",
+        "_id": "5c3cf6d8ef33a5d3869d36e1",
         "code": "F60.5",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4355,7 +4355,7 @@
         "display_name": "Obsessive-compulsive personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff6",
+        "_id": "5c3cf6d8ef33a5d3869d36e2",
         "code": "F60.6",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4363,7 +4363,7 @@
         "display_name": "Avoidant personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff7",
+        "_id": "5c3cf6d8ef33a5d3869d36e3",
         "code": "F60.7",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4371,7 +4371,7 @@
         "display_name": "Dependent personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff8",
+        "_id": "5c3cf6d8ef33a5d3869d36e4",
         "code": "F60.81",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4379,7 +4379,7 @@
         "display_name": "Narcissistic personality disorder"
       },
       {
-        "_id": "5c37b05def33a54e7fd3eff9",
+        "_id": "5c3cf6d8ef33a5d3869d36e5",
         "code": "F60.89",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4387,7 +4387,7 @@
         "display_name": "Other specific personality disorders"
       },
       {
-        "_id": "5c37b05def33a54e7fd3effa",
+        "_id": "5c3cf6d8ef33a5d3869d36e6",
         "code": "F60.9",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4395,7 +4395,7 @@
         "display_name": "Personality disorder, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3effb",
+        "_id": "5c3cf6d8ef33a5d3869d36e7",
         "code": "F68.10",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4403,7 +4403,7 @@
         "display_name": "Factitious disorder, unspecified"
       },
       {
-        "_id": "5c37b05def33a54e7fd3effc",
+        "_id": "5c3cf6d8ef33a5d3869d36e8",
         "code": "F68.11",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4411,7 +4411,7 @@
         "display_name": "Factitious disorder with predominantly psychological signs and symptoms"
       },
       {
-        "_id": "5c37b05def33a54e7fd3effd",
+        "_id": "5c3cf6d8ef33a5d3869d36e9",
         "code": "F68.12",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4419,7 +4419,7 @@
         "display_name": "Factitious disorder with predominantly physical signs and symptoms"
       },
       {
-        "_id": "5c37b05def33a54e7fd3effe",
+        "_id": "5c3cf6d8ef33a5d3869d36ea",
         "code": "F68.13",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4432,10 +4432,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3eddd",
+    "_id": "5c3cf6d8ef33a5d3869d34c9",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3efff",
+        "_id": "5c3cf6d8ef33a5d3869d36eb",
         "code": "44261-6",
         "code_system_name": "LOINC",
         "code_system_oid": "2.16.840.1.113883.6.1",
@@ -4448,10 +4448,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3edde",
+    "_id": "5c3cf6d8ef33a5d3869d34ca",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3f000",
+        "_id": "5c3cf6d8ef33a5d3869d36ec",
         "code": "90791",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -4459,7 +4459,7 @@
         "display_name": "Psychiatric diagnostic evaluation"
       },
       {
-        "_id": "5c37b05def33a54e7fd3f001",
+        "_id": "5c3cf6d8ef33a5d3869d36ed",
         "code": "90792",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -4467,7 +4467,7 @@
         "display_name": "Psychiatric diagnostic evaluation with medical services"
       },
       {
-        "_id": "5c37b05def33a54e7fd3f002",
+        "_id": "5c3cf6d8ef33a5d3869d36ee",
         "code": "90832",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -4475,7 +4475,7 @@
         "display_name": "Psychotherapy, 30 minutes with patient"
       },
       {
-        "_id": "5c37b05def33a54e7fd3f003",
+        "_id": "5c3cf6d8ef33a5d3869d36ef",
         "code": "90834",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -4483,7 +4483,7 @@
         "display_name": "Psychotherapy, 45 minutes with patient"
       },
       {
-        "_id": "5c37b05def33a54e7fd3f004",
+        "_id": "5c3cf6d8ef33a5d3869d36f0",
         "code": "90837",
         "code_system_name": "CPT",
         "code_system_oid": "2.16.840.1.113883.6.12",
@@ -4496,10 +4496,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3eddf",
+    "_id": "5c3cf6d8ef33a5d3869d34cb",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3f005",
+        "_id": "5c3cf6d8ef33a5d3869d36f1",
         "code": "Z51.5",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -4512,10 +4512,10 @@
     "version": "Draft-A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
   },
   {
-    "_id": "5c37b05cef33a54e7fd3ede0",
+    "_id": "5c3cf6d8ef33a5d3869d34cc",
     "concepts": [
       {
-        "_id": "5c37b05def33a54e7fd3f006",
+        "_id": "5c3cf6d8ef33a5d3869d36f2",
         "code": "419099009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",

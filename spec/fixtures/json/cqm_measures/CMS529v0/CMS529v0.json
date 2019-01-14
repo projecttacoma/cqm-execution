@@ -16563,7 +16563,7 @@
   },
   "population_sets": [
     {
-      "id": "PopulationCriteria1",
+      "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENOM": {
           "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
@@ -16804,26 +16804,26 @@
   "title": "Core Clinical Data Elements for the Hybrid Hospital-Wide Readmission (HWR) Measure with Claims and Electronic Health Record Data",
   "updated_at": null,
   "value_set_ids": [
-    "5c37b07cef33a54e917d389c",
-    "5c37b07cef33a54e917d389d",
-    "5c37b07cef33a54e917d389e",
-    "5c37b07cef33a54e917d389f",
-    "5c37b07cef33a54e917d38a0",
-    "5c37b07cef33a54e917d38a1",
-    "5c37b07cef33a54e917d38a2",
-    "5c37b07cef33a54e917d38a3",
-    "5c37b07cef33a54e917d38a4",
-    "5c37b07cef33a54e917d38a5",
-    "5c37b07cef33a54e917d38a6",
-    "5c37b07cef33a54e917d38a7",
-    "5c37b07cef33a54e917d38a8",
-    "5c37b07cef33a54e917d38a9",
-    "5c37b07cef33a54e917d38aa",
-    "5c37b07cef33a54e917d38ab",
-    "5c37b07cef33a54e917d38ac",
-    "5c37b07cef33a54e917d38ad",
-    "5c37b07cef33a54e917d38ae",
-    "5c37b07cef33a54e917d38af",
-    "5c37b07cef33a54e917d38b0"
+    "5c3cf6f5ef33a5d39853576b",
+    "5c3cf6f5ef33a5d39853576c",
+    "5c3cf6f5ef33a5d39853576d",
+    "5c3cf6f5ef33a5d39853576e",
+    "5c3cf6f5ef33a5d39853576f",
+    "5c3cf6f5ef33a5d398535770",
+    "5c3cf6f5ef33a5d398535771",
+    "5c3cf6f5ef33a5d398535772",
+    "5c3cf6f5ef33a5d398535773",
+    "5c3cf6f5ef33a5d398535774",
+    "5c3cf6f5ef33a5d398535775",
+    "5c3cf6f5ef33a5d398535776",
+    "5c3cf6f5ef33a5d398535777",
+    "5c3cf6f5ef33a5d398535778",
+    "5c3cf6f5ef33a5d398535779",
+    "5c3cf6f5ef33a5d39853577a",
+    "5c3cf6f5ef33a5d39853577b",
+    "5c3cf6f5ef33a5d39853577c",
+    "5c3cf6f5ef33a5d39853577d",
+    "5c3cf6f5ef33a5d39853577e",
+    "5c3cf6f5ef33a5d39853577f"
   ]
 }
