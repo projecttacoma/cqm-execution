@@ -10,6 +10,6 @@ cache:
     - "node_modules"
 script:
   - yarn install
-  - npm run lint
-  - npm test
+  - yarn run lint
+  - yarn test
   - codecov
