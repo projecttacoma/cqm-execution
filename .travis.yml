@@ -9,6 +9,7 @@ cache:
   directories:
     - "node_modules"
 script:
-  - npm run lint
-  - npm test
+  - yarn install
+  - yarn run lint
+  - yarn test
   - codecov
