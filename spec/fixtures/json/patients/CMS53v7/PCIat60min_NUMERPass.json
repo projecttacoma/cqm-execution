@@ -217,7 +217,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c38da0857a11e34743b08b2"
+          "value": "5c40c82757a11e47ccd342d1"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
@@ -240,7 +240,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c38da0857a11e34743b08b3"
+          "value": "5c40c82757a11e47ccd342d2"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
@@ -263,7 +263,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c38da0857a11e34743b08b4"
+          "value": "5c40c82757a11e47ccd342d3"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
@@ -286,7 +286,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c38da0857a11e34743b08b5"
+          "value": "5c40c82757a11e47ccd342d4"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",
