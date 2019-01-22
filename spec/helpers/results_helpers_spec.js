@@ -55,7 +55,7 @@ describe('MeasureHelpers', () => {
         const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
         const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
+        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -68,7 +68,7 @@ describe('MeasureHelpers', () => {
         const valueSetsByOid = getJSONFixture('measures/CMS760v0/value_sets.json');
         const measure = getJSONFixture('measures/CMS760v0/CMS760v0.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
+        patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -79,7 +79,7 @@ describe('MeasureHelpers', () => {
         const valueSetsByOid = getJSONFixture('measures/CMS32v7/value_sets.json');
         const measure = getJSONFixture('measures/CMS32v7/CMS32v7.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json'));
+        patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -104,7 +104,7 @@ describe('MeasureHelpers', () => {
         const valueSetsByOid = getJSONFixture('measures/CMS460v0/value_sets.json');
         const measure = getJSONFixture('measures/CMS460v0/CMS460v0.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json'));
+        patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -123,7 +123,7 @@ describe('MeasureHelpers', () => {
         const measure = getJSONFixture('measures/CMS134v6/CMS134v6.json');
         const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
         const patients = [];
-        patients.push(passNumer);
+        patients.push(passNumer.qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
         const passNumerResults = calculationResults[Object.keys(calculationResults)[0]];
 
@@ -136,7 +136,7 @@ describe('MeasureHelpers', () => {
         const measure = getJSONFixture('measures/CMS134v6/CMS134v6.json');
         const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
         const patients = [];
-        patients.push(passNumer);
+        patients.push(passNumer.qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
         const passNumerResults = calculationResults[Object.keys(calculationResults)[0]];
 
@@ -148,7 +148,7 @@ describe('MeasureHelpers', () => {
         const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
         const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
+        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, { doPretty: true });
         const denexPassresult = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -161,7 +161,7 @@ describe('MeasureHelpers', () => {
         const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
         const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
+        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid);
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
