@@ -635,4 +635,18 @@ describe('Calculator', () => {
       expect(sampleResult['pretty']).toEqual(`[{\n  authorDatetime: 11/01/2012 10:00 AM,\n  id: {\n    namingSystem: null,\n    value: "${sampleResultId}"\n  }\n}]`);
     });
   });
+
+  describe('Non-Versioned Value-Sets', () => {
+    it('Calculates correctly', () => {
+      const valueSetsByOid = getJSONFixture('cqm_measures/CMS105v7/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMS105v7/CMS105v7.json');
+      const patients = [getJSONFixture('patients/CMS105v7/StatinAtDC_NUMERPass.json')];
+      const options = { doPretty: true };
+      const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      expect(result.IPP).toEqual(1);
+      expect(result.DENOM).toEqual(1);
+      expect(result.NUMER).toEqual(1);
+    });
+  });
 });
