@@ -15852,6 +15852,947 @@
       ]
     },
     {
+      "cql": "library Adult_Outpatient_Encounters version '1.1.000'\r\n\r\nusing QDM version '5.3'\r\n\r\ncodesystem \"LOINC:2.46\": 'urn:oid:2.16.840.1.113883.6.1' version 'urn:hl7:version:2.46'\r\ncodesystem \"SNOMEDCT:2016-03\": 'urn:oid:2.16.840.1.113883.6.96' version 'urn:hl7:version:2016-03'\r\n\r\nvalueset \"Office Visit\": 'urn:oid:2.16.840.1.113883.3.464.1003.101.12.1001'\r\nvalueset \"Annual Wellness Visit\": 'urn:oid:2.16.840.1.113883.3.526.3.1240'\r\nvalueset \"Preventive Care Services - Established Office Visit, 18 and Up\": 'urn:oid:2.16.840.1.113883.3.464.1003.101.12.1025'\r\nvalueset \"Preventive Care Services-Initial Office Visit, 18 and Up\": 'urn:oid:2.16.840.1.113883.3.464.1003.101.12.1023'\r\nvalueset \"Home Healthcare Services\": 'urn:oid:2.16.840.1.113883.3.464.1003.101.12.1016'\r\n\r\ncode \"Birthdate\": '21112-8' from \"LOINC:2.46\" display 'Birth date'\r\ncode \"Dead\": '419099009' from \"SNOMEDCT:2016-03\" display 'Dead'\r\n\r\nparameter \"Measurement Period\" Interval<DateTime>\r\n\r\ncontext Patient\r\n\r\ndefine \"Qualifying Encounters\":\r\n\t( [\"Encounter, Performed\": \"Office Visit\"]\r\n\t\tunion [\"Encounter, Performed\": \"Annual Wellness Visit\"]\r\n\t\tunion [\"Encounter, Performed\": \"Preventive Care Services - Established Office Visit, 18 and Up\"]\r\n\t\tunion [\"Encounter, Performed\": \"Preventive Care Services-Initial Office Visit, 18 and Up\"]\r\n\t\tunion [\"Encounter, Performed\": \"Home Healthcare Services\"] ) ValidEncounter\r\n\t\twhere ValidEncounter.relevantPeriod during \"Measurement Period\"\r\n",
+      "elm": {
+        "library": {
+          "identifier": {
+            "id": "Adult_Outpatient_Encounters",
+            "version": "1.1.000"
+          },
+          "schemaIdentifier": {
+            "id": "urn:hl7-org:elm",
+            "version": "r1"
+          },
+          "usings": {
+            "def": [
+              {
+                "localIdentifier": "System",
+                "uri": "urn:hl7-org:elm-types:r1"
+              },
+              {
+                "localId": "1",
+                "locator": "3:1-3:23",
+                "localIdentifier": "QDM",
+                "uri": "urn:healthit-gov:qdm:v5_3",
+                "version": "5.3"
+              }
+            ]
+          },
+          "parameters": {
+            "def": [
+              {
+                "localId": "15",
+                "locator": "17:1-17:49",
+                "name": "Measurement Period",
+                "accessLevel": "Public",
+                "parameterTypeSpecifier": {
+                  "localId": "14",
+                  "locator": "17:32-17:49",
+                  "type": "IntervalTypeSpecifier",
+                  "pointType": {
+                    "localId": "13",
+                    "locator": "17:41-17:48",
+                    "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                    "type": "NamedTypeSpecifier"
+                  }
+                }
+              }
+            ]
+          },
+          "codeSystems": {
+            "def": [
+              {
+                "localId": "2",
+                "locator": "5:1-5:87",
+                "name": "LOINC:2.46",
+                "id": "LOINC",
+                "version": "urn:hl7:version:2.46",
+                "accessLevel": "Public"
+              },
+              {
+                "localId": "3",
+                "locator": "6:1-6:97",
+                "name": "SNOMEDCT:2016-03",
+                "id": "SNOMED-CT",
+                "version": "urn:hl7:version:2016-03",
+                "accessLevel": "Public"
+              }
+            ]
+          },
+          "valueSets": {
+            "def": [
+              {
+                "localId": "4",
+                "locator": "8:1-8:75",
+                "name": "Office Visit",
+                "id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+                "accessLevel": "Public"
+              },
+              {
+                "localId": "5",
+                "locator": "9:1-9:74",
+                "name": "Annual Wellness Visit",
+                "id": "2.16.840.1.113883.3.526.3.1240",
+                "accessLevel": "Public"
+              },
+              {
+                "localId": "6",
+                "locator": "10:1-10:125",
+                "name": "Preventive Care Services - Established Office Visit, 18 and Up",
+                "id": "2.16.840.1.113883.3.464.1003.101.12.1025",
+                "accessLevel": "Public"
+              },
+              {
+                "localId": "7",
+                "locator": "11:1-11:119",
+                "name": "Preventive Care Services-Initial Office Visit, 18 and Up",
+                "id": "2.16.840.1.113883.3.464.1003.101.12.1023",
+                "accessLevel": "Public"
+              },
+              {
+                "localId": "8",
+                "locator": "12:1-12:87",
+                "name": "Home Healthcare Services",
+                "id": "2.16.840.1.113883.3.464.1003.101.12.1016",
+                "accessLevel": "Public"
+              }
+            ]
+          },
+          "codes": {
+            "def": [
+              {
+                "localId": "10",
+                "locator": "14:1-14:66",
+                "name": "Birthdate",
+                "id": "21112-8",
+                "display": "Birth date",
+                "accessLevel": "Public",
+                "codeSystem": {
+                  "localId": "9",
+                  "locator": "14:34-14:45",
+                  "name": "LOINC:2.46"
+                }
+              },
+              {
+                "localId": "12",
+                "locator": "15:1-15:63",
+                "name": "Dead",
+                "id": "419099009",
+                "display": "Dead",
+                "accessLevel": "Public",
+                "codeSystem": {
+                  "localId": "11",
+                  "locator": "15:31-15:48",
+                  "name": "SNOMEDCT:2016-03"
+                }
+              }
+            ]
+          },
+          "statements": {
+            "def": [
+              {
+                "locator": "19:1-19:15",
+                "name": "Patient",
+                "context": "Patient",
+                "expression": {
+                  "type": "SingletonFrom",
+                  "operand": {
+                    "locator": "19:1-19:15",
+                    "dataType": "{urn:healthit-gov:qdm:v5_3}Patient",
+                    "templateId": "Patient",
+                    "type": "Retrieve"
+                  }
+                }
+              },
+              {
+                "localId": "31",
+                "locator": "21:1-27:65",
+                "name": "Qualifying Encounters",
+                "context": "Patient",
+                "accessLevel": "Public",
+                "annotation": [
+                  {
+                    "type": "Annotation",
+                    "s": {
+                      "r": "31",
+                      "s": [
+                        {
+                          "value": [
+                            "define ",
+                            "\"Qualifying Encounters\"",
+                            ":\n\t"
+                          ]
+                        },
+                        {
+                          "r": "30",
+                          "s": [
+                            {
+                              "s": [
+                                {
+                                  "r": "25",
+                                  "s": [
+                                    {
+                                      "r": "24",
+                                      "s": [
+                                        {
+                                          "value": [
+                                            "( "
+                                          ]
+                                        },
+                                        {
+                                          "r": "24",
+                                          "s": [
+                                            {
+                                              "r": "22",
+                                              "s": [
+                                                {
+                                                  "r": "20",
+                                                  "s": [
+                                                    {
+                                                      "r": "18",
+                                                      "s": [
+                                                        {
+                                                          "r": "16",
+                                                          "s": [
+                                                            {
+                                                              "value": [
+                                                                "[",
+                                                                "\"Encounter, Performed\"",
+                                                                ": "
+                                                              ]
+                                                            },
+                                                            {
+                                                              "s": [
+                                                                {
+                                                                  "value": [
+                                                                    "\"Office Visit\""
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "value": [
+                                                                "]"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "value": [
+                                                            "\n\t\tunion "
+                                                          ]
+                                                        },
+                                                        {
+                                                          "r": "17",
+                                                          "s": [
+                                                            {
+                                                              "value": [
+                                                                "[",
+                                                                "\"Encounter, Performed\"",
+                                                                ": "
+                                                              ]
+                                                            },
+                                                            {
+                                                              "s": [
+                                                                {
+                                                                  "value": [
+                                                                    "\"Annual Wellness Visit\""
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "value": [
+                                                                "]"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "value": [
+                                                        "\n\t\tunion "
+                                                      ]
+                                                    },
+                                                    {
+                                                      "r": "19",
+                                                      "s": [
+                                                        {
+                                                          "value": [
+                                                            "[",
+                                                            "\"Encounter, Performed\"",
+                                                            ": "
+                                                          ]
+                                                        },
+                                                        {
+                                                          "s": [
+                                                            {
+                                                              "value": [
+                                                                "\"Preventive Care Services - Established Office Visit, 18 and Up\""
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "value": [
+                                                            "]"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "value": [
+                                                    "\n\t\tunion "
+                                                  ]
+                                                },
+                                                {
+                                                  "r": "21",
+                                                  "s": [
+                                                    {
+                                                      "value": [
+                                                        "[",
+                                                        "\"Encounter, Performed\"",
+                                                        ": "
+                                                      ]
+                                                    },
+                                                    {
+                                                      "s": [
+                                                        {
+                                                          "value": [
+                                                            "\"Preventive Care Services-Initial Office Visit, 18 and Up\""
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "value": [
+                                                        "]"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "value": [
+                                                "\n\t\tunion "
+                                              ]
+                                            },
+                                            {
+                                              "r": "23",
+                                              "s": [
+                                                {
+                                                  "value": [
+                                                    "[",
+                                                    "\"Encounter, Performed\"",
+                                                    ": "
+                                                  ]
+                                                },
+                                                {
+                                                  "s": [
+                                                    {
+                                                      "value": [
+                                                        "\"Home Healthcare Services\""
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "value": [
+                                                    "]"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "value": [
+                                            " )"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "value": [
+                                        " ",
+                                        "ValidEncounter"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "value": [
+                                "\n\t\t"
+                              ]
+                            },
+                            {
+                              "r": "29",
+                              "s": [
+                                {
+                                  "value": [
+                                    "where "
+                                  ]
+                                },
+                                {
+                                  "r": "29",
+                                  "s": [
+                                    {
+                                      "r": "27",
+                                      "s": [
+                                        {
+                                          "r": "26",
+                                          "s": [
+                                            {
+                                              "value": [
+                                                "ValidEncounter"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "value": [
+                                            "."
+                                          ]
+                                        },
+                                        {
+                                          "r": "27",
+                                          "s": [
+                                            {
+                                              "value": [
+                                                "relevantPeriod"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "value": [
+                                        " ",
+                                        "during",
+                                        " "
+                                      ]
+                                    },
+                                    {
+                                      "r": "28",
+                                      "s": [
+                                        {
+                                          "value": [
+                                            "\"Measurement Period\""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "expression": {
+                  "localId": "30",
+                  "locator": "22:2-27:65",
+                  "type": "Query",
+                  "source": [
+                    {
+                      "localId": "25",
+                      "locator": "22:2-26:77",
+                      "alias": "ValidEncounter",
+                      "expression": {
+                        "localId": "24",
+                        "locator": "22:2-26:62",
+                        "type": "Union",
+                        "operand": [
+                          {
+                            "localId": "22",
+                            "locator": "22:4-25:92",
+                            "type": "Union",
+                            "operand": [
+                              {
+                                "localId": "20",
+                                "locator": "22:4-24:98",
+                                "type": "Union",
+                                "operand": [
+                                  {
+                                    "localId": "18",
+                                    "locator": "22:4-23:57",
+                                    "type": "Union",
+                                    "operand": [
+                                      {
+                                        "localId": "16",
+                                        "locator": "22:4-22:43",
+                                        "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
+                                        "templateId": "PositiveEncounterPerformed",
+                                        "codeProperty": "code",
+                                        "type": "Retrieve",
+                                        "codes": {
+                                          "name": "Office Visit",
+                                          "type": "ValueSetRef"
+                                        }
+                                      },
+                                      {
+                                        "localId": "17",
+                                        "locator": "23:9-23:57",
+                                        "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
+                                        "templateId": "PositiveEncounterPerformed",
+                                        "codeProperty": "code",
+                                        "type": "Retrieve",
+                                        "codes": {
+                                          "name": "Annual Wellness Visit",
+                                          "type": "ValueSetRef"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "localId": "19",
+                                    "locator": "24:9-24:98",
+                                    "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
+                                    "templateId": "PositiveEncounterPerformed",
+                                    "codeProperty": "code",
+                                    "type": "Retrieve",
+                                    "codes": {
+                                      "name": "Preventive Care Services - Established Office Visit, 18 and Up",
+                                      "type": "ValueSetRef"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "localId": "21",
+                                "locator": "25:9-25:92",
+                                "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
+                                "templateId": "PositiveEncounterPerformed",
+                                "codeProperty": "code",
+                                "type": "Retrieve",
+                                "codes": {
+                                  "name": "Preventive Care Services-Initial Office Visit, 18 and Up",
+                                  "type": "ValueSetRef"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "localId": "23",
+                            "locator": "26:9-26:60",
+                            "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
+                            "templateId": "PositiveEncounterPerformed",
+                            "codeProperty": "code",
+                            "type": "Retrieve",
+                            "codes": {
+                              "name": "Home Healthcare Services",
+                              "type": "ValueSetRef"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "relationship": [
+
+                  ],
+                  "where": {
+                    "localId": "29",
+                    "locator": "27:3-27:65",
+                    "type": "IncludedIn",
+                    "operand": [
+                      {
+                        "localId": "27",
+                        "locator": "27:9-27:37",
+                        "path": "relevantPeriod",
+                        "scope": "ValidEncounter",
+                        "type": "Property"
+                      },
+                      {
+                        "localId": "28",
+                        "locator": "27:46-27:65",
+                        "name": "Measurement Period",
+                        "type": "ParameterRef"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "elm_annotations": {
+        "statements": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "text": "define \"Qualifying Encounters\":\n  "
+                      }
+                    ]
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "text": "( "
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "text": "[\"Encounter, Performed\": "
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "text": "\"Office Visit\""
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "text": "]"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ],
+                                                    "node_type": "Retrieve",
+                                                    "ref_id": "16"
+                                                  },
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "text": "\n    union "
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "text": "[\"Encounter, Performed\": "
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "text": "\"Annual Wellness Visit\""
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "text": "]"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ],
+                                                    "node_type": "Retrieve",
+                                                    "ref_id": "17"
+                                                  }
+                                                ],
+                                                "node_type": "Union",
+                                                "ref_id": "18"
+                                              },
+                                              {
+                                                "children": [
+                                                  {
+                                                    "text": "\n    union "
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "text": "[\"Encounter, Performed\": "
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "text": "\"Preventive Care Services - Established Office Visit, 18 and Up\""
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "text": "]"
+                                                      }
+                                                    ]
+                                                  }
+                                                ],
+                                                "node_type": "Retrieve",
+                                                "ref_id": "19"
+                                              }
+                                            ],
+                                            "node_type": "Union",
+                                            "ref_id": "20"
+                                          },
+                                          {
+                                            "children": [
+                                              {
+                                                "text": "\n    union "
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "text": "[\"Encounter, Performed\": "
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "text": "\"Preventive Care Services-Initial Office Visit, 18 and Up\""
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "children": [
+                                                  {
+                                                    "text": "]"
+                                                  }
+                                                ]
+                                              }
+                                            ],
+                                            "node_type": "Retrieve",
+                                            "ref_id": "21"
+                                          }
+                                        ],
+                                        "node_type": "Union",
+                                        "ref_id": "22"
+                                      },
+                                      {
+                                        "children": [
+                                          {
+                                            "text": "\n    union "
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "text": "[\"Encounter, Performed\": "
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "text": "\"Home Healthcare Services\""
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "children": [
+                                              {
+                                                "text": "]"
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "node_type": "Retrieve",
+                                        "ref_id": "23"
+                                      }
+                                    ],
+                                    "node_type": "Union",
+                                    "ref_id": "24"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "text": " )"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "node_type": "Union",
+                                "ref_id": "24"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "text": " ValidEncounter"
+                                  }
+                                ]
+                              }
+                            ],
+                            "ref_id": "25"
+                          }
+                        ]
+                      },
+                      {
+                        "children": [
+                          {
+                            "text": "\n    "
+                          }
+                        ]
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "text": "where "
+                              }
+                            ]
+                          },
+                          {
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "text": "ValidEncounter"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "ref_id": "26"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "text": "."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "text": "relevantPeriod"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "node_type": "Property",
+                                    "ref_id": "27"
+                                  }
+                                ],
+                                "node_type": "Property",
+                                "ref_id": "27"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "text": " during "
+                                  }
+                                ]
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "text": "\"Measurement Period\""
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "node_type": "ParameterRef",
+                                "ref_id": "28"
+                              }
+                            ],
+                            "ref_id": "29"
+                          }
+                        ],
+                        "ref_id": "29"
+                      }
+                    ],
+                    "node_type": "Query",
+                    "ref_id": "30"
+                  }
+                ],
+                "ref_id": "31"
+              }
+            ],
+            "define_name": "Qualifying Encounters"
+          }
+        ],
+        "identifier": {
+          "id": "Adult_Outpatient_Encounters",
+          "version": "1.1.000"
+        }
+      },
+      "is_main_library": false,
+      "library_name": "Adult_Outpatient_Encounters",
+      "library_version": "1.1.000",
+      "statement_dependencies": [
+        {
+          "statement_name": "Qualifying Encounters"
+        }
+      ]
+    },
+    {
       "cql": "library Hospice version '1.0.000'\r\n\r\nusing QDM version '5.3'\r\n\r\ncodesystem \"LOINC:2.46\": 'urn:oid:2.16.840.1.113883.6.1' version 'urn:hl7:version:2.46'\r\ncodesystem \"SNOMEDCT:2016-03\": 'urn:oid:2.16.840.1.113883.6.96' version 'urn:hl7:version:2016-03'\r\ncodesystem \"SNOMEDCT:2017-03\": 'urn:oid:2.16.840.1.113883.6.96' version 'urn:hl7:version:2017-03'\r\ncodesystem \"SNOMEDCT:2017-09\": 'urn:oid:2.16.840.1.113883.6.96' version 'urn:hl7:version:2017-09'\r\n\r\nvalueset \"Encounter Inpatient\": 'urn:oid:2.16.840.1.113883.3.666.5.307'\r\nvalueset \"Hospice care ambulatory\": 'urn:oid:2.16.840.1.113762.1.4.1108.15'\r\n\r\ncode \"Birthdate\": '21112-8' from \"LOINC:2.46\" display 'Birth date'\r\ncode \"Dead\": '419099009' from \"SNOMEDCT:2016-03\" display 'Dead'\r\ncode \"Discharge to healthcare facility for hospice care (procedure)\": '428371000124100' from \"SNOMEDCT:2017-09\" display 'Discharge to healthcare facility for hospice care (procedure)'\r\ncode \"Discharge to home for hospice care (procedure)\": '428361000124107' from \"SNOMEDCT:2017-09\" display 'Discharge to home for hospice care (procedure)'\r\n\r\nparameter \"Measurement Period\" Interval<DateTime>\r\n\r\ncontext Patient\r\n\r\ndefine \"Has Hospice\":\r\n\texists ( [\"Encounter, Performed\": \"Encounter Inpatient\"] DischargeHospice\r\n\t\t\twhere ( DischargeHospice.dischargeDisposition as Code ~ \"Discharge to home for hospice care (procedure)\"\r\n\t\t\t\t\tor DischargeHospice.dischargeDisposition as Code ~ \"Discharge to healthcare facility for hospice care (procedure)\"\r\n\t\t\t)\r\n\t\t\t\tand DischargeHospice.relevantPeriod ends during \"Measurement Period\"\r\n\t)\r\n\t\tor exists ( [\"Intervention, Order\": \"Hospice care ambulatory\"] HospiceOrder\r\n\t\t\t\twhere HospiceOrder.authorDatetime during \"Measurement Period\"\r\n\t\t)\r\n\t\tor exists ( [\"Intervention, Performed\": \"Hospice care ambulatory\"] HospicePerformed\r\n\t\t\t\twhere HospicePerformed.relevantPeriod overlaps \"Measurement Period\"\r\n\t\t)\r\n",
       "elm": {
         "library": {
@@ -17738,947 +18679,6 @@
           "statement_name": "Has Hospice"
         }
       ]
-    },
-    {
-      "cql": "library Adult_Outpatient_Encounters version '1.1.000'\r\n\r\nusing QDM version '5.3'\r\n\r\ncodesystem \"LOINC:2.46\": 'urn:oid:2.16.840.1.113883.6.1' version 'urn:hl7:version:2.46'\r\ncodesystem \"SNOMEDCT:2016-03\": 'urn:oid:2.16.840.1.113883.6.96' version 'urn:hl7:version:2016-03'\r\n\r\nvalueset \"Office Visit\": 'urn:oid:2.16.840.1.113883.3.464.1003.101.12.1001'\r\nvalueset \"Annual Wellness Visit\": 'urn:oid:2.16.840.1.113883.3.526.3.1240'\r\nvalueset \"Preventive Care Services - Established Office Visit, 18 and Up\": 'urn:oid:2.16.840.1.113883.3.464.1003.101.12.1025'\r\nvalueset \"Preventive Care Services-Initial Office Visit, 18 and Up\": 'urn:oid:2.16.840.1.113883.3.464.1003.101.12.1023'\r\nvalueset \"Home Healthcare Services\": 'urn:oid:2.16.840.1.113883.3.464.1003.101.12.1016'\r\n\r\ncode \"Birthdate\": '21112-8' from \"LOINC:2.46\" display 'Birth date'\r\ncode \"Dead\": '419099009' from \"SNOMEDCT:2016-03\" display 'Dead'\r\n\r\nparameter \"Measurement Period\" Interval<DateTime>\r\n\r\ncontext Patient\r\n\r\ndefine \"Qualifying Encounters\":\r\n\t( [\"Encounter, Performed\": \"Office Visit\"]\r\n\t\tunion [\"Encounter, Performed\": \"Annual Wellness Visit\"]\r\n\t\tunion [\"Encounter, Performed\": \"Preventive Care Services - Established Office Visit, 18 and Up\"]\r\n\t\tunion [\"Encounter, Performed\": \"Preventive Care Services-Initial Office Visit, 18 and Up\"]\r\n\t\tunion [\"Encounter, Performed\": \"Home Healthcare Services\"] ) ValidEncounter\r\n\t\twhere ValidEncounter.relevantPeriod during \"Measurement Period\"\r\n",
-      "elm": {
-        "library": {
-          "identifier": {
-            "id": "Adult_Outpatient_Encounters",
-            "version": "1.1.000"
-          },
-          "schemaIdentifier": {
-            "id": "urn:hl7-org:elm",
-            "version": "r1"
-          },
-          "usings": {
-            "def": [
-              {
-                "localIdentifier": "System",
-                "uri": "urn:hl7-org:elm-types:r1"
-              },
-              {
-                "localId": "1",
-                "locator": "3:1-3:23",
-                "localIdentifier": "QDM",
-                "uri": "urn:healthit-gov:qdm:v5_3",
-                "version": "5.3"
-              }
-            ]
-          },
-          "parameters": {
-            "def": [
-              {
-                "localId": "15",
-                "locator": "17:1-17:49",
-                "name": "Measurement Period",
-                "accessLevel": "Public",
-                "parameterTypeSpecifier": {
-                  "localId": "14",
-                  "locator": "17:32-17:49",
-                  "type": "IntervalTypeSpecifier",
-                  "pointType": {
-                    "localId": "13",
-                    "locator": "17:41-17:48",
-                    "name": "{urn:hl7-org:elm-types:r1}DateTime",
-                    "type": "NamedTypeSpecifier"
-                  }
-                }
-              }
-            ]
-          },
-          "codeSystems": {
-            "def": [
-              {
-                "localId": "2",
-                "locator": "5:1-5:87",
-                "name": "LOINC:2.46",
-                "id": "LOINC",
-                "version": "urn:hl7:version:2.46",
-                "accessLevel": "Public"
-              },
-              {
-                "localId": "3",
-                "locator": "6:1-6:97",
-                "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
-                "version": "urn:hl7:version:2016-03",
-                "accessLevel": "Public"
-              }
-            ]
-          },
-          "valueSets": {
-            "def": [
-              {
-                "localId": "4",
-                "locator": "8:1-8:75",
-                "name": "Office Visit",
-                "id": "2.16.840.1.113883.3.464.1003.101.12.1001",
-                "accessLevel": "Public"
-              },
-              {
-                "localId": "5",
-                "locator": "9:1-9:74",
-                "name": "Annual Wellness Visit",
-                "id": "2.16.840.1.113883.3.526.3.1240",
-                "accessLevel": "Public"
-              },
-              {
-                "localId": "6",
-                "locator": "10:1-10:125",
-                "name": "Preventive Care Services - Established Office Visit, 18 and Up",
-                "id": "2.16.840.1.113883.3.464.1003.101.12.1025",
-                "accessLevel": "Public"
-              },
-              {
-                "localId": "7",
-                "locator": "11:1-11:119",
-                "name": "Preventive Care Services-Initial Office Visit, 18 and Up",
-                "id": "2.16.840.1.113883.3.464.1003.101.12.1023",
-                "accessLevel": "Public"
-              },
-              {
-                "localId": "8",
-                "locator": "12:1-12:87",
-                "name": "Home Healthcare Services",
-                "id": "2.16.840.1.113883.3.464.1003.101.12.1016",
-                "accessLevel": "Public"
-              }
-            ]
-          },
-          "codes": {
-            "def": [
-              {
-                "localId": "10",
-                "locator": "14:1-14:66",
-                "name": "Birthdate",
-                "id": "21112-8",
-                "display": "Birth date",
-                "accessLevel": "Public",
-                "codeSystem": {
-                  "localId": "9",
-                  "locator": "14:34-14:45",
-                  "name": "LOINC:2.46"
-                }
-              },
-              {
-                "localId": "12",
-                "locator": "15:1-15:63",
-                "name": "Dead",
-                "id": "419099009",
-                "display": "Dead",
-                "accessLevel": "Public",
-                "codeSystem": {
-                  "localId": "11",
-                  "locator": "15:31-15:48",
-                  "name": "SNOMEDCT:2016-03"
-                }
-              }
-            ]
-          },
-          "statements": {
-            "def": [
-              {
-                "locator": "19:1-19:15",
-                "name": "Patient",
-                "context": "Patient",
-                "expression": {
-                  "type": "SingletonFrom",
-                  "operand": {
-                    "locator": "19:1-19:15",
-                    "dataType": "{urn:healthit-gov:qdm:v5_3}Patient",
-                    "templateId": "Patient",
-                    "type": "Retrieve"
-                  }
-                }
-              },
-              {
-                "localId": "31",
-                "locator": "21:1-27:65",
-                "name": "Qualifying Encounters",
-                "context": "Patient",
-                "accessLevel": "Public",
-                "annotation": [
-                  {
-                    "type": "Annotation",
-                    "s": {
-                      "r": "31",
-                      "s": [
-                        {
-                          "value": [
-                            "define ",
-                            "\"Qualifying Encounters\"",
-                            ":\n\t"
-                          ]
-                        },
-                        {
-                          "r": "30",
-                          "s": [
-                            {
-                              "s": [
-                                {
-                                  "r": "25",
-                                  "s": [
-                                    {
-                                      "r": "24",
-                                      "s": [
-                                        {
-                                          "value": [
-                                            "( "
-                                          ]
-                                        },
-                                        {
-                                          "r": "24",
-                                          "s": [
-                                            {
-                                              "r": "22",
-                                              "s": [
-                                                {
-                                                  "r": "20",
-                                                  "s": [
-                                                    {
-                                                      "r": "18",
-                                                      "s": [
-                                                        {
-                                                          "r": "16",
-                                                          "s": [
-                                                            {
-                                                              "value": [
-                                                                "[",
-                                                                "\"Encounter, Performed\"",
-                                                                ": "
-                                                              ]
-                                                            },
-                                                            {
-                                                              "s": [
-                                                                {
-                                                                  "value": [
-                                                                    "\"Office Visit\""
-                                                                  ]
-                                                                }
-                                                              ]
-                                                            },
-                                                            {
-                                                              "value": [
-                                                                "]"
-                                                              ]
-                                                            }
-                                                          ]
-                                                        },
-                                                        {
-                                                          "value": [
-                                                            "\n\t\tunion "
-                                                          ]
-                                                        },
-                                                        {
-                                                          "r": "17",
-                                                          "s": [
-                                                            {
-                                                              "value": [
-                                                                "[",
-                                                                "\"Encounter, Performed\"",
-                                                                ": "
-                                                              ]
-                                                            },
-                                                            {
-                                                              "s": [
-                                                                {
-                                                                  "value": [
-                                                                    "\"Annual Wellness Visit\""
-                                                                  ]
-                                                                }
-                                                              ]
-                                                            },
-                                                            {
-                                                              "value": [
-                                                                "]"
-                                                              ]
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "value": [
-                                                        "\n\t\tunion "
-                                                      ]
-                                                    },
-                                                    {
-                                                      "r": "19",
-                                                      "s": [
-                                                        {
-                                                          "value": [
-                                                            "[",
-                                                            "\"Encounter, Performed\"",
-                                                            ": "
-                                                          ]
-                                                        },
-                                                        {
-                                                          "s": [
-                                                            {
-                                                              "value": [
-                                                                "\"Preventive Care Services - Established Office Visit, 18 and Up\""
-                                                              ]
-                                                            }
-                                                          ]
-                                                        },
-                                                        {
-                                                          "value": [
-                                                            "]"
-                                                          ]
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "value": [
-                                                    "\n\t\tunion "
-                                                  ]
-                                                },
-                                                {
-                                                  "r": "21",
-                                                  "s": [
-                                                    {
-                                                      "value": [
-                                                        "[",
-                                                        "\"Encounter, Performed\"",
-                                                        ": "
-                                                      ]
-                                                    },
-                                                    {
-                                                      "s": [
-                                                        {
-                                                          "value": [
-                                                            "\"Preventive Care Services-Initial Office Visit, 18 and Up\""
-                                                          ]
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "value": [
-                                                        "]"
-                                                      ]
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "value": [
-                                                "\n\t\tunion "
-                                              ]
-                                            },
-                                            {
-                                              "r": "23",
-                                              "s": [
-                                                {
-                                                  "value": [
-                                                    "[",
-                                                    "\"Encounter, Performed\"",
-                                                    ": "
-                                                  ]
-                                                },
-                                                {
-                                                  "s": [
-                                                    {
-                                                      "value": [
-                                                        "\"Home Healthcare Services\""
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "value": [
-                                                    "]"
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "value": [
-                                            " )"
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "value": [
-                                        " ",
-                                        "ValidEncounter"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "value": [
-                                "\n\t\t"
-                              ]
-                            },
-                            {
-                              "r": "29",
-                              "s": [
-                                {
-                                  "value": [
-                                    "where "
-                                  ]
-                                },
-                                {
-                                  "r": "29",
-                                  "s": [
-                                    {
-                                      "r": "27",
-                                      "s": [
-                                        {
-                                          "r": "26",
-                                          "s": [
-                                            {
-                                              "value": [
-                                                "ValidEncounter"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "value": [
-                                            "."
-                                          ]
-                                        },
-                                        {
-                                          "r": "27",
-                                          "s": [
-                                            {
-                                              "value": [
-                                                "relevantPeriod"
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "value": [
-                                        " ",
-                                        "during",
-                                        " "
-                                      ]
-                                    },
-                                    {
-                                      "r": "28",
-                                      "s": [
-                                        {
-                                          "value": [
-                                            "\"Measurement Period\""
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "expression": {
-                  "localId": "30",
-                  "locator": "22:2-27:65",
-                  "type": "Query",
-                  "source": [
-                    {
-                      "localId": "25",
-                      "locator": "22:2-26:77",
-                      "alias": "ValidEncounter",
-                      "expression": {
-                        "localId": "24",
-                        "locator": "22:2-26:62",
-                        "type": "Union",
-                        "operand": [
-                          {
-                            "localId": "22",
-                            "locator": "22:4-25:92",
-                            "type": "Union",
-                            "operand": [
-                              {
-                                "localId": "20",
-                                "locator": "22:4-24:98",
-                                "type": "Union",
-                                "operand": [
-                                  {
-                                    "localId": "18",
-                                    "locator": "22:4-23:57",
-                                    "type": "Union",
-                                    "operand": [
-                                      {
-                                        "localId": "16",
-                                        "locator": "22:4-22:43",
-                                        "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
-                                        "templateId": "PositiveEncounterPerformed",
-                                        "codeProperty": "code",
-                                        "type": "Retrieve",
-                                        "codes": {
-                                          "name": "Office Visit",
-                                          "type": "ValueSetRef"
-                                        }
-                                      },
-                                      {
-                                        "localId": "17",
-                                        "locator": "23:9-23:57",
-                                        "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
-                                        "templateId": "PositiveEncounterPerformed",
-                                        "codeProperty": "code",
-                                        "type": "Retrieve",
-                                        "codes": {
-                                          "name": "Annual Wellness Visit",
-                                          "type": "ValueSetRef"
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "localId": "19",
-                                    "locator": "24:9-24:98",
-                                    "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
-                                    "templateId": "PositiveEncounterPerformed",
-                                    "codeProperty": "code",
-                                    "type": "Retrieve",
-                                    "codes": {
-                                      "name": "Preventive Care Services - Established Office Visit, 18 and Up",
-                                      "type": "ValueSetRef"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "localId": "21",
-                                "locator": "25:9-25:92",
-                                "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
-                                "templateId": "PositiveEncounterPerformed",
-                                "codeProperty": "code",
-                                "type": "Retrieve",
-                                "codes": {
-                                  "name": "Preventive Care Services-Initial Office Visit, 18 and Up",
-                                  "type": "ValueSetRef"
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "localId": "23",
-                            "locator": "26:9-26:60",
-                            "dataType": "{urn:healthit-gov:qdm:v5_3}PositiveEncounterPerformed",
-                            "templateId": "PositiveEncounterPerformed",
-                            "codeProperty": "code",
-                            "type": "Retrieve",
-                            "codes": {
-                              "name": "Home Healthcare Services",
-                              "type": "ValueSetRef"
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "relationship": [
-
-                  ],
-                  "where": {
-                    "localId": "29",
-                    "locator": "27:3-27:65",
-                    "type": "IncludedIn",
-                    "operand": [
-                      {
-                        "localId": "27",
-                        "locator": "27:9-27:37",
-                        "path": "relevantPeriod",
-                        "scope": "ValidEncounter",
-                        "type": "Property"
-                      },
-                      {
-                        "localId": "28",
-                        "locator": "27:46-27:65",
-                        "name": "Measurement Period",
-                        "type": "ParameterRef"
-                      }
-                    ]
-                  }
-                }
-              }
-            ]
-          }
-        }
-      },
-      "elm_annotations": {
-        "statements": [
-          {
-            "children": [
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "text": "define \"Qualifying Encounters\":\n  "
-                      }
-                    ]
-                  },
-                  {
-                    "children": [
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "children": [
-                                  {
-                                    "children": [
-                                      {
-                                        "text": "( "
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "children": [
-                                      {
-                                        "children": [
-                                          {
-                                            "children": [
-                                              {
-                                                "children": [
-                                                  {
-                                                    "children": [
-                                                      {
-                                                        "children": [
-                                                          {
-                                                            "text": "[\"Encounter, Performed\": "
-                                                          }
-                                                        ]
-                                                      },
-                                                      {
-                                                        "children": [
-                                                          {
-                                                            "children": [
-                                                              {
-                                                                "text": "\"Office Visit\""
-                                                              }
-                                                            ]
-                                                          }
-                                                        ]
-                                                      },
-                                                      {
-                                                        "children": [
-                                                          {
-                                                            "text": "]"
-                                                          }
-                                                        ]
-                                                      }
-                                                    ],
-                                                    "node_type": "Retrieve",
-                                                    "ref_id": "16"
-                                                  },
-                                                  {
-                                                    "children": [
-                                                      {
-                                                        "text": "\n    union "
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "children": [
-                                                      {
-                                                        "children": [
-                                                          {
-                                                            "text": "[\"Encounter, Performed\": "
-                                                          }
-                                                        ]
-                                                      },
-                                                      {
-                                                        "children": [
-                                                          {
-                                                            "children": [
-                                                              {
-                                                                "text": "\"Annual Wellness Visit\""
-                                                              }
-                                                            ]
-                                                          }
-                                                        ]
-                                                      },
-                                                      {
-                                                        "children": [
-                                                          {
-                                                            "text": "]"
-                                                          }
-                                                        ]
-                                                      }
-                                                    ],
-                                                    "node_type": "Retrieve",
-                                                    "ref_id": "17"
-                                                  }
-                                                ],
-                                                "node_type": "Union",
-                                                "ref_id": "18"
-                                              },
-                                              {
-                                                "children": [
-                                                  {
-                                                    "text": "\n    union "
-                                                  }
-                                                ]
-                                              },
-                                              {
-                                                "children": [
-                                                  {
-                                                    "children": [
-                                                      {
-                                                        "text": "[\"Encounter, Performed\": "
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "children": [
-                                                      {
-                                                        "children": [
-                                                          {
-                                                            "text": "\"Preventive Care Services - Established Office Visit, 18 and Up\""
-                                                          }
-                                                        ]
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "children": [
-                                                      {
-                                                        "text": "]"
-                                                      }
-                                                    ]
-                                                  }
-                                                ],
-                                                "node_type": "Retrieve",
-                                                "ref_id": "19"
-                                              }
-                                            ],
-                                            "node_type": "Union",
-                                            "ref_id": "20"
-                                          },
-                                          {
-                                            "children": [
-                                              {
-                                                "text": "\n    union "
-                                              }
-                                            ]
-                                          },
-                                          {
-                                            "children": [
-                                              {
-                                                "children": [
-                                                  {
-                                                    "text": "[\"Encounter, Performed\": "
-                                                  }
-                                                ]
-                                              },
-                                              {
-                                                "children": [
-                                                  {
-                                                    "children": [
-                                                      {
-                                                        "text": "\"Preventive Care Services-Initial Office Visit, 18 and Up\""
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              },
-                                              {
-                                                "children": [
-                                                  {
-                                                    "text": "]"
-                                                  }
-                                                ]
-                                              }
-                                            ],
-                                            "node_type": "Retrieve",
-                                            "ref_id": "21"
-                                          }
-                                        ],
-                                        "node_type": "Union",
-                                        "ref_id": "22"
-                                      },
-                                      {
-                                        "children": [
-                                          {
-                                            "text": "\n    union "
-                                          }
-                                        ]
-                                      },
-                                      {
-                                        "children": [
-                                          {
-                                            "children": [
-                                              {
-                                                "text": "[\"Encounter, Performed\": "
-                                              }
-                                            ]
-                                          },
-                                          {
-                                            "children": [
-                                              {
-                                                "children": [
-                                                  {
-                                                    "text": "\"Home Healthcare Services\""
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          },
-                                          {
-                                            "children": [
-                                              {
-                                                "text": "]"
-                                              }
-                                            ]
-                                          }
-                                        ],
-                                        "node_type": "Retrieve",
-                                        "ref_id": "23"
-                                      }
-                                    ],
-                                    "node_type": "Union",
-                                    "ref_id": "24"
-                                  },
-                                  {
-                                    "children": [
-                                      {
-                                        "text": " )"
-                                      }
-                                    ]
-                                  }
-                                ],
-                                "node_type": "Union",
-                                "ref_id": "24"
-                              },
-                              {
-                                "children": [
-                                  {
-                                    "text": " ValidEncounter"
-                                  }
-                                ]
-                              }
-                            ],
-                            "ref_id": "25"
-                          }
-                        ]
-                      },
-                      {
-                        "children": [
-                          {
-                            "text": "\n    "
-                          }
-                        ]
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "text": "where "
-                              }
-                            ]
-                          },
-                          {
-                            "children": [
-                              {
-                                "children": [
-                                  {
-                                    "children": [
-                                      {
-                                        "children": [
-                                          {
-                                            "text": "ValidEncounter"
-                                          }
-                                        ]
-                                      }
-                                    ],
-                                    "ref_id": "26"
-                                  },
-                                  {
-                                    "children": [
-                                      {
-                                        "text": "."
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "children": [
-                                      {
-                                        "children": [
-                                          {
-                                            "text": "relevantPeriod"
-                                          }
-                                        ]
-                                      }
-                                    ],
-                                    "node_type": "Property",
-                                    "ref_id": "27"
-                                  }
-                                ],
-                                "node_type": "Property",
-                                "ref_id": "27"
-                              },
-                              {
-                                "children": [
-                                  {
-                                    "text": " during "
-                                  }
-                                ]
-                              },
-                              {
-                                "children": [
-                                  {
-                                    "children": [
-                                      {
-                                        "text": "\"Measurement Period\""
-                                      }
-                                    ]
-                                  }
-                                ],
-                                "node_type": "ParameterRef",
-                                "ref_id": "28"
-                              }
-                            ],
-                            "ref_id": "29"
-                          }
-                        ],
-                        "ref_id": "29"
-                      }
-                    ],
-                    "node_type": "Query",
-                    "ref_id": "30"
-                  }
-                ],
-                "ref_id": "31"
-              }
-            ],
-            "define_name": "Qualifying Encounters"
-          }
-        ],
-        "identifier": {
-          "id": "Adult_Outpatient_Encounters",
-          "version": "1.1.000"
-        }
-      },
-      "is_main_library": false,
-      "library_name": "Adult_Outpatient_Encounters",
-      "library_version": "1.1.000",
-      "statement_dependencies": [
-        {
-          "statement_name": "Qualifying Encounters"
-        }
-      ]
     }
   ],
   "created_at": null,
@@ -20227,35 +20227,35 @@
   "title": "Diabetes: Foot Exam",
   "updated_at": null,
   "value_set_ids": [
-    "5c421517ef33a52994b3c6be",
-    "5c421517ef33a52994b3c6bf",
-    "5c421517ef33a52994b3c6c0",
-    "5c421517ef33a52994b3c6c1",
-    "5c421517ef33a52994b3c6c2",
-    "5c421517ef33a52994b3c6c3",
-    "5c421517ef33a52994b3c6c4",
-    "5c421517ef33a52994b3c6c5",
-    "5c421517ef33a52994b3c6c6",
-    "5c421517ef33a52994b3c6c7",
-    "5c421517ef33a52994b3c6c8",
-    "5c421517ef33a52994b3c6c9",
-    "5c421517ef33a52994b3c6ca",
-    "5c421517ef33a52994b3c6cb",
-    "5c421517ef33a52994b3c6cc",
-    "5c421517ef33a52994b3c6cd",
-    "5c421517ef33a52994b3c6ce",
-    "5c421517ef33a52994b3c6cf",
-    "5c421517ef33a52994b3c6d0",
-    "5c421517ef33a52994b3c6d1",
-    "5c421517ef33a52994b3c6d2",
-    "5c421517ef33a52994b3c6d3",
-    "5c421517ef33a52994b3c6d4",
-    "5c421517ef33a52994b3c6d5",
-    "5c421517ef33a52994b3c6d6",
-    "5c421517ef33a52994b3c6d7",
-    "5c421517ef33a52994b3c6d8",
-    "5c421517ef33a52994b3c6d9",
-    "5c421517ef33a52994b3c6da",
-    "5c421517ef33a52994b3c6db"
+    "5c4f2276ef33a5197e13188c",
+    "5c4f2276ef33a5197e13188d",
+    "5c4f2276ef33a5197e13188e",
+    "5c4f2276ef33a5197e13188f",
+    "5c4f2276ef33a5197e131890",
+    "5c4f2276ef33a5197e131891",
+    "5c4f2276ef33a5197e131892",
+    "5c4f2276ef33a5197e131893",
+    "5c4f2276ef33a5197e131894",
+    "5c4f2276ef33a5197e131895",
+    "5c4f2276ef33a5197e131896",
+    "5c4f2276ef33a5197e131897",
+    "5c4f2276ef33a5197e131898",
+    "5c4f2276ef33a5197e131899",
+    "5c4f2276ef33a5197e13189a",
+    "5c4f2276ef33a5197e13189b",
+    "5c4f2276ef33a5197e13189c",
+    "5c4f2276ef33a5197e13189d",
+    "5c4f2276ef33a5197e13189e",
+    "5c4f2276ef33a5197e13189f",
+    "5c4f2276ef33a5197e1318a0",
+    "5c4f2276ef33a5197e1318a1",
+    "5c4f2276ef33a5197e1318a2",
+    "5c4f2276ef33a5197e1318a3",
+    "5c4f2276ef33a5197e1318a4",
+    "5c4f2276ef33a5197e1318a5",
+    "5c4f2276ef33a5197e1318a6",
+    "5c4f2276ef33a5197e1318a7",
+    "5c4f2276ef33a5197e1318a8",
+    "5c4f2276ef33a5197e1318a9"
   ]
 }
