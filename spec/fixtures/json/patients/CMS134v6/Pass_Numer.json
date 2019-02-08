@@ -5,7 +5,6 @@
     {
       "anatomicalLocationSite": null,
       "authorDatetime": "1949-02-17T04:00:00.000-05:00",
-      "category": "condition",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -16,16 +15,17 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5a74ef00b84846531e04b2c6"
       },
       "prevalencePeriod": {
         "low": "1949-02-17T09:00:00.000+00:00",
-        "high": "9999-12-31T23:59:59.999+00:00",
+        "high": null,
         "lowClosed": true,
         "highClosed": true
       },
-      "qdmVersion": "5.3",
+      "qdmCategory": "condition",
+      "qdmVersion": "5.4",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
       "severity": null,
       "_type": "QDM::Diagnosis"
@@ -33,7 +33,6 @@
     {
       "anatomicalLocationSite": null,
       "authorDatetime": "2012-04-03T08:00:00.000-04:00",
-      "category": "condition",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -44,16 +43,17 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5a74ef00b84846531e04b2c7"
       },
       "prevalencePeriod": {
         "low": "2012-04-03T12:00:00.000+00:00",
-        "high": "9999-12-31T23:59:59.999+00:00",
+        "high": null,
         "lowClosed": true,
         "highClosed": true
       },
-      "qdmVersion": "5.3",
+      "qdmCategory": "condition",
+      "qdmVersion": "5.4",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
       "severity": null,
       "_type": "QDM::Diagnosis"
@@ -61,7 +61,6 @@
     {
       "admissionSource": null,
       "authorDatetime": "2012-02-02T03:45:00.000-05:00",
-      "category": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "HCPCS",
@@ -95,7 +94,7 @@
             "highClosed": true,
             "_type": "QDM::Interval"
           },
-          "qdmVersion": "5.3"
+          "qdmVersion": "5.4"
         },
         {
           "dataElementCodes": [
@@ -118,13 +117,13 @@
             "highClosed": true,
             "_type": "QDM::Interval"
           },
-          "qdmVersion": "5.3"
+          "qdmVersion": "5.4"
         }
       ],
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5a74ef00b84846531e04b2c8"
       },
       "lengthOfStay": {
@@ -133,8 +132,9 @@
       },
       "negationRationale": null,
       "principalDiagnosis": null,
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "relevantPeriod": {
         "low": "2012-02-02T08:45:00.000+00:00",
         "high": "2012-02-02T08:45:00.000+00:00",
@@ -145,7 +145,6 @@
     },
     {
       "authorDatetime": "2012-07-30T03:45:00.000-04:00",
-      "category": "laboratory_test",
       "components": [
         {
           "result": {
@@ -182,13 +181,14 @@
       "hqmfOid": "2.16.840.1.113883.3.560.1.5",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5a74ef00b84846531e04b2c9"
       },
       "method": null,
       "negationRationale": null,
+      "qdmCategory": "laboratory_test",
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "reason": null,
       "referenceRange": null,
       "relevantPeriod": {
@@ -209,7 +209,6 @@
     },
     {
       "authorDatetime": "2012-07-30T04:00:00.000-04:00",
-      "category": "laboratory_test",
       "components": [
 
       ],
@@ -223,13 +222,14 @@
       "hqmfOid": "2.16.840.1.113883.3.560.1.5",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5a74ef00b84846531e04b2cb"
       },
       "method": null,
       "negationRationale": null,
+      "qdmCategory": "laboratory_test",
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "reason": null,
       "referenceRange": null,
       "relevantPeriod": {
@@ -248,7 +248,6 @@
     },
     {
       "birthDatetime": "1937-07-01T04:00:00.000-04:00",
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "21112-8",
@@ -263,15 +262,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb818ef33a580054adc18"
+        "qdmVersion": "5.4",
+        "value": "5c5daa23ef33a50e171f9507"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicBirthdate"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2186-5",
@@ -286,15 +285,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb818ef33a580054adc19"
+        "qdmVersion": "5.4",
+        "value": "5c5daa23ef33a50e171f9508"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "1002-5",
@@ -309,15 +308,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb818ef33a580054adc1a"
+        "qdmVersion": "5.4",
+        "value": "5c5daa23ef33a50e171f9509"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "F",
@@ -332,11 +331,12 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb818ef33a580054adc1b"
+        "qdmVersion": "5.4",
+        "value": "5c5daa23ef33a50e171f950a"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicSex"
     }
   ],
@@ -607,5 +607,5 @@
   "givenNames": [
     "Pass"
   ],
-  "qdmVersion": "5.3"
+  "qdmVersion": "5.4"
 }

@@ -5,7 +5,6 @@
     {
       "admissionSource": null,
       "authorDatetime": "2012-05-04T04:00:00.000-04:00",
-      "category": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -27,7 +26,7 @@
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5b9fe2ddd7c8acf1740e5c68"
       },
       "lengthOfStay": {
@@ -36,8 +35,9 @@
       },
       "negationRationale": null,
       "principalDiagnosis": null,
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "relevantPeriod": {
         "low": "2012-05-04T08:00:00.000+00:00",
         "high": "2012-09-17T08:15:00.000+00:00",
@@ -47,15 +47,14 @@
       "_type": "QDM::EncounterPerformed"
     },
     {
-      "activeDatetime": null,
       "authorDatetime": "2012-05-04T04:00:00.000-04:00",
-      "category": "medication",
       "dataElementCodes": [
         {
           "codeSystem": "RxNorm",
           "code": "864978"
         }
       ],
+      "daysSupplied": null,
       "description": "Medication, Order: Opioid Medications",
       "dosage": {
         "value": 20,
@@ -71,13 +70,14 @@
       "hqmfOid": "2.16.840.1.113883.3.560.1.17",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5b9fe2ddd7c8acf1740e5c67"
       },
-      "method": null,
       "negationRationale": null,
+      "prescriberId": null,
+      "qdmCategory": "medication",
       "qdmStatus": "order",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "reason": null,
       "refills": null,
       "relevantPeriod": {
@@ -87,12 +87,12 @@
         "highClosed": true
       },
       "route": null,
+      "setting": null,
       "supply": null,
       "_type": "QDM::MedicationOrder"
     },
     {
       "birthDatetime": "1958-05-14T04:00:00.000-04:00",
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "21112-8",
@@ -107,15 +107,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b9fe9a7d7c8ac2f8dcd003d"
+        "qdmVersion": "5.4",
+        "value": "5c5daa79ef33a50f652bfc1c"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicBirthdate"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2186-5",
@@ -130,15 +130,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b9fe9a7d7c8ac2f8dcd003e"
+        "qdmVersion": "5.4",
+        "value": "5c5daa79ef33a50f652bfc1d"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "1002-5",
@@ -153,15 +153,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b9fe9a7d7c8ac2f8dcd003f"
+        "qdmVersion": "5.4",
+        "value": "5c5daa79ef33a50f652bfc1e"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "M",
@@ -176,11 +176,12 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b9fe9a7d7c8ac2f8dcd0040"
+        "qdmVersion": "5.4",
+        "value": "5c5daa79ef33a50f652bfc1f"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicSex"
     }
   ],
@@ -298,5 +299,5 @@
   "givenNames": [
     "MethadoneLessThan90MME"
   ],
-  "qdmVersion": "5.3"
+  "qdmVersion": "5.4"
 }
