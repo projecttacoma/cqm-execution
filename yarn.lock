@@ -249,7 +249,7 @@ core-util-is@~1.0.0:
 
 "cqm-models@https://github.com/projecttacoma/cqm-models.git#bonnie-v3.1.1-max-only":
   version "1.0.2"
-  resolved "https://github.com/projecttacoma/cqm-models.git#89cd88426f5c9f0b4a001ce5c8024583efe2920a"
+  resolved "https://github.com/projecttacoma/cqm-models.git#e1502a8fb84f5f8bd362973d8b4cff7c222c3929"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution.git#bonnie-v3.1.1-max-only"
     mongoose "^5.0.7"
