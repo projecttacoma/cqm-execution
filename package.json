@@ -48,7 +48,8 @@
     "eslint-plugin-import": "^2.8.0",
     "istanbul": "^0.4.5",
     "jasmine-node": "^1.15.0",
-    "require-directory": "^2.1.1"
+    "require-directory": "^2.1.1",
+    "browserify": "^16.2.3"
   },
   "dependencies": {
     "cqm-models": "https://github.com/projecttacoma/cqm-models#no-models",

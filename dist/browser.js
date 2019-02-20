@@ -1,4 +1,1739 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+window.cqm = window.cqm || {};
+window.cqm.execution = require('./index');
+
+},{"./index":5}],2:[function(require,module,exports){
+const moment = require('moment');
+
+/**
+ * Contains helpers useful for calculation.
+ */
+module.exports = class CalculatorHelpers {
+  /**
+   * Create population values (aka results) for all populations in the population set using the results from the
+   * calculator.
+   * @param {Measure} measure - The measure we are getting the values for.
+   * @param {Object} populationSet - The population set that we are mapping results to.
+   * @param {Object} patientResults - The raw results object from the calculation engine for a patient.
+   * @param {Array} observationDefs - List of observation defines we add to the elm for calculation OBSERVs.
+   * @returns {[object, object]} The population results. Map of "POPNAME" to Integer result. Except for OBSERVs,
+   *   their key is 'value' and value is an array of results. Second result is the the episode results keyed by
+   *   episode id and with the value being a set just like the patient results.
+   */
+  static createPopulationValues(measure, populationSet, patientResults, observationDefs) {
+    let populationResults = {};
+    let episodeResults = null;
+
+    // patient based measure
+    if (measure.calculation_method !== 'EPISODE_OF_CARE') {
+      populationResults = this.createPatientPopulationValues(
+        populationSet,
+        patientResults,
+        observationDefs
+      );
+      populationResults = this.handlePopulationValues(populationResults);
+    } else {
+      // episode of care based measure
+      // collect results per episode
+      episodeResults = this.createEpisodePopulationValues(
+        populationSet,
+        patientResults,
+        observationDefs
+      );
+
+      // initialize population counts
+      Object.keys(populationSet.populations).forEach((popCode) => {
+        // Mongoose adds keys that start with '_' we do not care about these
+        if (popCode[0] !== '_') {
+          populationResults[popCode] = 0;
+        }
+        if (populationSet.observations) {
+          populationResults.values = [];
+        }
+      });
+
+      // count up all population results for a patient level count
+      Object.keys(episodeResults).forEach((e) => {
+        const episodeResult = episodeResults[e];
+        Object.keys(episodeResult).forEach((popCode) => {
+          const popResult = episodeResult[popCode];
+          if (popCode === 'values') {
+            popResult.forEach((value) => {
+              populationResults.values.push(value);
+            });
+          // Mongoose adds keys that start with '_' we do not care about these
+          } else if (popCode[0] !== '_') {
+            populationResults[popCode] += popResult;
+          }
+        });
+      });
+    }
+    return [populationResults, episodeResults];
+  }
+
+  /**
+   * Takes in the initial values from result object and checks to see if some values should not be calculated. These
+   * values that should not be calculated are zeroed out.
+   * @param {object} populationResults - The population results. Map of "POPNAME" to Integer result. Except for OBSERVs,
+   *   their key is 'value' and value is an array of results.
+   * @returns {object} Population results in the same structure as passed in, but the appropiate values are zeroed out.
+   */
+  static handlePopulationValues(populationResults) {
+    /* Setting values of populations if the correct populations are not set based on the following logic guidelines
+     * Initial Population (IPP): The set of patients or episodes of care to be evaluated by the measure.
+     * Denominator (DENOM): A subset of the IPP.
+     * Denominator Exclusions (DENEX): A subset of the Denominator that should not be considered for inclusion in the Numerator.
+     * Denominator Exceptions (DEXCEP): A subset of the Denominator. Only those members of the Denominator that are considered
+     * for Numerator membership and are not included are considered for membership in the Denominator Exceptions.
+     * Numerator (NUMER): A subset of the Denominator. The Numerator criteria are the processes or outcomes expected for each patient,
+     * procedure, or other unit of measurement defined in the Denominator.
+     * Numerator Exclusions (NUMEX): A subset of the Numerator that should not be considered for calculation.
+     * Measure Poplation Exclusions (MSRPOPLEX): Identify that subset of the MSRPOPL that meet the MSRPOPLEX criteria.
+     */
+    const populationResultsHandled = populationResults;
+    if (populationResultsHandled.STRAT != null && this.isValueZero('STRAT', populationResults)) {
+      // Set all values to 0
+      Object.keys(populationResults).forEach((key) => {
+        if (key === 'values') {
+          populationResultsHandled.values = [];
+        } else {
+          populationResultsHandled[key] = 0;
+        }
+      });
+    } else if (this.isValueZero('IPP', populationResults)) {
+      Object.keys(populationResults).forEach((key) => {
+        if (key !== 'STRAT') {
+          if (key === 'values') {
+            populationResultsHandled.values = [];
+          } else {
+            populationResultsHandled[key] = 0;
+          }
+        }
+      });
+    } else if (this.isValueZero('DENOM', populationResults) || this.isValueZero('MSRPOPL', populationResults)) {
+      if ('DENEX' in populationResults) {
+        populationResultsHandled.DENEX = 0;
+      }
+      if ('DENEXCEP' in populationResults) {
+        populationResultsHandled.DENEXCEP = 0;
+      }
+      if ('NUMER' in populationResults) {
+        populationResultsHandled.NUMER = 0;
+      }
+      if ('NUMEX' in populationResults) {
+        populationResultsHandled.NUMEX = 0;
+      }
+      if ('values' in populationResults) {
+        populationResultsHandled.values = [];
+      }
+      // Can not be in the numerator if the same or more are excluded from the denominator
+    } else if (populationResults.DENEX != null && !this.isValueZero('DENEX', populationResults) && populationResults.DENEX >= populationResults.DENOM) {
+      if ('NUMER' in populationResults) {
+        populationResultsHandled.NUMER = 0;
+      }
+      if ('NUMEX' in populationResults) {
+        populationResultsHandled.NUMEX = 0;
+      }
+      if ('DENEXCEP' in populationResults) {
+        populationResultsHandled.DENEXCEP = 0;
+      }
+    } else if (populationResults.MSRPOPLEX != null && !this.isValueZero('MSRPOPLEX', populationResults)) {
+      if ('values' in populationResults) {
+        populationResultsHandled.values = [];
+      }
+    } else if (this.isValueZero('NUMER', populationResults)) {
+      if ('NUMEX' in populationResults) {
+        populationResultsHandled.NUMEX = 0;
+      }
+    } else if (!this.isValueZero('NUMER', populationResults)) {
+      if ('DENEXCEP' in populationResults) {
+        populationResultsHandled.DENEXCEP = 0;
+      }
+    }
+    return populationResultsHandled;
+  }
+
+  /**
+   * Create patient population values (aka results) for all populations in the population set using the results from the
+   * calculator.
+   * @param {Population} populationSet - The population set we are getting the values for.
+   * @param {Object} patientResults - The raw results object for a patient from the calculation engine.
+   * @param {Array} observationDefs - List of observation defines we add to the elm for calculation OBSERVs.
+   * @returns {Object} The population results. Map of "POPNAME" to Integer result. Except for OBSERVs,
+   *   their key is 'value' and value is an array of results.
+   */
+  static createPatientPopulationValues(populationSet, patientResults, observationDefs) {
+    const populationResults = {};
+
+    // Loop over all population codes ("IPP", "DENOM", etc.)
+    Object.keys(populationSet.populations).forEach((popCode) => {
+      // Mongoose adds keys that start with '_' we do not care about these
+      if (popCode[0] === '_') return;
+      const cqlPopulation = populationSet.populations[popCode].statement_name;
+      // Is there a patient result for this population? and does this populationCriteria contain the population
+      // We need to check if the populationCriteria contains the population so that a STRAT is not set to zero if there is not a STRAT in the populationCriteria
+      // Grab CQL result value and adjust for ECQME
+      const value = patientResults[cqlPopulation];
+      if (Array.isArray(value) && value.length > 0) {
+        populationResults[popCode] = value.length;
+      } else if (typeof value === 'boolean' && value) {
+        populationResults[popCode] = 1;
+      } else {
+        populationResults[popCode] = 0;
+      }
+    });
+    if ((observationDefs != null ? observationDefs.length : undefined) > 0) {
+      // Handle observations using the names of the define statements that
+      // were added to the ELM to call the observation functions.
+      observationDefs.forEach((obDef) => {
+        if (!populationResults.values) {
+          populationResults.values = [];
+        }
+        // Observations only have one result, based on how the HQMF is
+        // structured (note the single 'value' section in the
+        // measureObservationDefinition clause).
+        const obsResults =
+          patientResults != null
+            ? patientResults[obDef]
+            : undefined;
+
+        obsResults.forEach((obsResult) => {
+          // Add the single result value to the values array on the results of
+          // this calculation (allowing for more than one possible observation).
+          if (obsResult != null ? Object.prototype.hasOwnProperty.call(obsResult, 'value') : undefined) {
+            // If result is a Cql.Quantity type, add its value
+            populationResults.values.push(obsResult.observation.value);
+          } else {
+            // In all other cases, add result
+            populationResults.values.push(obsResult.observation);
+          }
+        });
+      });
+    }
+
+    return populationResults;
+  }
+
+  /**
+   * Create population values (aka results) for all episodes using the results from the calculator. This is
+   * used only for the episode of care measures
+   * @param {Population} populationSet - The populationSet we are getting the values for.
+   * @param {Object} patientResults - The raw results object for the patient from the calculation engine.
+   * @param {Array} observationDefs - List of observation defines we add to the elm for calculation OBSERVs.
+   * @returns {Object} The episode results. Map of episode id to population results which is a map of "POPNAME"
+   * to Integer result. Except for OBSERVs, their key is 'value' and value is an array of results.
+   */
+  static createEpisodePopulationValues(populationSet, patientResults, observationDefs) {
+    const episodeResults = {};
+
+    for (const popCode in populationSet.populations) {
+      // Mongoose adds keys that start with '_' we do not care about these
+      if (popCode[0] !== '_') {
+        let newEpisode;
+        const cqlPopulation = populationSet.populations[popCode];
+        // Is there a patient result for this population? and does this populationCriteria contain the population
+        // We need to check if the populationCriteria contains the population so that a STRAT is not set to zero if there is not a STRAT in the populationCriteria
+        // Grab CQL result value and store for each episode found
+        const qdmDataElements = patientResults[cqlPopulation.statement_name];
+        if (Array.isArray(qdmDataElements)) {
+          qdmDataElements.forEach((qdmDataElement) => {
+            if (qdmDataElement.id != null) {
+              // if an episode has already been created set the result for the population to 1
+              if (episodeResults[qdmDataElement.id.value]) {
+                episodeResults[qdmDataElement.id.value][popCode] = 1;
+                // else create a new episode using the list of all popcodes for the population
+              } else {
+                newEpisode = {};
+                for (const pc in populationSet.populations) {
+                  // Mongoose adds keys that start with '_' we do not care about these
+                  if (pc[0] !== '_') {
+                    newEpisode[pc] = 0;
+                  }
+                }
+
+                newEpisode[popCode] = 1;
+                episodeResults[qdmDataElement.id.value] = newEpisode;
+              }
+            }
+          });
+        }
+      }
+    }
+    if ((observationDefs != null ? observationDefs.length : undefined) > 0) {
+      // Handle observations using the names of the define statements that
+      // were added to the ELM to call the observation functions.
+      observationDefs.forEach((obDef) => {
+        // Observations only have one result, based on how the HQMF is
+        // structured (note the single 'value' section in the
+        // measureObservationDefinition clause).
+        const obsResults =
+          patientResults != null
+            ? patientResults[obDef]
+            : undefined;
+
+        obsResults.forEach((obsResult) => {
+          let resultValue = null;
+          const episodeId = obsResult.episode.id.value;
+          // Add the single result value to the values array on the results of
+          // this calculation (allowing for more than one possible observation).
+          if (obsResult != null ? Object.prototype.hasOwnProperty.call(obsResult, 'value') : undefined) {
+            // If result is a Cql.Quantity type, add its value
+            resultValue = obsResult.observation.value;
+          } else {
+            // In all other cases, add result
+            resultValue = obsResult.observation;
+          }
+
+          // if the episodeResult object already exist create or add to to the values structure
+          if (episodeResults[episodeId] != null) {
+            if (episodeResults[episodeId].values != null) {
+              episodeResults[episodeId].values.push(resultValue);
+            } else {
+              episodeResults[episodeId].values = [resultValue];
+            }
+            // else create a new episodeResult structure
+          } else {
+            const newEpisode = {};
+            for (const pc in populationSet.populations) {
+              // Mongoose adds keys that start with '_' we do not care about these
+              if (pc[0] !== '_') {
+                newEpisode[pc] = 0;
+              }
+            }
+            newEpisode.values = [resultValue];
+            episodeResults[episodeId] = newEpisode;
+          }
+        });
+      });
+    }
+
+    // Correct any inconsistencies. ex. In DENEX but also in NUMER using same function used for patients.
+    Object.keys(episodeResults).forEach((episodeId) => {
+      const episodeResult = episodeResults[episodeId];
+      // ensure that an empty 'values' array exists for continuous variable measures if there were no observations
+      if (populationSet.observations) {
+        if (!episodeResult.values) {
+          episodeResult.values = [];
+        }
+      }
+      // Correct any inconsistencies. ex. In DENEX but also in NUMER using same function used for patients.
+      episodeResults[episodeId] = this.handlePopulationValues(episodeResult);
+    });
+
+    return episodeResults;
+  }
+
+  // Set all value set versions to 'undefined' so the execution engine does not grab the specified version in the ELM
+  static setValueSetVersionsToUndefined(elm) {
+    Array.from(elm).forEach((elmLibrary) => {
+      if (elmLibrary.library.valueSets != null) {
+        Array.from(elmLibrary.library.valueSets.def).forEach((valueSet) => {
+          if (valueSet.version != null) {
+            valueSet.version = undefined;
+          }
+        });
+      }
+    });
+    return elm;
+  }
+
+  // Format ValueSets for use by the execution engine
+  static valueSetsForCodeService(valueSetsArray) {
+    const valueSets = {};
+    valueSetsArray.forEach((valueSet) => {
+      if (valueSet.concepts) {
+        if (!valueSets[valueSet.oid]) {
+          valueSets[valueSet.oid] = {};
+        }
+        valueSet.concepts.forEach((concept) => {
+          let version = valueSet.version;
+          if (version === 'N/A') {
+            version = '';
+          }
+          if (!valueSets[valueSet.oid][version]) {
+            valueSets[valueSet.oid][version] = [];
+          }
+          valueSets[valueSet.oid][version].push({
+            code: concept.code,
+            system: concept.code_system_name,
+            version,
+          });
+        });
+      }
+    });
+    return valueSets;
+  }
+
+  // Create Date from UTC string date and time using momentJS
+  static parseTimeStringAsUTC(timeValue) {
+    return moment.utc(timeValue, 'YYYYMDDHHmm').toDate();
+  }
+
+  // Create Date from UTC string date and time using momentJS, shifting to 11:59:59 of the given year
+  static parseTimeStringAsUTCConvertingToEndOfYear(timeValue) {
+    return moment
+      .utc(timeValue, 'YYYYMDDHHmm')
+      .add(1, 'years')
+      .subtract(1, 'seconds')
+      .toDate();
+  }
+
+  // If the given value is in the given populationSet, and its result is zero, return true.
+  static isValueZero(value, populationSet) {
+    if (value in populationSet && populationSet[value] === 0) {
+      return true;
+    }
+    return false;
+  }
+
+  static deepCopyPopulationSet(original) {
+    const copy = {};
+    copy.title = original.title;
+    copy.observations = original.observations;
+    copy.populations = {};
+    for (const popCode in original.populations) {
+      const copyPop = {};
+      copyPop.library_name = original.populations[popCode].library_name;
+      copyPop.statement_name = original.populations[popCode].statement_name;
+      copy.populations[popCode] = copyPop;
+    }
+    return copy;
+  }
+
+  static getStratificationsAsPopulationSets(measure) {
+    const stratificationsAsPopulationSets = [];
+    measure.population_sets.forEach((populationSet) => {
+      if (populationSet.stratifications) {
+        populationSet.stratifications.forEach((stratification) => {
+          const clonedSet = this.deepCopyPopulationSet(populationSet);
+          clonedSet.population_set_id = stratification.stratification_id;
+          clonedSet.populations.STRAT = stratification.statement;
+          stratificationsAsPopulationSets.push(clonedSet);
+        });
+      }
+    });
+    return stratificationsAsPopulationSets;
+  }
+
+  // Returns a JSON function to add to the ELM before ELM JSON is used to calculate results
+  // This ELM template was generated by the CQL-to-ELM Translation Service.
+  static generateELMJSONFunction(functionName, parameter) {
+    const elmFunction = {
+      name: `obs_func_${functionName}`,
+      context: 'Patient',
+      accessLevel: 'Public',
+      expression: {
+        type: 'Query',
+        source: [
+          {
+            alias: 'MP',
+            expression: {
+              name: parameter,
+              type: 'ExpressionRef',
+            },
+          },
+        ],
+        relationship: [],
+        return: {
+          distinct: false,
+          expression: {
+            type: 'Tuple',
+            element: [
+              {
+                name: 'episode',
+                value: {
+                  name: 'MP',
+                  type: 'AliasRef',
+                },
+              },
+              {
+                name: 'observation',
+                value: {
+                  name: functionName,
+                  type: 'FunctionRef',
+                  operand: [
+                    {
+                      type: 'As',
+                      operand: {
+                        name: 'MP',
+                        type: 'AliasRef',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      },
+    };
+    return elmFunction;
+  }
+};
+
+},{"moment":260}],3:[function(require,module,exports){
+const _ = require('lodash');
+
+
+/**
+ * Contains helpers that generate additional data for CQL measures. These functions provide extra data useful in working
+ * with calculation results.
+ */
+module.exports = class MeasureHelpers {
+  /**
+     * Builds a map of define statement name to the statement's text from a measure.
+     * @public
+     * @param {Measure} measure - The measure to build the map from.
+     * @return {Hash} Map of statement definitions to full statement
+     */
+  static buildDefineToFullStatement(measure) {
+    const ret = {};
+    for (const lib in measure.get('elm_annotations')) {
+      const libStatements = {};
+      for (const statement of Array.from(measure.get('elm_annotations')[lib].statements)) {
+        libStatements[statement.define_name] = this.parseAnnotationTree(statement.children);
+      }
+      ret[lib] = libStatements;
+    }
+    return ret;
+  }
+
+  /**
+     * Recursive function that parses an annotation tree to extract text statements.
+     * @param {Node} children - the node to be traversed.
+     * @return {String} the text of the node or its children.
+     */
+  static parseAnnotationTree(children) {
+    let child;
+    let ret = '';
+    if (children.text !== undefined) {
+      return _.unescape(children.text)
+        .replace('&#13', '')
+        .replace(';', '');
+    } else if (children.children !== undefined) {
+      for (child of Array.from(children.children)) {
+        ret += this.parseAnnotationTree(child);
+      }
+    } else {
+      for (child of Array.from(children)) {
+        ret += this.cparseAnnotationTree(child);
+      }
+    }
+    return ret;
+  }
+
+  /**
+     * Finds all localIds in a statement by it's library and statement name.
+     * @public
+     * @param {Measure} measure - The measure to find localIds in.
+     * @param {string} libraryName - The name of the library the statement belongs to.
+     * @param {string} statementName - The statement name to search for.
+     * @return {Hash} List of local ids in the statement.
+     */
+  static findAllLocalIdsInStatementByName(libraryElm, statementName) {
+    // create place for aliases and their usages to be placed to be filled in later. Aliases and their usages (aka scope)
+    // and returns do not have localIds in the elm but do in elm_annotations at a consistent calculable offset.
+    // BE WEARY of this calaculable offset.
+    const emptyResultClauses = [];
+    const statement = libraryElm.library.statements.def.find(stat => stat.name === statementName);
+    const libraryName = libraryElm.library.identifier.id;
+
+    const aliasMap = {};
+    // recurse through the statement elm for find all localIds
+    const localIds = this.findAllLocalIdsInStatement(
+      statement,
+      libraryName,
+      statement.annotation,
+      {},
+      aliasMap,
+      emptyResultClauses,
+      null
+    );
+    // Create/change the clause for all aliases and their usages
+    for (const alias of Array.from(emptyResultClauses)) {
+      // Only do it if we have a clause for where the result should be fetched from
+      // and have a localId for the clause that the result should map to
+      if (localIds[alias.expressionLocalId] != null && alias.aliasLocalId != null) {
+        localIds[alias.aliasLocalId] = {
+          localId: alias.aliasLocalId,
+          sourceLocalId: alias.expressionLocalId,
+        };
+      }
+    }
+
+    // We do not yet support coverage/coloring of Function statements
+    // Mark all the clauses as unsupported so we can mark them 'NA' in the clause_results
+    if (statement.type === 'FunctionDef') {
+      for (const localId in localIds) {
+        const clause = localIds[localId];
+        clause.isUnsupported = true;
+      }
+    }
+    return localIds;
+  }
+
+  /**
+     * Finds all localIds in the statement structure recursively.
+     * @private
+     * @param {Object} statement - The statement structure or child parts of it.
+     * @param {String} libraryName - The name of the library we are looking at.
+     * @param {Array} annotation - The JSON annotation for the entire structure, this is occasionally needed.
+     * @param {Object} localIds - The hash of localIds we are filling.
+     * @param {Object} aliasMap - The map of aliases.
+     * @param {Array} emptyResultClauses - List of clauses that will have empty results from the engine. Each object on
+     *    this has info on where to find the actual result.
+     * @param {Object} parentNode - The parent node, used for some special situations.
+     * @return {Array[Integer]} List of local ids in the statement. This is same array, localIds, that is passed in.
+     */
+  static findAllLocalIdsInStatement(
+    statement,
+    libraryName,
+    annotation,
+    localIds,
+    aliasMap,
+    emptyResultClauses,
+    parentNode
+  ) {
+    // looking at the key and value of everything on this object or array
+    for (const k in statement) {
+      let alId;
+      const v = statement[k];
+      if (k === 'return') {
+        // Keep track of the localId of the expression that the return references. 'from's without a 'return' dont have
+        // localId's. So it doesn't make sense to mark them.
+        if (statement.return.expression.localId != null) {
+          aliasMap[v] = statement.return.expression.localId;
+          alId = statement.return.localId;
+          if (alId) {
+            emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: aliasMap[v] });
+          }
+        }
+
+        this.findAllLocalIdsInStatement(v, libraryName, annotation, localIds, aliasMap, emptyResultClauses, statement);
+      } else if (k === 'alias') {
+        if (statement.expression != null && statement.expression.localId != null) {
+          // Keep track of the localId of the expression that the alias references
+          aliasMap[v] = statement.expression.localId;
+          // Determine the localId in the elm_annotation for this alias.
+          alId = parseInt(statement.expression.localId, 10) + 1;
+          emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: aliasMap[v] });
+        }
+      } else if (k === 'scope') {
+        // The scope entry references an alias but does not have an ELM local ID. Hoever it DOES have an elm_annotations localId
+        // The elm_annotation localId of the alias variable is the localId of it's parent (one less than)
+        // because the result of the scope clause should be equal to the clause that the scope is referencing
+        alId = parseInt(statement.localId, 10) - 1;
+        emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: aliasMap[v] });
+      } else if (k === 'asTypeSpecifier') {
+        // Map the localId of the asTypeSpecifier (Code, Quantity...) to the result of the result it is referencing
+        // For example, in the CQL code 'Variable.result as Code' the typeSpecifier does not produce a result, therefore
+        // we will set its result to whatever the result value is for 'Variable.result'
+        alId = statement.asTypeSpecifier.localId;
+        if (alId != null) {
+          const typeClauseId = parseInt(statement.asTypeSpecifier.localId, 10) - 1;
+          emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: typeClauseId });
+        }
+      } else if (k === 'sort') {
+        // Sort is a special case that we need to recurse into separately and set the results to the result of the statement the sort clause is in
+        this.findAllLocalIdsInSort(v, libraryName, localIds, aliasMap, emptyResultClauses, parentNode);
+      } else if (k === 'let') {
+        // let is a special case where it is an array, one for each defined alias. These aliases work slightly different
+        // and execution engine does return results for them on use. The Initial naming of them needs to be properly pointed
+        // to what they are set to.
+        for (const aLet of Array.from(v)) {
+          // Add the localId for the definition of this let to it's source.
+          localIds[aLet.localId] = { localId: aLet.localId, sourceLocalId: aLet.expression.localId };
+          this.findAllLocalIdsInStatement(
+            aLet.expression,
+            libraryName,
+            annotation,
+            localIds,
+            aliasMap,
+            emptyResultClauses,
+            statement
+          );
+        }
+        // If 'First' and 'Last' expressions, the result of source of the clause should be set to the expression
+      } else if (k === 'type' && (v === 'First' || v === 'Last')) {
+        if (statement.source && statement.source.localId != null) {
+          alId = statement.source.localId;
+          emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: statement.localId });
+        }
+        // Continue to recurse into the 'First' or 'Last' expression
+        this.findAllLocalIdsInStatement(v, libraryName, annotation, localIds, aliasMap, emptyResultClauses, statement);
+        // If this is a FunctionRef or ExpressionRef and it references a library, find the clause for the library reference and add it.
+      } else if (k === 'type' && (v === 'FunctionRef' || v === 'ExpressionRef') && statement.libraryName != null) {
+        const libraryClauseLocalId = this.findLocalIdForLibraryRef(
+          annotation,
+          statement.localId,
+          statement.libraryName
+        );
+        if (libraryClauseLocalId !== null) {
+          // only add the clause if the localId for it is found
+          // the sourceLocalId is the FunctionRef itself to match how library statement references work.
+          localIds[libraryClauseLocalId] = { localId: libraryClauseLocalId, sourceLocalId: statement.localId };
+        }
+        // else if they key is localId push the value
+      } else if (k === 'localId') {
+        localIds[v] = { localId: v };
+        // if the value is an array or object, recurse
+      } else if (Array.isArray(v) || typeof v === 'object') {
+        this.findAllLocalIdsInStatement(v, libraryName, annotation, localIds, aliasMap, emptyResultClauses, statement);
+      }
+    }
+
+    return localIds;
+  }
+
+  /**
+     * Finds all localIds in the sort structure recursively and sets the expressionLocalId to the parent statement.
+     * @private
+     * @param {Object} statement - The statement structure or child parts of it.
+     * @param {String} libraryName - The name of the library we are looking at.
+     * @param {Object} localIds - The hash of localIds we are filling.
+     * @param {Object} aliasMap - The map of aliases.
+     * @param {Array} emptyResultClauses - List of clauses that will have empty results from the engine. Each object on
+     *    this has info on where to find the actual result.
+     * @param {Object} rootStatement - The rootStatement.
+     */
+  static findAllLocalIdsInSort(statement, libraryName, localIds, aliasMap, emptyResultClauses, rootStatement) {
+    const alId = statement.localId;
+    emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: rootStatement.localId });
+    return (() => {
+      const result = [];
+      for (const k in statement) {
+        const v = statement[k];
+        if (Array.isArray(v) || typeof v === 'object') {
+          result.push(this.findAllLocalIdsInSort(v, libraryName, localIds, aliasMap, emptyResultClauses, rootStatement));
+        } else {
+          result.push(undefined);
+        }
+      }
+      return result;
+    })();
+  }
+
+  /**
+     * Find the localId of the library reference in the JSON elm annotation. This recursively searches the annotation structure
+     * for the clause of the library ref. When that is found it knows where to look inside of that for where the library
+     * reference may be.
+     *
+     * Consider the following example of looking for function ref with id "55" and library "global".
+     * CQL for this is "global.CalendarAgeInYearsAt(...)". The following annotation snippet covers the call of the
+     * function.
+     *
+     * {
+     *  "r": "55",
+     *  "s": [
+     *    {
+     *      "r": "49",
+     *      "s": [
+     *        {
+     *          "value": [
+     *            "global"
+     *          ]
+     *        }
+     *      ]
+     *    },
+     *    {
+     *      "value": [
+     *        "."
+     *      ]
+     *    },
+     *    {
+     *      "r": "55",
+     *      "s": [
+     *        {
+     *          "value": [
+     *            "\"CalendarAgeInYearsAt\"",
+     *            "("
+     *          ]
+     *        },
+     *
+     * This method will recurse through the structure until it stops on this snippet that has "r": "55". Then it will check
+     * if the value of the first child is simply an array with a single string equaling "global". If that is indeed the
+     * case then it will return the "r" value of that first child, which is the clause localId for the library part of the
+     * function reference. If that is not the case, it will keep recursing and may eventually return null.
+     *
+     * @private
+     * @param {Object|Array} annotation - The annotation structure or child in the annotation structure.
+     * @param {String} refLocalId - The localId of the library ref we should look for.
+     * @param {String} libraryName - The library reference name, used to find the clause.
+     * @return {String} The localId of the clause for the library reference or null if not found.
+     */
+  static findLocalIdForLibraryRef(annotation, refLocalId, libraryName) {
+    // if this is an object it should have an "r" for localId and "s" for children or leaf nodes
+    let child;
+    let ret;
+    if (Array.isArray(annotation)) {
+      for (child of Array.from(annotation)) {
+        // in the case of a list of children only return if there is a non null result
+        ret = this.findLocalIdForLibraryRef(child, refLocalId, libraryName);
+        if (ret !== null) {
+          return ret;
+        }
+      }
+    } else if (typeof annotation === 'object') {
+      // if we found the function ref
+      if (annotation.r != null && annotation.r === refLocalId) {
+        // check if the first child has the first leaf node with the library name
+        // refer to the method comment for why this is done.
+        if (
+          this.__guard__(annotation.s[0].s != null ? annotation.s[0].s[0].value : undefined, x => x[0]) === libraryName
+        ) {
+          // return the localId if there is one
+          if (annotation.s[0].r != null) {
+            return annotation.s[0].r;
+          }
+          // otherwise return null because the library ref is in the same clause as extpression ref.
+          // this is common with expressionRefs for some reason.
+          return null;
+        }
+      }
+
+      // if we made it here, we should travserse down the child nodes
+      if (Array.isArray(annotation.s)) {
+        for (child of Array.from(annotation.s)) {
+          // in the case of a list of children only return if there is a non null result
+          ret = this.findLocalIdForLibraryRef(child, refLocalId, libraryName);
+          if (ret !== null) {
+            return ret;
+          }
+        }
+      } else if (typeof annotation.s === 'object') {
+        return this.findLocalIdForLibraryRef(annotation.s, refLocalId, libraryName);
+      }
+    }
+
+    // if nothing above caused this to return, then we are at a leaf node and should return null
+    return null;
+  }
+
+  /**
+     * Figure out if a statement is a function given the measure, library name and statement name.
+     * @public
+     * @param {Measure} measure - The measure to find localIds in.
+     * @param {string} libraryName - The name of the library the statement belongs to.
+     * @param {string} statementName - The statement name to search for.
+     * @return {boolean} If the statement is a function or not.
+     */
+  static isStatementFunction(library, statementName) {
+    // find the library and statement in the elm
+    const statement = library.elm.library.statements.def.find(def => def.name === statementName);
+    if (statement != null) {
+      return statement.type === 'FunctionDef';
+    }
+    return false;
+  }
+
+  /**
+     * Figure out if a statement is in a Supplemental Data Element given the statement name.
+     * @public
+     * @param [PopulationSet] populationSets
+     * @param {string} statement - The statement to search for.
+     * @return {boolean} Statement does or does not belong to a Supplemental Data Element.
+     */
+  static isSupplementalDataElementStatement(populationSets, statementName) {
+    for (const populationSet of populationSets) {
+      if (populationSet.supplemental_data_elements) {
+        const sdeStatement = populationSet.supplemental_data_elements.find(sde => sde.statement_name === statementName);
+        if (sdeStatement !== undefined) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  static __guard__(value, transform) {
+    return typeof value !== 'undefined' && value !== null ? transform(value) : undefined;
+  }
+};
+
+},{"lodash":259}],4:[function(require,module,exports){
+const _ = require('lodash');
+const MeasureHelpers = require('../helpers/measure_helpers');
+const cql = require('cqm-models').CQL;
+const moment = require('moment');
+
+/**
+ * Contains helpers that generate useful data for coverage and highlighing. These structures are added to the Result
+ * object in the CQLCalculator.
+ */
+module.exports = class ResultsHelpers {
+  /**
+   * Builds the `statement_relevance` map. This map gets added to the Result attributes that the calculator returns.
+   *
+   * The statement_relevance map indicates which define statements were actually relevant to a population inclusion
+   * consideration. This makes use of the 'population_relevance' map. This is actually a two level map. The top level is
+   * a map of the CQL libraries, keyed by library name. The second level is a map for statement relevance in that library,
+   * which maps each statement to its relevance status. The values in this map differ from the `population_relevance`
+   * because we also need to track statements that are not used for any population calculation. Therefore the values are
+   * a string that is one of the following: 'NA', 'TRUE', 'FALSE'. Here is what they mean:
+   *
+   * 'NA' - Not applicable. This statement is not relevant to any population calculation in this population_set. Common
+   *   for unused library statements or statements only used for other population sets.
+   *
+   * 'FALSE' - This statement is not relevant to any of this patient's population inclusion calculations.
+   *
+   * 'TRUE' - This statement is relevant for one or more of the population inclusion calculations.
+   *
+   * Here is an example structure this function returns. (the `statement_relevance` map)
+   * {
+   *   "Test158": {
+   *     "Patient": "NA",
+   *     "SDE Ethnicity": "NA",
+   *     "SDE Payer": "NA",
+   *     "SDE Race": "NA",
+   *     "SDE Sex": "NA",
+   *     "Most Recent Delivery": "TRUE",
+   *     "Most Recent Delivery Overlaps Diagnosis": "TRUE",
+   *     "Initial Population": "TRUE",
+   *     "Numerator": "TRUE",
+   *     "Denominator Exceptions": "FALSE"
+   *   },
+   *   "TestLibrary": {
+   *     "Numer Helper": "TRUE",
+   *     "Denom Excp Helper": "FALSE",
+   *     "Unused statement": "NA"
+   *   }
+   * }
+   *
+   * This function relies heavily on the cql_statement_dependencies map on the Measure to recursively determine which
+   * statements are used in the relevant population statements. It also uses the 'population_relevance' map to determine
+   * the relevance of the population defining statement and its dependent statements.
+   * @public
+   * @param {object} populationRelevance - The `population_relevance` map, used at the starting point.
+   * @param {Measure} measure - The measure.
+   * @param {population} populationSet - The population set being calculated.
+   * @returns {object} The `statement_relevance` map that maps each statement to its relevance status for a calculation.
+   *   This structure is put in the Result object's attributes.
+   */
+  static buildStatementRelevanceMap(populationRelevance, measure, populationSet) {
+    // build map defaulting to not applicable (NA) using cql_statement_dependencies structure
+    const statementRelevance = {};
+    for (const lib of measure.cql_libraries) {
+      statementRelevance[lib.library_name] = {};
+      for (const statement of lib.statement_dependencies) {
+        statementRelevance[lib.library_name][statement.statement_name] = 'NA';
+      }
+    }
+
+    if (measure.calculate_sdes && populationSet.supplemental_data_elements) {
+      for (const statement of Array.from(populationSet.supplemental_data_elements)) {
+        // Mark all Supplemental Data Elements as relevant
+        this.markStatementRelevant(
+          measure.cql_libraries,
+          statementRelevance,
+          measure.main_cql_library,
+          statement.statement_name,
+          'TRUE'
+        );
+      }
+    }
+
+    for (const population in populationRelevance) {
+      // If the population is values, that means we need to mark relevance for the OBSERVs
+      const relevance = populationRelevance[population];
+      if (population === 'values') {
+        for (const observation of Array.from(populationSet.observations)) {
+          this.markStatementRelevant(
+            measure.cql_libraries,
+            statementRelevance,
+            measure.main_cql_library,
+            observation.observation_function.statement_name,
+            relevance
+          );
+        }
+      } else {
+        const relevantStatement = populationSet.populations[population].statement_name;
+        this.markStatementRelevant(
+          measure.cql_libraries,
+          statementRelevance,
+          measure.main_cql_library,
+          relevantStatement,
+          relevance
+        );
+      }
+    }
+
+    return statementRelevance;
+  }
+
+  /**
+   * Recursive helper function for the _buildStatementRelevanceMap function. This marks a statement as relevant (or not
+   * relevant but applicable) in the `statement_relevance` map. It recurses and marks dependent statements also relevant
+   * unless they have already been marked as 'TRUE' for their relevance statue. This function will never be called on
+   * statements that are 'NA'.
+   * @private
+   * @param {object} cqlStatementDependencies - Dependency map from the measure object. The thing we recurse over
+   *   even though it is flat, it represents a tree.
+   * @param {object} statementRelevance - The `statement_relevance` map to mark.
+   * @param {string} libraryName - The library name of the statement we are marking.
+   * @param {string} statementName - The name of the statement we are marking.
+   * @param {boolean} relevant - true if the statement should be marked 'TRUE', false if it should be marked 'FALSE'.
+   */
+  static markStatementRelevant(cqlStatementDependencies, statementRelevance, libraryName, statementName, relevant) {
+    // only mark the statement if it is currently 'NA' or 'FALSE'. Otherwise it already has been marked 'TRUE'
+    if (
+      statementRelevance[libraryName][statementName] === 'NA' ||
+      statementRelevance[libraryName][statementName] === 'FALSE'
+    ) {
+      statementRelevance[libraryName][statementName] = relevant ? 'TRUE' : 'FALSE';
+      const library = cqlStatementDependencies.find(lib => lib.library_name === libraryName);
+      const statement = library.statement_dependencies.find(stat => stat.statement_name === statementName);
+      if (!statement || !statement.statement_references) {
+        return [];
+      }
+      return statement.statement_references.map(dependentStatement =>
+        this.markStatementRelevant(
+          cqlStatementDependencies,
+          statementRelevance,
+          dependentStatement.library_name,
+          dependentStatement.statement_name,
+          relevant
+        ));
+    }
+    return [];
+  }
+
+  /**
+     * Builds the result structures for the statements and the clauses. These are named `statement_results` and
+     * `clause_results` respectively when added Result object's attributes.
+     *
+     * The `statement_results` structure indicates the result for each statement taking into account the statement
+     * relevance in determining the result. This is a two level map just like `statement_relevance`. The first level key is
+     * the library name and the second key level is the statement name. The value is an object that has three properties,
+     * 'raw', 'final' and 'pretty'. 'raw' is the raw result from the execution engine for that statement. 'final' is the final
+     * result that takes into account the relevance in this calculation. 'pretty' is a human readable description of the result
+     * that is only generated if doPretty is true.
+     * The value of 'final' will be one of the following strings:
+     * 'NA', 'UNHIT', 'TRUE', 'FALSE'.
+     *
+     * Here's what they mean:
+     *
+     * 'NA' - Not applicable. This statement is not relevant to any population calculation in this population_set. Common
+     *   for unused library statements or statements only used for other population sets.
+     *   !!!IMPORTANT NOTE!!! All define function statements are marked 'NA' since we don't have a strategy for
+     *        highlighting or coverage when it comes to functions.
+     *
+     * 'UNHIT' - This statement wasn't hit. This is most likely because the statement was not relevant to population
+     *     calculation for this patient. i.e. 'FALSE' in the the `statement_relevance` map.
+     *
+     * 'TRUE' - This statement is relevant and has a truthy result.
+     *
+     * 'FALSE' - This statement is relevant and has a falsey result.
+     *
+     * Here is an example of the `statement_results` structure: (raw results have been turned into "???" for this example)
+     * {
+     *   "Test158": {
+     *     "Patient": { "raw": "???", "final": "NA", "pretty": "NA" },
+     *     "SDE Ethnicity": { "raw": "???", "final": "NA", "pretty": "NA" },
+     *     "SDE Payer": { "raw": "???", "final": "NA", "pretty": "NA" },
+     *     "SDE Race": { "raw": "???", "final": "NA", "pretty": "NA" },
+     *     "SDE Sex": { "raw": "???", "final": "NA", "pretty": "NA" },
+     *     "Most Recent Delivery": { "raw": "???", "final": "TRUE", "pretty": "???" },
+     *     "Most Recent Delivery Overlaps Diagnosis": { "raw": "???", "final": "TRUE", "pretty": "???" },
+     *     "Initial Population": { "raw": "???", "final": "TRUE", "pretty": "???" },
+     *     "Numerator": { "raw": "???", "final": "TRUE", "pretty": "???" },
+     *     "Denominator Exceptions": { "raw": "???", "final": "UNHIT", "pretty": "UNHIT" },
+     *   },
+     *  "TestLibrary": {
+     *     "Numer Helper": { "raw": "???", "final": "TRUE", "pretty": "???" },
+     *     "Denom Excp Helper": { "raw": "???", "final": "UNHIT", "pretty": "UNHIT" },
+     *     "Unused statement": { "raw": "???", "final": "NA", "pretty": "???" },
+     *     "false statement": { "raw": "???", "final": "FALSE", "pretty": "FALSE: []" },
+     *   }
+     * }
+     *
+     *
+     * The `clause_results` structure is the same as the `statement_results` but it indicates the result for each clause.
+     * The second level key is the localId for the clause. The result object is the same with the same  'raw' and 'final'
+     * properties but it also includes the name of the statement it resides in as 'statementName'.
+     *
+     * This function relies very heavily on the `statement_relevance` map to determine the final results. This function
+     * returns the two structures together in an object ready to be added directly to the Result attributes.
+     * @public
+     * @param {Measure} measure - The measure.
+     * @param {object} rawClauseResults - The raw clause results from the calculation engine.
+     * @param {object} statementRelevance - The `statement_relevance` map. Used to determine if they were hit or not.
+     * @param {boolean} doPretty - If true, also generate pretty versions of result.
+     * @returns {object} Object with the statement_results and clause_results structures, keyed as such.
+     */
+  static buildStatementAndClauseResults(measure, rawClauseResults, statementRelevance, doPretty, includeClauseResults) {
+    if (doPretty == null) {
+      doPretty = false;
+    }
+    const statementResults = {};
+    const clauseResults = {};
+    for (const library of measure.cql_libraries) {
+      const statements = library.statement_dependencies;
+      const libraryName = library.library_name;
+      statementResults[library.library_name] = {};
+      clauseResults[library.library_name] = {};
+      for (const statement of statements) {
+        const statementName = statement.statement_name;
+        const rawStatementResult = this.findResultForStatementClause(library, statement, rawClauseResults);
+        statementResults[libraryName][statementName] = { raw: rawStatementResult };
+        const isSDE = MeasureHelpers.isSupplementalDataElementStatement(measure.population_sets, statementName);
+        if ((!measure.calculate_sdes && isSDE) || statementRelevance[libraryName][statementName] === 'NA') {
+          statementResults[libraryName][statementName].final = 'NA';
+          if (doPretty) {
+            statementResults[libraryName][statementName].pretty = 'NA';
+          }
+        } else if (statementRelevance[libraryName][statementName] === 'FALSE' || rawClauseResults[libraryName] == null) {
+          statementResults[libraryName][statementName].final = 'UNHIT';
+          // even if the statement wasn't hit, we want the pretty result to just
+          // be FUNCTION for functions
+          if (doPretty) {
+            if (MeasureHelpers.isStatementFunction(library, statementName)) {
+              statementResults[libraryName][statementName].pretty = 'FUNCTION';
+            } else {
+              statementResults[libraryName][statementName].pretty = 'UNHIT';
+            }
+          }
+        } else if (this.doesResultPass(rawStatementResult)) {
+          statementResults[libraryName][statementName].final = 'TRUE';
+          if (doPretty) {
+            statementResults[libraryName][statementName].pretty = this.prettyResult(rawStatementResult);
+          }
+        } else {
+          statementResults[libraryName][statementName].final = 'FALSE';
+          if (rawStatementResult instanceof Array && rawStatementResult.length === 0) {
+            // Special case, handle empty array.
+            if (doPretty) {
+              statementResults[libraryName][statementName].pretty = 'FALSE ([])';
+            }
+          } else if (MeasureHelpers.isStatementFunction(library, statementName)) {
+            if (doPretty) {
+              statementResults[libraryName][statementName].pretty = 'FUNCTION';
+            }
+          } else if (doPretty) {
+            statementResults[libraryName][statementName].pretty = `FALSE (${rawStatementResult})`;
+          }
+        }
+
+        if (includeClauseResults) {
+          // create clause results for all localIds in this statement
+          const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
+          for (const localId in localIds) {
+            const clause = localIds[localId];
+            const clauseResult = {
+              // if this clause is an alias or a usage of alias it will get the raw result from the sourceLocalId.
+              raw:
+                rawClauseResults[libraryName] != null
+                  ? rawClauseResults[libraryName][clause.sourceLocalId != null ? clause.sourceLocalId : localId]
+                  : undefined,
+              statementName,
+            };
+            clauseResult.final = this.setFinalResults({
+              statementRelevance,
+              statementName,
+              rawClauseResults,
+              libraryName,
+              localId,
+              clause,
+              rawResult: clauseResult.raw,
+            });
+            clauseResults[libraryName][localId] = clauseResult;
+          }
+        }
+      }
+    }
+    const response = { statement_results: statementResults };
+    response.clause_results = includeClauseResults ? clauseResults : null;
+    return response;
+  }
+
+  /**
+     * Generates a pretty human readable representation of a result.
+     *
+     * @param {(Array|object|boolean|???)} result - The result from the calculation engine.
+     * @param {Integer} indentLevel - For nested objects, the indentLevel indicates how far to indent.
+     *                                Note that 1 is the base because Array(1).join ' ' returns ''.
+     * @returns {String} a pretty version of the given result
+     */
+  static prettyResult(result, indentLevel, keyIndent) {
+    let prettyResult;
+    if (indentLevel == null) {
+      indentLevel = 1;
+    }
+    if (keyIndent == null) {
+      keyIndent = 1;
+    }
+    const keyIndentation = Array(keyIndent).join(' ');
+    const currentIndentation = Array(indentLevel).join(' ');
+    if (result instanceof cql.DateTime) {
+      return moment.utc(result.toString()).format('MM/DD/YYYY h:mm A');
+    } else if (result instanceof cql.Interval) {
+      return `INTERVAL: ${this.prettyResult(result.low)} - ${this.prettyResult(result.high)}`;
+    } else if (result instanceof cql.Code) {
+      return `CODE: ${result.system} ${result.code}`;
+    } else if (result instanceof cql.Quantity) {
+      let quantityResult = `QUANTITY: ${result.value}`;
+      if (result.unit) {
+        quantityResult += ` ${result.unit}`;
+      }
+      return quantityResult;
+    } else if (result && typeof result._type === 'string' && result._type.includes('QDM::')) {
+      // If there isn't a description, use the type name as a fallback.  This mirrors the frontend where we do
+      // result.constructor.name.
+      const description = result.description ? `${result.description}\n` : `${result._type.replace('QDM::', '')}\n`;
+      let startDateTime = null;
+      let endDateTime = null;
+      let startTimeString = '';
+      let endTimeString = '';
+      // Start time of data element is start of relevant period, if data element does not have relevant period, use authorDatetime
+      if (result.relevantPeriod) {
+        if (result.relevantPeriod.low) {
+          startDateTime = result.relevantPeriod.low;
+        }
+        if (result.relevantPeriod.high) {
+          endDateTime = result.relevantPeriod.high;
+        }
+      } else if (result.prevalencePeriod) {
+        if (result.prevalencePeriod.low) {
+          startDateTime = result.prevalencePeriod.low;
+        }
+        if (result.prevalencePeriod.high) {
+          endDateTime = result.prevalencePeriod.high;
+        }
+      } else if (result.authorDatetime) {
+        // TODO: start result string will need to be updated to AUTHORED once bonnie frontend
+        // updates its pretty printer to do so.
+        startDateTime = result.authorDatetime;
+      }
+
+      if (startDateTime) {
+        startTimeString = `START: ${moment.utc(startDateTime.toString()).format('MM/DD/YYYY h:mm A')}\n`;
+      }
+      // If endTime is the infinity dateTime, clear it out because we do not want to export it
+      if (endDateTime && endDateTime.year !== 9999) {
+        endTimeString = `STOP: ${moment.utc(endDateTime.toString()).format('MM/DD/YYYY h:mm A')}\n`;
+      }
+
+      const codeDisplay = result.dataElementCodes && result.dataElementCodes[0] ? `CODE: ${result.dataElementCodes[0].codeSystem} ${result.dataElementCodes[0].code}` : '';
+      // Add indentation
+      const returnString = `${description}${startTimeString}${endTimeString}${codeDisplay}`;
+      return returnString.replace(/\n/g, `\n${currentIndentation}${keyIndentation}`);
+    } else if (result instanceof String || typeof result === 'string') {
+      return `"${result}"`;
+    } else if (result instanceof Array) {
+      prettyResult = _.map(result, value => this.prettyResult(value, indentLevel, keyIndent));
+      return `[${prettyResult.join(`,\n${currentIndentation}${keyIndentation}`)}]`;
+    } else if (result instanceof Object) {
+      // if the object has it's own custom toString method, use that instead
+      if (typeof result.toString === 'function' && result.toString !== Object.prototype.toString) {
+        return result.toString();
+      }
+      prettyResult = '{\n';
+      const baseIndentation = Array(3).join(' ');
+      const sortedKeys = Object.keys(result).sort().filter(key => key !== '_type' && key !== 'qdmVersion');
+      for (const key of sortedKeys) {
+        // add 2 spaces per indent
+        const value = result[key];
+        const nextIndentLevel = indentLevel + 2;
+        // key length + ': '
+        keyIndent = key.length + 3;
+        prettyResult = prettyResult.concat(`${baseIndentation}${currentIndentation}${key}: ${this.prettyResult(value, nextIndentLevel, keyIndent)}`);
+        // append commas if it isn't the last key
+        if (key === sortedKeys[sortedKeys.length - 1]) {
+          prettyResult += '\n';
+        } else {
+          prettyResult += ',\n';
+        }
+      }
+      prettyResult += `${currentIndentation}}`;
+      return prettyResult;
+    }
+    if (result) {
+      return JSON.stringify(result, null, 2);
+    }
+    return 'null';
+  }
+
+  /**
+     * Determines the final result (for coloring and coverage) for a clause. The result fills the 'final' property for the
+     * clause result. Look at the comments for buildStatementAndClauseResults to get a description of what each of the
+     * string results of this function are.
+     * @private
+     * @param {object} rawClauseResults - The raw clause results from the calculation engine.
+     * @param {object} statementRelevance - The statement relevance map.
+     * @param {object} statementName - The name of the statement the clause is in
+     * @param {object} lib - The name of the libarary the clause is in
+     * @param {object} localId - The localId of the current clause
+     * @param {object} clause - The clause we are getting the final result of
+     * @param {Array|Object|Interval|??} rawResult - The raw result from the calculation engine.
+     * @returns {string} The final result for the clause.
+     */
+  static setFinalResults(params) {
+    let finalResult = 'FALSE';
+    if (params.clause.isUnsupported != null) {
+      finalResult = 'NA';
+    } else if (params.statementRelevance[params.libraryName][params.statementName] === 'NA') {
+      finalResult = 'NA';
+    } else if (
+      params.statementRelevance[params.libraryName][params.statementName] === 'FALSE' ||
+      params.rawClauseResults[params.libraryName] == null
+    ) {
+      finalResult = 'UNHIT';
+    } else if (this.doesResultPass(params.rawResult)) {
+      finalResult = 'TRUE';
+    }
+    return finalResult;
+  }
+
+  /**
+   * Finds the clause localId for a statement and gets the raw result for it from the raw clause results.
+   * @private
+   * @param {string} library - The library
+   * @param {string} statement - The statement
+   * @param {object} rawClauseResults - The raw clause results from the engine.
+   * @returns {(Array|object|Interval|??)} The raw result from the calculation engine for the given statement.
+   */
+  static findResultForStatementClause(library, statement, rawClauseResults) {
+    const elmStatement = library.elm.library.statements.def.find(def => def.name === statement.statement_name);
+    const libraryName = library.library_name;
+    return rawClauseResults[libraryName] != null ? rawClauseResults[libraryName][elmStatement.localId] : undefined;
+  }
+
+  /**
+   * Determines if a result (for a statement or clause) from the execution engine is a pass or fail.
+   * @private
+   * @param {(Array|object|boolean|???)} result - The result from the calculation engine.
+   * @returns {boolean} true or false
+   */
+  static doesResultPass(result) {
+    if (result === true) {
+      // Specifically a boolean true
+      return true;
+    } else if (result === false) {
+      // Specifically a boolean false
+      return false;
+    } else if (Array.isArray(result)) {
+      // Check if result is an array
+      if (result.length === 0) {
+        // Result is true if the array is not empty
+        return false;
+      } else if (result.length === 1 && result[0] === null) {
+        // But if the array has one element that is null. Then we should make it red.
+        return false;
+      }
+      return true;
+    } else if (result instanceof cql.Interval) {
+      // make it green if and Interval is returned
+      return true;
+      // Return false if an empty cql.Code is the result
+    } else if (result instanceof cql.Code && result.code == null) {
+      return false;
+    } else if (result === null || result === undefined) {
+      // Specifically no result
+      return false;
+    }
+    return true;
+  }
+
+  /*
+    * Iterate over episode results, call _buildPopulationRelevanceMap for each result
+    * OR population relevances together so that populations are marked as relevant
+    * based on all episodes instead of just one
+    * @private
+    * @param {episodeResults} result - Population_results for each episode
+    * @returns {object} Map that tells if a population calculation was considered/relevant in any episode
+    */
+  static populationRelevanceForAllEpisodes(episodeResults) {
+    const masterRelevanceMap = {};
+    for (const key in episodeResults) {
+      const episodeResult = episodeResults[key];
+      const popRelMap = this.buildPopulationRelevanceMap(episodeResult);
+      for (const pop in popRelMap) {
+        const popRel = popRelMap[pop];
+        if (masterRelevanceMap[pop] == null) {
+          masterRelevanceMap[pop] = false;
+        }
+        masterRelevanceMap[pop] = masterRelevanceMap[pop] || popRel;
+      }
+    }
+    return masterRelevanceMap;
+  }
+
+  /**
+     * Builds the `population_relevance` map. This map gets added to the Result attributes that the calculator returns.
+     *
+     * The population_relevance map indicates which populations the patient was actually considered for inclusion in. It
+     * is a simple map of "POPNAME" to true or false. true if the population was relevant/considered, false if
+     * NOT relevant/considered. This is used later to determine which define statements are relevant in the calculation.
+     *
+     * For example: If they aren't in the IPP then they are not going to be considered for any other population and all other
+     * populations will be marked NOT relevant.
+     *
+     * Below is an example result of this function (the 'population_relevance' map). DENEXCEP is not relevant because in
+     * the population_results the NUMER was greater than zero:
+     * {
+     *   "IPP": true,
+     *   "DENOM": true,
+     *   "NUMER": true,
+     *   "DENEXCEP": false
+     * }
+     *
+     * This function is extremely verbose because this is an important and confusing calculation to make. The verbosity
+     * was kept to make it more maintainable.
+     * @private
+     * @param {Result} result - The `population_results` object.
+     * @returns {object} Map that tells if a population calculation was considered/relevant.
+     */
+  static buildPopulationRelevanceMap(result) {
+    // initialize to true for every population
+    const resultShown = {};
+    _.each(Object.keys(result), (population) => { resultShown[population] = true; });
+
+    // If STRAT is 0 then everything else is not calculated
+    if (result.STRAT != null && result.STRAT === 0) {
+      if (resultShown.IPP != null) {
+        resultShown.IPP = false;
+      }
+      if (resultShown.NUMER != null) {
+        resultShown.NUMER = false;
+      }
+      if (resultShown.NUMEX != null) {
+        resultShown.NUMEX = false;
+      }
+      if (resultShown.DENOM != null) {
+        resultShown.DENOM = false;
+      }
+      if (resultShown.DENEX != null) {
+        resultShown.DENEX = false;
+      }
+      if (resultShown.DENEXCEP != null) {
+        resultShown.DENEXCEP = false;
+      }
+      if (resultShown.MSRPOPL != null) {
+        resultShown.MSRPOPL = false;
+      }
+      if (resultShown.MSRPOPLEX != null) {
+        resultShown.MSRPOPLEX = false;
+      }
+      if (resultShown.values != null) {
+        resultShown.values = false;
+      }
+    }
+
+    // If IPP is 0 then everything else is not calculated
+    if (result.IPP === 0) {
+      if (resultShown.NUMER != null) {
+        resultShown.NUMER = false;
+      }
+      if (resultShown.NUMEX != null) {
+        resultShown.NUMEX = false;
+      }
+      if (resultShown.DENOM != null) {
+        resultShown.DENOM = false;
+      }
+      if (resultShown.DENEX != null) {
+        resultShown.DENEX = false;
+      }
+      if (resultShown.DENEXCEP != null) {
+        resultShown.DENEXCEP = false;
+      }
+      if (resultShown.MSRPOPL != null) {
+        resultShown.MSRPOPL = false;
+      }
+      if (resultShown.MSRPOPLEX != null) {
+        resultShown.MSRPOPLEX = false;
+      }
+      // values is the OBSERVs
+      if (resultShown.values != null) {
+        resultShown.values = false;
+      }
+    }
+
+    // If DENOM is 0 then DENEX, DENEXCEP, NUMER and NUMEX are not calculated
+    if (result.DENOM != null && result.DENOM === 0) {
+      if (resultShown.NUMER != null) {
+        resultShown.NUMER = false;
+      }
+      if (resultShown.NUMEX != null) {
+        resultShown.NUMEX = false;
+      }
+      if (resultShown.DENEX != null) {
+        resultShown.DENEX = false;
+      }
+      if (resultShown.DENEXCEP != null) {
+        resultShown.DENEXCEP = false;
+      }
+    }
+
+    // If DENEX is greater than or equal to DENOM then NUMER, NUMEX and DENEXCEP not calculated
+    if (result.DENEX != null && result.DENEX >= result.DENOM) {
+      if (resultShown.NUMER != null) {
+        resultShown.NUMER = false;
+      }
+      if (resultShown.NUMEX != null) {
+        resultShown.NUMEX = false;
+      }
+      if (resultShown.DENEXCEP != null) {
+        resultShown.DENEXCEP = false;
+      }
+    }
+
+    // If NUMER is 0 then NUMEX is not calculated
+    if (result.NUMER != null && result.NUMER === 0) {
+      if (resultShown.NUMEX != null) {
+        resultShown.NUMEX = false;
+      }
+    }
+
+    // If NUMER is 1 then DENEXCEP is not calculated
+    if (result.NUMER != null && result.NUMER >= 1) {
+      if (resultShown.DENEXCEP != null) {
+        resultShown.DENEXCEP = false;
+      }
+    }
+
+    // If MSRPOPL is 0 then OBSERVs and MSRPOPLEX are not calculateed
+    if (result.MSRPOPL != null && result.MSRPOPL === 0) {
+      // values is the OBSERVs
+      if (resultShown.values != null) {
+        resultShown.values = false;
+      }
+      if (resultShown.MSRPOPLEX) {
+        resultShown.MSRPOPLEX = false;
+      }
+    }
+
+    // If MSRPOPLEX is greater than or equal to MSRPOPL then OBSERVs are not calculated
+    if (result.MSRPOPLEX != null && result.MSRPOPLEX >= result.MSRPOPL) {
+      // values is the OBSERVs
+      if (resultShown.values != null) {
+        resultShown.values = false;
+      }
+    }
+
+    return resultShown;
+  }
+};
+
+},{"../helpers/measure_helpers":3,"cqm-models":253,"lodash":259,"moment":260}],5:[function(require,module,exports){
+module.exports.CalculatorHelpers = require('./helpers/calculator_helpers.js');
+module.exports.MeasureHelpers = require('./helpers/measure_helpers.js');
+module.exports.ResultsHelpers = require('./helpers/results_helpers.js');
+module.exports.PatientSource = require('./models/patient_source.js');
+module.exports.Calculator = require('./models/calculator.js');
+
+},{"./helpers/calculator_helpers.js":2,"./helpers/measure_helpers.js":3,"./helpers/results_helpers.js":4,"./models/calculator.js":6,"./models/patient_source.js":7}],6:[function(require,module,exports){
+/**
+ * The CQL calculator. This calls the cql-execution framework and formats the results as neccesary.
+ */
+const _ = require('lodash');
+const CqmModels = require('cqm-models');
+
+const cql = CqmModels.CQL;
+const QDMPatient = CqmModels.QDMPatient;
+const ResultsHelpers = require('../helpers/results_helpers');
+const CalculatorHelpers = require('../helpers/calculator_helpers');
+const PatientSource = require('./patient_source');
+
+module.exports = class Calculator {
+  /**
+   * Generate calculation results for patients against a CQL measure.
+   *
+   * @param {Measure} measure - The measure population to calculate on.
+   * @param {Array} patients - The array of QDM patients to run calcs on.
+   * @param {Hash} valueSetsByOid - all ValueSets relevant to the measure.
+   * @param {Hash} options - contains options for measure calculation.
+   * @returns {patientId, results} results - mapping from patient to calculation results for each patient.
+   */
+  static calculate(
+    measure, patients, valueSetsByOid,
+    // default values for the passed in options object
+    {
+      includeClauseResults = false, // whether or not to include the individual clause results (note - these can be large for some measures e.g. opioids)
+      doPretty = false, // whether or not to include the .pretty attribute
+      timezoneOffset = 0,
+      effectiveDate = null, // will default to measure.measure_period.low.value if not included
+      effectiveDateEnd = null, // will default to measure.measure_period.high.value if this and effective_date not provided, if effective_date is provided will default to end of the effective_date year
+      executionDate = null, // will default to today
+    } = {}
+  ) {
+    // We store both the calculation result and the calculation code based on keys derived from the arguments
+    const resultsByPatient = {};
+
+    const qdmPatients = patients.map(patient => new QDMPatient(patient));
+    const patientSource = new PatientSource(qdmPatients);
+
+    // Grab start and end of Measurement Period
+    let start;
+    let end;
+    // Override default measure_period with effective_date if available
+    if (effectiveDate != null) {
+      start = CalculatorHelpers.parseTimeStringAsUTC(effectiveDate);
+      if (effectiveDateEnd != null) {
+        end = CalculatorHelpers.parseTimeStringAsUTC(effectiveDateEnd);
+      } else {
+        end = CalculatorHelpers.parseTimeStringAsUTCConvertingToEndOfYear(effectiveDate);
+      }
+    } else {
+      start = CalculatorHelpers.parseTimeStringAsUTC(measure.measure_period.low.value);
+      end = CalculatorHelpers.parseTimeStringAsUTC(measure.measure_period.high.value);
+    }
+
+    const startCql = cql.DateTime.fromJSDate(start, 0); // No timezone offset for start
+    const endCql = cql.DateTime.fromJSDate(end, 0); // No timezone offset for stop
+
+    // Construct CQL params
+    const params = { 'Measurement Period': new cql.Interval(startCql, endCql) };
+
+    // Set execution_date if available else default to new Date()
+    const executionDateOption = (executionDate != null) ? CalculatorHelpers.parseTimeStringAsUTC(effectiveDate) : new Date();
+
+    // Create the execution DateTime that we pass into the engine
+    const executionDateTime = cql.DateTime.fromJSDate(executionDateOption, timezoneOffset);
+
+    // Grab ELM JSON from measure, use clone so that the function added from observations does not get added over and over again
+    // Set all value set versions to 'undefined' so the execution engine does not grab the specified version in the ELM
+    const allElm = CalculatorHelpers.setValueSetVersionsToUndefined(_.clone(measure.cql_libraries.map(lib => lib.elm)));
+    // Find the main library (the library that is the "measure")
+    const mainLibraryElm = allElm.find(elm => elm.library.identifier.id === measure.main_cql_library);
+
+    const observations = measure.population_sets[0].observations;
+    const observationDefs = [];
+    let generatedELMJSON;
+    if (observations) {
+      observations.forEach((obs) => {
+        const funcName = obs.observation_function.statement_name;
+        const parameter = obs.observation_parameter.statement_name;
+        generatedELMJSON = CalculatorHelpers.generateELMJSONFunction(funcName, parameter);
+        // Save the name of the generated define statement, so we can check
+        // its result later in the CQL calculation process. These added
+        // define statements are called 'obs_func_' followed by the
+        // name of the function - see the 'generateELMJSONFunction' function.
+        observationDefs.push(`obs_func_${funcName}`);
+        // Add the generated elm representing the observation function into the elm
+        mainLibraryElm.library.statements.def.push(generatedELMJSON);
+      });
+    }
+
+    // Grab the correct version of value sets to pass into the execution engine.
+    const measureValueSets = CalculatorHelpers.valueSetsForCodeService(valueSetsByOid);
+
+    // Calculate results for each CQL statement
+    const resultsRaw = Calculator.executeEngine(
+      allElm,
+      patientSource,
+      measureValueSets,
+      measure.main_cql_library,
+      mainLibraryElm.library.identifier.version,
+      executionDateTime,
+      params
+    );
+
+    const stratificationPopulations = CalculatorHelpers.getStratificationsAsPopulationSets(measure);
+    measure.population_sets = measure.population_sets.concat(stratificationPopulations);
+
+    Object.keys(resultsRaw.patientResults).forEach((patientId) => {
+      let populationResults;
+      let episodeResults;
+      let populationRelevance;
+      const patientResults = resultsRaw.patientResults[patientId];
+      // Parse CQL statement results into population values
+      measure.population_sets.forEach((populationSet) => {
+        [populationResults, episodeResults] = Array.from(CalculatorHelpers.createPopulationValues(
+          measure,
+          populationSet,
+          patientResults,
+          observationDefs
+        ));
+        if (populationResults) {
+          const result = new CqmModels.IndividualResult();
+          result.set(populationResults);
+          if (episodeResults != null) {
+            result.episode_results = episodeResults;
+            if (Object.keys(episodeResults).length > 0) {
+              /* In episode of care based measures, episode_results contains the population results
+               * for EACH episode, so we need to build population_relevance based on a combonation
+               * of the episode_results. IE: If DENEX is irrelevant for one episode but relevant for
+               * another, the logic view should not highlight it as irrelevant
+               */
+              populationRelevance = ResultsHelpers.populationRelevanceForAllEpisodes(episodeResults);
+            } else {
+              // Use the patient based relevance if there are no episodes. This will properly set IPP or STRAT to true.
+              populationRelevance = ResultsHelpers.buildPopulationRelevanceMap(populationResults);
+            }
+          } else {
+            // Calculate relevance for patient based measure
+            populationRelevance = ResultsHelpers.buildPopulationRelevanceMap(populationResults);
+          }
+
+          const statementRelevance = ResultsHelpers.buildStatementRelevanceMap(
+            populationRelevance,
+            measure,
+            populationSet
+          );
+
+          result.extendedData.population_relevance = populationRelevance;
+          result.extendedData.statement_relevance = statementRelevance;
+
+          result.set(ResultsHelpers.buildStatementAndClauseResults(measure, resultsRaw.localIdPatientResultsMap[patientId], statementRelevance, doPretty, includeClauseResults));
+
+          // Populate result with info
+          result.patient = patientId;
+          result.measure = measure._id;
+          result.state = 'complete';
+
+          // Add result of population set, hashed by population set id
+          if (!resultsByPatient[patientId]) {
+            resultsByPatient[patientId] = {};
+          }
+          resultsByPatient[patientId][populationSet.population_set_id] = result;
+        }
+      });
+    });
+    return resultsByPatient;
+  }
+
+  /**
+   * Call into the CQL execution engine for raw results.
+   */
+  static executeEngine(elm, patientSource, valueSets, libraryName, version, executionDateTime, parameters = {}) {
+    let lib;
+    let rep;
+    if (Array.isArray(elm)) {
+      if (elm.length > 1) {
+        rep = new cql.Repository(elm);
+        lib = rep.resolve(libraryName, version);
+      } else {
+        lib = new cql.Library(elm[0]);
+      }
+    } else {
+      lib = new cql.Library(elm);
+    }
+    const codeService = new cql.CodeService(valueSets);
+    const executor = new cql.Executor(lib, codeService, parameters);
+    return executor.exec(patientSource, executionDateTime);
+  }
+};
+
+},{"../helpers/calculator_helpers":2,"../helpers/results_helpers":4,"./patient_source":7,"cqm-models":253,"lodash":259}],7:[function(require,module,exports){
+// This is a wrapper class for an array of QDM Patients
+// This class adds functions used by the execution engine to
+// traverse an array of QDM Patients
+module.exports = class PatientSource {
+  constructor(patients) {
+    this.patients = patients;
+    this.index = 0;
+  }
+  currentPatient() {
+    if (this.index < this.patients.length) {
+      return this.patients[this.index];
+    }
+    return null;
+  }
+  nextPatient() {
+    this.index += 1;
+  }
+};
+
+},{}],8:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -492,7 +2227,7 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"util/":4}],2:[function(require,module,exports){
+},{"util/":11}],9:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -517,14 +2252,14 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],3:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],4:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -1114,7 +2849,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":3,"_process":11,"inherits":2}],5:[function(require,module,exports){
+},{"./support/isBuffer":10,"_process":364,"inherits":9}],12:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -1267,4494 +3002,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],6:[function(require,module,exports){
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-/* eslint-disable no-proto */
-
-'use strict'
-
-var base64 = require('base64-js')
-var ieee754 = require('ieee754')
-
-exports.Buffer = Buffer
-exports.SlowBuffer = SlowBuffer
-exports.INSPECT_MAX_BYTES = 50
-
-var K_MAX_LENGTH = 0x7fffffff
-exports.kMaxLength = K_MAX_LENGTH
-
-/**
- * If `Buffer.TYPED_ARRAY_SUPPORT`:
- *   === true    Use Uint8Array implementation (fastest)
- *   === false   Print warning and recommend using `buffer` v4.x which has an Object
- *               implementation (most compatible, even IE6)
- *
- * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
- * Opera 11.6+, iOS 4.2+.
- *
- * We report that the browser does not support typed arrays if the are not subclassable
- * using __proto__. Firefox 4-29 lacks support for adding new properties to `Uint8Array`
- * (See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438). IE 10 lacks support
- * for __proto__ and has a buggy typed array implementation.
- */
-Buffer.TYPED_ARRAY_SUPPORT = typedArraySupport()
-
-if (!Buffer.TYPED_ARRAY_SUPPORT && typeof console !== 'undefined' &&
-    typeof console.error === 'function') {
-  console.error(
-    'This browser lacks typed array (Uint8Array) support which is required by ' +
-    '`buffer` v5.x. Use `buffer` v4.x if you require old browser support.'
-  )
-}
-
-function typedArraySupport () {
-  // Can typed array instances can be augmented?
-  try {
-    var arr = new Uint8Array(1)
-    arr.__proto__ = { __proto__: Uint8Array.prototype, foo: function () { return 42 } }
-    return arr.foo() === 42
-  } catch (e) {
-    return false
-  }
-}
-
-Object.defineProperty(Buffer.prototype, 'parent', {
-  enumerable: true,
-  get: function () {
-    if (!Buffer.isBuffer(this)) return undefined
-    return this.buffer
-  }
-})
-
-Object.defineProperty(Buffer.prototype, 'offset', {
-  enumerable: true,
-  get: function () {
-    if (!Buffer.isBuffer(this)) return undefined
-    return this.byteOffset
-  }
-})
-
-function createBuffer (length) {
-  if (length > K_MAX_LENGTH) {
-    throw new RangeError('The value "' + length + '" is invalid for option "size"')
-  }
-  // Return an augmented `Uint8Array` instance
-  var buf = new Uint8Array(length)
-  buf.__proto__ = Buffer.prototype
-  return buf
-}
-
-/**
- * The Buffer constructor returns instances of `Uint8Array` that have their
- * prototype changed to `Buffer.prototype`. Furthermore, `Buffer` is a subclass of
- * `Uint8Array`, so the returned instances will have all the node `Buffer` methods
- * and the `Uint8Array` methods. Square bracket notation works as expected -- it
- * returns a single octet.
- *
- * The `Uint8Array` prototype remains unmodified.
- */
-
-function Buffer (arg, encodingOrOffset, length) {
-  // Common case.
-  if (typeof arg === 'number') {
-    if (typeof encodingOrOffset === 'string') {
-      throw new TypeError(
-        'The "string" argument must be of type string. Received type number'
-      )
-    }
-    return allocUnsafe(arg)
-  }
-  return from(arg, encodingOrOffset, length)
-}
-
-// Fix subarray() in ES2016. See: https://github.com/feross/buffer/pull/97
-if (typeof Symbol !== 'undefined' && Symbol.species != null &&
-    Buffer[Symbol.species] === Buffer) {
-  Object.defineProperty(Buffer, Symbol.species, {
-    value: null,
-    configurable: true,
-    enumerable: false,
-    writable: false
-  })
-}
-
-Buffer.poolSize = 8192 // not used by this implementation
-
-function from (value, encodingOrOffset, length) {
-  if (typeof value === 'string') {
-    return fromString(value, encodingOrOffset)
-  }
-
-  if (ArrayBuffer.isView(value)) {
-    return fromArrayLike(value)
-  }
-
-  if (value == null) {
-    throw TypeError(
-      'The first argument must be one of type string, Buffer, ArrayBuffer, Array, ' +
-      'or Array-like Object. Received type ' + (typeof value)
-    )
-  }
-
-  if (isInstance(value, ArrayBuffer) ||
-      (value && isInstance(value.buffer, ArrayBuffer))) {
-    return fromArrayBuffer(value, encodingOrOffset, length)
-  }
-
-  if (typeof value === 'number') {
-    throw new TypeError(
-      'The "value" argument must not be of type number. Received type number'
-    )
-  }
-
-  var valueOf = value.valueOf && value.valueOf()
-  if (valueOf != null && valueOf !== value) {
-    return Buffer.from(valueOf, encodingOrOffset, length)
-  }
-
-  var b = fromObject(value)
-  if (b) return b
-
-  if (typeof Symbol !== 'undefined' && Symbol.toPrimitive != null &&
-      typeof value[Symbol.toPrimitive] === 'function') {
-    return Buffer.from(
-      value[Symbol.toPrimitive]('string'), encodingOrOffset, length
-    )
-  }
-
-  throw new TypeError(
-    'The first argument must be one of type string, Buffer, ArrayBuffer, Array, ' +
-    'or Array-like Object. Received type ' + (typeof value)
-  )
-}
-
-/**
- * Functionally equivalent to Buffer(arg, encoding) but throws a TypeError
- * if value is a number.
- * Buffer.from(str[, encoding])
- * Buffer.from(array)
- * Buffer.from(buffer)
- * Buffer.from(arrayBuffer[, byteOffset[, length]])
- **/
-Buffer.from = function (value, encodingOrOffset, length) {
-  return from(value, encodingOrOffset, length)
-}
-
-// Note: Change prototype *after* Buffer.from is defined to workaround Chrome bug:
-// https://github.com/feross/buffer/pull/148
-Buffer.prototype.__proto__ = Uint8Array.prototype
-Buffer.__proto__ = Uint8Array
-
-function assertSize (size) {
-  if (typeof size !== 'number') {
-    throw new TypeError('"size" argument must be of type number')
-  } else if (size < 0) {
-    throw new RangeError('The value "' + size + '" is invalid for option "size"')
-  }
-}
-
-function alloc (size, fill, encoding) {
-  assertSize(size)
-  if (size <= 0) {
-    return createBuffer(size)
-  }
-  if (fill !== undefined) {
-    // Only pay attention to encoding if it's a string. This
-    // prevents accidentally sending in a number that would
-    // be interpretted as a start offset.
-    return typeof encoding === 'string'
-      ? createBuffer(size).fill(fill, encoding)
-      : createBuffer(size).fill(fill)
-  }
-  return createBuffer(size)
-}
-
-/**
- * Creates a new filled Buffer instance.
- * alloc(size[, fill[, encoding]])
- **/
-Buffer.alloc = function (size, fill, encoding) {
-  return alloc(size, fill, encoding)
-}
-
-function allocUnsafe (size) {
-  assertSize(size)
-  return createBuffer(size < 0 ? 0 : checked(size) | 0)
-}
-
-/**
- * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
- * */
-Buffer.allocUnsafe = function (size) {
-  return allocUnsafe(size)
-}
-/**
- * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
- */
-Buffer.allocUnsafeSlow = function (size) {
-  return allocUnsafe(size)
-}
-
-function fromString (string, encoding) {
-  if (typeof encoding !== 'string' || encoding === '') {
-    encoding = 'utf8'
-  }
-
-  if (!Buffer.isEncoding(encoding)) {
-    throw new TypeError('Unknown encoding: ' + encoding)
-  }
-
-  var length = byteLength(string, encoding) | 0
-  var buf = createBuffer(length)
-
-  var actual = buf.write(string, encoding)
-
-  if (actual !== length) {
-    // Writing a hex string, for example, that contains invalid characters will
-    // cause everything after the first invalid character to be ignored. (e.g.
-    // 'abxxcd' will be treated as 'ab')
-    buf = buf.slice(0, actual)
-  }
-
-  return buf
-}
-
-function fromArrayLike (array) {
-  var length = array.length < 0 ? 0 : checked(array.length) | 0
-  var buf = createBuffer(length)
-  for (var i = 0; i < length; i += 1) {
-    buf[i] = array[i] & 255
-  }
-  return buf
-}
-
-function fromArrayBuffer (array, byteOffset, length) {
-  if (byteOffset < 0 || array.byteLength < byteOffset) {
-    throw new RangeError('"offset" is outside of buffer bounds')
-  }
-
-  if (array.byteLength < byteOffset + (length || 0)) {
-    throw new RangeError('"length" is outside of buffer bounds')
-  }
-
-  var buf
-  if (byteOffset === undefined && length === undefined) {
-    buf = new Uint8Array(array)
-  } else if (length === undefined) {
-    buf = new Uint8Array(array, byteOffset)
-  } else {
-    buf = new Uint8Array(array, byteOffset, length)
-  }
-
-  // Return an augmented `Uint8Array` instance
-  buf.__proto__ = Buffer.prototype
-  return buf
-}
-
-function fromObject (obj) {
-  if (Buffer.isBuffer(obj)) {
-    var len = checked(obj.length) | 0
-    var buf = createBuffer(len)
-
-    if (buf.length === 0) {
-      return buf
-    }
-
-    obj.copy(buf, 0, 0, len)
-    return buf
-  }
-
-  if (obj.length !== undefined) {
-    if (typeof obj.length !== 'number' || numberIsNaN(obj.length)) {
-      return createBuffer(0)
-    }
-    return fromArrayLike(obj)
-  }
-
-  if (obj.type === 'Buffer' && Array.isArray(obj.data)) {
-    return fromArrayLike(obj.data)
-  }
-}
-
-function checked (length) {
-  // Note: cannot use `length < K_MAX_LENGTH` here because that fails when
-  // length is NaN (which is otherwise coerced to zero.)
-  if (length >= K_MAX_LENGTH) {
-    throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
-                         'size: 0x' + K_MAX_LENGTH.toString(16) + ' bytes')
-  }
-  return length | 0
-}
-
-function SlowBuffer (length) {
-  if (+length != length) { // eslint-disable-line eqeqeq
-    length = 0
-  }
-  return Buffer.alloc(+length)
-}
-
-Buffer.isBuffer = function isBuffer (b) {
-  return b != null && b._isBuffer === true &&
-    b !== Buffer.prototype // so Buffer.isBuffer(Buffer.prototype) will be false
-}
-
-Buffer.compare = function compare (a, b) {
-  if (isInstance(a, Uint8Array)) a = Buffer.from(a, a.offset, a.byteLength)
-  if (isInstance(b, Uint8Array)) b = Buffer.from(b, b.offset, b.byteLength)
-  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
-    throw new TypeError(
-      'The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array'
-    )
-  }
-
-  if (a === b) return 0
-
-  var x = a.length
-  var y = b.length
-
-  for (var i = 0, len = Math.min(x, y); i < len; ++i) {
-    if (a[i] !== b[i]) {
-      x = a[i]
-      y = b[i]
-      break
-    }
-  }
-
-  if (x < y) return -1
-  if (y < x) return 1
-  return 0
-}
-
-Buffer.isEncoding = function isEncoding (encoding) {
-  switch (String(encoding).toLowerCase()) {
-    case 'hex':
-    case 'utf8':
-    case 'utf-8':
-    case 'ascii':
-    case 'latin1':
-    case 'binary':
-    case 'base64':
-    case 'ucs2':
-    case 'ucs-2':
-    case 'utf16le':
-    case 'utf-16le':
-      return true
-    default:
-      return false
-  }
-}
-
-Buffer.concat = function concat (list, length) {
-  if (!Array.isArray(list)) {
-    throw new TypeError('"list" argument must be an Array of Buffers')
-  }
-
-  if (list.length === 0) {
-    return Buffer.alloc(0)
-  }
-
-  var i
-  if (length === undefined) {
-    length = 0
-    for (i = 0; i < list.length; ++i) {
-      length += list[i].length
-    }
-  }
-
-  var buffer = Buffer.allocUnsafe(length)
-  var pos = 0
-  for (i = 0; i < list.length; ++i) {
-    var buf = list[i]
-    if (isInstance(buf, Uint8Array)) {
-      buf = Buffer.from(buf)
-    }
-    if (!Buffer.isBuffer(buf)) {
-      throw new TypeError('"list" argument must be an Array of Buffers')
-    }
-    buf.copy(buffer, pos)
-    pos += buf.length
-  }
-  return buffer
-}
-
-function byteLength (string, encoding) {
-  if (Buffer.isBuffer(string)) {
-    return string.length
-  }
-  if (ArrayBuffer.isView(string) || isInstance(string, ArrayBuffer)) {
-    return string.byteLength
-  }
-  if (typeof string !== 'string') {
-    throw new TypeError(
-      'The "string" argument must be one of type string, Buffer, or ArrayBuffer. ' +
-      'Received type ' + typeof string
-    )
-  }
-
-  var len = string.length
-  var mustMatch = (arguments.length > 2 && arguments[2] === true)
-  if (!mustMatch && len === 0) return 0
-
-  // Use a for loop to avoid recursion
-  var loweredCase = false
-  for (;;) {
-    switch (encoding) {
-      case 'ascii':
-      case 'latin1':
-      case 'binary':
-        return len
-      case 'utf8':
-      case 'utf-8':
-        return utf8ToBytes(string).length
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return len * 2
-      case 'hex':
-        return len >>> 1
-      case 'base64':
-        return base64ToBytes(string).length
-      default:
-        if (loweredCase) {
-          return mustMatch ? -1 : utf8ToBytes(string).length // assume utf8
-        }
-        encoding = ('' + encoding).toLowerCase()
-        loweredCase = true
-    }
-  }
-}
-Buffer.byteLength = byteLength
-
-function slowToString (encoding, start, end) {
-  var loweredCase = false
-
-  // No need to verify that "this.length <= MAX_UINT32" since it's a read-only
-  // property of a typed array.
-
-  // This behaves neither like String nor Uint8Array in that we set start/end
-  // to their upper/lower bounds if the value passed is out of range.
-  // undefined is handled specially as per ECMA-262 6th Edition,
-  // Section 13.3.3.7 Runtime Semantics: KeyedBindingInitialization.
-  if (start === undefined || start < 0) {
-    start = 0
-  }
-  // Return early if start > this.length. Done here to prevent potential uint32
-  // coercion fail below.
-  if (start > this.length) {
-    return ''
-  }
-
-  if (end === undefined || end > this.length) {
-    end = this.length
-  }
-
-  if (end <= 0) {
-    return ''
-  }
-
-  // Force coersion to uint32. This will also coerce falsey/NaN values to 0.
-  end >>>= 0
-  start >>>= 0
-
-  if (end <= start) {
-    return ''
-  }
-
-  if (!encoding) encoding = 'utf8'
-
-  while (true) {
-    switch (encoding) {
-      case 'hex':
-        return hexSlice(this, start, end)
-
-      case 'utf8':
-      case 'utf-8':
-        return utf8Slice(this, start, end)
-
-      case 'ascii':
-        return asciiSlice(this, start, end)
-
-      case 'latin1':
-      case 'binary':
-        return latin1Slice(this, start, end)
-
-      case 'base64':
-        return base64Slice(this, start, end)
-
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return utf16leSlice(this, start, end)
-
-      default:
-        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-        encoding = (encoding + '').toLowerCase()
-        loweredCase = true
-    }
-  }
-}
-
-// This property is used by `Buffer.isBuffer` (and the `is-buffer` npm package)
-// to detect a Buffer instance. It's not possible to use `instanceof Buffer`
-// reliably in a browserify context because there could be multiple different
-// copies of the 'buffer' package in use. This method works even for Buffer
-// instances that were created from another copy of the `buffer` package.
-// See: https://github.com/feross/buffer/issues/154
-Buffer.prototype._isBuffer = true
-
-function swap (b, n, m) {
-  var i = b[n]
-  b[n] = b[m]
-  b[m] = i
-}
-
-Buffer.prototype.swap16 = function swap16 () {
-  var len = this.length
-  if (len % 2 !== 0) {
-    throw new RangeError('Buffer size must be a multiple of 16-bits')
-  }
-  for (var i = 0; i < len; i += 2) {
-    swap(this, i, i + 1)
-  }
-  return this
-}
-
-Buffer.prototype.swap32 = function swap32 () {
-  var len = this.length
-  if (len % 4 !== 0) {
-    throw new RangeError('Buffer size must be a multiple of 32-bits')
-  }
-  for (var i = 0; i < len; i += 4) {
-    swap(this, i, i + 3)
-    swap(this, i + 1, i + 2)
-  }
-  return this
-}
-
-Buffer.prototype.swap64 = function swap64 () {
-  var len = this.length
-  if (len % 8 !== 0) {
-    throw new RangeError('Buffer size must be a multiple of 64-bits')
-  }
-  for (var i = 0; i < len; i += 8) {
-    swap(this, i, i + 7)
-    swap(this, i + 1, i + 6)
-    swap(this, i + 2, i + 5)
-    swap(this, i + 3, i + 4)
-  }
-  return this
-}
-
-Buffer.prototype.toString = function toString () {
-  var length = this.length
-  if (length === 0) return ''
-  if (arguments.length === 0) return utf8Slice(this, 0, length)
-  return slowToString.apply(this, arguments)
-}
-
-Buffer.prototype.toLocaleString = Buffer.prototype.toString
-
-Buffer.prototype.equals = function equals (b) {
-  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
-  if (this === b) return true
-  return Buffer.compare(this, b) === 0
-}
-
-Buffer.prototype.inspect = function inspect () {
-  var str = ''
-  var max = exports.INSPECT_MAX_BYTES
-  str = this.toString('hex', 0, max).replace(/(.{2})/g, '$1 ').trim()
-  if (this.length > max) str += ' ... '
-  return '<Buffer ' + str + '>'
-}
-
-Buffer.prototype.compare = function compare (target, start, end, thisStart, thisEnd) {
-  if (isInstance(target, Uint8Array)) {
-    target = Buffer.from(target, target.offset, target.byteLength)
-  }
-  if (!Buffer.isBuffer(target)) {
-    throw new TypeError(
-      'The "target" argument must be one of type Buffer or Uint8Array. ' +
-      'Received type ' + (typeof target)
-    )
-  }
-
-  if (start === undefined) {
-    start = 0
-  }
-  if (end === undefined) {
-    end = target ? target.length : 0
-  }
-  if (thisStart === undefined) {
-    thisStart = 0
-  }
-  if (thisEnd === undefined) {
-    thisEnd = this.length
-  }
-
-  if (start < 0 || end > target.length || thisStart < 0 || thisEnd > this.length) {
-    throw new RangeError('out of range index')
-  }
-
-  if (thisStart >= thisEnd && start >= end) {
-    return 0
-  }
-  if (thisStart >= thisEnd) {
-    return -1
-  }
-  if (start >= end) {
-    return 1
-  }
-
-  start >>>= 0
-  end >>>= 0
-  thisStart >>>= 0
-  thisEnd >>>= 0
-
-  if (this === target) return 0
-
-  var x = thisEnd - thisStart
-  var y = end - start
-  var len = Math.min(x, y)
-
-  var thisCopy = this.slice(thisStart, thisEnd)
-  var targetCopy = target.slice(start, end)
-
-  for (var i = 0; i < len; ++i) {
-    if (thisCopy[i] !== targetCopy[i]) {
-      x = thisCopy[i]
-      y = targetCopy[i]
-      break
-    }
-  }
-
-  if (x < y) return -1
-  if (y < x) return 1
-  return 0
-}
-
-// Finds either the first index of `val` in `buffer` at offset >= `byteOffset`,
-// OR the last index of `val` in `buffer` at offset <= `byteOffset`.
-//
-// Arguments:
-// - buffer - a Buffer to search
-// - val - a string, Buffer, or number
-// - byteOffset - an index into `buffer`; will be clamped to an int32
-// - encoding - an optional encoding, relevant is val is a string
-// - dir - true for indexOf, false for lastIndexOf
-function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
-  // Empty buffer means no match
-  if (buffer.length === 0) return -1
-
-  // Normalize byteOffset
-  if (typeof byteOffset === 'string') {
-    encoding = byteOffset
-    byteOffset = 0
-  } else if (byteOffset > 0x7fffffff) {
-    byteOffset = 0x7fffffff
-  } else if (byteOffset < -0x80000000) {
-    byteOffset = -0x80000000
-  }
-  byteOffset = +byteOffset // Coerce to Number.
-  if (numberIsNaN(byteOffset)) {
-    // byteOffset: it it's undefined, null, NaN, "foo", etc, search whole buffer
-    byteOffset = dir ? 0 : (buffer.length - 1)
-  }
-
-  // Normalize byteOffset: negative offsets start from the end of the buffer
-  if (byteOffset < 0) byteOffset = buffer.length + byteOffset
-  if (byteOffset >= buffer.length) {
-    if (dir) return -1
-    else byteOffset = buffer.length - 1
-  } else if (byteOffset < 0) {
-    if (dir) byteOffset = 0
-    else return -1
-  }
-
-  // Normalize val
-  if (typeof val === 'string') {
-    val = Buffer.from(val, encoding)
-  }
-
-  // Finally, search either indexOf (if dir is true) or lastIndexOf
-  if (Buffer.isBuffer(val)) {
-    // Special case: looking for empty string/buffer always fails
-    if (val.length === 0) {
-      return -1
-    }
-    return arrayIndexOf(buffer, val, byteOffset, encoding, dir)
-  } else if (typeof val === 'number') {
-    val = val & 0xFF // Search for a byte value [0-255]
-    if (typeof Uint8Array.prototype.indexOf === 'function') {
-      if (dir) {
-        return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset)
-      } else {
-        return Uint8Array.prototype.lastIndexOf.call(buffer, val, byteOffset)
-      }
-    }
-    return arrayIndexOf(buffer, [ val ], byteOffset, encoding, dir)
-  }
-
-  throw new TypeError('val must be string, number or Buffer')
-}
-
-function arrayIndexOf (arr, val, byteOffset, encoding, dir) {
-  var indexSize = 1
-  var arrLength = arr.length
-  var valLength = val.length
-
-  if (encoding !== undefined) {
-    encoding = String(encoding).toLowerCase()
-    if (encoding === 'ucs2' || encoding === 'ucs-2' ||
-        encoding === 'utf16le' || encoding === 'utf-16le') {
-      if (arr.length < 2 || val.length < 2) {
-        return -1
-      }
-      indexSize = 2
-      arrLength /= 2
-      valLength /= 2
-      byteOffset /= 2
-    }
-  }
-
-  function read (buf, i) {
-    if (indexSize === 1) {
-      return buf[i]
-    } else {
-      return buf.readUInt16BE(i * indexSize)
-    }
-  }
-
-  var i
-  if (dir) {
-    var foundIndex = -1
-    for (i = byteOffset; i < arrLength; i++) {
-      if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
-        if (foundIndex === -1) foundIndex = i
-        if (i - foundIndex + 1 === valLength) return foundIndex * indexSize
-      } else {
-        if (foundIndex !== -1) i -= i - foundIndex
-        foundIndex = -1
-      }
-    }
-  } else {
-    if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength
-    for (i = byteOffset; i >= 0; i--) {
-      var found = true
-      for (var j = 0; j < valLength; j++) {
-        if (read(arr, i + j) !== read(val, j)) {
-          found = false
-          break
-        }
-      }
-      if (found) return i
-    }
-  }
-
-  return -1
-}
-
-Buffer.prototype.includes = function includes (val, byteOffset, encoding) {
-  return this.indexOf(val, byteOffset, encoding) !== -1
-}
-
-Buffer.prototype.indexOf = function indexOf (val, byteOffset, encoding) {
-  return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
-}
-
-Buffer.prototype.lastIndexOf = function lastIndexOf (val, byteOffset, encoding) {
-  return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
-}
-
-function hexWrite (buf, string, offset, length) {
-  offset = Number(offset) || 0
-  var remaining = buf.length - offset
-  if (!length) {
-    length = remaining
-  } else {
-    length = Number(length)
-    if (length > remaining) {
-      length = remaining
-    }
-  }
-
-  var strLen = string.length
-
-  if (length > strLen / 2) {
-    length = strLen / 2
-  }
-  for (var i = 0; i < length; ++i) {
-    var parsed = parseInt(string.substr(i * 2, 2), 16)
-    if (numberIsNaN(parsed)) return i
-    buf[offset + i] = parsed
-  }
-  return i
-}
-
-function utf8Write (buf, string, offset, length) {
-  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
-}
-
-function asciiWrite (buf, string, offset, length) {
-  return blitBuffer(asciiToBytes(string), buf, offset, length)
-}
-
-function latin1Write (buf, string, offset, length) {
-  return asciiWrite(buf, string, offset, length)
-}
-
-function base64Write (buf, string, offset, length) {
-  return blitBuffer(base64ToBytes(string), buf, offset, length)
-}
-
-function ucs2Write (buf, string, offset, length) {
-  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
-}
-
-Buffer.prototype.write = function write (string, offset, length, encoding) {
-  // Buffer#write(string)
-  if (offset === undefined) {
-    encoding = 'utf8'
-    length = this.length
-    offset = 0
-  // Buffer#write(string, encoding)
-  } else if (length === undefined && typeof offset === 'string') {
-    encoding = offset
-    length = this.length
-    offset = 0
-  // Buffer#write(string, offset[, length][, encoding])
-  } else if (isFinite(offset)) {
-    offset = offset >>> 0
-    if (isFinite(length)) {
-      length = length >>> 0
-      if (encoding === undefined) encoding = 'utf8'
-    } else {
-      encoding = length
-      length = undefined
-    }
-  } else {
-    throw new Error(
-      'Buffer.write(string, encoding, offset[, length]) is no longer supported'
-    )
-  }
-
-  var remaining = this.length - offset
-  if (length === undefined || length > remaining) length = remaining
-
-  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
-    throw new RangeError('Attempt to write outside buffer bounds')
-  }
-
-  if (!encoding) encoding = 'utf8'
-
-  var loweredCase = false
-  for (;;) {
-    switch (encoding) {
-      case 'hex':
-        return hexWrite(this, string, offset, length)
-
-      case 'utf8':
-      case 'utf-8':
-        return utf8Write(this, string, offset, length)
-
-      case 'ascii':
-        return asciiWrite(this, string, offset, length)
-
-      case 'latin1':
-      case 'binary':
-        return latin1Write(this, string, offset, length)
-
-      case 'base64':
-        // Warning: maxLength not taken into account in base64Write
-        return base64Write(this, string, offset, length)
-
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return ucs2Write(this, string, offset, length)
-
-      default:
-        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-        encoding = ('' + encoding).toLowerCase()
-        loweredCase = true
-    }
-  }
-}
-
-Buffer.prototype.toJSON = function toJSON () {
-  return {
-    type: 'Buffer',
-    data: Array.prototype.slice.call(this._arr || this, 0)
-  }
-}
-
-function base64Slice (buf, start, end) {
-  if (start === 0 && end === buf.length) {
-    return base64.fromByteArray(buf)
-  } else {
-    return base64.fromByteArray(buf.slice(start, end))
-  }
-}
-
-function utf8Slice (buf, start, end) {
-  end = Math.min(buf.length, end)
-  var res = []
-
-  var i = start
-  while (i < end) {
-    var firstByte = buf[i]
-    var codePoint = null
-    var bytesPerSequence = (firstByte > 0xEF) ? 4
-      : (firstByte > 0xDF) ? 3
-        : (firstByte > 0xBF) ? 2
-          : 1
-
-    if (i + bytesPerSequence <= end) {
-      var secondByte, thirdByte, fourthByte, tempCodePoint
-
-      switch (bytesPerSequence) {
-        case 1:
-          if (firstByte < 0x80) {
-            codePoint = firstByte
-          }
-          break
-        case 2:
-          secondByte = buf[i + 1]
-          if ((secondByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F)
-            if (tempCodePoint > 0x7F) {
-              codePoint = tempCodePoint
-            }
-          }
-          break
-        case 3:
-          secondByte = buf[i + 1]
-          thirdByte = buf[i + 2]
-          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F)
-            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
-              codePoint = tempCodePoint
-            }
-          }
-          break
-        case 4:
-          secondByte = buf[i + 1]
-          thirdByte = buf[i + 2]
-          fourthByte = buf[i + 3]
-          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F)
-            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
-              codePoint = tempCodePoint
-            }
-          }
-      }
-    }
-
-    if (codePoint === null) {
-      // we did not generate a valid codePoint so insert a
-      // replacement char (U+FFFD) and advance only 1 byte
-      codePoint = 0xFFFD
-      bytesPerSequence = 1
-    } else if (codePoint > 0xFFFF) {
-      // encode to utf16 (surrogate pair dance)
-      codePoint -= 0x10000
-      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
-      codePoint = 0xDC00 | codePoint & 0x3FF
-    }
-
-    res.push(codePoint)
-    i += bytesPerSequence
-  }
-
-  return decodeCodePointsArray(res)
-}
-
-// Based on http://stackoverflow.com/a/22747272/680742, the browser with
-// the lowest limit is Chrome, with 0x10000 args.
-// We go 1 magnitude less, for safety
-var MAX_ARGUMENTS_LENGTH = 0x1000
-
-function decodeCodePointsArray (codePoints) {
-  var len = codePoints.length
-  if (len <= MAX_ARGUMENTS_LENGTH) {
-    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
-  }
-
-  // Decode in chunks to avoid "call stack size exceeded".
-  var res = ''
-  var i = 0
-  while (i < len) {
-    res += String.fromCharCode.apply(
-      String,
-      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
-    )
-  }
-  return res
-}
-
-function asciiSlice (buf, start, end) {
-  var ret = ''
-  end = Math.min(buf.length, end)
-
-  for (var i = start; i < end; ++i) {
-    ret += String.fromCharCode(buf[i] & 0x7F)
-  }
-  return ret
-}
-
-function latin1Slice (buf, start, end) {
-  var ret = ''
-  end = Math.min(buf.length, end)
-
-  for (var i = start; i < end; ++i) {
-    ret += String.fromCharCode(buf[i])
-  }
-  return ret
-}
-
-function hexSlice (buf, start, end) {
-  var len = buf.length
-
-  if (!start || start < 0) start = 0
-  if (!end || end < 0 || end > len) end = len
-
-  var out = ''
-  for (var i = start; i < end; ++i) {
-    out += toHex(buf[i])
-  }
-  return out
-}
-
-function utf16leSlice (buf, start, end) {
-  var bytes = buf.slice(start, end)
-  var res = ''
-  for (var i = 0; i < bytes.length; i += 2) {
-    res += String.fromCharCode(bytes[i] + (bytes[i + 1] * 256))
-  }
-  return res
-}
-
-Buffer.prototype.slice = function slice (start, end) {
-  var len = this.length
-  start = ~~start
-  end = end === undefined ? len : ~~end
-
-  if (start < 0) {
-    start += len
-    if (start < 0) start = 0
-  } else if (start > len) {
-    start = len
-  }
-
-  if (end < 0) {
-    end += len
-    if (end < 0) end = 0
-  } else if (end > len) {
-    end = len
-  }
-
-  if (end < start) end = start
-
-  var newBuf = this.subarray(start, end)
-  // Return an augmented `Uint8Array` instance
-  newBuf.__proto__ = Buffer.prototype
-  return newBuf
-}
-
-/*
- * Need to make sure that buffer isn't trying to write out of bounds.
- */
-function checkOffset (offset, ext, length) {
-  if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
-  if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
-}
-
-Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  var val = this[offset]
-  var mul = 1
-  var i = 0
-  while (++i < byteLength && (mul *= 0x100)) {
-    val += this[offset + i] * mul
-  }
-
-  return val
-}
-
-Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) {
-    checkOffset(offset, byteLength, this.length)
-  }
-
-  var val = this[offset + --byteLength]
-  var mul = 1
-  while (byteLength > 0 && (mul *= 0x100)) {
-    val += this[offset + --byteLength] * mul
-  }
-
-  return val
-}
-
-Buffer.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 1, this.length)
-  return this[offset]
-}
-
-Buffer.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  return this[offset] | (this[offset + 1] << 8)
-}
-
-Buffer.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  return (this[offset] << 8) | this[offset + 1]
-}
-
-Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return ((this[offset]) |
-      (this[offset + 1] << 8) |
-      (this[offset + 2] << 16)) +
-      (this[offset + 3] * 0x1000000)
-}
-
-Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return (this[offset] * 0x1000000) +
-    ((this[offset + 1] << 16) |
-    (this[offset + 2] << 8) |
-    this[offset + 3])
-}
-
-Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  var val = this[offset]
-  var mul = 1
-  var i = 0
-  while (++i < byteLength && (mul *= 0x100)) {
-    val += this[offset + i] * mul
-  }
-  mul *= 0x80
-
-  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-
-  return val
-}
-
-Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  var i = byteLength
-  var mul = 1
-  var val = this[offset + --i]
-  while (i > 0 && (mul *= 0x100)) {
-    val += this[offset + --i] * mul
-  }
-  mul *= 0x80
-
-  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-
-  return val
-}
-
-Buffer.prototype.readInt8 = function readInt8 (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 1, this.length)
-  if (!(this[offset] & 0x80)) return (this[offset])
-  return ((0xff - this[offset] + 1) * -1)
-}
-
-Buffer.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  var val = this[offset] | (this[offset + 1] << 8)
-  return (val & 0x8000) ? val | 0xFFFF0000 : val
-}
-
-Buffer.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  var val = this[offset + 1] | (this[offset] << 8)
-  return (val & 0x8000) ? val | 0xFFFF0000 : val
-}
-
-Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return (this[offset]) |
-    (this[offset + 1] << 8) |
-    (this[offset + 2] << 16) |
-    (this[offset + 3] << 24)
-}
-
-Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return (this[offset] << 24) |
-    (this[offset + 1] << 16) |
-    (this[offset + 2] << 8) |
-    (this[offset + 3])
-}
-
-Buffer.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-  return ieee754.read(this, offset, true, 23, 4)
-}
-
-Buffer.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-  return ieee754.read(this, offset, false, 23, 4)
-}
-
-Buffer.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 8, this.length)
-  return ieee754.read(this, offset, true, 52, 8)
-}
-
-Buffer.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 8, this.length)
-  return ieee754.read(this, offset, false, 52, 8)
-}
-
-function checkInt (buf, value, offset, ext, max, min) {
-  if (!Buffer.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
-  if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
-  if (offset + ext > buf.length) throw new RangeError('Index out of range')
-}
-
-Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) {
-    var maxBytes = Math.pow(2, 8 * byteLength) - 1
-    checkInt(this, value, offset, byteLength, maxBytes, 0)
-  }
-
-  var mul = 1
-  var i = 0
-  this[offset] = value & 0xFF
-  while (++i < byteLength && (mul *= 0x100)) {
-    this[offset + i] = (value / mul) & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) {
-    var maxBytes = Math.pow(2, 8 * byteLength) - 1
-    checkInt(this, value, offset, byteLength, maxBytes, 0)
-  }
-
-  var i = byteLength - 1
-  var mul = 1
-  this[offset + i] = value & 0xFF
-  while (--i >= 0 && (mul *= 0x100)) {
-    this[offset + i] = (value / mul) & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
-  this[offset] = (value & 0xff)
-  return offset + 1
-}
-
-Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-  this[offset] = (value & 0xff)
-  this[offset + 1] = (value >>> 8)
-  return offset + 2
-}
-
-Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-  this[offset] = (value >>> 8)
-  this[offset + 1] = (value & 0xff)
-  return offset + 2
-}
-
-Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-  this[offset + 3] = (value >>> 24)
-  this[offset + 2] = (value >>> 16)
-  this[offset + 1] = (value >>> 8)
-  this[offset] = (value & 0xff)
-  return offset + 4
-}
-
-Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-  this[offset] = (value >>> 24)
-  this[offset + 1] = (value >>> 16)
-  this[offset + 2] = (value >>> 8)
-  this[offset + 3] = (value & 0xff)
-  return offset + 4
-}
-
-Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    var limit = Math.pow(2, (8 * byteLength) - 1)
-
-    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-  }
-
-  var i = 0
-  var mul = 1
-  var sub = 0
-  this[offset] = value & 0xFF
-  while (++i < byteLength && (mul *= 0x100)) {
-    if (value < 0 && sub === 0 && this[offset + i - 1] !== 0) {
-      sub = 1
-    }
-    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    var limit = Math.pow(2, (8 * byteLength) - 1)
-
-    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-  }
-
-  var i = byteLength - 1
-  var mul = 1
-  var sub = 0
-  this[offset + i] = value & 0xFF
-  while (--i >= 0 && (mul *= 0x100)) {
-    if (value < 0 && sub === 0 && this[offset + i + 1] !== 0) {
-      sub = 1
-    }
-    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
-  if (value < 0) value = 0xff + value + 1
-  this[offset] = (value & 0xff)
-  return offset + 1
-}
-
-Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-  this[offset] = (value & 0xff)
-  this[offset + 1] = (value >>> 8)
-  return offset + 2
-}
-
-Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-  this[offset] = (value >>> 8)
-  this[offset + 1] = (value & 0xff)
-  return offset + 2
-}
-
-Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
-  this[offset] = (value & 0xff)
-  this[offset + 1] = (value >>> 8)
-  this[offset + 2] = (value >>> 16)
-  this[offset + 3] = (value >>> 24)
-  return offset + 4
-}
-
-Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
-  if (value < 0) value = 0xffffffff + value + 1
-  this[offset] = (value >>> 24)
-  this[offset + 1] = (value >>> 16)
-  this[offset + 2] = (value >>> 8)
-  this[offset + 3] = (value & 0xff)
-  return offset + 4
-}
-
-function checkIEEE754 (buf, value, offset, ext, max, min) {
-  if (offset + ext > buf.length) throw new RangeError('Index out of range')
-  if (offset < 0) throw new RangeError('Index out of range')
-}
-
-function writeFloat (buf, value, offset, littleEndian, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
-  }
-  ieee754.write(buf, value, offset, littleEndian, 23, 4)
-  return offset + 4
-}
-
-Buffer.prototype.writeFloatLE = function writeFloatLE (value, offset, noAssert) {
-  return writeFloat(this, value, offset, true, noAssert)
-}
-
-Buffer.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) {
-  return writeFloat(this, value, offset, false, noAssert)
-}
-
-function writeDouble (buf, value, offset, littleEndian, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
-  }
-  ieee754.write(buf, value, offset, littleEndian, 52, 8)
-  return offset + 8
-}
-
-Buffer.prototype.writeDoubleLE = function writeDoubleLE (value, offset, noAssert) {
-  return writeDouble(this, value, offset, true, noAssert)
-}
-
-Buffer.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert) {
-  return writeDouble(this, value, offset, false, noAssert)
-}
-
-// copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
-Buffer.prototype.copy = function copy (target, targetStart, start, end) {
-  if (!Buffer.isBuffer(target)) throw new TypeError('argument should be a Buffer')
-  if (!start) start = 0
-  if (!end && end !== 0) end = this.length
-  if (targetStart >= target.length) targetStart = target.length
-  if (!targetStart) targetStart = 0
-  if (end > 0 && end < start) end = start
-
-  // Copy 0 bytes; we're done
-  if (end === start) return 0
-  if (target.length === 0 || this.length === 0) return 0
-
-  // Fatal error conditions
-  if (targetStart < 0) {
-    throw new RangeError('targetStart out of bounds')
-  }
-  if (start < 0 || start >= this.length) throw new RangeError('Index out of range')
-  if (end < 0) throw new RangeError('sourceEnd out of bounds')
-
-  // Are we oob?
-  if (end > this.length) end = this.length
-  if (target.length - targetStart < end - start) {
-    end = target.length - targetStart + start
-  }
-
-  var len = end - start
-
-  if (this === target && typeof Uint8Array.prototype.copyWithin === 'function') {
-    // Use built-in when available, missing from IE11
-    this.copyWithin(targetStart, start, end)
-  } else if (this === target && start < targetStart && targetStart < end) {
-    // descending copy from end
-    for (var i = len - 1; i >= 0; --i) {
-      target[i + targetStart] = this[i + start]
-    }
-  } else {
-    Uint8Array.prototype.set.call(
-      target,
-      this.subarray(start, end),
-      targetStart
-    )
-  }
-
-  return len
-}
-
-// Usage:
-//    buffer.fill(number[, offset[, end]])
-//    buffer.fill(buffer[, offset[, end]])
-//    buffer.fill(string[, offset[, end]][, encoding])
-Buffer.prototype.fill = function fill (val, start, end, encoding) {
-  // Handle string cases:
-  if (typeof val === 'string') {
-    if (typeof start === 'string') {
-      encoding = start
-      start = 0
-      end = this.length
-    } else if (typeof end === 'string') {
-      encoding = end
-      end = this.length
-    }
-    if (encoding !== undefined && typeof encoding !== 'string') {
-      throw new TypeError('encoding must be a string')
-    }
-    if (typeof encoding === 'string' && !Buffer.isEncoding(encoding)) {
-      throw new TypeError('Unknown encoding: ' + encoding)
-    }
-    if (val.length === 1) {
-      var code = val.charCodeAt(0)
-      if ((encoding === 'utf8' && code < 128) ||
-          encoding === 'latin1') {
-        // Fast path: If `val` fits into a single byte, use that numeric value.
-        val = code
-      }
-    }
-  } else if (typeof val === 'number') {
-    val = val & 255
-  }
-
-  // Invalid ranges are not set to a default, so can range check early.
-  if (start < 0 || this.length < start || this.length < end) {
-    throw new RangeError('Out of range index')
-  }
-
-  if (end <= start) {
-    return this
-  }
-
-  start = start >>> 0
-  end = end === undefined ? this.length : end >>> 0
-
-  if (!val) val = 0
-
-  var i
-  if (typeof val === 'number') {
-    for (i = start; i < end; ++i) {
-      this[i] = val
-    }
-  } else {
-    var bytes = Buffer.isBuffer(val)
-      ? val
-      : Buffer.from(val, encoding)
-    var len = bytes.length
-    if (len === 0) {
-      throw new TypeError('The value "' + val +
-        '" is invalid for argument "value"')
-    }
-    for (i = 0; i < end - start; ++i) {
-      this[i + start] = bytes[i % len]
-    }
-  }
-
-  return this
-}
-
-// HELPER FUNCTIONS
-// ================
-
-var INVALID_BASE64_RE = /[^+/0-9A-Za-z-_]/g
-
-function base64clean (str) {
-  // Node takes equal signs as end of the Base64 encoding
-  str = str.split('=')[0]
-  // Node strips out invalid characters like \n and \t from the string, base64-js does not
-  str = str.trim().replace(INVALID_BASE64_RE, '')
-  // Node converts strings with length < 2 to ''
-  if (str.length < 2) return ''
-  // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
-  while (str.length % 4 !== 0) {
-    str = str + '='
-  }
-  return str
-}
-
-function toHex (n) {
-  if (n < 16) return '0' + n.toString(16)
-  return n.toString(16)
-}
-
-function utf8ToBytes (string, units) {
-  units = units || Infinity
-  var codePoint
-  var length = string.length
-  var leadSurrogate = null
-  var bytes = []
-
-  for (var i = 0; i < length; ++i) {
-    codePoint = string.charCodeAt(i)
-
-    // is surrogate component
-    if (codePoint > 0xD7FF && codePoint < 0xE000) {
-      // last char was a lead
-      if (!leadSurrogate) {
-        // no lead yet
-        if (codePoint > 0xDBFF) {
-          // unexpected trail
-          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-          continue
-        } else if (i + 1 === length) {
-          // unpaired lead
-          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-          continue
-        }
-
-        // valid lead
-        leadSurrogate = codePoint
-
-        continue
-      }
-
-      // 2 leads in a row
-      if (codePoint < 0xDC00) {
-        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-        leadSurrogate = codePoint
-        continue
-      }
-
-      // valid surrogate pair
-      codePoint = (leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00) + 0x10000
-    } else if (leadSurrogate) {
-      // valid bmp char, but last char was a lead
-      if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-    }
-
-    leadSurrogate = null
-
-    // encode utf8
-    if (codePoint < 0x80) {
-      if ((units -= 1) < 0) break
-      bytes.push(codePoint)
-    } else if (codePoint < 0x800) {
-      if ((units -= 2) < 0) break
-      bytes.push(
-        codePoint >> 0x6 | 0xC0,
-        codePoint & 0x3F | 0x80
-      )
-    } else if (codePoint < 0x10000) {
-      if ((units -= 3) < 0) break
-      bytes.push(
-        codePoint >> 0xC | 0xE0,
-        codePoint >> 0x6 & 0x3F | 0x80,
-        codePoint & 0x3F | 0x80
-      )
-    } else if (codePoint < 0x110000) {
-      if ((units -= 4) < 0) break
-      bytes.push(
-        codePoint >> 0x12 | 0xF0,
-        codePoint >> 0xC & 0x3F | 0x80,
-        codePoint >> 0x6 & 0x3F | 0x80,
-        codePoint & 0x3F | 0x80
-      )
-    } else {
-      throw new Error('Invalid code point')
-    }
-  }
-
-  return bytes
-}
-
-function asciiToBytes (str) {
-  var byteArray = []
-  for (var i = 0; i < str.length; ++i) {
-    // Node's code seems to be doing this and not & 0x7F..
-    byteArray.push(str.charCodeAt(i) & 0xFF)
-  }
-  return byteArray
-}
-
-function utf16leToBytes (str, units) {
-  var c, hi, lo
-  var byteArray = []
-  for (var i = 0; i < str.length; ++i) {
-    if ((units -= 2) < 0) break
-
-    c = str.charCodeAt(i)
-    hi = c >> 8
-    lo = c % 256
-    byteArray.push(lo)
-    byteArray.push(hi)
-  }
-
-  return byteArray
-}
-
-function base64ToBytes (str) {
-  return base64.toByteArray(base64clean(str))
-}
-
-function blitBuffer (src, dst, offset, length) {
-  for (var i = 0; i < length; ++i) {
-    if ((i + offset >= dst.length) || (i >= src.length)) break
-    dst[i + offset] = src[i]
-  }
-  return i
-}
-
-// ArrayBuffer or Uint8Array objects from other contexts (i.e. iframes) do not pass
-// the `instanceof` check but they should be treated as of that type.
-// See: https://github.com/feross/buffer/issues/166
-function isInstance (obj, type) {
-  return obj instanceof type ||
-    (obj != null && obj.constructor != null && obj.constructor.name != null &&
-      obj.constructor.name === type.name)
-}
-function numberIsNaN (obj) {
-  // For IE11 support
-  return obj !== obj // eslint-disable-line no-self-compare
-}
-
-},{"base64-js":5,"ieee754":8}],7:[function(require,module,exports){
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-var objectCreate = Object.create || objectCreatePolyfill
-var objectKeys = Object.keys || objectKeysPolyfill
-var bind = Function.prototype.bind || functionBindPolyfill
-
-function EventEmitter() {
-  if (!this._events || !Object.prototype.hasOwnProperty.call(this, '_events')) {
-    this._events = objectCreate(null);
-    this._eventsCount = 0;
-  }
-
-  this._maxListeners = this._maxListeners || undefined;
-}
-module.exports = EventEmitter;
-
-// Backwards-compat with node 0.10.x
-EventEmitter.EventEmitter = EventEmitter;
-
-EventEmitter.prototype._events = undefined;
-EventEmitter.prototype._maxListeners = undefined;
-
-// By default EventEmitters will print a warning if more than 10 listeners are
-// added to it. This is a useful default which helps finding memory leaks.
-var defaultMaxListeners = 10;
-
-var hasDefineProperty;
-try {
-  var o = {};
-  if (Object.defineProperty) Object.defineProperty(o, 'x', { value: 0 });
-  hasDefineProperty = o.x === 0;
-} catch (err) { hasDefineProperty = false }
-if (hasDefineProperty) {
-  Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
-    enumerable: true,
-    get: function() {
-      return defaultMaxListeners;
-    },
-    set: function(arg) {
-      // check whether the input is a positive number (whose value is zero or
-      // greater and not a NaN).
-      if (typeof arg !== 'number' || arg < 0 || arg !== arg)
-        throw new TypeError('"defaultMaxListeners" must be a positive number');
-      defaultMaxListeners = arg;
-    }
-  });
-} else {
-  EventEmitter.defaultMaxListeners = defaultMaxListeners;
-}
-
-// Obviously not all Emitters should be limited to 10. This function allows
-// that to be increased. Set to zero for unlimited.
-EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
-  if (typeof n !== 'number' || n < 0 || isNaN(n))
-    throw new TypeError('"n" argument must be a positive number');
-  this._maxListeners = n;
-  return this;
-};
-
-function $getMaxListeners(that) {
-  if (that._maxListeners === undefined)
-    return EventEmitter.defaultMaxListeners;
-  return that._maxListeners;
-}
-
-EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
-  return $getMaxListeners(this);
-};
-
-// These standalone emit* functions are used to optimize calling of event
-// handlers for fast cases because emit() itself often has a variable number of
-// arguments and can be deoptimized because of that. These functions always have
-// the same number of arguments and thus do not get deoptimized, so the code
-// inside them can execute faster.
-function emitNone(handler, isFn, self) {
-  if (isFn)
-    handler.call(self);
-  else {
-    var len = handler.length;
-    var listeners = arrayClone(handler, len);
-    for (var i = 0; i < len; ++i)
-      listeners[i].call(self);
-  }
-}
-function emitOne(handler, isFn, self, arg1) {
-  if (isFn)
-    handler.call(self, arg1);
-  else {
-    var len = handler.length;
-    var listeners = arrayClone(handler, len);
-    for (var i = 0; i < len; ++i)
-      listeners[i].call(self, arg1);
-  }
-}
-function emitTwo(handler, isFn, self, arg1, arg2) {
-  if (isFn)
-    handler.call(self, arg1, arg2);
-  else {
-    var len = handler.length;
-    var listeners = arrayClone(handler, len);
-    for (var i = 0; i < len; ++i)
-      listeners[i].call(self, arg1, arg2);
-  }
-}
-function emitThree(handler, isFn, self, arg1, arg2, arg3) {
-  if (isFn)
-    handler.call(self, arg1, arg2, arg3);
-  else {
-    var len = handler.length;
-    var listeners = arrayClone(handler, len);
-    for (var i = 0; i < len; ++i)
-      listeners[i].call(self, arg1, arg2, arg3);
-  }
-}
-
-function emitMany(handler, isFn, self, args) {
-  if (isFn)
-    handler.apply(self, args);
-  else {
-    var len = handler.length;
-    var listeners = arrayClone(handler, len);
-    for (var i = 0; i < len; ++i)
-      listeners[i].apply(self, args);
-  }
-}
-
-EventEmitter.prototype.emit = function emit(type) {
-  var er, handler, len, args, i, events;
-  var doError = (type === 'error');
-
-  events = this._events;
-  if (events)
-    doError = (doError && events.error == null);
-  else if (!doError)
-    return false;
-
-  // If there is no 'error' event listener then throw.
-  if (doError) {
-    if (arguments.length > 1)
-      er = arguments[1];
-    if (er instanceof Error) {
-      throw er; // Unhandled 'error' event
-    } else {
-      // At least give some kind of context to the user
-      var err = new Error('Unhandled "error" event. (' + er + ')');
-      err.context = er;
-      throw err;
-    }
-    return false;
-  }
-
-  handler = events[type];
-
-  if (!handler)
-    return false;
-
-  var isFn = typeof handler === 'function';
-  len = arguments.length;
-  switch (len) {
-      // fast cases
-    case 1:
-      emitNone(handler, isFn, this);
-      break;
-    case 2:
-      emitOne(handler, isFn, this, arguments[1]);
-      break;
-    case 3:
-      emitTwo(handler, isFn, this, arguments[1], arguments[2]);
-      break;
-    case 4:
-      emitThree(handler, isFn, this, arguments[1], arguments[2], arguments[3]);
-      break;
-      // slower
-    default:
-      args = new Array(len - 1);
-      for (i = 1; i < len; i++)
-        args[i - 1] = arguments[i];
-      emitMany(handler, isFn, this, args);
-  }
-
-  return true;
-};
-
-function _addListener(target, type, listener, prepend) {
-  var m;
-  var events;
-  var existing;
-
-  if (typeof listener !== 'function')
-    throw new TypeError('"listener" argument must be a function');
-
-  events = target._events;
-  if (!events) {
-    events = target._events = objectCreate(null);
-    target._eventsCount = 0;
-  } else {
-    // To avoid recursion in the case that type === "newListener"! Before
-    // adding it to the listeners, first emit "newListener".
-    if (events.newListener) {
-      target.emit('newListener', type,
-          listener.listener ? listener.listener : listener);
-
-      // Re-assign `events` because a newListener handler could have caused the
-      // this._events to be assigned to a new object
-      events = target._events;
-    }
-    existing = events[type];
-  }
-
-  if (!existing) {
-    // Optimize the case of one listener. Don't need the extra array object.
-    existing = events[type] = listener;
-    ++target._eventsCount;
-  } else {
-    if (typeof existing === 'function') {
-      // Adding the second element, need to change to array.
-      existing = events[type] =
-          prepend ? [listener, existing] : [existing, listener];
-    } else {
-      // If we've already got an array, just append.
-      if (prepend) {
-        existing.unshift(listener);
-      } else {
-        existing.push(listener);
-      }
-    }
-
-    // Check for listener leak
-    if (!existing.warned) {
-      m = $getMaxListeners(target);
-      if (m && m > 0 && existing.length > m) {
-        existing.warned = true;
-        var w = new Error('Possible EventEmitter memory leak detected. ' +
-            existing.length + ' "' + String(type) + '" listeners ' +
-            'added. Use emitter.setMaxListeners() to ' +
-            'increase limit.');
-        w.name = 'MaxListenersExceededWarning';
-        w.emitter = target;
-        w.type = type;
-        w.count = existing.length;
-        if (typeof console === 'object' && console.warn) {
-          console.warn('%s: %s', w.name, w.message);
-        }
-      }
-    }
-  }
-
-  return target;
-}
-
-EventEmitter.prototype.addListener = function addListener(type, listener) {
-  return _addListener(this, type, listener, false);
-};
-
-EventEmitter.prototype.on = EventEmitter.prototype.addListener;
-
-EventEmitter.prototype.prependListener =
-    function prependListener(type, listener) {
-      return _addListener(this, type, listener, true);
-    };
-
-function onceWrapper() {
-  if (!this.fired) {
-    this.target.removeListener(this.type, this.wrapFn);
-    this.fired = true;
-    switch (arguments.length) {
-      case 0:
-        return this.listener.call(this.target);
-      case 1:
-        return this.listener.call(this.target, arguments[0]);
-      case 2:
-        return this.listener.call(this.target, arguments[0], arguments[1]);
-      case 3:
-        return this.listener.call(this.target, arguments[0], arguments[1],
-            arguments[2]);
-      default:
-        var args = new Array(arguments.length);
-        for (var i = 0; i < args.length; ++i)
-          args[i] = arguments[i];
-        this.listener.apply(this.target, args);
-    }
-  }
-}
-
-function _onceWrap(target, type, listener) {
-  var state = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
-  var wrapped = bind.call(onceWrapper, state);
-  wrapped.listener = listener;
-  state.wrapFn = wrapped;
-  return wrapped;
-}
-
-EventEmitter.prototype.once = function once(type, listener) {
-  if (typeof listener !== 'function')
-    throw new TypeError('"listener" argument must be a function');
-  this.on(type, _onceWrap(this, type, listener));
-  return this;
-};
-
-EventEmitter.prototype.prependOnceListener =
-    function prependOnceListener(type, listener) {
-      if (typeof listener !== 'function')
-        throw new TypeError('"listener" argument must be a function');
-      this.prependListener(type, _onceWrap(this, type, listener));
-      return this;
-    };
-
-// Emits a 'removeListener' event if and only if the listener was removed.
-EventEmitter.prototype.removeListener =
-    function removeListener(type, listener) {
-      var list, events, position, i, originalListener;
-
-      if (typeof listener !== 'function')
-        throw new TypeError('"listener" argument must be a function');
-
-      events = this._events;
-      if (!events)
-        return this;
-
-      list = events[type];
-      if (!list)
-        return this;
-
-      if (list === listener || list.listener === listener) {
-        if (--this._eventsCount === 0)
-          this._events = objectCreate(null);
-        else {
-          delete events[type];
-          if (events.removeListener)
-            this.emit('removeListener', type, list.listener || listener);
-        }
-      } else if (typeof list !== 'function') {
-        position = -1;
-
-        for (i = list.length - 1; i >= 0; i--) {
-          if (list[i] === listener || list[i].listener === listener) {
-            originalListener = list[i].listener;
-            position = i;
-            break;
-          }
-        }
-
-        if (position < 0)
-          return this;
-
-        if (position === 0)
-          list.shift();
-        else
-          spliceOne(list, position);
-
-        if (list.length === 1)
-          events[type] = list[0];
-
-        if (events.removeListener)
-          this.emit('removeListener', type, originalListener || listener);
-      }
-
-      return this;
-    };
-
-EventEmitter.prototype.removeAllListeners =
-    function removeAllListeners(type) {
-      var listeners, events, i;
-
-      events = this._events;
-      if (!events)
-        return this;
-
-      // not listening for removeListener, no need to emit
-      if (!events.removeListener) {
-        if (arguments.length === 0) {
-          this._events = objectCreate(null);
-          this._eventsCount = 0;
-        } else if (events[type]) {
-          if (--this._eventsCount === 0)
-            this._events = objectCreate(null);
-          else
-            delete events[type];
-        }
-        return this;
-      }
-
-      // emit removeListener for all listeners on all events
-      if (arguments.length === 0) {
-        var keys = objectKeys(events);
-        var key;
-        for (i = 0; i < keys.length; ++i) {
-          key = keys[i];
-          if (key === 'removeListener') continue;
-          this.removeAllListeners(key);
-        }
-        this.removeAllListeners('removeListener');
-        this._events = objectCreate(null);
-        this._eventsCount = 0;
-        return this;
-      }
-
-      listeners = events[type];
-
-      if (typeof listeners === 'function') {
-        this.removeListener(type, listeners);
-      } else if (listeners) {
-        // LIFO order
-        for (i = listeners.length - 1; i >= 0; i--) {
-          this.removeListener(type, listeners[i]);
-        }
-      }
-
-      return this;
-    };
-
-function _listeners(target, type, unwrap) {
-  var events = target._events;
-
-  if (!events)
-    return [];
-
-  var evlistener = events[type];
-  if (!evlistener)
-    return [];
-
-  if (typeof evlistener === 'function')
-    return unwrap ? [evlistener.listener || evlistener] : [evlistener];
-
-  return unwrap ? unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
-}
-
-EventEmitter.prototype.listeners = function listeners(type) {
-  return _listeners(this, type, true);
-};
-
-EventEmitter.prototype.rawListeners = function rawListeners(type) {
-  return _listeners(this, type, false);
-};
-
-EventEmitter.listenerCount = function(emitter, type) {
-  if (typeof emitter.listenerCount === 'function') {
-    return emitter.listenerCount(type);
-  } else {
-    return listenerCount.call(emitter, type);
-  }
-};
-
-EventEmitter.prototype.listenerCount = listenerCount;
-function listenerCount(type) {
-  var events = this._events;
-
-  if (events) {
-    var evlistener = events[type];
-
-    if (typeof evlistener === 'function') {
-      return 1;
-    } else if (evlistener) {
-      return evlistener.length;
-    }
-  }
-
-  return 0;
-}
-
-EventEmitter.prototype.eventNames = function eventNames() {
-  return this._eventsCount > 0 ? Reflect.ownKeys(this._events) : [];
-};
-
-// About 1.5x faster than the two-arg version of Array#splice().
-function spliceOne(list, index) {
-  for (var i = index, k = i + 1, n = list.length; k < n; i += 1, k += 1)
-    list[i] = list[k];
-  list.pop();
-}
-
-function arrayClone(arr, n) {
-  var copy = new Array(n);
-  for (var i = 0; i < n; ++i)
-    copy[i] = arr[i];
-  return copy;
-}
-
-function unwrapListeners(arr) {
-  var ret = new Array(arr.length);
-  for (var i = 0; i < ret.length; ++i) {
-    ret[i] = arr[i].listener || arr[i];
-  }
-  return ret;
-}
-
-function objectCreatePolyfill(proto) {
-  var F = function() {};
-  F.prototype = proto;
-  return new F;
-}
-function objectKeysPolyfill(obj) {
-  var keys = [];
-  for (var k in obj) if (Object.prototype.hasOwnProperty.call(obj, k)) {
-    keys.push(k);
-  }
-  return k;
-}
-function functionBindPolyfill(context) {
-  var fn = this;
-  return function () {
-    return fn.apply(context, arguments);
-  };
-}
-
-},{}],8:[function(require,module,exports){
-exports.read = function (buffer, offset, isLE, mLen, nBytes) {
-  var e, m
-  var eLen = (nBytes * 8) - mLen - 1
-  var eMax = (1 << eLen) - 1
-  var eBias = eMax >> 1
-  var nBits = -7
-  var i = isLE ? (nBytes - 1) : 0
-  var d = isLE ? -1 : 1
-  var s = buffer[offset + i]
-
-  i += d
-
-  e = s & ((1 << (-nBits)) - 1)
-  s >>= (-nBits)
-  nBits += eLen
-  for (; nBits > 0; e = (e * 256) + buffer[offset + i], i += d, nBits -= 8) {}
-
-  m = e & ((1 << (-nBits)) - 1)
-  e >>= (-nBits)
-  nBits += mLen
-  for (; nBits > 0; m = (m * 256) + buffer[offset + i], i += d, nBits -= 8) {}
-
-  if (e === 0) {
-    e = 1 - eBias
-  } else if (e === eMax) {
-    return m ? NaN : ((s ? -1 : 1) * Infinity)
-  } else {
-    m = m + Math.pow(2, mLen)
-    e = e - eBias
-  }
-  return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
-}
-
-exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
-  var e, m, c
-  var eLen = (nBytes * 8) - mLen - 1
-  var eMax = (1 << eLen) - 1
-  var eBias = eMax >> 1
-  var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
-  var i = isLE ? 0 : (nBytes - 1)
-  var d = isLE ? 1 : -1
-  var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
-
-  value = Math.abs(value)
-
-  if (isNaN(value) || value === Infinity) {
-    m = isNaN(value) ? 1 : 0
-    e = eMax
-  } else {
-    e = Math.floor(Math.log(value) / Math.LN2)
-    if (value * (c = Math.pow(2, -e)) < 1) {
-      e--
-      c *= 2
-    }
-    if (e + eBias >= 1) {
-      value += rt / c
-    } else {
-      value += rt * Math.pow(2, 1 - eBias)
-    }
-    if (value * c >= 2) {
-      e++
-      c /= 2
-    }
-
-    if (e + eBias >= eMax) {
-      m = 0
-      e = eMax
-    } else if (e + eBias >= 1) {
-      m = ((value * c) - 1) * Math.pow(2, mLen)
-      e = e + eBias
-    } else {
-      m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen)
-      e = 0
-    }
-  }
-
-  for (; mLen >= 8; buffer[offset + i] = m & 0xff, i += d, m /= 256, mLen -= 8) {}
-
-  e = (e << mLen) | m
-  eLen += mLen
-  for (; eLen > 0; buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8) {}
-
-  buffer[offset + i - d] |= s * 128
-}
-
-},{}],9:[function(require,module,exports){
-arguments[4][2][0].apply(exports,arguments)
-},{"dup":2}],10:[function(require,module,exports){
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-// The _isBuffer check is for Safari 5-7 support, because it's missing
-// Object.prototype.constructor. Remove this eventually
-module.exports = function (obj) {
-  return obj != null && (isBuffer(obj) || isSlowBuffer(obj) || !!obj._isBuffer)
-}
-
-function isBuffer (obj) {
-  return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
-}
-
-// For Node v0.10 support. Remove this eventually.
-function isSlowBuffer (obj) {
-  return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
-}
-
-},{}],11:[function(require,module,exports){
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-},{}],12:[function(require,module,exports){
-(function (setImmediate,clearImmediate){
-var nextTick = require('process/browser.js').nextTick;
-var apply = Function.prototype.apply;
-var slice = Array.prototype.slice;
-var immediateIds = {};
-var nextImmediateId = 0;
-
-// DOM APIs, for completeness
-
-exports.setTimeout = function() {
-  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
-};
-exports.setInterval = function() {
-  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
-};
-exports.clearTimeout =
-exports.clearInterval = function(timeout) { timeout.close(); };
-
-function Timeout(id, clearFn) {
-  this._id = id;
-  this._clearFn = clearFn;
-}
-Timeout.prototype.unref = Timeout.prototype.ref = function() {};
-Timeout.prototype.close = function() {
-  this._clearFn.call(window, this._id);
-};
-
-// Does not start the time, just sets up the members needed.
-exports.enroll = function(item, msecs) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = msecs;
-};
-
-exports.unenroll = function(item) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = -1;
-};
-
-exports._unrefActive = exports.active = function(item) {
-  clearTimeout(item._idleTimeoutId);
-
-  var msecs = item._idleTimeout;
-  if (msecs >= 0) {
-    item._idleTimeoutId = setTimeout(function onTimeout() {
-      if (item._onTimeout)
-        item._onTimeout();
-    }, msecs);
-  }
-};
-
-// That's not how node.js implements it but the exposed api is the same.
-exports.setImmediate = typeof setImmediate === "function" ? setImmediate : function(fn) {
-  var id = nextImmediateId++;
-  var args = arguments.length < 2 ? false : slice.call(arguments, 1);
-
-  immediateIds[id] = true;
-
-  nextTick(function onNextTick() {
-    if (immediateIds[id]) {
-      // fn.call() is faster so we optimize for the common use-case
-      // @see http://jsperf.com/call-apply-segu
-      if (args) {
-        fn.apply(null, args);
-      } else {
-        fn.call(null);
-      }
-      // Prevent ids from leaking
-      exports.clearImmediate(id);
-    }
-  });
-
-  return id;
-};
-
-exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
-  delete immediateIds[id];
-};
-}).call(this,require("timers").setImmediate,require("timers").clearImmediate)
-},{"process/browser.js":11,"timers":12}],13:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],14:[function(require,module,exports){
-arguments[4][4][0].apply(exports,arguments)
-},{"./support/isBuffer":13,"_process":11,"dup":4,"inherits":9}],15:[function(require,module,exports){
-window.cqm = window.cqm || {};
-window.cqm.execution = require('./index');
-
-},{"./index":19}],16:[function(require,module,exports){
-const moment = require('moment');
-const Measure = require('cqm-models').Measure;
-
-/**
- * Contains helpers useful for calculation.
- */
-module.exports = class CalculatorHelpers {
-  /**
-   * Create population values (aka results) for all populations in the population set using the results from the
-   * calculator.
-   * @param {Measure} measure - The measure we are getting the values for.
-   * @param {Object} population - The population set that we are mapping results to.
-   * @param {Object} results - The raw results object from the calculation engine.
-   * @param {Patient} patientId - The patient ID we are getting results for.
-   * @param {Array} observationDefs - List of observation defines we add to the elm for calculation OBSERVs.
-   * @param {Integer} populationIndex - Index of the population set of which the population belongs to
-   * @returns {[object, object]} The population results. Map of "POPNAME" to Integer result. Except for OBSERVs,
-   *   their key is 'value' and value is an array of results. Second result is the the episode results keyed by
-   *   episode id and with the value being a set just like the patient results.
-   */
-  static createPopulationValues(measure, population, results, patientId, observationDefs, populationIndex) {
-    let populationResults = {};
-    let episodeResults = null;
-
-    // patient based measure
-    if (!measure.episode_of_care) {
-      populationResults = this.createPatientPopulationValues(
-        measure,
-        population,
-        results,
-        patientId,
-        observationDefs,
-        populationIndex
-      );
-      populationResults = this.handlePopulationValues(populationResults);
-    } else {
-      // episode of care based measure
-      // collect results per episode
-      episodeResults = this.createEpisodePopulationValues(
-        measure,
-        population,
-        results,
-        patientId,
-        observationDefs,
-        populationIndex
-      );
-
-      // initialize population counts
-      Measure.getAllPopulationCodes().forEach((popCode) => {
-        if (population[popCode]) {
-          if (popCode === 'OBSERV') {
-            populationResults.values = [];
-          } else {
-            populationResults[popCode] = 0;
-          }
-        }
-      });
-
-      // count up all population results for a patient level count
-      Object.keys(episodeResults).forEach((e) => {
-        const episodeResult = episodeResults[e];
-        Object.keys(episodeResult).forEach((popCode) => {
-          const popResult = episodeResult[popCode];
-          if (popCode === 'values') {
-            popResult.forEach((value) => {
-              populationResults.values.push(value);
-            });
-          } else {
-            populationResults[popCode] += popResult;
-          }
-        });
-      });
-    }
-    return [populationResults, episodeResults];
-  }
-
-  /**
-   * Takes in the initial values from result object and checks to see if some values should not be calculated. These
-   * values that should not be calculated are zeroed out.
-   * @param {object} populationResults - The population results. Map of "POPNAME" to Integer result. Except for OBSERVs,
-   *   their key is 'value' and value is an array of results.
-   * @returns {object} Population results in the same structure as passed in, but the appropiate values are zeroed out.
-   */
-  static handlePopulationValues(populationResults) {
-    /* Setting values of populations if the correct populations are not set based on the following logic guidelines
-     * Initial Population (IPP): The set of patients or episodes of care to be evaluated by the measure.
-     * Denominator (DENOM): A subset of the IPP.
-     * Denominator Exclusions (DENEX): A subset of the Denominator that should not be considered for inclusion in the Numerator.
-     * Denominator Exceptions (DEXCEP): A subset of the Denominator. Only those members of the Denominator that are considered
-     * for Numerator membership and are not included are considered for membership in the Denominator Exceptions.
-     * Numerator (NUMER): A subset of the Denominator. The Numerator criteria are the processes or outcomes expected for each patient,
-     * procedure, or other unit of measurement defined in the Denominator.
-     * Numerator Exclusions (NUMEX): A subset of the Numerator that should not be considered for calculation.
-     * Measure Poplation Exclusions (MSRPOPLEX): Identify that subset of the MSRPOPL that meet the MSRPOPLEX criteria.
-     */
-    const populationResultsHandled = populationResults;
-    if (populationResultsHandled.STRAT != null && this.isValueZero('STRAT', populationResults)) {
-      // Set all values to 0
-      Object.keys(populationResults).forEach((key) => {
-        if (key === 'values') {
-          populationResultsHandled.values = [];
-        } else {
-          populationResultsHandled[key] = 0;
-        }
-      });
-    } else if (this.isValueZero('IPP', populationResults)) {
-      Object.keys(populationResults).forEach((key) => {
-        if (key !== 'STRAT') {
-          if (key === 'values') {
-            populationResultsHandled.values = [];
-          } else {
-            populationResultsHandled[key] = 0;
-          }
-        }
-      });
-    } else if (this.isValueZero('DENOM', populationResults) || this.isValueZero('MSRPOPL', populationResults)) {
-      if ('DENEX' in populationResults) {
-        populationResultsHandled.DENEX = 0;
-      }
-      if ('DENEXCEP' in populationResults) {
-        populationResultsHandled.DENEXCEP = 0;
-      }
-      if ('NUMER' in populationResults) {
-        populationResultsHandled.NUMER = 0;
-      }
-      if ('NUMEX' in populationResults) {
-        populationResultsHandled.NUMEX = 0;
-      }
-      if ('values' in populationResults) {
-        populationResultsHandled.values = [];
-      }
-      // Can not be in the numerator if the same or more are excluded from the denominator
-    } else if (populationResults.DENEX != null && !this.isValueZero('DENEX', populationResults) && populationResults.DENEX >= populationResults.DENOM) {
-      if ('NUMER' in populationResults) {
-        populationResultsHandled.NUMER = 0;
-      }
-      if ('NUMEX' in populationResults) {
-        populationResultsHandled.NUMEX = 0;
-      }
-      if ('DENEXCEP' in populationResults) {
-        populationResultsHandled.DENEXCEP = 0;
-      }
-    } else if (populationResults.MSRPOPLEX != null && !this.isValueZero('MSRPOPLEX', populationResults)) {
-      if ('values' in populationResults) {
-        populationResultsHandled.values = [];
-      }
-    } else if (this.isValueZero('NUMER', populationResults)) {
-      if ('NUMEX' in populationResults) {
-        populationResultsHandled.NUMEX = 0;
-      }
-    } else if (!this.isValueZero('NUMER', populationResults)) {
-      if ('DENEXCEP' in populationResults) {
-        populationResultsHandled.DENEXCEP = 0;
-      }
-    }
-    return populationResultsHandled;
-  }
-
-  /**
-   * Create patient population values (aka results) for all populations in the population set using the results from the
-   * calculator.
-   * @param {Measure} measure - The measure of the population set.
-   * @param {Population} population - The population set we are getting the values for.
-   * @param {Object} results - The raw results object from the calculation engine.
-   * @param {Patient} patientId - The patientId representing the patient we are getting results for.
-   * @param {Array} observationDefs - List of observation defines we add to the elm for calculation OBSERVs.
-   * @param {Integer} populationIndex - Index of the population set
-   * @returns {Object} The population results. Map of "POPNAME" to Integer result. Except for OBSERVs,
-   *   their key is 'value' and value is an array of results.
-   */
-  static createPatientPopulationValues(measure, population, results, patientId, observationDefs, populationIndex) {
-    const populationResults = {};
-    // Grab the mapping between populations and CQL statements
-    const cqlMap = measure.populations_cql_map;
-    // Loop over all population codes ("IPP", "DENOM", etc.)
-    Measure.getAllPopulationCodes().forEach((popCode) => {
-      let value;
-      if (cqlMap[popCode]) {
-        // Array of populations defined for the given popCode
-        const definedPops = cqlMap[popCode];
-
-        const cqlPopulation = this.getPopulationFromIndex(definedPops, populationIndex, population, popCode);
-
-        // Is there a patient result for this population? and does this populationCriteria contain the population
-        // We need to check if the populationCriteria contains the population so that a STRAT is not set to zero if there is not a STRAT in the populationCriteria
-        if (population[popCode] != null) {
-          // Grab CQL result value and adjust for ECQME
-          value = results.patientResults[patientId][cqlPopulation];
-          if (Array.isArray(value) && value.length > 0) {
-            populationResults[popCode] = value.length;
-          } else if (typeof value === 'boolean' && value) {
-            populationResults[popCode] = 1;
-          } else {
-            populationResults[popCode] = 0;
-          }
-        }
-      } else if (popCode === 'OBSERV' && (observationDefs != null ? observationDefs.length : undefined) > 0) {
-        // Handle observations using the names of the define statements that
-        // were added to the ELM to call the observation functions.
-        observationDefs.forEach((obDef) => {
-          if (!populationResults.values) {
-            populationResults.values = [];
-          }
-          // Observations only have one result, based on how the HQMF is
-          // structured (note the single 'value' section in the
-          // measureObservationDefinition clause).
-          const obsResults =
-            results.patientResults != null && results.patientResults[patientId] != null
-              ? results.patientResults[patientId][obDef]
-              : undefined;
-
-          obsResults.forEach((obsResult) => {
-            // Add the single result value to the values array on the results of
-            // this calculation (allowing for more than one possible observation).
-            if (obsResult != null ? Object.prototype.hasOwnProperty.call(obsResult, 'value') : undefined) {
-              // If result is a Cql.Quantity type, add its value
-              populationResults.values.push(obsResult.observation.value);
-            } else {
-              // In all other cases, add result
-              populationResults.values.push(obsResult.observation);
-            }
-          });
-        });
-      }
-    });
-    return populationResults;
-  }
-
-  /**
-   * Create population values (aka results) for all episodes using the results from the calculator. This is
-   * used only for the episode of care measures
-   * @param {Measure} measure - The measure of the population set
-   * @param {Population} population - The population set we are getting the values for.
-   * @param {Object} results - The raw results object from the calculation engine.
-   * @param {String} patientId - The patient ID we are getting results for.
-   * @param {Array} observationDefs - List of observation defines we add to the elm for calculation OBSERVs.
-   * @returns {Object} The episode results. Map of episode id to population results which is a map of "POPNAME"
-   * to Integer result. Except for OBSERVs, their key is 'value' and value is an array of results.
-   */
-  static createEpisodePopulationValues(measure, population, results, patientId, observationDefs, populationIndex) {
-    const episodeResults = {};
-    // Grab the mapping between populations and CQL statements
-    const cqlMap = measure.populations_cql_map;
-    // Loop over all population codes ("IPP", "DENOM", etc.) to deterine ones included in this population.
-    const popCodesInPopulation = [];
-    Measure.getAllPopulationCodes().forEach((popCode) => {
-      if (population[popCode] != null) {
-        popCodesInPopulation.push(popCode);
-      }
-    });
-
-    popCodesInPopulation.forEach((popCode) => {
-      let newEpisode;
-      let qdmDataElements;
-      if (cqlMap[popCode]) {
-        const definedPops = cqlMap[popCode];
-        const cqlPopulation = this.getPopulationFromIndex(definedPops, populationIndex, population, popCode);
-        // Is there a patient result for this population? and does this populationCriteria contain the population
-        // We need to check if the populationCriteria contains the population so that a STRAT is not set to zero if there is not a STRAT in the populationCriteria
-        if (population[popCode] != null) {
-          // Grab CQL result value and store for each episode found
-          qdmDataElements = results.patientResults[patientId][cqlPopulation];
-          if (Array.isArray(qdmDataElements)) {
-            qdmDataElements.forEach((qdmDataElement) => {
-              if (qdmDataElement.id != null) {
-                // if an episode has already been created set the result for the population to 1
-                if (episodeResults[qdmDataElement.id.value]) {
-                  episodeResults[qdmDataElement.id.value][popCode] = 1;
-
-                  // else create a new episode using the list of all popcodes for the population
-                } else {
-                  newEpisode = {};
-                  popCodesInPopulation.forEach((pop) => {
-                    if (pop !== 'OBSERV') {
-                      newEpisode[pop] = 0;
-                    }
-                  });
-
-                  newEpisode[popCode] = 1;
-                  episodeResults[qdmDataElement.id.value] = newEpisode;
-                }
-              }
-            });
-          }
-        }
-      } else if (popCode === 'OBSERV' && (observationDefs != null ? observationDefs.length : undefined) > 0) {
-        // Handle observations using the names of the define statements that
-        // were added to the ELM to call the observation functions.
-        observationDefs.forEach((obDef) => {
-          // Observations only have one result, based on how the HQMF is
-          // structured (note the single 'value' section in the
-          // measureObservationDefinition clause).
-          const obsResults =
-            results.patientResults != null && results.patientResults[patientId] != null
-              ? results.patientResults[patientId][obDef]
-              : undefined;
-
-          obsResults.forEach((obsResult) => {
-            let resultValue = null;
-            const episodeId = obsResult.episode.id.value;
-            // Add the single result value to the values array on the results of
-            // this calculation (allowing for more than one possible observation).
-            if (obsResult != null ? Object.prototype.hasOwnProperty.call(obsResult, 'value') : undefined) {
-              // If result is a Cql.Quantity type, add its value
-              resultValue = obsResult.observation.value;
-            } else {
-              // In all other cases, add result
-              resultValue = obsResult.observation;
-            }
-
-            // if the episodeResult object already exist create or add to to the values structure
-            if (episodeResults[episodeId] != null) {
-              if (episodeResults[episodeId].values != null) {
-                episodeResults[episodeId].values.push(resultValue);
-              } else {
-                episodeResults[episodeId].values = [resultValue];
-              }
-              // else create a new episodeResult structure
-            } else {
-              newEpisode = {};
-              popCodesInPopulation.forEach((pop) => {
-                if (pop !== 'OBSERV') {
-                  newEpisode[pop] = 0;
-                }
-              });
-              newEpisode.values = [resultValue];
-              episodeResults[episodeId] = newEpisode;
-            }
-          });
-        });
-      }
-    });
-
-    // Correct any inconsistencies. ex. In DENEX but also in NUMER using same function used for patients.
-    Object.keys(episodeResults).forEach((episodeId) => {
-      const episodeResult = episodeResults[episodeId];
-      // ensure that an empty 'values' array exists for continuous variable measures if there were no observations
-      if ([].indexOf.call(popCodesInPopulation, 'OBSERV') >= 0) {
-        if (!episodeResult.values) {
-          episodeResult.values = [];
-        }
-      }
-      // Correct any inconsistencies. ex. In DENEX but also in NUMER using same function used for patients.
-      episodeResults[episodeId] = this.handlePopulationValues(episodeResult);
-    });
-
-    return episodeResults;
-  }
-
-  // Set all value set versions to 'undefined' so the execution engine does not grab the specified version in the ELM
-  static setValueSetVersionsToUndefined(elm) {
-    Array.from(elm).forEach((elmLibrary) => {
-      if (elmLibrary.library.valueSets != null) {
-        Array.from(elmLibrary.library.valueSets.def).forEach((valueSet) => {
-          if (valueSet.version != null) {
-            valueSet.version = undefined;
-          }
-        });
-      }
-    });
-    return elm;
-  }
-
-  // Format ValueSets for use by the execution engine
-  static valueSetsForCodeService(valueSetsByOid, valueSetOids = []) {
-    const valueSets = {};
-    valueSetOids.forEach((oid) => {
-      let specificValueSet = valueSetsByOid[oid];
-      if (!(specificValueSet && !specificValueSet[Object.keys(specificValueSet)[0]].concepts)) {
-        specificValueSet = specificValueSet[Object.keys(specificValueSet)[0]];
-      }
-      if (!valueSets[specificValueSet.oid]) {
-        valueSets[specificValueSet.oid] = {};
-      }
-      if (!valueSets[specificValueSet.oid][specificValueSet.version]) {
-        valueSets[specificValueSet.oid][specificValueSet.version] = [];
-      }
-      if (specificValueSet.concepts) {
-        specificValueSet.concepts.forEach((concept) => {
-          valueSets[specificValueSet.oid][specificValueSet.version].push({
-            code: concept.code,
-            system: concept.code_system_name,
-            version: specificValueSet.version,
-          });
-        });
-      }
-    });
-    return valueSets;
-  }
-
-  /**
-   * Get the index of the STRAT in the cql_populations_map based on its name
-   * TODO: This function will be irrelevant once we start using the new measure model
-   * @private
-   * @param {string} stratName - Strat name to parse index out of ie: STRAT, STRAT_1, STRAT_2...
-   */
-  static getStratIndexFromStratName(stratName) {
-    const stratIndex = stratName.match(new RegExp('STRAT_(\\d*)'));
-    if ((stratIndex != null ? stratIndex[1] : undefined) != null) {
-      return parseInt(stratIndex[1], 10);
-    }
-    return 0;
-  }
-
-  // Helper function that returns the correct population for the popCode from definedPops
-  static getPopulationFromIndex(definedPops, populationIndex, population, popCode) {
-    let cqlPopulation = definedPops[populationIndex];
-    if (population.population_index != null && popCode !== 'STRAT') {
-      cqlPopulation = definedPops[population.population_index];
-    } else if (popCode === 'STRAT' && population.STRAT != null) {
-      const stratName = population.STRAT;
-      const stratificationIndex = this.getStratIndexFromStratName(stratName);
-      cqlPopulation = definedPops[stratificationIndex];
-    }
-    return cqlPopulation;
-  }
-
-  // Create Date from UTC string date and time using momentJS
-  static parseTimeStringAsUTC(timeValue) {
-    return moment.utc(timeValue, 'YYYYMDDHHmm').toDate();
-  }
-
-  // Create Date from UTC string date and time using momentJS, shifting to 11:59:59 of the given year
-  static parseTimeStringAsUTCConvertingToEndOfYear(timeValue) {
-    return moment
-      .utc(timeValue, 'YYYYMDDHHmm')
-      .add(1, 'years')
-      .subtract(1, 'seconds')
-      .toDate();
-  }
-
-  // If the given value is in the given populationSet, and its result is zero, return true.
-  static isValueZero(value, populationSet) {
-    if (value in populationSet && populationSet[value] === 0) {
-      return true;
-    }
-    return false;
-  }
-
-  // Returns a JSON function to add to the ELM before ELM JSON is used to calculate results
-  // This ELM template was generated by the CQL-to-ELM Translation Service.
-  static generateELMJSONFunction(functionName, parameter) {
-    const elmFunction = {
-      name: `obs_func_${functionName}`,
-      context: 'Patient',
-      accessLevel: 'Public',
-      expression: {
-        type: 'Query',
-        source: [
-          {
-            alias: 'MP',
-            expression: {
-              name: parameter,
-              type: 'ExpressionRef',
-            },
-          },
-        ],
-        relationship: [],
-        return: {
-          distinct: false,
-          expression: {
-            type: 'Tuple',
-            element: [
-              {
-                name: 'episode',
-                value: {
-                  name: 'MP',
-                  type: 'AliasRef',
-                },
-              },
-              {
-                name: 'observation',
-                value: {
-                  name: functionName,
-                  type: 'FunctionRef',
-                  operand: [
-                    {
-                      type: 'As',
-                      operand: {
-                        name: 'MP',
-                        type: 'AliasRef',
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        },
-      },
-    };
-    return elmFunction;
-  }
-};
-
-},{"cqm-models":261,"moment":264}],17:[function(require,module,exports){
-const _ = require('lodash');
-
-
-/**
- * Contains helpers that generate additional data for CQL measures. These functions provide extra data useful in working
- * with calculation results.
- */
-module.exports = class MeasureHelpers {
-  /**
-     * Builds a map of define statement name to the statement's text from a measure.
-     * @public
-     * @param {Measure} measure - The measure to build the map from.
-     * @return {Hash} Map of statement definitions to full statement
-     */
-  static buildDefineToFullStatement(measure) {
-    const ret = {};
-    for (const lib in measure.get('elm_annotations')) {
-      const libStatements = {};
-      for (const statement of Array.from(measure.get('elm_annotations')[lib].statements)) {
-        libStatements[statement.define_name] = this.parseAnnotationTree(statement.children);
-      }
-      ret[lib] = libStatements;
-    }
-    return ret;
-  }
-
-  /**
-     * Recursive function that parses an annotation tree to extract text statements.
-     * @param {Node} children - the node to be traversed.
-     * @return {String} the text of the node or its children.
-     */
-  static parseAnnotationTree(children) {
-    let child;
-    let ret = '';
-    if (children.text !== undefined) {
-      return _.unescape(children.text)
-        .replace('&#13', '')
-        .replace(';', '');
-    } else if (children.children !== undefined) {
-      for (child of Array.from(children.children)) {
-        ret += this.parseAnnotationTree(child);
-      }
-    } else {
-      for (child of Array.from(children)) {
-        ret += this.cparseAnnotationTree(child);
-      }
-    }
-    return ret;
-  }
-
-  /**
-     * Finds all localIds in a statement by it's library and statement name.
-     * @public
-     * @param {Measure} measure - The measure to find localIds in.
-     * @param {string} libraryName - The name of the library the statement belongs to.
-     * @param {string} statementName - The statement name to search for.
-     * @return {Hash} List of local ids in the statement.
-     */
-  static findAllLocalIdsInStatementByName(measure, libraryName, statementName) {
-    // create place for aliases and their usages to be placed to be filled in later. Aliases and their usages (aka scope)
-    // and returns do not have localIds in the elm but do in elm_annotations at a consistent calculable offset.
-    // BE WEARY of this calaculable offset.
-    const emptyResultClauses = [];
-
-    // find the library and statement in the elm.
-    let library = null;
-    let statement = null;
-    for (const lib of Array.from(measure.elm)) {
-      if (lib.library.identifier.id === libraryName) {
-        library = lib;
-      }
-    }
-    for (const curStatement of Array.from(library.library.statements.def)) {
-      if (curStatement.name === statementName) {
-        statement = curStatement;
-      }
-    }
-
-    const aliasMap = {};
-    // recurse through the statement elm for find all localIds
-    const localIds = this.findAllLocalIdsInStatement(
-      statement,
-      libraryName,
-      statement.annotation,
-      {},
-      aliasMap,
-      emptyResultClauses,
-      null
-    );
-    // Create/change the clause for all aliases and their usages
-    for (const alias of Array.from(emptyResultClauses)) {
-      // Only do it if we have a clause for where the result should be fetched from
-      // and have a localId for the clause that the result should map to
-      if (localIds[alias.expressionLocalId] != null && alias.aliasLocalId != null) {
-        localIds[alias.aliasLocalId] = {
-          localId: alias.aliasLocalId,
-          sourceLocalId: alias.expressionLocalId,
-        };
-      }
-    }
-
-    // We do not yet support coverage/coloring of Function statements
-    // Mark all the clauses as unsupported so we can mark them 'NA' in the clause_results
-    if (statement.type === 'FunctionDef') {
-      for (const localId in localIds) {
-        const clause = localIds[localId];
-        clause.isUnsupported = true;
-      }
-    }
-    return localIds;
-  }
-
-  /**
-     * Finds all localIds in the statement structure recursively.
-     * @private
-     * @param {Object} statement - The statement structure or child parts of it.
-     * @param {String} libraryName - The name of the library we are looking at.
-     * @param {Array} annotation - The JSON annotation for the entire structure, this is occasionally needed.
-     * @param {Object} localIds - The hash of localIds we are filling.
-     * @param {Object} aliasMap - The map of aliases.
-     * @param {Array} emptyResultClauses - List of clauses that will have empty results from the engine. Each object on
-     *    this has info on where to find the actual result.
-     * @param {Object} parentNode - The parent node, used for some special situations.
-     * @return {Array[Integer]} List of local ids in the statement. This is same array, localIds, that is passed in.
-     */
-  static findAllLocalIdsInStatement(
-    statement,
-    libraryName,
-    annotation,
-    localIds,
-    aliasMap,
-    emptyResultClauses,
-    parentNode
-  ) {
-    // looking at the key and value of everything on this object or array
-    for (const k in statement) {
-      let alId;
-      const v = statement[k];
-      if (k === 'return') {
-        // Keep track of the localId of the expression that the return references. 'from's without a 'return' dont have
-        // localId's. So it doesn't make sense to mark them.
-        if (statement.return.expression.localId != null) {
-          aliasMap[v] = statement.return.expression.localId;
-          alId = statement.return.localId;
-          if (alId) {
-            emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: aliasMap[v] });
-          }
-        }
-
-        this.findAllLocalIdsInStatement(v, libraryName, annotation, localIds, aliasMap, emptyResultClauses, statement);
-      } else if (k === 'alias') {
-        if (statement.expression != null && statement.expression.localId != null) {
-          // Keep track of the localId of the expression that the alias references
-          aliasMap[v] = statement.expression.localId;
-          // Determine the localId in the elm_annotation for this alias.
-          alId = parseInt(statement.expression.localId, 10) + 1;
-          emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: aliasMap[v] });
-        }
-      } else if (k === 'scope') {
-        // The scope entry references an alias but does not have an ELM local ID. Hoever it DOES have an elm_annotations localId
-        // The elm_annotation localId of the alias variable is the localId of it's parent (one less than)
-        // because the result of the scope clause should be equal to the clause that the scope is referencing
-        alId = parseInt(statement.localId, 10) - 1;
-        emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: aliasMap[v] });
-      } else if (k === 'asTypeSpecifier') {
-        // Map the localId of the asTypeSpecifier (Code, Quantity...) to the result of the result it is referencing
-        // For example, in the CQL code 'Variable.result as Code' the typeSpecifier does not produce a result, therefore
-        // we will set its result to whatever the result value is for 'Variable.result'
-        alId = statement.asTypeSpecifier.localId;
-        if (alId != null) {
-          const typeClauseId = parseInt(statement.asTypeSpecifier.localId, 10) - 1;
-          emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: typeClauseId });
-        }
-      } else if (k === 'sort') {
-        // Sort is a special case that we need to recurse into separately and set the results to the result of the statement the sort clause is in
-        this.findAllLocalIdsInSort(v, libraryName, localIds, aliasMap, emptyResultClauses, parentNode);
-      } else if (k === 'let') {
-        // let is a special case where it is an array, one for each defined alias. These aliases work slightly different
-        // and execution engine does return results for them on use. The Initial naming of them needs to be properly pointed
-        // to what they are set to.
-        for (const aLet of Array.from(v)) {
-          // Add the localId for the definition of this let to it's source.
-          localIds[aLet.localId] = { localId: aLet.localId, sourceLocalId: aLet.expression.localId };
-          this.findAllLocalIdsInStatement(
-            aLet.expression,
-            libraryName,
-            annotation,
-            localIds,
-            aliasMap,
-            emptyResultClauses,
-            statement
-          );
-        }
-        // If 'First' and 'Last' expressions, the result of source of the clause should be set to the expression
-      } else if (k === 'type' && (v === 'First' || v === 'Last')) {
-        if (statement.source && statement.source.localId != null) {
-          alId = statement.source.localId;
-          emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: statement.localId });
-        }
-        // Continue to recurse into the 'First' or 'Last' expression
-        this.findAllLocalIdsInStatement(v, libraryName, annotation, localIds, aliasMap, emptyResultClauses, statement);
-        // If this is a FunctionRef or ExpressionRef and it references a library, find the clause for the library reference and add it.
-      } else if (k === 'type' && (v === 'FunctionRef' || v === 'ExpressionRef') && statement.libraryName != null) {
-        const libraryClauseLocalId = this.findLocalIdForLibraryRef(
-          annotation,
-          statement.localId,
-          statement.libraryName
-        );
-        if (libraryClauseLocalId !== null) {
-          // only add the clause if the localId for it is found
-          // the sourceLocalId is the FunctionRef itself to match how library statement references work.
-          localIds[libraryClauseLocalId] = { localId: libraryClauseLocalId, sourceLocalId: statement.localId };
-        }
-        // else if they key is localId push the value
-      } else if (k === 'localId') {
-        localIds[v] = { localId: v };
-        // if the value is an array or object, recurse
-      } else if (Array.isArray(v) || typeof v === 'object') {
-        this.findAllLocalIdsInStatement(v, libraryName, annotation, localIds, aliasMap, emptyResultClauses, statement);
-      }
-    }
-
-    return localIds;
-  }
-
-  /**
-     * Finds all localIds in the sort structure recursively and sets the expressionLocalId to the parent statement.
-     * @private
-     * @param {Object} statement - The statement structure or child parts of it.
-     * @param {String} libraryName - The name of the library we are looking at.
-     * @param {Object} localIds - The hash of localIds we are filling.
-     * @param {Object} aliasMap - The map of aliases.
-     * @param {Array} emptyResultClauses - List of clauses that will have empty results from the engine. Each object on
-     *    this has info on where to find the actual result.
-     * @param {Object} rootStatement - The rootStatement.
-     */
-  static findAllLocalIdsInSort(statement, libraryName, localIds, aliasMap, emptyResultClauses, rootStatement) {
-    const alId = statement.localId;
-    emptyResultClauses.push({ lib: libraryName, aliasLocalId: alId, expressionLocalId: rootStatement.localId });
-    return (() => {
-      const result = [];
-      for (const k in statement) {
-        const v = statement[k];
-        if (Array.isArray(v) || typeof v === 'object') {
-          result.push(this.findAllLocalIdsInSort(v, libraryName, localIds, aliasMap, emptyResultClauses, rootStatement));
-        } else {
-          result.push(undefined);
-        }
-      }
-      return result;
-    })();
-  }
-
-  /**
-     * Find the localId of the library reference in the JSON elm annotation. This recursively searches the annotation structure
-     * for the clause of the library ref. When that is found it knows where to look inside of that for where the library
-     * reference may be.
-     *
-     * Consider the following example of looking for function ref with id "55" and library "global".
-     * CQL for this is "global.CalendarAgeInYearsAt(...)". The following annotation snippet covers the call of the
-     * function.
-     *
-     * {
-     *  "r": "55",
-     *  "s": [
-     *    {
-     *      "r": "49",
-     *      "s": [
-     *        {
-     *          "value": [
-     *            "global"
-     *          ]
-     *        }
-     *      ]
-     *    },
-     *    {
-     *      "value": [
-     *        "."
-     *      ]
-     *    },
-     *    {
-     *      "r": "55",
-     *      "s": [
-     *        {
-     *          "value": [
-     *            "\"CalendarAgeInYearsAt\"",
-     *            "("
-     *          ]
-     *        },
-     *
-     * This method will recurse through the structure until it stops on this snippet that has "r": "55". Then it will check
-     * if the value of the first child is simply an array with a single string equaling "global". If that is indeed the
-     * case then it will return the "r" value of that first child, which is the clause localId for the library part of the
-     * function reference. If that is not the case, it will keep recursing and may eventually return null.
-     *
-     * @private
-     * @param {Object|Array} annotation - The annotation structure or child in the annotation structure.
-     * @param {String} refLocalId - The localId of the library ref we should look for.
-     * @param {String} libraryName - The library reference name, used to find the clause.
-     * @return {String} The localId of the clause for the library reference or null if not found.
-     */
-  static findLocalIdForLibraryRef(annotation, refLocalId, libraryName) {
-    // if this is an object it should have an "r" for localId and "s" for children or leaf nodes
-    let child;
-    let ret;
-    if (Array.isArray(annotation)) {
-      for (child of Array.from(annotation)) {
-        // in the case of a list of children only return if there is a non null result
-        ret = this.findLocalIdForLibraryRef(child, refLocalId, libraryName);
-        if (ret !== null) {
-          return ret;
-        }
-      }
-    } else if (typeof annotation === 'object') {
-      // if we found the function ref
-      if (annotation.r != null && annotation.r === refLocalId) {
-        // check if the first child has the first leaf node with the library name
-        // refer to the method comment for why this is done.
-        if (
-          this.__guard__(annotation.s[0].s != null ? annotation.s[0].s[0].value : undefined, x => x[0]) === libraryName
-        ) {
-          // return the localId if there is one
-          if (annotation.s[0].r != null) {
-            return annotation.s[0].r;
-          }
-          // otherwise return null because the library ref is in the same clause as extpression ref.
-          // this is common with expressionRefs for some reason.
-          return null;
-        }
-      }
-
-      // if we made it here, we should travserse down the child nodes
-      if (Array.isArray(annotation.s)) {
-        for (child of Array.from(annotation.s)) {
-          // in the case of a list of children only return if there is a non null result
-          ret = this.findLocalIdForLibraryRef(child, refLocalId, libraryName);
-          if (ret !== null) {
-            return ret;
-          }
-        }
-      } else if (typeof annotation.s === 'object') {
-        return this.findLocalIdForLibraryRef(annotation.s, refLocalId, libraryName);
-      }
-    }
-
-    // if nothing above caused this to return, then we are at a leaf node and should return null
-    return null;
-  }
-
-  /**
-     * Figure out if a statement is a function given the measure, library name and statement name.
-     * @public
-     * @param {Measure} measure - The measure to find localIds in.
-     * @param {string} libraryName - The name of the library the statement belongs to.
-     * @param {string} statementName - The statement name to search for.
-     * @return {boolean} If the statement is a function or not.
-     */
-  static isStatementFunction(measure, libraryName, statementName) {
-    // find the library and statement in the elm.
-    let library = null;
-    let statement = null;
-    for (const lib of Array.from(measure.elm)) {
-      if (lib.library.identifier.id === libraryName) {
-        library = lib;
-      }
-    }
-    for (const curStatement of Array.from(library.library.statements.def)) {
-      if (curStatement.name === statementName) {
-        statement = curStatement;
-      }
-    }
-
-    if (library != null && statement != null) {
-      return statement.type === 'FunctionDef';
-    }
-    return false;
-  }
-
-  /**
-     * Figure out if a statement is in a Supplemental Data Element given the statement name.
-     * @public
-     * @param {Population} population
-     * @param {string} statementDefine - The statement define to search for.
-     * @return {boolean} Statement does or does not belong to a Supplemental Data Element.
-     */
-  static isSupplementalDataElementStatement(population, statementDefine) {
-    return _.includes(population.supplemental_data_elements, statementDefine);
-  }
-
-  static __guard__(value, transform) {
-    return typeof value !== 'undefined' && value !== null ? transform(value) : undefined;
-  }
-};
-
-},{"lodash":263}],18:[function(require,module,exports){
-const _ = require('lodash');
-const MeasureHelpers = require('../helpers/measure_helpers');
-const CalculatorHelpers = require('./calculator_helpers');
-const cql = require('cqm-models').CQL;
-const moment = require('moment');
-
-/**
- * Contains helpers that generate useful data for coverage and highlighing. These structures are added to the Result
- * object in the CQLCalculator.
- */
-module.exports = class ResultsHelpers {
-  /**
-   * Builds the `statement_relevance` map. This map gets added to the Result attributes that the calculator returns.
-   *
-   * The statement_relevance map indicates which define statements were actually relevant to a population inclusion
-   * consideration. This makes use of the 'population_relevance' map. This is actually a two level map. The top level is
-   * a map of the CQL libraries, keyed by library name. The second level is a map for statement relevance in that library,
-   * which maps each statement to its relevance status. The values in this map differ from the `population_relevance`
-   * because we also need to track statements that are not used for any population calculation. Therefore the values are
-   * a string that is one of the following: 'NA', 'TRUE', 'FALSE'. Here is what they mean:
-   *
-   * 'NA' - Not applicable. This statement is not relevant to any population calculation in this population_set. Common
-   *   for unused library statements or statements only used for other population sets.
-   *
-   * 'FALSE' - This statement is not relevant to any of this patient's population inclusion calculations.
-   *
-   * 'TRUE' - This statement is relevant for one or more of the population inclusion calculations.
-   *
-   * Here is an example structure this function returns. (the `statement_relevance` map)
-   * {
-   *   "Test158": {
-   *     "Patient": "NA",
-   *     "SDE Ethnicity": "NA",
-   *     "SDE Payer": "NA",
-   *     "SDE Race": "NA",
-   *     "SDE Sex": "NA",
-   *     "Most Recent Delivery": "TRUE",
-   *     "Most Recent Delivery Overlaps Diagnosis": "TRUE",
-   *     "Initial Population": "TRUE",
-   *     "Numerator": "TRUE",
-   *     "Denominator Exceptions": "FALSE"
-   *   },
-   *   "TestLibrary": {
-   *     "Numer Helper": "TRUE",
-   *     "Denom Excp Helper": "FALSE",
-   *     "Unused statement": "NA"
-   *   }
-   * }
-   *
-   * This function relies heavily on the cql_statement_dependencies map on the Measure to recursively determine which
-   * statements are used in the relevant population statements. It also uses the 'population_relevance' map to determine
-   * the relevance of the population defining statement and its dependent statements.
-   * @public
-   * @param {object} populationRelevance - The `population_relevance` map, used at the starting point.
-   * @param {Measure} measure - The measure.
-   * @param {population} populationSet - The population set being calculated.
-   * @param {populationIndex} - the index of the population being worked on.
-   * @returns {object} The `statement_relevance` map that maps each statement to its relevance status for a calculation.
-   *   This structure is put in the Result object's attributes.
-   */
-  static buildStatementRelevanceMap(populationRelevance, measure, populationSet, populationIndex) {
-    // build map defaulting to not applicable (NA) using cql_statement_dependencies structure
-    const statementRelevance = {};
-    const object = measure.cql_statement_dependencies;
-    for (const lib in object) {
-      const statements = object[lib];
-      statementRelevance[lib] = {};
-      for (const statementName in statements) {
-        statementRelevance[lib][statementName] = 'NA';
-      }
-    }
-
-    if (measure.calculate_sdes && populationSet.supplemental_data_elements) {
-      for (const statement of Array.from(populationSet.supplemental_data_elements)) {
-        // Mark all Supplemental Data Elements as relevant
-        this.markStatementRelevant(
-          measure.cql_statement_dependencies,
-          statementRelevance,
-          measure.main_cql_library,
-          statement,
-          'TRUE'
-        );
-      }
-    }
-
-    for (const population in populationRelevance) {
-      // If the population is values, that means we need to mark relevance for the OBSERVs
-      const relevance = populationRelevance[population];
-      if (population === 'values') {
-        for (const observation of Array.from(measure.observations)) {
-          this.markStatementRelevant(
-            measure.cql_statement_dependencies,
-            statementRelevance,
-            measure.main_cql_library,
-            observation.function_name,
-            relevance
-          );
-        }
-      } else {
-        let relevantStatement;
-        if (population === 'STRAT') {
-          const stratIndex = CalculatorHelpers.getStratIndexFromStratName(populationSet.STRAT);
-          relevantStatement = measure.populations_cql_map[population][stratIndex];
-        } else if (populationSet.population_index != null) {
-          relevantStatement = measure.populations_cql_map[population][populationSet.population_index];
-        } else {
-          relevantStatement = measure.populations_cql_map[population][populationIndex];
-        }
-        this.markStatementRelevant(
-          measure.cql_statement_dependencies,
-          statementRelevance,
-          measure.main_cql_library,
-          relevantStatement,
-          relevance
-        );
-      }
-    }
-
-    return statementRelevance;
-  }
-
-  /**
-   * Recursive helper function for the _buildStatementRelevanceMap function. This marks a statement as relevant (or not
-   * relevant but applicable) in the `statement_relevance` map. It recurses and marks dependent statements also relevant
-   * unless they have already been marked as 'TRUE' for their relevance statue. This function will never be called on
-   * statements that are 'NA'.
-   * @private
-   * @param {object} cqlStatementDependencies - Dependency map from the measure object. The thing we recurse over
-   *   even though it is flat, it represents a tree.
-   * @param {object} statementRelevance - The `statement_relevance` map to mark.
-   * @param {string} libraryName - The library name of the statement we are marking.
-   * @param {string} statementName - The name of the statement we are marking.
-   * @param {boolean} relevant - true if the statement should be marked 'TRUE', false if it should be marked 'FALSE'.
-   */
-  static markStatementRelevant(cqlStatementDependencies, statementRelevance, libraryName, statementName, relevant) {
-    // only mark the statement if it is currently 'NA' or 'FALSE'. Otherwise it already has been marked 'TRUE'
-    if (
-      statementRelevance[libraryName][statementName] === 'NA' ||
-      statementRelevance[libraryName][statementName] === 'FALSE'
-    ) {
-      statementRelevance[libraryName][statementName] = relevant ? 'TRUE' : 'FALSE';
-      return Array.from(cqlStatementDependencies[libraryName][statementName]).map(dependentStatement =>
-        this.markStatementRelevant(
-          cqlStatementDependencies,
-          statementRelevance,
-          dependentStatement.library_name,
-          dependentStatement.statement_name,
-          relevant
-        ));
-    }
-    return [];
-  }
-
-  /**
-     * Builds the result structures for the statements and the clauses. These are named `statement_results` and
-     * `clause_results` respectively when added Result object's attributes.
-     *
-     * The `statement_results` structure indicates the result for each statement taking into account the statement
-     * relevance in determining the result. This is a two level map just like `statement_relevance`. The first level key is
-     * the library name and the second key level is the statement name. The value is an object that has three properties,
-     * 'raw', 'final' and 'pretty'. 'raw' is the raw result from the execution engine for that statement. 'final' is the final
-     * result that takes into account the relevance in this calculation. 'pretty' is a human readable description of the result
-     * that is only generated if doPretty is true.
-     * The value of 'final' will be one of the following strings:
-     * 'NA', 'UNHIT', 'TRUE', 'FALSE'.
-     *
-     * Here's what they mean:
-     *
-     * 'NA' - Not applicable. This statement is not relevant to any population calculation in this population_set. Common
-     *   for unused library statements or statements only used for other population sets.
-     *   !!!IMPORTANT NOTE!!! All define function statements are marked 'NA' since we don't have a strategy for
-     *        highlighting or coverage when it comes to functions.
-     *
-     * 'UNHIT' - This statement wasn't hit. This is most likely because the statement was not relevant to population
-     *     calculation for this patient. i.e. 'FALSE' in the the `statement_relevance` map.
-     *
-     * 'TRUE' - This statement is relevant and has a truthy result.
-     *
-     * 'FALSE' - This statement is relevant and has a falsey result.
-     *
-     * Here is an example of the `statement_results` structure: (raw results have been turned into "???" for this example)
-     * {
-     *   "Test158": {
-     *     "Patient": { "raw": "???", "final": "NA", "pretty": "NA" },
-     *     "SDE Ethnicity": { "raw": "???", "final": "NA", "pretty": "NA" },
-     *     "SDE Payer": { "raw": "???", "final": "NA", "pretty": "NA" },
-     *     "SDE Race": { "raw": "???", "final": "NA", "pretty": "NA" },
-     *     "SDE Sex": { "raw": "???", "final": "NA", "pretty": "NA" },
-     *     "Most Recent Delivery": { "raw": "???", "final": "TRUE", "pretty": "???" },
-     *     "Most Recent Delivery Overlaps Diagnosis": { "raw": "???", "final": "TRUE", "pretty": "???" },
-     *     "Initial Population": { "raw": "???", "final": "TRUE", "pretty": "???" },
-     *     "Numerator": { "raw": "???", "final": "TRUE", "pretty": "???" },
-     *     "Denominator Exceptions": { "raw": "???", "final": "UNHIT", "pretty": "UNHIT" },
-     *   },
-     *  "TestLibrary": {
-     *     "Numer Helper": { "raw": "???", "final": "TRUE", "pretty": "???" },
-     *     "Denom Excp Helper": { "raw": "???", "final": "UNHIT", "pretty": "UNHIT" },
-     *     "Unused statement": { "raw": "???", "final": "NA", "pretty": "???" },
-     *     "false statement": { "raw": "???", "final": "FALSE", "pretty": "FALSE: []" },
-     *   }
-     * }
-     *
-     *
-     * The `clause_results` structure is the same as the `statement_results` but it indicates the result for each clause.
-     * The second level key is the localId for the clause. The result object is the same with the same  'raw' and 'final'
-     * properties but it also includes the name of the statement it resides in as 'statementName'.
-     *
-     * This function relies very heavily on the `statement_relevance` map to determine the final results. This function
-     * returns the two structures together in an object ready to be added directly to the Result attributes.
-     * @public
-     * @param {Measure} measure - The measure.
-     * @param {object} rawClauseResults - The raw clause results from the calculation engine.
-     * @param {object} statementRelevance - The `statement_relevance` map. Used to determine if they were hit or not.
-     * @param {boolean} doPretty - If true, also generate pretty versions of result.
-     * @returns {object} Object with the statement_results and clause_results structures, keyed as such.
-     */
-  static buildStatementAndClauseResults(measure, rawClauseResults, statementRelevance, doPretty, includeClauseResults) {
-    if (doPretty == null) {
-      doPretty = false;
-    }
-    const statementResults = {};
-    const clauseResults = {};
-    const object = measure.cql_statement_dependencies;
-    for (const lib in object) {
-      const statements = object[lib];
-      statementResults[lib] = {};
-      clauseResults[lib] = {};
-      for (const statementName in statements) {
-        const rawStatementResult = this.findResultForStatementClause(measure, lib, statementName, rawClauseResults);
-        statementResults[lib][statementName] = { raw: rawStatementResult };
-        const isSDE = MeasureHelpers.isSupplementalDataElementStatement(measure.populations[0], statementName);
-        if ((!measure.calculate_sdes && isSDE) || statementRelevance[lib][statementName] === 'NA') {
-          statementResults[lib][statementName].final = 'NA';
-          if (doPretty) {
-            statementResults[lib][statementName].pretty = 'NA';
-          }
-        } else if (statementRelevance[lib][statementName] === 'FALSE' || rawClauseResults[lib] == null) {
-          statementResults[lib][statementName].final = 'UNHIT';
-          // even if the statement wasn't hit, we want the pretty result to just
-          // be FUNCTION for functions
-          if (doPretty) {
-            if (MeasureHelpers.isStatementFunction(measure, lib, statementName)) {
-              statementResults[lib][statementName].pretty = 'FUNCTION';
-            } else {
-              statementResults[lib][statementName].pretty = 'UNHIT';
-            }
-          }
-        } else if (this.doesResultPass(rawStatementResult)) {
-          statementResults[lib][statementName].final = 'TRUE';
-          if (doPretty) {
-            statementResults[lib][statementName].pretty = this.prettyResult(rawStatementResult);
-          }
-        } else {
-          statementResults[lib][statementName].final = 'FALSE';
-          if (rawStatementResult instanceof Array && rawStatementResult.length === 0) {
-            // Special case, handle empty array.
-            if (doPretty) {
-              statementResults[lib][statementName].pretty = 'FALSE ([])';
-            }
-          } else if (MeasureHelpers.isStatementFunction(measure, lib, statementName)) {
-            if (doPretty) {
-              statementResults[lib][statementName].pretty = 'FUNCTION';
-            }
-          } else if (doPretty) {
-            statementResults[lib][statementName].pretty = `FALSE (${rawStatementResult})`;
-          }
-        }
-
-        if (includeClauseResults) {
-          // create clause results for all localIds in this statement
-          const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(measure, lib, statementName);
-          for (const localId in localIds) {
-            const clause = localIds[localId];
-            const clauseResult = {
-              // if this clause is an alias or a usage of alias it will get the raw result from the sourceLocalId.
-              raw:
-                rawClauseResults[lib] != null
-                  ? rawClauseResults[lib][clause.sourceLocalId != null ? clause.sourceLocalId : localId]
-                  : undefined,
-              statementName,
-            };
-            clauseResult.final = this.setFinalResults({
-              statementRelevance,
-              statementName,
-              rawClauseResults,
-              lib,
-              localId,
-              clause,
-              rawResult: clauseResult.raw,
-            });
-            clauseResults[lib][localId] = clauseResult;
-          }
-        }
-      }
-    }
-    const response = { statement_results: statementResults };
-    response.clause_results = includeClauseResults ? clauseResults : null;
-    return response;
-  }
-
-  /**
-     * Generates a pretty human readable representation of a result.
-     *
-     * @param {(Array|object|boolean|???)} result - The result from the calculation engine.
-     * @param {Integer} indentLevel - For nested objects, the indentLevel indicates how far to indent.
-     *                                Note that 1 is the base because Array(1).join ' ' returns ''.
-     * @returns {String} a pretty version of the given result
-     */
-  static prettyResult(result, indentLevel, keyIndent) {
-    let prettyResult;
-    if (indentLevel == null) {
-      indentLevel = 1;
-    }
-    if (keyIndent == null) {
-      keyIndent = 1;
-    }
-    const keyIndentation = Array(keyIndent).join(' ');
-    const currentIndentation = Array(indentLevel).join(' ');
-    if (result instanceof cql.DateTime) {
-      return moment.utc(result.toString()).format('MM/DD/YYYY h:mm A');
-    } else if (result instanceof cql.Interval) {
-      return `INTERVAL: ${this.prettyResult(result.low)} - ${this.prettyResult(result.high)}`;
-    } else if (result instanceof cql.Code) {
-      return `CODE: ${result.system} ${result.code}`;
-    } else if (result instanceof cql.Quantity) {
-      let quantityResult = `QUANTITY: ${result.value}`;
-      if (result.unit) {
-        quantityResult += ` ${result.unit}`;
-      }
-      return quantityResult;
-    } else if (result && typeof result._type === 'string' && result._type.includes('QDM::')) {
-      // If there isn't a description, use the type name as a fallback.  This mirrors the frontend where we do
-      // result.constructor.name.
-      const description = result.description ? `${result.description}\n` : `${result._type.replace('QDM::', '')}\n`;
-      let startDateTime = null;
-      let endDateTime = null;
-      let startTimeString = '';
-      let endTimeString = '';
-      // Start time of data element is start of relevant period, if data element does not have relevant period, use authorDatetime
-      if (result.relevantPeriod) {
-        if (result.relevantPeriod.low) {
-          startDateTime = result.relevantPeriod.low;
-        }
-        if (result.relevantPeriod.high) {
-          endDateTime = result.relevantPeriod.high;
-        }
-      } else if (result.prevalencePeriod) {
-        if (result.prevalencePeriod.low) {
-          startDateTime = result.prevalencePeriod.low;
-        }
-        if (result.prevalencePeriod.high) {
-          endDateTime = result.prevalencePeriod.high;
-        }
-      } else if (result.authorDatetime) {
-        // TODO: start result string will need to be updated to AUTHORED once bonnie frontend
-        // updates its pretty printer to do so.
-        startDateTime = result.authorDatetime;
-      }
-
-      if (startDateTime) {
-        startTimeString = `START: ${moment.utc(startDateTime.toString()).format('MM/DD/YYYY h:mm A')}\n`;
-      }
-      // If endTime is the infinity dateTime, clear it out because we do not want to export it
-      if (endDateTime && endDateTime.year !== 9999) {
-        endTimeString = `STOP: ${moment.utc(endDateTime.toString()).format('MM/DD/YYYY h:mm A')}\n`;
-      }
-
-      const codeDisplay = result.dataElementCodes && result.dataElementCodes[0] ? `CODE: ${result.dataElementCodes[0].codeSystem} ${result.dataElementCodes[0].code}` : '';
-      // Add indentation
-      const returnString = `${description}${startTimeString}${endTimeString}${codeDisplay}`;
-      return returnString.replace(/\n/g, `\n${currentIndentation}${keyIndentation}`);
-    } else if (result instanceof String || typeof result === 'string') {
-      return `"${result}"`;
-    } else if (result instanceof Array) {
-      prettyResult = _.map(result, value => this.prettyResult(value, indentLevel, keyIndent));
-      return `[${prettyResult.join(`,\n${currentIndentation}${keyIndentation}`)}]`;
-    } else if (result instanceof Object) {
-      // if the object has it's own custom toString method, use that instead
-      if (typeof result.toString === 'function' && result.toString !== Object.prototype.toString) {
-        return result.toString();
-      }
-      prettyResult = '{\n';
-      const baseIndentation = Array(3).join(' ');
-      const sortedKeys = Object.keys(result).sort().filter(key => key !== '_type' && key !== 'qdmVersion');
-      for (const key of sortedKeys) {
-        // add 2 spaces per indent
-        const value = result[key];
-        const nextIndentLevel = indentLevel + 2;
-        // key length + ': '
-        keyIndent = key.length + 3;
-        prettyResult = prettyResult.concat(`${baseIndentation}${currentIndentation}${key}: ${this.prettyResult(value, nextIndentLevel, keyIndent)}`);
-        // append commas if it isn't the last key
-        if (key === sortedKeys[sortedKeys.length - 1]) {
-          prettyResult += '\n';
-        } else {
-          prettyResult += ',\n';
-        }
-      }
-      prettyResult += `${currentIndentation}}`;
-      return prettyResult;
-    }
-    if (result) {
-      return JSON.stringify(result, null, 2);
-    }
-    return 'null';
-  }
-
-  /**
-     * Determines the final result (for coloring and coverage) for a clause. The result fills the 'final' property for the
-     * clause result. Look at the comments for buildStatementAndClauseResults to get a description of what each of the
-     * string results of this function are.
-     * @private
-     * @param {object} rawClauseResults - The raw clause results from the calculation engine.
-     * @param {object} statementRelevance - The statement relevance map.
-     * @param {object} statementName - The name of the statement the clause is in
-     * @param {object} lib - The name of the libarary the clause is in
-     * @param {object} localId - The localId of the current clause
-     * @param {object} clause - The clause we are getting the final result of
-     * @param {Array|Object|Interval|??} rawResult - The raw result from the calculation engine.
-     * @returns {string} The final result for the clause.
-     */
-  static setFinalResults(params) {
-    let finalResult = 'FALSE';
-    if (params.clause.isUnsupported != null) {
-      finalResult = 'NA';
-    } else if (params.statementRelevance[params.lib][params.statementName] === 'NA') {
-      finalResult = 'NA';
-    } else if (
-      params.statementRelevance[params.lib][params.statementName] === 'FALSE' ||
-      params.rawClauseResults[params.lib] == null
-    ) {
-      finalResult = 'UNHIT';
-    } else if (this.doesResultPass(params.rawResult)) {
-      finalResult = 'TRUE';
-    }
-    return finalResult;
-  }
-
-  /**
-   * Finds the clause localId for a statement and gets the raw result for it from the raw clause results.
-   * @private
-   * @param {Measure} measure - The measure.
-   * @param {string} libraryName - The library name.
-   * @param {string} statementName - The statement name.
-   * @param {object} rawClauseResults - The raw clause results from the engine.
-   * @returns {(Array|object|Interval|??)} The raw result from the calculation engine for the given statement.
-   */
-  static findResultForStatementClause(measure, libraryName, statementName, rawClauseResults) {
-    let library = null;
-    let statement = null;
-    for (const lib of Array.from(measure.elm)) {
-      if (lib.library.identifier.id === libraryName) {
-        library = lib;
-      }
-    }
-    for (const curStatement of Array.from(library.library.statements.def)) {
-      if (curStatement.name === statementName) {
-        statement = curStatement;
-      }
-    }
-    return rawClauseResults[libraryName] != null ? rawClauseResults[libraryName][statement.localId] : undefined;
-  }
-
-  /**
-   * Determines if a result (for a statement or clause) from the execution engine is a pass or fail.
-   * @private
-   * @param {(Array|object|boolean|???)} result - The result from the calculation engine.
-   * @returns {boolean} true or false
-   */
-  static doesResultPass(result) {
-    if (result === true) {
-      // Specifically a boolean true
-      return true;
-    } else if (result === false) {
-      // Specifically a boolean false
-      return false;
-    } else if (Array.isArray(result)) {
-      // Check if result is an array
-      if (result.length === 0) {
-        // Result is true if the array is not empty
-        return false;
-      } else if (result.length === 1 && result[0] === null) {
-        // But if the array has one element that is null. Then we should make it red.
-        return false;
-      }
-      return true;
-    } else if (result instanceof cql.Interval) {
-      // make it green if and Interval is returned
-      return true;
-      // Return false if an empty cql.Code is the result
-    } else if (result instanceof cql.Code && result.code == null) {
-      return false;
-    } else if (result === null || result === undefined) {
-      // Specifically no result
-      return false;
-    }
-    return true;
-  }
-
-  /*
-    * Iterate over episode results, call _buildPopulationRelevanceMap for each result
-    * OR population relevances together so that populations are marked as relevant
-    * based on all episodes instead of just one
-    * @private
-    * @param {episodeResults} result - Population_results for each episode
-    * @returns {object} Map that tells if a population calculation was considered/relevant in any episode
-    */
-  static populationRelevanceForAllEpisodes(episodeResults) {
-    const masterRelevanceMap = {};
-    for (const key in episodeResults) {
-      const episodeResult = episodeResults[key];
-      const popRelMap = this.buildPopulationRelevanceMap(episodeResult);
-      for (const pop in popRelMap) {
-        const popRel = popRelMap[pop];
-        if (masterRelevanceMap[pop] == null) {
-          masterRelevanceMap[pop] = false;
-        }
-        masterRelevanceMap[pop] = masterRelevanceMap[pop] || popRel;
-      }
-    }
-    return masterRelevanceMap;
-  }
-
-  /**
-     * Builds the `population_relevance` map. This map gets added to the Result attributes that the calculator returns.
-     *
-     * The population_relevance map indicates which populations the patient was actually considered for inclusion in. It
-     * is a simple map of "POPNAME" to true or false. true if the population was relevant/considered, false if
-     * NOT relevant/considered. This is used later to determine which define statements are relevant in the calculation.
-     *
-     * For example: If they aren't in the IPP then they are not going to be considered for any other population and all other
-     * populations will be marked NOT relevant.
-     *
-     * Below is an example result of this function (the 'population_relevance' map). DENEXCEP is not relevant because in
-     * the population_results the NUMER was greater than zero:
-     * {
-     *   "IPP": true,
-     *   "DENOM": true,
-     *   "NUMER": true,
-     *   "DENEXCEP": false
-     * }
-     *
-     * This function is extremely verbose because this is an important and confusing calculation to make. The verbosity
-     * was kept to make it more maintainable.
-     * @private
-     * @param {Result} result - The `population_results` object.
-     * @returns {object} Map that tells if a population calculation was considered/relevant.
-     */
-  static buildPopulationRelevanceMap(result) {
-    // initialize to true for every population
-    const resultShown = {};
-    _.each(Object.keys(result), (population) => { resultShown[population] = true; });
-
-    // If STRAT is 0 then everything else is not calculated
-    if (result.STRAT != null && result.STRAT === 0) {
-      if (resultShown.IPP != null) {
-        resultShown.IPP = false;
-      }
-      if (resultShown.NUMER != null) {
-        resultShown.NUMER = false;
-      }
-      if (resultShown.NUMEX != null) {
-        resultShown.NUMEX = false;
-      }
-      if (resultShown.DENOM != null) {
-        resultShown.DENOM = false;
-      }
-      if (resultShown.DENEX != null) {
-        resultShown.DENEX = false;
-      }
-      if (resultShown.DENEXCEP != null) {
-        resultShown.DENEXCEP = false;
-      }
-      if (resultShown.MSRPOPL != null) {
-        resultShown.MSRPOPL = false;
-      }
-      if (resultShown.MSRPOPLEX != null) {
-        resultShown.MSRPOPLEX = false;
-      }
-      if (resultShown.values != null) {
-        resultShown.values = false;
-      }
-    }
-
-    // If IPP is 0 then everything else is not calculated
-    if (result.IPP === 0) {
-      if (resultShown.NUMER != null) {
-        resultShown.NUMER = false;
-      }
-      if (resultShown.NUMEX != null) {
-        resultShown.NUMEX = false;
-      }
-      if (resultShown.DENOM != null) {
-        resultShown.DENOM = false;
-      }
-      if (resultShown.DENEX != null) {
-        resultShown.DENEX = false;
-      }
-      if (resultShown.DENEXCEP != null) {
-        resultShown.DENEXCEP = false;
-      }
-      if (resultShown.MSRPOPL != null) {
-        resultShown.MSRPOPL = false;
-      }
-      if (resultShown.MSRPOPLEX != null) {
-        resultShown.MSRPOPLEX = false;
-      }
-      // values is the OBSERVs
-      if (resultShown.values != null) {
-        resultShown.values = false;
-      }
-    }
-
-    // If DENOM is 0 then DENEX, DENEXCEP, NUMER and NUMEX are not calculated
-    if (result.DENOM != null && result.DENOM === 0) {
-      if (resultShown.NUMER != null) {
-        resultShown.NUMER = false;
-      }
-      if (resultShown.NUMEX != null) {
-        resultShown.NUMEX = false;
-      }
-      if (resultShown.DENEX != null) {
-        resultShown.DENEX = false;
-      }
-      if (resultShown.DENEXCEP != null) {
-        resultShown.DENEXCEP = false;
-      }
-    }
-
-    // If DENEX is greater than or equal to DENOM then NUMER, NUMEX and DENEXCEP not calculated
-    if (result.DENEX != null && result.DENEX >= result.DENOM) {
-      if (resultShown.NUMER != null) {
-        resultShown.NUMER = false;
-      }
-      if (resultShown.NUMEX != null) {
-        resultShown.NUMEX = false;
-      }
-      if (resultShown.DENEXCEP != null) {
-        resultShown.DENEXCEP = false;
-      }
-    }
-
-    // If NUMER is 0 then NUMEX is not calculated
-    if (result.NUMER != null && result.NUMER === 0) {
-      if (resultShown.NUMEX != null) {
-        resultShown.NUMEX = false;
-      }
-    }
-
-    // If NUMER is 1 then DENEXCEP is not calculated
-    if (result.NUMER != null && result.NUMER >= 1) {
-      if (resultShown.DENEXCEP != null) {
-        resultShown.DENEXCEP = false;
-      }
-    }
-
-    // If MSRPOPL is 0 then OBSERVs and MSRPOPLEX are not calculateed
-    if (result.MSRPOPL != null && result.MSRPOPL === 0) {
-      // values is the OBSERVs
-      if (resultShown.values != null) {
-        resultShown.values = false;
-      }
-      if (resultShown.MSRPOPLEX) {
-        resultShown.MSRPOPLEX = false;
-      }
-    }
-
-    // If MSRPOPLEX is greater than or equal to MSRPOPL then OBSERVs are not calculated
-    if (result.MSRPOPLEX != null && result.MSRPOPLEX >= result.MSRPOPL) {
-      // values is the OBSERVs
-      if (resultShown.values != null) {
-        resultShown.values = false;
-      }
-    }
-
-    return resultShown;
-  }
-};
-
-},{"../helpers/measure_helpers":17,"./calculator_helpers":16,"cqm-models":261,"lodash":263,"moment":264}],19:[function(require,module,exports){
-module.exports.CalculatorHelpers = require('./helpers/calculator_helpers.js');
-module.exports.MeasureHelpers = require('./helpers/measure_helpers.js');
-module.exports.ResultsHelpers = require('./helpers/results_helpers.js');
-module.exports.PatientSource = require('./models/patient_source.js');
-module.exports.Calculator = require('./models/calculator.js');
-
-},{"./helpers/calculator_helpers.js":16,"./helpers/measure_helpers.js":17,"./helpers/results_helpers.js":18,"./models/calculator.js":20,"./models/patient_source.js":21}],20:[function(require,module,exports){
-/**
- * The CQL calculator. This calls the cql-execution framework and formats the results as neccesary.
- */
-const _ = require('lodash');
-const CqmModels = require('cqm-models');
-
-const cql = CqmModels.CQL;
-const QDMPatient = CqmModels.QDMPatient;
-const ResultsHelpers = require('../helpers/results_helpers');
-const CalculatorHelpers = require('../helpers/calculator_helpers');
-const PatientSource = require('./patient_source');
-
-module.exports = class Calculator {
-  /**
-   * Generate calculation results for patients against a CQL measure.
-   *
-   * @param {Measure} measure - The measure population to calculate on.
-   * @param {Array} patients - The array of QDM patients to run calcs on.
-   * @param {Hash} valueSetsByOid - all ValueSets relevant to the measure.
-   * @param {Hash} options - contains options for measure calculation.
-   * @returns {patientId, results} results - mapping from patient to calculation results for each patient.
-   */
-  static calculate(
-    measure, patients, valueSetsByOid,
-    // default values for the passed in options object
-    {
-      includeClauseResults = false, // whether or not to include the individual clause results (note - these can be large for some measures e.g. opioids)
-      doPretty = false, // whether or not to include the .pretty attribute
-      timezoneOffset = 0,
-      effectiveDate = null, // will default to measure.measure_period.low.value if not included
-      effectiveDateEnd = null, // will default to measure.measure_period.high.value if this and effective_date not provided, if effective_date is provided will default to end of the effective_date year
-      executionDate = null, // will default to today
-    } = {}
-  ) {
-    // We store both the calculation result and the calculation code based on keys derived from the arguments
-    const resultsByPatient = {};
-
-    const qdmPatients = patients.map(patient => new QDMPatient(patient));
-    const patientSource = new PatientSource(qdmPatients);
-
-    // Grab start and end of Measurement Period
-    let start;
-    let end;
-    // Override default measure_period with effective_date if available
-    if (effectiveDate != null) {
-      start = CalculatorHelpers.parseTimeStringAsUTC(effectiveDate);
-      if (effectiveDateEnd != null) {
-        end = CalculatorHelpers.parseTimeStringAsUTC(effectiveDateEnd);
-      } else {
-        end = CalculatorHelpers.parseTimeStringAsUTCConvertingToEndOfYear(effectiveDate);
-      }
-    } else {
-      start = CalculatorHelpers.parseTimeStringAsUTC(measure.measure_period.low.value);
-      end = CalculatorHelpers.parseTimeStringAsUTC(measure.measure_period.high.value);
-    }
-
-    const startCql = cql.DateTime.fromJSDate(start, 0); // No timezone offset for start
-    const endCql = cql.DateTime.fromJSDate(end, 0); // No timezone offset for stop
-
-    // Construct CQL params
-    const params = { 'Measurement Period': new cql.Interval(startCql, endCql) };
-
-    // Set execution_date if available else default to new Date()
-    const executionDateOption = (executionDate != null) ? CalculatorHelpers.parseTimeStringAsUTC(effectiveDate) : new Date();
-
-    // Create the execution DateTime that we pass into the engine
-    const executionDateTime = cql.DateTime.fromJSDate(executionDateOption, timezoneOffset);
-
-    // Grab ELM JSON from measure, use clone so that the function added from observations does not get added over and over again
-    // Set all value set versions to 'undefined' so the execution engine does not grab the specified version in the ELM
-    const elm = CalculatorHelpers.setValueSetVersionsToUndefined(_.clone(measure.elm));
-
-    // Find the main library (the library that is the "measure") and
-    // grab the version to pass into the execution engine
-    let mainLibraryVersion = '';
-    let mainLibraryIndex = 0;
-    for (let index = 0; index < elm.length; index += 1) {
-      const elmLibrary = elm[index];
-      if (elmLibrary.library.identifier.id === measure.main_cql_library) {
-        mainLibraryVersion = elmLibrary.library.identifier.version;
-        mainLibraryIndex = index;
-      }
-    }
-
-    const observations = measure.observations;
-    const observationDefs = [];
-    let generatedELMJSON;
-    if (observations) {
-      observations.forEach((obs) => {
-        generatedELMJSON = CalculatorHelpers.generateELMJSONFunction(obs.function_name, obs.parameter);
-        // Save the name of the generated define statement, so we can check
-        // its result later in the CQL calculation process. These added
-        // define statements are called 'obs_func_' followed by the
-        // name of the function - see the 'generateELMJSONFunction' function.
-        observationDefs.push(`obs_func_${obs.function_name}`);
-        // Add the generated elm representing the observation function into the elm
-        elm[mainLibraryIndex].library.statements.def.push(generatedELMJSON);
-      });
-    }
-
-    // Grab the correct version of value sets to pass into the execution engine.
-    const measureValueSets = CalculatorHelpers.valueSetsForCodeService(valueSetsByOid, measure.value_set_oids);
-
-    // Calculate results for each CQL statement
-    const resultsRaw = Calculator.executeEngine(
-      elm,
-      patientSource,
-      measureValueSets,
-      measure.main_cql_library,
-      mainLibraryVersion,
-      executionDateTime,
-      params
-    );
-
-    Object.keys(resultsRaw.patientResults).forEach((patientId) => {
-      let populationResults;
-      let episodeResults;
-      let populationRelevance;
-
-      // Parse CQL statement results into population values
-      measure.populations.forEach((population, populationIndex) => {
-        [populationResults, episodeResults] = Array.from(CalculatorHelpers.createPopulationValues(
-          measure,
-          population,
-          resultsRaw,
-          patientId,
-          observationDefs,
-          populationIndex
-        ));
-        if (populationResults) {
-          const result = new CqmModels.IndividualResult();
-          result.set(populationResults);
-          if (episodeResults != null) {
-            result.episode_results = episodeResults;
-            if (Object.keys(episodeResults).length > 0) {
-              /* In episode of care based measures, episode_results contains the population results
-               * for EACH episode, so we need to build population_relevance based on a combonation
-               * of the episode_results. IE: If DENEX is irrelevant for one episode but relevant for
-               * another, the logic view should not highlight it as irrelevant
-               */
-              populationRelevance = ResultsHelpers.populationRelevanceForAllEpisodes(episodeResults);
-            } else {
-              // Use the patient based relevance if there are no episodes. This will properly set IPP or STRAT to true.
-              populationRelevance = ResultsHelpers.buildPopulationRelevanceMap(populationResults);
-            }
-          } else {
-            // Calculate relevance for patient based measure
-            populationRelevance = ResultsHelpers.buildPopulationRelevanceMap(populationResults);
-          }
-
-          const statementRelevance = ResultsHelpers.buildStatementRelevanceMap(
-            populationRelevance,
-            measure,
-            population,
-            populationIndex
-          );
-
-          result.extendedData.population_relevance = populationRelevance;
-          result.extendedData.statement_relevance = statementRelevance;
-
-          result.set(ResultsHelpers.buildStatementAndClauseResults(measure, resultsRaw.localIdPatientResultsMap[patientId], statementRelevance, doPretty, includeClauseResults));
-
-          // Populate result with info
-          result.patient = patientId;
-          result.measure = measure._id;
-          result.state = 'complete';
-
-          // Add result of population set, hashed by population set id
-          if (!resultsByPatient[patientId]) {
-            resultsByPatient[patientId] = {};
-          }
-          resultsByPatient[patientId][population.id] = result;
-        }
-      });
-    });
-    return resultsByPatient;
-  }
-
-  /**
-   * Call into the CQL execution engine for raw results.
-   */
-  static executeEngine(elm, patientSource, valueSets, libraryName, version, executionDateTime, parameters = {}) {
-    let lib;
-    let rep;
-    if (Array.isArray(elm)) {
-      if (elm.length > 1) {
-        rep = new cql.Repository(elm);
-        lib = rep.resolve(libraryName, version);
-      } else {
-        lib = new cql.Library(elm[0]);
-      }
-    } else {
-      lib = new cql.Library(elm);
-    }
-    const codeService = new cql.CodeService(valueSets);
-    const executor = new cql.Executor(lib, codeService, parameters);
-    return executor.exec(patientSource, executionDateTime);
-  }
-};
-
-},{"../helpers/calculator_helpers":16,"../helpers/results_helpers":18,"./patient_source":21,"cqm-models":261,"lodash":263}],21:[function(require,module,exports){
-// This is a wrapper class for an array of QDM Patients
-// This class adds functions used by the execution engine to
-// traverse an array of QDM Patients
-module.exports = class PatientSource {
-  constructor(patients) {
-    this.patients = patients;
-    this.index = 0;
-  }
-  currentPatient() {
-    if (this.index < this.patients.length) {
-      return this.patients[this.index];
-    }
-    return null;
-  }
-  nextPatient() {
-    this.index += 1;
-  }
-};
-
-},{}],22:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 (function (process,global,setImmediate){
 /* @preserve
  * The MIT License (MIT)
@@ -11380,7 +8628,7 @@ module.exports = ret;
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("timers").setImmediate)
-},{"_process":11,"timers":12}],23:[function(require,module,exports){
+},{"_process":364,"timers":368}],14:[function(require,module,exports){
 (function (global){
 /**
  * Module dependencies.
@@ -11766,7 +9014,7 @@ module.exports = Binary;
 module.exports.Binary = Binary;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"buffer":6}],24:[function(require,module,exports){
+},{"buffer":34}],15:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -12155,7 +9403,7 @@ module.exports.BSONRegExp = BSONRegExp;
 module.exports.Decimal128 = Decimal128;
 
 }).call(this,require("buffer").Buffer)
-},{"./binary":23,"./code":25,"./db_ref":26,"./decimal128":27,"./double":28,"./int_32":30,"./long":31,"./map":32,"./max_key":33,"./min_key":34,"./objectid":35,"./parser/calculate_size":36,"./parser/deserializer":37,"./parser/serializer":38,"./regexp":40,"./symbol":41,"./timestamp":42,"buffer":6}],25:[function(require,module,exports){
+},{"./binary":14,"./code":16,"./db_ref":17,"./decimal128":18,"./double":19,"./int_32":21,"./long":22,"./map":23,"./max_key":24,"./min_key":25,"./objectid":26,"./parser/calculate_size":27,"./parser/deserializer":28,"./parser/serializer":29,"./regexp":31,"./symbol":32,"./timestamp":33,"buffer":34}],16:[function(require,module,exports){
 /**
  * A class representation of the BSON Code type.
  *
@@ -12181,7 +9429,7 @@ Code.prototype.toJSON = function() {
 module.exports = Code;
 module.exports.Code = Code;
 
-},{}],26:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /**
  * A class representation of the BSON DBRef type.
  *
@@ -12215,7 +9463,7 @@ DBRef.prototype.toJSON = function() {
 module.exports = DBRef;
 module.exports.DBRef = DBRef;
 
-},{}],27:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -13037,7 +10285,7 @@ module.exports = Decimal128;
 module.exports.Decimal128 = Decimal128;
 
 }).call(this,require("buffer").Buffer)
-},{"./long":31,"buffer":6}],28:[function(require,module,exports){
+},{"./long":22,"buffer":34}],19:[function(require,module,exports){
 /**
  * A class representation of the BSON Double type.
  *
@@ -13072,7 +10320,7 @@ Double.prototype.toJSON = function() {
 module.exports = Double;
 module.exports.Double = Double;
 
-},{}],29:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 // Copyright (c) 2008, Fair Oaks Labs, Inc.
 // All rights reserved.
 //
@@ -13198,7 +10446,7 @@ var writeIEEE754 = function(buffer, value, offset, endian, mLen, nBytes) {
 exports.readIEEE754 = readIEEE754;
 exports.writeIEEE754 = writeIEEE754;
 
-},{}],30:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 /**
  * A class representation of a BSON Int32 type.
  *
@@ -13233,7 +10481,7 @@ Int32.prototype.toJSON = function() {
 module.exports = Int32;
 module.exports.Int32 = Int32;
 
-},{}],31:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14086,7 +11334,7 @@ Long.TWO_PWR_24_ = Long.fromInt(1 << 24);
 module.exports = Long;
 module.exports.Long = Long;
 
-},{}],32:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -14218,7 +11466,7 @@ if (typeof global.Map !== 'undefined') {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],33:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 /**
  * A class representation of the BSON MaxKey type.
  *
@@ -14234,7 +11482,7 @@ function MaxKey() {
 module.exports = MaxKey;
 module.exports.MaxKey = MaxKey;
 
-},{}],34:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 /**
  * A class representation of the BSON MinKey type.
  *
@@ -14250,7 +11498,7 @@ function MinKey() {
 module.exports = MinKey;
 module.exports.MinKey = MinKey;
 
-},{}],35:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 (function (process,Buffer){
 // Custom inspect property name / symbol.
 var inspect = 'inspect';
@@ -14641,7 +11889,7 @@ module.exports.ObjectID = ObjectID;
 module.exports.ObjectId = ObjectID;
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":11,"buffer":6,"util":14}],36:[function(require,module,exports){
+},{"_process":364,"buffer":34,"util":370}],27:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -14900,7 +12148,7 @@ BSON.JS_INT_MIN = -0x20000000000000; // Any integer down to -2^53 can be precise
 module.exports = calculateObjectSize;
 
 }).call(this,require("buffer").Buffer)
-},{"../binary":23,"../code":25,"../db_ref":26,"../decimal128":27,"../double":28,"../long":31,"../max_key":33,"../min_key":34,"../objectid":35,"../regexp":40,"../symbol":41,"../timestamp":42,"./utils":39,"buffer":6}],37:[function(require,module,exports){
+},{"../binary":14,"../code":16,"../db_ref":17,"../decimal128":18,"../double":19,"../long":22,"../max_key":24,"../min_key":25,"../objectid":26,"../regexp":31,"../symbol":32,"../timestamp":33,"./utils":30,"buffer":34}],28:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -15684,7 +12932,7 @@ var JS_INT_MIN_LONG = Long.fromNumber(-0x20000000000000); // Any integer down to
 module.exports = deserialize;
 
 }).call(this,require("buffer").Buffer)
-},{"../binary":23,"../code":25,"../db_ref":26,"../decimal128":27,"../double":28,"../int_32":30,"../long":31,"../max_key":33,"../min_key":34,"../objectid":35,"../regexp":40,"../symbol":41,"../timestamp":42,"buffer":6}],38:[function(require,module,exports){
+},{"../binary":14,"../code":16,"../db_ref":17,"../decimal128":18,"../double":19,"../int_32":21,"../long":22,"../max_key":24,"../min_key":25,"../objectid":26,"../regexp":31,"../symbol":32,"../timestamp":33,"buffer":34}],29:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -16870,8 +14118,8 @@ BSON.JS_INT_MIN = -0x20000000000000; // Any integer down to -2^53 can be precise
 
 module.exports = serializeInto;
 
-}).call(this,{"isBuffer":require("../../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../binary":23,"../float_parser":29,"../long":31,"../map":32,"../min_key":34,"./utils":39}],39:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../is-buffer/index.js")})
+},{"../../../../is-buffer/index.js":257,"../binary":14,"../float_parser":20,"../long":22,"../map":23,"../min_key":25,"./utils":30}],30:[function(require,module,exports){
 'use strict';
 
 /**
@@ -16887,7 +14135,7 @@ module.exports = {
 };
 
 
-},{}],40:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 /**
  * A class representation of the BSON RegExp type.
  *
@@ -16922,7 +14170,7 @@ function BSONRegExp(pattern, options) {
 module.exports = BSONRegExp;
 module.exports.BSONRegExp = BSONRegExp;
 
-},{}],41:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 (function (Buffer){
 // Custom inspect property name / symbol.
 var inspect = Buffer ? require('util').inspect.custom || 'inspect' : 'inspect';
@@ -16976,7 +14224,7 @@ module.exports = Symbol;
 module.exports.Symbol = Symbol;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":6,"util":14}],42:[function(require,module,exports){
+},{"buffer":34,"util":370}],33:[function(require,module,exports){
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -17832,7 +15080,1786 @@ Timestamp.TWO_PWR_24_ = Timestamp.fromInt(1 << 24);
 module.exports = Timestamp;
 module.exports.Timestamp = Timestamp;
 
-},{}],43:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+/* eslint-disable no-proto */
+
+'use strict'
+
+var base64 = require('base64-js')
+var ieee754 = require('ieee754')
+
+exports.Buffer = Buffer
+exports.SlowBuffer = SlowBuffer
+exports.INSPECT_MAX_BYTES = 50
+
+var K_MAX_LENGTH = 0x7fffffff
+exports.kMaxLength = K_MAX_LENGTH
+
+/**
+ * If `Buffer.TYPED_ARRAY_SUPPORT`:
+ *   === true    Use Uint8Array implementation (fastest)
+ *   === false   Print warning and recommend using `buffer` v4.x which has an Object
+ *               implementation (most compatible, even IE6)
+ *
+ * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
+ * Opera 11.6+, iOS 4.2+.
+ *
+ * We report that the browser does not support typed arrays if the are not subclassable
+ * using __proto__. Firefox 4-29 lacks support for adding new properties to `Uint8Array`
+ * (See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438). IE 10 lacks support
+ * for __proto__ and has a buggy typed array implementation.
+ */
+Buffer.TYPED_ARRAY_SUPPORT = typedArraySupport()
+
+if (!Buffer.TYPED_ARRAY_SUPPORT && typeof console !== 'undefined' &&
+    typeof console.error === 'function') {
+  console.error(
+    'This browser lacks typed array (Uint8Array) support which is required by ' +
+    '`buffer` v5.x. Use `buffer` v4.x if you require old browser support.'
+  )
+}
+
+function typedArraySupport () {
+  // Can typed array instances can be augmented?
+  try {
+    var arr = new Uint8Array(1)
+    arr.__proto__ = { __proto__: Uint8Array.prototype, foo: function () { return 42 } }
+    return arr.foo() === 42
+  } catch (e) {
+    return false
+  }
+}
+
+Object.defineProperty(Buffer.prototype, 'parent', {
+  enumerable: true,
+  get: function () {
+    if (!Buffer.isBuffer(this)) return undefined
+    return this.buffer
+  }
+})
+
+Object.defineProperty(Buffer.prototype, 'offset', {
+  enumerable: true,
+  get: function () {
+    if (!Buffer.isBuffer(this)) return undefined
+    return this.byteOffset
+  }
+})
+
+function createBuffer (length) {
+  if (length > K_MAX_LENGTH) {
+    throw new RangeError('The value "' + length + '" is invalid for option "size"')
+  }
+  // Return an augmented `Uint8Array` instance
+  var buf = new Uint8Array(length)
+  buf.__proto__ = Buffer.prototype
+  return buf
+}
+
+/**
+ * The Buffer constructor returns instances of `Uint8Array` that have their
+ * prototype changed to `Buffer.prototype`. Furthermore, `Buffer` is a subclass of
+ * `Uint8Array`, so the returned instances will have all the node `Buffer` methods
+ * and the `Uint8Array` methods. Square bracket notation works as expected -- it
+ * returns a single octet.
+ *
+ * The `Uint8Array` prototype remains unmodified.
+ */
+
+function Buffer (arg, encodingOrOffset, length) {
+  // Common case.
+  if (typeof arg === 'number') {
+    if (typeof encodingOrOffset === 'string') {
+      throw new TypeError(
+        'The "string" argument must be of type string. Received type number'
+      )
+    }
+    return allocUnsafe(arg)
+  }
+  return from(arg, encodingOrOffset, length)
+}
+
+// Fix subarray() in ES2016. See: https://github.com/feross/buffer/pull/97
+if (typeof Symbol !== 'undefined' && Symbol.species != null &&
+    Buffer[Symbol.species] === Buffer) {
+  Object.defineProperty(Buffer, Symbol.species, {
+    value: null,
+    configurable: true,
+    enumerable: false,
+    writable: false
+  })
+}
+
+Buffer.poolSize = 8192 // not used by this implementation
+
+function from (value, encodingOrOffset, length) {
+  if (typeof value === 'string') {
+    return fromString(value, encodingOrOffset)
+  }
+
+  if (ArrayBuffer.isView(value)) {
+    return fromArrayLike(value)
+  }
+
+  if (value == null) {
+    throw TypeError(
+      'The first argument must be one of type string, Buffer, ArrayBuffer, Array, ' +
+      'or Array-like Object. Received type ' + (typeof value)
+    )
+  }
+
+  if (isInstance(value, ArrayBuffer) ||
+      (value && isInstance(value.buffer, ArrayBuffer))) {
+    return fromArrayBuffer(value, encodingOrOffset, length)
+  }
+
+  if (typeof value === 'number') {
+    throw new TypeError(
+      'The "value" argument must not be of type number. Received type number'
+    )
+  }
+
+  var valueOf = value.valueOf && value.valueOf()
+  if (valueOf != null && valueOf !== value) {
+    return Buffer.from(valueOf, encodingOrOffset, length)
+  }
+
+  var b = fromObject(value)
+  if (b) return b
+
+  if (typeof Symbol !== 'undefined' && Symbol.toPrimitive != null &&
+      typeof value[Symbol.toPrimitive] === 'function') {
+    return Buffer.from(
+      value[Symbol.toPrimitive]('string'), encodingOrOffset, length
+    )
+  }
+
+  throw new TypeError(
+    'The first argument must be one of type string, Buffer, ArrayBuffer, Array, ' +
+    'or Array-like Object. Received type ' + (typeof value)
+  )
+}
+
+/**
+ * Functionally equivalent to Buffer(arg, encoding) but throws a TypeError
+ * if value is a number.
+ * Buffer.from(str[, encoding])
+ * Buffer.from(array)
+ * Buffer.from(buffer)
+ * Buffer.from(arrayBuffer[, byteOffset[, length]])
+ **/
+Buffer.from = function (value, encodingOrOffset, length) {
+  return from(value, encodingOrOffset, length)
+}
+
+// Note: Change prototype *after* Buffer.from is defined to workaround Chrome bug:
+// https://github.com/feross/buffer/pull/148
+Buffer.prototype.__proto__ = Uint8Array.prototype
+Buffer.__proto__ = Uint8Array
+
+function assertSize (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('"size" argument must be of type number')
+  } else if (size < 0) {
+    throw new RangeError('The value "' + size + '" is invalid for option "size"')
+  }
+}
+
+function alloc (size, fill, encoding) {
+  assertSize(size)
+  if (size <= 0) {
+    return createBuffer(size)
+  }
+  if (fill !== undefined) {
+    // Only pay attention to encoding if it's a string. This
+    // prevents accidentally sending in a number that would
+    // be interpretted as a start offset.
+    return typeof encoding === 'string'
+      ? createBuffer(size).fill(fill, encoding)
+      : createBuffer(size).fill(fill)
+  }
+  return createBuffer(size)
+}
+
+/**
+ * Creates a new filled Buffer instance.
+ * alloc(size[, fill[, encoding]])
+ **/
+Buffer.alloc = function (size, fill, encoding) {
+  return alloc(size, fill, encoding)
+}
+
+function allocUnsafe (size) {
+  assertSize(size)
+  return createBuffer(size < 0 ? 0 : checked(size) | 0)
+}
+
+/**
+ * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
+ * */
+Buffer.allocUnsafe = function (size) {
+  return allocUnsafe(size)
+}
+/**
+ * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
+ */
+Buffer.allocUnsafeSlow = function (size) {
+  return allocUnsafe(size)
+}
+
+function fromString (string, encoding) {
+  if (typeof encoding !== 'string' || encoding === '') {
+    encoding = 'utf8'
+  }
+
+  if (!Buffer.isEncoding(encoding)) {
+    throw new TypeError('Unknown encoding: ' + encoding)
+  }
+
+  var length = byteLength(string, encoding) | 0
+  var buf = createBuffer(length)
+
+  var actual = buf.write(string, encoding)
+
+  if (actual !== length) {
+    // Writing a hex string, for example, that contains invalid characters will
+    // cause everything after the first invalid character to be ignored. (e.g.
+    // 'abxxcd' will be treated as 'ab')
+    buf = buf.slice(0, actual)
+  }
+
+  return buf
+}
+
+function fromArrayLike (array) {
+  var length = array.length < 0 ? 0 : checked(array.length) | 0
+  var buf = createBuffer(length)
+  for (var i = 0; i < length; i += 1) {
+    buf[i] = array[i] & 255
+  }
+  return buf
+}
+
+function fromArrayBuffer (array, byteOffset, length) {
+  if (byteOffset < 0 || array.byteLength < byteOffset) {
+    throw new RangeError('"offset" is outside of buffer bounds')
+  }
+
+  if (array.byteLength < byteOffset + (length || 0)) {
+    throw new RangeError('"length" is outside of buffer bounds')
+  }
+
+  var buf
+  if (byteOffset === undefined && length === undefined) {
+    buf = new Uint8Array(array)
+  } else if (length === undefined) {
+    buf = new Uint8Array(array, byteOffset)
+  } else {
+    buf = new Uint8Array(array, byteOffset, length)
+  }
+
+  // Return an augmented `Uint8Array` instance
+  buf.__proto__ = Buffer.prototype
+  return buf
+}
+
+function fromObject (obj) {
+  if (Buffer.isBuffer(obj)) {
+    var len = checked(obj.length) | 0
+    var buf = createBuffer(len)
+
+    if (buf.length === 0) {
+      return buf
+    }
+
+    obj.copy(buf, 0, 0, len)
+    return buf
+  }
+
+  if (obj.length !== undefined) {
+    if (typeof obj.length !== 'number' || numberIsNaN(obj.length)) {
+      return createBuffer(0)
+    }
+    return fromArrayLike(obj)
+  }
+
+  if (obj.type === 'Buffer' && Array.isArray(obj.data)) {
+    return fromArrayLike(obj.data)
+  }
+}
+
+function checked (length) {
+  // Note: cannot use `length < K_MAX_LENGTH` here because that fails when
+  // length is NaN (which is otherwise coerced to zero.)
+  if (length >= K_MAX_LENGTH) {
+    throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
+                         'size: 0x' + K_MAX_LENGTH.toString(16) + ' bytes')
+  }
+  return length | 0
+}
+
+function SlowBuffer (length) {
+  if (+length != length) { // eslint-disable-line eqeqeq
+    length = 0
+  }
+  return Buffer.alloc(+length)
+}
+
+Buffer.isBuffer = function isBuffer (b) {
+  return b != null && b._isBuffer === true &&
+    b !== Buffer.prototype // so Buffer.isBuffer(Buffer.prototype) will be false
+}
+
+Buffer.compare = function compare (a, b) {
+  if (isInstance(a, Uint8Array)) a = Buffer.from(a, a.offset, a.byteLength)
+  if (isInstance(b, Uint8Array)) b = Buffer.from(b, b.offset, b.byteLength)
+  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
+    throw new TypeError(
+      'The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array'
+    )
+  }
+
+  if (a === b) return 0
+
+  var x = a.length
+  var y = b.length
+
+  for (var i = 0, len = Math.min(x, y); i < len; ++i) {
+    if (a[i] !== b[i]) {
+      x = a[i]
+      y = b[i]
+      break
+    }
+  }
+
+  if (x < y) return -1
+  if (y < x) return 1
+  return 0
+}
+
+Buffer.isEncoding = function isEncoding (encoding) {
+  switch (String(encoding).toLowerCase()) {
+    case 'hex':
+    case 'utf8':
+    case 'utf-8':
+    case 'ascii':
+    case 'latin1':
+    case 'binary':
+    case 'base64':
+    case 'ucs2':
+    case 'ucs-2':
+    case 'utf16le':
+    case 'utf-16le':
+      return true
+    default:
+      return false
+  }
+}
+
+Buffer.concat = function concat (list, length) {
+  if (!Array.isArray(list)) {
+    throw new TypeError('"list" argument must be an Array of Buffers')
+  }
+
+  if (list.length === 0) {
+    return Buffer.alloc(0)
+  }
+
+  var i
+  if (length === undefined) {
+    length = 0
+    for (i = 0; i < list.length; ++i) {
+      length += list[i].length
+    }
+  }
+
+  var buffer = Buffer.allocUnsafe(length)
+  var pos = 0
+  for (i = 0; i < list.length; ++i) {
+    var buf = list[i]
+    if (isInstance(buf, Uint8Array)) {
+      buf = Buffer.from(buf)
+    }
+    if (!Buffer.isBuffer(buf)) {
+      throw new TypeError('"list" argument must be an Array of Buffers')
+    }
+    buf.copy(buffer, pos)
+    pos += buf.length
+  }
+  return buffer
+}
+
+function byteLength (string, encoding) {
+  if (Buffer.isBuffer(string)) {
+    return string.length
+  }
+  if (ArrayBuffer.isView(string) || isInstance(string, ArrayBuffer)) {
+    return string.byteLength
+  }
+  if (typeof string !== 'string') {
+    throw new TypeError(
+      'The "string" argument must be one of type string, Buffer, or ArrayBuffer. ' +
+      'Received type ' + typeof string
+    )
+  }
+
+  var len = string.length
+  var mustMatch = (arguments.length > 2 && arguments[2] === true)
+  if (!mustMatch && len === 0) return 0
+
+  // Use a for loop to avoid recursion
+  var loweredCase = false
+  for (;;) {
+    switch (encoding) {
+      case 'ascii':
+      case 'latin1':
+      case 'binary':
+        return len
+      case 'utf8':
+      case 'utf-8':
+        return utf8ToBytes(string).length
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return len * 2
+      case 'hex':
+        return len >>> 1
+      case 'base64':
+        return base64ToBytes(string).length
+      default:
+        if (loweredCase) {
+          return mustMatch ? -1 : utf8ToBytes(string).length // assume utf8
+        }
+        encoding = ('' + encoding).toLowerCase()
+        loweredCase = true
+    }
+  }
+}
+Buffer.byteLength = byteLength
+
+function slowToString (encoding, start, end) {
+  var loweredCase = false
+
+  // No need to verify that "this.length <= MAX_UINT32" since it's a read-only
+  // property of a typed array.
+
+  // This behaves neither like String nor Uint8Array in that we set start/end
+  // to their upper/lower bounds if the value passed is out of range.
+  // undefined is handled specially as per ECMA-262 6th Edition,
+  // Section 13.3.3.7 Runtime Semantics: KeyedBindingInitialization.
+  if (start === undefined || start < 0) {
+    start = 0
+  }
+  // Return early if start > this.length. Done here to prevent potential uint32
+  // coercion fail below.
+  if (start > this.length) {
+    return ''
+  }
+
+  if (end === undefined || end > this.length) {
+    end = this.length
+  }
+
+  if (end <= 0) {
+    return ''
+  }
+
+  // Force coersion to uint32. This will also coerce falsey/NaN values to 0.
+  end >>>= 0
+  start >>>= 0
+
+  if (end <= start) {
+    return ''
+  }
+
+  if (!encoding) encoding = 'utf8'
+
+  while (true) {
+    switch (encoding) {
+      case 'hex':
+        return hexSlice(this, start, end)
+
+      case 'utf8':
+      case 'utf-8':
+        return utf8Slice(this, start, end)
+
+      case 'ascii':
+        return asciiSlice(this, start, end)
+
+      case 'latin1':
+      case 'binary':
+        return latin1Slice(this, start, end)
+
+      case 'base64':
+        return base64Slice(this, start, end)
+
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return utf16leSlice(this, start, end)
+
+      default:
+        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
+        encoding = (encoding + '').toLowerCase()
+        loweredCase = true
+    }
+  }
+}
+
+// This property is used by `Buffer.isBuffer` (and the `is-buffer` npm package)
+// to detect a Buffer instance. It's not possible to use `instanceof Buffer`
+// reliably in a browserify context because there could be multiple different
+// copies of the 'buffer' package in use. This method works even for Buffer
+// instances that were created from another copy of the `buffer` package.
+// See: https://github.com/feross/buffer/issues/154
+Buffer.prototype._isBuffer = true
+
+function swap (b, n, m) {
+  var i = b[n]
+  b[n] = b[m]
+  b[m] = i
+}
+
+Buffer.prototype.swap16 = function swap16 () {
+  var len = this.length
+  if (len % 2 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 16-bits')
+  }
+  for (var i = 0; i < len; i += 2) {
+    swap(this, i, i + 1)
+  }
+  return this
+}
+
+Buffer.prototype.swap32 = function swap32 () {
+  var len = this.length
+  if (len % 4 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 32-bits')
+  }
+  for (var i = 0; i < len; i += 4) {
+    swap(this, i, i + 3)
+    swap(this, i + 1, i + 2)
+  }
+  return this
+}
+
+Buffer.prototype.swap64 = function swap64 () {
+  var len = this.length
+  if (len % 8 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 64-bits')
+  }
+  for (var i = 0; i < len; i += 8) {
+    swap(this, i, i + 7)
+    swap(this, i + 1, i + 6)
+    swap(this, i + 2, i + 5)
+    swap(this, i + 3, i + 4)
+  }
+  return this
+}
+
+Buffer.prototype.toString = function toString () {
+  var length = this.length
+  if (length === 0) return ''
+  if (arguments.length === 0) return utf8Slice(this, 0, length)
+  return slowToString.apply(this, arguments)
+}
+
+Buffer.prototype.toLocaleString = Buffer.prototype.toString
+
+Buffer.prototype.equals = function equals (b) {
+  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
+  if (this === b) return true
+  return Buffer.compare(this, b) === 0
+}
+
+Buffer.prototype.inspect = function inspect () {
+  var str = ''
+  var max = exports.INSPECT_MAX_BYTES
+  str = this.toString('hex', 0, max).replace(/(.{2})/g, '$1 ').trim()
+  if (this.length > max) str += ' ... '
+  return '<Buffer ' + str + '>'
+}
+
+Buffer.prototype.compare = function compare (target, start, end, thisStart, thisEnd) {
+  if (isInstance(target, Uint8Array)) {
+    target = Buffer.from(target, target.offset, target.byteLength)
+  }
+  if (!Buffer.isBuffer(target)) {
+    throw new TypeError(
+      'The "target" argument must be one of type Buffer or Uint8Array. ' +
+      'Received type ' + (typeof target)
+    )
+  }
+
+  if (start === undefined) {
+    start = 0
+  }
+  if (end === undefined) {
+    end = target ? target.length : 0
+  }
+  if (thisStart === undefined) {
+    thisStart = 0
+  }
+  if (thisEnd === undefined) {
+    thisEnd = this.length
+  }
+
+  if (start < 0 || end > target.length || thisStart < 0 || thisEnd > this.length) {
+    throw new RangeError('out of range index')
+  }
+
+  if (thisStart >= thisEnd && start >= end) {
+    return 0
+  }
+  if (thisStart >= thisEnd) {
+    return -1
+  }
+  if (start >= end) {
+    return 1
+  }
+
+  start >>>= 0
+  end >>>= 0
+  thisStart >>>= 0
+  thisEnd >>>= 0
+
+  if (this === target) return 0
+
+  var x = thisEnd - thisStart
+  var y = end - start
+  var len = Math.min(x, y)
+
+  var thisCopy = this.slice(thisStart, thisEnd)
+  var targetCopy = target.slice(start, end)
+
+  for (var i = 0; i < len; ++i) {
+    if (thisCopy[i] !== targetCopy[i]) {
+      x = thisCopy[i]
+      y = targetCopy[i]
+      break
+    }
+  }
+
+  if (x < y) return -1
+  if (y < x) return 1
+  return 0
+}
+
+// Finds either the first index of `val` in `buffer` at offset >= `byteOffset`,
+// OR the last index of `val` in `buffer` at offset <= `byteOffset`.
+//
+// Arguments:
+// - buffer - a Buffer to search
+// - val - a string, Buffer, or number
+// - byteOffset - an index into `buffer`; will be clamped to an int32
+// - encoding - an optional encoding, relevant is val is a string
+// - dir - true for indexOf, false for lastIndexOf
+function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
+  // Empty buffer means no match
+  if (buffer.length === 0) return -1
+
+  // Normalize byteOffset
+  if (typeof byteOffset === 'string') {
+    encoding = byteOffset
+    byteOffset = 0
+  } else if (byteOffset > 0x7fffffff) {
+    byteOffset = 0x7fffffff
+  } else if (byteOffset < -0x80000000) {
+    byteOffset = -0x80000000
+  }
+  byteOffset = +byteOffset // Coerce to Number.
+  if (numberIsNaN(byteOffset)) {
+    // byteOffset: it it's undefined, null, NaN, "foo", etc, search whole buffer
+    byteOffset = dir ? 0 : (buffer.length - 1)
+  }
+
+  // Normalize byteOffset: negative offsets start from the end of the buffer
+  if (byteOffset < 0) byteOffset = buffer.length + byteOffset
+  if (byteOffset >= buffer.length) {
+    if (dir) return -1
+    else byteOffset = buffer.length - 1
+  } else if (byteOffset < 0) {
+    if (dir) byteOffset = 0
+    else return -1
+  }
+
+  // Normalize val
+  if (typeof val === 'string') {
+    val = Buffer.from(val, encoding)
+  }
+
+  // Finally, search either indexOf (if dir is true) or lastIndexOf
+  if (Buffer.isBuffer(val)) {
+    // Special case: looking for empty string/buffer always fails
+    if (val.length === 0) {
+      return -1
+    }
+    return arrayIndexOf(buffer, val, byteOffset, encoding, dir)
+  } else if (typeof val === 'number') {
+    val = val & 0xFF // Search for a byte value [0-255]
+    if (typeof Uint8Array.prototype.indexOf === 'function') {
+      if (dir) {
+        return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset)
+      } else {
+        return Uint8Array.prototype.lastIndexOf.call(buffer, val, byteOffset)
+      }
+    }
+    return arrayIndexOf(buffer, [ val ], byteOffset, encoding, dir)
+  }
+
+  throw new TypeError('val must be string, number or Buffer')
+}
+
+function arrayIndexOf (arr, val, byteOffset, encoding, dir) {
+  var indexSize = 1
+  var arrLength = arr.length
+  var valLength = val.length
+
+  if (encoding !== undefined) {
+    encoding = String(encoding).toLowerCase()
+    if (encoding === 'ucs2' || encoding === 'ucs-2' ||
+        encoding === 'utf16le' || encoding === 'utf-16le') {
+      if (arr.length < 2 || val.length < 2) {
+        return -1
+      }
+      indexSize = 2
+      arrLength /= 2
+      valLength /= 2
+      byteOffset /= 2
+    }
+  }
+
+  function read (buf, i) {
+    if (indexSize === 1) {
+      return buf[i]
+    } else {
+      return buf.readUInt16BE(i * indexSize)
+    }
+  }
+
+  var i
+  if (dir) {
+    var foundIndex = -1
+    for (i = byteOffset; i < arrLength; i++) {
+      if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
+        if (foundIndex === -1) foundIndex = i
+        if (i - foundIndex + 1 === valLength) return foundIndex * indexSize
+      } else {
+        if (foundIndex !== -1) i -= i - foundIndex
+        foundIndex = -1
+      }
+    }
+  } else {
+    if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength
+    for (i = byteOffset; i >= 0; i--) {
+      var found = true
+      for (var j = 0; j < valLength; j++) {
+        if (read(arr, i + j) !== read(val, j)) {
+          found = false
+          break
+        }
+      }
+      if (found) return i
+    }
+  }
+
+  return -1
+}
+
+Buffer.prototype.includes = function includes (val, byteOffset, encoding) {
+  return this.indexOf(val, byteOffset, encoding) !== -1
+}
+
+Buffer.prototype.indexOf = function indexOf (val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
+}
+
+Buffer.prototype.lastIndexOf = function lastIndexOf (val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
+}
+
+function hexWrite (buf, string, offset, length) {
+  offset = Number(offset) || 0
+  var remaining = buf.length - offset
+  if (!length) {
+    length = remaining
+  } else {
+    length = Number(length)
+    if (length > remaining) {
+      length = remaining
+    }
+  }
+
+  var strLen = string.length
+
+  if (length > strLen / 2) {
+    length = strLen / 2
+  }
+  for (var i = 0; i < length; ++i) {
+    var parsed = parseInt(string.substr(i * 2, 2), 16)
+    if (numberIsNaN(parsed)) return i
+    buf[offset + i] = parsed
+  }
+  return i
+}
+
+function utf8Write (buf, string, offset, length) {
+  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
+}
+
+function asciiWrite (buf, string, offset, length) {
+  return blitBuffer(asciiToBytes(string), buf, offset, length)
+}
+
+function latin1Write (buf, string, offset, length) {
+  return asciiWrite(buf, string, offset, length)
+}
+
+function base64Write (buf, string, offset, length) {
+  return blitBuffer(base64ToBytes(string), buf, offset, length)
+}
+
+function ucs2Write (buf, string, offset, length) {
+  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
+}
+
+Buffer.prototype.write = function write (string, offset, length, encoding) {
+  // Buffer#write(string)
+  if (offset === undefined) {
+    encoding = 'utf8'
+    length = this.length
+    offset = 0
+  // Buffer#write(string, encoding)
+  } else if (length === undefined && typeof offset === 'string') {
+    encoding = offset
+    length = this.length
+    offset = 0
+  // Buffer#write(string, offset[, length][, encoding])
+  } else if (isFinite(offset)) {
+    offset = offset >>> 0
+    if (isFinite(length)) {
+      length = length >>> 0
+      if (encoding === undefined) encoding = 'utf8'
+    } else {
+      encoding = length
+      length = undefined
+    }
+  } else {
+    throw new Error(
+      'Buffer.write(string, encoding, offset[, length]) is no longer supported'
+    )
+  }
+
+  var remaining = this.length - offset
+  if (length === undefined || length > remaining) length = remaining
+
+  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
+    throw new RangeError('Attempt to write outside buffer bounds')
+  }
+
+  if (!encoding) encoding = 'utf8'
+
+  var loweredCase = false
+  for (;;) {
+    switch (encoding) {
+      case 'hex':
+        return hexWrite(this, string, offset, length)
+
+      case 'utf8':
+      case 'utf-8':
+        return utf8Write(this, string, offset, length)
+
+      case 'ascii':
+        return asciiWrite(this, string, offset, length)
+
+      case 'latin1':
+      case 'binary':
+        return latin1Write(this, string, offset, length)
+
+      case 'base64':
+        // Warning: maxLength not taken into account in base64Write
+        return base64Write(this, string, offset, length)
+
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return ucs2Write(this, string, offset, length)
+
+      default:
+        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
+        encoding = ('' + encoding).toLowerCase()
+        loweredCase = true
+    }
+  }
+}
+
+Buffer.prototype.toJSON = function toJSON () {
+  return {
+    type: 'Buffer',
+    data: Array.prototype.slice.call(this._arr || this, 0)
+  }
+}
+
+function base64Slice (buf, start, end) {
+  if (start === 0 && end === buf.length) {
+    return base64.fromByteArray(buf)
+  } else {
+    return base64.fromByteArray(buf.slice(start, end))
+  }
+}
+
+function utf8Slice (buf, start, end) {
+  end = Math.min(buf.length, end)
+  var res = []
+
+  var i = start
+  while (i < end) {
+    var firstByte = buf[i]
+    var codePoint = null
+    var bytesPerSequence = (firstByte > 0xEF) ? 4
+      : (firstByte > 0xDF) ? 3
+        : (firstByte > 0xBF) ? 2
+          : 1
+
+    if (i + bytesPerSequence <= end) {
+      var secondByte, thirdByte, fourthByte, tempCodePoint
+
+      switch (bytesPerSequence) {
+        case 1:
+          if (firstByte < 0x80) {
+            codePoint = firstByte
+          }
+          break
+        case 2:
+          secondByte = buf[i + 1]
+          if ((secondByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F)
+            if (tempCodePoint > 0x7F) {
+              codePoint = tempCodePoint
+            }
+          }
+          break
+        case 3:
+          secondByte = buf[i + 1]
+          thirdByte = buf[i + 2]
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F)
+            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
+              codePoint = tempCodePoint
+            }
+          }
+          break
+        case 4:
+          secondByte = buf[i + 1]
+          thirdByte = buf[i + 2]
+          fourthByte = buf[i + 3]
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F)
+            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
+              codePoint = tempCodePoint
+            }
+          }
+      }
+    }
+
+    if (codePoint === null) {
+      // we did not generate a valid codePoint so insert a
+      // replacement char (U+FFFD) and advance only 1 byte
+      codePoint = 0xFFFD
+      bytesPerSequence = 1
+    } else if (codePoint > 0xFFFF) {
+      // encode to utf16 (surrogate pair dance)
+      codePoint -= 0x10000
+      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
+      codePoint = 0xDC00 | codePoint & 0x3FF
+    }
+
+    res.push(codePoint)
+    i += bytesPerSequence
+  }
+
+  return decodeCodePointsArray(res)
+}
+
+// Based on http://stackoverflow.com/a/22747272/680742, the browser with
+// the lowest limit is Chrome, with 0x10000 args.
+// We go 1 magnitude less, for safety
+var MAX_ARGUMENTS_LENGTH = 0x1000
+
+function decodeCodePointsArray (codePoints) {
+  var len = codePoints.length
+  if (len <= MAX_ARGUMENTS_LENGTH) {
+    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
+  }
+
+  // Decode in chunks to avoid "call stack size exceeded".
+  var res = ''
+  var i = 0
+  while (i < len) {
+    res += String.fromCharCode.apply(
+      String,
+      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
+    )
+  }
+  return res
+}
+
+function asciiSlice (buf, start, end) {
+  var ret = ''
+  end = Math.min(buf.length, end)
+
+  for (var i = start; i < end; ++i) {
+    ret += String.fromCharCode(buf[i] & 0x7F)
+  }
+  return ret
+}
+
+function latin1Slice (buf, start, end) {
+  var ret = ''
+  end = Math.min(buf.length, end)
+
+  for (var i = start; i < end; ++i) {
+    ret += String.fromCharCode(buf[i])
+  }
+  return ret
+}
+
+function hexSlice (buf, start, end) {
+  var len = buf.length
+
+  if (!start || start < 0) start = 0
+  if (!end || end < 0 || end > len) end = len
+
+  var out = ''
+  for (var i = start; i < end; ++i) {
+    out += toHex(buf[i])
+  }
+  return out
+}
+
+function utf16leSlice (buf, start, end) {
+  var bytes = buf.slice(start, end)
+  var res = ''
+  for (var i = 0; i < bytes.length; i += 2) {
+    res += String.fromCharCode(bytes[i] + (bytes[i + 1] * 256))
+  }
+  return res
+}
+
+Buffer.prototype.slice = function slice (start, end) {
+  var len = this.length
+  start = ~~start
+  end = end === undefined ? len : ~~end
+
+  if (start < 0) {
+    start += len
+    if (start < 0) start = 0
+  } else if (start > len) {
+    start = len
+  }
+
+  if (end < 0) {
+    end += len
+    if (end < 0) end = 0
+  } else if (end > len) {
+    end = len
+  }
+
+  if (end < start) end = start
+
+  var newBuf = this.subarray(start, end)
+  // Return an augmented `Uint8Array` instance
+  newBuf.__proto__ = Buffer.prototype
+  return newBuf
+}
+
+/*
+ * Need to make sure that buffer isn't trying to write out of bounds.
+ */
+function checkOffset (offset, ext, length) {
+  if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
+  if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
+}
+
+Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) checkOffset(offset, byteLength, this.length)
+
+  var val = this[offset]
+  var mul = 1
+  var i = 0
+  while (++i < byteLength && (mul *= 0x100)) {
+    val += this[offset + i] * mul
+  }
+
+  return val
+}
+
+Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) {
+    checkOffset(offset, byteLength, this.length)
+  }
+
+  var val = this[offset + --byteLength]
+  var mul = 1
+  while (byteLength > 0 && (mul *= 0x100)) {
+    val += this[offset + --byteLength] * mul
+  }
+
+  return val
+}
+
+Buffer.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 1, this.length)
+  return this[offset]
+}
+
+Buffer.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  return this[offset] | (this[offset + 1] << 8)
+}
+
+Buffer.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  return (this[offset] << 8) | this[offset + 1]
+}
+
+Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return ((this[offset]) |
+      (this[offset + 1] << 8) |
+      (this[offset + 2] << 16)) +
+      (this[offset + 3] * 0x1000000)
+}
+
+Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return (this[offset] * 0x1000000) +
+    ((this[offset + 1] << 16) |
+    (this[offset + 2] << 8) |
+    this[offset + 3])
+}
+
+Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) checkOffset(offset, byteLength, this.length)
+
+  var val = this[offset]
+  var mul = 1
+  var i = 0
+  while (++i < byteLength && (mul *= 0x100)) {
+    val += this[offset + i] * mul
+  }
+  mul *= 0x80
+
+  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
+
+  return val
+}
+
+Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) checkOffset(offset, byteLength, this.length)
+
+  var i = byteLength
+  var mul = 1
+  var val = this[offset + --i]
+  while (i > 0 && (mul *= 0x100)) {
+    val += this[offset + --i] * mul
+  }
+  mul *= 0x80
+
+  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
+
+  return val
+}
+
+Buffer.prototype.readInt8 = function readInt8 (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 1, this.length)
+  if (!(this[offset] & 0x80)) return (this[offset])
+  return ((0xff - this[offset] + 1) * -1)
+}
+
+Buffer.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  var val = this[offset] | (this[offset + 1] << 8)
+  return (val & 0x8000) ? val | 0xFFFF0000 : val
+}
+
+Buffer.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  var val = this[offset + 1] | (this[offset] << 8)
+  return (val & 0x8000) ? val | 0xFFFF0000 : val
+}
+
+Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return (this[offset]) |
+    (this[offset + 1] << 8) |
+    (this[offset + 2] << 16) |
+    (this[offset + 3] << 24)
+}
+
+Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return (this[offset] << 24) |
+    (this[offset + 1] << 16) |
+    (this[offset + 2] << 8) |
+    (this[offset + 3])
+}
+
+Buffer.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+  return ieee754.read(this, offset, true, 23, 4)
+}
+
+Buffer.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+  return ieee754.read(this, offset, false, 23, 4)
+}
+
+Buffer.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 8, this.length)
+  return ieee754.read(this, offset, true, 52, 8)
+}
+
+Buffer.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 8, this.length)
+  return ieee754.read(this, offset, false, 52, 8)
+}
+
+function checkInt (buf, value, offset, ext, max, min) {
+  if (!Buffer.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
+  if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
+  if (offset + ext > buf.length) throw new RangeError('Index out of range')
+}
+
+Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) {
+    var maxBytes = Math.pow(2, 8 * byteLength) - 1
+    checkInt(this, value, offset, byteLength, maxBytes, 0)
+  }
+
+  var mul = 1
+  var i = 0
+  this[offset] = value & 0xFF
+  while (++i < byteLength && (mul *= 0x100)) {
+    this[offset + i] = (value / mul) & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) {
+    var maxBytes = Math.pow(2, 8 * byteLength) - 1
+    checkInt(this, value, offset, byteLength, maxBytes, 0)
+  }
+
+  var i = byteLength - 1
+  var mul = 1
+  this[offset + i] = value & 0xFF
+  while (--i >= 0 && (mul *= 0x100)) {
+    this[offset + i] = (value / mul) & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
+  this[offset] = (value & 0xff)
+  return offset + 1
+}
+
+Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
+  this[offset] = (value & 0xff)
+  this[offset + 1] = (value >>> 8)
+  return offset + 2
+}
+
+Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
+  this[offset] = (value >>> 8)
+  this[offset + 1] = (value & 0xff)
+  return offset + 2
+}
+
+Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
+  this[offset + 3] = (value >>> 24)
+  this[offset + 2] = (value >>> 16)
+  this[offset + 1] = (value >>> 8)
+  this[offset] = (value & 0xff)
+  return offset + 4
+}
+
+Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
+  this[offset] = (value >>> 24)
+  this[offset + 1] = (value >>> 16)
+  this[offset + 2] = (value >>> 8)
+  this[offset + 3] = (value & 0xff)
+  return offset + 4
+}
+
+Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) {
+    var limit = Math.pow(2, (8 * byteLength) - 1)
+
+    checkInt(this, value, offset, byteLength, limit - 1, -limit)
+  }
+
+  var i = 0
+  var mul = 1
+  var sub = 0
+  this[offset] = value & 0xFF
+  while (++i < byteLength && (mul *= 0x100)) {
+    if (value < 0 && sub === 0 && this[offset + i - 1] !== 0) {
+      sub = 1
+    }
+    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) {
+    var limit = Math.pow(2, (8 * byteLength) - 1)
+
+    checkInt(this, value, offset, byteLength, limit - 1, -limit)
+  }
+
+  var i = byteLength - 1
+  var mul = 1
+  var sub = 0
+  this[offset + i] = value & 0xFF
+  while (--i >= 0 && (mul *= 0x100)) {
+    if (value < 0 && sub === 0 && this[offset + i + 1] !== 0) {
+      sub = 1
+    }
+    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
+  if (value < 0) value = 0xff + value + 1
+  this[offset] = (value & 0xff)
+  return offset + 1
+}
+
+Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
+  this[offset] = (value & 0xff)
+  this[offset + 1] = (value >>> 8)
+  return offset + 2
+}
+
+Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
+  this[offset] = (value >>> 8)
+  this[offset + 1] = (value & 0xff)
+  return offset + 2
+}
+
+Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
+  this[offset] = (value & 0xff)
+  this[offset + 1] = (value >>> 8)
+  this[offset + 2] = (value >>> 16)
+  this[offset + 3] = (value >>> 24)
+  return offset + 4
+}
+
+Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
+  if (value < 0) value = 0xffffffff + value + 1
+  this[offset] = (value >>> 24)
+  this[offset + 1] = (value >>> 16)
+  this[offset + 2] = (value >>> 8)
+  this[offset + 3] = (value & 0xff)
+  return offset + 4
+}
+
+function checkIEEE754 (buf, value, offset, ext, max, min) {
+  if (offset + ext > buf.length) throw new RangeError('Index out of range')
+  if (offset < 0) throw new RangeError('Index out of range')
+}
+
+function writeFloat (buf, value, offset, littleEndian, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) {
+    checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
+  }
+  ieee754.write(buf, value, offset, littleEndian, 23, 4)
+  return offset + 4
+}
+
+Buffer.prototype.writeFloatLE = function writeFloatLE (value, offset, noAssert) {
+  return writeFloat(this, value, offset, true, noAssert)
+}
+
+Buffer.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) {
+  return writeFloat(this, value, offset, false, noAssert)
+}
+
+function writeDouble (buf, value, offset, littleEndian, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) {
+    checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
+  }
+  ieee754.write(buf, value, offset, littleEndian, 52, 8)
+  return offset + 8
+}
+
+Buffer.prototype.writeDoubleLE = function writeDoubleLE (value, offset, noAssert) {
+  return writeDouble(this, value, offset, true, noAssert)
+}
+
+Buffer.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert) {
+  return writeDouble(this, value, offset, false, noAssert)
+}
+
+// copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
+Buffer.prototype.copy = function copy (target, targetStart, start, end) {
+  if (!Buffer.isBuffer(target)) throw new TypeError('argument should be a Buffer')
+  if (!start) start = 0
+  if (!end && end !== 0) end = this.length
+  if (targetStart >= target.length) targetStart = target.length
+  if (!targetStart) targetStart = 0
+  if (end > 0 && end < start) end = start
+
+  // Copy 0 bytes; we're done
+  if (end === start) return 0
+  if (target.length === 0 || this.length === 0) return 0
+
+  // Fatal error conditions
+  if (targetStart < 0) {
+    throw new RangeError('targetStart out of bounds')
+  }
+  if (start < 0 || start >= this.length) throw new RangeError('Index out of range')
+  if (end < 0) throw new RangeError('sourceEnd out of bounds')
+
+  // Are we oob?
+  if (end > this.length) end = this.length
+  if (target.length - targetStart < end - start) {
+    end = target.length - targetStart + start
+  }
+
+  var len = end - start
+
+  if (this === target && typeof Uint8Array.prototype.copyWithin === 'function') {
+    // Use built-in when available, missing from IE11
+    this.copyWithin(targetStart, start, end)
+  } else if (this === target && start < targetStart && targetStart < end) {
+    // descending copy from end
+    for (var i = len - 1; i >= 0; --i) {
+      target[i + targetStart] = this[i + start]
+    }
+  } else {
+    Uint8Array.prototype.set.call(
+      target,
+      this.subarray(start, end),
+      targetStart
+    )
+  }
+
+  return len
+}
+
+// Usage:
+//    buffer.fill(number[, offset[, end]])
+//    buffer.fill(buffer[, offset[, end]])
+//    buffer.fill(string[, offset[, end]][, encoding])
+Buffer.prototype.fill = function fill (val, start, end, encoding) {
+  // Handle string cases:
+  if (typeof val === 'string') {
+    if (typeof start === 'string') {
+      encoding = start
+      start = 0
+      end = this.length
+    } else if (typeof end === 'string') {
+      encoding = end
+      end = this.length
+    }
+    if (encoding !== undefined && typeof encoding !== 'string') {
+      throw new TypeError('encoding must be a string')
+    }
+    if (typeof encoding === 'string' && !Buffer.isEncoding(encoding)) {
+      throw new TypeError('Unknown encoding: ' + encoding)
+    }
+    if (val.length === 1) {
+      var code = val.charCodeAt(0)
+      if ((encoding === 'utf8' && code < 128) ||
+          encoding === 'latin1') {
+        // Fast path: If `val` fits into a single byte, use that numeric value.
+        val = code
+      }
+    }
+  } else if (typeof val === 'number') {
+    val = val & 255
+  }
+
+  // Invalid ranges are not set to a default, so can range check early.
+  if (start < 0 || this.length < start || this.length < end) {
+    throw new RangeError('Out of range index')
+  }
+
+  if (end <= start) {
+    return this
+  }
+
+  start = start >>> 0
+  end = end === undefined ? this.length : end >>> 0
+
+  if (!val) val = 0
+
+  var i
+  if (typeof val === 'number') {
+    for (i = start; i < end; ++i) {
+      this[i] = val
+    }
+  } else {
+    var bytes = Buffer.isBuffer(val)
+      ? val
+      : Buffer.from(val, encoding)
+    var len = bytes.length
+    if (len === 0) {
+      throw new TypeError('The value "' + val +
+        '" is invalid for argument "value"')
+    }
+    for (i = 0; i < end - start; ++i) {
+      this[i + start] = bytes[i % len]
+    }
+  }
+
+  return this
+}
+
+// HELPER FUNCTIONS
+// ================
+
+var INVALID_BASE64_RE = /[^+/0-9A-Za-z-_]/g
+
+function base64clean (str) {
+  // Node takes equal signs as end of the Base64 encoding
+  str = str.split('=')[0]
+  // Node strips out invalid characters like \n and \t from the string, base64-js does not
+  str = str.trim().replace(INVALID_BASE64_RE, '')
+  // Node converts strings with length < 2 to ''
+  if (str.length < 2) return ''
+  // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
+  while (str.length % 4 !== 0) {
+    str = str + '='
+  }
+  return str
+}
+
+function toHex (n) {
+  if (n < 16) return '0' + n.toString(16)
+  return n.toString(16)
+}
+
+function utf8ToBytes (string, units) {
+  units = units || Infinity
+  var codePoint
+  var length = string.length
+  var leadSurrogate = null
+  var bytes = []
+
+  for (var i = 0; i < length; ++i) {
+    codePoint = string.charCodeAt(i)
+
+    // is surrogate component
+    if (codePoint > 0xD7FF && codePoint < 0xE000) {
+      // last char was a lead
+      if (!leadSurrogate) {
+        // no lead yet
+        if (codePoint > 0xDBFF) {
+          // unexpected trail
+          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+          continue
+        } else if (i + 1 === length) {
+          // unpaired lead
+          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+          continue
+        }
+
+        // valid lead
+        leadSurrogate = codePoint
+
+        continue
+      }
+
+      // 2 leads in a row
+      if (codePoint < 0xDC00) {
+        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+        leadSurrogate = codePoint
+        continue
+      }
+
+      // valid surrogate pair
+      codePoint = (leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00) + 0x10000
+    } else if (leadSurrogate) {
+      // valid bmp char, but last char was a lead
+      if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+    }
+
+    leadSurrogate = null
+
+    // encode utf8
+    if (codePoint < 0x80) {
+      if ((units -= 1) < 0) break
+      bytes.push(codePoint)
+    } else if (codePoint < 0x800) {
+      if ((units -= 2) < 0) break
+      bytes.push(
+        codePoint >> 0x6 | 0xC0,
+        codePoint & 0x3F | 0x80
+      )
+    } else if (codePoint < 0x10000) {
+      if ((units -= 3) < 0) break
+      bytes.push(
+        codePoint >> 0xC | 0xE0,
+        codePoint >> 0x6 & 0x3F | 0x80,
+        codePoint & 0x3F | 0x80
+      )
+    } else if (codePoint < 0x110000) {
+      if ((units -= 4) < 0) break
+      bytes.push(
+        codePoint >> 0x12 | 0xF0,
+        codePoint >> 0xC & 0x3F | 0x80,
+        codePoint >> 0x6 & 0x3F | 0x80,
+        codePoint & 0x3F | 0x80
+      )
+    } else {
+      throw new Error('Invalid code point')
+    }
+  }
+
+  return bytes
+}
+
+function asciiToBytes (str) {
+  var byteArray = []
+  for (var i = 0; i < str.length; ++i) {
+    // Node's code seems to be doing this and not & 0x7F..
+    byteArray.push(str.charCodeAt(i) & 0xFF)
+  }
+  return byteArray
+}
+
+function utf16leToBytes (str, units) {
+  var c, hi, lo
+  var byteArray = []
+  for (var i = 0; i < str.length; ++i) {
+    if ((units -= 2) < 0) break
+
+    c = str.charCodeAt(i)
+    hi = c >> 8
+    lo = c % 256
+    byteArray.push(lo)
+    byteArray.push(hi)
+  }
+
+  return byteArray
+}
+
+function base64ToBytes (str) {
+  return base64.toByteArray(base64clean(str))
+}
+
+function blitBuffer (src, dst, offset, length) {
+  for (var i = 0; i < length; ++i) {
+    if ((i + offset >= dst.length) || (i >= src.length)) break
+    dst[i + offset] = src[i]
+  }
+  return i
+}
+
+// ArrayBuffer or Uint8Array objects from other contexts (i.e. iframes) do not pass
+// the `instanceof` check but they should be treated as of that type.
+// See: https://github.com/feross/buffer/issues/166
+function isInstance (obj, type) {
+  return obj instanceof type ||
+    (obj != null && obj.constructor != null && obj.constructor.name != null &&
+      obj.constructor.name === type.name)
+}
+function numberIsNaN (obj) {
+  // For IE11 support
+  return obj !== obj // eslint-disable-line no-self-compare
+}
+
+},{"base64-js":12,"ieee754":255}],35:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Code, CodeService, ValueSet, ref;
@@ -17905,7 +16932,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./datatypes/datatypes":48}],44:[function(require,module,exports){
+},{"./datatypes/datatypes":40}],36:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var DT, element, i, len, ref;
@@ -17922,7 +16949,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./datatypes/datatypes":48}],45:[function(require,module,exports){
+},{"./datatypes/datatypes":40}],37:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var DT, FHIR, Patient, PatientSource, Record, toDate, typeIsArray;
@@ -18176,7 +17203,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./datatypes/datatypes":48,"./fhir/models":132,"./util/util":177}],46:[function(require,module,exports){
+},{"./datatypes/datatypes":40,"./fhir/models":124,"./util/util":169}],38:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var codeservice, context, datatypes, exec, expression, library, patient, quantity, ratio, repository, results;
@@ -18241,7 +17268,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./cql-code-service":43,"./cql-patient":45,"./datatypes/datatypes":48,"./elm/expression":62,"./elm/library":67,"./elm/quantity":74,"./elm/ratio":76,"./runtime/context":171,"./runtime/executor":172,"./runtime/repository":173,"./runtime/results":174}],47:[function(require,module,exports){
+},{"./cql-code-service":35,"./cql-patient":37,"./datatypes/datatypes":40,"./elm/expression":54,"./elm/library":59,"./elm/quantity":66,"./elm/ratio":68,"./runtime/context":163,"./runtime/executor":164,"./runtime/repository":165,"./runtime/results":166}],39:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Code, CodeSystem, Concept, ValueSet, codesInList, codesMatch, toCodeList, typeIsArray;
@@ -18382,7 +17409,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../util/util":177}],48:[function(require,module,exports){
+},{"../util/util":169}],40:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var clinical, datetime, element, i, interval, j, len, len1, lib, libs, logic, ref, uncertainty;
@@ -18412,7 +17439,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./clinical":47,"./datetime":49,"./interval":51,"./logic":52,"./uncertainty":53}],49:[function(require,module,exports){
+},{"./clinical":39,"./datetime":41,"./interval":43,"./logic":44,"./uncertainty":45}],41:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Date, DateTime, Uncertainty, cqlFormatStringToMomentFormatString, daysInMonth, getTimezoneSeparatorFromString, isValidDateStringFormat, isValidDateTimeStringFormat, jsDate, moment, normalizeMillisecondsField, normalizeMillisecondsFieldInString, ref,
@@ -19573,7 +18600,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../util/util":177,"./uncertainty":53,"moment":178}],50:[function(require,module,exports){
+},{"../util/util":169,"./uncertainty":45,"moment":170}],42:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Exception;
@@ -19592,7 +18619,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{}],51:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var DateTime, Interval, ThreeValuedLogic, Uncertainty, cmp, maxValueForInstance, minValueForInstance, predecessor, ref, successor;
@@ -20054,7 +19081,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../util/comparison":175,"../util/math":176,"./datetime":49,"./logic":52,"./uncertainty":53}],52:[function(require,module,exports){
+},{"../util/comparison":167,"../util/math":168,"./datetime":41,"./logic":44,"./uncertainty":45}],44:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var ThreeValuedLogic,
@@ -20116,7 +19143,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{}],53:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var ThreeValuedLogic, Uncertainty;
@@ -20242,7 +19269,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./logic":52}],54:[function(require,module,exports){
+},{"./logic":44}],46:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var AggregateExpression, AllTrue, AnyTrue, Avg, Count, Exception, Expression, GeometricMean, Max, Median, Min, Mode, PopulationStdDev, PopulationVariance, Product, Quantity, StdDev, Sum, Variance, allTrue, anyTrue, build, compact, numerical_sort, productValue, quantitiesOrArg, quantityOrValue, ref, typeIsArray,
@@ -20687,7 +19714,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/exception":50,"../util/util":177,"./builder":56,"./expression":62,"./quantity":74}],55:[function(require,module,exports){
+},{"../datatypes/exception":42,"../util/util":169,"./builder":48,"./expression":54,"./quantity":66}],47:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Abs, Add, Ceiling, Divide, Exp, Expression, Floor, Ln, Log, MathUtil, MaxValue, MinValue, Modulo, Multiply, Negate, Power, Predecessor, Quantity, Round, Subtract, Successor, Truncate, TruncatedDivide, allTrue, anyTrue, build, ref, typeIsArray,
@@ -21208,7 +20235,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../util/math":176,"../util/util":177,"./builder":56,"./expression":62,"./quantity":74}],56:[function(require,module,exports){
+},{"../util/math":168,"../util/util":169,"./builder":48,"./expression":54,"./quantity":66}],48:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var E, build, constructByName, functionExists, typeIsArray;
@@ -21256,7 +20283,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../util/util":177,"./expressions":63}],57:[function(require,module,exports){
+},{"../util/util":169,"./expressions":55}],49:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var AnyInValueSet, CalculateAge, CalculateAgeAt, CodeDef, CodeRef, CodeSystemDef, Concept, ConceptDef, ConceptRef, Expression, InValueSet, ValueSetDef, ValueSetRef, build, dt,
@@ -21576,7 +20603,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datatypes":48,"./builder":56,"./expression":62}],58:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"./builder":48,"./expression":54}],50:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Expression, Greater, GreaterOrEqual, Less, LessOrEqual, Uncertainty,
@@ -21679,7 +20706,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datatypes":48,"./expression":62}],59:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"./expression":54}],51:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Case, CaseItem, Expression, If, build, equals,
@@ -21785,7 +20812,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../util/comparison":175,"./builder":56,"./expression":62}],60:[function(require,module,exports){
+},{"../util/comparison":167,"./builder":48,"./expression":54}],52:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var DT, Date, DateFrom, DateTime, DateTimeComponentFrom, DifferenceBetween, DurationBetween, Expression, Literal, Now, SameOrAfter, SameOrBefore, Time, TimeFrom, TimeOfDay, TimezoneFrom, Today, build,
@@ -22189,7 +21216,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datatypes":48,"./builder":56,"./expression":62,"./literal":69}],61:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"./builder":48,"./expression":54,"./literal":61}],53:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Expression, IncludeDef, UnimplementedExpression, UsingDef, VersionedIdentifier, ref,
@@ -22235,7 +21262,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./expression":62}],62:[function(require,module,exports){
+},{"./expression":54}],54:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Expression, UnimplementedExpression, build, typeIsArray,
@@ -22319,7 +21346,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../util/util":177,"./builder":56}],63:[function(require,module,exports){
+},{"../util/util":169,"./builder":48}],55:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var aggregate, arithmetic, clinical, comparison, conditional, datetime, declaration, element, expression, external, i, instance, interval, j, len, len1, lib, libs, list, literal, logical, nullological, overloaded, parameters, quantity, query, ratio, ref, reusable, string, structured, type;
@@ -22387,7 +21414,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./aggregate":54,"./arithmetic":55,"./clinical":57,"./comparison":58,"./conditional":59,"./datetime":60,"./declaration":61,"./expression":62,"./external":64,"./instance":65,"./interval":66,"./list":68,"./literal":69,"./logical":70,"./nullological":71,"./overloaded":72,"./parameters":73,"./quantity":74,"./query":75,"./ratio":76,"./reusable":77,"./string":78,"./structured":79,"./type":80}],64:[function(require,module,exports){
+},{"./aggregate":46,"./arithmetic":47,"./clinical":49,"./comparison":50,"./conditional":51,"./datetime":52,"./declaration":53,"./expression":54,"./external":56,"./instance":57,"./interval":58,"./list":60,"./literal":61,"./logical":62,"./nullological":63,"./overloaded":64,"./parameters":65,"./quantity":66,"./query":67,"./ratio":68,"./reusable":69,"./string":70,"./structured":71,"./type":72}],56:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Expression, Retrieve, build, typeIsArray,
@@ -22464,7 +21491,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../util/util":177,"./builder":56,"./expression":62}],65:[function(require,module,exports){
+},{"../util/util":169,"./builder":48,"./expression":54}],57:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Code, Concept, Element, Expression, Instance, Quantity, build, ref,
@@ -22541,7 +21568,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datatypes":48,"./builder":56,"./expression":62,"./quantity":74}],66:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"./builder":48,"./expression":54,"./quantity":66}],58:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Collapse, End, Ends, Expand, Expression, Interval, MIN_FLOAT_PRECISION_VALUE, Meets, MeetsAfter, MeetsBefore, Overlaps, OverlapsAfter, OverlapsBefore, Quantity, Start, Starts, ThreeValuedLogic, UnimplementedExpression, Width, build, cmp, collapseIntervals, compare_units, convert_value, doAddition, doIncludes, doSubtraction, dtivl, intervalListType, predecessor, ref, ref1, ref2, successor,
@@ -23269,7 +22296,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/interval":51,"../datatypes/logic":52,"../util/comparison":175,"../util/math":176,"./builder":56,"./expression":62,"./quantity":74}],67:[function(require,module,exports){
+},{"../datatypes/interval":43,"../datatypes/logic":44,"../util/comparison":167,"../util/math":168,"./builder":48,"./expression":54,"./quantity":66}],59:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var CodeDef, CodeSystemDef, ConceptDef, ExpressionDef, FunctionDef, Library, ParameterDef, Results, ValueSetDef, ref;
@@ -23371,7 +22398,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../runtime/results":174,"./expressions":63}],68:[function(require,module,exports){
+},{"../runtime/results":166,"./expressions":55}],60:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Current, Distinct, Exists, Expression, Filter, First, Flatten, ForEach, IndexOf, Last, List, SingletonFrom, Times, ToList, UnimplementedExpression, ValueSet, build, doContains, doDistinct, doIncludes, equals, ref, typeIsArray,
@@ -23739,7 +22766,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datatypes":48,"../util/comparison":175,"../util/util":177,"./builder":56,"./expression":62}],69:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"../util/comparison":167,"../util/util":169,"./builder":48,"./expression":54}],61:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var BooleanLiteral, DecimalLiteral, Expression, IntegerLiteral, Literal, StringLiteral,
@@ -23879,7 +22906,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./expression":62}],70:[function(require,module,exports){
+},{"./expression":54}],62:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var And, Expression, IsFalse, IsTrue, Not, Or, ThreeValuedLogic, Xor,
@@ -23984,7 +23011,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datatypes":48,"./expression":62}],71:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"./expression":54}],63:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Coalesce, Expression, IsNull, Null,
@@ -24060,7 +23087,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./expression":62}],72:[function(require,module,exports){
+},{"./expression":54}],64:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var After, Contains, DT, DateTime, Equal, Equivalent, Except, Exception, Expression, IVL, In, IncludedIn, Includes, Indexer, Intersect, LIST, Length, NotEqual, ProperIncludedIn, ProperIncludes, STRING, SameAs, ThreeValuedLogic, Union, build, equals, equivalent, ref, typeIsArray,
@@ -24546,7 +23573,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datetime":49,"../datatypes/exception":50,"../datatypes/logic":52,"../util/comparison":175,"../util/util":177,"./builder":56,"./datetime":60,"./expression":62,"./interval":66,"./list":68,"./string":78}],73:[function(require,module,exports){
+},{"../datatypes/datetime":41,"../datatypes/exception":42,"../datatypes/logic":44,"../util/comparison":167,"../util/util":169,"./builder":48,"./datetime":52,"./expression":54,"./interval":58,"./list":60,"./string":70}],65:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Expression, ParameterDef, ParameterRef, build,
@@ -24605,7 +23632,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./builder":56,"./expression":62}],74:[function(require,module,exports){
+},{"./builder":48,"./expression":54}],66:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Code, Exception, Expression, FunctionRef, Quantity, ValueSet, build, clean_unit, coalesceToOne, convert_value, createQuantity, decimalAdjust, doScaledAddition, isValidDecimal, is_valid_ucum_unit, ref, ref1, ucum, ucum_multiply, ucum_time_units, ucum_to_cql_units, ucum_unit, unitValidityCache, units_to_string,
@@ -25045,7 +24072,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datatypes":48,"../datatypes/exception":50,"../util/math":176,"./builder":56,"./expression":62,"./reusable":77,"ucum":186}],75:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"../datatypes/exception":42,"../util/math":168,"./builder":48,"./expression":54,"./reusable":69,"ucum":178}],67:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var AliasRef, AliasedQuerySource, ByColumn, ByDirection, ByExpression, Context, Expression, LetClause, MultiSource, Query, QueryLetRef, ReturnClause, Sort, SortClause, UnimplementedExpression, With, Without, allTrue, build, equals, ref, ref1, toDistinctList, typeIsArray,
@@ -25438,7 +24465,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../runtime/context":171,"../util/comparison":175,"../util/util":177,"./builder":56,"./expression":62}],76:[function(require,module,exports){
+},{"../runtime/context":163,"../util/comparison":167,"../util/util":169,"./builder":48,"./expression":54}],68:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Exception, Expression, Quantity, Ratio, createRatio,
@@ -25526,7 +24553,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/exception":50,"./expression":62,"./quantity":74}],77:[function(require,module,exports){
+},{"../datatypes/exception":42,"./expression":54,"./quantity":66}],69:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Expression, ExpressionDef, ExpressionRef, FunctionDef, FunctionRef, IdentifierRef, OperandRef, build,
@@ -25685,7 +24712,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./builder":56,"./expression":62}],78:[function(require,module,exports){
+},{"./builder":48,"./expression":54}],70:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Combine, Concatenate, EndsWith, Expression, Lower, PositionOf, Split, SplitOnMatches, StartsWith, Substring, UnimplementedExpression, Upper, build, ref,
@@ -25926,7 +24953,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./builder":56,"./expression":62}],79:[function(require,module,exports){
+},{"./builder":48,"./expression":54}],71:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Expression, Property, Tuple, TupleElement, TupleElementDefinition, UnimplementedExpression, build, ref,
@@ -26046,7 +25073,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./builder":56,"./expression":62}],80:[function(require,module,exports){
+},{"./builder":48,"./expression":54}],72:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var As, Concept, Convert, ConvertsToBoolean, ConvertsToDate, ConvertsToDateTime, ConvertsToDecimal, ConvertsToInteger, ConvertsToQuantity, ConvertsToString, ConvertsToTime, Date, DateTime, Expression, FunctionRef, IntervalTypeSpecifier, Is, ListTypeSpecifier, NamedTypeSpecifier, ToBoolean, ToConcept, ToDate, ToDateTime, ToDecimal, ToInteger, ToQuantity, ToString, ToTime, TupleTypeSpecifier, UnimplementedExpression, isValidDecimal, isValidInteger, limitDecimalPrecision, normalizeMillisecondsField, parseQuantity, ref, ref1, ref2,
@@ -26540,7 +25567,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/clinical":47,"../datatypes/datetime":49,"../util/math":176,"../util/util":177,"./expression":62,"./quantity":74,"./reusable":77}],81:[function(require,module,exports){
+},{"../datatypes/clinical":39,"../datatypes/datetime":41,"../util/math":168,"../util/util":169,"./expression":54,"./quantity":66,"./reusable":69}],73:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Alert, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -26699,7 +25726,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],82:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],74:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, AllergyIntolerance, AllergyIntoleranceEventComponent, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -27057,7 +26084,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],83:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],75:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Appointment, AppointmentParticipantComponent, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -27404,7 +26431,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],84:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],76:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, AppointmentResponse, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -27625,7 +26652,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],85:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],77:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, Availability, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -27793,7 +26820,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],86:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],78:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, Basic, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -27944,7 +26971,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],87:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],79:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, Binary, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -28048,7 +27075,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],88:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],80:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, Bundle, BundleEntryComponent, BundleEntryDeletedComponent, BundleLinkComponent, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -28396,7 +27423,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],89:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],81:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CarePlan, CarePlanActivityComponent, CarePlanActivitySimpleComponent, CarePlanGoalComponent, CarePlanParticipantComponent, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -28996,7 +28023,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],90:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],82:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var AddedItemAdjudicationComponent, AddedItemComponent, AddedItemDetailAdjudicationComponent, AddedItemsDetailComponent, Address, Attachment, BackboneElement, CORE, ClaimResponse, CodeableConcept, Coding, ContactPoint, DT, DetailAdjudicationComponent, DomainResource, Element, ElementDefinition, ErrorsComponent, Extension, HumanName, Identifier, ItemAdjudicationComponent, ItemDetailComponent, ItemSubdetailComponent, ItemsComponent, Narrative, NotesComponent, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, SubdetailAdjudicationComponent, Timing,
@@ -30143,7 +29170,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],91:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],83:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, CommunicationRequest, CommunicationRequestMessagePartComponent, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -30491,7 +29518,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],92:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],84:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, Composition, CompositionAttesterComponent, CompositionEventComponent, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, SectionComponent, Timing,
@@ -30961,7 +29988,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],93:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],85:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ConceptMap, ConceptMapElementComponent, ConceptMapElementMapComponent, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, OtherElementComponent, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -31423,7 +30450,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],94:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],86:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, Condition, ConditionDueToComponent, ConditionEvidenceComponent, ConditionLocationComponent, ConditionOccurredFollowingComponent, ConditionStageComponent, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -31999,7 +31026,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],95:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],87:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, Conformance, ConformanceDocumentComponent, ConformanceImplementationComponent, ConformanceMessagingComponent, ConformanceMessagingEventComponent, ConformanceRestComponent, ConformanceRestOperationComponent, ConformanceRestResourceComponent, ConformanceRestResourceSearchParamComponent, ConformanceRestSecurityCertificateComponent, ConformanceRestSecurityComponent, ConformanceSoftwareComponent, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, ResourceInteractionComponent, SampledData, SystemInteractionComponent, Timing,
@@ -33188,7 +32215,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],96:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],88:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, Contract, ContractSignerComponent, ContractTermComponent, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -33727,7 +32754,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],97:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],89:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, Contraindication, ContraindicationMitigationComponent, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -33994,7 +33021,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],98:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],90:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, Base, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, ElementDefinitionBindingComponent, ElementDefinitionConstraintComponent, ElementDefinitionMappingComponent, ElementDefinitionSlicingComponent, Extension, HumanName, Identifier, Narrative, Parameters, ParametersParameterComponent, Period, Quantity, Range, Ratio, Reference, Resource, ResourceMetaComponent, SampledData, Timing, TimingRepeatComponent, TypeRefComponent,
@@ -36181,7 +35208,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44}],99:[function(require,module,exports){
+},{"../cql-datatypes":36}],91:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, Coverage, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -36413,7 +35440,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],100:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],92:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DataElement, DataElementBindingComponent, DataElementMappingComponent, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -36871,7 +35898,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],101:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],93:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, Device, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -37113,7 +36140,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],102:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],94:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DeviceComponent, DeviceComponentProductionSpecificationComponent, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -37382,7 +36409,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],103:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],95:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DeviceUseRequest, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -37678,7 +36705,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],104:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],96:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DeviceUseStatement, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -37913,7 +36940,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],105:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],97:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DiagnosticOrder, DiagnosticOrderEventComponent, DiagnosticOrderItemComponent, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -38314,7 +37341,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],106:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],98:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DiagnosticReport, DiagnosticReportImageComponent, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -38688,7 +37715,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],107:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],99:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DocumentManifest, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -38957,7 +37984,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],108:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],100:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DocumentReference, DocumentReferenceContextComponent, DocumentReferenceRelatesToComponent, DocumentReferenceServiceComponent, DocumentReferenceServiceParameterComponent, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -39541,7 +38568,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],109:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],101:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Eligibility, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -39716,7 +38743,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],110:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],102:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, EligibilityResponse, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -39923,7 +38950,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],111:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],103:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Encounter, EncounterHospitalizationAccomodationComponent, EncounterHospitalizationComponent, EncounterLocationComponent, EncounterParticipantComponent, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -40541,7 +39568,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],112:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],104:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Enrollment, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -40752,7 +39779,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],113:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],105:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, EnrollmentResponse, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -40959,7 +39986,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],114:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],106:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, ExplanationOfBenefit, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -41166,7 +40193,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],115:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],107:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, ExtensionDefinition, ExtensionDefinitionMappingComponent, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -41516,7 +40543,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],116:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],108:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, FamilyHistory, FamilyHistoryRelationComponent, FamilyHistoryRelationConditionComponent, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -41929,7 +40956,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],117:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],109:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, Group, GroupCharacteristicComponent, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -42202,7 +41229,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],118:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],110:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HealthcareService, HealthcareServiceAvailableTimeComponent, HealthcareServiceNotAvailableTimeComponent, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, ServiceTypeComponent, Timing,
@@ -42829,7 +41856,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],119:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],111:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, ImagingObjectSelection, InstanceComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, SeriesComponent, StudyComponent, Timing,
@@ -43207,7 +42234,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],120:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],112:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, ImagingStudy, ImagingStudySeriesComponent, ImagingStudySeriesInstanceComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -43738,7 +42765,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],121:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],113:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Immunization, ImmunizationExplanationComponent, ImmunizationReactionComponent, ImmunizationVaccinationProtocolComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -44270,7 +43297,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],122:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],114:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, ImmunizationRecommendation, ImmunizationRecommendationRecommendationComponent, ImmunizationRecommendationRecommendationDateCriterionComponent, ImmunizationRecommendationRecommendationProtocolComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -44642,7 +43669,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],123:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],115:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, List, ListEntryComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -44916,7 +43943,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],124:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],116:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Location, LocationPositionComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -45199,7 +44226,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],125:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],117:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Media, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -45434,7 +44461,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],126:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],118:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Medication, MedicationPackageComponent, MedicationPackageContentComponent, MedicationProductComponent, MedicationProductIngredientComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -45782,7 +44809,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],127:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],119:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, MedicationAdministration, MedicationAdministrationDosageComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -46187,7 +45214,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],128:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],120:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, MedicationDispense, MedicationDispenseDispenseComponent, MedicationDispenseDispenseDosageComponent, MedicationDispenseSubstitutionComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -46750,7 +45777,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],129:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],121:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, MedicationPrescription, MedicationPrescriptionDispenseComponent, MedicationPrescriptionDosageInstructionComponent, MedicationPrescriptionSubstitutionComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -47287,7 +46314,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],130:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],122:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, MedicationStatement, MedicationStatementDosageComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -47620,7 +46647,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],131:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],123:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, MessageDestinationComponent, MessageHeader, MessageHeaderResponseComponent, MessageSourceComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -48033,7 +47060,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],132:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],124:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   module.exports = require('./core');
@@ -48218,7 +47245,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./alert":81,"./allergyintolerance":82,"./appointment":83,"./appointmentresponse":84,"./availability":85,"./basic":86,"./binary":87,"./bundle":88,"./careplan":89,"./claimresponse":90,"./communicationrequest":91,"./composition":92,"./conceptmap":93,"./condition":94,"./conformance":95,"./contract":96,"./contraindication":97,"./core":98,"./coverage":99,"./dataelement":100,"./device":101,"./devicecomponent":102,"./deviceuserequest":103,"./deviceusestatement":104,"./diagnosticorder":105,"./diagnosticreport":106,"./documentmanifest":107,"./documentreference":108,"./eligibility":109,"./eligibilityresponse":110,"./encounter":111,"./enrollment":112,"./enrollmentresponse":113,"./explanationofbenefit":114,"./extensiondefinition":115,"./familyhistory":116,"./group":117,"./healthcareservice":118,"./imagingobjectselection":119,"./imagingstudy":120,"./immunization":121,"./immunizationrecommendation":122,"./list":123,"./location":124,"./media":125,"./medication":126,"./medicationadministration":127,"./medicationdispense":128,"./medicationprescription":129,"./medicationstatement":130,"./messageheader":131,"./namingsystem":133,"./nutritionorder":134,"./observation":135,"./operationdefinition":136,"./operationoutcome":137,"./oralhealthclaim":138,"./order":139,"./orderresponse":140,"./organization":141,"./other":142,"./patient":143,"./paymentnotice":144,"./paymentreconciliation":145,"./pendedrequest":146,"./practitioner":147,"./procedure":148,"./procedurerequest":149,"./profile":150,"./provenance":151,"./query":152,"./questionnaire":153,"./questionnaireanswers":154,"./readjudicate":155,"./referralrequest":156,"./relatedperson":157,"./reversal":158,"./riskassessment":159,"./searchparameter":160,"./securityevent":161,"./slot":162,"./specimen":163,"./statusrequest":164,"./statusresponse":165,"./subscription":166,"./substance":167,"./supply":168,"./supportingdocumentation":169,"./valueset":170}],133:[function(require,module,exports){
+},{"./alert":73,"./allergyintolerance":74,"./appointment":75,"./appointmentresponse":76,"./availability":77,"./basic":78,"./binary":79,"./bundle":80,"./careplan":81,"./claimresponse":82,"./communicationrequest":83,"./composition":84,"./conceptmap":85,"./condition":86,"./conformance":87,"./contract":88,"./contraindication":89,"./core":90,"./coverage":91,"./dataelement":92,"./device":93,"./devicecomponent":94,"./deviceuserequest":95,"./deviceusestatement":96,"./diagnosticorder":97,"./diagnosticreport":98,"./documentmanifest":99,"./documentreference":100,"./eligibility":101,"./eligibilityresponse":102,"./encounter":103,"./enrollment":104,"./enrollmentresponse":105,"./explanationofbenefit":106,"./extensiondefinition":107,"./familyhistory":108,"./group":109,"./healthcareservice":110,"./imagingobjectselection":111,"./imagingstudy":112,"./immunization":113,"./immunizationrecommendation":114,"./list":115,"./location":116,"./media":117,"./medication":118,"./medicationadministration":119,"./medicationdispense":120,"./medicationprescription":121,"./medicationstatement":122,"./messageheader":123,"./namingsystem":125,"./nutritionorder":126,"./observation":127,"./operationdefinition":128,"./operationoutcome":129,"./oralhealthclaim":130,"./order":131,"./orderresponse":132,"./organization":133,"./other":134,"./patient":135,"./paymentnotice":136,"./paymentreconciliation":137,"./pendedrequest":138,"./practitioner":139,"./procedure":140,"./procedurerequest":141,"./profile":142,"./provenance":143,"./query":144,"./questionnaire":145,"./questionnaireanswers":146,"./readjudicate":147,"./referralrequest":148,"./relatedperson":149,"./reversal":150,"./riskassessment":151,"./searchparameter":152,"./securityevent":153,"./slot":154,"./specimen":155,"./statusrequest":156,"./statusresponse":157,"./subscription":158,"./substance":159,"./supply":160,"./supportingdocumentation":161,"./valueset":162}],125:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, NamingSystem, NamingSystemContactComponent, NamingSystemUniqueIdComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -48538,7 +47565,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],134:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],126:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, NutritionOrder, NutritionOrderItemComponent, NutritionOrderItemEnteralFormulaComponent, NutritionOrderItemOralDietComponent, NutritionOrderItemOralDietNutrientsComponent, NutritionOrderItemOralDietTextureComponent, NutritionOrderItemSupplementComponent, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -49244,7 +48271,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],135:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],127:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Observation, ObservationReferenceRangeComponent, ObservationRelatedComponent, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -49781,7 +48808,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],136:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],128:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, OperationDefinition, OperationDefinitionParameterComponent, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -50169,7 +49196,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],137:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],129:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, OperationOutcome, OperationOutcomeIssueComponent, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -50333,7 +49360,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],138:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],130:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, CoverageComponent, DT, DetailComponent, DiagnosisComponent, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, ItemsComponent, MissingTeethComponent, Narrative, OralHealthClaim, OrthodonticPlanComponent, Parameters, PayeeComponent, Period, ProsthesisComponent, Quantity, Range, Ratio, Reference, Resource, SampledData, SubDetailComponent, Timing,
@@ -51709,7 +50736,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],139:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],131:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Order, OrderWhenComponent, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -51970,7 +50997,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],140:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],132:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, OrderResponse, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -52172,7 +51199,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],141:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],133:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Organization, OrganizationContactComponent, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -52479,7 +51506,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],142:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],134:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Other, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -52630,7 +51657,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],143:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],135:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, AnimalComponent, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactComponent, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Patient, PatientLinkComponent, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -53206,7 +52233,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],144:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],136:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, PaymentNotice, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -53417,7 +52444,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],145:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],137:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DetailsComponent, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, NotesComponent, Parameters, PaymentReconciliation, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -53849,7 +52876,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],146:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],138:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, PendedRequest, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -54068,7 +53095,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],147:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],139:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Practitioner, PractitionerQualificationComponent, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -54455,7 +53482,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],148:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],140:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Procedure, ProcedurePerformerComponent, ProcedureRelatedItemComponent, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -54834,7 +53861,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],149:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],141:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, ProcedureRequest, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -55145,7 +54172,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],150:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],142:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ConstraintComponent, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Profile, ProfileMappingComponent, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -55548,7 +54575,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],151:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],143:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Provenance, ProvenanceAgentComponent, ProvenanceEntityComponent, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -55893,7 +54920,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],152:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],144:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Query, QueryResponseComponent, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -56181,7 +55208,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],153:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],145:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, GroupComponent, HumanName, Identifier, Narrative, Parameters, Period, Quantity, QuestionComponent, Questionnaire, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -56583,7 +55610,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],154:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],146:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, GroupComponent, HumanName, Identifier, Narrative, Parameters, Period, Quantity, QuestionAnswerComponent, QuestionComponent, QuestionnaireAnswers, Range, Ratio, Reference, Resource, SampledData, Timing,
@@ -57104,7 +56131,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],155:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],147:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, ItemsComponent, Narrative, Parameters, Period, Quantity, Range, Ratio, Readjudicate, Reference, Resource, SampledData, Timing,
@@ -57361,7 +56388,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],156:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],148:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, ReferralRequest, Resource, SampledData, Timing,
@@ -57649,7 +56676,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],157:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],149:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, RelatedPerson, Resource, SampledData, Timing,
@@ -57848,7 +56875,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],158:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],150:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, PayeeComponent, Period, Quantity, Range, Ratio, Reference, Resource, Reversal, ReversalCoverageComponent, SampledData, Timing,
@@ -58221,7 +57248,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],159:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],151:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, RiskAssessment, RiskAssessmentPredictionComponent, SampledData, Timing,
@@ -58534,7 +57561,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],160:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],152:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, SearchParameter, Timing,
@@ -58727,7 +57754,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],161:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],153:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, SecurityEvent, SecurityEventEventComponent, SecurityEventObjectComponent, SecurityEventObjectDetailComponent, SecurityEventParticipantComponent, SecurityEventParticipantNetworkComponent, SecurityEventSourceComponent, Timing,
@@ -59349,7 +58376,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],162:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],154:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Slot, Timing,
@@ -59542,7 +58569,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],163:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],155:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Specimen, SpecimenCollectionComponent, SpecimenContainerComponent, SpecimenSourceComponent, SpecimenTreatmentComponent, Timing,
@@ -60079,7 +59106,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],164:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],156:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, StatusRequest, Timing,
@@ -60278,7 +59305,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],165:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],157:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, StatusResponse, StatusResponseNotesComponent, Timing,
@@ -60578,7 +59605,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],166:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],158:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Subscription, SubscriptionChannelComponent, SubscriptionTagComponent, Timing,
@@ -60872,7 +59899,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],167:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],159:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Substance, SubstanceIngredientComponent, SubstanceInstanceComponent, Timing,
@@ -61107,7 +60134,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],168:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],160:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Supply, SupplyDispenseComponent, Timing,
@@ -61412,7 +60439,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],169:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],161:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, SupportingDocumentation, SupportingDocumentationDetailComponent, Timing,
@@ -61719,7 +60746,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],170:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],162:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Address, Attachment, BackboneElement, CORE, CodeableConcept, Coding, ConceptDefinitionComponent, ConceptDefinitionDesignationComponent, ConceptReferenceComponent, ConceptSetComponent, ConceptSetFilterComponent, ContactPoint, DT, DomainResource, Element, ElementDefinition, Extension, HumanName, Identifier, Narrative, Parameters, Period, Quantity, Range, Ratio, Reference, Resource, SampledData, Timing, ValueSet, ValueSetComposeComponent, ValueSetDefineComponent, ValueSetExpansionComponent, ValueSetExpansionContainsComponent,
@@ -62609,7 +61636,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql-datatypes":44,"./core":98}],171:[function(require,module,exports){
+},{"../cql-datatypes":36,"./core":90}],163:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Context, Exception, Library, PatientContext, PopulationContext, dt, typeIsArray, util,
@@ -63049,7 +62076,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datatypes":48,"../datatypes/exception":50,"../elm/library":67,"../util/util":177,"util":14}],172:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"../datatypes/exception":42,"../elm/library":59,"../util/util":169,"util":370}],164:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Executor, PatientContext, PopulationContext, Results, ref;
@@ -63131,7 +62158,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"./context":171,"./results":174}],173:[function(require,module,exports){
+},{"./context":163,"./results":166}],165:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Repository, cql;
@@ -63173,7 +62200,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../cql":46}],174:[function(require,module,exports){
+},{"../cql":38}],166:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Results;
@@ -63208,7 +62235,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{}],175:[function(require,module,exports){
+},{}],167:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var DateTime, Uncertainty, areDateTimesOrQuantities, areNumbers, classesEqual, codesAreEquivalent, compareEveryItemInArrays, compareObjects, deepCompareKeysAndValues, equals, equivalent, getClassOfObjects, getKeysFromObject, isCode, isFunction, isUncertainty;
@@ -63457,7 +62484,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datetime":49,"../datatypes/uncertainty":53}],176:[function(require,module,exports){
+},{"../datatypes/datetime":41,"../datatypes/uncertainty":45}],168:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var DateTime, Exception, MAX_DATE_VALUE, MAX_FLOAT_VALUE, MAX_INT_VALUE, MAX_TIME_VALUE, MIN_DATE_VALUE, MIN_FLOAT_PRECISION_VALUE, MIN_FLOAT_VALUE, MIN_INT_VALUE, MIN_TIME_VALUE, OverFlowException, Uncertainty, isValidDecimal, isValidInteger, predecessor, successor,
@@ -63689,7 +62716,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{"../datatypes/datetime":49,"../datatypes/exception":50,"../datatypes/uncertainty":53}],177:[function(require,module,exports){
+},{"../datatypes/datetime":41,"../datatypes/exception":42,"../datatypes/uncertainty":45}],169:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var getTimezoneSeparatorFromString, normalizeMillisecondsField, normalizeMillisecondsFieldInString, typeIsArray;
@@ -63776,7 +62803,7 @@ module.exports.Timestamp = Timestamp;
 
 
 
-},{}],178:[function(require,module,exports){
+},{}],170:[function(require,module,exports){
 //! moment.js
 //! version : 2.20.1
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -68313,7 +67340,7 @@ return hooks;
 
 })));
 
-},{}],179:[function(require,module,exports){
+},{}],171:[function(require,module,exports){
 module.exports={
   "10*": {
     "value": 10,
@@ -69517,10 +68544,10 @@ module.exports={
   }
 }
 
-},{}],180:[function(require,module,exports){
+},{}],172:[function(require,module,exports){
 module.exports={"mol":true,"sr":true,"Hz":true,"N":true,"Pa":true,"J":true,"W":true,"A":true,"V":true,"F":true,"Ohm":true,"S":true,"Wb":true,"Cel":true,"T":true,"H":true,"lm":true,"lx":true,"Bq":true,"Gy":true,"Sv":true,"l":true,"L":true,"ar":true,"t":true,"bar":true,"u":true,"eV":true,"pc":true,"[c]":true,"[h]":true,"[k]":true,"[eps_0]":true,"[mu_0]":true,"[e]":true,"[m_e]":true,"[m_p]":true,"[G]":true,"[g]":true,"[ly]":true,"gf":true,"Ky":true,"Gal":true,"dyn":true,"erg":true,"P":true,"Bi":true,"St":true,"Mx":true,"G":true,"Oe":true,"Gb":true,"sb":true,"Lmb":true,"ph":true,"Ci":true,"R":true,"RAD":true,"REM":true,"cal_[15]":true,"cal_[20]":true,"cal_m":true,"cal_IT":true,"cal_th":true,"cal":true,"tex":true,"m[H2O]":true,"m[Hg]":true,"eq":true,"osm":true,"g%":true,"kat":true,"U":true,"[iU]":true,"[IU]":true,"Np":true,"B":true,"B[SPL]":true,"B[V]":true,"B[mV]":true,"B[uV]":true,"B[10.nV]":true,"B[W]":true,"B[kW]":true,"st":true,"mho":true,"bit":true,"By":true,"Bd":true,"m":true,"s":true,"g":true,"rad":true,"K":true,"C":true,"cd":true}
 
-},{}],181:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 module.exports={
   "Y": {
     "CODE": "YA",
@@ -69884,7 +68911,7 @@ module.exports={
   }
 }
 
-},{}],182:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 module.exports={
   "Y": 1e+24,
   "Z": 1e+21,
@@ -69912,7 +68939,7 @@ module.exports={
   "Ti": 1099511627776
 }
 
-},{}],183:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 module.exports = (function() {
   /*
    * Generated by PEG.js 0.8.0.
@@ -71460,7 +70487,7 @@ module.exports = (function() {
   };
 })();
 
-},{"../lib/helpers":185,"./metrics.json":180,"./prefixMetadata.json":181,"./prefixes.json":182,"./unitMetadata.json":184}],184:[function(require,module,exports){
+},{"../lib/helpers":177,"./metrics.json":172,"./prefixMetadata.json":173,"./prefixes.json":174,"./unitMetadata.json":176}],176:[function(require,module,exports){
 module.exports={
   "10*": {
     "isBase": false,
@@ -77647,7 +76674,7 @@ module.exports={
   }
 }
 
-},{}],185:[function(require,module,exports){
+},{}],177:[function(require,module,exports){
 module.exports = {
 
   multiply: function multiply(t, ms) {
@@ -77717,7 +76744,7 @@ module.exports = {
   }
 }
 
-},{}],186:[function(require,module,exports){
+},{}],178:[function(require,module,exports){
 parser = require('./generated/ucum-parser.js');
 equivalents = require('./generated/equivalents.json');
 helpers = require('./lib/helpers.js');
@@ -77947,7 +76974,7 @@ function unitQuery(criteria, resultFields){
     return obj;
   });
 }
-},{"./generated/equivalents.json":179,"./generated/ucum-parser.js":183,"./generated/unitMetadata.json":184,"./lib/helpers.js":185}],187:[function(require,module,exports){
+},{"./generated/equivalents.json":171,"./generated/ucum-parser.js":175,"./generated/unitMetadata.json":176,"./lib/helpers.js":177}],179:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -77985,7 +77012,7 @@ class AdverseEvent extends mongoose.Document {
 }
 module.exports.AdverseEvent = AdverseEvent;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],188:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],180:[function(require,module,exports){
 module.exports.Id = require('./Id.js').Id;
 module.exports.IdSchema = require('./Id.js').IdSchema;
 module.exports.PhysicalExamOrder = require('./PhysicalExamOrder.js').PhysicalExamOrder;
@@ -78103,7 +77130,7 @@ module.exports.PhysicalExamPerformedSchema = require('./PhysicalExamPerformed.js
 module.exports.QDMPatient = require('./QDMPatient.js').QDMPatient;
 module.exports.QDMPatientSchema = require('./QDMPatient.js').QDMPatientSchema;
 
-},{"./AdverseEvent.js":187,"./AllergyIntolerance.js":189,"./AssessmentOrder.js":190,"./AssessmentPerformed.js":191,"./AssessmentRecommended.js":192,"./CareGoal.js":193,"./CommunicationPerformed.js":194,"./Component.js":195,"./DeviceApplied.js":196,"./DeviceOrder.js":197,"./DeviceRecommended.js":198,"./Diagnosis.js":199,"./DiagnosticStudyOrder.js":200,"./DiagnosticStudyPerformed.js":201,"./DiagnosticStudyRecommended.js":202,"./EncounterOrder.js":203,"./EncounterPerformed.js":204,"./EncounterRecommended.js":205,"./FacilityLocation.js":206,"./FamilyHistory.js":207,"./Id.js":208,"./ImmunizationAdministered.js":209,"./ImmunizationOrder.js":210,"./InterventionOrder.js":212,"./InterventionPerformed.js":213,"./InterventionRecommended.js":214,"./LaboratoryTestOrder.js":215,"./LaboratoryTestPerformed.js":216,"./LaboratoryTestRecommended.js":217,"./MedicationActive.js":218,"./MedicationAdministered.js":219,"./MedicationDischarge.js":220,"./MedicationDispensed.js":221,"./MedicationOrder.js":222,"./Participation.js":223,"./PatientCareExperience.js":224,"./PatientCharacteristic.js":225,"./PatientCharacteristicBirthdate.js":226,"./PatientCharacteristicClinicalTrialParticipant.js":227,"./PatientCharacteristicEthnicity.js":228,"./PatientCharacteristicExpired.js":229,"./PatientCharacteristicPayer.js":230,"./PatientCharacteristicRace.js":231,"./PatientCharacteristicSex.js":232,"./PhysicalExamOrder.js":233,"./PhysicalExamPerformed.js":234,"./PhysicalExamRecommended.js":235,"./ProcedureOrder.js":236,"./ProcedurePerformed.js":237,"./ProcedureRecommended.js":238,"./ProviderCareExperience.js":239,"./ProviderCharacteristic.js":240,"./QDMPatient.js":241,"./ResultComponent.js":243,"./SubstanceAdministered.js":244,"./SubstanceOrder.js":245,"./SubstanceRecommended.js":246,"./Symptom.js":247}],189:[function(require,module,exports){
+},{"./AdverseEvent.js":179,"./AllergyIntolerance.js":181,"./AssessmentOrder.js":182,"./AssessmentPerformed.js":183,"./AssessmentRecommended.js":184,"./CareGoal.js":185,"./CommunicationPerformed.js":186,"./Component.js":187,"./DeviceApplied.js":188,"./DeviceOrder.js":189,"./DeviceRecommended.js":190,"./Diagnosis.js":191,"./DiagnosticStudyOrder.js":192,"./DiagnosticStudyPerformed.js":193,"./DiagnosticStudyRecommended.js":194,"./EncounterOrder.js":195,"./EncounterPerformed.js":196,"./EncounterRecommended.js":197,"./FacilityLocation.js":198,"./FamilyHistory.js":199,"./Id.js":200,"./ImmunizationAdministered.js":201,"./ImmunizationOrder.js":202,"./InterventionOrder.js":204,"./InterventionPerformed.js":205,"./InterventionRecommended.js":206,"./LaboratoryTestOrder.js":207,"./LaboratoryTestPerformed.js":208,"./LaboratoryTestRecommended.js":209,"./MedicationActive.js":210,"./MedicationAdministered.js":211,"./MedicationDischarge.js":212,"./MedicationDispensed.js":213,"./MedicationOrder.js":214,"./Participation.js":215,"./PatientCareExperience.js":216,"./PatientCharacteristic.js":217,"./PatientCharacteristicBirthdate.js":218,"./PatientCharacteristicClinicalTrialParticipant.js":219,"./PatientCharacteristicEthnicity.js":220,"./PatientCharacteristicExpired.js":221,"./PatientCharacteristicPayer.js":222,"./PatientCharacteristicRace.js":223,"./PatientCharacteristicSex.js":224,"./PhysicalExamOrder.js":225,"./PhysicalExamPerformed.js":226,"./PhysicalExamRecommended.js":227,"./ProcedureOrder.js":228,"./ProcedurePerformed.js":229,"./ProcedureRecommended.js":230,"./ProviderCareExperience.js":231,"./ProviderCharacteristic.js":232,"./QDMPatient.js":233,"./ResultComponent.js":235,"./SubstanceAdministered.js":236,"./SubstanceOrder.js":237,"./SubstanceRecommended.js":238,"./Symptom.js":239}],181:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78141,7 +77168,7 @@ class AllergyIntolerance extends mongoose.Document {
 }
 module.exports.AllergyIntolerance = AllergyIntolerance;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],190:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],182:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78178,7 +77205,7 @@ class AssessmentOrder extends mongoose.Document {
 }
 module.exports.AssessmentOrder = AssessmentOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],191:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],183:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78219,7 +77246,7 @@ class AssessmentPerformed extends mongoose.Document {
 }
 module.exports.AssessmentPerformed = AssessmentPerformed;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],192:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],184:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78256,7 +77283,7 @@ class AssessmentRecommended extends mongoose.Document {
 }
 module.exports.AssessmentRecommended = AssessmentRecommended;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],193:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],185:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78292,7 +77319,7 @@ class CareGoal extends mongoose.Document {
 }
 module.exports.CareGoal = CareGoal;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],194:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],186:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78334,7 +77361,7 @@ class CommunicationPerformed extends mongoose.Document {
 }
 module.exports.CommunicationPerformed = CommunicationPerformed;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],195:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],187:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78367,7 +77394,7 @@ class Component extends mongoose.Document {
 }
 module.exports.Component = Component;
 
-},{"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],196:[function(require,module,exports){
+},{"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],188:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78406,7 +77433,7 @@ class DeviceApplied extends mongoose.Document {
 }
 module.exports.DeviceApplied = DeviceApplied;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],197:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],189:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78443,7 +77470,7 @@ class DeviceOrder extends mongoose.Document {
 }
 module.exports.DeviceOrder = DeviceOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],198:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],190:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78480,7 +77507,7 @@ class DeviceRecommended extends mongoose.Document {
 }
 module.exports.DeviceRecommended = DeviceRecommended;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],199:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],191:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78518,7 +77545,7 @@ class Diagnosis extends mongoose.Document {
 }
 module.exports.Diagnosis = Diagnosis;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],200:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],192:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78555,7 +77582,7 @@ class DiagnosticStudyOrder extends mongoose.Document {
 }
 module.exports.DiagnosticStudyOrder = DiagnosticStudyOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],201:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],193:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78599,7 +77626,7 @@ class DiagnosticStudyPerformed extends mongoose.Document {
 }
 module.exports.DiagnosticStudyPerformed = DiagnosticStudyPerformed;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],202:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],194:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78636,7 +77663,7 @@ class DiagnosticStudyRecommended extends mongoose.Document {
 }
 module.exports.DiagnosticStudyRecommended = DiagnosticStudyRecommended;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],203:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],195:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78674,7 +77701,7 @@ class EncounterOrder extends mongoose.Document {
 }
 module.exports.EncounterOrder = EncounterOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],204:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],196:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78717,7 +77744,7 @@ class EncounterPerformed extends mongoose.Document {
 }
 module.exports.EncounterPerformed = EncounterPerformed;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],205:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],197:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78755,7 +77782,7 @@ class EncounterRecommended extends mongoose.Document {
 }
 module.exports.EncounterRecommended = EncounterRecommended;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],206:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],198:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78788,7 +77815,7 @@ class FacilityLocation extends mongoose.Document {
 }
 module.exports.FacilityLocation = FacilityLocation;
 
-},{"./Component":195,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],207:[function(require,module,exports){
+},{"./Component":187,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],199:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78824,7 +77851,7 @@ class FamilyHistory extends mongoose.Document {
 }
 module.exports.FamilyHistory = FamilyHistory;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],208:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],200:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const [Number, String] = [
@@ -78848,7 +77875,7 @@ class Id extends mongoose.Document {
 }
 module.exports.Id = Id;
 
-},{"mongoose/browser":265}],209:[function(require,module,exports){
+},{"mongoose/browser":261}],201:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78888,7 +77915,7 @@ class ImmunizationAdministered extends mongoose.Document {
 }
 module.exports.ImmunizationAdministered = ImmunizationAdministered;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],210:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],202:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -78929,7 +77956,7 @@ class ImmunizationOrder extends mongoose.Document {
 }
 module.exports.ImmunizationOrder = ImmunizationOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],211:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],203:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const [Number, String, Mixed, ObjectId] = [
@@ -78993,7 +78020,7 @@ class IndividualResult extends mongoose.Document {
 }
 module.exports.IndividualResult = IndividualResult;
 
-},{"mongoose/browser":265}],212:[function(require,module,exports){
+},{"mongoose/browser":261}],204:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79030,7 +78057,7 @@ class InterventionOrder extends mongoose.Document {
 }
 module.exports.InterventionOrder = InterventionOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],213:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],205:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79070,7 +78097,7 @@ class InterventionPerformed extends mongoose.Document {
 }
 module.exports.InterventionPerformed = InterventionPerformed;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],214:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],206:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79107,7 +78134,7 @@ class InterventionRecommended extends mongoose.Document {
 }
 module.exports.InterventionRecommended = InterventionRecommended;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],215:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],207:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79144,7 +78171,7 @@ class LaboratoryTestOrder extends mongoose.Document {
 }
 module.exports.LaboratoryTestOrder = LaboratoryTestOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],216:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],208:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79188,7 +78215,7 @@ class LaboratoryTestPerformed extends mongoose.Document {
 }
 module.exports.LaboratoryTestPerformed = LaboratoryTestPerformed;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],217:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],209:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79225,7 +78252,7 @@ class LaboratoryTestRecommended extends mongoose.Document {
 }
 module.exports.LaboratoryTestRecommended = LaboratoryTestRecommended;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],218:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],210:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79263,7 +78290,7 @@ class MedicationActive extends mongoose.Document {
 }
 module.exports.MedicationActive = MedicationActive;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],219:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],211:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79304,7 +78331,7 @@ class MedicationAdministered extends mongoose.Document {
 }
 module.exports.MedicationAdministered = MedicationAdministered;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],220:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],212:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79346,7 +78373,7 @@ class MedicationDischarge extends mongoose.Document {
 }
 module.exports.MedicationDischarge = MedicationDischarge;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],221:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],213:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79391,7 +78418,7 @@ class MedicationDispensed extends mongoose.Document {
 }
 module.exports.MedicationDispensed = MedicationDispensed;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],222:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],214:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79437,7 +78464,7 @@ class MedicationOrder extends mongoose.Document {
 }
 module.exports.MedicationOrder = MedicationOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],223:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],215:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79471,7 +78498,7 @@ class Participation extends mongoose.Document {
 }
 module.exports.Participation = Participation;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],224:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],216:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79505,7 +78532,7 @@ class PatientCareExperience extends mongoose.Document {
 }
 module.exports.PatientCareExperience = PatientCareExperience;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],225:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],217:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79539,7 +78566,7 @@ class PatientCharacteristic extends mongoose.Document {
 }
 module.exports.PatientCharacteristic = PatientCharacteristic;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],226:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],218:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79574,7 +78601,7 @@ class PatientCharacteristicBirthdate extends mongoose.Document {
 }
 module.exports.PatientCharacteristicBirthdate = PatientCharacteristicBirthdate;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],227:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],219:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79611,7 +78638,7 @@ class PatientCharacteristicClinicalTrialParticipant extends mongoose.Document {
 }
 module.exports.PatientCharacteristicClinicalTrialParticipant = PatientCharacteristicClinicalTrialParticipant;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],228:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],220:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79645,7 +78672,7 @@ class PatientCharacteristicEthnicity extends mongoose.Document {
 }
 module.exports.PatientCharacteristicEthnicity = PatientCharacteristicEthnicity;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],229:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],221:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79681,7 +78708,7 @@ class PatientCharacteristicExpired extends mongoose.Document {
 }
 module.exports.PatientCharacteristicExpired = PatientCharacteristicExpired;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],230:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],222:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79716,7 +78743,7 @@ class PatientCharacteristicPayer extends mongoose.Document {
 }
 module.exports.PatientCharacteristicPayer = PatientCharacteristicPayer;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],231:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],223:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79750,7 +78777,7 @@ class PatientCharacteristicRace extends mongoose.Document {
 }
 module.exports.PatientCharacteristicRace = PatientCharacteristicRace;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],232:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],224:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79784,7 +78811,7 @@ class PatientCharacteristicSex extends mongoose.Document {
 }
 module.exports.PatientCharacteristicSex = PatientCharacteristicSex;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],233:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],225:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79822,7 +78849,7 @@ class PhysicalExamOrder extends mongoose.Document {
 }
 module.exports.PhysicalExamOrder = PhysicalExamOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],234:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],226:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79864,7 +78891,7 @@ class PhysicalExamPerformed extends mongoose.Document {
 }
 module.exports.PhysicalExamPerformed = PhysicalExamPerformed;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],235:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],227:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79902,7 +78929,7 @@ class PhysicalExamRecommended extends mongoose.Document {
 }
 module.exports.PhysicalExamRecommended = PhysicalExamRecommended;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],236:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],228:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79941,7 +78968,7 @@ class ProcedureOrder extends mongoose.Document {
 }
 module.exports.ProcedureOrder = ProcedureOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],237:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],229:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -79986,7 +79013,7 @@ class ProcedurePerformed extends mongoose.Document {
 }
 module.exports.ProcedurePerformed = ProcedurePerformed;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],238:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],230:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -80025,7 +79052,7 @@ class ProcedureRecommended extends mongoose.Document {
 }
 module.exports.ProcedureRecommended = ProcedureRecommended;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],239:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],231:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -80059,7 +79086,7 @@ class ProviderCareExperience extends mongoose.Document {
 }
 module.exports.ProviderCareExperience = ProviderCareExperience;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],240:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],232:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -80093,7 +79120,7 @@ class ProviderCharacteristic extends mongoose.Document {
 }
 module.exports.ProviderCharacteristic = ProviderCharacteristic;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],241:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],233:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('./basetypes/Code');
 const Interval = require('./basetypes/Interval');
@@ -80354,7 +79381,7 @@ class QDMPatient extends mongoose.Document {
 }
 module.exports.QDMPatient = QDMPatient;
 
-},{"./AllDataElements":188,"./basetypes/Code":249,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],242:[function(require,module,exports){
+},{"./AllDataElements":180,"./basetypes/Code":241,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],234:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const PlaceholderResultSchema = mongoose.Schema({
@@ -80389,7 +79416,7 @@ class PlaceholderResult extends mongoose.Document {
 }
 module.exports.PlaceholderResult = PlaceholderResult;
 
-},{"mongoose/browser":265}],243:[function(require,module,exports){
+},{"mongoose/browser":261}],235:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -80421,7 +79448,7 @@ class ResultComponent extends mongoose.Document {
 }
 module.exports.ResultComponent = ResultComponent;
 
-},{"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],244:[function(require,module,exports){
+},{"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],236:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -80461,7 +79488,7 @@ class SubstanceAdministered extends mongoose.Document {
 }
 module.exports.SubstanceAdministered = SubstanceAdministered;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],245:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],237:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -80503,7 +79530,7 @@ class SubstanceOrder extends mongoose.Document {
 }
 module.exports.SubstanceOrder = SubstanceOrder;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],246:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],238:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -80544,7 +79571,7 @@ class SubstanceRecommended extends mongoose.Document {
 }
 module.exports.SubstanceRecommended = SubstanceRecommended;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],247:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],239:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { DataElementSchema } = require('./basetypes/DataElement');
 const Code = require('./basetypes/Code');
@@ -80580,7 +79607,7 @@ class Symptom extends mongoose.Document {
 }
 module.exports.Symptom = Symptom;
 
-},{"./Component":195,"./FacilityLocation":206,"./Id":208,"./basetypes/Any":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":253,"mongoose/browser":265}],248:[function(require,module,exports){
+},{"./Component":187,"./FacilityLocation":198,"./Id":200,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":261}],240:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -80650,7 +79677,7 @@ Any.prototype.cast = any => RecursiveCast(any);
 mongoose.Schema.Types.Any = Any;
 module.exports = Any;
 
-},{"cql-execution":46,"mongoose/browser":265}],249:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":261}],241:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -80687,7 +79714,7 @@ Code.prototype.cast = (code) => {
 mongoose.Schema.Types.Code = Code;
 module.exports = Code;
 
-},{"cql-execution":46,"mongoose/browser":265}],250:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":261}],242:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('./Code.js');
 const cql = require('cql-execution');
@@ -80732,7 +79759,7 @@ function DataElementSchema(add, options) {
 
 module.exports.DataElementSchema = DataElementSchema;
 
-},{"../Id":208,"./Code.js":249,"cql-execution":46,"mongoose/browser":265}],251:[function(require,module,exports){
+},{"../Id":200,"./Code.js":241,"cql-execution":38,"mongoose/browser":261}],243:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -80752,7 +79779,7 @@ DateTime.prototype.cast = (dateTime) => {
 mongoose.Schema.Types.DateTime = DateTime;
 module.exports = DateTime;
 
-},{"cql-execution":46,"mongoose/browser":265}],252:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":261}],244:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -80789,7 +79816,7 @@ Interval.prototype.cast = (interval) => {
 mongoose.Schema.Types.Interval = Interval;
 module.exports = Interval;
 
-},{"cql-execution":46,"mongoose/browser":265}],253:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":261}],245:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -80811,7 +79838,7 @@ Quantity.prototype.cast = (quantity) => {
 mongoose.Schema.Types.Quantity = Quantity;
 module.exports = Quantity;
 
-},{"cql-execution":46,"mongoose/browser":265}],254:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":261}],246:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { StatementDependencySchema } = require('./CQLStatementDependency');
 
@@ -80844,7 +79871,7 @@ class CQLLibrary extends mongoose.Document {
 }
 module.exports.CQLLibrary = CQLLibrary;
 
-},{"./CQLStatementDependency":255,"mongoose/browser":265}],255:[function(require,module,exports){
+},{"./CQLStatementDependency":247,"mongoose/browser":261}],247:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const StatementReferenceSchema = new mongoose.Schema({
@@ -80873,7 +79900,7 @@ class StatementDependency extends mongoose.Document {
 }
 module.exports.StatementDependency = StatementDependency;
 
-},{"mongoose/browser":265}],256:[function(require,module,exports){
+},{"mongoose/browser":261}],248:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const ConceptSchema = new mongoose.Schema({
@@ -80892,7 +79919,7 @@ class Concept extends mongoose.Document {
 }
 module.exports.Concept = Concept;
 
-},{"mongoose/browser":265}],257:[function(require,module,exports){
+},{"mongoose/browser":261}],249:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('../basetypes/Code');
 const Interval = require('../basetypes/Interval');
@@ -80991,7 +80018,7 @@ class Measure extends mongoose.Document {
 }
 module.exports.Measure = Measure;
 
-},{"../basetypes/Code":249,"../basetypes/Interval":252,"../basetypes/Quantity":253,"./CQLLibrary":254,"./PopulationSet":259,"mongoose/browser":265}],258:[function(require,module,exports){
+},{"../basetypes/Code":241,"../basetypes/Interval":244,"../basetypes/Quantity":245,"./CQLLibrary":246,"./PopulationSet":251,"mongoose/browser":261}],250:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 // using mBuffer to not conflict with system Buffer
@@ -81019,7 +80046,7 @@ class MeasurePackage extends mongoose.Document {
 }
 module.exports.MeasurePackage = MeasurePackage;
 
-},{"mongoose/browser":265}],259:[function(require,module,exports){
+},{"mongoose/browser":261}],251:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { StatementReferenceSchema } = require('./CQLStatementDependency');
 
@@ -81095,7 +80122,7 @@ class PopulationSet extends mongoose.Document {
 }
 module.exports.PopulationSet = PopulationSet;
 
-},{"./CQLStatementDependency":255,"mongoose/browser":265}],260:[function(require,module,exports){
+},{"./CQLStatementDependency":247,"mongoose/browser":261}],252:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Concept = require('./Concept.js');
 
@@ -81123,7 +80150,7 @@ class ValueSet extends mongoose.Document {
 }
 module.exports.ValueSet = ValueSet;
 
-},{"./Concept.js":256,"mongoose/browser":265}],261:[function(require,module,exports){
+},{"./Concept.js":248,"mongoose/browser":261}],253:[function(require,module,exports){
 module.exports = require('./AllDataElements.js');
 module.exports.CQL = require('cql-execution');
 module.exports.Result = require('./Result.js').Result;
@@ -81143,7 +80170,643 @@ module.exports.ConceptSchema = require('./cqm/Concept.js').ConceptSchema;
 module.exports.IndividualResult = require('./IndividualResult').IndividualResult;
 module.exports.IndividualResultSchema = require('./IndividualResult').IndividualResultSchema;
 
-},{"./AllDataElements.js":188,"./IndividualResult":211,"./Result.js":242,"./cqm/CQLLibrary.js":254,"./cqm/CQLStatementDependency.js":255,"./cqm/Concept.js":256,"./cqm/Measure.js":257,"./cqm/MeasurePackage.js":258,"./cqm/ValueSet.js":260,"cql-execution":46}],262:[function(require,module,exports){
+},{"./AllDataElements.js":180,"./IndividualResult":203,"./Result.js":234,"./cqm/CQLLibrary.js":246,"./cqm/CQLStatementDependency.js":247,"./cqm/Concept.js":248,"./cqm/Measure.js":249,"./cqm/MeasurePackage.js":250,"./cqm/ValueSet.js":252,"cql-execution":38}],254:[function(require,module,exports){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var objectCreate = Object.create || objectCreatePolyfill
+var objectKeys = Object.keys || objectKeysPolyfill
+var bind = Function.prototype.bind || functionBindPolyfill
+
+function EventEmitter() {
+  if (!this._events || !Object.prototype.hasOwnProperty.call(this, '_events')) {
+    this._events = objectCreate(null);
+    this._eventsCount = 0;
+  }
+
+  this._maxListeners = this._maxListeners || undefined;
+}
+module.exports = EventEmitter;
+
+// Backwards-compat with node 0.10.x
+EventEmitter.EventEmitter = EventEmitter;
+
+EventEmitter.prototype._events = undefined;
+EventEmitter.prototype._maxListeners = undefined;
+
+// By default EventEmitters will print a warning if more than 10 listeners are
+// added to it. This is a useful default which helps finding memory leaks.
+var defaultMaxListeners = 10;
+
+var hasDefineProperty;
+try {
+  var o = {};
+  if (Object.defineProperty) Object.defineProperty(o, 'x', { value: 0 });
+  hasDefineProperty = o.x === 0;
+} catch (err) { hasDefineProperty = false }
+if (hasDefineProperty) {
+  Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
+    enumerable: true,
+    get: function() {
+      return defaultMaxListeners;
+    },
+    set: function(arg) {
+      // check whether the input is a positive number (whose value is zero or
+      // greater and not a NaN).
+      if (typeof arg !== 'number' || arg < 0 || arg !== arg)
+        throw new TypeError('"defaultMaxListeners" must be a positive number');
+      defaultMaxListeners = arg;
+    }
+  });
+} else {
+  EventEmitter.defaultMaxListeners = defaultMaxListeners;
+}
+
+// Obviously not all Emitters should be limited to 10. This function allows
+// that to be increased. Set to zero for unlimited.
+EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
+  if (typeof n !== 'number' || n < 0 || isNaN(n))
+    throw new TypeError('"n" argument must be a positive number');
+  this._maxListeners = n;
+  return this;
+};
+
+function $getMaxListeners(that) {
+  if (that._maxListeners === undefined)
+    return EventEmitter.defaultMaxListeners;
+  return that._maxListeners;
+}
+
+EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
+  return $getMaxListeners(this);
+};
+
+// These standalone emit* functions are used to optimize calling of event
+// handlers for fast cases because emit() itself often has a variable number of
+// arguments and can be deoptimized because of that. These functions always have
+// the same number of arguments and thus do not get deoptimized, so the code
+// inside them can execute faster.
+function emitNone(handler, isFn, self) {
+  if (isFn)
+    handler.call(self);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].call(self);
+  }
+}
+function emitOne(handler, isFn, self, arg1) {
+  if (isFn)
+    handler.call(self, arg1);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].call(self, arg1);
+  }
+}
+function emitTwo(handler, isFn, self, arg1, arg2) {
+  if (isFn)
+    handler.call(self, arg1, arg2);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].call(self, arg1, arg2);
+  }
+}
+function emitThree(handler, isFn, self, arg1, arg2, arg3) {
+  if (isFn)
+    handler.call(self, arg1, arg2, arg3);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].call(self, arg1, arg2, arg3);
+  }
+}
+
+function emitMany(handler, isFn, self, args) {
+  if (isFn)
+    handler.apply(self, args);
+  else {
+    var len = handler.length;
+    var listeners = arrayClone(handler, len);
+    for (var i = 0; i < len; ++i)
+      listeners[i].apply(self, args);
+  }
+}
+
+EventEmitter.prototype.emit = function emit(type) {
+  var er, handler, len, args, i, events;
+  var doError = (type === 'error');
+
+  events = this._events;
+  if (events)
+    doError = (doError && events.error == null);
+  else if (!doError)
+    return false;
+
+  // If there is no 'error' event listener then throw.
+  if (doError) {
+    if (arguments.length > 1)
+      er = arguments[1];
+    if (er instanceof Error) {
+      throw er; // Unhandled 'error' event
+    } else {
+      // At least give some kind of context to the user
+      var err = new Error('Unhandled "error" event. (' + er + ')');
+      err.context = er;
+      throw err;
+    }
+    return false;
+  }
+
+  handler = events[type];
+
+  if (!handler)
+    return false;
+
+  var isFn = typeof handler === 'function';
+  len = arguments.length;
+  switch (len) {
+      // fast cases
+    case 1:
+      emitNone(handler, isFn, this);
+      break;
+    case 2:
+      emitOne(handler, isFn, this, arguments[1]);
+      break;
+    case 3:
+      emitTwo(handler, isFn, this, arguments[1], arguments[2]);
+      break;
+    case 4:
+      emitThree(handler, isFn, this, arguments[1], arguments[2], arguments[3]);
+      break;
+      // slower
+    default:
+      args = new Array(len - 1);
+      for (i = 1; i < len; i++)
+        args[i - 1] = arguments[i];
+      emitMany(handler, isFn, this, args);
+  }
+
+  return true;
+};
+
+function _addListener(target, type, listener, prepend) {
+  var m;
+  var events;
+  var existing;
+
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+
+  events = target._events;
+  if (!events) {
+    events = target._events = objectCreate(null);
+    target._eventsCount = 0;
+  } else {
+    // To avoid recursion in the case that type === "newListener"! Before
+    // adding it to the listeners, first emit "newListener".
+    if (events.newListener) {
+      target.emit('newListener', type,
+          listener.listener ? listener.listener : listener);
+
+      // Re-assign `events` because a newListener handler could have caused the
+      // this._events to be assigned to a new object
+      events = target._events;
+    }
+    existing = events[type];
+  }
+
+  if (!existing) {
+    // Optimize the case of one listener. Don't need the extra array object.
+    existing = events[type] = listener;
+    ++target._eventsCount;
+  } else {
+    if (typeof existing === 'function') {
+      // Adding the second element, need to change to array.
+      existing = events[type] =
+          prepend ? [listener, existing] : [existing, listener];
+    } else {
+      // If we've already got an array, just append.
+      if (prepend) {
+        existing.unshift(listener);
+      } else {
+        existing.push(listener);
+      }
+    }
+
+    // Check for listener leak
+    if (!existing.warned) {
+      m = $getMaxListeners(target);
+      if (m && m > 0 && existing.length > m) {
+        existing.warned = true;
+        var w = new Error('Possible EventEmitter memory leak detected. ' +
+            existing.length + ' "' + String(type) + '" listeners ' +
+            'added. Use emitter.setMaxListeners() to ' +
+            'increase limit.');
+        w.name = 'MaxListenersExceededWarning';
+        w.emitter = target;
+        w.type = type;
+        w.count = existing.length;
+        if (typeof console === 'object' && console.warn) {
+          console.warn('%s: %s', w.name, w.message);
+        }
+      }
+    }
+  }
+
+  return target;
+}
+
+EventEmitter.prototype.addListener = function addListener(type, listener) {
+  return _addListener(this, type, listener, false);
+};
+
+EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+EventEmitter.prototype.prependListener =
+    function prependListener(type, listener) {
+      return _addListener(this, type, listener, true);
+    };
+
+function onceWrapper() {
+  if (!this.fired) {
+    this.target.removeListener(this.type, this.wrapFn);
+    this.fired = true;
+    switch (arguments.length) {
+      case 0:
+        return this.listener.call(this.target);
+      case 1:
+        return this.listener.call(this.target, arguments[0]);
+      case 2:
+        return this.listener.call(this.target, arguments[0], arguments[1]);
+      case 3:
+        return this.listener.call(this.target, arguments[0], arguments[1],
+            arguments[2]);
+      default:
+        var args = new Array(arguments.length);
+        for (var i = 0; i < args.length; ++i)
+          args[i] = arguments[i];
+        this.listener.apply(this.target, args);
+    }
+  }
+}
+
+function _onceWrap(target, type, listener) {
+  var state = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
+  var wrapped = bind.call(onceWrapper, state);
+  wrapped.listener = listener;
+  state.wrapFn = wrapped;
+  return wrapped;
+}
+
+EventEmitter.prototype.once = function once(type, listener) {
+  if (typeof listener !== 'function')
+    throw new TypeError('"listener" argument must be a function');
+  this.on(type, _onceWrap(this, type, listener));
+  return this;
+};
+
+EventEmitter.prototype.prependOnceListener =
+    function prependOnceListener(type, listener) {
+      if (typeof listener !== 'function')
+        throw new TypeError('"listener" argument must be a function');
+      this.prependListener(type, _onceWrap(this, type, listener));
+      return this;
+    };
+
+// Emits a 'removeListener' event if and only if the listener was removed.
+EventEmitter.prototype.removeListener =
+    function removeListener(type, listener) {
+      var list, events, position, i, originalListener;
+
+      if (typeof listener !== 'function')
+        throw new TypeError('"listener" argument must be a function');
+
+      events = this._events;
+      if (!events)
+        return this;
+
+      list = events[type];
+      if (!list)
+        return this;
+
+      if (list === listener || list.listener === listener) {
+        if (--this._eventsCount === 0)
+          this._events = objectCreate(null);
+        else {
+          delete events[type];
+          if (events.removeListener)
+            this.emit('removeListener', type, list.listener || listener);
+        }
+      } else if (typeof list !== 'function') {
+        position = -1;
+
+        for (i = list.length - 1; i >= 0; i--) {
+          if (list[i] === listener || list[i].listener === listener) {
+            originalListener = list[i].listener;
+            position = i;
+            break;
+          }
+        }
+
+        if (position < 0)
+          return this;
+
+        if (position === 0)
+          list.shift();
+        else
+          spliceOne(list, position);
+
+        if (list.length === 1)
+          events[type] = list[0];
+
+        if (events.removeListener)
+          this.emit('removeListener', type, originalListener || listener);
+      }
+
+      return this;
+    };
+
+EventEmitter.prototype.removeAllListeners =
+    function removeAllListeners(type) {
+      var listeners, events, i;
+
+      events = this._events;
+      if (!events)
+        return this;
+
+      // not listening for removeListener, no need to emit
+      if (!events.removeListener) {
+        if (arguments.length === 0) {
+          this._events = objectCreate(null);
+          this._eventsCount = 0;
+        } else if (events[type]) {
+          if (--this._eventsCount === 0)
+            this._events = objectCreate(null);
+          else
+            delete events[type];
+        }
+        return this;
+      }
+
+      // emit removeListener for all listeners on all events
+      if (arguments.length === 0) {
+        var keys = objectKeys(events);
+        var key;
+        for (i = 0; i < keys.length; ++i) {
+          key = keys[i];
+          if (key === 'removeListener') continue;
+          this.removeAllListeners(key);
+        }
+        this.removeAllListeners('removeListener');
+        this._events = objectCreate(null);
+        this._eventsCount = 0;
+        return this;
+      }
+
+      listeners = events[type];
+
+      if (typeof listeners === 'function') {
+        this.removeListener(type, listeners);
+      } else if (listeners) {
+        // LIFO order
+        for (i = listeners.length - 1; i >= 0; i--) {
+          this.removeListener(type, listeners[i]);
+        }
+      }
+
+      return this;
+    };
+
+function _listeners(target, type, unwrap) {
+  var events = target._events;
+
+  if (!events)
+    return [];
+
+  var evlistener = events[type];
+  if (!evlistener)
+    return [];
+
+  if (typeof evlistener === 'function')
+    return unwrap ? [evlistener.listener || evlistener] : [evlistener];
+
+  return unwrap ? unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
+}
+
+EventEmitter.prototype.listeners = function listeners(type) {
+  return _listeners(this, type, true);
+};
+
+EventEmitter.prototype.rawListeners = function rawListeners(type) {
+  return _listeners(this, type, false);
+};
+
+EventEmitter.listenerCount = function(emitter, type) {
+  if (typeof emitter.listenerCount === 'function') {
+    return emitter.listenerCount(type);
+  } else {
+    return listenerCount.call(emitter, type);
+  }
+};
+
+EventEmitter.prototype.listenerCount = listenerCount;
+function listenerCount(type) {
+  var events = this._events;
+
+  if (events) {
+    var evlistener = events[type];
+
+    if (typeof evlistener === 'function') {
+      return 1;
+    } else if (evlistener) {
+      return evlistener.length;
+    }
+  }
+
+  return 0;
+}
+
+EventEmitter.prototype.eventNames = function eventNames() {
+  return this._eventsCount > 0 ? Reflect.ownKeys(this._events) : [];
+};
+
+// About 1.5x faster than the two-arg version of Array#splice().
+function spliceOne(list, index) {
+  for (var i = index, k = i + 1, n = list.length; k < n; i += 1, k += 1)
+    list[i] = list[k];
+  list.pop();
+}
+
+function arrayClone(arr, n) {
+  var copy = new Array(n);
+  for (var i = 0; i < n; ++i)
+    copy[i] = arr[i];
+  return copy;
+}
+
+function unwrapListeners(arr) {
+  var ret = new Array(arr.length);
+  for (var i = 0; i < ret.length; ++i) {
+    ret[i] = arr[i].listener || arr[i];
+  }
+  return ret;
+}
+
+function objectCreatePolyfill(proto) {
+  var F = function() {};
+  F.prototype = proto;
+  return new F;
+}
+function objectKeysPolyfill(obj) {
+  var keys = [];
+  for (var k in obj) if (Object.prototype.hasOwnProperty.call(obj, k)) {
+    keys.push(k);
+  }
+  return k;
+}
+function functionBindPolyfill(context) {
+  var fn = this;
+  return function () {
+    return fn.apply(context, arguments);
+  };
+}
+
+},{}],255:[function(require,module,exports){
+exports.read = function (buffer, offset, isLE, mLen, nBytes) {
+  var e, m
+  var eLen = (nBytes * 8) - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var nBits = -7
+  var i = isLE ? (nBytes - 1) : 0
+  var d = isLE ? -1 : 1
+  var s = buffer[offset + i]
+
+  i += d
+
+  e = s & ((1 << (-nBits)) - 1)
+  s >>= (-nBits)
+  nBits += eLen
+  for (; nBits > 0; e = (e * 256) + buffer[offset + i], i += d, nBits -= 8) {}
+
+  m = e & ((1 << (-nBits)) - 1)
+  e >>= (-nBits)
+  nBits += mLen
+  for (; nBits > 0; m = (m * 256) + buffer[offset + i], i += d, nBits -= 8) {}
+
+  if (e === 0) {
+    e = 1 - eBias
+  } else if (e === eMax) {
+    return m ? NaN : ((s ? -1 : 1) * Infinity)
+  } else {
+    m = m + Math.pow(2, mLen)
+    e = e - eBias
+  }
+  return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
+}
+
+exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
+  var e, m, c
+  var eLen = (nBytes * 8) - mLen - 1
+  var eMax = (1 << eLen) - 1
+  var eBias = eMax >> 1
+  var rt = (mLen === 23 ? Math.pow(2, -24) - Math.pow(2, -77) : 0)
+  var i = isLE ? 0 : (nBytes - 1)
+  var d = isLE ? 1 : -1
+  var s = value < 0 || (value === 0 && 1 / value < 0) ? 1 : 0
+
+  value = Math.abs(value)
+
+  if (isNaN(value) || value === Infinity) {
+    m = isNaN(value) ? 1 : 0
+    e = eMax
+  } else {
+    e = Math.floor(Math.log(value) / Math.LN2)
+    if (value * (c = Math.pow(2, -e)) < 1) {
+      e--
+      c *= 2
+    }
+    if (e + eBias >= 1) {
+      value += rt / c
+    } else {
+      value += rt * Math.pow(2, 1 - eBias)
+    }
+    if (value * c >= 2) {
+      e++
+      c /= 2
+    }
+
+    if (e + eBias >= eMax) {
+      m = 0
+      e = eMax
+    } else if (e + eBias >= 1) {
+      m = ((value * c) - 1) * Math.pow(2, mLen)
+      e = e + eBias
+    } else {
+      m = value * Math.pow(2, eBias - 1) * Math.pow(2, mLen)
+      e = 0
+    }
+  }
+
+  for (; mLen >= 8; buffer[offset + i] = m & 0xff, i += d, m /= 256, mLen -= 8) {}
+
+  e = (e << mLen) | m
+  eLen += mLen
+  for (; eLen > 0; buffer[offset + i] = e & 0xff, i += d, e /= 256, eLen -= 8) {}
+
+  buffer[offset + i - d] |= s * 128
+}
+
+},{}],256:[function(require,module,exports){
+arguments[4][9][0].apply(exports,arguments)
+},{"dup":9}],257:[function(require,module,exports){
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+// The _isBuffer check is for Safari 5-7 support, because it's missing
+// Object.prototype.constructor. Remove this eventually
+module.exports = function (obj) {
+  return obj != null && (isBuffer(obj) || isSlowBuffer(obj) || !!obj._isBuffer)
+}
+
+function isBuffer (obj) {
+  return !!obj.constructor && typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+}
+
+// For Node v0.10 support. Remove this eventually.
+function isSlowBuffer (obj) {
+  return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
+}
+
+},{}],258:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -81650,7 +81313,7 @@ function decorateNextFn(fn) {
 module.exports = Kareem;
 
 }).call(this,require('_process'))
-},{"_process":11}],263:[function(require,module,exports){
+},{"_process":364}],259:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -81666,7 +81329,7 @@ module.exports = Kareem;
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.10';
+  var VERSION = '4.17.11';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -81930,7 +81593,7 @@ module.exports = Kareem;
   var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');
 
   /** Used to detect strings that need a more robust regexp to match words. */
-  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
   /** Used to assign default `context` object properties. */
   var contextProps = [
@@ -82876,20 +82539,6 @@ module.exports = Kareem;
       }
     }
     return result;
-  }
-
-  /**
-   * Gets the value at `key`, unless `key` is "__proto__".
-   *
-   * @private
-   * @param {Object} object The object to query.
-   * @param {string} key The key of the property to get.
-   * @returns {*} Returns the property value.
-   */
-  function safeGet(object, key) {
-    return key == '__proto__'
-      ? undefined
-      : object[key];
   }
 
   /**
@@ -85349,7 +84998,7 @@ module.exports = Kareem;
           if (isArguments(objValue)) {
             newValue = toPlainObject(objValue);
           }
-          else if (!isObject(objValue) || (srcIndex && isFunction(objValue))) {
+          else if (!isObject(objValue) || isFunction(objValue)) {
             newValue = initCloneObject(srcValue);
           }
         }
@@ -88270,6 +87919,22 @@ module.exports = Kareem;
         array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
       }
       return array;
+    }
+
+    /**
+     * Gets the value at `key`, unless `key` is "__proto__".
+     *
+     * @private
+     * @param {Object} object The object to query.
+     * @param {string} key The key of the property to get.
+     * @returns {*} Returns the property value.
+     */
+    function safeGet(object, key) {
+      if (key == '__proto__') {
+        return;
+      }
+
+      return object[key];
     }
 
     /**
@@ -98759,7 +98424,7 @@ module.exports = Kareem;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],264:[function(require,module,exports){
+},{}],260:[function(require,module,exports){
 //! moment.js
 
 ;(function (global, factory) {
@@ -99904,22 +99569,36 @@ module.exports = Kareem;
     function createDate (y, m, d, h, M, s, ms) {
         // can't just apply() to create a date:
         // https://stackoverflow.com/q/181348
-        var date = new Date(y, m, d, h, M, s, ms);
-
+        var date;
         // the date constructor remaps years 0-99 to 1900-1999
-        if (y < 100 && y >= 0 && isFinite(date.getFullYear())) {
-            date.setFullYear(y);
+        if (y < 100 && y >= 0) {
+            // preserve leap years using a full 400 year cycle, then reset
+            date = new Date(y + 400, m, d, h, M, s, ms);
+            if (isFinite(date.getFullYear())) {
+                date.setFullYear(y);
+            }
+        } else {
+            date = new Date(y, m, d, h, M, s, ms);
         }
+
         return date;
     }
 
     function createUTCDate (y) {
-        var date = new Date(Date.UTC.apply(null, arguments));
-
+        var date;
         // the Date.UTC function remaps years 0-99 to 1900-1999
-        if (y < 100 && y >= 0 && isFinite(date.getUTCFullYear())) {
-            date.setUTCFullYear(y);
+        if (y < 100 && y >= 0) {
+            var args = Array.prototype.slice.call(arguments);
+            // preserve leap years using a full 400 year cycle, then reset
+            args[0] = y + 400;
+            date = new Date(Date.UTC.apply(null, args));
+            if (isFinite(date.getUTCFullYear())) {
+                date.setUTCFullYear(y);
+            }
+        } else {
+            date = new Date(Date.UTC.apply(null, arguments));
         }
+
         return date;
     }
 
@@ -100021,7 +99700,7 @@ module.exports = Kareem;
 
     var defaultLocaleWeek = {
         dow : 0, // Sunday is the first day of the week.
-        doy : 6  // The week that contains Jan 1st is the first week of the year.
+        doy : 6  // The week that contains Jan 6th is the first week of the year.
     };
 
     function localeFirstDayOfWeek () {
@@ -100130,25 +99809,28 @@ module.exports = Kareem;
     }
 
     // LOCALES
+    function shiftWeekdays (ws, n) {
+        return ws.slice(n, 7).concat(ws.slice(0, n));
+    }
 
     var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
     function localeWeekdays (m, format) {
-        if (!m) {
-            return isArray(this._weekdays) ? this._weekdays :
-                this._weekdays['standalone'];
-        }
-        return isArray(this._weekdays) ? this._weekdays[m.day()] :
-            this._weekdays[this._weekdays.isFormat.test(format) ? 'format' : 'standalone'][m.day()];
+        var weekdays = isArray(this._weekdays) ? this._weekdays :
+            this._weekdays[(m && m !== true && this._weekdays.isFormat.test(format)) ? 'format' : 'standalone'];
+        return (m === true) ? shiftWeekdays(weekdays, this._week.dow)
+            : (m) ? weekdays[m.day()] : weekdays;
     }
 
     var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
     function localeWeekdaysShort (m) {
-        return (m) ? this._weekdaysShort[m.day()] : this._weekdaysShort;
+        return (m === true) ? shiftWeekdays(this._weekdaysShort, this._week.dow)
+            : (m) ? this._weekdaysShort[m.day()] : this._weekdaysShort;
     }
 
     var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
     function localeWeekdaysMin (m) {
-        return (m) ? this._weekdaysMin[m.day()] : this._weekdaysMin;
+        return (m === true) ? shiftWeekdays(this._weekdaysMin, this._week.dow)
+            : (m) ? this._weekdaysMin[m.day()] : this._weekdaysMin;
     }
 
     function handleStrictParse$1(weekdayName, format, strict) {
@@ -100897,13 +100579,13 @@ module.exports = Kareem;
                     weekdayOverflow = true;
                 }
             } else if (w.e != null) {
-                // local weekday -- counting starts from begining of week
+                // local weekday -- counting starts from beginning of week
                 weekday = w.e + dow;
                 if (w.e < 0 || w.e > 6) {
                     weekdayOverflow = true;
                 }
             } else {
-                // default to begining of week
+                // default to beginning of week
                 weekday = dow;
             }
         }
@@ -101497,7 +101179,7 @@ module.exports = Kareem;
             years = normalizedInput.year || 0,
             quarters = normalizedInput.quarter || 0,
             months = normalizedInput.month || 0,
-            weeks = normalizedInput.week || 0,
+            weeks = normalizedInput.week || normalizedInput.isoWeek || 0,
             days = normalizedInput.day || 0,
             hours = normalizedInput.hour || 0,
             minutes = normalizedInput.minute || 0,
@@ -101801,7 +101483,7 @@ module.exports = Kareem;
                 ms : toInt(absRound(match[MILLISECOND] * 1000)) * sign // the millisecond decimal point is included in the match
             };
         } else if (!!(match = isoRegex.exec(input))) {
-            sign = (match[1] === '-') ? -1 : (match[1] === '+') ? 1 : 1;
+            sign = (match[1] === '-') ? -1 : 1;
             duration = {
                 y : parseIso(match[2], sign),
                 M : parseIso(match[3], sign),
@@ -101843,7 +101525,7 @@ module.exports = Kareem;
     }
 
     function positiveMomentsDifference(base, other) {
-        var res = {milliseconds: 0, months: 0};
+        var res = {};
 
         res.months = other.month() - base.month() +
             (other.year() - base.year()) * 12;
@@ -101952,7 +101634,7 @@ module.exports = Kareem;
         if (!(this.isValid() && localInput.isValid())) {
             return false;
         }
-        units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
+        units = normalizeUnits(units) || 'millisecond';
         if (units === 'millisecond') {
             return this.valueOf() > localInput.valueOf();
         } else {
@@ -101965,7 +101647,7 @@ module.exports = Kareem;
         if (!(this.isValid() && localInput.isValid())) {
             return false;
         }
-        units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
+        units = normalizeUnits(units) || 'millisecond';
         if (units === 'millisecond') {
             return this.valueOf() < localInput.valueOf();
         } else {
@@ -101974,9 +101656,14 @@ module.exports = Kareem;
     }
 
     function isBetween (from, to, units, inclusivity) {
+        var localFrom = isMoment(from) ? from : createLocal(from),
+            localTo = isMoment(to) ? to : createLocal(to);
+        if (!(this.isValid() && localFrom.isValid() && localTo.isValid())) {
+            return false;
+        }
         inclusivity = inclusivity || '()';
-        return (inclusivity[0] === '(' ? this.isAfter(from, units) : !this.isBefore(from, units)) &&
-            (inclusivity[1] === ')' ? this.isBefore(to, units) : !this.isAfter(to, units));
+        return (inclusivity[0] === '(' ? this.isAfter(localFrom, units) : !this.isBefore(localFrom, units)) &&
+            (inclusivity[1] === ')' ? this.isBefore(localTo, units) : !this.isAfter(localTo, units));
     }
 
     function isSame (input, units) {
@@ -101985,7 +101672,7 @@ module.exports = Kareem;
         if (!(this.isValid() && localInput.isValid())) {
             return false;
         }
-        units = normalizeUnits(units || 'millisecond');
+        units = normalizeUnits(units) || 'millisecond';
         if (units === 'millisecond') {
             return this.valueOf() === localInput.valueOf();
         } else {
@@ -101995,11 +101682,11 @@ module.exports = Kareem;
     }
 
     function isSameOrAfter (input, units) {
-        return this.isSame(input, units) || this.isAfter(input,units);
+        return this.isSame(input, units) || this.isAfter(input, units);
     }
 
     function isSameOrBefore (input, units) {
-        return this.isSame(input, units) || this.isBefore(input,units);
+        return this.isSame(input, units) || this.isBefore(input, units);
     }
 
     function diff (input, units, asFloat) {
@@ -102176,62 +101863,130 @@ module.exports = Kareem;
         return this._locale;
     }
 
+    var MS_PER_SECOND = 1000;
+    var MS_PER_MINUTE = 60 * MS_PER_SECOND;
+    var MS_PER_HOUR = 60 * MS_PER_MINUTE;
+    var MS_PER_400_YEARS = (365 * 400 + 97) * 24 * MS_PER_HOUR;
+
+    // actual modulo - handles negative numbers (for dates before 1970):
+    function mod$1(dividend, divisor) {
+        return (dividend % divisor + divisor) % divisor;
+    }
+
+    function localStartOfDate(y, m, d) {
+        // the date constructor remaps years 0-99 to 1900-1999
+        if (y < 100 && y >= 0) {
+            // preserve leap years using a full 400 year cycle, then reset
+            return new Date(y + 400, m, d) - MS_PER_400_YEARS;
+        } else {
+            return new Date(y, m, d).valueOf();
+        }
+    }
+
+    function utcStartOfDate(y, m, d) {
+        // Date.UTC remaps years 0-99 to 1900-1999
+        if (y < 100 && y >= 0) {
+            // preserve leap years using a full 400 year cycle, then reset
+            return Date.UTC(y + 400, m, d) - MS_PER_400_YEARS;
+        } else {
+            return Date.UTC(y, m, d);
+        }
+    }
+
     function startOf (units) {
+        var time;
         units = normalizeUnits(units);
-        // the following switch intentionally omits break keywords
-        // to utilize falling through the cases.
+        if (units === undefined || units === 'millisecond' || !this.isValid()) {
+            return this;
+        }
+
+        var startOfDate = this._isUTC ? utcStartOfDate : localStartOfDate;
+
         switch (units) {
             case 'year':
-                this.month(0);
-                /* falls through */
+                time = startOfDate(this.year(), 0, 1);
+                break;
             case 'quarter':
+                time = startOfDate(this.year(), this.month() - this.month() % 3, 1);
+                break;
             case 'month':
-                this.date(1);
-                /* falls through */
+                time = startOfDate(this.year(), this.month(), 1);
+                break;
             case 'week':
+                time = startOfDate(this.year(), this.month(), this.date() - this.weekday());
+                break;
             case 'isoWeek':
+                time = startOfDate(this.year(), this.month(), this.date() - (this.isoWeekday() - 1));
+                break;
             case 'day':
             case 'date':
-                this.hours(0);
-                /* falls through */
+                time = startOfDate(this.year(), this.month(), this.date());
+                break;
             case 'hour':
-                this.minutes(0);
-                /* falls through */
+                time = this._d.valueOf();
+                time -= mod$1(time + (this._isUTC ? 0 : this.utcOffset() * MS_PER_MINUTE), MS_PER_HOUR);
+                break;
             case 'minute':
-                this.seconds(0);
-                /* falls through */
+                time = this._d.valueOf();
+                time -= mod$1(time, MS_PER_MINUTE);
+                break;
             case 'second':
-                this.milliseconds(0);
+                time = this._d.valueOf();
+                time -= mod$1(time, MS_PER_SECOND);
+                break;
         }
 
-        // weeks are a special case
-        if (units === 'week') {
-            this.weekday(0);
-        }
-        if (units === 'isoWeek') {
-            this.isoWeekday(1);
-        }
-
-        // quarters are also special
-        if (units === 'quarter') {
-            this.month(Math.floor(this.month() / 3) * 3);
-        }
-
+        this._d.setTime(time);
+        hooks.updateOffset(this, true);
         return this;
     }
 
     function endOf (units) {
+        var time;
         units = normalizeUnits(units);
-        if (units === undefined || units === 'millisecond') {
+        if (units === undefined || units === 'millisecond' || !this.isValid()) {
             return this;
         }
 
-        // 'date' is an alias for 'day', so it should be considered as such.
-        if (units === 'date') {
-            units = 'day';
+        var startOfDate = this._isUTC ? utcStartOfDate : localStartOfDate;
+
+        switch (units) {
+            case 'year':
+                time = startOfDate(this.year() + 1, 0, 1) - 1;
+                break;
+            case 'quarter':
+                time = startOfDate(this.year(), this.month() - this.month() % 3 + 3, 1) - 1;
+                break;
+            case 'month':
+                time = startOfDate(this.year(), this.month() + 1, 1) - 1;
+                break;
+            case 'week':
+                time = startOfDate(this.year(), this.month(), this.date() - this.weekday() + 7) - 1;
+                break;
+            case 'isoWeek':
+                time = startOfDate(this.year(), this.month(), this.date() - (this.isoWeekday() - 1) + 7) - 1;
+                break;
+            case 'day':
+            case 'date':
+                time = startOfDate(this.year(), this.month(), this.date() + 1) - 1;
+                break;
+            case 'hour':
+                time = this._d.valueOf();
+                time += MS_PER_HOUR - mod$1(time + (this._isUTC ? 0 : this.utcOffset() * MS_PER_MINUTE), MS_PER_HOUR) - 1;
+                break;
+            case 'minute':
+                time = this._d.valueOf();
+                time += MS_PER_MINUTE - mod$1(time, MS_PER_MINUTE) - 1;
+                break;
+            case 'second':
+                time = this._d.valueOf();
+                time += MS_PER_SECOND - mod$1(time, MS_PER_SECOND) - 1;
+                break;
         }
 
-        return this.startOf(units).add(1, (units === 'isoWeek' ? 'week' : units)).subtract(1, 'ms');
+        this._d.setTime(time);
+        hooks.updateOffset(this, true);
+        return this;
     }
 
     function valueOf () {
@@ -102937,10 +102692,14 @@ module.exports = Kareem;
 
         units = normalizeUnits(units);
 
-        if (units === 'month' || units === 'year') {
-            days   = this._days   + milliseconds / 864e5;
+        if (units === 'month' || units === 'quarter' || units === 'year') {
+            days = this._days + milliseconds / 864e5;
             months = this._months + daysToMonths(days);
-            return units === 'month' ? months : months / 12;
+            switch (units) {
+                case 'month':   return months;
+                case 'quarter': return months / 3;
+                case 'year':    return months / 12;
+            }
         } else {
             // handle milliseconds separately because of floating point math errors (issue #1867)
             days = this._days + Math.round(monthsToDays(this._months));
@@ -102983,6 +102742,7 @@ module.exports = Kareem;
     var asDays         = makeAs('d');
     var asWeeks        = makeAs('w');
     var asMonths       = makeAs('M');
+    var asQuarters     = makeAs('Q');
     var asYears        = makeAs('y');
 
     function clone$1 () {
@@ -103174,6 +102934,7 @@ module.exports = Kareem;
     proto$2.asDays         = asDays;
     proto$2.asWeeks        = asWeeks;
     proto$2.asMonths       = asMonths;
+    proto$2.asQuarters     = asQuarters;
     proto$2.asYears        = asYears;
     proto$2.valueOf        = valueOf$1;
     proto$2._bubble        = bubble;
@@ -103218,7 +102979,7 @@ module.exports = Kareem;
     // Side effect imports
 
 
-    hooks.version = '2.22.2';
+    hooks.version = '2.24.0';
 
     setHookCallback(createLocal);
 
@@ -103259,7 +103020,7 @@ module.exports = Kareem;
         TIME: 'HH:mm',                                  // <input type="time" />
         TIME_SECONDS: 'HH:mm:ss',                       // <input type="time" step="1" />
         TIME_MS: 'HH:mm:ss.SSS',                        // <input type="time" step="0.001" />
-        WEEK: 'YYYY-[W]WW',                             // <input type="week" />
+        WEEK: 'GGGG-[W]WW',                             // <input type="week" />
         MONTH: 'YYYY-MM'                                // <input type="month" />
     };
 
@@ -103267,7 +103028,7 @@ module.exports = Kareem;
 
 })));
 
-},{}],265:[function(require,module,exports){
+},{}],261:[function(require,module,exports){
 /**
  * Export lib/mongoose
  *
@@ -103277,7 +103038,7 @@ module.exports = Kareem;
 
 module.exports = require('./lib/browser');
 
-},{"./lib/browser":266}],266:[function(require,module,exports){
+},{"./lib/browser":262}],262:[function(require,module,exports){
 (function (Buffer){
 /* eslint-env browser */
 
@@ -103414,7 +103175,7 @@ if (typeof window !== 'undefined') {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./document_provider.js":276,"./driver":277,"./drivers/browser":281,"./error":285,"./promise_provider":319,"./schema":321,"./schematype.js":342,"./types":349,"./utils.js":353,"./virtualtype":354,"buffer":6}],267:[function(require,module,exports){
+},{"./document_provider.js":272,"./driver":273,"./drivers/browser":277,"./error":281,"./promise_provider":315,"./schema":317,"./schematype.js":338,"./types":345,"./utils.js":349,"./virtualtype":350,"buffer":34}],263:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -103518,7 +103279,7 @@ utils.each(
 Document.ValidationError = ValidationError;
 module.exports = exports = Document;
 
-},{"./document":275,"./error":285,"./helpers/model/applyHooks":304,"./schema":321,"./types/objectid":351,"./utils":353,"events":7}],268:[function(require,module,exports){
+},{"./document":271,"./error":281,"./helpers/model/applyHooks":300,"./schema":317,"./types/objectid":347,"./utils":349,"events":254}],264:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -103859,7 +103620,7 @@ function _cast(val, numbertype, context) {
     }
   }
 }
-},{"./error/strict":294,"./helpers/get":302,"./schema/index":329,"./schema/operators/text":338,"./utils":353,"util":14}],269:[function(require,module,exports){
+},{"./error/strict":290,"./helpers/get":298,"./schema/index":325,"./schema/operators/text":334,"./utils":349,"util":370}],265:[function(require,module,exports){
 'use strict';
 
 const CastError = require('../error/cast');
@@ -103892,7 +103653,7 @@ module.exports = function castBoolean(value, path) {
 module.exports.convertToTrue = new Set([true, 'true', 1, '1', 'yes']);
 module.exports.convertToFalse = new Set([false, 'false', 0, '0', 'no']);
 
-},{"../error/cast":283}],270:[function(require,module,exports){
+},{"../error/cast":279}],266:[function(require,module,exports){
 'use strict';
 
 const assert = require('assert');
@@ -103934,7 +103695,7 @@ module.exports = function castDate(value) {
 
   assert.ok(false);
 };
-},{"assert":1}],271:[function(require,module,exports){
+},{"assert":8}],267:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -103972,8 +103733,8 @@ module.exports = function castDecimal128(value) {
 
   assert.ok(false);
 };
-}).call(this,{"isBuffer":require("../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../types/decimal128":346,"assert":1}],272:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
+},{"../../../is-buffer/index.js":257,"../types/decimal128":342,"assert":8}],268:[function(require,module,exports){
 'use strict';
 
 const assert = require('assert');
@@ -104020,7 +103781,7 @@ module.exports = function castNumber(val) {
   assert.ok(false);
 };
 
-},{"assert":1}],273:[function(require,module,exports){
+},{"assert":8}],269:[function(require,module,exports){
 'use strict';
 
 const ObjectId = require('../driver').get().ObjectId;
@@ -104050,7 +103811,7 @@ module.exports = function castObjectId(value) {
 
   assert.ok(false);
 };
-},{"../driver":277,"assert":1}],274:[function(require,module,exports){
+},{"../driver":273,"assert":8}],270:[function(require,module,exports){
 'use strict';
 
 const CastError = require('../error/cast');
@@ -104087,7 +103848,7 @@ module.exports = function castString(value, path) {
   throw new CastError('string', value, path);
 };
 
-},{"../error/cast":283}],275:[function(require,module,exports){
+},{"../error/cast":279}],271:[function(require,module,exports){
 (function (Buffer,process){
 'use strict';
 
@@ -107270,8 +107031,8 @@ Document.prototype.$__fullPath = function(path) {
 Document.ValidationError = ValidationError;
 module.exports = exports = Document;
 
-}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
-},{"../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"./error":285,"./error/objectExpected":290,"./error/objectParameter":291,"./error/strict":294,"./helpers/common":298,"./helpers/document/cleanModifiedSubpaths":299,"./helpers/document/compile":300,"./helpers/document/getEmbeddedDiscriminatorPath":301,"./helpers/get":302,"./helpers/projection/isDefiningProjection":307,"./helpers/projection/isExclusive":308,"./helpers/symbols":313,"./internal":316,"./options":317,"./plugins/idGetter":318,"./schema/mixed":331,"./schematype":342,"./types/array":344,"./types/documentarray":347,"./types/embedded":348,"./utils":353,"./virtualtype":354,"_process":11,"events":7,"mpath":356,"util":14}],276:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../is-buffer/index.js")},require('_process'))
+},{"../../is-buffer/index.js":257,"./error":281,"./error/objectExpected":286,"./error/objectParameter":287,"./error/strict":290,"./helpers/common":294,"./helpers/document/cleanModifiedSubpaths":295,"./helpers/document/compile":296,"./helpers/document/getEmbeddedDiscriminatorPath":297,"./helpers/get":298,"./helpers/projection/isDefiningProjection":303,"./helpers/projection/isExclusive":304,"./helpers/symbols":309,"./internal":312,"./options":313,"./plugins/idGetter":314,"./schema/mixed":327,"./schematype":338,"./types/array":340,"./types/documentarray":343,"./types/embedded":344,"./utils":349,"./virtualtype":350,"_process":364,"events":254,"mpath":352,"util":370}],272:[function(require,module,exports){
 'use strict';
 
 /* eslint-env browser */
@@ -107303,7 +107064,7 @@ module.exports.setBrowser = function(flag) {
   isBrowser = flag;
 };
 
-},{"./browserDocument.js":267,"./document.js":275}],277:[function(require,module,exports){
+},{"./browserDocument.js":263,"./document.js":271}],273:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -107320,7 +107081,7 @@ module.exports.set = function(v) {
   driver = v;
 };
 
-},{}],278:[function(require,module,exports){
+},{}],274:[function(require,module,exports){
 /*!
  * ignore
  */
@@ -107329,7 +107090,7 @@ module.exports.set = function(v) {
 
 module.exports = function() {};
 
-},{}],279:[function(require,module,exports){
+},{}],275:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -107345,7 +107106,7 @@ const Binary = require('bson').Binary;
 
 module.exports = exports = Binary;
 
-},{"bson":24}],280:[function(require,module,exports){
+},{"bson":15}],276:[function(require,module,exports){
 /*!
  * ignore
  */
@@ -107354,7 +107115,7 @@ module.exports = exports = Binary;
 
 module.exports = require('bson').Decimal128;
 
-},{"bson":24}],281:[function(require,module,exports){
+},{"bson":15}],277:[function(require,module,exports){
 /*!
  * Module exports.
  */
@@ -107369,7 +107130,7 @@ exports.Decimal128 = require('./decimal128');
 exports.ObjectId = require('./objectid');
 exports.ReadPreference = require('./ReadPreference');
 
-},{"./ReadPreference":278,"./binary":279,"./decimal128":280,"./objectid":282}],282:[function(require,module,exports){
+},{"./ReadPreference":274,"./binary":275,"./decimal128":276,"./objectid":278}],278:[function(require,module,exports){
 
 /*!
  * [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) ObjectId
@@ -107399,7 +107160,7 @@ Object.defineProperty(ObjectId.prototype, '_id', {
 
 module.exports = exports = ObjectId;
 
-},{"bson":24}],283:[function(require,module,exports){
+},{"bson":15}],279:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -107463,7 +107224,7 @@ CastError.prototype.setModel = function(model) {
 
 module.exports = CastError;
 
-},{"./mongooseError":288,"util":14}],284:[function(require,module,exports){
+},{"./mongooseError":284,"util":370}],280:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -107513,7 +107274,7 @@ DivergentArrayError.prototype.constructor = MongooseError;
 
 module.exports = DivergentArrayError;
 
-},{"./":285}],285:[function(require,module,exports){
+},{"./":281}],281:[function(require,module,exports){
 'use strict';
 
 const MongooseError = require('./mongooseError');
@@ -107621,7 +107382,7 @@ MongooseError.MissingSchemaError = require('./missingSchema');
 
 MongooseError.DivergentArrayError = require('./divergentArray');
 
-},{"./cast":283,"./divergentArray":284,"./messages":286,"./missingSchema":287,"./mongooseError":288,"./notFound":289,"./overwriteModel":292,"./parallelSave":293,"./validation":295,"./validator":296,"./version":297}],286:[function(require,module,exports){
+},{"./cast":279,"./divergentArray":280,"./messages":282,"./missingSchema":283,"./mongooseError":284,"./notFound":285,"./overwriteModel":288,"./parallelSave":289,"./validation":291,"./validator":292,"./version":293}],282:[function(require,module,exports){
 
 /**
  * The default built-in validator error messages. These may be customized.
@@ -107669,7 +107430,7 @@ msg.String.match = 'Path `{PATH}` is invalid ({VALUE}).';
 msg.String.minlength = 'Path `{PATH}` (`{VALUE}`) is shorter than the minimum allowed length ({MINLENGTH}).';
 msg.String.maxlength = 'Path `{PATH}` (`{VALUE}`) is longer than the maximum allowed length ({MAXLENGTH}).';
 
-},{}],287:[function(require,module,exports){
+},{}],283:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -107710,7 +107471,7 @@ MissingSchemaError.prototype.constructor = MongooseError;
 
 module.exports = MissingSchemaError;
 
-},{"./":285}],288:[function(require,module,exports){
+},{"./":281}],284:[function(require,module,exports){
 'use strict';
 
 /**
@@ -107767,7 +107528,7 @@ MongooseError.prototype.constructor = Error;
 
 module.exports = MongooseError;
 
-},{}],289:[function(require,module,exports){
+},{}],285:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -107821,7 +107582,7 @@ DocumentNotFoundError.prototype.constructor = MongooseError;
 
 module.exports = DocumentNotFoundError;
 
-},{"./":285,"util":14}],290:[function(require,module,exports){
+},{"./":281,"util":370}],286:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -107860,7 +107621,7 @@ ObjectExpectedError.prototype.constructor = MongooseError;
 
 module.exports = ObjectExpectedError;
 
-},{"./":285}],291:[function(require,module,exports){
+},{"./":281}],287:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -107900,7 +107661,7 @@ ObjectParameterError.prototype.constructor = MongooseError;
 
 module.exports = ObjectParameterError;
 
-},{"./":285}],292:[function(require,module,exports){
+},{"./":281}],288:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -107939,7 +107700,7 @@ OverwriteModelError.prototype.constructor = MongooseError;
 
 module.exports = OverwriteModelError;
 
-},{"./":285}],293:[function(require,module,exports){
+},{"./":281}],289:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -107974,7 +107735,7 @@ ParallelSaveError.prototype.constructor = MongooseError;
 
 module.exports = ParallelSaveError;
 
-},{"./":285}],294:[function(require,module,exports){
+},{"./":281}],290:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -108014,7 +107775,7 @@ StrictModeError.prototype.constructor = MongooseError;
 
 module.exports = StrictModeError;
 
-},{"./":285}],295:[function(require,module,exports){
+},{"./":281}],291:[function(require,module,exports){
 /*!
  * Module requirements
  */
@@ -108128,7 +107889,7 @@ function _generateMessage(err) {
 
 module.exports = exports = ValidationError;
 
-},{"./":285,"util":14}],296:[function(require,module,exports){
+},{"./":281,"util":370}],292:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -108219,7 +107980,7 @@ ValidatorError.prototype.toString = function() {
 
 module.exports = ValidatorError;
 
-},{"./":285}],297:[function(require,module,exports){
+},{"./":281}],293:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -108257,7 +108018,7 @@ VersionError.prototype.constructor = MongooseError;
 
 module.exports = VersionError;
 
-},{"./":285}],298:[function(require,module,exports){
+},{"./":281}],294:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -108348,7 +108109,7 @@ function shouldFlatten(val) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../types/objectid":351,"../utils":353,"buffer":6}],299:[function(require,module,exports){
+},{"../types/objectid":347,"../utils":349,"buffer":34}],295:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -108375,7 +108136,7 @@ module.exports = function cleanModifiedSubpaths(doc, path, options) {
   return deleted;
 };
 
-},{}],300:[function(require,module,exports){
+},{}],296:[function(require,module,exports){
 'use strict';
 
 const get = require('../../helpers/get');
@@ -108524,7 +108285,7 @@ function getOwnPropertyDescriptors(object) {
   return result;
 }
 
-},{"../../document":275,"../../helpers/get":302,"../../helpers/symbols":313,"../../utils":353}],301:[function(require,module,exports){
+},{"../../document":271,"../../helpers/get":298,"../../helpers/symbols":309,"../../utils":349}],297:[function(require,module,exports){
 'use strict';
 
 const get = require('../get');
@@ -108569,7 +108330,7 @@ module.exports = function getEmbeddedDiscriminatorPath(doc, path, options) {
   return typeOnly ? type : schema;
 };
 
-},{"../get":302}],302:[function(require,module,exports){
+},{"../get":298}],298:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -108609,7 +108370,7 @@ function getProperty(obj, prop) {
   }
   return obj[prop];
 }
-},{}],303:[function(require,module,exports){
+},{}],299:[function(require,module,exports){
 (function (process){
 /*!
  * Centralize this so we can more easily work around issues with people
@@ -108625,7 +108386,7 @@ module.exports = function immediate(cb) {
 };
 
 }).call(this,require('_process'))
-},{"_process":11}],304:[function(require,module,exports){
+},{"_process":364}],300:[function(require,module,exports){
 'use strict';
 
 const symbols = require('../../schema/symbols');
@@ -108749,7 +108510,7 @@ function applyHooks(model, schema, options) {
   }
 }
 
-},{"../../schema/symbols":341,"../../utils":353}],305:[function(require,module,exports){
+},{"../../schema/symbols":337,"../../utils":349}],301:[function(require,module,exports){
 'use strict';
 
 const defineKey = require('../document/compile').defineKey;
@@ -108923,7 +108684,7 @@ module.exports = function discriminator(model, name, schema, tiedValue, applyPlu
   return schema;
 };
 
-},{"../../utils":353,"../document/compile":300,"../get":302}],306:[function(require,module,exports){
+},{"../../utils":349,"../document/compile":296,"../get":298}],302:[function(require,module,exports){
 'use strict';
 
 const MongooseError = require('../../error/mongooseError');
@@ -108943,7 +108704,7 @@ function validateRef(ref, path) {
   throw new MongooseError('Invalid ref at path "' + path + '". Got ' +
     util.inspect(ref, { depth: 0 }));
 }
-},{"../../error/mongooseError":288,"util":14}],307:[function(require,module,exports){
+},{"../../error/mongooseError":284,"util":370}],303:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -108963,7 +108724,7 @@ module.exports = function isDefiningProjection(val) {
   return true;
 };
 
-},{}],308:[function(require,module,exports){
+},{}],304:[function(require,module,exports){
 'use strict';
 
 const isDefiningProjection = require('./isDefiningProjection');
@@ -108993,7 +108754,7 @@ module.exports = function isExclusive(projection) {
   return exclude;
 };
 
-},{"./isDefiningProjection":307}],309:[function(require,module,exports){
+},{"./isDefiningProjection":303}],305:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109061,7 +108822,7 @@ function applyQueryMiddleware(Query, model) {
     });
 }
 
-},{}],310:[function(require,module,exports){
+},{}],306:[function(require,module,exports){
 'use strict';
 
 const get = require('../get');
@@ -109187,7 +108948,7 @@ module.exports = function getIndexes(schema) {
   }
 };
 
-},{"../../utils":353,"../get":302}],311:[function(require,module,exports){
+},{"../../utils":349,"../get":298}],307:[function(require,module,exports){
 'use strict';
 
 module.exports = handleTimestampOption;
@@ -109212,7 +108973,7 @@ function handleTimestampOption(arg, prop) {
   }
   return arg[prop];
 }
-},{}],312:[function(require,module,exports){
+},{}],308:[function(require,module,exports){
 'use strict';
 
 module.exports = function merge(s1, s2) {
@@ -109232,7 +108993,7 @@ module.exports = function merge(s1, s2) {
 
   s1.s.hooks.merge(s2.s.hooks, false);
 };
-},{}],313:[function(require,module,exports){
+},{}],309:[function(require,module,exports){
 'use strict';
 
 exports.validatorErrorSymbol = Symbol.for('mongoose:validatorError');
@@ -109244,7 +109005,7 @@ exports.modelSymbol = Symbol.for('mongoose#Model');
 exports.getSymbol = Symbol.for('mongoose#Document#get');
 
 exports.objectIdSymbol = Symbol.for('mongoose#ObjectId');
-},{}],314:[function(require,module,exports){
+},{}],310:[function(require,module,exports){
 'use strict';
 
 const handleTimestampOption = require('../schema/handleTimestampOption');
@@ -109418,7 +109179,7 @@ function applyTimestampsToSingleNested(subdoc, schematype, now) {
     subdoc[createdAt] = now;
   }
 }
-},{"../schema/handleTimestampOption":311}],315:[function(require,module,exports){
+},{"../schema/handleTimestampOption":307}],311:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109485,7 +109246,7 @@ function applyTimestampsToUpdate(now, createdAt, updatedAt, currentUpdate, optio
   return updates;
 }
 
-},{"../get":302}],316:[function(require,module,exports){
+},{"../get":298}],312:[function(require,module,exports){
 /*!
  * Dependencies
  */
@@ -109524,7 +109285,7 @@ function InternalCache() {
   this.fullPath = undefined;
 }
 
-},{"./statemachine":343}],317:[function(require,module,exports){
+},{"./statemachine":339}],313:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109540,7 +109301,7 @@ exports.internalToObjectOptions = {
   flattenDecimals: false
 };
 
-},{}],318:[function(require,module,exports){
+},{}],314:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109570,7 +109331,7 @@ function idGetter() {
   return null;
 }
 
-},{}],319:[function(require,module,exports){
+},{}],315:[function(require,module,exports){
 (function (global){
 /*!
  * ignore
@@ -109623,7 +109384,7 @@ store.set(global.Promise);
 module.exports = store;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"assert":1,"mquery":362}],320:[function(require,module,exports){
+},{"assert":8,"mquery":358}],316:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109932,7 +109693,7 @@ exports.handleDeleteWriteOpResult = function handleDeleteWriteOpResult(callback)
   };
 };
 
-},{"./helpers/get":302,"./helpers/projection/isDefiningProjection":307,"./utils":353}],321:[function(require,module,exports){
+},{"./helpers/get":298,"./helpers/projection/isDefiningProjection":303,"./utils":349}],317:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -111821,8 +111582,8 @@ Schema.Types = MongooseTypes = require('./schema/index');
 
 exports.ObjectId = MongooseTypes.ObjectId;
 
-}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"./driver":277,"./helpers/get":302,"./helpers/model/applyHooks":304,"./helpers/populate/validateRef":306,"./helpers/query/applyQueryMiddleware":309,"./helpers/schema/getIndexes":310,"./helpers/schema/handleTimestampOption":311,"./helpers/schema/merge":312,"./helpers/update/applyTimestampsToChildren":314,"./helpers/update/applyTimestampsToUpdate":315,"./schema/index":329,"./schema/symbols":341,"./schematype":342,"./utils":353,"./virtualtype":354,"events":7,"kareem":262,"mpath":356,"util":14}],322:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../is-buffer/index.js")})
+},{"../../is-buffer/index.js":257,"./driver":273,"./helpers/get":298,"./helpers/model/applyHooks":300,"./helpers/populate/validateRef":302,"./helpers/query/applyQueryMiddleware":305,"./helpers/schema/getIndexes":306,"./helpers/schema/handleTimestampOption":307,"./helpers/schema/merge":308,"./helpers/update/applyTimestampsToChildren":310,"./helpers/update/applyTimestampsToUpdate":311,"./schema/index":325,"./schema/symbols":337,"./schematype":338,"./utils":349,"./virtualtype":350,"events":254,"kareem":258,"mpath":352,"util":370}],318:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112250,7 +112011,7 @@ handle.$in = SchemaType.prototype.$conditionalHandlers.$in;
 
 module.exports = SchemaArray;
 
-},{"../cast":268,"../error/mongooseError":288,"../helpers/get":302,"../queryhelpers":320,"../schematype":342,"../types":349,"../utils":353,"./boolean":323,"./buffer":324,"./date":325,"./map":330,"./mixed":331,"./number":332,"./objectid":333,"./operators/exists":335,"./operators/geospatial":336,"./operators/helpers":337,"./operators/type":339,"./string":340,"util":14}],323:[function(require,module,exports){
+},{"../cast":264,"../error/mongooseError":284,"../helpers/get":298,"../queryhelpers":316,"../schematype":338,"../types":345,"../utils":349,"./boolean":319,"./buffer":320,"./date":321,"./map":326,"./mixed":327,"./number":328,"./objectid":329,"./operators/exists":331,"./operators/geospatial":332,"./operators/helpers":333,"./operators/type":335,"./string":336,"util":370}],319:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112460,7 +112221,7 @@ SchemaBoolean.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaBoolean;
 
-},{"../cast/boolean":269,"../error/cast":283,"../schematype":342,"../utils":353}],324:[function(require,module,exports){
+},{"../cast/boolean":265,"../error/cast":279,"../schematype":338,"../utils":349}],320:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -112713,8 +112474,8 @@ SchemaBuffer.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaBuffer;
 
-}).call(this,{"isBuffer":require("../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../schematype":342,"../types/buffer":345,"../utils":353,"./../document":275,"./operators/bitwise":334}],325:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
+},{"../../../is-buffer/index.js":257,"../schematype":338,"../types/buffer":341,"../utils":349,"./../document":271,"./operators/bitwise":330}],321:[function(require,module,exports){
 /*!
  * Module requirements.
  */
@@ -113070,7 +112831,7 @@ SchemaDate.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaDate;
 
-},{"../cast/date":270,"../error":285,"../schematype":342,"../utils":353}],326:[function(require,module,exports){
+},{"../cast/date":266,"../error":281,"../schematype":338,"../utils":349}],322:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -113283,8 +113044,8 @@ Decimal128.prototype.$conditionalHandlers =
 
 module.exports = Decimal128;
 
-}).call(this,{"isBuffer":require("../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../cast/decimal128":271,"../schematype":342,"../types/decimal128":346,"../utils":353,"./../document":275}],327:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
+},{"../../../is-buffer/index.js":257,"../cast/decimal128":267,"../schematype":338,"../types/decimal128":342,"../utils":349,"./../document":271}],323:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -113764,7 +113525,7 @@ function scopePaths(array, fields, init) {
 
 module.exports = DocumentArray;
 
-},{"../error/cast":283,"../helpers/model/discriminator":305,"../queryhelpers":320,"../schematype":342,"../types/documentarray":347,"../types/embedded":348,"../utils":353,"./array":322,"events":7,"util":14}],328:[function(require,module,exports){
+},{"../error/cast":279,"../helpers/model/discriminator":301,"../queryhelpers":316,"../schematype":338,"../types/documentarray":343,"../types/embedded":344,"../utils":349,"./array":318,"events":254,"util":370}],324:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -114086,7 +113847,7 @@ Embedded.prototype.discriminator = function(name, schema) {
   return this.caster.discriminators[name];
 };
 
-},{"../error/cast":283,"../error/objectExpected":290,"../helpers/get":302,"../helpers/model/discriminator":305,"../options":317,"../queryhelpers":320,"../schematype":342,"../types/subdocument":352,"./operators/exists":335,"./operators/geospatial":336,"./operators/helpers":337,"events":7}],329:[function(require,module,exports){
+},{"../error/cast":279,"../error/objectExpected":286,"../helpers/get":298,"../helpers/model/discriminator":301,"../options":313,"../queryhelpers":316,"../schematype":338,"../types/subdocument":348,"./operators/exists":331,"./operators/geospatial":332,"./operators/helpers":333,"events":254}],325:[function(require,module,exports){
 
 /*!
  * Module exports.
@@ -114124,7 +113885,7 @@ exports.Oid = exports.ObjectId;
 exports.Object = exports.Mixed;
 exports.Bool = exports.Boolean;
 
-},{"./array":322,"./boolean":323,"./buffer":324,"./date":325,"./decimal128":326,"./documentarray":327,"./embedded":328,"./map":330,"./mixed":331,"./number":332,"./objectid":333,"./string":340}],330:[function(require,module,exports){
+},{"./array":318,"./boolean":319,"./buffer":320,"./date":321,"./decimal128":322,"./documentarray":323,"./embedded":324,"./map":326,"./mixed":327,"./number":328,"./objectid":329,"./string":336}],326:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -114165,7 +113926,7 @@ class Map extends SchemaType {
 
 module.exports = Map;
 
-},{"../schematype":342,"../types/map":350}],331:[function(require,module,exports){
+},{"../schematype":338,"../types/map":346}],327:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -114272,7 +114033,7 @@ Mixed.prototype.castForQuery = function($cond, val) {
 
 module.exports = Mixed;
 
-},{"../schematype":342,"../utils":353,"./symbols":341}],332:[function(require,module,exports){
+},{"../schematype":338,"../utils":349,"./symbols":337}],328:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -114646,8 +114407,8 @@ SchemaNumber.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaNumber;
 
-}).call(this,{"isBuffer":require("../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../cast/number":272,"../error":285,"../schematype":342,"../utils":353,"./../document":275,"./operators/bitwise":334}],333:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
+},{"../../../is-buffer/index.js":257,"../cast/number":268,"../error":281,"../schematype":338,"../utils":349,"./../document":271,"./operators/bitwise":330}],329:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -114942,8 +114703,8 @@ function resetId(v) {
 
 module.exports = ObjectId;
 
-}).call(this,{"isBuffer":require("../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../cast/objectid":273,"../schematype":342,"../types/objectid":351,"../utils":353,"./../document":275}],334:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
+},{"../../../is-buffer/index.js":257,"../cast/objectid":269,"../schematype":338,"../types/objectid":347,"../utils":349,"./../document":271}],330:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module requirements.
@@ -114984,8 +114745,8 @@ function _castNumber(path, num) {
 
 module.exports = handleBitwiseOperator;
 
-}).call(this,{"isBuffer":require("../../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../../error/cast":283}],335:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../is-buffer/index.js")})
+},{"../../../../is-buffer/index.js":257,"../../error/cast":279}],331:[function(require,module,exports){
 'use strict';
 
 const castBoolean = require('../../cast/boolean');
@@ -114999,7 +114760,7 @@ module.exports = function(val) {
   return castBoolean(val, path);
 };
 
-},{"../../cast/boolean":269}],336:[function(require,module,exports){
+},{"../../cast/boolean":265}],332:[function(require,module,exports){
 /*!
  * Module requirements.
  */
@@ -115103,7 +114864,7 @@ function _castMinMaxDistance(self, val) {
   }
 }
 
-},{"../array":322,"./helpers":337}],337:[function(require,module,exports){
+},{"../array":318,"./helpers":333}],333:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -115137,7 +114898,7 @@ function castArraysOfNumbers(arr, self) {
   });
 }
 
-},{"../number":332}],338:[function(require,module,exports){
+},{"../number":328}],334:[function(require,module,exports){
 'use strict';
 
 const CastError = require('../../error/cast');
@@ -115178,7 +114939,7 @@ module.exports = function(val, path) {
   return val;
 };
 
-},{"../../cast/boolean":269,"../../cast/string":274,"../../error/cast":283}],339:[function(require,module,exports){
+},{"../../cast/boolean":265,"../../cast/string":270,"../../error/cast":279}],335:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -115193,7 +114954,7 @@ module.exports = function(val) {
   return val;
 };
 
-},{}],340:[function(require,module,exports){
+},{}],336:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -115810,14 +115571,14 @@ SchemaString.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaString;
 
-}).call(this,{"isBuffer":require("../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../cast/string":274,"../error":285,"../schematype":342,"../utils":353,"./../document":275}],341:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
+},{"../../../is-buffer/index.js":257,"../cast/string":270,"../error":281,"../schematype":338,"../utils":349,"./../document":271}],337:[function(require,module,exports){
 'use strict';
 
 exports.schemaMixedSymbol = Symbol.for('mongoose:schema_mixed');
 
 exports.builtInMiddleware = Symbol.for('mongoose:built-in-middleware');
-},{}],342:[function(require,module,exports){
+},{}],338:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -117115,8 +116876,8 @@ exports.CastError = CastError;
 
 exports.ValidatorError = ValidatorError;
 
-}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"./error":285,"./helpers/get":302,"./helpers/immediate":303,"./helpers/symbols":313,"./schema/operators/exists":335,"./schema/operators/type":339,"./utils":353}],343:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../is-buffer/index.js")})
+},{"../../is-buffer/index.js":257,"./error":281,"./helpers/get":298,"./helpers/immediate":299,"./helpers/symbols":309,"./schema/operators/exists":331,"./schema/operators/type":335,"./utils":349}],339:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -117298,7 +117059,7 @@ StateMachine.prototype.map = function map() {
   return this.map.apply(this, arguments);
 };
 
-},{"./utils":353}],344:[function(require,module,exports){
+},{"./utils":349}],340:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -118149,8 +117910,8 @@ function _checkManualPopulation(arr, docs) {
 
 module.exports = exports = MongooseArray;
 
-}).call(this,{"isBuffer":require("../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../document":275,"../helpers/document/cleanModifiedSubpaths":299,"../helpers/get":302,"../options":317,"../utils":353,"./embedded":348,"./objectid":351,"util":14}],345:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
+},{"../../../is-buffer/index.js":257,"../document":271,"../helpers/document/cleanModifiedSubpaths":295,"../helpers/get":298,"../options":313,"../utils":349,"./embedded":344,"./objectid":347,"util":370}],341:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -118457,7 +118218,7 @@ MongooseBuffer.Binary = Binary;
 
 module.exports = MongooseBuffer;
 
-},{"../driver":277,"../utils":353,"safe-buffer":369}],346:[function(require,module,exports){
+},{"../driver":273,"../utils":349,"safe-buffer":366}],342:[function(require,module,exports){
 /**
  * ObjectId type constructor
  *
@@ -118472,7 +118233,7 @@ module.exports = MongooseBuffer;
 
 module.exports = require('../driver').get().Decimal128;
 
-},{"../driver":277}],347:[function(require,module,exports){
+},{"../driver":273}],343:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -118835,8 +118596,8 @@ MongooseDocumentArray.mixin = {
 
 module.exports = MongooseDocumentArray;
 
-}).call(this,{"isBuffer":require("../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../.nvm/versions/node/v10.5.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":10,"../cast/objectid":273,"../document":275,"../helpers/get":302,"../helpers/symbols":313,"../options":317,"../queryhelpers":320,"../utils":353,"./array":344,"./objectid":351,"util":14}],348:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
+},{"../../../is-buffer/index.js":257,"../cast/objectid":269,"../document":271,"../helpers/get":298,"../helpers/symbols":309,"../options":313,"../queryhelpers":316,"../utils":349,"./array":340,"./objectid":347,"util":370}],344:[function(require,module,exports){
 /* eslint no-func-assign: 1 */
 
 /*!
@@ -119282,7 +119043,7 @@ EmbeddedDocument.prototype.parentArray = function() {
 
 module.exports = EmbeddedDocument;
 
-},{"../document_provider":276,"../helpers/get":302,"../helpers/immediate":303,"../helpers/symbols":313,"../options":317,"../utils":353,"events":7,"util":14}],349:[function(require,module,exports){
+},{"../document_provider":272,"../helpers/get":298,"../helpers/immediate":299,"../helpers/symbols":309,"../options":313,"../utils":349,"events":254,"util":370}],345:[function(require,module,exports){
 
 /*!
  * Module exports.
@@ -119304,7 +119065,7 @@ exports.Map = require('./map');
 
 exports.Subdocument = require('./subdocument');
 
-},{"./array":344,"./buffer":345,"./decimal128":346,"./documentarray":347,"./embedded":348,"./map":350,"./objectid":351,"./subdocument":352}],350:[function(require,module,exports){
+},{"./array":340,"./buffer":341,"./decimal128":342,"./documentarray":343,"./embedded":344,"./map":346,"./objectid":347,"./subdocument":348}],346:[function(require,module,exports){
 'use strict';
 
 const Mixed = require('../schema/mixed');
@@ -119498,7 +119259,7 @@ function checkValidKey(key) {
 
 module.exports = MongooseMap;
 
-},{"../helpers/get":302,"../schema/mixed":331,"util":14}],351:[function(require,module,exports){
+},{"../helpers/get":298,"../schema/mixed":327,"util":370}],347:[function(require,module,exports){
 /**
  * ObjectId type constructor
  *
@@ -119530,7 +119291,7 @@ ObjectId.prototype[objectIdSymbol] = true;
 
 module.exports = ObjectId;
 
-},{"../driver":277,"../helpers/symbols":313}],352:[function(require,module,exports){
+},{"../driver":273,"../helpers/symbols":309}],348:[function(require,module,exports){
 'use strict';
 
 const Document = require('../document');
@@ -119768,7 +119529,7 @@ function registerRemoveListener(sub) {
   owner.on('remove', emitRemove);
 }
 
-},{"../document":275,"../helpers/immediate":303,"../helpers/symbols":313,"../options":317,"../utils":353}],353:[function(require,module,exports){
+},{"../document":271,"../helpers/immediate":299,"../helpers/symbols":309,"../options":313,"../utils":349}],349:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -120746,7 +120507,7 @@ exports.each = function(arr, fn) {
 exports.noop = function() {};
 
 }).call(this,require('_process'))
-},{"./document":275,"./helpers/get":302,"./promise_provider":319,"./types":349,"./types/decimal128":346,"./types/objectid":351,"_process":11,"mpath":356,"ms":355,"regexp-clone":368,"safe-buffer":369,"sliced":370}],354:[function(require,module,exports){
+},{"./document":271,"./helpers/get":298,"./promise_provider":315,"./types":345,"./types/decimal128":342,"./types/objectid":347,"_process":364,"mpath":352,"ms":351,"regexp-clone":365,"safe-buffer":366,"sliced":367}],350:[function(require,module,exports){
 'use strict';
 
 /**
@@ -120892,7 +120653,7 @@ VirtualType.prototype.applySetters = function(value, scope) {
 
 module.exports = VirtualType;
 
-},{}],355:[function(require,module,exports){
+},{}],351:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -121056,10 +120817,10 @@ function plural(ms, msAbs, n, name) {
   return Math.round(ms / n) + ' ' + name + (isPlural ? 's' : '');
 }
 
-},{}],356:[function(require,module,exports){
+},{}],352:[function(require,module,exports){
 module.exports = exports = require('./lib');
 
-},{"./lib":357}],357:[function(require,module,exports){
+},{"./lib":353}],353:[function(require,module,exports){
 (function (global){
 // Make sure Map exists for old Node.js versions
 var Map = global.Map != null ? global.Map : function() {};
@@ -121362,7 +121123,7 @@ function K (v) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],358:[function(require,module,exports){
+},{}],354:[function(require,module,exports){
 'use strict';
 
 /**
@@ -121410,7 +121171,7 @@ function notImplemented(method) {
   };
 }
 
-},{}],359:[function(require,module,exports){
+},{}],355:[function(require,module,exports){
 'use strict';
 
 var env = require('../env');
@@ -121425,7 +121186,7 @@ module.exports =
       require('./collection');
 
 
-},{"../env":361,"./collection":358,"./node":360}],360:[function(require,module,exports){
+},{"../env":357,"./collection":354,"./node":356}],356:[function(require,module,exports){
 'use strict';
 
 /**
@@ -121578,7 +121339,7 @@ NodeCollection.prototype.findCursor = function(match, findOptions) {
 
 module.exports = exports = NodeCollection;
 
-},{"../utils":364,"./collection":358}],361:[function(require,module,exports){
+},{"../utils":360,"./collection":354}],357:[function(require,module,exports){
 (function (process,global,Buffer){
 'use strict';
 
@@ -121604,7 +121365,7 @@ exports.type = exports.isNode ? 'node'
       : 'unknown';
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"_process":11,"buffer":6}],362:[function(require,module,exports){
+},{"_process":364,"buffer":34}],358:[function(require,module,exports){
 'use strict';
 
 /**
@@ -124859,7 +124620,7 @@ module.exports = exports = Query;
 // TODO
 // test utils
 
-},{"./collection":359,"./collection/collection":358,"./env":361,"./permissions":363,"./utils":364,"assert":1,"bluebird":22,"debug":365,"sliced":370,"util":14}],363:[function(require,module,exports){
+},{"./collection":355,"./collection/collection":354,"./env":357,"./permissions":359,"./utils":360,"assert":8,"bluebird":13,"debug":361,"sliced":367,"util":370}],359:[function(require,module,exports){
 'use strict';
 
 var denied = exports;
@@ -124949,7 +124710,7 @@ denied.count.maxScan =
 denied.count.snapshot =
 denied.count.tailable = true;
 
-},{}],364:[function(require,module,exports){
+},{}],360:[function(require,module,exports){
 (function (process,setImmediate){
 'use strict';
 
@@ -125309,7 +125070,7 @@ exports.isArgumentsObject = function(v) {
 };
 
 }).call(this,require('_process'),require("timers").setImmediate)
-},{"_process":11,"regexp-clone":368,"safe-buffer":369,"timers":12}],365:[function(require,module,exports){
+},{"_process":364,"regexp-clone":365,"safe-buffer":366,"timers":368}],361:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -125508,7 +125269,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":366,"_process":11}],366:[function(require,module,exports){
+},{"./debug":362,"_process":364}],362:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -125735,7 +125496,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":367}],367:[function(require,module,exports){
+},{"ms":363}],363:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -125889,7 +125650,193 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],368:[function(require,module,exports){
+},{}],364:[function(require,module,exports){
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],365:[function(require,module,exports){
 
 var toString = Object.prototype.toString;
 
@@ -125911,7 +125858,7 @@ module.exports = exports = function (regexp) {
 }
 
 
-},{}],369:[function(require,module,exports){
+},{}],366:[function(require,module,exports){
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
 var Buffer = buffer.Buffer
@@ -125975,7 +125922,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":6}],370:[function(require,module,exports){
+},{"buffer":34}],367:[function(require,module,exports){
 
 /**
  * An Array.prototype.slice.call(arguments) alternative
@@ -126010,4 +125957,87 @@ module.exports = function (args, slice, sliceEnd) {
 }
 
 
-},{}]},{},[15]);
+},{}],368:[function(require,module,exports){
+(function (setImmediate,clearImmediate){
+var nextTick = require('process/browser.js').nextTick;
+var apply = Function.prototype.apply;
+var slice = Array.prototype.slice;
+var immediateIds = {};
+var nextImmediateId = 0;
+
+// DOM APIs, for completeness
+
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) { timeout.close(); };
+
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(window, this._id);
+};
+
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
+
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
+
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
+
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
+  }
+};
+
+// That's not how node.js implements it but the exposed api is the same.
+exports.setImmediate = typeof setImmediate === "function" ? setImmediate : function(fn) {
+  var id = nextImmediateId++;
+  var args = arguments.length < 2 ? false : slice.call(arguments, 1);
+
+  immediateIds[id] = true;
+
+  nextTick(function onNextTick() {
+    if (immediateIds[id]) {
+      // fn.call() is faster so we optimize for the common use-case
+      // @see http://jsperf.com/call-apply-segu
+      if (args) {
+        fn.apply(null, args);
+      } else {
+        fn.call(null);
+      }
+      // Prevent ids from leaking
+      exports.clearImmediate(id);
+    }
+  });
+
+  return id;
+};
+
+exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
+  delete immediateIds[id];
+};
+}).call(this,require("timers").setImmediate,require("timers").clearImmediate)
+},{"process/browser.js":364,"timers":368}],369:[function(require,module,exports){
+arguments[4][10][0].apply(exports,arguments)
+},{"dup":10}],370:[function(require,module,exports){
+arguments[4][11][0].apply(exports,arguments)
+},{"./support/isBuffer":369,"_process":364,"dup":11,"inherits":256}]},{},[1]);
