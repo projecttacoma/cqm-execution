@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover -x **/spec/** --reporter=text-lcov --reporter=html ./node_modules/.bin/jasmine-node spec",
-    "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js'"
+    "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js'",
+    "build-cql": "cd ./node_modules/cql-execution && yarn install && cd ../../",
+    "prepublish": "./bin/build_cql_execution.sh"
   },
   "repository": "git+https://github.com/projecttacoma/cqm-execution.git",
   "contributors": [
