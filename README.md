@@ -59,7 +59,7 @@ const calculationResults = Calculator.calculate(measure, patients, valueSetsByOi
 
 Starting with version **1.1.0.2** released on !!date!!, cqm-execution versioning has the format **W.X.Y.Z**, where:
 
-* **W** maps to a version of CQL. See the table below to see the existing mapping to <standard/implementation guide> versions.
+* **W** maps to a version of CQL. See the table below to see the existing mapping to CQL versions.
 
   | W | CQL version |
   | --- | --- |
