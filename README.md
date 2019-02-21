@@ -67,7 +67,7 @@ Starting with version **1.1.0.2** released on !!date!!, cqm-execution versioning
 
 * **X.Y.Z** uses [SemVer](http://semver.org/) for versioning. **X.Y.Z** starts at 0.0.0 when **W** is incremented.
 
-For the versions available, see [tags on this repository](https://github.com/projecttacoma/<repository>/tags).
+For the versions available, see [tags on this repository](https://github.com/projecttacoma/cqm-execution/tags).
 
 
 ## License
