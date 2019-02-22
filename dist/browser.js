@@ -43,10 +43,7 @@ module.exports = class CalculatorHelpers {
 
       // initialize population counts
       Object.keys(populationSet.populations.toObject()).forEach((popCode) => {
-        // Mongoose adds keys that start with '_' we do not care about these
-        if (popCode[0] !== '_') {
-          populationResults[popCode] = 0;
-        }
+        populationResults[popCode] = 0;
         if (populationSet.observations.length > 0) {
           populationResults.values = [];
         }
@@ -61,8 +58,7 @@ module.exports = class CalculatorHelpers {
             popResult.forEach((value) => {
               populationResults.values.push(value);
             });
-          // Mongoose adds keys that start with '_' we do not care about these
-          } else if (popCode[0] !== '_') {
+          } else {
             populationResults[popCode] += popResult;
           }
         });
@@ -167,8 +163,6 @@ module.exports = class CalculatorHelpers {
 
     // Loop over all population codes ("IPP", "DENOM", etc.)
     Object.keys(populationSet.populations.toObject()).forEach((popCode) => {
-      // Mongoose adds keys that start with '_' we do not care about these
-      if (popCode[0] === '_') return;
       const cqlPopulation = populationSet.populations[popCode].statement_name;
       // Is there a patient result for this population? and does this populationCriteria contain the population
       // We need to check if the populationCriteria contains the population so that a STRAT is not set to zero if there is not a STRAT in the populationCriteria
@@ -227,36 +221,30 @@ module.exports = class CalculatorHelpers {
     const episodeResults = {};
 
     for (const popCode in populationSet.populations.toObject()) {
-      // Mongoose adds keys that start with '_' we do not care about these
-      if (popCode[0] !== '_') {
-        let newEpisode;
-        const cqlPopulation = populationSet.populations[popCode];
-        // Is there a patient result for this population? and does this populationCriteria contain the population
-        // We need to check if the populationCriteria contains the population so that a STRAT is not set to zero if there is not a STRAT in the populationCriteria
-        // Grab CQL result value and store for each episode found
-        const qdmDataElements = patientResults[cqlPopulation.statement_name];
-        if (Array.isArray(qdmDataElements)) {
-          qdmDataElements.forEach((qdmDataElement) => {
-            if (qdmDataElement.id != null) {
-              // if an episode has already been created set the result for the population to 1
-              if (episodeResults[qdmDataElement.id.value]) {
-                episodeResults[qdmDataElement.id.value][popCode] = 1;
-                // else create a new episode using the list of all popcodes for the population
-              } else {
-                newEpisode = {};
-                for (const pc in populationSet.populations.toObject()) {
-                  // Mongoose adds keys that start with '_' we do not care about these
-                  if (pc[0] !== '_') {
-                    newEpisode[pc] = 0;
-                  }
-                }
-
-                newEpisode[popCode] = 1;
-                episodeResults[qdmDataElement.id.value] = newEpisode;
+      let newEpisode;
+      const cqlPopulation = populationSet.populations[popCode];
+      // Is there a patient result for this population? and does this populationCriteria contain the population
+      // We need to check if the populationCriteria contains the population so that a STRAT is not set to zero if there is not a STRAT in the populationCriteria
+      // Grab CQL result value and store for each episode found
+      const qdmDataElements = patientResults[cqlPopulation.statement_name];
+      if (Array.isArray(qdmDataElements)) {
+        qdmDataElements.forEach((qdmDataElement) => {
+          if (qdmDataElement.id != null) {
+            // if an episode has already been created set the result for the population to 1
+            if (episodeResults[qdmDataElement.id.value]) {
+              episodeResults[qdmDataElement.id.value][popCode] = 1;
+              // else create a new episode using the list of all popcodes for the population
+            } else {
+              newEpisode = {};
+              for (const pc in populationSet.populations.toObject()) {
+                newEpisode[pc] = 0;
               }
+
+              newEpisode[popCode] = 1;
+              episodeResults[qdmDataElement.id.value] = newEpisode;
             }
-          });
-        }
+          }
+        });
       }
     }
     if ((observationDefs != null ? observationDefs.length : undefined) > 0) {
@@ -294,11 +282,8 @@ module.exports = class CalculatorHelpers {
             // else create a new episodeResult structure
           } else {
             const newEpisode = {};
-            for (const pc in populationSet.populations) {
-              // Mongoose adds keys that start with '_' we do not care about these
-              if (pc[0] !== '_') {
-                newEpisode[pc] = 0;
-              }
+            for (const pc in populationSet.populations.toObject()) {
+              newEpisode[pc] = 0;
             }
             newEpisode.values = [resultValue];
             episodeResults[episodeId] = newEpisode;
@@ -393,12 +378,10 @@ module.exports = class CalculatorHelpers {
     copy.populations = {};
     for (const popCode in original.populations.toObject()) {
       // skip codes starting with _ since they are mongoose metadata
-      if (popCode[0] !== '_') {
-        const copyPop = {};
-        copyPop.library_name = original.populations[popCode].library_name;
-        copyPop.statement_name = original.populations[popCode].statement_name;
-        copy.populations[popCode] = copyPop;
-      }
+      const copyPop = {};
+      copyPop.library_name = original.populations[popCode].library_name;
+      copyPop.statement_name = original.populations[popCode].statement_name;
+      copy.populations[popCode] = copyPop;
     }
     return copy;
   }
@@ -80023,14 +80006,6 @@ class Measure extends mongoose.Document {
   constructor(object) {
     super(object, MeasureSchema);
   }
-
-  static getAllPopulationCodes() {
-    return ['STRAT', 'IPP', 'DENOM', 'DENEX', 'NUMER', 'NUMEX', 'DENEXCEP', 'MSRPOPL', 'OBSERV', 'MSRPOPLEX'];
-  }
-
-  static getCqlSkipStatements() {
-    return ['SDE Ethnicity', 'SDE Payer', 'SDE Race', 'SDE Sex'];
-  }
 }
 module.exports.Measure = Measure;
 
@@ -80063,6 +80038,7 @@ class MeasurePackage extends mongoose.Document {
 module.exports.MeasurePackage = MeasurePackage;
 
 },{"mongoose/browser":261}],251:[function(require,module,exports){
+/* eslint-disable no-unused-vars, no-param-reassign */
 const mongoose = require('mongoose/browser');
 const { StatementReferenceSchema } = require('./CQLStatementDependency');
 
@@ -80085,6 +80061,15 @@ const PopulationMapSchema = new mongoose.Schema({
   // STRAT is only here so cqm-execution can handle stratification results compliation with the current approach.
   STRAT: StatementReferenceSchema,
 });
+
+if (!PopulationMapSchema.options.toObject) PopulationMapSchema.options.toObject = {};
+PopulationMapSchema.options.toObject.transform = function transform(doc, ret, options) {
+  // remove the _id and _type of every document before returning the result
+  delete ret._id;
+  delete ret._type;
+  return ret;
+};
+
 
 const StratificationSchema = new mongoose.Schema({
   title: String,
