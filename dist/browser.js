@@ -42,12 +42,12 @@ module.exports = class CalculatorHelpers {
       );
 
       // initialize population counts
-      Object.keys(populationSet.populations).forEach((popCode) => {
+      Object.keys(populationSet.populations.toObject()).forEach((popCode) => {
         // Mongoose adds keys that start with '_' we do not care about these
         if (popCode[0] !== '_') {
           populationResults[popCode] = 0;
         }
-        if (populationSet.observations) {
+        if (populationSet.observations.length > 0) {
           populationResults.values = [];
         }
       });
@@ -166,7 +166,7 @@ module.exports = class CalculatorHelpers {
     const populationResults = {};
 
     // Loop over all population codes ("IPP", "DENOM", etc.)
-    Object.keys(populationSet.populations).forEach((popCode) => {
+    Object.keys(populationSet.populations.toObject()).forEach((popCode) => {
       // Mongoose adds keys that start with '_' we do not care about these
       if (popCode[0] === '_') return;
       const cqlPopulation = populationSet.populations[popCode].statement_name;
@@ -226,7 +226,7 @@ module.exports = class CalculatorHelpers {
   static createEpisodePopulationValues(populationSet, patientResults, observationDefs) {
     const episodeResults = {};
 
-    for (const popCode in populationSet.populations) {
+    for (const popCode in populationSet.populations.toObject()) {
       // Mongoose adds keys that start with '_' we do not care about these
       if (popCode[0] !== '_') {
         let newEpisode;
@@ -244,7 +244,7 @@ module.exports = class CalculatorHelpers {
                 // else create a new episode using the list of all popcodes for the population
               } else {
                 newEpisode = {};
-                for (const pc in populationSet.populations) {
+                for (const pc in populationSet.populations.toObject()) {
                   // Mongoose adds keys that start with '_' we do not care about these
                   if (pc[0] !== '_') {
                     newEpisode[pc] = 0;
@@ -311,7 +311,7 @@ module.exports = class CalculatorHelpers {
     Object.keys(episodeResults).forEach((episodeId) => {
       const episodeResult = episodeResults[episodeId];
       // ensure that an empty 'values' array exists for continuous variable measures if there were no observations
-      if (populationSet.observations) {
+      if (populationSet.observations.length > 0) {
         if (!episodeResult.values) {
           episodeResult.values = [];
         }
@@ -391,11 +391,14 @@ module.exports = class CalculatorHelpers {
     copy.title = original.title;
     copy.observations = original.observations;
     copy.populations = {};
-    for (const popCode in original.populations) {
-      const copyPop = {};
-      copyPop.library_name = original.populations[popCode].library_name;
-      copyPop.statement_name = original.populations[popCode].statement_name;
-      copy.populations[popCode] = copyPop;
+    for (const popCode in original.populations.toObject()) {
+      // skip codes starting with _ since they are mongoose metadata
+      if (popCode[0] !== '_') {
+        const copyPop = {};
+        copyPop.library_name = original.populations[popCode].library_name;
+        copyPop.statement_name = original.populations[popCode].statement_name;
+        copy.populations[popCode] = copyPop;
+      }
     }
     return copy;
   }
@@ -966,28 +969,28 @@ module.exports = class ResultsHelpers {
    * unless they have already been marked as 'TRUE' for their relevance statue. This function will never be called on
    * statements that are 'NA'.
    * @private
-   * @param {object} cqlStatementDependencies - Dependency map from the measure object. The thing we recurse over
+   * @param {Array<CQLLibraries>} cqlLibraries - Dependency map from the measure object. The thing we recurse over
    *   even though it is flat, it represents a tree.
    * @param {object} statementRelevance - The `statement_relevance` map to mark.
    * @param {string} libraryName - The library name of the statement we are marking.
    * @param {string} statementName - The name of the statement we are marking.
    * @param {boolean} relevant - true if the statement should be marked 'TRUE', false if it should be marked 'FALSE'.
    */
-  static markStatementRelevant(cqlStatementDependencies, statementRelevance, libraryName, statementName, relevant) {
+  static markStatementRelevant(cqlLibraries, statementRelevance, libraryName, statementName, relevant) {
     // only mark the statement if it is currently 'NA' or 'FALSE'. Otherwise it already has been marked 'TRUE'
     if (
       statementRelevance[libraryName][statementName] === 'NA' ||
       statementRelevance[libraryName][statementName] === 'FALSE'
     ) {
       statementRelevance[libraryName][statementName] = relevant ? 'TRUE' : 'FALSE';
-      const library = cqlStatementDependencies.find(lib => lib.library_name === libraryName);
+      const library = cqlLibraries.find(lib => lib.library_name === libraryName);
       const statement = library.statement_dependencies.find(stat => stat.statement_name === statementName);
       if (!statement || !statement.statement_references) {
         return [];
       }
       return statement.statement_references.map(dependentStatement =>
         this.markStatementRelevant(
-          cqlStatementDependencies,
+          cqlLibraries,
           statementRelevance,
           dependentStatement.library_name,
           dependentStatement.statement_name,
@@ -1529,6 +1532,7 @@ const CqmModels = require('cqm-models');
 
 const cql = CqmModels.CQL;
 const QDMPatient = CqmModels.QDMPatient;
+const Measure = CqmModels.Measure;
 const ResultsHelpers = require('../helpers/results_helpers');
 const CalculatorHelpers = require('../helpers/calculator_helpers');
 const PatientSource = require('./patient_source');
@@ -1537,8 +1541,8 @@ module.exports = class Calculator {
   /**
    * Generate calculation results for patients against a CQL measure.
    *
-   * @param {Measure} measure - The measure population to calculate on.
-   * @param {Array} patients - The array of QDM patients to run calcs on.
+   * @param {Object|Measure} measure - The measure population to calculate on.
+   * @param {Array<Object|QDMPatient>} patients - The array of QDM patients to run calcs on.
    * @param {Hash} valueSetsByOid - all ValueSets relevant to the measure.
    * @param {Hash} options - contains options for measure calculation.
    * @returns {patientId, results} results - mapping from patient to calculation results for each patient.
@@ -1558,8 +1562,19 @@ module.exports = class Calculator {
     // We store both the calculation result and the calculation code based on keys derived from the arguments
     const resultsByPatient = {};
 
-    const qdmPatients = patients.map(patient => new QDMPatient(patient));
+    // check if patients are cqm-model documents or not
+    const qdmPatients = patients.map((patient) => {
+      if (patient.validateSync !== undefined) {
+        return patient; // return the patient if it needs no conversion
+      }
+      return new QDMPatient(patient);
+    });
     const patientSource = new PatientSource(qdmPatients);
+
+    // convert the measure to a document if needed
+    if (measure.validateSync === undefined) {
+      measure = new Measure(measure);
+    }
 
     // Grab start and end of Measurement Period
     let start;
@@ -79881,7 +79896,7 @@ const StatementReferenceSchema = new mongoose.Schema({
 
 const StatementDependencySchema = new mongoose.Schema({
   statement_name: String,
-  dependencies: [StatementReferenceSchema],
+  statement_references: [StatementReferenceSchema],
 });
 
 module.exports.StatementReferenceSchema = StatementReferenceSchema;
@@ -79972,6 +79987,7 @@ const MeasureSchema = new mongoose.Schema(
       enum: ['PATIENT', 'EPISODE_OF_CARE'],
       default: 'PATIENT',
     },
+    calculate_sdes: Boolean,
 
     // ELM/CQL Measure-logic related data encapsulated in CQLLibrarySchema
     // Field name changed from 'cql' to 'cql_libraries' because the semantics of
@@ -80066,6 +80082,8 @@ const PopulationMapSchema = new mongoose.Schema({
   DENEXCEP: StatementReferenceSchema,
   MSRPOPL: StatementReferenceSchema,
   MSRPOPLEX: StatementReferenceSchema,
+  // STRAT is only here so cqm-execution can handle stratification results compliation with the current approach.
+  STRAT: StatementReferenceSchema,
 });
 
 const StratificationSchema = new mongoose.Schema({
