@@ -38,7 +38,7 @@ const getJSONFixture = function(fixturePath) {
 };
 
 // Load value sets from test fixtures, the getJSONFixture base path is spec/fixtures/json
-const valueSetsByOid = getJSONFixture('measures/CMS107v6/value_sets.json');
+const valueSets = getJSONFixture('measures/CMS107v6/value_sets.json');
 
 // Load a measure from test fixtures.
 const measure = getJSONFixture('measures/CMS107v6/CMS107v6.json');
@@ -52,7 +52,7 @@ patients.push(getJSONFixture('patients/CMS107v6/IPPFail_LOS=121Days.json'));
 const options = { doPretty: true };
 
 // Calculate results.
-const calculationResults = Calculator.calculate(measure, patients, valueSetsByOid, options);
+const calculationResults = Calculator.calculate(measure, patients, valueSets, options);
 ```
 
 ## Versioning
