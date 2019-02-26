@@ -7,7 +7,9 @@
     "test": "./node_modules/.bin/istanbul cover -x **/spec/** --reporter=text-lcov --reporter=html ./node_modules/.bin/jasmine-node spec",
     "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js'",
     "build-cql": "cd ./node_modules/cql-execution && yarn install && cd ../../",
-    "prepublish": "./bin/build_cql_execution.sh"
+    "prepublish": "./bin/build_cql_execution.sh",
+    "browser": "browserify lib/browser.js > dist/browser.js",
+    "browser_test": "browserify lib/browser.js > tmp/dist/browser.js"
   },
   "repository": "git+https://github.com/projecttacoma/cqm-execution.git",
   "contributors": [
@@ -41,6 +43,7 @@
   },
   "homepage": "https://github.com/projecttacoma/cqm-execution#readme",
   "devDependencies": {
+    "browserify": "^16.2.3",
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
@@ -51,7 +54,6 @@
   "dependencies": {
     "cqm-models": "https://github.com/projecttacoma/cqm-models#master",
     "lodash": "^4.17.5",
-    "moment": "^2.21.0",
-    "mongoose": "^5.0.7"
+    "moment": "^2.21.0"
   }
 }

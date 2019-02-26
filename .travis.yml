@@ -10,6 +10,7 @@ cache:
     - "node_modules"
 script:
   - yarn install
+  - ./bin/validate_browser.sh
   - yarn run lint
   - yarn test
   - codecov
