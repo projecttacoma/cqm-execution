@@ -15555,6 +15555,7 @@
           "statement_name": "Encounters During Measurement Period",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Valid Encounters"
             }
@@ -15564,10 +15565,12 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "In Demographic"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Encounters During Measurement Period"
             }
@@ -15577,6 +15580,7 @@
           "statement_name": "ASCVD Diagnosis Before MP",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "History of Clinical ASCVD Diagnoses"
             }
@@ -15586,6 +15590,7 @@
           "statement_name": "ASCVD Procedure Before MP",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "History of Clinical ASCVD Procedures"
             }
@@ -15595,14 +15600,17 @@
           "statement_name": "Denominator 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Initial Population"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "ASCVD Diagnosis Before MP"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "ASCVD Procedure Before MP"
             }
@@ -15615,6 +15623,7 @@
           "statement_name": "Statin starts before end of MP",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Statin Active"
             }
@@ -15627,6 +15636,7 @@
           "statement_name": "Statin order during MP",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Statin order"
             }
@@ -15636,10 +15646,12 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Statin order during MP"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Statin starts before end of MP"
             }
@@ -15655,22 +15667,27 @@
           "statement_name": "Denominator 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Initial Population"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "LDL gte 190"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Hypercholesterolemia Diagnosis"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "ASCVD Diagnosis Before MP"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "ASCVD Procedure Before MP"
             }
@@ -15689,14 +15706,17 @@
           "statement_name": "Denex",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Pregnancy"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Breastfeed"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Rhabdo"
             }
@@ -15718,30 +15738,37 @@
           "statement_name": "Denexcep",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "PalliativeCare"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "ESRD"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "HepA"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "HepB"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Liver Disease Diagnosis"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "MedsAdverse"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "MedsAllergyIntolerance"
             }
@@ -15760,6 +15787,7 @@
           "statement_name": "LDL 70 to 189 2 years prior",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "LDL between 70 and 189"
             }
@@ -15769,34 +15797,42 @@
           "statement_name": "Denominator 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Initial Population"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Diabetes Diagnosis"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "LDL 70 to 189 2 years prior"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Age 40 to 75"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "ASCVD Diagnosis Before MP"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "ASCVD Procedure Before MP"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "LDL gte 190"
             },
             {
+              "hqmf_id": null,
               "library_name": "StatinTherapy",
               "statement_name": "Hypercholesterolemia Diagnosis"
             }
@@ -17209,22 +17245,27 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "E29D10A8-7867-472D-9407-02AF1DDA78DD",
           "library_name": "StatinTherapy",
           "statement_name": "Denex"
         },
         "DENEXCEP": {
+          "hqmf_id": "2D4B2B28-EC6D-4874-9D56-992B46646DC3",
           "library_name": "StatinTherapy",
           "statement_name": "Denexcep"
         },
         "DENOM": {
+          "hqmf_id": "FB196C50-2308-4064-88B7-C77746E76B36",
           "library_name": "StatinTherapy",
           "statement_name": "Denominator 1"
         },
         "IPP": {
+          "hqmf_id": "D75B1F50-E58A-4A79-BB5C-C4EBEB160F96",
           "library_name": "StatinTherapy",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "41010063-398D-47A2-BB73-27FE326CBACA",
           "library_name": "StatinTherapy",
           "statement_name": "Numerator"
         },
@@ -17236,22 +17277,27 @@
       "population_set_id": "PopulationCriteria2",
       "populations": {
         "DENEX": {
+          "hqmf_id": "99615B52-7B7D-42D8-BDA6-780CCA24F042",
           "library_name": "StatinTherapy",
           "statement_name": "Denex"
         },
         "DENEXCEP": {
+          "hqmf_id": "02C31BA7-C0A1-451D-80EB-4BBC232BAE8F",
           "library_name": "StatinTherapy",
           "statement_name": "Denexcep"
         },
         "DENOM": {
+          "hqmf_id": "0D665008-2079-41E4-8CD5-B0E372CFD029",
           "library_name": "StatinTherapy",
           "statement_name": "Denominator 2"
         },
         "IPP": {
+          "hqmf_id": "295F05AE-22D4-451F-94C6-67DA6123C409",
           "library_name": "StatinTherapy",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "5AED46FE-4EE3-42D2-B7F4-81B8E1B9959A",
           "library_name": "StatinTherapy",
           "statement_name": "Numerator"
         },
@@ -17263,22 +17309,27 @@
       "population_set_id": "PopulationCriteria3",
       "populations": {
         "DENEX": {
+          "hqmf_id": "8B6D8852-8068-4A4C-BFB5-794A7E212C2A",
           "library_name": "StatinTherapy",
           "statement_name": "Denex"
         },
         "DENEXCEP": {
+          "hqmf_id": "F2F08981-F7CA-44DA-987E-E0C218B52642",
           "library_name": "StatinTherapy",
           "statement_name": "Denexcep Den3"
         },
         "DENOM": {
+          "hqmf_id": "ED665D4E-AEA4-4D19-BEB9-5715D2EE4BC8",
           "library_name": "StatinTherapy",
           "statement_name": "Denominator 3"
         },
         "IPP": {
+          "hqmf_id": "77B3C349-BC4E-40FA-9E73-DEAA9B32067E",
           "library_name": "StatinTherapy",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "97A5259A-ADD5-4BCA-928C-3CD1DF357DC8",
           "library_name": "StatinTherapy",
           "statement_name": "Numerator"
         },
@@ -17924,40 +17975,40 @@
   "title": "Statin Therapy",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f22b6ef33a519f1a72b48",
-    "5c4f22b6ef33a519f1a72b49",
-    "5c4f22b6ef33a519f1a72b4a",
-    "5c4f22b6ef33a519f1a72b4b",
-    "5c4f22b6ef33a519f1a72b4c",
-    "5c4f22b6ef33a519f1a72b4d",
-    "5c4f22b6ef33a519f1a72b4e",
-    "5c4f22b6ef33a519f1a72b4f",
-    "5c4f22b6ef33a519f1a72b50",
-    "5c4f22b6ef33a519f1a72b51",
-    "5c4f22b6ef33a519f1a72b52",
-    "5c4f22b6ef33a519f1a72b53",
-    "5c4f22b6ef33a519f1a72b54",
-    "5c4f22b6ef33a519f1a72b55",
-    "5c4f22b6ef33a519f1a72b56",
-    "5c4f22b6ef33a519f1a72b57",
-    "5c4f22b6ef33a519f1a72b58",
-    "5c4f22b6ef33a519f1a72b59",
-    "5c4f22b6ef33a519f1a72b5a",
-    "5c4f22b6ef33a519f1a72b5b",
-    "5c4f22b6ef33a519f1a72b5c",
-    "5c4f22b6ef33a519f1a72b5d",
-    "5c4f22b6ef33a519f1a72b5e",
-    "5c4f22b6ef33a519f1a72b5f",
-    "5c4f22b6ef33a519f1a72b60",
-    "5c4f22b6ef33a519f1a72b61",
-    "5c4f22b6ef33a519f1a72b62",
-    "5c4f22b6ef33a519f1a72b63",
-    "5c4f22b6ef33a519f1a72b64",
-    "5c4f22b6ef33a519f1a72b65",
-    "5c4f22b6ef33a519f1a72b66",
-    "5c4f22b6ef33a519f1a72b67",
-    "5c4f22b6ef33a519f1a72b68",
-    "5c4f22b6ef33a519f1a72b69",
-    "5c4f22b6ef33a519f1a72b6a"
+    "5c7991885cc97538a145a3af",
+    "5c7991885cc97538a145a3b0",
+    "5c7991885cc97538a145a3b1",
+    "5c7991885cc97538a145a3b2",
+    "5c7991885cc97538a145a3b3",
+    "5c7991885cc97538a145a3b4",
+    "5c7991885cc97538a145a3b5",
+    "5c7991885cc97538a145a3b6",
+    "5c7991885cc97538a145a3b7",
+    "5c7991885cc97538a145a3b8",
+    "5c7991885cc97538a145a3b9",
+    "5c7991885cc97538a145a3ba",
+    "5c7991885cc97538a145a3bb",
+    "5c7991885cc97538a145a3bc",
+    "5c7991885cc97538a145a3bd",
+    "5c7991885cc97538a145a3be",
+    "5c7991885cc97538a145a3bf",
+    "5c7991885cc97538a145a3c0",
+    "5c7991885cc97538a145a3c1",
+    "5c7991885cc97538a145a3c2",
+    "5c7991885cc97538a145a3c3",
+    "5c7991885cc97538a145a3c4",
+    "5c7991885cc97538a145a3c5",
+    "5c7991885cc97538a145a3c6",
+    "5c7991885cc97538a145a3c7",
+    "5c7991885cc97538a145a3c8",
+    "5c7991885cc97538a145a3c9",
+    "5c7991885cc97538a145a3ca",
+    "5c7991885cc97538a145a3cb",
+    "5c7991885cc97538a145a3cc",
+    "5c7991885cc97538a145a3cd",
+    "5c7991885cc97538a145a3ce",
+    "5c7991885cc97538a145a3cf",
+    "5c7991885cc97538a145a3d0",
+    "5c7991885cc97538a145a3d1"
   ]
 }

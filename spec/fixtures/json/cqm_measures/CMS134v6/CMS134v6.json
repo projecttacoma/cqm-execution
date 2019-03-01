@@ -6285,14 +6285,17 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "Qualifying Encounters"
             }
@@ -6302,6 +6305,7 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "Initial Population"
             }
@@ -6311,18 +6315,22 @@
           "statement_name": "Nephropathy Screenings",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "Renal Procedures"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "Renal Interventions"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "ESRD Encounter"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "Protein Urea Lab Test"
             }
@@ -6332,14 +6340,17 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "Active ACEI or ARB Medications"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "Nephropathy Diagnoses"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "Nephropathy Screenings"
             }
@@ -6349,6 +6360,7 @@
           "statement_name": "In Hospice",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "Hospice",
               "statement_name": "Has Hospice"
             }
@@ -6358,6 +6370,7 @@
           "statement_name": "Denominator Exclusions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DiabetesMedicalAttentionforNephropathy",
               "statement_name": "In Hospice"
             }
@@ -10429,6 +10442,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -13405,18 +13419,22 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "F82CC93D-C1A2-4E10-A087-81D666395C48",
           "library_name": "DiabetesMedicalAttentionforNephropathy",
           "statement_name": "Denominator Exclusions"
         },
         "DENOM": {
+          "hqmf_id": "B735F4BD-DFAE-45E3-BAA9-E09BDF731B8E",
           "library_name": "DiabetesMedicalAttentionforNephropathy",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "6CD39B4B-16E6-4FD4-9241-527F9F4A48D0",
           "library_name": "DiabetesMedicalAttentionforNephropathy",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "ECFD4C68-90F8-4143-8298-21798069AE8E",
           "library_name": "DiabetesMedicalAttentionforNephropathy",
           "statement_name": "Numerator"
         },
@@ -13928,38 +13946,38 @@
   "title": "Diabetes: Medical Attention for Nephropathy",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f227bef33a519899977d9",
-    "5c4f227bef33a519899977da",
-    "5c4f227bef33a519899977db",
-    "5c4f227bef33a519899977dc",
-    "5c4f227bef33a519899977dd",
-    "5c4f227bef33a519899977de",
-    "5c4f227bef33a519899977df",
-    "5c4f227bef33a519899977e0",
-    "5c4f227bef33a519899977e1",
-    "5c4f227bef33a519899977e2",
-    "5c4f227bef33a519899977e3",
-    "5c4f227bef33a519899977e4",
-    "5c4f227bef33a519899977e5",
-    "5c4f227bef33a519899977e6",
-    "5c4f227bef33a519899977e7",
-    "5c4f227bef33a519899977e8",
-    "5c4f227bef33a519899977e9",
-    "5c4f227bef33a519899977ea",
-    "5c4f227bef33a519899977eb",
-    "5c4f227bef33a519899977ec",
-    "5c4f227bef33a519899977ed",
-    "5c4f227bef33a519899977ee",
-    "5c4f227bef33a519899977ef",
-    "5c4f227bef33a519899977f0",
-    "5c4f227bef33a519899977f1",
-    "5c4f227bef33a519899977f2",
-    "5c4f227bef33a519899977f3",
-    "5c4f227bef33a519899977f4",
-    "5c4f227bef33a519899977f5",
-    "5c4f227bef33a519899977f6",
-    "5c4f227bef33a519899977f7",
-    "5c4f227bef33a519899977f8",
-    "5c4f227bef33a519899977f9"
+    "5c79914c5cc97536eeef2b0b",
+    "5c79914c5cc97536eeef2b0c",
+    "5c79914c5cc97536eeef2b0d",
+    "5c79914c5cc97536eeef2b0e",
+    "5c79914c5cc97536eeef2b0f",
+    "5c79914c5cc97536eeef2b10",
+    "5c79914c5cc97536eeef2b11",
+    "5c79914c5cc97536eeef2b12",
+    "5c79914c5cc97536eeef2b13",
+    "5c79914c5cc97536eeef2b14",
+    "5c79914c5cc97536eeef2b15",
+    "5c79914c5cc97536eeef2b16",
+    "5c79914c5cc97536eeef2b17",
+    "5c79914c5cc97536eeef2b18",
+    "5c79914c5cc97536eeef2b19",
+    "5c79914c5cc97536eeef2b1a",
+    "5c79914c5cc97536eeef2b1b",
+    "5c79914c5cc97536eeef2b1c",
+    "5c79914c5cc97536eeef2b1d",
+    "5c79914c5cc97536eeef2b1e",
+    "5c79914c5cc97536eeef2b1f",
+    "5c79914c5cc97536eeef2b20",
+    "5c79914c5cc97536eeef2b21",
+    "5c79914c5cc97536eeef2b22",
+    "5c79914c5cc97536eeef2b23",
+    "5c79914c5cc97536eeef2b24",
+    "5c79914c5cc97536eeef2b25",
+    "5c79914c5cc97536eeef2b26",
+    "5c79914c5cc97536eeef2b27",
+    "5c79914c5cc97536eeef2b28",
+    "5c79914c5cc97536eeef2b29",
+    "5c79914c5cc97536eeef2b2a",
+    "5c79914c5cc97536eeef2b2b"
   ]
 }

@@ -3054,6 +3054,7 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment",
               "statement_name": "Encounter with Major Depressive Disorder Diagnosis"
             }
@@ -3063,6 +3064,7 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment",
               "statement_name": "Initial Population"
             }
@@ -3072,6 +3074,7 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment",
               "statement_name": "Encounter with Major Depressive Disorder Diagnosis"
             }
@@ -3940,14 +3943,17 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENOM": {
+          "hqmf_id": "FB9470CF-9D17-4D21-A56C-DD50333C41DB",
           "library_name": "ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "814DC710-4366-4E53-8747-EA68A1D82146",
           "library_name": "ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "487BEADB-29B5-43D7-8E33-F0E40184E27B",
           "library_name": "ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment",
           "statement_name": "Numerator"
         },
@@ -4297,19 +4303,19 @@
   "title": "Child and Adolescent Major Depressive Disorder (MDD): Suicide Risk Assessment",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f2291ef33a519acfc5913",
-    "5c4f2291ef33a519acfc5914",
-    "5c4f2291ef33a519acfc5915",
-    "5c4f2291ef33a519acfc5916",
-    "5c4f2291ef33a519acfc5917",
-    "5c4f2291ef33a519acfc5918",
-    "5c4f2291ef33a519acfc5919",
-    "5c4f2291ef33a519acfc591a",
-    "5c4f2291ef33a519acfc591b",
-    "5c4f2291ef33a519acfc591c",
-    "5c4f2291ef33a519acfc591d",
-    "5c4f2291ef33a519acfc591e",
-    "5c4f2291ef33a519acfc591f",
-    "5c4f2291ef33a519acfc5920"
+    "5c7991625cc975379e97431b",
+    "5c7991625cc975379e97431c",
+    "5c7991625cc975379e97431d",
+    "5c7991625cc975379e97431e",
+    "5c7991625cc975379e97431f",
+    "5c7991625cc975379e974320",
+    "5c7991625cc975379e974321",
+    "5c7991625cc975379e974322",
+    "5c7991625cc975379e974323",
+    "5c7991625cc975379e974324",
+    "5c7991625cc975379e974325",
+    "5c7991625cc975379e974326",
+    "5c7991625cc975379e974327",
+    "5c7991625cc975379e974328"
   ]
 }

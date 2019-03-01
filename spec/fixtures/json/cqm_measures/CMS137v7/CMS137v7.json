@@ -7157,6 +7157,7 @@
           "statement_name": "First Dependence Diagnosis",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
               "statement_name": "Qualifying Encounters"
             }
@@ -7166,10 +7167,12 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
               "statement_name": "First Dependence Diagnosis"
             }
@@ -7179,6 +7182,7 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
               "statement_name": "Initial Population"
             }
@@ -7188,6 +7192,7 @@
           "statement_name": "Treatment Initiation",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
               "statement_name": "First Dependence Diagnosis"
             }
@@ -7197,6 +7202,7 @@
           "statement_name": "Has Continuation Of Treatments",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
               "statement_name": "Treatment Initiation"
             }
@@ -7206,6 +7212,7 @@
           "statement_name": "Numerator 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
               "statement_name": "Has Continuation Of Treatments"
             }
@@ -7215,6 +7222,7 @@
           "statement_name": "Stratification 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -7224,10 +7232,12 @@
           "statement_name": "Stratification 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -7237,6 +7247,7 @@
           "statement_name": "Has Prior Dependence",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
               "statement_name": "First Dependence Diagnosis"
             }
@@ -7246,10 +7257,12 @@
           "statement_name": "Denominator Exclusions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "Hospice",
               "statement_name": "Has Hospice"
             },
             {
+              "hqmf_id": null,
               "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
               "statement_name": "Has Prior Dependence"
             }
@@ -7259,6 +7272,7 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
               "statement_name": "Treatment Initiation"
             }
@@ -15932,6 +15946,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -18883,18 +18898,22 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "B0687FEA-DC33-40B2-95F7-279E11E3AB28",
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
           "statement_name": "Denominator Exclusions"
         },
         "DENOM": {
+          "hqmf_id": "39C79E71-7369-46C3-AD5F-1C5D83BA474A",
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "452021F9-5466-45A8-9528-0F92E70C95DD",
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "22DE67FC-79C0-4725-BDE3-3C9B0A1ACAF7",
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
           "statement_name": "Numerator"
         },
@@ -18902,7 +18921,9 @@
       },
       "stratifications": [
         {
+          "hqmf_id": "F7764C47-6BAE-4359-A3DF-9C452DC95A33",
           "statement": {
+            "hqmf_id": "F7764C47-6BAE-4359-A3DF-9C452DC95A33",
             "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
             "statement_name": "Stratification 1"
           },
@@ -18910,7 +18931,9 @@
           "title": "Stratification 1"
         },
         {
+          "hqmf_id": "44729C98-B535-4C78-8BC3-A716323B9965",
           "statement": {
+            "hqmf_id": "44729C98-B535-4C78-8BC3-A716323B9965",
             "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
             "statement_name": "Stratification 2"
           },
@@ -18924,18 +18947,22 @@
       "population_set_id": "PopulationCriteria2",
       "populations": {
         "DENEX": {
+          "hqmf_id": "089CFF04-2838-4B37-8BDA-647E7B94C709",
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
           "statement_name": "Denominator Exclusions"
         },
         "DENOM": {
+          "hqmf_id": "B636C467-23C5-4A23-8709-C71641B1A3AE",
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "C7127400-8034-45D1-8227-6C244349AB6E",
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "C3D3C7F3-CADA-45E9-A5AA-A05A3C04A76A",
           "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
           "statement_name": "Numerator 2"
         },
@@ -18943,7 +18970,9 @@
       },
       "stratifications": [
         {
+          "hqmf_id": "2A93884C-D881-447F-BA9B-F2EA0A2F30F4",
           "statement": {
+            "hqmf_id": "2A93884C-D881-447F-BA9B-F2EA0A2F30F4",
             "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
             "statement_name": "Stratification 1"
           },
@@ -18951,7 +18980,9 @@
           "title": "Stratification 1"
         },
         {
+          "hqmf_id": "7ECED382-8389-4028-9623-36ED3537E010",
           "statement": {
+            "hqmf_id": "7ECED382-8389-4028-9623-36ED3537E010",
             "library_name": "InitiationandEngagementofAlcoholandOtherDrugDependenceTreatment",
             "statement_name": "Stratification 2"
           },
@@ -19358,27 +19389,27 @@
   "title": "Initiation and Engagement of Alcohol and Other Drug Dependence Treatment",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f2280ef33a519958706cb",
-    "5c4f2280ef33a519958706cc",
-    "5c4f2280ef33a519958706cd",
-    "5c4f2280ef33a519958706ce",
-    "5c4f2280ef33a519958706cf",
-    "5c4f2280ef33a519958706d0",
-    "5c4f2280ef33a519958706d1",
-    "5c4f2280ef33a519958706d2",
-    "5c4f2280ef33a519958706d3",
-    "5c4f2280ef33a519958706d4",
-    "5c4f2280ef33a519958706d5",
-    "5c4f2280ef33a519958706d6",
-    "5c4f2280ef33a519958706d7",
-    "5c4f2280ef33a519958706d8",
-    "5c4f2280ef33a519958706d9",
-    "5c4f2280ef33a519958706da",
-    "5c4f2280ef33a519958706db",
-    "5c4f2280ef33a519958706dc",
-    "5c4f2280ef33a519958706dd",
-    "5c4f2280ef33a519958706de",
-    "5c4f2280ef33a519958706df",
-    "5c4f2280ef33a519958706e0"
+    "5c7991505cc9753715d0a2de",
+    "5c7991505cc9753715d0a2df",
+    "5c7991505cc9753715d0a2e0",
+    "5c7991505cc9753715d0a2e1",
+    "5c7991505cc9753715d0a2e2",
+    "5c7991505cc9753715d0a2e3",
+    "5c7991505cc9753715d0a2e4",
+    "5c7991505cc9753715d0a2e5",
+    "5c7991505cc9753715d0a2e6",
+    "5c7991505cc9753715d0a2e7",
+    "5c7991505cc9753715d0a2e8",
+    "5c7991505cc9753715d0a2e9",
+    "5c7991505cc9753715d0a2ea",
+    "5c7991505cc9753715d0a2eb",
+    "5c7991505cc9753715d0a2ec",
+    "5c7991505cc9753715d0a2ed",
+    "5c7991505cc9753715d0a2ee",
+    "5c7991505cc9753715d0a2ef",
+    "5c7991505cc9753715d0a2f0",
+    "5c7991505cc9753715d0a2f1",
+    "5c7991505cc9753715d0a2f2",
+    "5c7991505cc9753715d0a2f3"
   ]
 }

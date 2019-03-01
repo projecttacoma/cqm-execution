@@ -20655,14 +20655,17 @@
           "statement_name": "Depression Encounter in September through December",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Diagnoses"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "September through December of Measurement Period"
             }
@@ -20672,6 +20675,7 @@
           "statement_name": "Initial Population 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in September through December"
             }
@@ -20681,6 +20685,7 @@
           "statement_name": "Denominator 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Initial Population 1"
             }
@@ -20693,14 +20698,17 @@
           "statement_name": "Depression Encounter in May through August",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Diagnoses"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "May through August of Measurement Period"
             }
@@ -20710,6 +20718,7 @@
           "statement_name": "Initial Population 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in May through August"
             }
@@ -20719,6 +20728,7 @@
           "statement_name": "Denominator 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Initial Population 2"
             }
@@ -20731,14 +20741,17 @@
           "statement_name": "Depression Encounter in January through April",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Diagnoses"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "January through April of Measurement Period"
             }
@@ -20748,6 +20761,7 @@
           "statement_name": "Initial Population 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in January through April"
             }
@@ -20757,6 +20771,7 @@
           "statement_name": "Denominator 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Initial Population 3"
             }
@@ -20766,6 +20781,7 @@
           "statement_name": "Disorder Diagnoses Overlaps Depression Encounter in May through August",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in May through August"
             }
@@ -20775,6 +20791,7 @@
           "statement_name": "Expired in September through December",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "September through December of Measurement Period"
             }
@@ -20784,6 +20801,7 @@
           "statement_name": "Expired in May through August",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "May through August of Measurement Period"
             }
@@ -20793,6 +20811,7 @@
           "statement_name": "Expired in January through April",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "January through April of Measurement Period"
             }
@@ -20802,14 +20821,17 @@
           "statement_name": "Stratification 1_1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in September through December"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -20819,10 +20841,12 @@
           "statement_name": "Stratification 1_2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in September through December"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -20832,14 +20856,17 @@
           "statement_name": "Stratification 2_1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in May through August"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -20849,10 +20876,12 @@
           "statement_name": "Stratification 2_2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in May through August"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -20862,14 +20891,17 @@
           "statement_name": "Stratification 3_1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in January through April"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -20879,10 +20911,12 @@
           "statement_name": "Stratification 3_2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in January through April"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -20892,6 +20926,7 @@
           "statement_name": "Numerator 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "September through December of Measurement Period"
             }
@@ -20901,6 +20936,7 @@
           "statement_name": "Numerator 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "May through August of Measurement Period"
             }
@@ -20910,6 +20946,7 @@
           "statement_name": "Numerator 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "January through April of Measurement Period"
             }
@@ -20919,6 +20956,7 @@
           "statement_name": "Long Term Care Overlaps January through April",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "January through April of Measurement Period"
             }
@@ -20928,6 +20966,7 @@
           "statement_name": "Long Term Care Overlaps May through August",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "May through August of Measurement Period"
             }
@@ -20937,6 +20976,7 @@
           "statement_name": "Long Term Care Overlaps September through December",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "September through December of Measurement Period"
             }
@@ -20946,6 +20986,7 @@
           "statement_name": "Palliative Care Order Before End of December",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "September through December of Measurement Period"
             }
@@ -20955,6 +20996,7 @@
           "statement_name": "Palliative Care Order Before End of April",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "January through April of Measurement Period"
             }
@@ -20964,6 +21006,7 @@
           "statement_name": "Palliative Care Order Before End of August",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "May through August of Measurement Period"
             }
@@ -20973,6 +21016,7 @@
           "statement_name": "Encounter Palliative Care Overlaps September through December",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "September through December of Measurement Period"
             }
@@ -20982,6 +21026,7 @@
           "statement_name": "Encounter Palliative Care Overlaps May through August",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "May through August of Measurement Period"
             }
@@ -20991,6 +21036,7 @@
           "statement_name": "Encounter Palliative Care Overlaps January through April",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "January through April of Measurement Period"
             }
@@ -21000,6 +21046,7 @@
           "statement_name": "Disorder Diagnoses Overlaps Depression Encounter in September through December",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in September through December"
             }
@@ -21009,22 +21056,27 @@
           "statement_name": "Denominator Exclusion 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Palliative Care Order Before End of December"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Encounter Palliative Care Overlaps September through December"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Long Term Care Overlaps September through December"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Expired in September through December"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Disorder Diagnoses Overlaps Depression Encounter in September through December"
             }
@@ -21034,22 +21086,27 @@
           "statement_name": "Denominator Exclusion 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Palliative Care Order Before End of August"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Encounter Palliative Care Overlaps May through August"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Long Term Care Overlaps May through August"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Expired in May through August"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Disorder Diagnoses Overlaps Depression Encounter in May through August"
             }
@@ -21059,6 +21116,7 @@
           "statement_name": "Disorder Diagnoses Overlaps Depression Encounter in January through April",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Encounter in January through April"
             }
@@ -21068,22 +21126,27 @@
           "statement_name": "Denominator Exclusion 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Palliative Care Order Before End of April"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Encounter Palliative Care Overlaps January through April"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Long Term Care Overlaps January through April"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Expired in January through April"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Disorder Diagnoses Overlaps Depression Encounter in January through April"
             }
@@ -29757,6 +29820,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -31330,18 +31394,22 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "0830DDCA-C45E-4D80-B359-E69E2F83D7B2",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator Exclusion 1"
         },
         "DENOM": {
+          "hqmf_id": "A52E93B8-A2D1-414E-94D0-90155E8FF81F",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator 1"
         },
         "IPP": {
+          "hqmf_id": "D00E7D31-7F59-468D-99C6-631D07715E59",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Initial Population 1"
         },
         "NUMER": {
+          "hqmf_id": "539B0A53-F5B0-47CB-887E-392792E9D4ED",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Numerator 1"
         },
@@ -31349,7 +31417,9 @@
       },
       "stratifications": [
         {
+          "hqmf_id": "13406420-1144-4100-9439-ED134656A4FC",
           "statement": {
+            "hqmf_id": "13406420-1144-4100-9439-ED134656A4FC",
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 1_1"
           },
@@ -31357,7 +31427,9 @@
           "title": "Population 1 Strata 1"
         },
         {
+          "hqmf_id": "DD7E5C35-6825-496B-A155-A4CBE9056535",
           "statement": {
+            "hqmf_id": "DD7E5C35-6825-496B-A155-A4CBE9056535",
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 1_2"
           },
@@ -31371,18 +31443,22 @@
       "population_set_id": "PopulationCriteria2",
       "populations": {
         "DENEX": {
+          "hqmf_id": "7889D513-C24C-482F-8C9C-FC31F35E3999",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator Exclusion 2"
         },
         "DENOM": {
+          "hqmf_id": "1B9C4359-5DF7-4B6D-ACD8-C12175C67EFD",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator 2"
         },
         "IPP": {
+          "hqmf_id": "95F5AFA0-CB23-4786-A2E0-0646C0494E4F",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Initial Population 2"
         },
         "NUMER": {
+          "hqmf_id": "92D313A7-3A3D-44EC-8A94-103CC0003A30",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Numerator 2"
         },
@@ -31390,7 +31466,9 @@
       },
       "stratifications": [
         {
+          "hqmf_id": "39B15197-7895-4AFC-B4AA-83DABFF66373",
           "statement": {
+            "hqmf_id": "39B15197-7895-4AFC-B4AA-83DABFF66373",
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 2_1"
           },
@@ -31398,7 +31476,9 @@
           "title": "Population 2 Strata 1"
         },
         {
+          "hqmf_id": "0416AB91-F7FF-4432-A5D9-77B27F5AE30C",
           "statement": {
+            "hqmf_id": "0416AB91-F7FF-4432-A5D9-77B27F5AE30C",
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 2_2"
           },
@@ -31412,18 +31492,22 @@
       "population_set_id": "PopulationCriteria3",
       "populations": {
         "DENEX": {
+          "hqmf_id": "DE1952F9-9E35-4493-BA65-3F6CD8904059",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator Exclusion 3"
         },
         "DENOM": {
+          "hqmf_id": "2E3A7115-247D-4A0E-918C-AB581E13486A",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator 3"
         },
         "IPP": {
+          "hqmf_id": "750B4DDA-EC94-4082-9AB4-86824666D808",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Initial Population 3"
         },
         "NUMER": {
+          "hqmf_id": "9FCE046B-5EF9-4A19-9D22-D3A6518EDA51",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Numerator 3"
         },
@@ -31431,7 +31515,9 @@
       },
       "stratifications": [
         {
+          "hqmf_id": "1FD9CB54-2485-43C9-A9CB-041E6FE078F0",
           "statement": {
+            "hqmf_id": "1FD9CB54-2485-43C9-A9CB-041E6FE078F0",
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 3_1"
           },
@@ -31439,7 +31525,9 @@
           "title": "Population 3 Strata 1"
         },
         {
+          "hqmf_id": "B4B269AE-AE95-4FFF-AD3A-0C7F62DC0C72",
           "statement": {
+            "hqmf_id": "B4B269AE-AE95-4FFF-AD3A-0C7F62DC0C72",
             "library_name": "DepressionUtilizationofthePHQ9Tool",
             "statement_name": "Stratification 3_2"
           },
@@ -31822,25 +31910,25 @@
   "title": "Depression Utilization of the PHQ-9 Tool",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f228cef33a519a81c968e",
-    "5c4f228cef33a519a81c968f",
-    "5c4f228cef33a519a81c9690",
-    "5c4f228cef33a519a81c9691",
-    "5c4f228cef33a519a81c9692",
-    "5c4f228cef33a519a81c9693",
-    "5c4f228cef33a519a81c9694",
-    "5c4f228cef33a519a81c9695",
-    "5c4f228cef33a519a81c9696",
-    "5c4f228cef33a519a81c9697",
-    "5c4f228cef33a519a81c9698",
-    "5c4f228cef33a519a81c9699",
-    "5c4f228cef33a519a81c969a",
-    "5c4f228cef33a519a81c969b",
-    "5c4f228cef33a519a81c969c",
-    "5c4f228cef33a519a81c969d",
-    "5c4f228cef33a519a81c969e",
-    "5c4f228cef33a519a81c969f",
-    "5c4f228cef33a519a81c96a0",
-    "5c4f228cef33a519a81c96a1"
+    "5c79915e5cc975377787c6a1",
+    "5c79915e5cc975377787c6a2",
+    "5c79915e5cc975377787c6a3",
+    "5c79915e5cc975377787c6a4",
+    "5c79915e5cc975377787c6a5",
+    "5c79915e5cc975377787c6a6",
+    "5c79915e5cc975377787c6a7",
+    "5c79915e5cc975377787c6a8",
+    "5c79915e5cc975377787c6a9",
+    "5c79915e5cc975377787c6aa",
+    "5c79915e5cc975377787c6ab",
+    "5c79915e5cc975377787c6ac",
+    "5c79915e5cc975377787c6ad",
+    "5c79915e5cc975377787c6ae",
+    "5c79915e5cc975377787c6af",
+    "5c79915e5cc975377787c6b0",
+    "5c79915e5cc975377787c6b1",
+    "5c79915e5cc975377787c6b2",
+    "5c79915e5cc975377787c6b3",
+    "5c79915e5cc975377787c6b4"
   ]
 }

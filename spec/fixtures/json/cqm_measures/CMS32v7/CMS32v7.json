@@ -3490,6 +3490,7 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
               "statement_name": "ED Visit"
             }
@@ -3499,6 +3500,7 @@
           "statement_name": "Measure Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
               "statement_name": "Initial Population"
             }
@@ -3508,6 +3510,7 @@
           "statement_name": "Stratification 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
               "statement_name": "ED Visit"
             }
@@ -3517,6 +3520,7 @@
           "statement_name": "Stratification 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
               "statement_name": "ED Visit"
             }
@@ -3526,6 +3530,7 @@
           "statement_name": "Stratification 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
               "statement_name": "ED Visit"
             }
@@ -3535,10 +3540,12 @@
           "statement_name": "Measure Population Exclusions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
               "statement_name": "ED Visit"
             },
             {
+              "hqmf_id": null,
               "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
               "statement_name": "ED Visit"
             }
@@ -4477,11 +4484,14 @@
       "observations": [
         {
           "aggregation_type": null,
+          "hqmf_id": "FFB1B6BE-B96F-4B29-A920-0E4966D209A3",
           "observation_function": {
+            "hqmf_id": "FFB1B6BE-B96F-4B29-A920-0E4966D209A3",
             "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
             "statement_name": "Measure Observation"
           },
           "observation_parameter": {
+            "hqmf_id": "FFB1B6BE-B96F-4B29-A920-0E4966D209A3",
             "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
             "statement_name": "Measure Population"
           }
@@ -4490,14 +4500,17 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "IPP": {
+          "hqmf_id": "036B7EEE-DEB5-40E2-B802-BC6CDF2B8A43",
           "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
           "statement_name": "Initial Population"
         },
         "MSRPOPL": {
+          "hqmf_id": "4A80FF43-6FC1-4975-806B-4FD40C7C4B95",
           "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
           "statement_name": "Measure Population"
         },
         "MSRPOPLEX": {
+          "hqmf_id": "34607208-5E04-4BC6-94E4-F3168609640E",
           "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
           "statement_name": "Measure Population Exclusions"
         },
@@ -4505,7 +4518,9 @@
       },
       "stratifications": [
         {
+          "hqmf_id": "041A37F6-86D3-471F-86DD-12FB668092BD",
           "statement": {
+            "hqmf_id": "041A37F6-86D3-471F-86DD-12FB668092BD",
             "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
             "statement_name": "Stratification 1"
           },
@@ -4513,7 +4528,9 @@
           "title": "Stratification 1"
         },
         {
+          "hqmf_id": "7846CD9A-9B68-4C2C-9CFB-0E52777D9EEA",
           "statement": {
+            "hqmf_id": "7846CD9A-9B68-4C2C-9CFB-0E52777D9EEA",
             "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
             "statement_name": "Stratification 2"
           },
@@ -4521,7 +4538,9 @@
           "title": "Stratification 2"
         },
         {
+          "hqmf_id": "566164F8-47E0-4ADB-A3A6-383067490DA8",
           "statement": {
+            "hqmf_id": "566164F8-47E0-4ADB-A3A6-383067490DA8",
             "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
             "statement_name": "Stratification 3"
           },
@@ -4789,14 +4808,14 @@
   "title": "Median Time from ED Arrival to ED Departure for Discharged ED Patients",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f2295ef33a519b80ac379",
-    "5c4f2295ef33a519b80ac37a",
-    "5c4f2295ef33a519b80ac37b",
-    "5c4f2295ef33a519b80ac37c",
-    "5c4f2295ef33a519b80ac37d",
-    "5c4f2295ef33a519b80ac37e",
-    "5c4f2295ef33a519b80ac37f",
-    "5c4f2295ef33a519b80ac380",
-    "5c4f2295ef33a519b80ac381"
+    "5c7991675cc97537bbbb8812",
+    "5c7991675cc97537bbbb8813",
+    "5c7991675cc97537bbbb8814",
+    "5c7991675cc97537bbbb8815",
+    "5c7991675cc97537bbbb8816",
+    "5c7991675cc97537bbbb8817",
+    "5c7991675cc97537bbbb8818",
+    "5c7991675cc97537bbbb8819",
+    "5c7991675cc97537bbbb881a"
   ]
 }

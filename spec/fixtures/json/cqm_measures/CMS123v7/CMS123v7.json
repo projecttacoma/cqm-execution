@@ -7099,10 +7099,12 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             },
             {
+              "hqmf_id": null,
               "library_name": "Adult_Outpatient_Encounters",
               "statement_name": "Qualifying Encounters"
             }
@@ -7112,6 +7114,7 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DiabetesFootExam",
               "statement_name": "Initial Population"
             }
@@ -7130,14 +7133,17 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DiabetesFootExam",
               "statement_name": "Sensory Foot Exam"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesFootExam",
               "statement_name": "Visual Foot Exam"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesFootExam",
               "statement_name": "Pedal Pulse Checked"
             }
@@ -7156,18 +7162,22 @@
           "statement_name": "Denominator Exclusions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "Hospice",
               "statement_name": "Has Hospice"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesFootExam",
               "statement_name": "Bilateral Lower Extremity Amputation"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesFootExam",
               "statement_name": "Left Lower Extremity Amputation"
             },
             {
+              "hqmf_id": null,
               "library_name": "DiabetesFootExam",
               "statement_name": "Right Lower Extremity Amputation"
             }
@@ -15841,6 +15851,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -19711,18 +19722,22 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "169882FC-8B2E-4632-862C-3081579CB7AD",
           "library_name": "DiabetesFootExam",
           "statement_name": "Denominator Exclusions"
         },
         "DENOM": {
+          "hqmf_id": "181114D4-30C3-4373-883B-1089B4B5F78C",
           "library_name": "DiabetesFootExam",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "7567276B-C419-4192-9302-B74184432984",
           "library_name": "DiabetesFootExam",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "1B37DBE9-2193-4846-95BD-A3F3DFF21D5A",
           "library_name": "DiabetesFootExam",
           "statement_name": "Numerator"
         },
@@ -19730,18 +19745,22 @@
       },
       "supplemental_data_elements": [
         {
+          "hqmf_id": null,
           "library_name": "DiabetesFootExam",
           "statement_name": "SDE Ethnicity"
         },
         {
+          "hqmf_id": null,
           "library_name": "DiabetesFootExam",
           "statement_name": "SDE Payer"
         },
         {
+          "hqmf_id": null,
           "library_name": "DiabetesFootExam",
           "statement_name": "SDE Race"
         },
         {
+          "hqmf_id": null,
           "library_name": "DiabetesFootExam",
           "statement_name": "SDE Sex"
         }
@@ -20227,35 +20246,35 @@
   "title": "Diabetes: Foot Exam",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f2276ef33a5197e13188c",
-    "5c4f2276ef33a5197e13188d",
-    "5c4f2276ef33a5197e13188e",
-    "5c4f2276ef33a5197e13188f",
-    "5c4f2276ef33a5197e131890",
-    "5c4f2276ef33a5197e131891",
-    "5c4f2276ef33a5197e131892",
-    "5c4f2276ef33a5197e131893",
-    "5c4f2276ef33a5197e131894",
-    "5c4f2276ef33a5197e131895",
-    "5c4f2276ef33a5197e131896",
-    "5c4f2276ef33a5197e131897",
-    "5c4f2276ef33a5197e131898",
-    "5c4f2276ef33a5197e131899",
-    "5c4f2276ef33a5197e13189a",
-    "5c4f2276ef33a5197e13189b",
-    "5c4f2276ef33a5197e13189c",
-    "5c4f2276ef33a5197e13189d",
-    "5c4f2276ef33a5197e13189e",
-    "5c4f2276ef33a5197e13189f",
-    "5c4f2276ef33a5197e1318a0",
-    "5c4f2276ef33a5197e1318a1",
-    "5c4f2276ef33a5197e1318a2",
-    "5c4f2276ef33a5197e1318a3",
-    "5c4f2276ef33a5197e1318a4",
-    "5c4f2276ef33a5197e1318a5",
-    "5c4f2276ef33a5197e1318a6",
-    "5c4f2276ef33a5197e1318a7",
-    "5c4f2276ef33a5197e1318a8",
-    "5c4f2276ef33a5197e1318a9"
+    "5c7991475cc97536c742e7ae",
+    "5c7991475cc97536c742e7af",
+    "5c7991475cc97536c742e7b0",
+    "5c7991475cc97536c742e7b1",
+    "5c7991475cc97536c742e7b2",
+    "5c7991475cc97536c742e7b3",
+    "5c7991475cc97536c742e7b4",
+    "5c7991475cc97536c742e7b5",
+    "5c7991475cc97536c742e7b6",
+    "5c7991475cc97536c742e7b7",
+    "5c7991475cc97536c742e7b8",
+    "5c7991475cc97536c742e7b9",
+    "5c7991475cc97536c742e7ba",
+    "5c7991475cc97536c742e7bb",
+    "5c7991475cc97536c742e7bc",
+    "5c7991475cc97536c742e7bd",
+    "5c7991475cc97536c742e7be",
+    "5c7991475cc97536c742e7bf",
+    "5c7991475cc97536c742e7c0",
+    "5c7991475cc97536c742e7c1",
+    "5c7991475cc97536c742e7c2",
+    "5c7991475cc97536c742e7c3",
+    "5c7991475cc97536c742e7c4",
+    "5c7991475cc97536c742e7c5",
+    "5c7991475cc97536c742e7c6",
+    "5c7991475cc97536c742e7c7",
+    "5c7991475cc97536c742e7c8",
+    "5c7991475cc97536c742e7c9",
+    "5c7991475cc97536c742e7ca",
+    "5c7991475cc97536c742e7cb"
   ]
 }

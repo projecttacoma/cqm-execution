@@ -7095,10 +7095,12 @@
           "statement_name": "IP Encounters",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization Length of Stay"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -7108,6 +7110,7 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "IP Encounters"
             }
@@ -7117,6 +7120,7 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "Initial Population"
             }
@@ -7126,6 +7130,7 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "Initial Population"
             }
@@ -7135,6 +7140,7 @@
           "statement_name": "FirstPhysicalExam",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "IP Encounters"
             }
@@ -7144,6 +7150,7 @@
           "statement_name": "FirstPhysicalExamWithLabTiming",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "IP Encounters"
             }
@@ -7153,6 +7160,7 @@
           "statement_name": "FirstLabTest",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "IP Encounters"
             }
@@ -7162,54 +7170,67 @@
           "statement_name": "Results",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstPhysicalExam"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstPhysicalExam"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstPhysicalExam"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstPhysicalExam"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstPhysicalExam"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstPhysicalExamWithLabTiming"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstLabTest"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstLabTest"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstLabTest"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstLabTest"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstLabTest"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstLabTest"
             },
             {
+              "hqmf_id": null,
               "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
               "statement_name": "FirstLabTest"
             }
@@ -15883,10 +15904,12 @@
           "statement_name": "Hospitalization Length of Stay",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "LengthInDays"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization"
             }
@@ -15902,6 +15925,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -16566,14 +16590,17 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENOM": {
+          "hqmf_id": "B4C75BE6-6F53-42E3-9C63-13AB374685DE",
           "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "33719872-9241-4DF9-BF73-D7BDE6D44929",
           "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
           "statement_name": "IP Encounters"
         },
         "NUMER": {
+          "hqmf_id": "ADE8C6B6-A77C-49E1-BB2A-728A5AA7BB06",
           "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
           "statement_name": "Numerator"
         },
@@ -16581,6 +16608,7 @@
       },
       "supplemental_data_elements": [
         {
+          "hqmf_id": null,
           "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
           "statement_name": "Results"
         }
@@ -16804,26 +16832,26 @@
   "title": "Core Clinical Data Elements for the Hybrid Hospital-Wide Readmission (HWR) Measure with Claims and Electronic Health Record Data",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f22a9ef33a519d1a48498",
-    "5c4f22a9ef33a519d1a48499",
-    "5c4f22a9ef33a519d1a4849a",
-    "5c4f22a9ef33a519d1a4849b",
-    "5c4f22a9ef33a519d1a4849c",
-    "5c4f22a9ef33a519d1a4849d",
-    "5c4f22a9ef33a519d1a4849e",
-    "5c4f22a9ef33a519d1a4849f",
-    "5c4f22a9ef33a519d1a484a0",
-    "5c4f22a9ef33a519d1a484a1",
-    "5c4f22a9ef33a519d1a484a2",
-    "5c4f22a9ef33a519d1a484a3",
-    "5c4f22a9ef33a519d1a484a4",
-    "5c4f22a9ef33a519d1a484a5",
-    "5c4f22a9ef33a519d1a484a6",
-    "5c4f22a9ef33a519d1a484a7",
-    "5c4f22a9ef33a519d1a484a8",
-    "5c4f22a9ef33a519d1a484a9",
-    "5c4f22a9ef33a519d1a484aa",
-    "5c4f22a9ef33a519d1a484ab",
-    "5c4f22a9ef33a519d1a484ac"
+    "5c7991795cc9753836a9ac95",
+    "5c7991795cc9753836a9ac96",
+    "5c7991795cc9753836a9ac97",
+    "5c7991795cc9753836a9ac98",
+    "5c7991795cc9753836a9ac99",
+    "5c7991795cc9753836a9ac9a",
+    "5c7991795cc9753836a9ac9b",
+    "5c7991795cc9753836a9ac9c",
+    "5c7991795cc9753836a9ac9d",
+    "5c7991795cc9753836a9ac9e",
+    "5c7991795cc9753836a9ac9f",
+    "5c7991795cc9753836a9aca0",
+    "5c7991795cc9753836a9aca1",
+    "5c7991795cc9753836a9aca2",
+    "5c7991795cc9753836a9aca3",
+    "5c7991795cc9753836a9aca4",
+    "5c7991795cc9753836a9aca5",
+    "5c7991795cc9753836a9aca6",
+    "5c7991795cc9753836a9aca7",
+    "5c7991795cc9753836a9aca8",
+    "5c7991795cc9753836a9aca9"
   ]
 }

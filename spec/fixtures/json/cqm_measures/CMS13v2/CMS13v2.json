@@ -4327,14 +4327,17 @@
           "statement_name": "Comfort Measures during Hospitalization",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis of Ischemic Stroke"
             },
             {
+              "hqmf_id": null,
               "library_name": "Test104",
               "statement_name": "Intervention Comfort Measures"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization"
             }
@@ -4344,6 +4347,7 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis of Ischemic Stroke"
             }
@@ -4353,10 +4357,12 @@
           "statement_name": "Denominator Exceptions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis of Ischemic Stroke"
             },
             {
+              "hqmf_id": null,
               "library_name": "Test104",
               "statement_name": "Antithrombotic Not Given at Discharge"
             }
@@ -4366,10 +4372,12 @@
           "statement_name": "Denominator Exclusions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis of Ischemic Stroke"
             },
             {
+              "hqmf_id": null,
               "library_name": "Test104",
               "statement_name": "Comfort Measures during Hospitalization"
             }
@@ -4379,6 +4387,7 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis and Age"
             }
@@ -4388,10 +4397,12 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis of Ischemic Stroke"
             },
             {
+              "hqmf_id": null,
               "library_name": "Test104",
               "statement_name": "Antithrombotic Therapy at Discharge"
             }
@@ -7945,6 +7956,7 @@
           "statement_name": "Encounter with Principal Diagnosis of Ischemic Stroke",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis and Age"
             }
@@ -7954,10 +7966,12 @@
           "statement_name": "Encounter with Principal Diagnosis and Age",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis of Hemorrhagic or Ischemic Stroke"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -7967,6 +7981,7 @@
           "statement_name": "Encounter with Principal Diagnosis of Hemorrhagic or Ischemic Stroke",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Non Elective Inpatient Encounter"
             }
@@ -12041,6 +12056,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -12958,25 +12974,30 @@
   },
   "population_sets": [
     {
-      "id": "PopulationCriteria1",
+      "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "F422F037-B79B-4BAE-A81E-D2398DFEE479",
           "library_name": "Test104",
           "statement_name": "Denominator Exclusions"
         },
         "DENEXCEP": {
+          "hqmf_id": "83F6613E-3B28-4ED2-8261-FCA17A6FE055",
           "library_name": "Test104",
           "statement_name": "Denominator Exceptions"
         },
         "DENOM": {
+          "hqmf_id": "53675D1E-CEA8-49EE-A5BC-98BA1FA2EBDB",
           "library_name": "Test104",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "37E39C61-6AA1-43EB-B6C7-CAB240B113A6",
           "library_name": "Test104",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "6B816917-46C3-4439-A762-5539ADC1921D",
           "library_name": "Test104",
           "statement_name": "Numerator"
         },
@@ -13290,176 +13311,27 @@
   "title": "Test104",
   "updated_at": null,
   "value_set_ids": [
-    "5c350d5a5cc975f2c38bf129",
-    "5c350d5a5cc975f2c38bf12a",
-    "5c350d5a5cc975f2c38bf12b",
-    "5c350d5a5cc975f2c38bf12c",
-    "5c350d5a5cc975f2c38bf12d",
-    "5c350d5a5cc975f2c38bf12e",
-    "5c350d5a5cc975f2c38bf12f",
-    "5c350d5a5cc975f2c38bf130",
-    "5c350d5a5cc975f2c38bf131",
-    "5c350d5a5cc975f2c38bf132",
-    "5c350d5a5cc975f2c38bf133",
-    "5c350d5a5cc975f2c38bf134",
-    "5c350d5a5cc975f2c38bf135",
-    "5c350d5a5cc975f2c38bf136",
-    "5c350d5a5cc975f2c38bf137",
-    "5c350d5a5cc975f2c38bf138",
-    "5c350d5a5cc975f2c38bf139",
-    "5c350d5a5cc975f2c38bf13a",
-    "5c350d5a5cc975f2c38bf13b",
-    "5c350d5a5cc975f2c38bf13c",
-    "5c350d5a5cc975f2c38bf13d",
-    "5c350d5a5cc975f2c38bf13e",
-    "5c350d5a5cc975f2c38bf13f",
-    "5c350d5a5cc975f2c38bf140",
-    "5c350d5a5cc975f2c38bf141",
-    "5c350d5a5cc975f2c38bf142",
-    "5c350d5a5cc975f2c38bf143",
-    "5c350d5a5cc975f2c38bf144",
-    "5c350d5a5cc975f2c38bf145",
-    "5c350d5a5cc975f2c38bf146",
-    "5c350d5a5cc975f2c38bf147",
-    "5c350d5a5cc975f2c38bf148",
-    "5c350d5a5cc975f2c38bf149",
-    "5c350d5a5cc975f2c38bf14a",
-    "5c350d5a5cc975f2c38bf14b",
-    "5c350d5a5cc975f2c38bf14c",
-    "5c350d5a5cc975f2c38bf14d",
-    "5c350d5a5cc975f2c38bf14e",
-    "5c350d5a5cc975f2c38bf14f",
-    "5c350d5a5cc975f2c38bf150",
-    "5c350d5a5cc975f2c38bf151",
-    "5c350d5a5cc975f2c38bf152",
-    "5c350d5a5cc975f2c38bf153",
-    "5c350d5a5cc975f2c38bf154",
-    "5c350d5a5cc975f2c38bf155",
-    "5c350d5a5cc975f2c38bf156",
-    "5c350d5a5cc975f2c38bf157",
-    "5c350d5a5cc975f2c38bf158",
-    "5c350d5a5cc975f2c38bf159",
-    "5c350d5a5cc975f2c38bf15a",
-    "5c350d5a5cc975f2c38bf15b",
-    "5c350d5a5cc975f2c38bf15c",
-    "5c350d5a5cc975f2c38bf15d",
-    "5c350d5a5cc975f2c38bf15e",
-    "5c350d5a5cc975f2c38bf15f",
-    "5c350d5a5cc975f2c38bf160",
-    "5c350d5a5cc975f2c38bf161",
-    "5c350d5a5cc975f2c38bf162",
-    "5c350d5a5cc975f2c38bf163",
-    "5c350d5a5cc975f2c38bf164",
-    "5c350d5a5cc975f2c38bf165",
-    "5c350d5a5cc975f2c38bf166",
-    "5c350d5a5cc975f2c38bf167",
-    "5c350d5a5cc975f2c38bf168",
-    "5c350d5a5cc975f2c38bf169",
-    "5c350d5a5cc975f2c38bf16a",
-    "5c350d5a5cc975f2c38bf16b",
-    "5c350d5a5cc975f2c38bf16c",
-    "5c350d5a5cc975f2c38bf16d",
-    "5c350d5a5cc975f2c38bf16e",
-    "5c350d5a5cc975f2c38bf16f",
-    "5c350d5a5cc975f2c38bf170",
-    "5c350d5a5cc975f2c38bf171",
-    "5c350d5a5cc975f2c38bf172",
-    "5c350d5a5cc975f2c38bf173",
-    "5c350d5a5cc975f2c38bf174",
-    "5c350d5a5cc975f2c38bf175",
-    "5c350d5a5cc975f2c38bf176",
-    "5c350d5a5cc975f2c38bf177",
-    "5c350d5a5cc975f2c38bf178",
-    "5c350d5a5cc975f2c38bf179",
-    "5c350d5a5cc975f2c38bf17a",
-    "5c350d5a5cc975f2c38bf17b",
-    "5c350d5a5cc975f2c38bf17c",
-    "5c350d5a5cc975f2c38bf17d",
-    "5c350d5a5cc975f2c38bf17e",
-    "5c350d5a5cc975f2c38bf17f",
-    "5c350d5a5cc975f2c38bf180",
-    "5c350d5a5cc975f2c38bf181",
-    "5c350d5a5cc975f2c38bf182",
-    "5c350d5a5cc975f2c38bf183",
-    "5c350d5a5cc975f2c38bf184",
-    "5c350d5a5cc975f2c38bf185",
-    "5c350d5a5cc975f2c38bf186",
-    "5c350d5a5cc975f2c38bf187",
-    "5c350d5a5cc975f2c38bf188",
-    "5c350d5a5cc975f2c38bf189",
-    "5c350d5a5cc975f2c38bf18a",
-    "5c350d5a5cc975f2c38bf18b",
-    "5c350d5a5cc975f2c38bf18c",
-    "5c350d5a5cc975f2c38bf18d",
-    "5c350d5a5cc975f2c38bf18e",
-    "5c350d5a5cc975f2c38bf18f",
-    "5c350d5a5cc975f2c38bf190",
-    "5c350d5a5cc975f2c38bf191",
-    "5c350d5a5cc975f2c38bf192",
-    "5c350d5a5cc975f2c38bf193",
-    "5c350d5a5cc975f2c38bf194",
-    "5c350d5a5cc975f2c38bf195",
-    "5c350d5a5cc975f2c38bf196",
-    "5c350d5a5cc975f2c38bf197",
-    "5c350d5a5cc975f2c38bf198",
-    "5c350d5a5cc975f2c38bf199",
-    "5c350d5a5cc975f2c38bf19a",
-    "5c350d5a5cc975f2c38bf19b",
-    "5c350d5a5cc975f2c38bf19c",
-    "5c350d5a5cc975f2c38bf19d",
-    "5c350d5a5cc975f2c38bf19e",
-    "5c350d5a5cc975f2c38bf19f",
-    "5c350d5a5cc975f2c38bf1a0",
-    "5c350d5a5cc975f2c38bf1a1",
-    "5c350d5a5cc975f2c38bf1a2",
-    "5c350d5a5cc975f2c38bf1a3",
-    "5c350d5a5cc975f2c38bf1a4",
-    "5c350d5a5cc975f2c38bf1a5",
-    "5c350d5a5cc975f2c38bf1a6",
-    "5c350d5a5cc975f2c38bf1a7",
-    "5c350d5a5cc975f2c38bf1a8",
-    "5c350d5a5cc975f2c38bf1a9",
-    "5c350d5a5cc975f2c38bf1aa",
-    "5c350d5a5cc975f2c38bf1ab",
-    "5c350d5a5cc975f2c38bf1ac",
-    "5c350d5a5cc975f2c38bf1ad",
-    "5c350d5a5cc975f2c38bf1ae",
-    "5c350d5a5cc975f2c38bf1af",
-    "5c350d5a5cc975f2c38bf1b0",
-    "5c350d5a5cc975f2c38bf1b1",
-    "5c350d5a5cc975f2c38bf1b2",
-    "5c350d5a5cc975f2c38bf1b3",
-    "5c350d5a5cc975f2c38bf1b4",
-    "5c350d5a5cc975f2c38bf1b5",
-    "5c350d5a5cc975f2c38bf1b6",
-    "5c350d5a5cc975f2c38bf1b7",
-    "5c350d5a5cc975f2c38bf1b8",
-    "5c350d5a5cc975f2c38bf1b9",
-    "5c350d5a5cc975f2c38bf1ba",
-    "5c350d5a5cc975f2c38bf1bb",
-    "5c350d5a5cc975f2c38bf1bc",
-    "5c350d5a5cc975f2c38bf1bd",
-    "5c350d5a5cc975f2c38bf1be",
-    "5c350d5a5cc975f2c38bf1bf",
-    "5c350d5a5cc975f2c38bf1c0",
-    "5c350d5a5cc975f2c38bf1c1",
-    "5c350d5a5cc975f2c38bf1c2",
-    "5c350d5a5cc975f2c38bf1c3",
-    "5c350d5a5cc975f2c38bf1c4",
-    "5c350d5a5cc975f2c38bf1c5",
-    "5c350d5a5cc975f2c38bf1c6",
-    "5c350d5a5cc975f2c38bf1c7",
-    "5c350d5a5cc975f2c38bf1c8",
-    "5c350d5a5cc975f2c38bf1c9",
-    "5c350d5a5cc975f2c38bf1ca",
-    "5c350d5a5cc975f2c38bf1cb",
-    "5c350d5a5cc975f2c38bf1cc",
-    "5c350d5a5cc975f2c38bf1cd",
-    "5c350d5a5cc975f2c38bf1ce",
-    "5c350d5a5cc975f2c38bf1cf",
-    "5c350d5a5cc975f2c38bf1d0",
-    "5c350d5a5cc975f2c38bf1d1",
-    "5c350d5a5cc975f2c38bf1d2",
-    "5c350d5a5cc975f2c38bf1d3"
+    "5c7991555cc9753739543017",
+    "5c7991555cc9753739543018",
+    "5c7991555cc9753739543019",
+    "5c7991555cc975373954301a",
+    "5c7991555cc975373954301b",
+    "5c7991555cc975373954301c",
+    "5c7991555cc975373954301d",
+    "5c7991555cc975373954301e",
+    "5c7991555cc975373954301f",
+    "5c7991555cc9753739543020",
+    "5c7991555cc9753739543021",
+    "5c7991555cc9753739543022",
+    "5c7991555cc9753739543023",
+    "5c7991555cc9753739543024",
+    "5c7991555cc9753739543025",
+    "5c7991555cc9753739543026",
+    "5c7991555cc9753739543027",
+    "5c7991555cc9753739543028",
+    "5c7991555cc9753739543029",
+    "5c7991555cc975373954302a",
+    "5c7991555cc975373954302b",
+    "5c7991555cc975373954302c"
   ]
 }

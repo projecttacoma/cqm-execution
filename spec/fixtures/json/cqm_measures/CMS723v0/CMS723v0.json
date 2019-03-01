@@ -7287,10 +7287,12 @@
           "statement_name": "Encounter with Principal Diagnosis and Age",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Non Elective Inpatient Encounter"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -7300,6 +7302,7 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Encounter with Principal Diagnosis and Age"
             }
@@ -7309,6 +7312,7 @@
           "statement_name": "Encounter with Principle Diagnosis of Ischemic Stroke",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Encounter with Principal Diagnosis and Age"
             }
@@ -7318,6 +7322,7 @@
           "statement_name": "Encounter with Atrial Ablation Procedure",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Encounter with Principle Diagnosis of Ischemic Stroke"
             }
@@ -7327,6 +7332,7 @@
           "statement_name": "Current Diagnosis Atrial FibrillationFlutter",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Encounter with Principle Diagnosis of Ischemic Stroke"
             }
@@ -7336,6 +7342,7 @@
           "statement_name": "History of Atrial FibrillationFlutter",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Encounter with Principle Diagnosis of Ischemic Stroke"
             }
@@ -7345,14 +7352,17 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Encounter with Atrial Ablation Procedure"
             },
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "History of Atrial FibrillationFlutter"
             },
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Current Diagnosis Atrial FibrillationFlutter"
             }
@@ -7365,10 +7375,12 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Denominator"
             },
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Anticoagulant Therapy at Discharge"
             }
@@ -7381,10 +7393,12 @@
           "statement_name": "Denominator Exceptions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Denominator"
             },
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Anticoagulant Not Given at Discharge"
             }
@@ -7397,14 +7411,17 @@
           "statement_name": "Comfort Measures during Hospitalization",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Denominator"
             },
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Intervention Comfort Measures"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization"
             }
@@ -7414,10 +7431,12 @@
           "statement_name": "Denominator Exclusions1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Denominator"
             },
             {
+              "hqmf_id": null,
               "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
               "statement_name": "Comfort Measures during Hospitalization"
             }
@@ -11086,6 +11105,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -11978,25 +11998,30 @@
   },
   "population_sets": [
     {
-      "id": "PopulationCriteria1",
+      "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "E07B6982-75C9-4FB1-804D-1B1B58C368BD",
           "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
           "statement_name": "Denominator Exclusions1"
         },
         "DENEXCEP": {
+          "hqmf_id": "FBEF99C5-E341-4787-A5BF-7CE998479227",
           "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
           "statement_name": "Denominator Exceptions"
         },
         "DENOM": {
+          "hqmf_id": "6D2B4FB4-927B-4A06-AABD-5A8292456B13",
           "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "01B24ECE-AFD8-455A-8BD6-5A25E8140E29",
           "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "6BB70950-043A-42EC-BE2F-220B07DD032B",
           "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
           "statement_name": "Numerator"
         },
@@ -12333,154 +12358,16 @@
   "title": "Anticoagulation Therapy for Atrial Fibrillation/Flutter",
   "updated_at": null,
   "value_set_ids": [
-    "5c350dae5cc975f4e8825d5e",
-    "5c350dae5cc975f4e8825d5f",
-    "5c350dae5cc975f4e8825d60",
-    "5c350dae5cc975f4e8825d61",
-    "5c350dae5cc975f4e8825d62",
-    "5c350dae5cc975f4e8825d63",
-    "5c350dae5cc975f4e8825d64",
-    "5c350dae5cc975f4e8825d65",
-    "5c350dae5cc975f4e8825d66",
-    "5c350dae5cc975f4e8825d67",
-    "5c350dae5cc975f4e8825d68",
-    "5c350dae5cc975f4e8825d69",
-    "5c350dae5cc975f4e8825d6a",
-    "5c350dae5cc975f4e8825d6b",
-    "5c350dae5cc975f4e8825d6c",
-    "5c350dae5cc975f4e8825d6d",
-    "5c350dae5cc975f4e8825d6e",
-    "5c350dae5cc975f4e8825d6f",
-    "5c350dae5cc975f4e8825d70",
-    "5c350dae5cc975f4e8825d71",
-    "5c350dae5cc975f4e8825d72",
-    "5c350dae5cc975f4e8825d73",
-    "5c350dae5cc975f4e8825d74",
-    "5c350dae5cc975f4e8825d75",
-    "5c350dae5cc975f4e8825d76",
-    "5c350dae5cc975f4e8825d77",
-    "5c350dae5cc975f4e8825d78",
-    "5c350dae5cc975f4e8825d79",
-    "5c350dae5cc975f4e8825d7a",
-    "5c350dae5cc975f4e8825d7b",
-    "5c350dae5cc975f4e8825d7c",
-    "5c350dae5cc975f4e8825d7d",
-    "5c350dae5cc975f4e8825d7e",
-    "5c350dae5cc975f4e8825d7f",
-    "5c350dae5cc975f4e8825d80",
-    "5c350dae5cc975f4e8825d81",
-    "5c350dae5cc975f4e8825d82",
-    "5c350dae5cc975f4e8825d83",
-    "5c350dae5cc975f4e8825d84",
-    "5c350dae5cc975f4e8825d85",
-    "5c350dae5cc975f4e8825d86",
-    "5c350dae5cc975f4e8825d87",
-    "5c350dae5cc975f4e8825d88",
-    "5c350dae5cc975f4e8825d89",
-    "5c350dae5cc975f4e8825d8a",
-    "5c350dae5cc975f4e8825d8b",
-    "5c350dae5cc975f4e8825d8c",
-    "5c350dae5cc975f4e8825d8d",
-    "5c350dae5cc975f4e8825d8e",
-    "5c350dae5cc975f4e8825d8f",
-    "5c350dae5cc975f4e8825d90",
-    "5c350dae5cc975f4e8825d91",
-    "5c350dae5cc975f4e8825d92",
-    "5c350dae5cc975f4e8825d93",
-    "5c350dae5cc975f4e8825d94",
-    "5c350dae5cc975f4e8825d95",
-    "5c350dae5cc975f4e8825d96",
-    "5c350dae5cc975f4e8825d97",
-    "5c350dae5cc975f4e8825d98",
-    "5c350dae5cc975f4e8825d99",
-    "5c350dae5cc975f4e8825d9a",
-    "5c350dae5cc975f4e8825d9b",
-    "5c350dae5cc975f4e8825d9c",
-    "5c350dae5cc975f4e8825d9d",
-    "5c350dae5cc975f4e8825d9e",
-    "5c350dae5cc975f4e8825d9f",
-    "5c350dae5cc975f4e8825da0",
-    "5c350dae5cc975f4e8825da1",
-    "5c350dae5cc975f4e8825da2",
-    "5c350dae5cc975f4e8825da3",
-    "5c350dae5cc975f4e8825da4",
-    "5c350dae5cc975f4e8825da5",
-    "5c350dae5cc975f4e8825da6",
-    "5c350dae5cc975f4e8825da7",
-    "5c350dae5cc975f4e8825da8",
-    "5c350dae5cc975f4e8825da9",
-    "5c350dae5cc975f4e8825daa",
-    "5c350dae5cc975f4e8825dab",
-    "5c350dae5cc975f4e8825dac",
-    "5c350dae5cc975f4e8825dad",
-    "5c350dae5cc975f4e8825dae",
-    "5c350dae5cc975f4e8825daf",
-    "5c350dae5cc975f4e8825db0",
-    "5c350dae5cc975f4e8825db1",
-    "5c350dae5cc975f4e8825db2",
-    "5c350dae5cc975f4e8825db3",
-    "5c350dae5cc975f4e8825db4",
-    "5c350dae5cc975f4e8825db5",
-    "5c350dae5cc975f4e8825db6",
-    "5c350dae5cc975f4e8825db7",
-    "5c350dae5cc975f4e8825db8",
-    "5c350dae5cc975f4e8825db9",
-    "5c350dae5cc975f4e8825dba",
-    "5c350dae5cc975f4e8825dbb",
-    "5c350dae5cc975f4e8825dbc",
-    "5c350dae5cc975f4e8825dbd",
-    "5c350dae5cc975f4e8825dbe",
-    "5c350dae5cc975f4e8825dbf",
-    "5c350dae5cc975f4e8825dc0",
-    "5c350dae5cc975f4e8825dc1",
-    "5c350dae5cc975f4e8825dc2",
-    "5c350dae5cc975f4e8825dc3",
-    "5c350dae5cc975f4e8825dc4",
-    "5c350dae5cc975f4e8825dc5",
-    "5c350dae5cc975f4e8825dc6",
-    "5c350dae5cc975f4e8825dc7",
-    "5c350dae5cc975f4e8825dc8",
-    "5c350dae5cc975f4e8825dc9",
-    "5c350dae5cc975f4e8825dca",
-    "5c350dae5cc975f4e8825dcb",
-    "5c350dae5cc975f4e8825dcc",
-    "5c350dae5cc975f4e8825dcd",
-    "5c350dae5cc975f4e8825dce",
-    "5c350dae5cc975f4e8825dcf",
-    "5c350dae5cc975f4e8825dd0",
-    "5c350dae5cc975f4e8825dd1",
-    "5c350dae5cc975f4e8825dd2",
-    "5c350dae5cc975f4e8825dd3",
-    "5c350dae5cc975f4e8825dd4",
-    "5c350dae5cc975f4e8825dd5",
-    "5c350dae5cc975f4e8825dd6",
-    "5c350dae5cc975f4e8825dd7",
-    "5c350dae5cc975f4e8825dd8",
-    "5c350dae5cc975f4e8825dd9",
-    "5c350dae5cc975f4e8825dda",
-    "5c350dae5cc975f4e8825ddb",
-    "5c350dae5cc975f4e8825ddc",
-    "5c350dae5cc975f4e8825ddd",
-    "5c350dae5cc975f4e8825dde",
-    "5c350dae5cc975f4e8825ddf",
-    "5c350dae5cc975f4e8825de0",
-    "5c350dae5cc975f4e8825de1",
-    "5c350dae5cc975f4e8825de2",
-    "5c350dae5cc975f4e8825de3",
-    "5c350dae5cc975f4e8825de4",
-    "5c350dae5cc975f4e8825de5",
-    "5c350dae5cc975f4e8825de6",
-    "5c350dae5cc975f4e8825de7",
-    "5c350dae5cc975f4e8825de8",
-    "5c350dae5cc975f4e8825de9",
-    "5c350dae5cc975f4e8825dea",
-    "5c350dae5cc975f4e8825deb",
-    "5c350dae5cc975f4e8825dec",
-    "5c350dae5cc975f4e8825ded",
-    "5c350dae5cc975f4e8825dee",
-    "5c350dae5cc975f4e8825def",
-    "5c350dae5cc975f4e8825df0",
-    "5c350dae5cc975f4e8825df1",
-    "5c350dae5cc975f4e8825df2"
+    "5c7991825cc975387ffc2219",
+    "5c7991825cc975387ffc221a",
+    "5c7991825cc975387ffc221b",
+    "5c7991825cc975387ffc221c",
+    "5c7991825cc975387ffc221d",
+    "5c7991825cc975387ffc221e",
+    "5c7991825cc975387ffc221f",
+    "5c7991825cc975387ffc2220",
+    "5c7991825cc975387ffc2221",
+    "5c7991825cc975387ffc2222",
+    "5c7991825cc975387ffc2223"
   ]
 }

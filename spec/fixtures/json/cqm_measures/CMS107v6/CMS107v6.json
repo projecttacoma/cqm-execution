@@ -5892,6 +5892,7 @@
           "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis and Age"
             }
@@ -5904,14 +5905,17 @@
           "statement_name": "Comfort Measures During Hospitalization",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody"
             },
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Intervention Comfort Measures"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization"
             }
@@ -5921,6 +5925,7 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody"
             }
@@ -5930,6 +5935,7 @@
           "statement_name": "Denominator Exclusions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Comfort Measures During Hospitalization"
             }
@@ -5939,6 +5945,7 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis and Age"
             }
@@ -5951,10 +5958,12 @@
           "statement_name": "Written Information Not Done During IP",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody"
             },
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Written Information Not Given"
             }
@@ -5964,30 +5973,37 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody"
             },
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody"
             },
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody"
             },
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody"
             },
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody"
             },
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Encounter With Discharge Status of Discharge To Home Or Police Custody"
             },
             {
+              "hqmf_id": null,
               "library_name": "StrokeEducation",
               "statement_name": "Written Information Not Done During IP"
             }
@@ -9481,10 +9497,12 @@
           "statement_name": "Encounter with Principal Diagnosis and Age",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis of Hemorrhagic or Ischemic Stroke"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -9494,6 +9512,7 @@
           "statement_name": "Encounter with Principal Diagnosis of Hemorrhagic or Ischemic Stroke",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Non Elective Inpatient Encounter"
             }
@@ -13453,6 +13472,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -14377,18 +14397,22 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "07E10C9B-D287-4D42-8CAF-C0CDC11D0E03",
           "library_name": "StrokeEducation",
           "statement_name": "Denominator Exclusions"
         },
         "DENOM": {
+          "hqmf_id": "A846DF34-A272-430E-9CF8-92A62DB02919",
           "library_name": "StrokeEducation",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "2F3544F7-3E8A-4D1A-90A0-D6CCFA13B8A3",
           "library_name": "StrokeEducation",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "F5D72B96-127B-4826-8FED-C9D367441AF5",
           "library_name": "StrokeEducation",
           "statement_name": "Numerator"
         },
@@ -14755,56 +14779,56 @@
   "title": "Stroke Education",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f2265ef33a5197459b9b0",
-    "5c4f2265ef33a5197459b9b1",
-    "5c4f2265ef33a5197459b9b2",
-    "5c4f2265ef33a5197459b9b3",
-    "5c4f2265ef33a5197459b9b4",
-    "5c4f2265ef33a5197459b9b5",
-    "5c4f2265ef33a5197459b9b6",
-    "5c4f2265ef33a5197459b9b7",
-    "5c4f2265ef33a5197459b9b8",
-    "5c4f2265ef33a5197459b9b9",
-    "5c4f2265ef33a5197459b9ba",
-    "5c4f2265ef33a5197459b9bb",
-    "5c4f2265ef33a5197459b9bc",
-    "5c4f2265ef33a5197459b9bd",
-    "5c4f2265ef33a5197459b9be",
-    "5c4f2265ef33a5197459b9bf",
-    "5c4f2265ef33a5197459b9c0",
-    "5c4f2265ef33a5197459b9c1",
-    "5c4f2265ef33a5197459b9c2",
-    "5c4f2265ef33a5197459b9c3",
-    "5c4f2265ef33a5197459b9c4",
-    "5c4f2265ef33a5197459b9c5",
-    "5c4f2265ef33a5197459b9c6",
-    "5c4f2265ef33a5197459b9c7",
-    "5c4f2265ef33a5197459b9c8",
-    "5c4f2265ef33a5197459b9c9",
-    "5c4f2265ef33a5197459b9ca",
-    "5c4f2265ef33a5197459b9cb",
-    "5c4f2265ef33a5197459b9cc",
-    "5c4f2265ef33a5197459b9cd",
-    "5c4f2265ef33a5197459b9ce",
-    "5c4f2265ef33a5197459b9cf",
-    "5c4f2265ef33a5197459b9d0",
-    "5c4f2265ef33a5197459b9d1",
-    "5c4f2265ef33a5197459b9d2",
-    "5c4f2265ef33a5197459b9d3",
-    "5c4f2265ef33a5197459b9d4",
-    "5c4f2265ef33a5197459b9d5",
-    "5c4f2265ef33a5197459b9d6",
-    "5c4f2265ef33a5197459b9d7",
-    "5c4f2265ef33a5197459b9d8",
-    "5c4f2265ef33a5197459b9d9",
-    "5c4f2265ef33a5197459b9da",
-    "5c4f2265ef33a5197459b9db",
-    "5c4f2265ef33a5197459b9dc",
-    "5c4f2265ef33a5197459b9dd",
-    "5c4f2265ef33a5197459b9de",
-    "5c4f2265ef33a5197459b9df",
-    "5c4f2265ef33a5197459b9e0",
-    "5c4f2265ef33a5197459b9e1",
-    "5c4f2265ef33a5197459b9e2"
+    "5c7991365cc9753654258292",
+    "5c7991365cc9753654258293",
+    "5c7991365cc9753654258294",
+    "5c7991365cc9753654258295",
+    "5c7991365cc9753654258296",
+    "5c7991365cc9753654258297",
+    "5c7991365cc9753654258298",
+    "5c7991365cc9753654258299",
+    "5c7991365cc975365425829a",
+    "5c7991365cc975365425829b",
+    "5c7991365cc975365425829c",
+    "5c7991365cc975365425829d",
+    "5c7991365cc975365425829e",
+    "5c7991365cc975365425829f",
+    "5c7991365cc97536542582a0",
+    "5c7991365cc97536542582a1",
+    "5c7991365cc97536542582a2",
+    "5c7991365cc97536542582a3",
+    "5c7991365cc97536542582a4",
+    "5c7991365cc97536542582a5",
+    "5c7991365cc97536542582a6",
+    "5c7991365cc97536542582a7",
+    "5c7991365cc97536542582a8",
+    "5c7991365cc97536542582a9",
+    "5c7991365cc97536542582aa",
+    "5c7991365cc97536542582ab",
+    "5c7991365cc97536542582ac",
+    "5c7991365cc97536542582ad",
+    "5c7991365cc97536542582ae",
+    "5c7991365cc97536542582af",
+    "5c7991365cc97536542582b0",
+    "5c7991365cc97536542582b1",
+    "5c7991365cc97536542582b2",
+    "5c7991365cc97536542582b3",
+    "5c7991365cc97536542582b4",
+    "5c7991365cc97536542582b5",
+    "5c7991365cc97536542582b6",
+    "5c7991365cc97536542582b7",
+    "5c7991365cc97536542582b8",
+    "5c7991365cc97536542582b9",
+    "5c7991365cc97536542582ba",
+    "5c7991365cc97536542582bb",
+    "5c7991365cc97536542582bc",
+    "5c7991365cc97536542582bd",
+    "5c7991365cc97536542582be",
+    "5c7991365cc97536542582bf",
+    "5c7991365cc97536542582c0",
+    "5c7991365cc97536542582c1",
+    "5c7991365cc97536542582c2",
+    "5c7991365cc97536542582c3",
+    "5c7991365cc97536542582c4"
   ]
 }
