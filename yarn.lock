@@ -249,7 +249,7 @@ core-util-is@~1.0.0:
 
 "cqm-models@https://github.com/projecttacoma/cqm-models.git#no_coded_uncertainty":
   version "1.0.2"
-  resolved "https://github.com/projecttacoma/cqm-models.git#ca83738c74d85c5e8e4af4a9d27077cec42aec8b"
+  resolved "https://github.com/projecttacoma/cqm-models.git#0aeb882a068ce6cb739e1d73fa86503505bb528e"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution.git#no_coded_uncertainty"
     mongoose "^5.0.7"
@@ -271,6 +271,7 @@ debug@2.6.9, debug@^2.6.8, debug@^2.6.9:
 debug@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
   dependencies:
     ms "2.0.0"
 
@@ -1185,6 +1186,7 @@ rx-lite@*, rx-lite@^4.0.8:
 safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
+  integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
 
 "safer-buffer@>= 2.1.2 < 3":
   version "2.1.2"
