@@ -249,7 +249,7 @@ core-util-is@~1.0.0:
 
 "cqm-models@https://github.com/projecttacoma/cqm-models.git#no_coded_uncertainty":
   version "1.0.2"
-  resolved "https://github.com/projecttacoma/cqm-models.git#7b7b21b2173beb993df030b071dd8b22d0bb9497"
+  resolved "https://github.com/projecttacoma/cqm-models.git#a5aab0601eb0d7e5081bfe9bbc1852150452d2d0"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution.git#no_coded_uncertainty"
     mongoose "^5.0.7"
