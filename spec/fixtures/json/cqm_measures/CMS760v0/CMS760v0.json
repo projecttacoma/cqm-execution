@@ -2167,6 +2167,7 @@
           "statement_name": "Medicare Fee",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PD0329",
               "statement_name": "Interesting Encounter"
             }
@@ -2179,6 +2180,7 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PD0329",
               "statement_name": "IntervalWithTZOffsets"
             }
@@ -2188,6 +2190,7 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PD0329",
               "statement_name": "Initial Population"
             }
@@ -2197,6 +2200,7 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PD0329",
               "statement_name": "Medicare Fee"
             }
@@ -2910,14 +2914,17 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENOM": {
+          "hqmf_id": "1920A4B1-D121-4736-814F-0A2D75175063",
           "library_name": "PD0329",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "50BBAAEA-C350-4EFE-8D11-C6D8C39C5DC4",
           "library_name": "PD0329",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "1D461F91-65B6-43F1-B187-BC056C95DD6D",
           "library_name": "PD0329",
           "statement_name": "Numerator"
         },
@@ -3196,11 +3203,11 @@
   "title": "PD0329",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f22bbef33a519f54449bb",
-    "5c4f22bbef33a519f54449bc",
-    "5c4f22bbef33a519f54449bd",
-    "5c4f22bbef33a519f54449be",
-    "5c4f22bbef33a519f54449bf",
-    "5c4f22bbef33a519f54449c0"
+    "5c79918c5cc97538cecbec18",
+    "5c79918c5cc97538cecbec19",
+    "5c79918c5cc97538cecbec1a",
+    "5c79918c5cc97538cecbec1b",
+    "5c79918c5cc97538cecbec1c",
+    "5c79918c5cc97538cecbec1d"
   ]
 }

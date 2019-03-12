@@ -17895,6 +17895,7 @@
           "statement_name": "Depression Office Visit Encounter 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Diagnoses"
             }
@@ -17907,6 +17908,7 @@
           "statement_name": "Depression Face to Face Encounter 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Diagnoses"
             }
@@ -17916,14 +17918,17 @@
           "statement_name": "Initial Population 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Office Visit Encounter 1"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Behavioral Health Encounter 1"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Face to Face Encounter 1"
             }
@@ -17933,6 +17938,7 @@
           "statement_name": "Depression Office Visit Encounter 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Diagnoses"
             }
@@ -17945,6 +17951,7 @@
           "statement_name": "Depression Face to Face Encounter 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Diagnoses"
             }
@@ -17954,14 +17961,17 @@
           "statement_name": "Initial Population 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Office Visit Encounter 2"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Behavioral Health Encounter 2"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Face to Face Encounter 2"
             }
@@ -17971,6 +17981,7 @@
           "statement_name": "Depression Office Visit Encounter 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Diagnoses"
             }
@@ -17983,6 +17994,7 @@
           "statement_name": "Depression Face to Face Encounter 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Diagnoses"
             }
@@ -17992,14 +18004,17 @@
           "statement_name": "Initial Population 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Office Visit Encounter 3"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Behavioral Health Encounter 3"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Depression Face to Face Encounter 3"
             }
@@ -18018,6 +18033,7 @@
           "statement_name": "Denominator 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Initial Population 1"
             }
@@ -18027,6 +18043,7 @@
           "statement_name": "Denominator 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Initial Population 2"
             }
@@ -18036,6 +18053,7 @@
           "statement_name": "Denominator 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Initial Population 3"
             }
@@ -18051,22 +18069,27 @@
           "statement_name": "Denominator Exclusions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Palliative Care Order"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Encounter Palliative Care"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Long Term Care"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Expired"
             },
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Disorder Diagnoses"
             }
@@ -18076,6 +18099,7 @@
           "statement_name": "Denominator Exclusion 1",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Denominator Exclusions"
             }
@@ -18085,6 +18109,7 @@
           "statement_name": "Denominator Exclusion 2",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Denominator Exclusions"
             }
@@ -18094,6 +18119,7 @@
           "statement_name": "Denominator Exclusion 3",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "DepressionUtilizationofthePHQ9Tool",
               "statement_name": "Denominator Exclusions"
             }
@@ -19379,18 +19405,22 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "08821615-9B0E-4C1C-AE75-63807597A68E",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator Exclusion 1"
         },
         "DENOM": {
+          "hqmf_id": "39477C70-44D2-406B-ACB5-3192E14B49B8",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator 1"
         },
         "IPP": {
+          "hqmf_id": "E5CAD3E0-2CF4-4F7D-B0CB-84CEA6BC44AB",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Initial Population 1"
         },
         "NUMER": {
+          "hqmf_id": "4696F818-ED1A-4DEB-BDD4-880722F3165F",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Numerator 1"
         },
@@ -19402,18 +19432,22 @@
       "population_set_id": "PopulationCriteria2",
       "populations": {
         "DENEX": {
+          "hqmf_id": "DC76F105-C17A-4045-B763-E1802225D3A1",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator Exclusion 2"
         },
         "DENOM": {
+          "hqmf_id": "70D8CAA3-4182-41C0-9A73-335396BB6764",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator 2"
         },
         "IPP": {
+          "hqmf_id": "6D6BC9D7-1492-412C-A076-EC0A6DFEFC4C",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Initial Population 2"
         },
         "NUMER": {
+          "hqmf_id": "BB75E2C0-749E-4323-A4DB-35B24FF31CED",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Numerator 2"
         },
@@ -19425,18 +19459,22 @@
       "population_set_id": "PopulationCriteria3",
       "populations": {
         "DENEX": {
+          "hqmf_id": "ECC73292-C204-4458-B9A2-557CC72FFE96",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator Exclusion 3"
         },
         "DENOM": {
+          "hqmf_id": "1EE7E1F6-E10A-4BE0-93C5-EED14D088023",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Denominator 3"
         },
         "IPP": {
+          "hqmf_id": "30F9735A-FDAC-4419-BF46-71CF1968C7D1",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Initial Population 3"
         },
         "NUMER": {
+          "hqmf_id": "4C5B11DD-040D-460D-B6F6-57D440BE7B36",
           "library_name": "DepressionUtilizationofthePHQ9Tool",
           "statement_name": "Numerator 3"
         },
@@ -19817,21 +19855,21 @@
   "title": "Depression Utilization of the PHQ-9 Tool",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f2288ef33a519a5e79fa1",
-    "5c4f2288ef33a519a5e79fa2",
-    "5c4f2288ef33a519a5e79fa3",
-    "5c4f2288ef33a519a5e79fa4",
-    "5c4f2288ef33a519a5e79fa5",
-    "5c4f2288ef33a519a5e79fa6",
-    "5c4f2288ef33a519a5e79fa7",
-    "5c4f2288ef33a519a5e79fa8",
-    "5c4f2288ef33a519a5e79fa9",
-    "5c4f2288ef33a519a5e79faa",
-    "5c4f2288ef33a519a5e79fab",
-    "5c4f2288ef33a519a5e79fac",
-    "5c4f2288ef33a519a5e79fad",
-    "5c4f2288ef33a519a5e79fae",
-    "5c4f2288ef33a519a5e79faf",
-    "5c4f2288ef33a519a5e79fb0"
+    "5c7991595cc97537564f6ba2",
+    "5c7991595cc97537564f6ba3",
+    "5c7991595cc97537564f6ba4",
+    "5c7991595cc97537564f6ba5",
+    "5c7991595cc97537564f6ba6",
+    "5c7991595cc97537564f6ba7",
+    "5c7991595cc97537564f6ba8",
+    "5c7991595cc97537564f6ba9",
+    "5c7991595cc97537564f6baa",
+    "5c7991595cc97537564f6bab",
+    "5c7991595cc97537564f6bac",
+    "5c7991595cc97537564f6bad",
+    "5c7991595cc97537564f6bae",
+    "5c7991595cc97537564f6baf",
+    "5c7991595cc97537564f6bb0",
+    "5c7991595cc97537564f6bb1"
   ]
 }

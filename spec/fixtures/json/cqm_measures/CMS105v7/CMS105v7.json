@@ -4357,6 +4357,7 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Ischemic Stroke Encounter"
             }
@@ -4366,6 +4367,7 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis and Age"
             }
@@ -4375,10 +4377,12 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Ischemic Stroke Encounter"
             },
             {
+              "hqmf_id": null,
               "library_name": "DischargedonStatinMedication",
               "statement_name": "Statin at Discharge"
             }
@@ -4388,10 +4392,12 @@
           "statement_name": "Encounter with Max LDL less than 70 mg per dL",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Ischemic Stroke Encounter"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -4401,10 +4407,12 @@
           "statement_name": "Denominator Exclusions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Ischemic Stroke Encounters with Discharge Status"
             },
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Comfort Measures during Hospitalization"
             }
@@ -4414,22 +4422,27 @@
           "statement_name": "Denominator Exceptions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Ischemic Stroke Encounter"
             },
             {
+              "hqmf_id": null,
               "library_name": "DischargedonStatinMedication",
               "statement_name": "Statin Not Given at Discharge"
             },
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Ischemic Stroke Encounter"
             },
             {
+              "hqmf_id": null,
               "library_name": "DischargedonStatinMedication",
               "statement_name": "Statin Allergy"
             },
             {
+              "hqmf_id": null,
               "library_name": "DischargedonStatinMedication",
               "statement_name": "Encounter with Max LDL less than 70 mg per dL"
             }
@@ -8445,6 +8458,7 @@
           "statement_name": "Ischemic Stroke Encounter",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Encounter with Principal Diagnosis and Age"
             }
@@ -8454,10 +8468,12 @@
           "statement_name": "Encounter with Principal Diagnosis and Age",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "All Stroke Encounter"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -8467,6 +8483,7 @@
           "statement_name": "All Stroke Encounter",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Non Elective Inpatient Encounter"
             }
@@ -8476,6 +8493,7 @@
           "statement_name": "Non Elective Inpatient Encounter",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "LengthInDays"
             }
@@ -8485,6 +8503,7 @@
           "statement_name": "Ischemic Stroke Encounters with Discharge Status",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Ischemic Stroke Encounter"
             }
@@ -8494,14 +8513,17 @@
           "statement_name": "Comfort Measures during Hospitalization",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Ischemic Stroke Encounter"
             },
             {
+              "hqmf_id": null,
               "library_name": "TJC_Overall",
               "statement_name": "Intervention Comfort Measures"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization"
             }
@@ -17181,6 +17203,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -18092,22 +18115,27 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "8F0CCD37-2974-4B86-A15A-9982FCA7DAB2",
           "library_name": "DischargedonStatinMedication",
           "statement_name": "Denominator Exclusions"
         },
         "DENEXCEP": {
+          "hqmf_id": "9C16306F-1ADD-4475-BF09-2DA51F56F160",
           "library_name": "DischargedonStatinMedication",
           "statement_name": "Denominator Exceptions"
         },
         "DENOM": {
+          "hqmf_id": "342426D4-36EE-43DC-A11C-F83C0F3AEE81",
           "library_name": "DischargedonStatinMedication",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "57FE43A4-CBE2-4E94-B271-60D3C4077789",
           "library_name": "DischargedonStatinMedication",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "A1560C0B-DE34-42FA-B2BB-7D0A559A8CB9",
           "library_name": "DischargedonStatinMedication",
           "statement_name": "Numerator"
         },
@@ -18444,28 +18472,28 @@
   "title": "Discharged on Statin Medication",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f2261ef33a5196fa5d8e5",
-    "5c4f2261ef33a5196fa5d8e6",
-    "5c4f2261ef33a5196fa5d8e7",
-    "5c4f2261ef33a5196fa5d8e8",
-    "5c4f2261ef33a5196fa5d8e9",
-    "5c4f2261ef33a5196fa5d8ea",
-    "5c4f2261ef33a5196fa5d8eb",
-    "5c4f2261ef33a5196fa5d8ec",
-    "5c4f2261ef33a5196fa5d8ed",
-    "5c4f2261ef33a5196fa5d8ee",
-    "5c4f2261ef33a5196fa5d8ef",
-    "5c4f2261ef33a5196fa5d8f0",
-    "5c4f2261ef33a5196fa5d8f1",
-    "5c4f2261ef33a5196fa5d8f2",
-    "5c4f2261ef33a5196fa5d8f3",
-    "5c4f2261ef33a5196fa5d8f4",
-    "5c4f2261ef33a5196fa5d8f5",
-    "5c4f2261ef33a5196fa5d8f6",
-    "5c4f2261ef33a5196fa5d8f7",
-    "5c4f2261ef33a5196fa5d8f8",
-    "5c4f2261ef33a5196fa5d8f9",
-    "5c4f2261ef33a5196fa5d8fa",
-    "5c4f2261ef33a5196fa5d8fb"
+    "5c7991315cc975363523150a",
+    "5c7991315cc975363523150b",
+    "5c7991315cc975363523150c",
+    "5c7991315cc975363523150d",
+    "5c7991315cc975363523150e",
+    "5c7991315cc975363523150f",
+    "5c7991315cc9753635231510",
+    "5c7991315cc9753635231511",
+    "5c7991315cc9753635231512",
+    "5c7991315cc9753635231513",
+    "5c7991315cc9753635231514",
+    "5c7991315cc9753635231515",
+    "5c7991315cc9753635231516",
+    "5c7991315cc9753635231517",
+    "5c7991315cc9753635231518",
+    "5c7991315cc9753635231519",
+    "5c7991315cc975363523151a",
+    "5c7991315cc975363523151b",
+    "5c7991315cc975363523151c",
+    "5c7991315cc975363523151d",
+    "5c7991315cc975363523151e",
+    "5c7991315cc975363523151f",
+    "5c7991315cc9753635231520"
   ]
 }

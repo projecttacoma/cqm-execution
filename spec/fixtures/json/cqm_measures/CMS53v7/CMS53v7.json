@@ -8094,6 +8094,7 @@
           "statement_name": "Inpatient Encounters",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "LengthInDays"
             }
@@ -8103,18 +8104,22 @@
           "statement_name": "Procedure Exceptions Within 90 Minutes of Arrival",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Inpatient Encounters"
             },
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Exception Procedures"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             }
@@ -8124,14 +8129,17 @@
           "statement_name": "Diagnosis Exception",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Inpatient Encounters"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization"
             }
@@ -8141,10 +8149,12 @@
           "statement_name": "Denominator Exceptions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Procedure Exceptions Within 90 Minutes of Arrival"
             },
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Diagnosis Exception"
             }
@@ -8163,6 +8173,7 @@
           "statement_name": "AMI Encounter",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "CalendarAgeInYearsAt"
             }
@@ -8172,10 +8183,12 @@
           "statement_name": "Initial Population",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Inpatient Encounters"
             },
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "AMI Encounter"
             }
@@ -8185,46 +8198,57 @@
           "statement_name": "Denominator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Initial Population"
             },
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "PCI Procedure"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             },
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Diagnostic Electrocardiogram"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             },
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Fibrinolytic"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             }
@@ -8234,6 +8258,7 @@
           "statement_name": "Denominator Exclusions",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Denominator"
             }
@@ -8243,18 +8268,22 @@
           "statement_name": "Numerator",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "Initial Population"
             },
             {
+              "hqmf_id": null,
               "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
               "statement_name": "PCI Procedure"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             },
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospital Arrival Time"
             }
@@ -16931,6 +16960,7 @@
           "statement_name": "Hospital Arrival Time",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "Hospitalization Locations"
             }
@@ -16946,6 +16976,7 @@
           "statement_name": "CalendarAgeInYearsAt",
           "statement_references": [
             {
+              "hqmf_id": null,
               "library_name": "MATGlobalCommonFunctions",
               "statement_name": "ToDate"
             }
@@ -17858,22 +17889,27 @@
       "population_set_id": "PopulationCriteria1",
       "populations": {
         "DENEX": {
+          "hqmf_id": "BC6ABA5A-EF35-4ED9-A6FB-2A7B0AB77C2E",
           "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
           "statement_name": "Denominator Exclusions"
         },
         "DENEXCEP": {
+          "hqmf_id": "4698D4AA-4E2E-4910-AB68-1C889690FEBE",
           "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
           "statement_name": "Denominator Exceptions"
         },
         "DENOM": {
+          "hqmf_id": "6E0F1E96-06BA-4BC2-885F-2FB247B41E8B",
           "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
           "statement_name": "Denominator"
         },
         "IPP": {
+          "hqmf_id": "EAF94835-9BC5-467F-B055-40C923D82F7C",
           "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
           "statement_name": "Initial Population"
         },
         "NUMER": {
+          "hqmf_id": "4681B8EB-4083-47AC-A7DE-9102482BACFD",
           "library_name": "PrimaryPCIReceivedWithin90MinutesofHospitalArrival",
           "statement_name": "Numerator"
         },
@@ -18230,26 +18266,26 @@
   "title": "Primary PCI Received Within 90 Minutes of Hospital Arrival",
   "updated_at": null,
   "value_set_ids": [
-    "5c4f22adef33a519ddcbad6e",
-    "5c4f22adef33a519ddcbad6f",
-    "5c4f22adef33a519ddcbad70",
-    "5c4f22adef33a519ddcbad71",
-    "5c4f22adef33a519ddcbad72",
-    "5c4f22adef33a519ddcbad73",
-    "5c4f22adef33a519ddcbad74",
-    "5c4f22adef33a519ddcbad75",
-    "5c4f22adef33a519ddcbad76",
-    "5c4f22adef33a519ddcbad77",
-    "5c4f22adef33a519ddcbad78",
-    "5c4f22adef33a519ddcbad79",
-    "5c4f22adef33a519ddcbad7a",
-    "5c4f22adef33a519ddcbad7b",
-    "5c4f22adef33a519ddcbad7c",
-    "5c4f22adef33a519ddcbad7d",
-    "5c4f22adef33a519ddcbad7e",
-    "5c4f22adef33a519ddcbad7f",
-    "5c4f22adef33a519ddcbad80",
-    "5c4f22adef33a519ddcbad81",
-    "5c4f22adef33a519ddcbad82"
+    "5c79917e5cc975385d71d447",
+    "5c79917e5cc975385d71d448",
+    "5c79917e5cc975385d71d449",
+    "5c79917e5cc975385d71d44a",
+    "5c79917e5cc975385d71d44b",
+    "5c79917e5cc975385d71d44c",
+    "5c79917e5cc975385d71d44d",
+    "5c79917e5cc975385d71d44e",
+    "5c79917e5cc975385d71d44f",
+    "5c79917e5cc975385d71d450",
+    "5c79917e5cc975385d71d451",
+    "5c79917e5cc975385d71d452",
+    "5c79917e5cc975385d71d453",
+    "5c79917e5cc975385d71d454",
+    "5c79917e5cc975385d71d455",
+    "5c79917e5cc975385d71d456",
+    "5c79917e5cc975385d71d457",
+    "5c79917e5cc975385d71d458",
+    "5c79917e5cc975385d71d459",
+    "5c79917e5cc975385d71d45a",
+    "5c79917e5cc975385d71d45b"
   ]
 }
