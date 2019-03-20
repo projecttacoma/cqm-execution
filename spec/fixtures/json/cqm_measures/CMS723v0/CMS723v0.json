@@ -7262,6 +7262,7 @@
         }
       },
       "is_main_library": true,
+      "is_top_level": true,
       "library_name": "AnticoagulationTherapyforAtrialFibrillationFlutter",
       "library_version": "0.0.009",
       "statement_dependencies": [
@@ -11098,6 +11099,7 @@
         }
       },
       "is_main_library": false,
+      "is_top_level": true,
       "library_name": "MATGlobalCommonFunctions",
       "library_version": "1.0.000",
       "statement_dependencies": [
@@ -12358,16 +12360,16 @@
   "title": "Anticoagulation Therapy for Atrial Fibrillation/Flutter",
   "updated_at": null,
   "value_set_ids": [
-    "5c7991825cc975387ffc2219",
-    "5c7991825cc975387ffc221a",
-    "5c7991825cc975387ffc221b",
-    "5c7991825cc975387ffc221c",
-    "5c7991825cc975387ffc221d",
-    "5c7991825cc975387ffc221e",
-    "5c7991825cc975387ffc221f",
-    "5c7991825cc975387ffc2220",
-    "5c7991825cc975387ffc2221",
-    "5c7991825cc975387ffc2222",
-    "5c7991825cc975387ffc2223"
+    "5c92490ea564ac369bbb9097",
+    "5c92490ea564ac369bbb9098",
+    "5c92490ea564ac369bbb9099",
+    "5c92490ea564ac369bbb909a",
+    "5c92490ea564ac369bbb909b",
+    "5c92490ea564ac369bbb909c",
+    "5c92490ea564ac369bbb909d",
+    "5c92490ea564ac369bbb909e",
+    "5c92490ea564ac369bbb909f",
+    "5c92490ea564ac369bbb90a0",
+    "5c92490ea564ac369bbb90a1"
   ]
 }

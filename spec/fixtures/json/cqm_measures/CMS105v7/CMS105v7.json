@@ -4326,6 +4326,7 @@
         }
       },
       "is_main_library": true,
+      "is_top_level": true,
       "library_name": "DischargedonStatinMedication",
       "library_version": "7.1.000",
       "statement_dependencies": [
@@ -8451,6 +8452,7 @@
         }
       },
       "is_main_library": false,
+      "is_top_level": true,
       "library_name": "TJC_Overall",
       "library_version": "1.4.000",
       "statement_dependencies": [
@@ -17193,6 +17195,7 @@
         }
       },
       "is_main_library": false,
+      "is_top_level": true,
       "library_name": "MATGlobalCommonFunctions",
       "library_version": "2.0.000",
       "statement_dependencies": [
@@ -18472,28 +18475,28 @@
   "title": "Discharged on Statin Medication",
   "updated_at": null,
   "value_set_ids": [
-    "5c7991315cc975363523150a",
-    "5c7991315cc975363523150b",
-    "5c7991315cc975363523150c",
-    "5c7991315cc975363523150d",
-    "5c7991315cc975363523150e",
-    "5c7991315cc975363523150f",
-    "5c7991315cc9753635231510",
-    "5c7991315cc9753635231511",
-    "5c7991315cc9753635231512",
-    "5c7991315cc9753635231513",
-    "5c7991315cc9753635231514",
-    "5c7991315cc9753635231515",
-    "5c7991315cc9753635231516",
-    "5c7991315cc9753635231517",
-    "5c7991315cc9753635231518",
-    "5c7991315cc9753635231519",
-    "5c7991315cc975363523151a",
-    "5c7991315cc975363523151b",
-    "5c7991315cc975363523151c",
-    "5c7991315cc975363523151d",
-    "5c7991315cc975363523151e",
-    "5c7991315cc975363523151f",
-    "5c7991315cc9753635231520"
+    "5c9248caa564ac36701930c3",
+    "5c9248caa564ac36701930c4",
+    "5c9248caa564ac36701930c5",
+    "5c9248caa564ac36701930c6",
+    "5c9248caa564ac36701930c7",
+    "5c9248caa564ac36701930c8",
+    "5c9248caa564ac36701930c9",
+    "5c9248caa564ac36701930ca",
+    "5c9248caa564ac36701930cb",
+    "5c9248caa564ac36701930cc",
+    "5c9248caa564ac36701930cd",
+    "5c9248caa564ac36701930ce",
+    "5c9248caa564ac36701930cf",
+    "5c9248caa564ac36701930d0",
+    "5c9248caa564ac36701930d1",
+    "5c9248caa564ac36701930d2",
+    "5c9248caa564ac36701930d3",
+    "5c9248caa564ac36701930d4",
+    "5c9248caa564ac36701930d5",
+    "5c9248caa564ac36701930d6",
+    "5c9248caa564ac36701930d7",
+    "5c9248caa564ac36701930d8",
+    "5c9248caa564ac36701930d9"
   ]
 }

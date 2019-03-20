@@ -3029,6 +3029,7 @@
         }
       },
       "is_main_library": true,
+      "is_top_level": true,
       "library_name": "ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment",
       "library_version": "6.0.002",
       "statement_dependencies": [
@@ -4303,19 +4304,19 @@
   "title": "Child and Adolescent Major Depressive Disorder (MDD): Suicide Risk Assessment",
   "updated_at": null,
   "value_set_ids": [
-    "5c7991625cc975379e97431b",
-    "5c7991625cc975379e97431c",
-    "5c7991625cc975379e97431d",
-    "5c7991625cc975379e97431e",
-    "5c7991625cc975379e97431f",
-    "5c7991625cc975379e974320",
-    "5c7991625cc975379e974321",
-    "5c7991625cc975379e974322",
-    "5c7991625cc975379e974323",
-    "5c7991625cc975379e974324",
-    "5c7991625cc975379e974325",
-    "5c7991625cc975379e974326",
-    "5c7991625cc975379e974327",
-    "5c7991625cc975379e974328"
+    "5c9248f3a564ac368c906a37",
+    "5c9248f3a564ac368c906a38",
+    "5c9248f3a564ac368c906a39",
+    "5c9248f3a564ac368c906a3a",
+    "5c9248f3a564ac368c906a3b",
+    "5c9248f3a564ac368c906a3c",
+    "5c9248f3a564ac368c906a3d",
+    "5c9248f3a564ac368c906a3e",
+    "5c9248f3a564ac368c906a3f",
+    "5c9248f3a564ac368c906a40",
+    "5c9248f3a564ac368c906a41",
+    "5c9248f3a564ac368c906a42",
+    "5c9248f3a564ac368c906a43",
+    "5c9248f3a564ac368c906a44"
   ]
 }

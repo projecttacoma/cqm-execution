@@ -7085,6 +7085,7 @@
         }
       },
       "is_main_library": true,
+      "is_top_level": true,
       "library_name": "CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData",
       "library_version": "0.1.016",
       "statement_dependencies": [
@@ -15897,6 +15898,7 @@
         }
       },
       "is_main_library": false,
+      "is_top_level": true,
       "library_name": "MATGlobalCommonFunctions",
       "library_version": "2.0.000",
       "statement_dependencies": [
@@ -16832,26 +16834,26 @@
   "title": "Core Clinical Data Elements for the Hybrid Hospital-Wide Readmission (HWR) Measure with Claims and Electronic Health Record Data",
   "updated_at": null,
   "value_set_ids": [
-    "5c7991795cc9753836a9ac95",
-    "5c7991795cc9753836a9ac96",
-    "5c7991795cc9753836a9ac97",
-    "5c7991795cc9753836a9ac98",
-    "5c7991795cc9753836a9ac99",
-    "5c7991795cc9753836a9ac9a",
-    "5c7991795cc9753836a9ac9b",
-    "5c7991795cc9753836a9ac9c",
-    "5c7991795cc9753836a9ac9d",
-    "5c7991795cc9753836a9ac9e",
-    "5c7991795cc9753836a9ac9f",
-    "5c7991795cc9753836a9aca0",
-    "5c7991795cc9753836a9aca1",
-    "5c7991795cc9753836a9aca2",
-    "5c7991795cc9753836a9aca3",
-    "5c7991795cc9753836a9aca4",
-    "5c7991795cc9753836a9aca5",
-    "5c7991795cc9753836a9aca6",
-    "5c7991795cc9753836a9aca7",
-    "5c7991795cc9753836a9aca8",
-    "5c7991795cc9753836a9aca9"
+    "5c924907a564ac36953fc55a",
+    "5c924907a564ac36953fc55b",
+    "5c924907a564ac36953fc55c",
+    "5c924907a564ac36953fc55d",
+    "5c924907a564ac36953fc55e",
+    "5c924907a564ac36953fc55f",
+    "5c924907a564ac36953fc560",
+    "5c924907a564ac36953fc561",
+    "5c924907a564ac36953fc562",
+    "5c924907a564ac36953fc563",
+    "5c924907a564ac36953fc564",
+    "5c924907a564ac36953fc565",
+    "5c924907a564ac36953fc566",
+    "5c924907a564ac36953fc567",
+    "5c924907a564ac36953fc568",
+    "5c924907a564ac36953fc569",
+    "5c924907a564ac36953fc56a",
+    "5c924907a564ac36953fc56b",
+    "5c924907a564ac36953fc56c",
+    "5c924907a564ac36953fc56d",
+    "5c924907a564ac36953fc56e"
   ]
 }
