@@ -3465,6 +3465,7 @@
         }
       },
       "is_main_library": true,
+      "is_top_level": true,
       "library_name": "MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients",
       "library_version": "7.2.002",
       "statement_dependencies": [
@@ -4808,14 +4809,14 @@
   "title": "Median Time from ED Arrival to ED Departure for Discharged ED Patients",
   "updated_at": null,
   "value_set_ids": [
-    "5c7991675cc97537bbbb8812",
-    "5c7991675cc97537bbbb8813",
-    "5c7991675cc97537bbbb8814",
-    "5c7991675cc97537bbbb8815",
-    "5c7991675cc97537bbbb8816",
-    "5c7991675cc97537bbbb8817",
-    "5c7991675cc97537bbbb8818",
-    "5c7991675cc97537bbbb8819",
-    "5c7991675cc97537bbbb881a"
+    "5c9248f8a564ac368f1dfc9b",
+    "5c9248f8a564ac368f1dfc9c",
+    "5c9248f8a564ac368f1dfc9d",
+    "5c9248f8a564ac368f1dfc9e",
+    "5c9248f8a564ac368f1dfc9f",
+    "5c9248f8a564ac368f1dfca0",
+    "5c9248f8a564ac368f1dfca1",
+    "5c9248f8a564ac368f1dfca2",
+    "5c9248f8a564ac368f1dfca3"
   ]
 }
