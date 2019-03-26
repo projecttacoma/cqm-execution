@@ -300,9 +300,9 @@ browserify@^16.2.3:
     xtend "^4.0.0"
 
 bson@^1.1.0, bson@~1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/bson/-/bson-1.1.0.tgz#bee57d1fb6a87713471af4e32bcae36de814b5b0"
-  integrity sha512-9Aeai9TacfNtWXOYarkFJRW2CWo+dRon+fuLZYJmvLV3+MiUp0bEI6IAZfXEIg7/Pl/7IWlLaDnhzTsD81etQA==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-1.1.1.tgz#4330f5e99104c4e751e7351859e2d408279f2f13"
+  integrity sha512-jCGVYLoYMHDkOsbwJZBCqwMHyH4c+wzgI9hG7Z6SZJRXWr+x58pdIbm2i9a/jFGCkRJqRUr8eoI7lDWa0hTkxg==
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -448,14 +448,14 @@ core-util-is@~1.0.0:
 
 "cql-execution@https://github.com/cqframework/cql-execution.git":
   version "1.3.2"
-  resolved "https://github.com/cqframework/cql-execution.git#17fb61f4be9b917d5e8ba5cde131d2845bc45d8a"
+  resolved "https://github.com/cqframework/cql-execution.git#adf1649f119de0211fb48ee34eba9b07afaba19d"
   dependencies:
     moment "^2.20.1"
     ucum "0.0.7"
 
 "cqm-models@https://github.com/projecttacoma/cqm-models#master":
   version "1.0.2"
-  resolved "https://github.com/projecttacoma/cqm-models#f980e9052a95dfa30a601e721337ddb87f34334a"
+  resolved "https://github.com/projecttacoma/cqm-models#f73bd0aece7c95e952ea058073b9e3a88a88eeee"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution.git"
     mongoose "^5.4.14"
@@ -1291,9 +1291,9 @@ mongoose-legacy-pluralize@1.0.2:
   integrity sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
 
 mongoose@^5.4.14:
-  version "5.4.14"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.4.14.tgz#8cc074c9990db0a26062a779f461abb91c9c483c"
-  integrity sha512-lAISH4xdx0/o0bVWPB4bxApP3bA1b08oHPEjTBq3/mIr4R494hepDJJowByBgpGYf8tj/oe6VkFCx8wbRcOciA==
+  version "5.4.20"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.4.20.tgz#8bc3720d082f07b535d2693f07ea3c2a7dc918a3"
+  integrity sha512-CyybxMQbCaq6jvbroamS5mPfFbxTOLLpdpkQrk1cj7Az1TX+mBbcCVhz+7XElfTMIOb58ah9O+EXmZJsLPD3Lg==
   dependencies:
     async "2.6.1"
     bson "~1.1.0"
