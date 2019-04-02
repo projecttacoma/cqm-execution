@@ -18697,481 +18697,6 @@
     }
   ],
   "created_at": null,
-  "data_criteria": {
-    "Payer_PatientCharacteristicPayer_028e6363_f1a0_4340_ade5_e8b4d2a93072": {
-      "title": "Payer",
-      "description": "Patient Characteristic Payer: Payer",
-      "code_list_id": "2.16.840.1.114222.4.11.3591",
-      "property": "payer",
-      "type": "characteristic",
-      "definition": "patient_characteristic_payer",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Payer_PatientCharacteristicPayer_028e6363_f1a0_4340_ade5_e8b4d2a93072_source",
-      "variable": false,
-      "inline_code_list": {
-        "Source of Payment Typology": [
-          "1",
-          "11",
-          "111",
-          "112",
-          "113",
-          "119",
-          "12",
-          "121",
-          "122",
-          "123",
-          "129",
-          "13",
-          "14",
-          "19",
-          "191",
-          "2",
-          "21",
-          "211",
-          "212",
-          "213",
-          "219",
-          "22",
-          "23",
-          "25",
-          "26",
-          "29",
-          "291",
-          "299",
-          "3",
-          "31",
-          "311",
-          "3111",
-          "3112",
-          "3113",
-          "3114",
-          "3115",
-          "3116",
-          "3119",
-          "312",
-          "3121",
-          "3122",
-          "3123",
-          "313",
-          "32",
-          "321",
-          "3211",
-          "3212",
-          "32121",
-          "32122",
-          "32123",
-          "32124",
-          "32125",
-          "32126",
-          "32127",
-          "32128",
-          "322",
-          "3221",
-          "3222",
-          "3223",
-          "3229",
-          "33",
-          "331",
-          "332",
-          "333",
-          "334",
-          "34",
-          "341",
-          "342",
-          "343",
-          "349",
-          "35",
-          "36",
-          "361",
-          "362",
-          "369",
-          "37",
-          "371",
-          "3711",
-          "3712",
-          "3713",
-          "372",
-          "379",
-          "38",
-          "381",
-          "3811",
-          "3812",
-          "3813",
-          "3819",
-          "382",
-          "389",
-          "39",
-          "391",
-          "4",
-          "41",
-          "42",
-          "43",
-          "44",
-          "5",
-          "51",
-          "511",
-          "512",
-          "513",
-          "514",
-          "515",
-          "516",
-          "517",
-          "519",
-          "52",
-          "521",
-          "522",
-          "523",
-          "524",
-          "529",
-          "53",
-          "54",
-          "55",
-          "56",
-          "561",
-          "562",
-          "59",
-          "6",
-          "61",
-          "611",
-          "612",
-          "613",
-          "614",
-          "619",
-          "62",
-          "621",
-          "622",
-          "623",
-          "629",
-          "7",
-          "71",
-          "72",
-          "73",
-          "79",
-          "8",
-          "81",
-          "82",
-          "821",
-          "822",
-          "823",
-          "83",
-          "84",
-          "85",
-          "89",
-          "9",
-          "91",
-          "92",
-          "93",
-          "94",
-          "95",
-          "951",
-          "953",
-          "954",
-          "959",
-          "96",
-          "97",
-          "98",
-          "99",
-          "9999"
-        ]
-      }
-    },
-    "ONCAdministrativeSex_PatientCharacteristicSex_085d5b7b_8b08_499c_b5ac_a90cf7a7a4e8": {
-      "title": "ONCAdministrativeSex",
-      "description": "Patient Characteristic Sex: ONCAdministrativeSex",
-      "code_list_id": "2.16.840.1.113762.1.4.1",
-      "property": "gender",
-      "type": "characteristic",
-      "definition": "patient_characteristic_gender",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "ONCAdministrativeSex_PatientCharacteristicSex_085d5b7b_8b08_499c_b5ac_a90cf7a7a4e8_source",
-      "variable": false,
-      "value": {
-        "type": "CD",
-        "system": "Administrative Sex",
-        "code": "F"
-      }
-    },
-    "Bilateralamputationoflegbeloworaboveknee_Diagnosis_062684fd_7fec_4b88_8fea_32efd0e08b3c": {
-      "title": "Bilateralamputationoflegbeloworaboveknee",
-      "description": "Diagnosis: Bilateralamputationoflegbeloworaboveknee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1056",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Bilateralamputationoflegbeloworaboveknee_Diagnosis_062684fd_7fec_4b88_8fea_32efd0e08b3c_source",
-      "variable": false
-    },
-    "RightUnilateralAmputationAboveorBelowKnee_Diagnosis_8224cfe8_cb2a_46b2_a110_2ed23d0e369f": {
-      "title": "RightUnilateralAmputationAboveorBelowKnee",
-      "description": "Diagnosis: RightUnilateralAmputationAboveorBelowKnee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1057",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "RightUnilateralAmputationAboveorBelowKnee_Diagnosis_8224cfe8_cb2a_46b2_a110_2ed23d0e369f_source",
-      "variable": false
-    },
-    "UnilateralAmputationBeloworAboveKneeUnspecifiedLaterality_Diagnosis_85c959d2_45bf_46f9_8830_5b2088d501a4": {
-      "title": "UnilateralAmputationBeloworAboveKneeUnspecifiedLaterality",
-      "description": "Diagnosis: UnilateralAmputationBeloworAboveKneeUnspecifiedLaterality",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1059",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "UnilateralAmputationBeloworAboveKneeUnspecifiedLaterality_Diagnosis_85c959d2_45bf_46f9_8830_5b2088d501a4_source",
-      "variable": false
-    },
-    "LeftUnilateralAmputationProcedureAboveorBelowKnee_ProcedurePerformed_571e830b_7a41_476c_9565_b3465f836557": {
-      "title": "LeftUnilateralAmputationProcedureAboveorBelowKnee",
-      "description": "Procedure, Performed: LeftUnilateralAmputationProcedureAboveorBelowKnee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1072",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "LeftUnilateralAmputationProcedureAboveorBelowKnee_ProcedurePerformed_571e830b_7a41_476c_9565_b3465f836557_source",
-      "variable": false
-    },
-    "PreventiveCareServices_InitialOfficeVisit18andUp_EncounterPerformed_09201b3c_a8c5_4252_a331_7b3c3142000f": {
-      "title": "PreventiveCareServices-InitialOfficeVisit18andUp",
-      "description": "Encounter, Performed: PreventiveCareServices-InitialOfficeVisit18andUp",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1023",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_InitialOfficeVisit18andUp_EncounterPerformed_09201b3c_a8c5_4252_a331_7b3c3142000f_source",
-      "variable": false
-    },
-    "EncounterInpatient_EncounterPerformed_59c3933e_c568_4119_b89d_c29b7c752ef3": {
-      "title": "EncounterInpatient",
-      "description": "Encounter, Performed: EncounterInpatient",
-      "code_list_id": "2.16.840.1.113883.3.666.5.307",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "EncounterInpatient_EncounterPerformed_59c3933e_c568_4119_b89d_c29b7c752ef3_source",
-      "variable": false
-    },
-    "RightUnilateralAmputationProcedureAboveorBelowKnee_ProcedurePerformed_cfd78ab8_c240_49f6_a518_c725811e76de": {
-      "title": "RightUnilateralAmputationProcedureAboveorBelowKnee",
-      "description": "Procedure, Performed: RightUnilateralAmputationProcedureAboveorBelowKnee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1073",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "RightUnilateralAmputationProcedureAboveorBelowKnee_ProcedurePerformed_cfd78ab8_c240_49f6_a518_c725811e76de_source",
-      "variable": false
-    },
-    "LeftUnilateralAmputationAboveorBelowKnee_Diagnosis_ece4ca75_b8ee_4a9e_8bb1_054606bd9214": {
-      "title": "LeftUnilateralAmputationAboveorBelowKnee",
-      "description": "Diagnosis: LeftUnilateralAmputationAboveorBelowKnee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1058",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "LeftUnilateralAmputationAboveorBelowKnee_Diagnosis_ece4ca75_b8ee_4a9e_8bb1_054606bd9214_source",
-      "variable": false
-    },
-    "Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098": {
-      "title": "Hospicecareambulatory",
-      "description": "Intervention, Order: Hospicecareambulatory",
-      "code_list_id": "2.16.840.1.113762.1.4.1108.15",
-      "type": "interventions",
-      "definition": "intervention",
-      "status": "ordered",
-      "hard_status": true,
-      "negation": false,
-      "source_data_criteria": "Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098_source",
-      "variable": false
-    },
-    "Hospicecareambulatory_InterventionPerformed_95cca057_9695_4ee4_a5bd_eff4b54c6098": {
-      "title": "Hospicecareambulatory",
-      "description": "Intervention, Performed: Hospicecareambulatory",
-      "code_list_id": "2.16.840.1.113762.1.4.1108.15",
-      "type": "interventions",
-      "definition": "intervention",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Hospicecareambulatory_InterventionPerformed_95cca057_9695_4ee4_a5bd_eff4b54c6098_source",
-      "variable": false
-    },
-    "Ethnicity_PatientCharacteristicEthnicity_e4e02661_985d_426a_bcf5_2f0cec17a4ee": {
-      "title": "Ethnicity",
-      "description": "Patient Characteristic Ethnicity: Ethnicity",
-      "code_list_id": "2.16.840.1.114222.4.11.837",
-      "property": "ethnicity",
-      "type": "characteristic",
-      "definition": "patient_characteristic_ethnicity",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Ethnicity_PatientCharacteristicEthnicity_e4e02661_985d_426a_bcf5_2f0cec17a4ee_source",
-      "variable": false,
-      "inline_code_list": {
-        "CDC Race": [
-          "2135-2",
-          "2186-5"
-        ]
-      }
-    },
-    "AnnualWellnessVisit_EncounterPerformed_d44294a7_4e9f_4cae_ba8c_04ec713826fb": {
-      "title": "AnnualWellnessVisit",
-      "description": "Encounter, Performed: AnnualWellnessVisit",
-      "code_list_id": "2.16.840.1.113883.3.526.3.1240",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "AnnualWellnessVisit_EncounterPerformed_d44294a7_4e9f_4cae_ba8c_04ec713826fb_source",
-      "variable": false
-    },
-    "HomeHealthcareServices_EncounterPerformed_4852fab7_616b_49c0_9945_90f8864ae335": {
-      "title": "HomeHealthcareServices",
-      "description": "Encounter, Performed: HomeHealthcareServices",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1016",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "HomeHealthcareServices_EncounterPerformed_4852fab7_616b_49c0_9945_90f8864ae335_source",
-      "variable": false
-    },
-    "PreventiveCareServices_EstablishedOfficeVisit18andUp_EncounterPerformed_b1ad8105_2d49_41b5_b606_0f82e227158f": {
-      "title": "PreventiveCareServices-EstablishedOfficeVisit18andUp",
-      "description": "Encounter, Performed: PreventiveCareServices-EstablishedOfficeVisit18andUp",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1025",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_EstablishedOfficeVisit18andUp_EncounterPerformed_b1ad8105_2d49_41b5_b606_0f82e227158f_source",
-      "variable": false
-    },
-    "OfficeVisit_EncounterPerformed_ccaea27f_c786_41f6_9f67_90ed125d1c0d": {
-      "title": "OfficeVisit",
-      "description": "Encounter, Performed: OfficeVisit",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "OfficeVisit_EncounterPerformed_ccaea27f_c786_41f6_9f67_90ed125d1c0d_source",
-      "variable": false
-    },
-    "Race_PatientCharacteristicRace_6e87b116_0957_4da7_8aa1_c92a307d2294": {
-      "title": "Race",
-      "description": "Patient Characteristic Race: Race",
-      "code_list_id": "2.16.840.1.114222.4.11.836",
-      "property": "race",
-      "type": "characteristic",
-      "definition": "patient_characteristic_race",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Race_PatientCharacteristicRace_6e87b116_0957_4da7_8aa1_c92a307d2294_source",
-      "variable": false,
-      "inline_code_list": {
-        "CDC Race": [
-          "1002-5",
-          "2028-9",
-          "2054-5",
-          "2076-8",
-          "2106-3",
-          "2131-1"
-        ]
-      }
-    },
-    "Diabetes_Diagnosis_da6d48b1_67d2_4bb9_8010_ebdf4fbadf78": {
-      "title": "Diabetes",
-      "description": "Diagnosis: Diabetes",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.103.12.1001",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Diabetes_Diagnosis_da6d48b1_67d2_4bb9_8010_ebdf4fbadf78_source",
-      "variable": false
-    },
-    "UnilateralAmputationProcedureBeloworAboveKneeUnspecifiedLaterality_ProcedurePerformed_9a655be4_4072_4d34_9e13_fccc6a603231": {
-      "title": "UnilateralAmputationProcedureBeloworAboveKneeUnspecifiedLaterality",
-      "description": "Procedure, Performed: UnilateralAmputationProcedureBeloworAboveKneeUnspecifiedLaterality",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.103.12.1022",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "UnilateralAmputationProcedureBeloworAboveKneeUnspecifiedLaterality_ProcedurePerformed_9a655be4_4072_4d34_9e13_fccc6a603231_source",
-      "variable": false
-    },
-    "prefix_401191002_AssessmentPerformed_F86758AF_57F4_4B1E_AEA6_8D7E8310A380": {
-      "title": "Assessment, Performed: Assessment, Performed",
-      "description": "Assessment, Performed: Assessment, Performed",
-      "type": "assessments",
-      "definition": "assessment",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_401191002_AssessmentPerformed_F86758AF_57F4_4B1E_AEA6_8D7E8310A380_source",
-      "variable": false,
-      "inline_code_list": {
-        "SNOMED-CT": [
-          "401191002"
-        ]
-      },
-      "code_list_id": "drc-529dc4d622e3c7acea52e699b35e8154cd879f8e64e48c790de34a6585ea4ba4"
-    },
-    "prefix_91161007_AssessmentPerformed_A2497C4F_8C86_4104_BC64_009C57627C69": {
-      "title": "Assessment, Performed: Assessment, Performed",
-      "description": "Assessment, Performed: Assessment, Performed",
-      "type": "assessments",
-      "definition": "assessment",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_91161007_AssessmentPerformed_A2497C4F_8C86_4104_BC64_009C57627C69_source",
-      "variable": false,
-      "inline_code_list": {
-        "SNOMED-CT": [
-          "91161007"
-        ]
-      },
-      "code_list_id": "drc-33211b1978e0fee5a3a65e4ecd35fe3f70cd065128690cbc4530e298f87c742c"
-    },
-    "prefix_134388005_AssessmentPerformed_E75E0923_8949_4BA4_AC7F_25C7CB073286": {
-      "title": "Assessment, Performed: Assessment, Performed",
-      "description": "Assessment, Performed: Assessment, Performed",
-      "type": "assessments",
-      "definition": "assessment",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_134388005_AssessmentPerformed_E75E0923_8949_4BA4_AC7F_25C7CB073286_source",
-      "variable": false,
-      "inline_code_list": {
-        "SNOMED-CT": [
-          "134388005"
-        ]
-      },
-      "code_list_id": "drc-37129ce483571cc63df7966e306dcddb2c35dd3bf3aa768a1ce357089d34706b"
-    }
-  },
   "description": "The percentage of patients 18-75 years of age with diabetes (type 1 and type 2) who received a foot exam (visual inspection and sensory exam with mono filament and a pulse exam) during the measurement year",
   "hqmf_id": "40280382-62C4-DE26-0162-FE2505800CC9",
   "hqmf_set_id": "C0D72444-7C26-4863-9B51-8080F8928A85",
@@ -19772,513 +19297,601 @@
       "title": "Population Criteria Section"
     }
   ],
-  "source_data_criteria": {
-    "Payer_PatientCharacteristicPayer_028e6363_f1a0_4340_ade5_e8b4d2a93072_source": {
-      "title": "Payer",
+  "source_data_criteria": [
+    {
+      "codeListId": "2.16.840.1.114222.4.11.3591",
+      "dataElementCodes": [
+
+      ],
       "description": "Patient Characteristic Payer: Payer",
-      "code_list_id": "2.16.840.1.114222.4.11.3591",
-      "property": "payer",
-      "type": "characteristic",
-      "definition": "patient_characteristic_payer",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Payer_PatientCharacteristicPayer_028e6363_f1a0_4340_ade5_e8b4d2a93072_source",
-      "variable": false,
-      "inline_code_list": {
-        "Source of Payment Typology": [
-          "1",
-          "11",
-          "111",
-          "112",
-          "113",
-          "119",
-          "12",
-          "121",
-          "122",
-          "123",
-          "129",
-          "13",
-          "14",
-          "19",
-          "191",
-          "2",
-          "21",
-          "211",
-          "212",
-          "213",
-          "219",
-          "22",
-          "23",
-          "25",
-          "26",
-          "29",
-          "291",
-          "299",
-          "3",
-          "31",
-          "311",
-          "3111",
-          "3112",
-          "3113",
-          "3114",
-          "3115",
-          "3116",
-          "3119",
-          "312",
-          "3121",
-          "3122",
-          "3123",
-          "313",
-          "32",
-          "321",
-          "3211",
-          "3212",
-          "32121",
-          "32122",
-          "32123",
-          "32124",
-          "32125",
-          "32126",
-          "32127",
-          "32128",
-          "322",
-          "3221",
-          "3222",
-          "3223",
-          "3229",
-          "33",
-          "331",
-          "332",
-          "333",
-          "334",
-          "34",
-          "341",
-          "342",
-          "343",
-          "349",
-          "35",
-          "36",
-          "361",
-          "362",
-          "369",
-          "37",
-          "371",
-          "3711",
-          "3712",
-          "3713",
-          "372",
-          "379",
-          "38",
-          "381",
-          "3811",
-          "3812",
-          "3813",
-          "3819",
-          "382",
-          "389",
-          "39",
-          "391",
-          "4",
-          "41",
-          "42",
-          "43",
-          "44",
-          "5",
-          "51",
-          "511",
-          "512",
-          "513",
-          "514",
-          "515",
-          "516",
-          "517",
-          "519",
-          "52",
-          "521",
-          "522",
-          "523",
-          "524",
-          "529",
-          "53",
-          "54",
-          "55",
-          "56",
-          "561",
-          "562",
-          "59",
-          "6",
-          "61",
-          "611",
-          "612",
-          "613",
-          "614",
-          "619",
-          "62",
-          "621",
-          "622",
-          "623",
-          "629",
-          "7",
-          "71",
-          "72",
-          "73",
-          "79",
-          "8",
-          "81",
-          "82",
-          "821",
-          "822",
-          "823",
-          "83",
-          "84",
-          "85",
-          "89",
-          "9",
-          "91",
-          "92",
-          "93",
-          "94",
-          "95",
-          "951",
-          "953",
-          "954",
-          "959",
-          "96",
-          "97",
-          "98",
-          "99",
-          "9999"
-        ]
-      }
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.58",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6b5"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "payer",
+      "qdmTitle": "Patient Characteristic Payer",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::PatientCharacteristicPayer"
     },
-    "ONCAdministrativeSex_PatientCharacteristicSex_085d5b7b_8b08_499c_b5ac_a90cf7a7a4e8_source": {
-      "title": "ONCAdministrativeSex",
+    {
+      "codeListId": "2.16.840.1.113762.1.4.1",
+      "dataElementCodes": [
+
+      ],
       "description": "Patient Characteristic Sex: ONCAdministrativeSex",
-      "code_list_id": "2.16.840.1.113762.1.4.1",
-      "property": "gender",
-      "type": "characteristic",
-      "definition": "patient_characteristic_gender",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "ONCAdministrativeSex_PatientCharacteristicSex_085d5b7b_8b08_499c_b5ac_a90cf7a7a4e8_source",
-      "variable": false,
-      "value": {
-        "type": "CD",
-        "system": "Administrative Sex",
-        "code": "F"
-      }
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6b6"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "gender",
+      "qdmTitle": "Patient Characteristic Sex",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicSex"
     },
-    "Bilateralamputationoflegbeloworaboveknee_Diagnosis_062684fd_7fec_4b88_8fea_32efd0e08b3c_source": {
-      "title": "Bilateralamputationoflegbeloworaboveknee",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.113.12.1056",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Bilateralamputationoflegbeloworaboveknee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1056",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Bilateralamputationoflegbeloworaboveknee_Diagnosis_062684fd_7fec_4b88_8fea_32efd0e08b3c_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6b7"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "RightUnilateralAmputationAboveorBelowKnee_Diagnosis_8224cfe8_cb2a_46b2_a110_2ed23d0e369f_source": {
-      "title": "RightUnilateralAmputationAboveorBelowKnee",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.113.12.1057",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: RightUnilateralAmputationAboveorBelowKnee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1057",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "RightUnilateralAmputationAboveorBelowKnee_Diagnosis_8224cfe8_cb2a_46b2_a110_2ed23d0e369f_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6b8"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "UnilateralAmputationBeloworAboveKneeUnspecifiedLaterality_Diagnosis_85c959d2_45bf_46f9_8830_5b2088d501a4_source": {
-      "title": "UnilateralAmputationBeloworAboveKneeUnspecifiedLaterality",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.113.12.1059",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: UnilateralAmputationBeloworAboveKneeUnspecifiedLaterality",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1059",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "UnilateralAmputationBeloworAboveKneeUnspecifiedLaterality_Diagnosis_85c959d2_45bf_46f9_8830_5b2088d501a4_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6b9"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "LeftUnilateralAmputationProcedureAboveorBelowKnee_ProcedurePerformed_571e830b_7a41_476c_9565_b3465f836557_source": {
-      "title": "LeftUnilateralAmputationProcedureAboveorBelowKnee",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.113.12.1072",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Procedure, Performed: LeftUnilateralAmputationProcedureAboveorBelowKnee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1072",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "LeftUnilateralAmputationProcedureAboveorBelowKnee_ProcedurePerformed_571e830b_7a41_476c_9565_b3465f836557_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6ba"
+      },
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmCategory": "procedure",
+      "qdmStatus": "performed",
+      "qdmTitle": "Procedure, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
     },
-    "PreventiveCareServices_InitialOfficeVisit18andUp_EncounterPerformed_09201b3c_a8c5_4252_a331_7b3c3142000f_source": {
-      "title": "PreventiveCareServices-InitialOfficeVisit18andUp",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.12.1023",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: PreventiveCareServices-InitialOfficeVisit18andUp",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1023",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_InitialOfficeVisit18andUp_EncounterPerformed_09201b3c_a8c5_4252_a331_7b3c3142000f_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6bb"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "EncounterInpatient_EncounterPerformed_59c3933e_c568_4119_b89d_c29b7c752ef3_source": {
-      "title": "EncounterInpatient",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.666.5.307",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: EncounterInpatient",
-      "code_list_id": "2.16.840.1.113883.3.666.5.307",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "EncounterInpatient_EncounterPerformed_59c3933e_c568_4119_b89d_c29b7c752ef3_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6bc"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "RightUnilateralAmputationProcedureAboveorBelowKnee_ProcedurePerformed_cfd78ab8_c240_49f6_a518_c725811e76de_source": {
-      "title": "RightUnilateralAmputationProcedureAboveorBelowKnee",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.113.12.1073",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Procedure, Performed: RightUnilateralAmputationProcedureAboveorBelowKnee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1073",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "RightUnilateralAmputationProcedureAboveorBelowKnee_ProcedurePerformed_cfd78ab8_c240_49f6_a518_c725811e76de_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6bd"
+      },
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmCategory": "procedure",
+      "qdmStatus": "performed",
+      "qdmTitle": "Procedure, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
     },
-    "LeftUnilateralAmputationAboveorBelowKnee_Diagnosis_ece4ca75_b8ee_4a9e_8bb1_054606bd9214_source": {
-      "title": "LeftUnilateralAmputationAboveorBelowKnee",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.113.12.1058",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: LeftUnilateralAmputationAboveorBelowKnee",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1058",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "LeftUnilateralAmputationAboveorBelowKnee_Diagnosis_ece4ca75_b8ee_4a9e_8bb1_054606bd9214_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6be"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098_source": {
-      "title": "Hospicecareambulatory",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1108.15",
+      "dataElementCodes": [
+
+      ],
       "description": "Intervention, Order: Hospicecareambulatory",
-      "code_list_id": "2.16.840.1.113762.1.4.1108.15",
-      "type": "interventions",
-      "definition": "intervention",
-      "status": "ordered",
-      "hard_status": true,
-      "negation": false,
-      "source_data_criteria": "Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.35",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6bf"
+      },
+      "negationRationale": null,
+      "qdmCategory": "intervention",
+      "qdmStatus": "order",
+      "qdmTitle": "Intervention, Order",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "_type": "QDM::InterventionOrder"
     },
-    "Hospicecareambulatory_InterventionPerformed_95cca057_9695_4ee4_a5bd_eff4b54c6098_source": {
-      "title": "Hospicecareambulatory",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1108.15",
+      "dataElementCodes": [
+
+      ],
       "description": "Intervention, Performed: Hospicecareambulatory",
-      "code_list_id": "2.16.840.1.113762.1.4.1108.15",
-      "type": "interventions",
-      "definition": "intervention",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Hospicecareambulatory_InterventionPerformed_95cca057_9695_4ee4_a5bd_eff4b54c6098_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.36",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c0"
+      },
+      "negationRationale": null,
+      "qdmCategory": "intervention",
+      "qdmStatus": "performed",
+      "qdmTitle": "Intervention, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "status": null,
+      "_type": "QDM::InterventionPerformed"
     },
-    "Ethnicity_PatientCharacteristicEthnicity_e4e02661_985d_426a_bcf5_2f0cec17a4ee_source": {
-      "title": "Ethnicity",
+    {
+      "codeListId": "2.16.840.1.114222.4.11.837",
+      "dataElementCodes": [
+
+      ],
       "description": "Patient Characteristic Ethnicity: Ethnicity",
-      "code_list_id": "2.16.840.1.114222.4.11.837",
-      "property": "ethnicity",
-      "type": "characteristic",
-      "definition": "patient_characteristic_ethnicity",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Ethnicity_PatientCharacteristicEthnicity_e4e02661_985d_426a_bcf5_2f0cec17a4ee_source",
-      "variable": false,
-      "inline_code_list": {
-        "CDC Race": [
-          "2135-2",
-          "2186-5"
-        ]
-      }
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c1"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "ethnicity",
+      "qdmTitle": "Patient Characteristic Ethnicity",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicEthnicity"
     },
-    "AnnualWellnessVisit_EncounterPerformed_d44294a7_4e9f_4cae_ba8c_04ec713826fb_source": {
-      "title": "AnnualWellnessVisit",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.526.3.1240",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: AnnualWellnessVisit",
-      "code_list_id": "2.16.840.1.113883.3.526.3.1240",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "AnnualWellnessVisit_EncounterPerformed_d44294a7_4e9f_4cae_ba8c_04ec713826fb_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c2"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "HomeHealthcareServices_EncounterPerformed_4852fab7_616b_49c0_9945_90f8864ae335_source": {
-      "title": "HomeHealthcareServices",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.12.1016",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: HomeHealthcareServices",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1016",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "HomeHealthcareServices_EncounterPerformed_4852fab7_616b_49c0_9945_90f8864ae335_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c3"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "PreventiveCareServices_EstablishedOfficeVisit18andUp_EncounterPerformed_b1ad8105_2d49_41b5_b606_0f82e227158f_source": {
-      "title": "PreventiveCareServices-EstablishedOfficeVisit18andUp",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.12.1025",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: PreventiveCareServices-EstablishedOfficeVisit18andUp",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1025",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_EstablishedOfficeVisit18andUp_EncounterPerformed_b1ad8105_2d49_41b5_b606_0f82e227158f_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c4"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "OfficeVisit_EncounterPerformed_ccaea27f_c786_41f6_9f67_90ed125d1c0d_source": {
-      "title": "OfficeVisit",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.12.1001",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: OfficeVisit",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "OfficeVisit_EncounterPerformed_ccaea27f_c786_41f6_9f67_90ed125d1c0d_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c5"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "Race_PatientCharacteristicRace_6e87b116_0957_4da7_8aa1_c92a307d2294_source": {
-      "title": "Race",
+    {
+      "codeListId": "2.16.840.1.114222.4.11.836",
+      "dataElementCodes": [
+
+      ],
       "description": "Patient Characteristic Race: Race",
-      "code_list_id": "2.16.840.1.114222.4.11.836",
-      "property": "race",
-      "type": "characteristic",
-      "definition": "patient_characteristic_race",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Race_PatientCharacteristicRace_6e87b116_0957_4da7_8aa1_c92a307d2294_source",
-      "variable": false,
-      "inline_code_list": {
-        "CDC Race": [
-          "1002-5",
-          "2028-9",
-          "2054-5",
-          "2076-8",
-          "2106-3",
-          "2131-1"
-        ]
-      }
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c6"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "race",
+      "qdmTitle": "Patient Characteristic Race",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicRace"
     },
-    "Diabetes_Diagnosis_da6d48b1_67d2_4bb9_8010_ebdf4fbadf78_source": {
-      "title": "Diabetes",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.103.12.1001",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Diabetes",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.103.12.1001",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Diabetes_Diagnosis_da6d48b1_67d2_4bb9_8010_ebdf4fbadf78_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c7"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "UnilateralAmputationProcedureBeloworAboveKneeUnspecifiedLaterality_ProcedurePerformed_9a655be4_4072_4d34_9e13_fccc6a603231_source": {
-      "title": "UnilateralAmputationProcedureBeloworAboveKneeUnspecifiedLaterality",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.103.12.1022",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Procedure, Performed: UnilateralAmputationProcedureBeloworAboveKneeUnspecifiedLaterality",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.103.12.1022",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "UnilateralAmputationProcedureBeloworAboveKneeUnspecifiedLaterality_ProcedurePerformed_9a655be4_4072_4d34_9e13_fccc6a603231_source",
-      "variable": false
-    },
-    "prefix_401191002_AssessmentPerformed_F86758AF_57F4_4B1E_AEA6_8D7E8310A380_source": {
-      "title": "Assessment, Performed: Assessment, Performed",
-      "description": "Assessment, Performed: Assessment, Performed",
-      "type": "assessments",
-      "definition": "assessment",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_401191002_AssessmentPerformed_F86758AF_57F4_4B1E_AEA6_8D7E8310A380_source",
-      "variable": false,
-      "inline_code_list": {
-        "SNOMED-CT": [
-          "401191002"
-        ]
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c8"
       },
-      "code_list_id": "drc-529dc4d622e3c7acea52e699b35e8154cd879f8e64e48c790de34a6585ea4ba4"
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmCategory": "procedure",
+      "qdmStatus": "performed",
+      "qdmTitle": "Procedure, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
     },
-    "prefix_91161007_AssessmentPerformed_A2497C4F_8C86_4104_BC64_009C57627C69_source": {
-      "title": "Assessment, Performed: Assessment, Performed",
+    {
+      "authorDatetime": null,
+      "codeListId": "drc-529dc4d622e3c7acea52e699b35e8154cd879f8e64e48c790de34a6585ea4ba4",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Assessment, Performed: Assessment, Performed",
-      "type": "assessments",
-      "definition": "assessment",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_91161007_AssessmentPerformed_A2497C4F_8C86_4104_BC64_009C57627C69_source",
-      "variable": false,
-      "inline_code_list": {
-        "SNOMED-CT": [
-          "91161007"
-        ]
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.117",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6c9"
       },
-      "code_list_id": "drc-33211b1978e0fee5a3a65e4ecd35fe3f70cd065128690cbc4530e298f87c742c"
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "assessment",
+      "qdmStatus": "performed",
+      "qdmTitle": "Assessment, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "result": null,
+      "_type": "QDM::AssessmentPerformed"
     },
-    "prefix_134388005_AssessmentPerformed_E75E0923_8949_4BA4_AC7F_25C7CB073286_source": {
-      "title": "Assessment, Performed: Assessment, Performed",
+    {
+      "authorDatetime": null,
+      "codeListId": "drc-33211b1978e0fee5a3a65e4ecd35fe3f70cd065128690cbc4530e298f87c742c",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Assessment, Performed: Assessment, Performed",
-      "type": "assessments",
-      "definition": "assessment",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_134388005_AssessmentPerformed_E75E0923_8949_4BA4_AC7F_25C7CB073286_source",
-      "variable": false,
-      "inline_code_list": {
-        "SNOMED-CT": [
-          "134388005"
-        ]
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.117",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6ca"
       },
-      "code_list_id": "drc-37129ce483571cc63df7966e306dcddb2c35dd3bf3aa768a1ce357089d34706b"
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "assessment",
+      "qdmStatus": "performed",
+      "qdmTitle": "Assessment, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "result": null,
+      "_type": "QDM::AssessmentPerformed"
+    },
+    {
+      "authorDatetime": null,
+      "codeListId": "drc-37129ce483571cc63df7966e306dcddb2c35dd3bf3aa768a1ce357089d34706b",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
+      "description": "Assessment, Performed: Assessment, Performed",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.117",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369905cc9752e74b9b6cb"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "assessment",
+      "qdmStatus": "performed",
+      "qdmTitle": "Assessment, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "result": null,
+      "_type": "QDM::AssessmentPerformed"
     }
-  },
+  ],
   "title": "Diabetes: Foot Exam",
   "updated_at": null,
   "value_set_ids": [
-    "5c9248dca564ac367adaba0c",
-    "5c9248dca564ac367adaba0d",
-    "5c9248dca564ac367adaba0e",
-    "5c9248dca564ac367adaba0f",
-    "5c9248dca564ac367adaba10",
-    "5c9248dca564ac367adaba11",
-    "5c9248dca564ac367adaba12",
-    "5c9248dca564ac367adaba13",
-    "5c9248dca564ac367adaba14",
-    "5c9248dca564ac367adaba15",
-    "5c9248dca564ac367adaba16",
-    "5c9248dca564ac367adaba17",
-    "5c9248dca564ac367adaba18",
-    "5c9248dca564ac367adaba19",
-    "5c9248dca564ac367adaba1a",
-    "5c9248dca564ac367adaba1b",
-    "5c9248dca564ac367adaba1c",
-    "5c9248dca564ac367adaba1d",
-    "5c9248dca564ac367adaba1e",
-    "5c9248dca564ac367adaba1f",
-    "5c9248dca564ac367adaba20",
-    "5c9248dca564ac367adaba21",
-    "5c9248dca564ac367adaba22",
-    "5c9248dca564ac367adaba23",
-    "5c9248dca564ac367adaba24",
-    "5c9248dca564ac367adaba25",
-    "5c9248dca564ac367adaba26",
-    "5c9248dca564ac367adaba27",
-    "5c9248dca564ac367adaba28",
-    "5c9248dca564ac367adaba29"
+    "5ca369905cc9752e74b9b6cc",
+    "5ca369905cc9752e74b9b6cd",
+    "5ca369905cc9752e74b9b6ce",
+    "5ca369905cc9752e74b9b6cf",
+    "5ca369905cc9752e74b9b6d0",
+    "5ca369905cc9752e74b9b6d1",
+    "5ca369905cc9752e74b9b6d2",
+    "5ca369905cc9752e74b9b6d3",
+    "5ca369905cc9752e74b9b6d4",
+    "5ca369905cc9752e74b9b6d5",
+    "5ca369905cc9752e74b9b6d6",
+    "5ca369905cc9752e74b9b6d7",
+    "5ca369905cc9752e74b9b6d8",
+    "5ca369905cc9752e74b9b6d9",
+    "5ca369905cc9752e74b9b6da",
+    "5ca369905cc9752e74b9b6db",
+    "5ca369905cc9752e74b9b6dc",
+    "5ca369905cc9752e74b9b6dd",
+    "5ca369905cc9752e74b9b6de",
+    "5ca369905cc9752e74b9b6df",
+    "5ca369905cc9752e74b9b6e0",
+    "5ca369905cc9752e74b9b6e1",
+    "5ca369905cc9752e74b9b6e2",
+    "5ca369905cc9752e74b9b6e3",
+    "5ca369905cc9752e74b9b6e4",
+    "5ca369905cc9752e74b9b6e5",
+    "5ca369905cc9752e74b9b6e6",
+    "5ca369905cc9752e74b9b6e7",
+    "5ca369905cc9752e74b9b6e8",
+    "5ca369905cc9752e74b9b6e9"
   ]
 }

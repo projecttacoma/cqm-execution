@@ -15855,640 +15855,6 @@
     }
   ],
   "created_at": null,
-  "data_criteria": {
-    "OutpatientConsultation_EncounterPerformed_9ebfeb54_36bd_40c2_a5bb_f4161353fddb": {
-      "title": "Outpatient Consultation",
-      "description": "Encounter, Performed: Outpatient Consultation",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.11.1040",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "OutpatientConsultation_EncounterPerformed_9ebfeb54_36bd_40c2_a5bb_f4161353fddb_source",
-      "variable": false
-    },
-    "StatinAllergen_AdverseEvent_0642c70a_9e54_4d5a_804a_e04b123dc75e": {
-      "title": "Statin Allergen",
-      "description": "Adverse Event: Statin Allergen",
-      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.423",
-      "type": "adverse_events",
-      "definition": "adverse_event",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "StatinAllergen_AdverseEvent_0642c70a_9e54_4d5a_804a_e04b123dc75e_source",
-      "variable": false
-    },
-    "StatinAllergen_Allergy_Intolerance_0642c70a_9e54_4d5a_804a_e04b123dc75e": {
-      "title": "Statin Allergen",
-      "description": "Allergy/Intolerance: Statin Allergen",
-      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.423",
-      "type": "allergies_intolerances",
-      "definition": "allergy_intolerance",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "StatinAllergen_Allergy_Intolerance_0642c70a_9e54_4d5a_804a_e04b123dc75e_source",
-      "variable": false
-    },
-    "PalliativeCare_InterventionPerformed_80ca46ce_4c01_4cf8_aad4_edb8fbe47284": {
-      "title": "Palliative Care",
-      "description": "Intervention, Performed: Palliative Care",
-      "code_list_id": "2.16.840.1.113883.3.600.1.1579",
-      "type": "interventions",
-      "definition": "intervention",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PalliativeCare_InterventionPerformed_80ca46ce_4c01_4cf8_aad4_edb8fbe47284_source",
-      "variable": false
-    },
-    "OutpatientEncountersforPreventiveCare_EncounterPerformed_150ee4c2_83cd_46ac_9fe5_ec238c453762": {
-      "title": "Outpatient Encounters for Preventive Care",
-      "description": "Encounter, Performed: Outpatient Encounters for Preventive Care",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.9",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "OutpatientEncountersforPreventiveCare_EncounterPerformed_150ee4c2_83cd_46ac_9fe5_ec238c453762_source",
-      "variable": false
-    },
-    "Rhabdomyolysis_Diagnosis_9173182c_585b_48d4_bd4b_c93bb558816e": {
-      "title": "Rhabdomyolysis",
-      "description": "Diagnosis: Rhabdomyolysis",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.102",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Rhabdomyolysis_Diagnosis_9173182c_585b_48d4_bd4b_c93bb558816e_source",
-      "variable": false
-    },
-    "PreventiveCareServices_EstablishedOfficeVisit18andUp_EncounterPerformed_87a31d70_68ba_40af_8490_0b31b3b09f9a": {
-      "title": "Preventive Care Services - Established Office Visit, 18 and Up",
-      "description": "Encounter, Performed: Preventive Care Services - Established Office Visit, 18 and Up",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.11.1125",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_EstablishedOfficeVisit18andUp_EncounterPerformed_87a31d70_68ba_40af_8490_0b31b3b09f9a_source",
-      "variable": false
-    },
-    "Ischemicheartdiseaseorcoronaryocclusionruptureorthrombosis_Diagnosis_dc57fed7_7dfc_4dba_938c_7ad06f9d314c": {
-      "title": "Ischemic heart disease or coronary occlusion, rupture, or thrombosis",
-      "description": "Diagnosis: Ischemic heart disease or coronary occlusion, rupture, or thrombosis",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.46",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Ischemicheartdiseaseorcoronaryocclusionruptureorthrombosis_Diagnosis_dc57fed7_7dfc_4dba_938c_7ad06f9d314c_source",
-      "variable": false
-    },
-    "Highintensitystatintherapy_MedicationOrder_b811ab5c_f3ed_4bf1_8590_3e8cdb763910": {
-      "title": "High intensity statin therapy",
-      "description": "Medication, Order: High intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.97",
-      "type": "medications",
-      "definition": "medication",
-      "status": "ordered",
-      "hard_status": true,
-      "negation": false,
-      "source_data_criteria": "Highintensitystatintherapy_MedicationOrder_b811ab5c_f3ed_4bf1_8590_3e8cdb763910_source",
-      "variable": false
-    },
-    "Highintensitystatintherapy_MedicationActive_b811ab5c_f3ed_4bf1_8590_3e8cdb763910": {
-      "title": "High intensity statin therapy",
-      "description": "Medication, Active: High intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.97",
-      "type": "medications",
-      "definition": "medication",
-      "status": "active",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Highintensitystatintherapy_MedicationActive_b811ab5c_f3ed_4bf1_8590_3e8cdb763910_source",
-      "variable": false
-    },
-    "CABGSurgeries_ProcedurePerformed_adf5877c_cae0_413b_b39a_30bd29a88cac": {
-      "title": "CABG Surgeries",
-      "description": "Procedure, Performed: CABG Surgeries",
-      "code_list_id": "2.16.840.1.113883.3.666.5.694",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "CABGSurgeries_ProcedurePerformed_adf5877c_cae0_413b_b39a_30bd29a88cac_source",
-      "variable": false
-    },
-    "Moderateintensitystatintherapy_MedicationOrder_8d3d74b2_6d0f_43c7_94d3_842bd90825ee": {
-      "title": "Moderate intensity statin therapy",
-      "description": "Medication, Order: Moderate intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.98",
-      "type": "medications",
-      "definition": "medication",
-      "status": "ordered",
-      "hard_status": true,
-      "negation": false,
-      "source_data_criteria": "Moderateintensitystatintherapy_MedicationOrder_8d3d74b2_6d0f_43c7_94d3_842bd90825ee_source",
-      "variable": false
-    },
-    "Moderateintensitystatintherapy_MedicationActive_8d3d74b2_6d0f_43c7_94d3_842bd90825ee": {
-      "title": "Moderate intensity statin therapy",
-      "description": "Medication, Active: Moderate intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.98",
-      "type": "medications",
-      "definition": "medication",
-      "status": "active",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Moderateintensitystatintherapy_MedicationActive_8d3d74b2_6d0f_43c7_94d3_842bd90825ee_source",
-      "variable": false
-    },
-    "PregnancyDx_Diagnosis_f19f6669_8325_4877_af8b_a4e6195b886a": {
-      "title": "Pregnancy Dx",
-      "description": "Diagnosis: Pregnancy Dx",
-      "code_list_id": "2.16.840.1.113883.3.600.1.1623",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PregnancyDx_Diagnosis_f19f6669_8325_4877_af8b_a4e6195b886a_source",
-      "variable": false
-    },
-    "OfficeVisit_EncounterPerformed_a5301ced_7777_4dc6_9186_dcaebec470ff": {
-      "title": "Office Visit",
-      "description": "Encounter, Performed: Office Visit",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.11.1005",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "OfficeVisit_EncounterPerformed_a5301ced_7777_4dc6_9186_dcaebec470ff_source",
-      "variable": false
-    },
-    "PreventiveCareServices_IndividualCounseling_EncounterPerformed_b5f1dcb0_f6cd_4ba2_ad01_121b460567a9": {
-      "title": "Preventive Care Services-Individual Counseling",
-      "description": "Encounter, Performed: Preventive Care Services-Individual Counseling",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1026",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_IndividualCounseling_EncounterPerformed_b5f1dcb0_f6cd_4ba2_ad01_121b460567a9_source",
-      "variable": false
-    },
-    "LDLTest_LaboratoryTestPerformed_dfc0eb1c_63c5_4b29_ac69_d74cc67a97fc": {
-      "title": "LDL Test",
-      "description": "Laboratory Test, Performed: LDL Test",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.198.11.1029",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "LDLTest_LaboratoryTestPerformed_dfc0eb1c_63c5_4b29_ac69_d74cc67a97fc_source",
-      "variable": false
-    },
-    "StableandUnstableAngina_Diagnosis_706a8eab_e769_42f1_8395_f6b923a1e2a1": {
-      "title": "Stable and Unstable Angina",
-      "description": "Diagnosis: Stable and Unstable Angina",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.47",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "StableandUnstableAngina_Diagnosis_706a8eab_e769_42f1_8395_f6b923a1e2a1_source",
-      "variable": false
-    },
-    "Lowintensitystatintherapy_MedicationOrder_12e465f8_7d57_412f_a7bb_f63bf1603279": {
-      "title": "Low intensity statin therapy",
-      "description": "Medication, Order: Low intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.107",
-      "type": "medications",
-      "definition": "medication",
-      "status": "ordered",
-      "hard_status": true,
-      "negation": false,
-      "source_data_criteria": "Lowintensitystatintherapy_MedicationOrder_12e465f8_7d57_412f_a7bb_f63bf1603279_source",
-      "variable": false
-    },
-    "Lowintensitystatintherapy_MedicationActive_12e465f8_7d57_412f_a7bb_f63bf1603279": {
-      "title": "Low intensity statin therapy",
-      "description": "Medication, Active: Low intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.107",
-      "type": "medications",
-      "definition": "medication",
-      "status": "active",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Lowintensitystatintherapy_MedicationActive_12e465f8_7d57_412f_a7bb_f63bf1603279_source",
-      "variable": false
-    },
-    "AnnualWellnessVisit_EncounterPerformed_61bc2a43_ecbc_41ce_b567_0d3020a9f81f": {
-      "title": "Annual Wellness Visit",
-      "description": "Encounter, Performed: Annual Wellness Visit",
-      "code_list_id": "2.16.840.1.113883.3.526.2.1363",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "AnnualWellnessVisit_EncounterPerformed_61bc2a43_ecbc_41ce_b567_0d3020a9f81f_source",
-      "variable": false
-    },
-    "MyocardialInfarction_Diagnosis_3857e855_fa8f_4499_a986_dd00a4990db3": {
-      "title": "Myocardial Infarction",
-      "description": "Diagnosis: Myocardial Infarction",
-      "code_list_id": "2.16.840.1.113883.3.526.3.403",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "MyocardialInfarction_Diagnosis_3857e855_fa8f_4499_a986_dd00a4990db3_source",
-      "variable": false
-    },
-    "CerebrovasculardiseaseStrokeTIA_Diagnosis_42c2e37e_1951_449a_84e1_d883d354b32b": {
-      "title": "Cerebrovascular disease, Stroke, TIA",
-      "description": "Diagnosis: Cerebrovascular disease, Stroke, TIA",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.44",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "CerebrovasculardiseaseStrokeTIA_Diagnosis_42c2e37e_1951_449a_84e1_d883d354b32b_source",
-      "variable": false
-    },
-    "Hypercholesterolemia_Diagnosis_441f4a33_d6ee_49bc_8cb0_2817be9ea41d": {
-      "title": "Hypercholesterolemia",
-      "description": "Diagnosis: Hypercholesterolemia",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.100",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Hypercholesterolemia_Diagnosis_441f4a33_d6ee_49bc_8cb0_2817be9ea41d_source",
-      "variable": false
-    },
-    "AtherosclerosisandPeripheralArterialDisease_Diagnosis_2121111e_6784_4611_91b6_7acec0009de8": {
-      "title": "Atherosclerosis and Peripheral Arterial Disease  Value Set",
-      "description": "Diagnosis: Atherosclerosis and Peripheral Arterial",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.21",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "AtherosclerosisandPeripheralArterialDisease_Diagnosis_2121111e_6784_4611_91b6_7acec0009de8_source",
-      "variable": false
-    },
-    "PreventiveCareServices_Other_EncounterPerformed_4706eded_a1b7_4ab4_84ac_77159b96b60a": {
-      "title": "Preventive Care Services - Other",
-      "description": "Encounter, Performed: Preventive Care Services - Other",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1030",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_Other_EncounterPerformed_4706eded_a1b7_4ab4_84ac_77159b96b60a_source",
-      "variable": false
-    },
-    "PCI_ProcedurePerformed_87d3f9e4_c6f5_48e4_81fa_fa8e98c5ca6e": {
-      "title": "PCI",
-      "description": "Procedure, Performed: PCI",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.67",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PCI_ProcedurePerformed_87d3f9e4_c6f5_48e4_81fa_fa8e98c5ca6e_source",
-      "variable": false
-    },
-    "EndStageRenalDisease_Diagnosis_890e208f_287d_44d1_aaa5_781abdad20bd": {
-      "title": "End Stage Renal Disease",
-      "description": "Diagnosis: End Stage Renal Disease",
-      "code_list_id": "2.16.840.1.113883.3.526.3.353",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "EndStageRenalDisease_Diagnosis_890e208f_287d_44d1_aaa5_781abdad20bd_source",
-      "variable": false
-    },
-    "CarotidIntervention_ProcedurePerformed_8733203f_7b7f_436a_8185_1d187348f763": {
-      "title": "Carotid Intervention",
-      "description": "Procedure, Performed: Carotid Intervention",
-      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.204",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "CarotidIntervention_ProcedurePerformed_8733203f_7b7f_436a_8185_1d187348f763_source",
-      "variable": false
-    },
-    "Diabetes_Diagnosis_2fa9e51b_b5d2_4b62_9629_f4611f253888": {
-      "title": "Diabetes",
-      "description": "Diagnosis: Diabetes",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.103.12.1001",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Diabetes_Diagnosis_2fa9e51b_b5d2_4b62_9629_f4611f253888_source",
-      "variable": false
-    },
-    "LiverDisease_Diagnosis_c4fd46cc_d574_4f3a_8a61_fef728a7dbf3": {
-      "title": "Liver Disease",
-      "description": "Diagnosis: Liver Disease",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.42",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "LiverDisease_Diagnosis_c4fd46cc_d574_4f3a_8a61_fef728a7dbf3_source",
-      "variable": false
-    },
-    "Breastfeeding_Diagnosis_b9f484df_6964_48ef_a276_98af7c069878": {
-      "title": "Breastfeeding",
-      "description": "Diagnosis: Breastfeeding",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.73",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Breastfeeding_Diagnosis_b9f484df_6964_48ef_a276_98af7c069878_source",
-      "variable": false
-    },
-    "HepatitisA_Diagnosis_3abe967c_97ea_4d9a_a52c_dbdf0be927a9": {
-      "title": "Hepatitis A",
-      "description": "Diagnosis: Hepatitis A",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1024",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "HepatitisA_Diagnosis_3abe967c_97ea_4d9a_a52c_dbdf0be927a9_source",
-      "variable": false
-    },
-    "PreventiveCareServices_InitialOfficeVisit18andUp_EncounterPerformed_124574d9_da9c_47a8_a32d_37581cbb3470": {
-      "title": "Preventive Care Services-Initial Office Visit, 18 and Up",
-      "description": "Encounter, Performed: Preventive Care Services-Initial Office Visit, 18 and Up",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.11.1115",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_InitialOfficeVisit18andUp_EncounterPerformed_124574d9_da9c_47a8_a32d_37581cbb3470_source",
-      "variable": false
-    },
-    "HepatitisB_Diagnosis_9b36a2a2_681d_49f4_841d_b00c5436c4d6": {
-      "title": "Hepatitis B",
-      "description": "Diagnosis: Hepatitis B",
-      "code_list_id": "2.16.840.1.113883.3.67.1.101.1.269",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "HepatitisB_Diagnosis_9b36a2a2_681d_49f4_841d_b00c5436c4d6_source",
-      "variable": false
-    },
-    "ONCAdministrativeSex_PatientCharacteristicSex_0f6662d1_0d96_41b4_800b_77f8f7dc90a7": {
-      "title": "ONC Administrative Sex Administrative",
-      "description": "Patient Characteristic Sex: ONC Administrative Sex Administrative",
-      "code_list_id": "2.16.840.1.113762.1.4.1",
-      "property": "gender",
-      "type": "characteristic",
-      "definition": "patient_characteristic_gender",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "ONCAdministrativeSex_PatientCharacteristicSex_0f6662d1_0d96_41b4_800b_77f8f7dc90a7_source",
-      "variable": false,
-      "value": {
-        "type": "CD",
-        "system": "Administrative Sex",
-        "code": "F"
-      }
-    },
-    "Race_PatientCharacteristicRace_054c1448_3f7c_4fd5_b935_fc264f0ab289": {
-      "title": "Race",
-      "description": "Patient Characteristic Race: Race",
-      "code_list_id": "2.16.840.1.114222.4.11.836",
-      "property": "race",
-      "type": "characteristic",
-      "definition": "patient_characteristic_race",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Race_PatientCharacteristicRace_054c1448_3f7c_4fd5_b935_fc264f0ab289_source",
-      "variable": false,
-      "inline_code_list": {
-        "CDC Race": [
-          "1002-5",
-          "2028-9",
-          "2054-5",
-          "2076-8",
-          "2106-3",
-          "2131-1"
-        ]
-      }
-    },
-    "Payer_PatientCharacteristicPayer_901b9f47_b10c_4958_b368_65e1f4fa4c1a": {
-      "title": "Payer Source of Payment",
-      "description": "Patient Characteristic Payer: Payer Source of Payment",
-      "code_list_id": "2.16.840.1.114222.4.11.3591",
-      "property": "payer",
-      "type": "characteristic",
-      "definition": "patient_characteristic_payer",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Payer_PatientCharacteristicPayer_901b9f47_b10c_4958_b368_65e1f4fa4c1a_source",
-      "variable": false,
-      "inline_code_list": {
-        "Source of Payment Typology": [
-          "1",
-          "11",
-          "111",
-          "112",
-          "113",
-          "119",
-          "12",
-          "121",
-          "122",
-          "123",
-          "129",
-          "13",
-          "14",
-          "19",
-          "191",
-          "2",
-          "21",
-          "211",
-          "212",
-          "213",
-          "219",
-          "22",
-          "23",
-          "24",
-          "25",
-          "26",
-          "29",
-          "291",
-          "3",
-          "31",
-          "311",
-          "3111",
-          "3112",
-          "3113",
-          "3114",
-          "3115",
-          "3116",
-          "3119",
-          "312",
-          "3121",
-          "3122",
-          "3123",
-          "313",
-          "32",
-          "321",
-          "3211",
-          "3212",
-          "32121",
-          "32122",
-          "32123",
-          "32124",
-          "32125",
-          "32126",
-          "322",
-          "3221",
-          "3222",
-          "3223",
-          "3229",
-          "33",
-          "331",
-          "332",
-          "333",
-          "334",
-          "34",
-          "341",
-          "342",
-          "343",
-          "349",
-          "35",
-          "36",
-          "361",
-          "362",
-          "369",
-          "37",
-          "371",
-          "3711",
-          "3712",
-          "3713",
-          "372",
-          "379",
-          "38",
-          "381",
-          "3811",
-          "3812",
-          "3813",
-          "3819",
-          "382",
-          "389",
-          "39",
-          "4",
-          "41",
-          "42",
-          "43",
-          "44",
-          "5",
-          "51",
-          "511",
-          "512",
-          "513",
-          "514",
-          "515",
-          "516",
-          "519",
-          "52",
-          "521",
-          "522",
-          "523",
-          "529",
-          "53",
-          "54",
-          "55",
-          "56",
-          "561",
-          "562",
-          "59",
-          "6",
-          "61",
-          "611",
-          "612",
-          "613",
-          "619",
-          "62",
-          "63",
-          "64",
-          "69",
-          "7",
-          "71",
-          "72",
-          "73",
-          "79",
-          "8",
-          "81",
-          "82",
-          "821",
-          "822",
-          "823",
-          "83",
-          "84",
-          "85",
-          "89",
-          "9",
-          "91",
-          "92",
-          "93",
-          "94",
-          "95",
-          "951",
-          "953",
-          "954",
-          "959",
-          "96",
-          "97",
-          "98",
-          "99",
-          "9999"
-        ]
-      }
-    },
-    "Ethnicity_PatientCharacteristicEthnicity_faad2452_237e_426a_899c_6d6817eb4ae9": {
-      "title": "Ethnicity",
-      "description": "Patient Characteristic Ethnicity: Ethnicity",
-      "code_list_id": "2.16.840.1.114222.4.11.837",
-      "property": "ethnicity",
-      "type": "characteristic",
-      "definition": "patient_characteristic_ethnicity",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Ethnicity_PatientCharacteristicEthnicity_faad2452_237e_426a_899c_6d6817eb4ae9_source",
-      "variable": false,
-      "inline_code_list": {
-        "CDC Race": [
-          "2135-2",
-          "2186-5"
-        ]
-      }
-    }
-  },
   "description": "Percentage of the following patients - all considered at high risk of cardiovascular events - who were prescribed or were on statin therapy during the measurement period: \n*Adults aged >= 21 years who were previously diagnosed with or currently have an active diagnosis of clinical atherosclerotic cardiovascular disease (ASCVD); OR \n*Adults aged >= 21 years who have ever had a fasting or direct low-density lipoprotein cholesterol (LDL-C) level >= 190 mg/dL or were previously diagnosed with or currently have an active diagnosis of familial or pure hypercholesterolemia; OR \n*Adults aged 40-75 years with a diagnosis of diabetes with a fasting or direct LDL-C level of 70-189 mg/dL",
   "hqmf_id": "40280582-5BB1-1AEA-015B-FDFA9AB70B54",
   "hqmf_set_id": "E075A7F3-D272-4B6C-A677-84C4BC780D4E",
@@ -17339,677 +16705,997 @@
       "title": "Population Criteria Section"
     }
   ],
-  "source_data_criteria": {
-    "OutpatientConsultation_EncounterPerformed_9ebfeb54_36bd_40c2_a5bb_f4161353fddb_source": {
-      "title": "Outpatient Consultation",
+  "source_data_criteria": [
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.11.1040",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: Outpatient Consultation",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.11.1040",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "OutpatientConsultation_EncounterPerformed_9ebfeb54_36bd_40c2_a5bb_f4161353fddb_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c828"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "StatinAllergen_AdverseEvent_0642c70a_9e54_4d5a_804a_e04b123dc75e_source": {
-      "title": "Statin Allergen",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.117.1.7.1.423",
+      "dataElementCodes": [
+
+      ],
       "description": "Adverse Event: Statin Allergen",
-      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.423",
-      "type": "adverse_events",
-      "definition": "adverse_event",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "StatinAllergen_AdverseEvent_0642c70a_9e54_4d5a_804a_e04b123dc75e_source",
-      "variable": false
+      "facilityLocation": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.120",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c829"
+      },
+      "qdmCategory": "adverse_event",
+      "qdmTitle": "Adverse Event",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "severity": null,
+      "type": null,
+      "_type": "QDM::AdverseEvent"
     },
-    "StatinAllergen_Allergy_Intolerance_0642c70a_9e54_4d5a_804a_e04b123dc75e_source": {
-      "title": "Statin Allergen",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.117.1.7.1.423",
+      "dataElementCodes": [
+
+      ],
       "description": "Allergy/Intolerance: Statin Allergen",
-      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.423",
-      "type": "allergies_intolerances",
-      "definition": "allergy_intolerance",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "StatinAllergen_Allergy_Intolerance_0642c70a_9e54_4d5a_804a_e04b123dc75e_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.119",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c82a"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "allergy",
+      "qdmStatus": "intolerance",
+      "qdmTitle": "Allergy/Intolerance",
+      "qdmVersion": "5.4",
+      "severity": null,
+      "type": null,
+      "_type": "QDM::AllergyIntolerance"
     },
-    "PalliativeCare_InterventionPerformed_80ca46ce_4c01_4cf8_aad4_edb8fbe47284_source": {
-      "title": "Palliative Care",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.600.1.1579",
+      "dataElementCodes": [
+
+      ],
       "description": "Intervention, Performed: Palliative Care",
-      "code_list_id": "2.16.840.1.113883.3.600.1.1579",
-      "type": "interventions",
-      "definition": "intervention",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PalliativeCare_InterventionPerformed_80ca46ce_4c01_4cf8_aad4_edb8fbe47284_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.36",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c82b"
+      },
+      "negationRationale": null,
+      "qdmCategory": "intervention",
+      "qdmStatus": "performed",
+      "qdmTitle": "Intervention, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "status": null,
+      "_type": "QDM::InterventionPerformed"
     },
-    "OutpatientEncountersforPreventiveCare_EncounterPerformed_150ee4c2_83cd_46ac_9fe5_ec238c453762_source": {
-      "title": "Outpatient Encounters for Preventive Care",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.9",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: Outpatient Encounters for Preventive Care",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.9",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "OutpatientEncountersforPreventiveCare_EncounterPerformed_150ee4c2_83cd_46ac_9fe5_ec238c453762_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c82c"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "Rhabdomyolysis_Diagnosis_9173182c_585b_48d4_bd4b_c93bb558816e_source": {
-      "title": "Rhabdomyolysis",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.102",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Rhabdomyolysis",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.102",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Rhabdomyolysis_Diagnosis_9173182c_585b_48d4_bd4b_c93bb558816e_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c82d"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "PreventiveCareServices_EstablishedOfficeVisit18andUp_EncounterPerformed_87a31d70_68ba_40af_8490_0b31b3b09f9a_source": {
-      "title": "Preventive Care Services - Established Office Visit, 18 and Up",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.11.1125",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: Preventive Care Services - Established Office Visit, 18 and Up",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.11.1125",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_EstablishedOfficeVisit18andUp_EncounterPerformed_87a31d70_68ba_40af_8490_0b31b3b09f9a_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c82e"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "Ischemicheartdiseaseorcoronaryocclusionruptureorthrombosis_Diagnosis_dc57fed7_7dfc_4dba_938c_7ad06f9d314c_source": {
-      "title": "Ischemic heart disease or coronary occlusion, rupture, or thrombosis",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.46",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Ischemic heart disease or coronary occlusion, rupture, or thrombosis",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.46",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Ischemicheartdiseaseorcoronaryocclusionruptureorthrombosis_Diagnosis_dc57fed7_7dfc_4dba_938c_7ad06f9d314c_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c82f"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "Highintensitystatintherapy_MedicationOrder_b811ab5c_f3ed_4bf1_8590_3e8cdb763910_source": {
-      "title": "High intensity statin therapy",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.97",
+      "dataElementCodes": [
+
+      ],
+      "daysSupplied": null,
       "description": "Medication, Order: High intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.97",
-      "type": "medications",
-      "definition": "medication",
-      "status": "ordered",
-      "hard_status": true,
-      "negation": false,
-      "source_data_criteria": "Highintensitystatintherapy_MedicationOrder_b811ab5c_f3ed_4bf1_8590_3e8cdb763910_source",
-      "variable": false
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.51",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c830"
+      },
+      "negationRationale": null,
+      "prescriberId": null,
+      "qdmCategory": "medication",
+      "qdmStatus": "order",
+      "qdmTitle": "Medication, Order",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "refills": null,
+      "relevantPeriod": null,
+      "route": null,
+      "setting": null,
+      "supply": null,
+      "_type": "QDM::MedicationOrder"
     },
-    "Highintensitystatintherapy_MedicationActive_b811ab5c_f3ed_4bf1_8590_3e8cdb763910_source": {
-      "title": "High intensity statin therapy",
+    {
+      "codeListId": "2.16.840.1.113762.1.4.1047.97",
+      "dataElementCodes": [
+
+      ],
       "description": "Medication, Active: High intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.97",
-      "type": "medications",
-      "definition": "medication",
-      "status": "active",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Highintensitystatintherapy_MedicationActive_b811ab5c_f3ed_4bf1_8590_3e8cdb763910_source",
-      "variable": false
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.44",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c831"
+      },
+      "qdmCategory": "medication",
+      "qdmStatus": "active",
+      "qdmTitle": "Medication, Active",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "route": null,
+      "_type": "QDM::MedicationActive"
     },
-    "CABGSurgeries_ProcedurePerformed_adf5877c_cae0_413b_b39a_30bd29a88cac_source": {
-      "title": "CABG Surgeries",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.666.5.694",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Procedure, Performed: CABG Surgeries",
-      "code_list_id": "2.16.840.1.113883.3.666.5.694",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "CABGSurgeries_ProcedurePerformed_adf5877c_cae0_413b_b39a_30bd29a88cac_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c832"
+      },
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmCategory": "procedure",
+      "qdmStatus": "performed",
+      "qdmTitle": "Procedure, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
     },
-    "Moderateintensitystatintherapy_MedicationOrder_8d3d74b2_6d0f_43c7_94d3_842bd90825ee_source": {
-      "title": "Moderate intensity statin therapy",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.98",
+      "dataElementCodes": [
+
+      ],
+      "daysSupplied": null,
       "description": "Medication, Order: Moderate intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.98",
-      "type": "medications",
-      "definition": "medication",
-      "status": "ordered",
-      "hard_status": true,
-      "negation": false,
-      "source_data_criteria": "Moderateintensitystatintherapy_MedicationOrder_8d3d74b2_6d0f_43c7_94d3_842bd90825ee_source",
-      "variable": false
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.51",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c833"
+      },
+      "negationRationale": null,
+      "prescriberId": null,
+      "qdmCategory": "medication",
+      "qdmStatus": "order",
+      "qdmTitle": "Medication, Order",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "refills": null,
+      "relevantPeriod": null,
+      "route": null,
+      "setting": null,
+      "supply": null,
+      "_type": "QDM::MedicationOrder"
     },
-    "Moderateintensitystatintherapy_MedicationActive_8d3d74b2_6d0f_43c7_94d3_842bd90825ee_source": {
-      "title": "Moderate intensity statin therapy",
+    {
+      "codeListId": "2.16.840.1.113762.1.4.1047.98",
+      "dataElementCodes": [
+
+      ],
       "description": "Medication, Active: Moderate intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.98",
-      "type": "medications",
-      "definition": "medication",
-      "status": "active",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Moderateintensitystatintherapy_MedicationActive_8d3d74b2_6d0f_43c7_94d3_842bd90825ee_source",
-      "variable": false
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.44",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c834"
+      },
+      "qdmCategory": "medication",
+      "qdmStatus": "active",
+      "qdmTitle": "Medication, Active",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "route": null,
+      "_type": "QDM::MedicationActive"
     },
-    "PregnancyDx_Diagnosis_f19f6669_8325_4877_af8b_a4e6195b886a_source": {
-      "title": "Pregnancy Dx",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.600.1.1623",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Pregnancy Dx",
-      "code_list_id": "2.16.840.1.113883.3.600.1.1623",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PregnancyDx_Diagnosis_f19f6669_8325_4877_af8b_a4e6195b886a_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c835"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "OfficeVisit_EncounterPerformed_a5301ced_7777_4dc6_9186_dcaebec470ff_source": {
-      "title": "Office Visit",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.11.1005",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: Office Visit",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.11.1005",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "OfficeVisit_EncounterPerformed_a5301ced_7777_4dc6_9186_dcaebec470ff_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c836"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "PreventiveCareServices_IndividualCounseling_EncounterPerformed_b5f1dcb0_f6cd_4ba2_ad01_121b460567a9_source": {
-      "title": "Preventive Care Services-Individual Counseling",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.12.1026",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: Preventive Care Services-Individual Counseling",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1026",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_IndividualCounseling_EncounterPerformed_b5f1dcb0_f6cd_4ba2_ad01_121b460567a9_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c837"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "LDLTest_LaboratoryTestPerformed_dfc0eb1c_63c5_4b29_ac69_d74cc67a97fc_source": {
-      "title": "LDL Test",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.198.11.1029",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Laboratory Test, Performed: LDL Test",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.198.11.1029",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "LDLTest_LaboratoryTestPerformed_dfc0eb1c_63c5_4b29_ac69_d74cc67a97fc_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.42",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c838"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "laboratory_test",
+      "qdmStatus": "performed",
+      "qdmTitle": "Laboratory Test, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": null,
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
     },
-    "StableandUnstableAngina_Diagnosis_706a8eab_e769_42f1_8395_f6b923a1e2a1_source": {
-      "title": "Stable and Unstable Angina",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.47",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Stable and Unstable Angina",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.47",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "StableandUnstableAngina_Diagnosis_706a8eab_e769_42f1_8395_f6b923a1e2a1_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c839"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "Lowintensitystatintherapy_MedicationOrder_12e465f8_7d57_412f_a7bb_f63bf1603279_source": {
-      "title": "Low intensity statin therapy",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.107",
+      "dataElementCodes": [
+
+      ],
+      "daysSupplied": null,
       "description": "Medication, Order: Low intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.107",
-      "type": "medications",
-      "definition": "medication",
-      "status": "ordered",
-      "hard_status": true,
-      "negation": false,
-      "source_data_criteria": "Lowintensitystatintherapy_MedicationOrder_12e465f8_7d57_412f_a7bb_f63bf1603279_source",
-      "variable": false
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.51",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c83a"
+      },
+      "negationRationale": null,
+      "prescriberId": null,
+      "qdmCategory": "medication",
+      "qdmStatus": "order",
+      "qdmTitle": "Medication, Order",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "refills": null,
+      "relevantPeriod": null,
+      "route": null,
+      "setting": null,
+      "supply": null,
+      "_type": "QDM::MedicationOrder"
     },
-    "Lowintensitystatintherapy_MedicationActive_12e465f8_7d57_412f_a7bb_f63bf1603279_source": {
-      "title": "Low intensity statin therapy",
+    {
+      "codeListId": "2.16.840.1.113762.1.4.1047.107",
+      "dataElementCodes": [
+
+      ],
       "description": "Medication, Active: Low intensity statin therapy",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.107",
-      "type": "medications",
-      "definition": "medication",
-      "status": "active",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Lowintensitystatintherapy_MedicationActive_12e465f8_7d57_412f_a7bb_f63bf1603279_source",
-      "variable": false
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.44",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c83b"
+      },
+      "qdmCategory": "medication",
+      "qdmStatus": "active",
+      "qdmTitle": "Medication, Active",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "route": null,
+      "_type": "QDM::MedicationActive"
     },
-    "AnnualWellnessVisit_EncounterPerformed_61bc2a43_ecbc_41ce_b567_0d3020a9f81f_source": {
-      "title": "Annual Wellness Visit",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.526.2.1363",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: Annual Wellness Visit",
-      "code_list_id": "2.16.840.1.113883.3.526.2.1363",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "AnnualWellnessVisit_EncounterPerformed_61bc2a43_ecbc_41ce_b567_0d3020a9f81f_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c83c"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "MyocardialInfarction_Diagnosis_3857e855_fa8f_4499_a986_dd00a4990db3_source": {
-      "title": "Myocardial Infarction",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.526.3.403",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Myocardial Infarction",
-      "code_list_id": "2.16.840.1.113883.3.526.3.403",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "MyocardialInfarction_Diagnosis_3857e855_fa8f_4499_a986_dd00a4990db3_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c83d"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "CerebrovasculardiseaseStrokeTIA_Diagnosis_42c2e37e_1951_449a_84e1_d883d354b32b_source": {
-      "title": "Cerebrovascular disease, Stroke, TIA",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.44",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Cerebrovascular disease, Stroke, TIA",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.44",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "CerebrovasculardiseaseStrokeTIA_Diagnosis_42c2e37e_1951_449a_84e1_d883d354b32b_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c83e"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "Hypercholesterolemia_Diagnosis_441f4a33_d6ee_49bc_8cb0_2817be9ea41d_source": {
-      "title": "Hypercholesterolemia",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.100",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Hypercholesterolemia",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.100",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Hypercholesterolemia_Diagnosis_441f4a33_d6ee_49bc_8cb0_2817be9ea41d_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c83f"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "AtherosclerosisandPeripheralArterialDisease_Diagnosis_2121111e_6784_4611_91b6_7acec0009de8_source": {
-      "title": "Atherosclerosis and Peripheral Arterial Disease  Value Set",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.21",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Atherosclerosis and Peripheral Arterial",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.21",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "AtherosclerosisandPeripheralArterialDisease_Diagnosis_2121111e_6784_4611_91b6_7acec0009de8_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c840"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "PreventiveCareServices_Other_EncounterPerformed_4706eded_a1b7_4ab4_84ac_77159b96b60a_source": {
-      "title": "Preventive Care Services - Other",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.12.1030",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: Preventive Care Services - Other",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1030",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_Other_EncounterPerformed_4706eded_a1b7_4ab4_84ac_77159b96b60a_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c841"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "PCI_ProcedurePerformed_87d3f9e4_c6f5_48e4_81fa_fa8e98c5ca6e_source": {
-      "title": "PCI",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1045.67",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Procedure, Performed: PCI",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.67",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PCI_ProcedurePerformed_87d3f9e4_c6f5_48e4_81fa_fa8e98c5ca6e_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c842"
+      },
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmCategory": "procedure",
+      "qdmStatus": "performed",
+      "qdmTitle": "Procedure, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
     },
-    "EndStageRenalDisease_Diagnosis_890e208f_287d_44d1_aaa5_781abdad20bd_source": {
-      "title": "End Stage Renal Disease",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.526.3.353",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: End Stage Renal Disease",
-      "code_list_id": "2.16.840.1.113883.3.526.3.353",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "EndStageRenalDisease_Diagnosis_890e208f_287d_44d1_aaa5_781abdad20bd_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c843"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "CarotidIntervention_ProcedurePerformed_8733203f_7b7f_436a_8185_1d187348f763_source": {
-      "title": "Carotid Intervention",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.117.1.7.1.204",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Procedure, Performed: Carotid Intervention",
-      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.204",
-      "type": "procedures",
-      "definition": "procedure",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "CarotidIntervention_ProcedurePerformed_8733203f_7b7f_436a_8185_1d187348f763_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c844"
+      },
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": null,
+      "ordinality": null,
+      "qdmCategory": "procedure",
+      "qdmStatus": "performed",
+      "qdmTitle": "Procedure, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "status": null,
+      "_type": "QDM::ProcedurePerformed"
     },
-    "Diabetes_Diagnosis_2fa9e51b_b5d2_4b62_9629_f4611f253888_source": {
-      "title": "Diabetes",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.103.12.1001",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Diabetes",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.103.12.1001",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Diabetes_Diagnosis_2fa9e51b_b5d2_4b62_9629_f4611f253888_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c845"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "LiverDisease_Diagnosis_c4fd46cc_d574_4f3a_8a61_fef728a7dbf3_source": {
-      "title": "Liver Disease",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.42",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Liver Disease",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.42",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "LiverDisease_Diagnosis_c4fd46cc_d574_4f3a_8a61_fef728a7dbf3_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c846"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "Breastfeeding_Diagnosis_b9f484df_6964_48ef_a276_98af7c069878_source": {
-      "title": "Breastfeeding",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1047.73",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Breastfeeding",
-      "code_list_id": "2.16.840.1.113762.1.4.1047.73",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Breastfeeding_Diagnosis_b9f484df_6964_48ef_a276_98af7c069878_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c847"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "HepatitisA_Diagnosis_3abe967c_97ea_4d9a_a52c_dbdf0be927a9_source": {
-      "title": "Hepatitis A",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.110.12.1024",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Hepatitis A",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.110.12.1024",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "HepatitisA_Diagnosis_3abe967c_97ea_4d9a_a52c_dbdf0be927a9_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c848"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "PreventiveCareServices_InitialOfficeVisit18andUp_EncounterPerformed_124574d9_da9c_47a8_a32d_37581cbb3470_source": {
-      "title": "Preventive Care Services-Initial Office Visit, 18 and Up",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.464.1003.101.11.1115",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: Preventive Care Services-Initial Office Visit, 18 and Up",
-      "code_list_id": "2.16.840.1.113883.3.464.1003.101.11.1115",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PreventiveCareServices_InitialOfficeVisit18andUp_EncounterPerformed_124574d9_da9c_47a8_a32d_37581cbb3470_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c849"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "HepatitisB_Diagnosis_9b36a2a2_681d_49f4_841d_b00c5436c4d6_source": {
-      "title": "Hepatitis B",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.67.1.101.1.269",
+      "dataElementCodes": [
+
+      ],
       "description": "Diagnosis: Hepatitis B",
-      "code_list_id": "2.16.840.1.113883.3.67.1.101.1.269",
-      "type": "conditions",
-      "definition": "diagnosis",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "HepatitisB_Diagnosis_9b36a2a2_681d_49f4_841d_b00c5436c4d6_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c84a"
+      },
+      "prevalencePeriod": null,
+      "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
+      "qdmVersion": "5.4",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "severity": null,
+      "_type": "QDM::Diagnosis"
     },
-    "ONCAdministrativeSex_PatientCharacteristicSex_0f6662d1_0d96_41b4_800b_77f8f7dc90a7_source": {
-      "title": "ONC Administrative Sex Administrative",
+    {
+      "codeListId": "2.16.840.1.113762.1.4.1",
+      "dataElementCodes": [
+
+      ],
       "description": "Patient Characteristic Sex: ONC Administrative Sex Administrative",
-      "code_list_id": "2.16.840.1.113762.1.4.1",
-      "property": "gender",
-      "type": "characteristic",
-      "definition": "patient_characteristic_gender",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "ONCAdministrativeSex_PatientCharacteristicSex_0f6662d1_0d96_41b4_800b_77f8f7dc90a7_source",
-      "variable": false,
-      "value": {
-        "type": "CD",
-        "system": "Administrative Sex",
-        "code": "F"
-      }
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c84b"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "gender",
+      "qdmTitle": "Patient Characteristic Sex",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicSex"
     },
-    "Race_PatientCharacteristicRace_054c1448_3f7c_4fd5_b935_fc264f0ab289_source": {
-      "title": "Race",
+    {
+      "codeListId": "2.16.840.1.114222.4.11.836",
+      "dataElementCodes": [
+
+      ],
       "description": "Patient Characteristic Race: Race",
-      "code_list_id": "2.16.840.1.114222.4.11.836",
-      "property": "race",
-      "type": "characteristic",
-      "definition": "patient_characteristic_race",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Race_PatientCharacteristicRace_054c1448_3f7c_4fd5_b935_fc264f0ab289_source",
-      "variable": false,
-      "inline_code_list": {
-        "CDC Race": [
-          "1002-5",
-          "2028-9",
-          "2054-5",
-          "2076-8",
-          "2106-3",
-          "2131-1"
-        ]
-      }
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c84c"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "race",
+      "qdmTitle": "Patient Characteristic Race",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicRace"
     },
-    "Payer_PatientCharacteristicPayer_901b9f47_b10c_4958_b368_65e1f4fa4c1a_source": {
-      "title": "Payer Source of Payment",
+    {
+      "codeListId": "2.16.840.1.114222.4.11.3591",
+      "dataElementCodes": [
+
+      ],
       "description": "Patient Characteristic Payer: Payer Source of Payment",
-      "code_list_id": "2.16.840.1.114222.4.11.3591",
-      "property": "payer",
-      "type": "characteristic",
-      "definition": "patient_characteristic_payer",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Payer_PatientCharacteristicPayer_901b9f47_b10c_4958_b368_65e1f4fa4c1a_source",
-      "variable": false,
-      "inline_code_list": {
-        "Source of Payment Typology": [
-          "1",
-          "11",
-          "111",
-          "112",
-          "113",
-          "119",
-          "12",
-          "121",
-          "122",
-          "123",
-          "129",
-          "13",
-          "14",
-          "19",
-          "191",
-          "2",
-          "21",
-          "211",
-          "212",
-          "213",
-          "219",
-          "22",
-          "23",
-          "24",
-          "25",
-          "26",
-          "29",
-          "291",
-          "3",
-          "31",
-          "311",
-          "3111",
-          "3112",
-          "3113",
-          "3114",
-          "3115",
-          "3116",
-          "3119",
-          "312",
-          "3121",
-          "3122",
-          "3123",
-          "313",
-          "32",
-          "321",
-          "3211",
-          "3212",
-          "32121",
-          "32122",
-          "32123",
-          "32124",
-          "32125",
-          "32126",
-          "322",
-          "3221",
-          "3222",
-          "3223",
-          "3229",
-          "33",
-          "331",
-          "332",
-          "333",
-          "334",
-          "34",
-          "341",
-          "342",
-          "343",
-          "349",
-          "35",
-          "36",
-          "361",
-          "362",
-          "369",
-          "37",
-          "371",
-          "3711",
-          "3712",
-          "3713",
-          "372",
-          "379",
-          "38",
-          "381",
-          "3811",
-          "3812",
-          "3813",
-          "3819",
-          "382",
-          "389",
-          "39",
-          "4",
-          "41",
-          "42",
-          "43",
-          "44",
-          "5",
-          "51",
-          "511",
-          "512",
-          "513",
-          "514",
-          "515",
-          "516",
-          "519",
-          "52",
-          "521",
-          "522",
-          "523",
-          "529",
-          "53",
-          "54",
-          "55",
-          "56",
-          "561",
-          "562",
-          "59",
-          "6",
-          "61",
-          "611",
-          "612",
-          "613",
-          "619",
-          "62",
-          "63",
-          "64",
-          "69",
-          "7",
-          "71",
-          "72",
-          "73",
-          "79",
-          "8",
-          "81",
-          "82",
-          "821",
-          "822",
-          "823",
-          "83",
-          "84",
-          "85",
-          "89",
-          "9",
-          "91",
-          "92",
-          "93",
-          "94",
-          "95",
-          "951",
-          "953",
-          "954",
-          "959",
-          "96",
-          "97",
-          "98",
-          "99",
-          "9999"
-        ]
-      }
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.58",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c84d"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "payer",
+      "qdmTitle": "Patient Characteristic Payer",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::PatientCharacteristicPayer"
     },
-    "Ethnicity_PatientCharacteristicEthnicity_faad2452_237e_426a_899c_6d6817eb4ae9_source": {
-      "title": "Ethnicity",
+    {
+      "codeListId": "2.16.840.1.114222.4.11.837",
+      "dataElementCodes": [
+
+      ],
       "description": "Patient Characteristic Ethnicity: Ethnicity",
-      "code_list_id": "2.16.840.1.114222.4.11.837",
-      "property": "ethnicity",
-      "type": "characteristic",
-      "definition": "patient_characteristic_ethnicity",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Ethnicity_PatientCharacteristicEthnicity_faad2452_237e_426a_899c_6d6817eb4ae9_source",
-      "variable": false,
-      "inline_code_list": {
-        "CDC Race": [
-          "2135-2",
-          "2186-5"
-        ]
-      }
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369d15cc975300542c84e"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "ethnicity",
+      "qdmTitle": "Patient Characteristic Ethnicity",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicEthnicity"
     }
-  },
+  ],
   "title": "Statin Therapy",
   "updated_at": null,
   "value_set_ids": [
-    "5c924913a564ac369e6fb0fb",
-    "5c924913a564ac369e6fb0fc",
-    "5c924913a564ac369e6fb0fd",
-    "5c924913a564ac369e6fb0fe",
-    "5c924913a564ac369e6fb0ff",
-    "5c924913a564ac369e6fb100",
-    "5c924913a564ac369e6fb101",
-    "5c924913a564ac369e6fb102",
-    "5c924913a564ac369e6fb103",
-    "5c924913a564ac369e6fb104",
-    "5c924913a564ac369e6fb105",
-    "5c924913a564ac369e6fb106",
-    "5c924913a564ac369e6fb107",
-    "5c924913a564ac369e6fb108",
-    "5c924913a564ac369e6fb109",
-    "5c924913a564ac369e6fb10a",
-    "5c924913a564ac369e6fb10b",
-    "5c924913a564ac369e6fb10c",
-    "5c924913a564ac369e6fb10d",
-    "5c924913a564ac369e6fb10e",
-    "5c924913a564ac369e6fb10f",
-    "5c924913a564ac369e6fb110",
-    "5c924913a564ac369e6fb111",
-    "5c924913a564ac369e6fb112",
-    "5c924913a564ac369e6fb113",
-    "5c924913a564ac369e6fb114",
-    "5c924913a564ac369e6fb115",
-    "5c924913a564ac369e6fb116",
-    "5c924913a564ac369e6fb117",
-    "5c924913a564ac369e6fb118",
-    "5c924913a564ac369e6fb119",
-    "5c924913a564ac369e6fb11a",
-    "5c924913a564ac369e6fb11b",
-    "5c924913a564ac369e6fb11c",
-    "5c924913a564ac369e6fb11d"
+    "5ca369d25cc975300542c84f",
+    "5ca369d25cc975300542c850",
+    "5ca369d25cc975300542c851",
+    "5ca369d25cc975300542c852",
+    "5ca369d25cc975300542c853",
+    "5ca369d25cc975300542c854",
+    "5ca369d25cc975300542c855",
+    "5ca369d25cc975300542c856",
+    "5ca369d25cc975300542c857",
+    "5ca369d25cc975300542c858",
+    "5ca369d25cc975300542c859",
+    "5ca369d25cc975300542c85a",
+    "5ca369d25cc975300542c85b",
+    "5ca369d25cc975300542c85c",
+    "5ca369d25cc975300542c85d",
+    "5ca369d25cc975300542c85e",
+    "5ca369d25cc975300542c85f",
+    "5ca369d25cc975300542c860",
+    "5ca369d25cc975300542c861",
+    "5ca369d25cc975300542c862",
+    "5ca369d25cc975300542c863",
+    "5ca369d25cc975300542c864",
+    "5ca369d25cc975300542c865",
+    "5ca369d25cc975300542c866",
+    "5ca369d25cc975300542c867",
+    "5ca369d25cc975300542c868",
+    "5ca369d25cc975300542c869",
+    "5ca369d25cc975300542c86a",
+    "5ca369d25cc975300542c86b",
+    "5ca369d25cc975300542c86c",
+    "5ca369d25cc975300542c86d",
+    "5ca369d25cc975300542c86e",
+    "5ca369d25cc975300542c86f",
+    "5ca369d25cc975300542c870",
+    "5ca369d25cc975300542c871"
   ]
 }
