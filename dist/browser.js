@@ -3,8 +3,9 @@ window.cqm = window.cqm || {};
 window.cqm.execution = require('./index');
 window.cqm.models = require('cqm-models');
 
-},{"./index":5,"cqm-models":254}],2:[function(require,module,exports){
+},{"./index":5,"cqm-models":255}],2:[function(require,module,exports){
 const moment = require('moment');
+const CqmModels = require('cqm-models');
 
 /**
  * Contains helpers useful for calculation.
@@ -384,7 +385,7 @@ module.exports = class CalculatorHelpers {
       copyPop.statement_name = original.populations[popCode].statement_name;
       copy.populations[popCode] = copyPop;
     }
-    return copy;
+    return new CqmModels.PopulationSet(copy);
   }
 
   static getStratificationsAsPopulationSets(measure) {
@@ -458,7 +459,7 @@ module.exports = class CalculatorHelpers {
   }
 };
 
-},{"moment":261}],3:[function(require,module,exports){
+},{"cqm-models":255,"moment":262}],3:[function(require,module,exports){
 const _ = require('lodash');
 
 
@@ -837,7 +838,7 @@ module.exports = class MeasureHelpers {
   }
 };
 
-},{"lodash":260}],4:[function(require,module,exports){
+},{"lodash":261}],4:[function(require,module,exports){
 const _ = require('lodash');
 const MeasureHelpers = require('../helpers/measure_helpers');
 const cql = require('cqm-models').CQL;
@@ -1500,7 +1501,7 @@ module.exports = class ResultsHelpers {
   }
 };
 
-},{"../helpers/measure_helpers":3,"cqm-models":254,"lodash":260,"moment":261}],5:[function(require,module,exports){
+},{"../helpers/measure_helpers":3,"cqm-models":255,"lodash":261,"moment":262}],5:[function(require,module,exports){
 module.exports.CalculatorHelpers = require('./helpers/calculator_helpers.js');
 module.exports.MeasureHelpers = require('./helpers/measure_helpers.js');
 module.exports.ResultsHelpers = require('./helpers/results_helpers.js');
@@ -1627,7 +1628,7 @@ module.exports = class Calculator {
     );
 
     const stratificationPopulations = CalculatorHelpers.getStratificationsAsPopulationSets(measure);
-    measure.population_sets = measure.population_sets.concat(stratificationPopulations);
+    const populationSetsWithStratifcations = measure.population_sets.concat(stratificationPopulations);
 
     Object.keys(resultsRaw.patientResults).forEach((patientId) => {
       let populationResults;
@@ -1635,7 +1636,7 @@ module.exports = class Calculator {
       let populationRelevance;
       const patientResults = resultsRaw.patientResults[patientId];
       // Parse CQL statement results into population values
-      measure.population_sets.forEach((populationSet) => {
+      populationSetsWithStratifcations.forEach((populationSet) => {
         [populationResults, episodeResults] = Array.from(CalculatorHelpers.createPopulationValues(
           measure,
           populationSet,
@@ -1712,7 +1713,7 @@ module.exports = class Calculator {
   }
 };
 
-},{"../helpers/calculator_helpers":2,"../helpers/results_helpers":4,"./patient_source":7,"cqm-models":254,"lodash":260}],7:[function(require,module,exports){
+},{"../helpers/calculator_helpers":2,"../helpers/results_helpers":4,"./patient_source":7,"cqm-models":255,"lodash":261}],7:[function(require,module,exports){
 // This is a wrapper class for an array of QDM Patients
 // This class adds functions used by the execution engine to
 // traverse an array of QDM Patients
@@ -2848,7 +2849,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":10,"_process":367,"inherits":9}],12:[function(require,module,exports){
+},{"./support/isBuffer":10,"_process":368,"inherits":9}],12:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -8627,7 +8628,7 @@ module.exports = ret;
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("timers").setImmediate)
-},{"_process":367,"timers":371}],14:[function(require,module,exports){
+},{"_process":368,"timers":372}],14:[function(require,module,exports){
 (function (global){
 /**
  * Module dependencies.
@@ -11891,7 +11892,7 @@ module.exports.ObjectID = ObjectID;
 module.exports.ObjectId = ObjectID;
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"./parser/utils":30,"_process":367,"buffer":34,"util":373}],27:[function(require,module,exports){
+},{"./parser/utils":30,"_process":368,"buffer":34,"util":374}],27:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -14120,7 +14121,7 @@ BSON.JS_INT_MIN = -0x20000000000000; // Any integer down to -2^53 can be precise
 module.exports = serializeInto;
 
 }).call(this,{"isBuffer":require("../../../../is-buffer/index.js")})
-},{"../../../../is-buffer/index.js":258,"../binary":14,"../float_parser":20,"../long":22,"../map":23,"./utils":30}],30:[function(require,module,exports){
+},{"../../../../is-buffer/index.js":259,"../binary":14,"../float_parser":20,"../long":22,"../map":23,"./utils":30}],30:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -14241,7 +14242,7 @@ module.exports = Symbol;
 module.exports.Symbol = Symbol;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":34,"util":373}],33:[function(require,module,exports){
+},{"buffer":34,"util":374}],33:[function(require,module,exports){
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -16876,7 +16877,7 @@ function numberIsNaN (obj) {
   return obj !== obj // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":12,"ieee754":256}],35:[function(require,module,exports){
+},{"base64-js":12,"ieee754":257}],35:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Code, CodeService, ValueSet, ref;
@@ -62131,7 +62132,7 @@ function numberIsNaN (obj) {
 
 
 
-},{"../datatypes/datatypes":40,"../datatypes/exception":42,"../elm/library":59,"../util/util":169,"util":373}],164:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"../datatypes/exception":42,"../elm/library":59,"../util/util":169,"util":374}],164:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Executor, PatientContext, PopulationContext, Results, ref;
@@ -77070,7 +77071,7 @@ class AdverseEvent extends mongoose.Document {
 }
 module.exports.AdverseEvent = AdverseEvent;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],180:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],180:[function(require,module,exports){
 module.exports.Id = require('./Id.js').Id;
 module.exports.IdSchema = require('./Id.js').IdSchema;
 module.exports.PhysicalExamOrder = require('./PhysicalExamOrder.js').PhysicalExamOrder;
@@ -77229,7 +77230,7 @@ class AllergyIntolerance extends mongoose.Document {
 }
 module.exports.AllergyIntolerance = AllergyIntolerance;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],182:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],182:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77269,7 +77270,7 @@ class AssessmentOrder extends mongoose.Document {
 }
 module.exports.AssessmentOrder = AssessmentOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],183:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],183:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77313,7 +77314,7 @@ class AssessmentPerformed extends mongoose.Document {
 }
 module.exports.AssessmentPerformed = AssessmentPerformed;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],184:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],184:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77353,7 +77354,7 @@ class AssessmentRecommended extends mongoose.Document {
 }
 module.exports.AssessmentRecommended = AssessmentRecommended;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],185:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],185:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77392,7 +77393,7 @@ class CareGoal extends mongoose.Document {
 }
 module.exports.CareGoal = CareGoal;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],186:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],186:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77437,7 +77438,7 @@ class CommunicationPerformed extends mongoose.Document {
 }
 module.exports.CommunicationPerformed = CommunicationPerformed;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],187:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],187:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77479,7 +77480,7 @@ class DeviceApplied extends mongoose.Document {
 }
 module.exports.DeviceApplied = DeviceApplied;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],188:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],188:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77519,7 +77520,7 @@ class DeviceOrder extends mongoose.Document {
 }
 module.exports.DeviceOrder = DeviceOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],189:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],189:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77559,7 +77560,7 @@ class DeviceRecommended extends mongoose.Document {
 }
 module.exports.DeviceRecommended = DeviceRecommended;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],190:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],190:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77600,7 +77601,7 @@ class Diagnosis extends mongoose.Document {
 }
 module.exports.Diagnosis = Diagnosis;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],191:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],191:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77640,7 +77641,7 @@ class DiagnosticStudyOrder extends mongoose.Document {
 }
 module.exports.DiagnosticStudyOrder = DiagnosticStudyOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],192:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],192:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77687,7 +77688,7 @@ class DiagnosticStudyPerformed extends mongoose.Document {
 }
 module.exports.DiagnosticStudyPerformed = DiagnosticStudyPerformed;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],193:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],193:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77727,7 +77728,7 @@ class DiagnosticStudyRecommended extends mongoose.Document {
 }
 module.exports.DiagnosticStudyRecommended = DiagnosticStudyRecommended;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],194:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],194:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77768,7 +77769,7 @@ class EncounterOrder extends mongoose.Document {
 }
 module.exports.EncounterOrder = EncounterOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],195:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],195:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77814,7 +77815,7 @@ class EncounterPerformed extends mongoose.Document {
 }
 module.exports.EncounterPerformed = EncounterPerformed;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],196:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],196:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77855,7 +77856,7 @@ class EncounterRecommended extends mongoose.Document {
 }
 module.exports.EncounterRecommended = EncounterRecommended;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],197:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],197:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77894,7 +77895,7 @@ class FamilyHistory extends mongoose.Document {
 }
 module.exports.FamilyHistory = FamilyHistory;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],198:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],198:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const [Number, String] = [
@@ -77918,7 +77919,7 @@ class Id extends mongoose.Document {
 }
 module.exports.Id = Id;
 
-},{"mongoose/browser":262}],199:[function(require,module,exports){
+},{"mongoose/browser":263}],199:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -77961,7 +77962,7 @@ class ImmunizationAdministered extends mongoose.Document {
 }
 module.exports.ImmunizationAdministered = ImmunizationAdministered;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],200:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],200:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78005,7 +78006,7 @@ class ImmunizationOrder extends mongoose.Document {
 }
 module.exports.ImmunizationOrder = ImmunizationOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],201:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],201:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const [Number, String, Mixed, ObjectId] = [
@@ -78069,7 +78070,7 @@ class IndividualResult extends mongoose.Document {
 }
 module.exports.IndividualResult = IndividualResult;
 
-},{"mongoose/browser":262}],202:[function(require,module,exports){
+},{"mongoose/browser":263}],202:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78109,7 +78110,7 @@ class InterventionOrder extends mongoose.Document {
 }
 module.exports.InterventionOrder = InterventionOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],203:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],203:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78152,7 +78153,7 @@ class InterventionPerformed extends mongoose.Document {
 }
 module.exports.InterventionPerformed = InterventionPerformed;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],204:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],204:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78192,7 +78193,7 @@ class InterventionRecommended extends mongoose.Document {
 }
 module.exports.InterventionRecommended = InterventionRecommended;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],205:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],205:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78232,7 +78233,7 @@ class LaboratoryTestOrder extends mongoose.Document {
 }
 module.exports.LaboratoryTestOrder = LaboratoryTestOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],206:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],206:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78279,7 +78280,7 @@ class LaboratoryTestPerformed extends mongoose.Document {
 }
 module.exports.LaboratoryTestPerformed = LaboratoryTestPerformed;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],207:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],207:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78319,7 +78320,7 @@ class LaboratoryTestRecommended extends mongoose.Document {
 }
 module.exports.LaboratoryTestRecommended = LaboratoryTestRecommended;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],208:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],208:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78360,7 +78361,7 @@ class MedicationActive extends mongoose.Document {
 }
 module.exports.MedicationActive = MedicationActive;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],209:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],209:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78404,7 +78405,7 @@ class MedicationAdministered extends mongoose.Document {
 }
 module.exports.MedicationAdministered = MedicationAdministered;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],210:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],210:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78449,7 +78450,7 @@ class MedicationDischarge extends mongoose.Document {
 }
 module.exports.MedicationDischarge = MedicationDischarge;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],211:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],211:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78497,7 +78498,7 @@ class MedicationDispensed extends mongoose.Document {
 }
 module.exports.MedicationDispensed = MedicationDispensed;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],212:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],212:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78546,7 +78547,7 @@ class MedicationOrder extends mongoose.Document {
 }
 module.exports.MedicationOrder = MedicationOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],213:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],213:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78583,7 +78584,7 @@ class Participation extends mongoose.Document {
 }
 module.exports.Participation = Participation;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],214:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],214:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78620,7 +78621,7 @@ class PatientCareExperience extends mongoose.Document {
 }
 module.exports.PatientCareExperience = PatientCareExperience;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],215:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],215:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78657,7 +78658,7 @@ class PatientCharacteristic extends mongoose.Document {
 }
 module.exports.PatientCharacteristic = PatientCharacteristic;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],216:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],216:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78695,7 +78696,7 @@ class PatientCharacteristicBirthdate extends mongoose.Document {
 }
 module.exports.PatientCharacteristicBirthdate = PatientCharacteristicBirthdate;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],217:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],217:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78735,7 +78736,7 @@ class PatientCharacteristicClinicalTrialParticipant extends mongoose.Document {
 }
 module.exports.PatientCharacteristicClinicalTrialParticipant = PatientCharacteristicClinicalTrialParticipant;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],218:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],218:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78772,7 +78773,7 @@ class PatientCharacteristicEthnicity extends mongoose.Document {
 }
 module.exports.PatientCharacteristicEthnicity = PatientCharacteristicEthnicity;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],219:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],219:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78811,7 +78812,7 @@ class PatientCharacteristicExpired extends mongoose.Document {
 }
 module.exports.PatientCharacteristicExpired = PatientCharacteristicExpired;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],220:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],220:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78849,7 +78850,7 @@ class PatientCharacteristicPayer extends mongoose.Document {
 }
 module.exports.PatientCharacteristicPayer = PatientCharacteristicPayer;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],221:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],221:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78886,7 +78887,7 @@ class PatientCharacteristicRace extends mongoose.Document {
 }
 module.exports.PatientCharacteristicRace = PatientCharacteristicRace;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],222:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],222:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78923,7 +78924,7 @@ class PatientCharacteristicSex extends mongoose.Document {
 }
 module.exports.PatientCharacteristicSex = PatientCharacteristicSex;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],223:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],223:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -78964,7 +78965,7 @@ class PhysicalExamOrder extends mongoose.Document {
 }
 module.exports.PhysicalExamOrder = PhysicalExamOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],224:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],224:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79009,7 +79010,7 @@ class PhysicalExamPerformed extends mongoose.Document {
 }
 module.exports.PhysicalExamPerformed = PhysicalExamPerformed;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],225:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],225:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79050,7 +79051,7 @@ class PhysicalExamRecommended extends mongoose.Document {
 }
 module.exports.PhysicalExamRecommended = PhysicalExamRecommended;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],226:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],226:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79092,7 +79093,7 @@ class ProcedureOrder extends mongoose.Document {
 }
 module.exports.ProcedureOrder = ProcedureOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],227:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],227:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79140,7 +79141,7 @@ class ProcedurePerformed extends mongoose.Document {
 }
 module.exports.ProcedurePerformed = ProcedurePerformed;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],228:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],228:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79182,7 +79183,7 @@ class ProcedureRecommended extends mongoose.Document {
 }
 module.exports.ProcedureRecommended = ProcedureRecommended;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],229:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],229:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79219,7 +79220,7 @@ class ProviderCareExperience extends mongoose.Document {
 }
 module.exports.ProviderCareExperience = ProviderCareExperience;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],230:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],230:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79256,7 +79257,7 @@ class ProviderCharacteristic extends mongoose.Document {
 }
 module.exports.ProviderCharacteristic = ProviderCharacteristic;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],231:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],231:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('./basetypes/Code');
 const Interval = require('./basetypes/Interval');
@@ -79521,7 +79522,7 @@ class QDMPatient extends mongoose.Document {
 }
 module.exports.QDMPatient = QDMPatient;
 
-},{"./AllDataElements":180,"./basetypes/Code":241,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],232:[function(require,module,exports){
+},{"./AllDataElements":180,"./basetypes/Code":241,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],232:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const PlaceholderResultSchema = mongoose.Schema({
@@ -79556,7 +79557,7 @@ class PlaceholderResult extends mongoose.Document {
 }
 module.exports.PlaceholderResult = PlaceholderResult;
 
-},{"mongoose/browser":262}],233:[function(require,module,exports){
+},{"mongoose/browser":263}],233:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79590,7 +79591,7 @@ class ResultComponent extends mongoose.Document {
 }
 module.exports.ResultComponent = ResultComponent;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],234:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],234:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79633,7 +79634,7 @@ class SubstanceAdministered extends mongoose.Document {
 }
 module.exports.SubstanceAdministered = SubstanceAdministered;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],235:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],235:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79678,7 +79679,7 @@ class SubstanceOrder extends mongoose.Document {
 }
 module.exports.SubstanceOrder = SubstanceOrder;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],236:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],236:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79722,7 +79723,7 @@ class SubstanceRecommended extends mongoose.Document {
 }
 module.exports.SubstanceRecommended = SubstanceRecommended;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],237:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],237:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdSchema } = require('./Id');
@@ -79761,7 +79762,7 @@ class Symptom extends mongoose.Document {
 }
 module.exports.Symptom = Symptom;
 
-},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":262}],238:[function(require,module,exports){
+},{"./Id":198,"./attributes/Component":238,"./attributes/FacilityLocation":239,"./basetypes/Any":240,"./basetypes/Code":241,"./basetypes/DataElement":242,"./basetypes/DateTime":243,"./basetypes/Interval":244,"./basetypes/Quantity":245,"mongoose/browser":263}],238:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const Code = require('../basetypes/Code');
@@ -79792,7 +79793,7 @@ class Component extends mongoose.Document {
 }
 module.exports.Component = Component;
 
-},{"../basetypes/Any":240,"../basetypes/Code":241,"../basetypes/DateTime":243,"../basetypes/Interval":244,"../basetypes/Quantity":245,"mongoose/browser":262}],239:[function(require,module,exports){
+},{"../basetypes/Any":240,"../basetypes/Code":241,"../basetypes/DateTime":243,"../basetypes/Interval":244,"../basetypes/Quantity":245,"mongoose/browser":263}],239:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const Code = require('../basetypes/Code');
@@ -79823,7 +79824,7 @@ class FacilityLocation extends mongoose.Document {
 }
 module.exports.FacilityLocation = FacilityLocation;
 
-},{"../basetypes/Any":240,"../basetypes/Code":241,"../basetypes/DateTime":243,"../basetypes/Interval":244,"../basetypes/Quantity":245,"mongoose/browser":262}],240:[function(require,module,exports){
+},{"../basetypes/Any":240,"../basetypes/Code":241,"../basetypes/DateTime":243,"../basetypes/Interval":244,"../basetypes/Quantity":245,"mongoose/browser":263}],240:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -79893,7 +79894,7 @@ Any.prototype.cast = any => RecursiveCast(any);
 mongoose.Schema.Types.Any = Any;
 module.exports = Any;
 
-},{"cql-execution":38,"mongoose/browser":262}],241:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":263}],241:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -79930,7 +79931,7 @@ Code.prototype.cast = (code) => {
 mongoose.Schema.Types.Code = Code;
 module.exports = Code;
 
-},{"cql-execution":38,"mongoose/browser":262}],242:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":263}],242:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('./Code.js');
 const cql = require('cql-execution');
@@ -79976,7 +79977,7 @@ function DataElementSchema(add, options) {
 
 module.exports.DataElementSchema = DataElementSchema;
 
-},{"../Id":198,"./Code.js":241,"cql-execution":38,"mongoose/browser":262}],243:[function(require,module,exports){
+},{"../Id":198,"./Code.js":241,"cql-execution":38,"mongoose/browser":263}],243:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -79996,7 +79997,7 @@ DateTime.prototype.cast = (dateTime) => {
 mongoose.Schema.Types.DateTime = DateTime;
 module.exports = DateTime;
 
-},{"cql-execution":38,"mongoose/browser":262}],244:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":263}],244:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -80033,7 +80034,7 @@ Interval.prototype.cast = (interval) => {
 mongoose.Schema.Types.Interval = Interval;
 module.exports = Interval;
 
-},{"cql-execution":38,"mongoose/browser":262}],245:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":263}],245:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -80055,7 +80056,7 @@ Quantity.prototype.cast = (quantity) => {
 mongoose.Schema.Types.Quantity = Quantity;
 module.exports = Quantity;
 
-},{"cql-execution":38,"mongoose/browser":262}],246:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":263}],246:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { StatementDependencySchema } = require('./CQLStatementDependency');
 
@@ -80088,7 +80089,7 @@ class CQLLibrary extends mongoose.Document {
 }
 module.exports.CQLLibrary = CQLLibrary;
 
-},{"./CQLStatementDependency":247,"mongoose/browser":262}],247:[function(require,module,exports){
+},{"./CQLStatementDependency":247,"mongoose/browser":263}],247:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const StatementReferenceSchema = new mongoose.Schema({
@@ -80118,7 +80119,7 @@ class StatementDependency extends mongoose.Document {
 }
 module.exports.StatementDependency = StatementDependency;
 
-},{"mongoose/browser":262}],248:[function(require,module,exports){
+},{"mongoose/browser":263}],248:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const ConceptSchema = new mongoose.Schema({
@@ -80137,7 +80138,7 @@ class Concept extends mongoose.Document {
 }
 module.exports.Concept = Concept;
 
-},{"mongoose/browser":262}],249:[function(require,module,exports){
+},{"mongoose/browser":263}],249:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('../basetypes/Code');
 const Interval = require('../basetypes/Interval');
@@ -80233,7 +80234,7 @@ class Measure extends mongoose.Document {
 }
 module.exports.Measure = Measure;
 
-},{"../basetypes/Code":241,"../basetypes/DataElement":242,"../basetypes/Interval":244,"../basetypes/Quantity":245,"./CQLLibrary":246,"./PopulationSet":252,"mongoose/browser":262}],250:[function(require,module,exports){
+},{"../basetypes/Code":241,"../basetypes/DataElement":242,"../basetypes/Interval":244,"../basetypes/Quantity":245,"./CQLLibrary":246,"./PopulationSet":252,"mongoose/browser":263}],250:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 // using mBuffer to not conflict with system Buffer
@@ -80261,13 +80262,14 @@ class MeasurePackage extends mongoose.Document {
 }
 module.exports.MeasurePackage = MeasurePackage;
 
-},{"mongoose/browser":262}],251:[function(require,module,exports){
+},{"mongoose/browser":263}],251:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('../basetypes/Code');
 const Interval = require('../basetypes/Interval');
 const Quantity = require('../basetypes/Quantity');
 const DateTime = require('../basetypes/DateTime');
 const { QDMPatientSchema } = require('../QDMPatient');
+const { ProviderSchema } = require('./Provider');
 
 const [Schema, Number, String, Mixed] = [
   mongoose.Schema,
@@ -80285,6 +80287,7 @@ const PatientSchema = new Schema({
   expectedValues: [],
   notes: String,
   qdmPatient: QDMPatientSchema,
+  providers: [ProviderSchema],
 
 }, { id: false });
 
@@ -80296,7 +80299,7 @@ class Patient extends mongoose.Document {
 }
 module.exports.Patient = Patient;
 
-},{"../QDMPatient":231,"../basetypes/Code":241,"../basetypes/DateTime":243,"../basetypes/Interval":244,"../basetypes/Quantity":245,"mongoose/browser":262}],252:[function(require,module,exports){
+},{"../QDMPatient":231,"../basetypes/Code":241,"../basetypes/DateTime":243,"../basetypes/Interval":244,"../basetypes/Quantity":245,"./Provider":253,"mongoose/browser":263}],252:[function(require,module,exports){
 /* eslint-disable no-unused-vars, no-param-reassign */
 const mongoose = require('mongoose/browser');
 const { StatementReferenceSchema } = require('./CQLStatementDependency');
@@ -80386,7 +80389,53 @@ class PopulationSet extends mongoose.Document {
 }
 module.exports.PopulationSet = PopulationSet;
 
-},{"./CQLStatementDependency":247,"mongoose/browser":262}],253:[function(require,module,exports){
+},{"./CQLStatementDependency":247,"mongoose/browser":263}],253:[function(require,module,exports){
+const mongoose = require('mongoose/browser');
+const Id = require('../Id');
+
+const [Schema, String, Boolean] = [
+  mongoose.Schema,
+  mongoose.Schema.Types.String,
+  mongoose.Schema.Types.Boolean,
+];
+
+const AddressSchema = new mongoose.Schema({
+  street: [String],
+  city: String,
+  state: String,
+  zip: String,
+  country: String,
+  use: String,
+});
+
+const TelecomSchema = new mongoose.Schema({
+  use: String,
+  value: String,
+  preferred: Boolean,
+});
+
+const ProviderSchema = new Schema({
+  _type: { type: String, default: 'Provider' },
+
+  givenNames: [String],
+  familyName: String,
+  specialty: String,
+  title: String,
+  addresses: [AddressSchema],
+  telecoms: [TelecomSchema],
+  ids: [Id.IdSchema],
+
+}, { id: false });
+
+module.exports.ProviderSchema = ProviderSchema;
+class Provider extends mongoose.Document {
+  constructor(object) {
+    super(object, ProviderSchema);
+  }
+}
+module.exports.Provider = Provider;
+
+},{"../Id":198,"mongoose/browser":263}],254:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Concept = require('./Concept.js');
 
@@ -80414,7 +80463,7 @@ class ValueSet extends mongoose.Document {
 }
 module.exports.ValueSet = ValueSet;
 
-},{"./Concept.js":248,"mongoose/browser":262}],254:[function(require,module,exports){
+},{"./Concept.js":248,"mongoose/browser":263}],255:[function(require,module,exports){
 module.exports = require('./AllDataElements.js');
 module.exports.CQL = require('cql-execution');
 module.exports.Result = require('./Result.js').Result;
@@ -80425,8 +80474,12 @@ module.exports.MeasurePackage = require('./cqm/MeasurePackage.js').MeasurePackag
 module.exports.MeasurePackageSchema = require('./cqm/MeasurePackage.js').MeasurePackageSchema;
 module.exports.Patient = require('./cqm/Patient.js').Patient;
 module.exports.PatientSchema = require('./cqm/Patient.js').PatientSchema;
+module.exports.Provider = require('./cqm/Provider.js').Provider;
+module.exports.ProviderSchema = require('./cqm/Provider.js').ProviderSchema;
 module.exports.StatementDependency = require('./cqm/CQLStatementDependency.js').StatementDependency;
 module.exports.StatementDependencySchema = require('./cqm/CQLStatementDependency.js').StatementDependencySchema;
+module.exports.PopulationSet = require('./cqm/PopulationSet.js').PopulationSet;
+module.exports.PopulationSetSchema = require('./cqm/PopulationSet.js').PopulationSetSchema;
 module.exports.CQLLibrary = require('./cqm/CQLLibrary.js').CQLLibrary;
 module.exports.CQLLibrarySchema = require('./cqm/CQLLibrary.js').CQLLibrarySchema;
 module.exports.ValueSet = require('./cqm/ValueSet.js').ValueSet;
@@ -80436,7 +80489,7 @@ module.exports.ConceptSchema = require('./cqm/Concept.js').ConceptSchema;
 module.exports.IndividualResult = require('./IndividualResult').IndividualResult;
 module.exports.IndividualResultSchema = require('./IndividualResult').IndividualResultSchema;
 
-},{"./AllDataElements.js":180,"./IndividualResult":201,"./Result.js":232,"./cqm/CQLLibrary.js":246,"./cqm/CQLStatementDependency.js":247,"./cqm/Concept.js":248,"./cqm/Measure.js":249,"./cqm/MeasurePackage.js":250,"./cqm/Patient.js":251,"./cqm/ValueSet.js":253,"cql-execution":38}],255:[function(require,module,exports){
+},{"./AllDataElements.js":180,"./IndividualResult":201,"./Result.js":232,"./cqm/CQLLibrary.js":246,"./cqm/CQLStatementDependency.js":247,"./cqm/Concept.js":248,"./cqm/Measure.js":249,"./cqm/MeasurePackage.js":250,"./cqm/Patient.js":251,"./cqm/PopulationSet.js":252,"./cqm/Provider.js":253,"./cqm/ValueSet.js":254,"cql-execution":38}],256:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -80961,7 +81014,7 @@ function functionBindPolyfill(context) {
   };
 }
 
-},{}],256:[function(require,module,exports){
+},{}],257:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -81047,9 +81100,9 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],257:[function(require,module,exports){
+},{}],258:[function(require,module,exports){
 arguments[4][9][0].apply(exports,arguments)
-},{"dup":9}],258:[function(require,module,exports){
+},{"dup":9}],259:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -81072,7 +81125,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],259:[function(require,module,exports){
+},{}],260:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -81579,7 +81632,7 @@ function decorateNextFn(fn) {
 module.exports = Kareem;
 
 }).call(this,require('_process'))
-},{"_process":367}],260:[function(require,module,exports){
+},{"_process":368}],261:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -98690,7 +98743,7 @@ module.exports = Kareem;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],261:[function(require,module,exports){
+},{}],262:[function(require,module,exports){
 //! moment.js
 
 ;(function (global, factory) {
@@ -103294,7 +103347,7 @@ module.exports = Kareem;
 
 })));
 
-},{}],262:[function(require,module,exports){
+},{}],263:[function(require,module,exports){
 /**
  * Export lib/mongoose
  *
@@ -103304,7 +103357,7 @@ module.exports = Kareem;
 
 module.exports = require('./lib/browser');
 
-},{"./lib/browser":263}],263:[function(require,module,exports){
+},{"./lib/browser":264}],264:[function(require,module,exports){
 (function (Buffer){
 /* eslint-env browser */
 
@@ -103452,7 +103505,7 @@ if (typeof window !== 'undefined') {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./document_provider.js":273,"./driver":274,"./drivers/browser":278,"./error":282,"./promise_provider":318,"./schema":320,"./schematype.js":341,"./types":348,"./utils.js":352,"./virtualtype":353,"buffer":34}],264:[function(require,module,exports){
+},{"./document_provider.js":274,"./driver":275,"./drivers/browser":279,"./error":283,"./promise_provider":319,"./schema":321,"./schematype.js":342,"./types":349,"./utils.js":353,"./virtualtype":354,"buffer":34}],265:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -103556,7 +103609,7 @@ utils.each(
 Document.ValidationError = ValidationError;
 module.exports = exports = Document;
 
-},{"./document":272,"./error":282,"./helpers/model/applyHooks":302,"./schema":320,"./types/objectid":350,"./utils":352,"events":255}],265:[function(require,module,exports){
+},{"./document":273,"./error":283,"./helpers/model/applyHooks":303,"./schema":321,"./types/objectid":351,"./utils":353,"events":256}],266:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -103897,7 +103950,7 @@ function _cast(val, numbertype, context) {
     }
   }
 }
-},{"./error/strict":291,"./helpers/get":300,"./schema/index":328,"./schema/operators/text":337,"./utils":352,"util":373}],266:[function(require,module,exports){
+},{"./error/strict":292,"./helpers/get":301,"./schema/index":329,"./schema/operators/text":338,"./utils":353,"util":374}],267:[function(require,module,exports){
 'use strict';
 
 const CastError = require('../error/cast');
@@ -103930,7 +103983,7 @@ module.exports = function castBoolean(value, path) {
 module.exports.convertToTrue = new Set([true, 'true', 1, '1', 'yes']);
 module.exports.convertToFalse = new Set([false, 'false', 0, '0', 'no']);
 
-},{"../error/cast":280}],267:[function(require,module,exports){
+},{"../error/cast":281}],268:[function(require,module,exports){
 'use strict';
 
 const assert = require('assert');
@@ -103972,7 +104025,7 @@ module.exports = function castDate(value) {
 
   assert.ok(false);
 };
-},{"assert":8}],268:[function(require,module,exports){
+},{"assert":8}],269:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -104011,7 +104064,7 @@ module.exports = function castDecimal128(value) {
   assert.ok(false);
 };
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":258,"../types/decimal128":345,"assert":8}],269:[function(require,module,exports){
+},{"../../../is-buffer/index.js":259,"../types/decimal128":346,"assert":8}],270:[function(require,module,exports){
 'use strict';
 
 const assert = require('assert');
@@ -104058,7 +104111,7 @@ module.exports = function castNumber(val) {
   assert.ok(false);
 };
 
-},{"assert":8}],270:[function(require,module,exports){
+},{"assert":8}],271:[function(require,module,exports){
 'use strict';
 
 const ObjectId = require('../driver').get().ObjectId;
@@ -104088,7 +104141,7 @@ module.exports = function castObjectId(value) {
 
   assert.ok(false);
 };
-},{"../driver":274,"assert":8}],271:[function(require,module,exports){
+},{"../driver":275,"assert":8}],272:[function(require,module,exports){
 'use strict';
 
 const CastError = require('../error/cast');
@@ -104125,7 +104178,7 @@ module.exports = function castString(value, path) {
   throw new CastError('string', value, path);
 };
 
-},{"../error/cast":280}],272:[function(require,module,exports){
+},{"../error/cast":281}],273:[function(require,module,exports){
 (function (Buffer,process){
 'use strict';
 
@@ -104949,6 +105002,13 @@ Document.prototype.$set = function $set(path, val, type, options) {
   }
 
   const pathType = this.schema.pathType(path);
+
+  // Assume this is a Mongoose document that was copied into a POJO using
+  // `Object.assign()` or `{...doc}`
+  if (utils.isPOJO(val) && val.$__ != null && val._doc != null) {
+    val = val._doc;
+  }
+
   if (pathType === 'nested' && val) {
     if (utils.isPOJO(val)) {
       if (!merge) {
@@ -104973,6 +105033,11 @@ Document.prototype.$set = function $set(path, val, type, options) {
 
   let schema;
   const parts = path.split('.');
+
+  // Might need to change path for top-level alias
+  if (typeof this.schema.aliases[parts[0]] == 'string') {
+    parts[0] = this.schema.aliases[parts[0]];
+  }
 
   if (pathType === 'adhocOrUndefined' && strict) {
     // check for roots that are Mixed types
@@ -105413,6 +105478,11 @@ Document.prototype.get = function(path, type, options) {
       return void 0;
     }
     return schema.applyGetters(null, this);
+  }
+
+  // Might need to change path for top-level alias
+  if (typeof this.schema.aliases[pieces[0]] == 'string') {
+    pieces[0] = this.schema.aliases[pieces[0]];
   }
 
   for (let i = 0, l = pieces.length; i < l; i++) {
@@ -107324,7 +107394,7 @@ Document.ValidationError = ValidationError;
 module.exports = exports = Document;
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")},require('_process'))
-},{"../../is-buffer/index.js":258,"./error":282,"./error/objectExpected":287,"./error/objectParameter":288,"./error/strict":291,"./helpers/common":295,"./helpers/document/cleanModifiedSubpaths":297,"./helpers/document/compile":298,"./helpers/document/getEmbeddedDiscriminatorPath":299,"./helpers/get":300,"./helpers/projection/isDefiningProjection":305,"./helpers/projection/isExclusive":306,"./helpers/symbols":312,"./internal":315,"./options":316,"./plugins/idGetter":317,"./schema/mixed":330,"./schematype":341,"./types/array":343,"./types/documentarray":346,"./types/embedded":347,"./utils":352,"./virtualtype":353,"_process":367,"events":255,"mpath":355,"util":373}],273:[function(require,module,exports){
+},{"../../is-buffer/index.js":259,"./error":283,"./error/objectExpected":288,"./error/objectParameter":289,"./error/strict":292,"./helpers/common":296,"./helpers/document/cleanModifiedSubpaths":298,"./helpers/document/compile":299,"./helpers/document/getEmbeddedDiscriminatorPath":300,"./helpers/get":301,"./helpers/projection/isDefiningProjection":306,"./helpers/projection/isExclusive":307,"./helpers/symbols":313,"./internal":316,"./options":317,"./plugins/idGetter":318,"./schema/mixed":331,"./schematype":342,"./types/array":344,"./types/documentarray":347,"./types/embedded":348,"./utils":353,"./virtualtype":354,"_process":368,"events":256,"mpath":356,"util":374}],274:[function(require,module,exports){
 'use strict';
 
 /* eslint-env browser */
@@ -107356,7 +107426,7 @@ module.exports.setBrowser = function(flag) {
   isBrowser = flag;
 };
 
-},{"./browserDocument.js":264,"./document.js":272}],274:[function(require,module,exports){
+},{"./browserDocument.js":265,"./document.js":273}],275:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -107373,7 +107443,7 @@ module.exports.set = function(v) {
   driver = v;
 };
 
-},{}],275:[function(require,module,exports){
+},{}],276:[function(require,module,exports){
 /*!
  * ignore
  */
@@ -107382,7 +107452,7 @@ module.exports.set = function(v) {
 
 module.exports = function() {};
 
-},{}],276:[function(require,module,exports){
+},{}],277:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -107398,7 +107468,7 @@ const Binary = require('bson').Binary;
 
 module.exports = exports = Binary;
 
-},{"bson":15}],277:[function(require,module,exports){
+},{"bson":15}],278:[function(require,module,exports){
 /*!
  * ignore
  */
@@ -107407,7 +107477,7 @@ module.exports = exports = Binary;
 
 module.exports = require('bson').Decimal128;
 
-},{"bson":15}],278:[function(require,module,exports){
+},{"bson":15}],279:[function(require,module,exports){
 /*!
  * Module exports.
  */
@@ -107422,7 +107492,7 @@ exports.Decimal128 = require('./decimal128');
 exports.ObjectId = require('./objectid');
 exports.ReadPreference = require('./ReadPreference');
 
-},{"./ReadPreference":275,"./binary":276,"./decimal128":277,"./objectid":279}],279:[function(require,module,exports){
+},{"./ReadPreference":276,"./binary":277,"./decimal128":278,"./objectid":280}],280:[function(require,module,exports){
 
 /*!
  * [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) ObjectId
@@ -107452,7 +107522,7 @@ Object.defineProperty(ObjectId.prototype, '_id', {
 
 module.exports = exports = ObjectId;
 
-},{"bson":15}],280:[function(require,module,exports){
+},{"bson":15}],281:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -107516,7 +107586,7 @@ CastError.prototype.setModel = function(model) {
 
 module.exports = CastError;
 
-},{"./mongooseError":285,"util":373}],281:[function(require,module,exports){
+},{"./mongooseError":286,"util":374}],282:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -107566,7 +107636,7 @@ DivergentArrayError.prototype.constructor = MongooseError;
 
 module.exports = DivergentArrayError;
 
-},{"./":282}],282:[function(require,module,exports){
+},{"./":283}],283:[function(require,module,exports){
 'use strict';
 
 const MongooseError = require('./mongooseError');
@@ -107674,7 +107744,7 @@ MongooseError.MissingSchemaError = require('./missingSchema');
 
 MongooseError.DivergentArrayError = require('./divergentArray');
 
-},{"./cast":280,"./divergentArray":281,"./messages":283,"./missingSchema":284,"./mongooseError":285,"./notFound":286,"./overwriteModel":289,"./parallelSave":290,"./validation":292,"./validator":293,"./version":294}],283:[function(require,module,exports){
+},{"./cast":281,"./divergentArray":282,"./messages":284,"./missingSchema":285,"./mongooseError":286,"./notFound":287,"./overwriteModel":290,"./parallelSave":291,"./validation":293,"./validator":294,"./version":295}],284:[function(require,module,exports){
 
 /**
  * The default built-in validator error messages. These may be customized.
@@ -107722,7 +107792,7 @@ msg.String.match = 'Path `{PATH}` is invalid ({VALUE}).';
 msg.String.minlength = 'Path `{PATH}` (`{VALUE}`) is shorter than the minimum allowed length ({MINLENGTH}).';
 msg.String.maxlength = 'Path `{PATH}` (`{VALUE}`) is longer than the maximum allowed length ({MAXLENGTH}).';
 
-},{}],284:[function(require,module,exports){
+},{}],285:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -107763,7 +107833,7 @@ MissingSchemaError.prototype.constructor = MongooseError;
 
 module.exports = MissingSchemaError;
 
-},{"./":282}],285:[function(require,module,exports){
+},{"./":283}],286:[function(require,module,exports){
 'use strict';
 
 /**
@@ -107820,7 +107890,7 @@ MongooseError.prototype.constructor = Error;
 
 module.exports = MongooseError;
 
-},{}],286:[function(require,module,exports){
+},{}],287:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -107874,7 +107944,7 @@ DocumentNotFoundError.prototype.constructor = MongooseError;
 
 module.exports = DocumentNotFoundError;
 
-},{"./":282,"util":373}],287:[function(require,module,exports){
+},{"./":283,"util":374}],288:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -107914,7 +107984,7 @@ ObjectExpectedError.prototype.constructor = MongooseError;
 
 module.exports = ObjectExpectedError;
 
-},{"./":282}],288:[function(require,module,exports){
+},{"./":283}],289:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -107954,7 +108024,7 @@ ObjectParameterError.prototype.constructor = MongooseError;
 
 module.exports = ObjectParameterError;
 
-},{"./":282}],289:[function(require,module,exports){
+},{"./":283}],290:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -107993,7 +108063,7 @@ OverwriteModelError.prototype.constructor = MongooseError;
 
 module.exports = OverwriteModelError;
 
-},{"./":282}],290:[function(require,module,exports){
+},{"./":283}],291:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -108028,7 +108098,7 @@ ParallelSaveError.prototype.constructor = MongooseError;
 
 module.exports = ParallelSaveError;
 
-},{"./":282}],291:[function(require,module,exports){
+},{"./":283}],292:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -108068,7 +108138,7 @@ StrictModeError.prototype.constructor = MongooseError;
 
 module.exports = StrictModeError;
 
-},{"./":282}],292:[function(require,module,exports){
+},{"./":283}],293:[function(require,module,exports){
 /*!
  * Module requirements
  */
@@ -108182,7 +108252,7 @@ function _generateMessage(err) {
 
 module.exports = exports = ValidationError;
 
-},{"./":282,"util":373}],293:[function(require,module,exports){
+},{"./":283,"util":374}],294:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -108273,7 +108343,7 @@ ValidatorError.prototype.toString = function() {
 
 module.exports = ValidatorError;
 
-},{"./":282}],294:[function(require,module,exports){
+},{"./":283}],295:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -108311,7 +108381,7 @@ VersionError.prototype.constructor = MongooseError;
 
 module.exports = VersionError;
 
-},{"./":282}],295:[function(require,module,exports){
+},{"./":283}],296:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -108319,6 +108389,7 @@ module.exports = VersionError;
  * Module dependencies.
  */
 
+const Decimal128 = require('../types/decimal128');
 const ObjectId = require('../types/objectid');
 const utils = require('../utils');
 
@@ -108398,11 +108469,12 @@ function shouldFlatten(val) {
     !(val instanceof Date) &&
     !(val instanceof ObjectId) &&
     (!Array.isArray(val) || val.length > 0) &&
-    !(val instanceof Buffer);
+    !(val instanceof Buffer) &&
+    !(val instanceof Decimal128);
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../types/objectid":350,"../utils":352,"buffer":34}],296:[function(require,module,exports){
+},{"../types/decimal128":346,"../types/objectid":351,"../utils":353,"buffer":34}],297:[function(require,module,exports){
 'use strict';
 
 module.exports = function checkEmbeddedDiscriminatorKeyProjection(userProjection, path, schema, selected, addedPaths) {
@@ -108415,7 +108487,7 @@ module.exports = function checkEmbeddedDiscriminatorKeyProjection(userProjection
     selected.splice(selected.indexOf(_discriminatorKey), 1);
   }
 };
-},{}],297:[function(require,module,exports){
+},{}],298:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -108442,7 +108514,7 @@ module.exports = function cleanModifiedSubpaths(doc, path, options) {
   return deleted;
 };
 
-},{}],298:[function(require,module,exports){
+},{}],299:[function(require,module,exports){
 'use strict';
 
 const get = require('../../helpers/get');
@@ -108591,7 +108663,7 @@ function getOwnPropertyDescriptors(object) {
   return result;
 }
 
-},{"../../document":272,"../../helpers/get":300,"../../helpers/symbols":312,"../../utils":352}],299:[function(require,module,exports){
+},{"../../document":273,"../../helpers/get":301,"../../helpers/symbols":313,"../../utils":353}],300:[function(require,module,exports){
 'use strict';
 
 const get = require('../get');
@@ -108636,7 +108708,7 @@ module.exports = function getEmbeddedDiscriminatorPath(doc, path, options) {
   return typeOnly ? type : schema;
 };
 
-},{"../get":300}],300:[function(require,module,exports){
+},{"../get":301}],301:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -108676,7 +108748,7 @@ function getProperty(obj, prop) {
   }
   return obj[prop];
 }
-},{}],301:[function(require,module,exports){
+},{}],302:[function(require,module,exports){
 (function (process){
 /*!
  * Centralize this so we can more easily work around issues with people
@@ -108692,7 +108764,7 @@ module.exports = function immediate(cb) {
 };
 
 }).call(this,require('_process'))
-},{"_process":367}],302:[function(require,module,exports){
+},{"_process":368}],303:[function(require,module,exports){
 'use strict';
 
 const symbols = require('../../schema/symbols');
@@ -108826,7 +108898,7 @@ function applyHooks(model, schema, options) {
   }
 }
 
-},{"../../schema/symbols":340,"../../utils":352}],303:[function(require,module,exports){
+},{"../../schema/symbols":341,"../../utils":353}],304:[function(require,module,exports){
 'use strict';
 
 const defineKey = require('../document/compile').defineKey;
@@ -109000,7 +109072,7 @@ module.exports = function discriminator(model, name, schema, tiedValue, applyPlu
   return schema;
 };
 
-},{"../../utils":352,"../document/compile":298,"../get":300}],304:[function(require,module,exports){
+},{"../../utils":353,"../document/compile":299,"../get":301}],305:[function(require,module,exports){
 'use strict';
 
 const MongooseError = require('../../error/mongooseError');
@@ -109020,7 +109092,7 @@ function validateRef(ref, path) {
   throw new MongooseError('Invalid ref at path "' + path + '". Got ' +
     util.inspect(ref, { depth: 0 }));
 }
-},{"../../error/mongooseError":285,"util":373}],305:[function(require,module,exports){
+},{"../../error/mongooseError":286,"util":374}],306:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109040,7 +109112,7 @@ module.exports = function isDefiningProjection(val) {
   return true;
 };
 
-},{}],306:[function(require,module,exports){
+},{}],307:[function(require,module,exports){
 'use strict';
 
 const isDefiningProjection = require('./isDefiningProjection');
@@ -109070,7 +109142,7 @@ module.exports = function isExclusive(projection) {
   return exclude;
 };
 
-},{"./isDefiningProjection":305}],307:[function(require,module,exports){
+},{"./isDefiningProjection":306}],308:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109138,7 +109210,7 @@ function applyQueryMiddleware(Query, model) {
     });
 }
 
-},{}],308:[function(require,module,exports){
+},{}],309:[function(require,module,exports){
 'use strict';
 
 /**
@@ -109149,9 +109221,9 @@ function applyQueryMiddleware(Query, model) {
 module.exports = function cleanPositionalOperators(path) {
   return path.
     replace(/\.\$(\[[^\]]*\])?\./g, '.0.').
-    replace(/\.(\[[^\]]*\])?\$$/, '.0');
+    replace(/\.(\[[^\]]*\])?\$$/g, '.0');
 };
-},{}],309:[function(require,module,exports){
+},{}],310:[function(require,module,exports){
 'use strict';
 
 const get = require('../get');
@@ -109277,7 +109349,7 @@ module.exports = function getIndexes(schema) {
   }
 };
 
-},{"../../utils":352,"../get":300}],310:[function(require,module,exports){
+},{"../../utils":353,"../get":301}],311:[function(require,module,exports){
 'use strict';
 
 module.exports = handleTimestampOption;
@@ -109302,7 +109374,7 @@ function handleTimestampOption(arg, prop) {
   }
   return arg[prop];
 }
-},{}],311:[function(require,module,exports){
+},{}],312:[function(require,module,exports){
 'use strict';
 
 module.exports = function merge(s1, s2) {
@@ -109323,7 +109395,7 @@ module.exports = function merge(s1, s2) {
   s1.s.hooks.merge(s2.s.hooks, false);
 };
 
-},{}],312:[function(require,module,exports){
+},{}],313:[function(require,module,exports){
 'use strict';
 
 exports.validatorErrorSymbol = Symbol.for('mongoose:validatorError');
@@ -109337,7 +109409,7 @@ exports.getSymbol = Symbol.for('mongoose#Document#get');
 exports.objectIdSymbol = Symbol.for('mongoose#ObjectId');
 
 exports.schemaTypeSymbol = Symbol.for('mongoose#schemaType');
-},{}],313:[function(require,module,exports){
+},{}],314:[function(require,module,exports){
 'use strict';
 
 const cleanPositionalOperators = require('../schema/cleanPositionalOperators');
@@ -109508,7 +109580,7 @@ function applyTimestampsToSingleNested(subdoc, schematype, now) {
     subdoc[createdAt] = now;
   }
 }
-},{"../schema/cleanPositionalOperators":308,"../schema/handleTimestampOption":310}],314:[function(require,module,exports){
+},{"../schema/cleanPositionalOperators":309,"../schema/handleTimestampOption":311}],315:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109575,7 +109647,7 @@ function applyTimestampsToUpdate(now, createdAt, updatedAt, currentUpdate, optio
   return updates;
 }
 
-},{"../get":300}],315:[function(require,module,exports){
+},{"../get":301}],316:[function(require,module,exports){
 /*!
  * Dependencies
  */
@@ -109614,7 +109686,7 @@ function InternalCache() {
   this.fullPath = undefined;
 }
 
-},{"./statemachine":342}],316:[function(require,module,exports){
+},{"./statemachine":343}],317:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109630,7 +109702,7 @@ exports.internalToObjectOptions = {
   flattenDecimals: false
 };
 
-},{}],317:[function(require,module,exports){
+},{}],318:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -109660,7 +109732,7 @@ function idGetter() {
   return null;
 }
 
-},{}],318:[function(require,module,exports){
+},{}],319:[function(require,module,exports){
 (function (global){
 /*!
  * ignore
@@ -109713,7 +109785,7 @@ store.set(global.Promise);
 module.exports = store;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"assert":8,"mquery":361}],319:[function(require,module,exports){
+},{"assert":8,"mquery":362}],320:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -110037,7 +110109,7 @@ exports.handleDeleteWriteOpResult = function handleDeleteWriteOpResult(callback)
   };
 };
 
-},{"./helpers/discriminator/checkEmbeddedDiscriminatorKeyProjection":296,"./helpers/get":300,"./helpers/projection/isDefiningProjection":305,"./utils":352}],320:[function(require,module,exports){
+},{"./helpers/discriminator/checkEmbeddedDiscriminatorKeyProjection":297,"./helpers/get":301,"./helpers/projection/isDefiningProjection":306,"./utils":353}],321:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -110488,9 +110560,33 @@ Schema.prototype.add = function add(obj, prefix) {
 /**
  * Reserved document keys.
  *
- * Keys in this object are names that are rejected in schema declarations b/c they conflict with mongoose functionality. Using these key name will throw an error.
+ * Keys in this object are names that are rejected in schema declarations
+ * because they conflict with Mongoose functionality. If you create a schema
+ * using `new Schema()` with one of these property names, Mongoose will throw
+ * an error.
  *
- *      on, emit, _events, db, get, set, init, isNew, errors, schema, options, modelName, collection, _pres, _posts, toObject
+ * - prototype
+ * - emit
+ * - on
+ * - once
+ * - listeners
+ * - removeListener
+ * - collection
+ * - db
+ * - errors
+ * - init
+ * - isModified
+ * - isNew
+ * - get
+ * - modelName
+ * - save
+ * - schema
+ * - toObject
+ * - validate
+ * - remove
+ * - populated
+ * - _pres
+ * - _posts
  *
  * _NOTE:_ Use of these terms as method names is permitted, but play at your own risk, as they may be existing mongoose document methods you are stomping on.
  *
@@ -111956,7 +112052,7 @@ Schema.Types = MongooseTypes = require('./schema/index');
 exports.ObjectId = MongooseTypes.ObjectId;
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":258,"./driver":274,"./helpers/get":300,"./helpers/model/applyHooks":302,"./helpers/populate/validateRef":304,"./helpers/query/applyQueryMiddleware":307,"./helpers/schema/getIndexes":309,"./helpers/schema/handleTimestampOption":310,"./helpers/schema/merge":311,"./helpers/update/applyTimestampsToChildren":313,"./helpers/update/applyTimestampsToUpdate":314,"./schema/index":328,"./schema/symbols":340,"./schematype":341,"./utils":352,"./virtualtype":353,"events":255,"kareem":259,"mpath":355,"util":373}],321:[function(require,module,exports){
+},{"../../is-buffer/index.js":259,"./driver":275,"./helpers/get":301,"./helpers/model/applyHooks":303,"./helpers/populate/validateRef":305,"./helpers/query/applyQueryMiddleware":308,"./helpers/schema/getIndexes":310,"./helpers/schema/handleTimestampOption":311,"./helpers/schema/merge":312,"./helpers/update/applyTimestampsToChildren":314,"./helpers/update/applyTimestampsToUpdate":315,"./schema/index":329,"./schema/symbols":341,"./schematype":342,"./utils":353,"./virtualtype":354,"events":256,"kareem":260,"mpath":356,"util":374}],322:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112395,7 +112491,7 @@ handle.$in = SchemaType.prototype.$conditionalHandlers.$in;
 
 module.exports = SchemaArray;
 
-},{"../cast":265,"../error/mongooseError":285,"../helpers/get":300,"../queryhelpers":319,"../schematype":341,"../types":348,"../utils":352,"./boolean":322,"./buffer":323,"./date":324,"./map":329,"./mixed":330,"./number":331,"./objectid":332,"./operators/exists":334,"./operators/geospatial":335,"./operators/helpers":336,"./operators/type":338,"./string":339,"util":373}],322:[function(require,module,exports){
+},{"../cast":266,"../error/mongooseError":286,"../helpers/get":301,"../queryhelpers":320,"../schematype":342,"../types":349,"../utils":353,"./boolean":323,"./buffer":324,"./date":325,"./map":330,"./mixed":331,"./number":332,"./objectid":333,"./operators/exists":335,"./operators/geospatial":336,"./operators/helpers":337,"./operators/type":339,"./string":340,"util":374}],323:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112605,7 +112701,7 @@ SchemaBoolean.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaBoolean;
 
-},{"../cast/boolean":266,"../error/cast":280,"../schematype":341,"../utils":352}],323:[function(require,module,exports){
+},{"../cast/boolean":267,"../error/cast":281,"../schematype":342,"../utils":353}],324:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -112859,7 +112955,7 @@ SchemaBuffer.prototype.castForQuery = function($conditional, val) {
 module.exports = SchemaBuffer;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":258,"../schematype":341,"../types/buffer":344,"../utils":352,"./../document":272,"./operators/bitwise":333}],324:[function(require,module,exports){
+},{"../../../is-buffer/index.js":259,"../schematype":342,"../types/buffer":345,"../utils":353,"./../document":273,"./operators/bitwise":334}],325:[function(require,module,exports){
 /*!
  * Module requirements.
  */
@@ -113223,7 +113319,7 @@ SchemaDate.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaDate;
 
-},{"../cast/date":267,"../error":282,"../schematype":341,"../utils":352}],325:[function(require,module,exports){
+},{"../cast/date":268,"../error":283,"../schematype":342,"../utils":353}],326:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -113437,7 +113533,7 @@ Decimal128.prototype.$conditionalHandlers =
 module.exports = Decimal128;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":258,"../cast/decimal128":268,"../schematype":341,"../types/decimal128":345,"../utils":352,"./../document":272}],326:[function(require,module,exports){
+},{"../../../is-buffer/index.js":259,"../cast/decimal128":269,"../schematype":342,"../types/decimal128":346,"../utils":353,"./../document":273}],327:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -113927,7 +114023,7 @@ function scopePaths(array, fields, init) {
 
 module.exports = DocumentArray;
 
-},{"../error/cast":280,"../helpers/model/discriminator":303,"../queryhelpers":319,"../schematype":341,"../types/documentarray":346,"../types/embedded":347,"../utils":352,"./array":321,"events":255,"util":373}],327:[function(require,module,exports){
+},{"../error/cast":281,"../helpers/model/discriminator":304,"../queryhelpers":320,"../schematype":342,"../types/documentarray":347,"../types/embedded":348,"../utils":353,"./array":322,"events":256,"util":374}],328:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -114260,7 +114356,7 @@ Embedded.prototype.clone = function() {
   return new this.constructor(this.schema, this.path, options);
 };
 
-},{"../error/cast":280,"../error/objectExpected":287,"../helpers/get":300,"../helpers/model/discriminator":303,"../options":316,"../queryhelpers":319,"../schematype":341,"../types/subdocument":351,"./operators/exists":334,"./operators/geospatial":335,"./operators/helpers":336,"events":255}],328:[function(require,module,exports){
+},{"../error/cast":281,"../error/objectExpected":288,"../helpers/get":301,"../helpers/model/discriminator":304,"../options":317,"../queryhelpers":320,"../schematype":342,"../types/subdocument":352,"./operators/exists":335,"./operators/geospatial":336,"./operators/helpers":337,"events":256}],329:[function(require,module,exports){
 
 /*!
  * Module exports.
@@ -114298,7 +114394,7 @@ exports.Oid = exports.ObjectId;
 exports.Object = exports.Mixed;
 exports.Bool = exports.Boolean;
 
-},{"./array":321,"./boolean":322,"./buffer":323,"./date":324,"./decimal128":325,"./documentarray":326,"./embedded":327,"./map":329,"./mixed":330,"./number":331,"./objectid":332,"./string":339}],329:[function(require,module,exports){
+},{"./array":322,"./boolean":323,"./buffer":324,"./date":325,"./decimal128":326,"./documentarray":327,"./embedded":328,"./map":330,"./mixed":331,"./number":332,"./objectid":333,"./string":340}],330:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -114339,7 +114435,7 @@ class Map extends SchemaType {
 
 module.exports = Map;
 
-},{"../schematype":341,"../types/map":349}],330:[function(require,module,exports){
+},{"../schematype":342,"../types/map":350}],331:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -114446,7 +114542,7 @@ Mixed.prototype.castForQuery = function($cond, val) {
 
 module.exports = Mixed;
 
-},{"../schematype":341,"../utils":352,"./symbols":340}],331:[function(require,module,exports){
+},{"../schematype":342,"../utils":353,"./symbols":341}],332:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -114821,7 +114917,7 @@ SchemaNumber.prototype.castForQuery = function($conditional, val) {
 module.exports = SchemaNumber;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":258,"../cast/number":269,"../error":282,"../schematype":341,"../utils":352,"./../document":272,"./operators/bitwise":333}],332:[function(require,module,exports){
+},{"../../../is-buffer/index.js":259,"../cast/number":270,"../error":283,"../schematype":342,"../utils":353,"./../document":273,"./operators/bitwise":334}],333:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -115117,7 +115213,7 @@ function resetId(v) {
 module.exports = ObjectId;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":258,"../cast/objectid":270,"../schematype":341,"../types/objectid":350,"../utils":352,"./../document":272}],333:[function(require,module,exports){
+},{"../../../is-buffer/index.js":259,"../cast/objectid":271,"../schematype":342,"../types/objectid":351,"../utils":353,"./../document":273}],334:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module requirements.
@@ -115159,7 +115255,7 @@ function _castNumber(path, num) {
 module.exports = handleBitwiseOperator;
 
 }).call(this,{"isBuffer":require("../../../../is-buffer/index.js")})
-},{"../../../../is-buffer/index.js":258,"../../error/cast":280}],334:[function(require,module,exports){
+},{"../../../../is-buffer/index.js":259,"../../error/cast":281}],335:[function(require,module,exports){
 'use strict';
 
 const castBoolean = require('../../cast/boolean');
@@ -115173,7 +115269,7 @@ module.exports = function(val) {
   return castBoolean(val, path);
 };
 
-},{"../../cast/boolean":266}],335:[function(require,module,exports){
+},{"../../cast/boolean":267}],336:[function(require,module,exports){
 /*!
  * Module requirements.
  */
@@ -115277,7 +115373,7 @@ function _castMinMaxDistance(self, val) {
   }
 }
 
-},{"../array":321,"./helpers":336}],336:[function(require,module,exports){
+},{"../array":322,"./helpers":337}],337:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -115311,7 +115407,7 @@ function castArraysOfNumbers(arr, self) {
   });
 }
 
-},{"../number":331}],337:[function(require,module,exports){
+},{"../number":332}],338:[function(require,module,exports){
 'use strict';
 
 const CastError = require('../../error/cast');
@@ -115352,7 +115448,7 @@ module.exports = function(val, path) {
   return val;
 };
 
-},{"../../cast/boolean":266,"../../cast/string":271,"../../error/cast":280}],338:[function(require,module,exports){
+},{"../../cast/boolean":267,"../../cast/string":272,"../../error/cast":281}],339:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -115367,7 +115463,7 @@ module.exports = function(val) {
   return val;
 };
 
-},{}],339:[function(require,module,exports){
+},{}],340:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -115985,13 +116081,13 @@ SchemaString.prototype.castForQuery = function($conditional, val) {
 module.exports = SchemaString;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":258,"../cast/string":271,"../error":282,"../schematype":341,"../utils":352,"./../document":272}],340:[function(require,module,exports){
+},{"../../../is-buffer/index.js":259,"../cast/string":272,"../error":283,"../schematype":342,"../utils":353,"./../document":273}],341:[function(require,module,exports){
 'use strict';
 
 exports.schemaMixedSymbol = Symbol.for('mongoose:schema_mixed');
 
 exports.builtInMiddleware = Symbol.for('mongoose:built-in-middleware');
-},{}],341:[function(require,module,exports){
+},{}],342:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -117303,7 +117399,7 @@ exports.CastError = CastError;
 exports.ValidatorError = ValidatorError;
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":258,"./error":282,"./helpers/get":300,"./helpers/immediate":301,"./helpers/symbols":312,"./schema/operators/exists":334,"./schema/operators/type":338,"./utils":352}],342:[function(require,module,exports){
+},{"../../is-buffer/index.js":259,"./error":283,"./helpers/get":301,"./helpers/immediate":302,"./helpers/symbols":313,"./schema/operators/exists":335,"./schema/operators/type":339,"./utils":353}],343:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -117485,7 +117581,7 @@ StateMachine.prototype.map = function map() {
   return this.map.apply(this, arguments);
 };
 
-},{"./utils":352}],343:[function(require,module,exports){
+},{"./utils":353}],344:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -118336,7 +118432,7 @@ function _checkManualPopulation(arr, docs) {
 module.exports = exports = MongooseArray;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":258,"../document":272,"../helpers/document/cleanModifiedSubpaths":297,"../helpers/get":300,"../options":316,"../utils":352,"./embedded":347,"./objectid":350,"util":373}],344:[function(require,module,exports){
+},{"../../../is-buffer/index.js":259,"../document":273,"../helpers/document/cleanModifiedSubpaths":298,"../helpers/get":301,"../options":317,"../utils":353,"./embedded":348,"./objectid":351,"util":374}],345:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -118643,7 +118739,7 @@ MongooseBuffer.Binary = Binary;
 
 module.exports = MongooseBuffer;
 
-},{"../driver":274,"../utils":352,"safe-buffer":369}],345:[function(require,module,exports){
+},{"../driver":275,"../utils":353,"safe-buffer":370}],346:[function(require,module,exports){
 /**
  * ObjectId type constructor
  *
@@ -118658,7 +118754,7 @@ module.exports = MongooseBuffer;
 
 module.exports = require('../driver').get().Decimal128;
 
-},{"../driver":274}],346:[function(require,module,exports){
+},{"../driver":275}],347:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -119022,7 +119118,7 @@ MongooseDocumentArray.mixin = {
 module.exports = MongooseDocumentArray;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":258,"../cast/objectid":270,"../document":272,"../helpers/get":300,"../helpers/symbols":312,"../options":316,"../queryhelpers":319,"../utils":352,"./array":343,"./objectid":350,"util":373}],347:[function(require,module,exports){
+},{"../../../is-buffer/index.js":259,"../cast/objectid":271,"../document":273,"../helpers/get":301,"../helpers/symbols":313,"../options":317,"../queryhelpers":320,"../utils":353,"./array":344,"./objectid":351,"util":374}],348:[function(require,module,exports){
 /* eslint no-func-assign: 1 */
 
 /*!
@@ -119468,7 +119564,7 @@ EmbeddedDocument.prototype.parentArray = function() {
 
 module.exports = EmbeddedDocument;
 
-},{"../document_provider":273,"../helpers/get":300,"../helpers/immediate":301,"../helpers/symbols":312,"../options":316,"../utils":352,"events":255,"util":373}],348:[function(require,module,exports){
+},{"../document_provider":274,"../helpers/get":301,"../helpers/immediate":302,"../helpers/symbols":313,"../options":317,"../utils":353,"events":256,"util":374}],349:[function(require,module,exports){
 
 /*!
  * Module exports.
@@ -119490,7 +119586,7 @@ exports.Map = require('./map');
 
 exports.Subdocument = require('./subdocument');
 
-},{"./array":343,"./buffer":344,"./decimal128":345,"./documentarray":346,"./embedded":347,"./map":349,"./objectid":350,"./subdocument":351}],349:[function(require,module,exports){
+},{"./array":344,"./buffer":345,"./decimal128":346,"./documentarray":347,"./embedded":348,"./map":350,"./objectid":351,"./subdocument":352}],350:[function(require,module,exports){
 'use strict';
 
 const Mixed = require('../schema/mixed');
@@ -119684,7 +119780,7 @@ function checkValidKey(key) {
 
 module.exports = MongooseMap;
 
-},{"../helpers/get":300,"../schema/mixed":330,"util":373}],350:[function(require,module,exports){
+},{"../helpers/get":301,"../schema/mixed":331,"util":374}],351:[function(require,module,exports){
 /**
  * ObjectId type constructor
  *
@@ -119716,7 +119812,7 @@ ObjectId.prototype[objectIdSymbol] = true;
 
 module.exports = ObjectId;
 
-},{"../driver":274,"../helpers/symbols":312}],351:[function(require,module,exports){
+},{"../driver":275,"../helpers/symbols":313}],352:[function(require,module,exports){
 'use strict';
 
 const Document = require('../document');
@@ -119954,7 +120050,7 @@ function registerRemoveListener(sub) {
   owner.on('remove', emitRemove);
 }
 
-},{"../document":272,"../helpers/immediate":301,"../helpers/symbols":312,"../options":316,"../utils":352}],352:[function(require,module,exports){
+},{"../document":273,"../helpers/immediate":302,"../helpers/symbols":313,"../options":317,"../utils":353}],353:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -120937,7 +121033,7 @@ exports.each = function(arr, fn) {
 exports.noop = function() {};
 
 }).call(this,require('_process'))
-},{"./document":272,"./helpers/get":300,"./helpers/symbols":312,"./promise_provider":318,"./types":348,"./types/decimal128":345,"./types/objectid":350,"_process":367,"mpath":355,"ms":354,"regexp-clone":368,"safe-buffer":369,"sliced":370}],353:[function(require,module,exports){
+},{"./document":273,"./helpers/get":301,"./helpers/symbols":313,"./promise_provider":319,"./types":349,"./types/decimal128":346,"./types/objectid":351,"_process":368,"mpath":356,"ms":355,"regexp-clone":369,"safe-buffer":370,"sliced":371}],354:[function(require,module,exports){
 'use strict';
 
 /**
@@ -121083,7 +121179,7 @@ VirtualType.prototype.applySetters = function(value, scope) {
 
 module.exports = VirtualType;
 
-},{}],354:[function(require,module,exports){
+},{}],355:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -121247,10 +121343,10 @@ function plural(ms, msAbs, n, name) {
   return Math.round(ms / n) + ' ' + name + (isPlural ? 's' : '');
 }
 
-},{}],355:[function(require,module,exports){
+},{}],356:[function(require,module,exports){
 module.exports = exports = require('./lib');
 
-},{"./lib":356}],356:[function(require,module,exports){
+},{"./lib":357}],357:[function(require,module,exports){
 (function (global){
 // Make sure Map exists for old Node.js versions
 var Map = global.Map != null ? global.Map : function() {};
@@ -121553,7 +121649,7 @@ function K (v) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],357:[function(require,module,exports){
+},{}],358:[function(require,module,exports){
 'use strict';
 
 /**
@@ -121601,7 +121697,7 @@ function notImplemented(method) {
   };
 }
 
-},{}],358:[function(require,module,exports){
+},{}],359:[function(require,module,exports){
 'use strict';
 
 var env = require('../env');
@@ -121616,7 +121712,7 @@ module.exports =
       require('./collection');
 
 
-},{"../env":360,"./collection":357,"./node":359}],359:[function(require,module,exports){
+},{"../env":361,"./collection":358,"./node":360}],360:[function(require,module,exports){
 'use strict';
 
 /**
@@ -121769,7 +121865,7 @@ NodeCollection.prototype.findCursor = function(match, findOptions) {
 
 module.exports = exports = NodeCollection;
 
-},{"../utils":363,"./collection":357}],360:[function(require,module,exports){
+},{"../utils":364,"./collection":358}],361:[function(require,module,exports){
 (function (process,global,Buffer){
 'use strict';
 
@@ -121795,7 +121891,7 @@ exports.type = exports.isNode ? 'node'
       : 'unknown';
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"_process":367,"buffer":34}],361:[function(require,module,exports){
+},{"_process":368,"buffer":34}],362:[function(require,module,exports){
 'use strict';
 
 /**
@@ -125050,7 +125146,7 @@ module.exports = exports = Query;
 // TODO
 // test utils
 
-},{"./collection":358,"./collection/collection":357,"./env":360,"./permissions":362,"./utils":363,"assert":8,"bluebird":13,"debug":364,"sliced":370,"util":373}],362:[function(require,module,exports){
+},{"./collection":359,"./collection/collection":358,"./env":361,"./permissions":363,"./utils":364,"assert":8,"bluebird":13,"debug":365,"sliced":371,"util":374}],363:[function(require,module,exports){
 'use strict';
 
 var denied = exports;
@@ -125140,7 +125236,7 @@ denied.count.maxScan =
 denied.count.snapshot =
 denied.count.tailable = true;
 
-},{}],363:[function(require,module,exports){
+},{}],364:[function(require,module,exports){
 (function (process,setImmediate){
 'use strict';
 
@@ -125500,7 +125596,7 @@ exports.isArgumentsObject = function(v) {
 };
 
 }).call(this,require('_process'),require("timers").setImmediate)
-},{"_process":367,"regexp-clone":368,"safe-buffer":369,"timers":371}],364:[function(require,module,exports){
+},{"_process":368,"regexp-clone":369,"safe-buffer":370,"timers":372}],365:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -125699,7 +125795,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":365,"_process":367}],365:[function(require,module,exports){
+},{"./debug":366,"_process":368}],366:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -125926,7 +126022,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":366}],366:[function(require,module,exports){
+},{"ms":367}],367:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -126080,7 +126176,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],367:[function(require,module,exports){
+},{}],368:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -126266,7 +126362,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],368:[function(require,module,exports){
+},{}],369:[function(require,module,exports){
 
 var toString = Object.prototype.toString;
 
@@ -126288,7 +126384,7 @@ module.exports = exports = function (regexp) {
 }
 
 
-},{}],369:[function(require,module,exports){
+},{}],370:[function(require,module,exports){
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
 var Buffer = buffer.Buffer
@@ -126352,7 +126448,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":34}],370:[function(require,module,exports){
+},{"buffer":34}],371:[function(require,module,exports){
 
 /**
  * An Array.prototype.slice.call(arguments) alternative
@@ -126387,7 +126483,7 @@ module.exports = function (args, slice, sliceEnd) {
 }
 
 
-},{}],371:[function(require,module,exports){
+},{}],372:[function(require,module,exports){
 (function (setImmediate,clearImmediate){
 var nextTick = require('process/browser.js').nextTick;
 var apply = Function.prototype.apply;
@@ -126466,8 +126562,8 @@ exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate :
   delete immediateIds[id];
 };
 }).call(this,require("timers").setImmediate,require("timers").clearImmediate)
-},{"process/browser.js":367,"timers":371}],372:[function(require,module,exports){
+},{"process/browser.js":368,"timers":372}],373:[function(require,module,exports){
 arguments[4][10][0].apply(exports,arguments)
-},{"dup":10}],373:[function(require,module,exports){
+},{"dup":10}],374:[function(require,module,exports){
 arguments[4][11][0].apply(exports,arguments)
-},{"./support/isBuffer":372,"_process":367,"dup":11,"inherits":257}]},{},[1]);
+},{"./support/isBuffer":373,"_process":368,"dup":11,"inherits":258}]},{},[1]);
