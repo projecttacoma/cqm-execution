@@ -15940,219 +15940,6 @@
     }
   ],
   "created_at": null,
-  "data_criteria": {
-    "Payer_PatientCharacteristic_41dc8804_cc7b_413d_9a39_e815347fcb46": {
-      "title": "Payer",
-      "description": "Patient Characteristic: Payer",
-      "code_list_id": "2.16.840.1.114222.4.11.3591",
-      "type": "characteristic",
-      "definition": "patient_characteristic",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Payer_PatientCharacteristic_41dc8804_cc7b_413d_9a39_e815347fcb46_source",
-      "variable": false
-    },
-    "BodyTemperatureLOINC_PhysicalExamPerformed_efae3a9a_e721_4ae3_b7c7_9cd40bf51274": {
-      "title": "BodyTemperatureLOINC",
-      "description": "Physical Exam, Performed: BodyTemperatureLOINC",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.152",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "BodyTemperatureLOINC_PhysicalExamPerformed_efae3a9a_e721_4ae3_b7c7_9cd40bf51274_source",
-      "variable": false
-    },
-    "EmergencyDepartmentVisit_EncounterPerformed_943fd468_a486_47eb_bcef_69bbc31a73a0": {
-      "title": "EmergencyDepartmentVisit",
-      "description": "Encounter, Performed: EmergencyDepartmentVisit",
-      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "EmergencyDepartmentVisit_EncounterPerformed_943fd468_a486_47eb_bcef_69bbc31a73a0_source",
-      "variable": false
-    },
-    "BodyWeight_PhysicalExamPerformed_dc80045e_4464_4e8d_b830_8bb0b22a229c": {
-      "title": "BodyWeight",
-      "description": "Physical Exam, Performed: BodyWeight",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.159",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "BodyWeight_PhysicalExamPerformed_dc80045e_4464_4e8d_b830_8bb0b22a229c_source",
-      "variable": false
-    },
-    "GlucoseLabTest_LaboratoryTestPerformed_2719267e_2474_47db_a07e_712db786577d": {
-      "title": "GlucoseLabTest",
-      "description": "Laboratory Test, Performed: GlucoseLabTest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.134",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "GlucoseLabTest_LaboratoryTestPerformed_2719267e_2474_47db_a07e_712db786577d_source",
-      "variable": false
-    },
-    "WhiteBloodCellsCountLabTest_LaboratoryTestPerformed_25b05c8c_66bb_4aa3_80a6_be2b86e9e7cf": {
-      "title": "WhiteBloodCellsCountLabTest",
-      "description": "Laboratory Test, Performed: WhiteBloodCellsCountLabTest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.129",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "WhiteBloodCellsCountLabTest_LaboratoryTestPerformed_25b05c8c_66bb_4aa3_80a6_be2b86e9e7cf_source",
-      "variable": false
-    },
-    "BicarbonateLabTest_LaboratoryTestPerformed_cd54ee55_868b_4961_aa5b_e205e14229a8": {
-      "title": "BicarbonateLabTest",
-      "description": "Laboratory Test, Performed: BicarbonateLabTest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.138",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "BicarbonateLabTest_LaboratoryTestPerformed_cd54ee55_868b_4961_aa5b_e205e14229a8_source",
-      "variable": false
-    },
-    "PotassiumLabTest_LaboratoryTestPerformed_82158d31_1f08_4b57_a857_f5d6805375f9": {
-      "title": "PotassiumLabTest",
-      "description": "Laboratory Test, Performed: PotassiumLabTest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.117",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PotassiumLabTest_LaboratoryTestPerformed_82158d31_1f08_4b57_a857_f5d6805375f9_source",
-      "variable": false
-    },
-    "Hematocritlabtest_LaboratoryTestPerformed_80cec38d_992c_41eb_81ea_060db8f7e889": {
-      "title": "Hematocritlabtest",
-      "description": "Laboratory Test, Performed: Hematocritlabtest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.114",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Hematocritlabtest_LaboratoryTestPerformed_80cec38d_992c_41eb_81ea_060db8f7e889_source",
-      "variable": false
-    },
-    "CreatinineLabTest_LaboratoryTestPerformed_680904bf_5c17_4f6d_9d9e_e550855f4a4b": {
-      "title": "CreatinineLabTest",
-      "description": "Laboratory Test, Performed: CreatinineLabTest",
-      "code_list_id": "2.16.840.1.113883.3.666.5.2363",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "CreatinineLabTest_LaboratoryTestPerformed_680904bf_5c17_4f6d_9d9e_e550855f4a4b_source",
-      "variable": false
-    },
-    "AcutecarehospitalInpatientEncounter_EncounterPerformed_cb0e4615_4bf7_47ca_8f0a_6f68ce9643a4": {
-      "title": "AcutecarehospitalInpatientEncounter",
-      "description": "Encounter, Performed: AcutecarehospitalInpatientEncounter",
-      "code_list_id": "2.16.840.1.113883.3.666.5.2289",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "AcutecarehospitalInpatientEncounter_EncounterPerformed_cb0e4615_4bf7_47ca_8f0a_6f68ce9643a4_source",
-      "variable": false
-    },
-    "SodiumLabTestV_LaboratoryTestPerformed_7e9f9e68_052f_4703_abee_5ac80a41b317": {
-      "title": "SodiumLabTestV",
-      "description": "Laboratory Test, Performed: SodiumLabTestV",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.119",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "SodiumLabTestV_LaboratoryTestPerformed_7e9f9e68_052f_4703_abee_5ac80a41b317_source",
-      "variable": false
-    },
-    "prefix_8867_4_PhysicalExamPerformed_EBADDD11_44F8_4A84_B231_FB7FFB9DAC9C": {
-      "title": "Physical Exam, Performed: Physical Exam, Performed",
-      "description": "Physical Exam, Performed: Physical Exam, Performed",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_8867_4_PhysicalExamPerformed_EBADDD11_44F8_4A84_B231_FB7FFB9DAC9C_source",
-      "variable": false,
-      "inline_code_list": {
-        "LOINC": [
-          "8867-4"
-        ]
-      },
-      "code_list_id": "drc-3f0693cb371bd1e4897e23e2f3d8a1e7514ee188e6432d4ca26a1a9c739d1ed5"
-    },
-    "prefix_8480_6_PhysicalExamPerformed_2D63CDC9_E162_4A29_9665_090413891D86": {
-      "title": "Physical Exam, Performed: Physical Exam, Performed",
-      "description": "Physical Exam, Performed: Physical Exam, Performed",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_8480_6_PhysicalExamPerformed_2D63CDC9_E162_4A29_9665_090413891D86_source",
-      "variable": false,
-      "inline_code_list": {
-        "LOINC": [
-          "8480-6"
-        ]
-      },
-      "code_list_id": "drc-5288c3d17d0f24d203a005a7643c2d10bb205b6e62a79b2bc10f9b7757191637"
-    },
-    "prefix_9279_1_PhysicalExamPerformed_8E2E3D6C_BC25_46BE_BBDD_0564AC99D859": {
-      "title": "Physical Exam, Performed: Physical Exam, Performed",
-      "description": "Physical Exam, Performed: Physical Exam, Performed",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_9279_1_PhysicalExamPerformed_8E2E3D6C_BC25_46BE_BBDD_0564AC99D859_source",
-      "variable": false,
-      "inline_code_list": {
-        "LOINC": [
-          "9279-1"
-        ]
-      },
-      "code_list_id": "drc-c1f61825d13c60f07759c8dada377e6750a31ee6c2a31c1236f489e2b93482b6"
-    },
-    "prefix_59408_5_PhysicalExamPerformed_434B3F9A_6F75_4AC6_85AD_3E52A073AFDD": {
-      "title": "Physical Exam, Performed: Physical Exam, Performed",
-      "description": "Physical Exam, Performed: Physical Exam, Performed",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_59408_5_PhysicalExamPerformed_434B3F9A_6F75_4AC6_85AD_3E52A073AFDD_source",
-      "variable": false,
-      "inline_code_list": {
-        "LOINC": [
-          "59408-5"
-        ]
-      },
-      "code_list_id": "drc-d20f2fc48045688c795dd40ecdb30e2500a3e8e90fb984c2f4450b2ca529e690"
-    }
-  },
   "description": "This logic is intended to extract electronic clinical data. This is not an electronic clinical quality measure and this logic will not produce measure results. Instead, it will produce a file containing the data that CMS will link with administrative claims to risk adjust the hybrid HWR outcome measure. It is designed to extract the first captured set of vital signs and basic laboratory results obtained on adult Medicare fee-for-service patients admitted to acute care short stay hospitals.",
   "hqmf_id": "40280382-5FA6-FE85-0160-128121CF2479",
   "hqmf_set_id": "FA75DE85-A934-45D7-A2F7-C700A756078B",
@@ -16618,242 +16405,459 @@
       "title": "Population Criteria Section"
     }
   ],
-  "source_data_criteria": {
-    "Payer_PatientCharacteristic_41dc8804_cc7b_413d_9a39_e815347fcb46_source": {
-      "title": "Payer",
+  "source_data_criteria": [
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.114222.4.11.3591",
+      "dataElementCodes": [
+
+      ],
       "description": "Patient Characteristic: Payer",
-      "code_list_id": "2.16.840.1.114222.4.11.3591",
-      "type": "characteristic",
-      "definition": "patient_characteristic",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Payer_PatientCharacteristic_41dc8804_cc7b_413d_9a39_e815347fcb46_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.53",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1ae"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmTitle": "Patient Characteristic",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristic"
     },
-    "BodyTemperatureLOINC_PhysicalExamPerformed_efae3a9a_e721_4ae3_b7c7_9cd40bf51274_source": {
-      "title": "BodyTemperatureLOINC",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1045.152",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Physical Exam, Performed: BodyTemperatureLOINC",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.152",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "BodyTemperatureLOINC_PhysicalExamPerformed_efae3a9a_e721_4ae3_b7c7_9cd40bf51274_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.62",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1af"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "physical_exam",
+      "qdmStatus": "performed",
+      "qdmTitle": "Physical Exam, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "_type": "QDM::PhysicalExamPerformed"
     },
-    "EmergencyDepartmentVisit_EncounterPerformed_943fd468_a486_47eb_bcef_69bbc31a73a0_source": {
-      "title": "EmergencyDepartmentVisit",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.117.1.7.1.292",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: EmergencyDepartmentVisit",
-      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "EmergencyDepartmentVisit_EncounterPerformed_943fd468_a486_47eb_bcef_69bbc31a73a0_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b0"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "BodyWeight_PhysicalExamPerformed_dc80045e_4464_4e8d_b830_8bb0b22a229c_source": {
-      "title": "BodyWeight",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1045.159",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Physical Exam, Performed: BodyWeight",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.159",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "BodyWeight_PhysicalExamPerformed_dc80045e_4464_4e8d_b830_8bb0b22a229c_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.62",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b1"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "physical_exam",
+      "qdmStatus": "performed",
+      "qdmTitle": "Physical Exam, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "_type": "QDM::PhysicalExamPerformed"
     },
-    "GlucoseLabTest_LaboratoryTestPerformed_2719267e_2474_47db_a07e_712db786577d_source": {
-      "title": "GlucoseLabTest",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1045.134",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Laboratory Test, Performed: GlucoseLabTest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.134",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "GlucoseLabTest_LaboratoryTestPerformed_2719267e_2474_47db_a07e_712db786577d_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.42",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b2"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "laboratory_test",
+      "qdmStatus": "performed",
+      "qdmTitle": "Laboratory Test, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": null,
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
     },
-    "WhiteBloodCellsCountLabTest_LaboratoryTestPerformed_25b05c8c_66bb_4aa3_80a6_be2b86e9e7cf_source": {
-      "title": "WhiteBloodCellsCountLabTest",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1045.129",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Laboratory Test, Performed: WhiteBloodCellsCountLabTest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.129",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "WhiteBloodCellsCountLabTest_LaboratoryTestPerformed_25b05c8c_66bb_4aa3_80a6_be2b86e9e7cf_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.42",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b3"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "laboratory_test",
+      "qdmStatus": "performed",
+      "qdmTitle": "Laboratory Test, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": null,
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
     },
-    "BicarbonateLabTest_LaboratoryTestPerformed_cd54ee55_868b_4961_aa5b_e205e14229a8_source": {
-      "title": "BicarbonateLabTest",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1045.138",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Laboratory Test, Performed: BicarbonateLabTest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.138",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "BicarbonateLabTest_LaboratoryTestPerformed_cd54ee55_868b_4961_aa5b_e205e14229a8_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.42",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b4"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "laboratory_test",
+      "qdmStatus": "performed",
+      "qdmTitle": "Laboratory Test, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": null,
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
     },
-    "PotassiumLabTest_LaboratoryTestPerformed_82158d31_1f08_4b57_a857_f5d6805375f9_source": {
-      "title": "PotassiumLabTest",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1045.117",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Laboratory Test, Performed: PotassiumLabTest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.117",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "PotassiumLabTest_LaboratoryTestPerformed_82158d31_1f08_4b57_a857_f5d6805375f9_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.42",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b5"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "laboratory_test",
+      "qdmStatus": "performed",
+      "qdmTitle": "Laboratory Test, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": null,
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
     },
-    "Hematocritlabtest_LaboratoryTestPerformed_80cec38d_992c_41eb_81ea_060db8f7e889_source": {
-      "title": "Hematocritlabtest",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1045.114",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Laboratory Test, Performed: Hematocritlabtest",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.114",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "Hematocritlabtest_LaboratoryTestPerformed_80cec38d_992c_41eb_81ea_060db8f7e889_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.42",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b6"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "laboratory_test",
+      "qdmStatus": "performed",
+      "qdmTitle": "Laboratory Test, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": null,
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
     },
-    "CreatinineLabTest_LaboratoryTestPerformed_680904bf_5c17_4f6d_9d9e_e550855f4a4b_source": {
-      "title": "CreatinineLabTest",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.666.5.2363",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Laboratory Test, Performed: CreatinineLabTest",
-      "code_list_id": "2.16.840.1.113883.3.666.5.2363",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "CreatinineLabTest_LaboratoryTestPerformed_680904bf_5c17_4f6d_9d9e_e550855f4a4b_source",
-      "variable": false
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.42",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b7"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "laboratory_test",
+      "qdmStatus": "performed",
+      "qdmTitle": "Laboratory Test, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": null,
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
     },
-    "AcutecarehospitalInpatientEncounter_EncounterPerformed_cb0e4615_4bf7_47ca_8f0a_6f68ce9643a4_source": {
-      "title": "AcutecarehospitalInpatientEncounter",
+    {
+      "admissionSource": null,
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113883.3.666.5.2289",
+      "dataElementCodes": [
+
+      ],
       "description": "Encounter, Performed: AcutecarehospitalInpatientEncounter",
-      "code_list_id": "2.16.840.1.113883.3.666.5.2289",
-      "type": "encounters",
-      "definition": "encounter",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "AcutecarehospitalInpatientEncounter_EncounterPerformed_cb0e4615_4bf7_47ca_8f0a_6f68ce9643a4_source",
-      "variable": false
+      "diagnoses": null,
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b8"
+      },
+      "lengthOfStay": null,
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": null,
+      "_type": "QDM::EncounterPerformed"
     },
-    "SodiumLabTestV_LaboratoryTestPerformed_7e9f9e68_052f_4703_abee_5ac80a41b317_source": {
-      "title": "SodiumLabTestV",
+    {
+      "authorDatetime": null,
+      "codeListId": "2.16.840.1.113762.1.4.1045.119",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Laboratory Test, Performed: SodiumLabTestV",
-      "code_list_id": "2.16.840.1.113762.1.4.1045.119",
-      "type": "laboratory_tests",
-      "definition": "laboratory_test",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "SodiumLabTestV_LaboratoryTestPerformed_7e9f9e68_052f_4703_abee_5ac80a41b317_source",
-      "variable": false
-    },
-    "prefix_8867_4_PhysicalExamPerformed_EBADDD11_44F8_4A84_B231_FB7FFB9DAC9C_source": {
-      "title": "Physical Exam, Performed: Physical Exam, Performed",
-      "description": "Physical Exam, Performed: Physical Exam, Performed",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_8867_4_PhysicalExamPerformed_EBADDD11_44F8_4A84_B231_FB7FFB9DAC9C_source",
-      "variable": false,
-      "inline_code_list": {
-        "LOINC": [
-          "8867-4"
-        ]
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.42",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1b9"
       },
-      "code_list_id": "drc-3f0693cb371bd1e4897e23e2f3d8a1e7514ee188e6432d4ca26a1a9c739d1ed5"
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "laboratory_test",
+      "qdmStatus": "performed",
+      "qdmTitle": "Laboratory Test, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": null,
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
     },
-    "prefix_8480_6_PhysicalExamPerformed_2D63CDC9_E162_4A29_9665_090413891D86_source": {
-      "title": "Physical Exam, Performed: Physical Exam, Performed",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "drc-3f0693cb371bd1e4897e23e2f3d8a1e7514ee188e6432d4ca26a1a9c739d1ed5",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Physical Exam, Performed: Physical Exam, Performed",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_8480_6_PhysicalExamPerformed_2D63CDC9_E162_4A29_9665_090413891D86_source",
-      "variable": false,
-      "inline_code_list": {
-        "LOINC": [
-          "8480-6"
-        ]
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.62",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1ba"
       },
-      "code_list_id": "drc-5288c3d17d0f24d203a005a7643c2d10bb205b6e62a79b2bc10f9b7757191637"
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "physical_exam",
+      "qdmStatus": "performed",
+      "qdmTitle": "Physical Exam, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "_type": "QDM::PhysicalExamPerformed"
     },
-    "prefix_9279_1_PhysicalExamPerformed_8E2E3D6C_BC25_46BE_BBDD_0564AC99D859_source": {
-      "title": "Physical Exam, Performed: Physical Exam, Performed",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "drc-5288c3d17d0f24d203a005a7643c2d10bb205b6e62a79b2bc10f9b7757191637",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Physical Exam, Performed: Physical Exam, Performed",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_9279_1_PhysicalExamPerformed_8E2E3D6C_BC25_46BE_BBDD_0564AC99D859_source",
-      "variable": false,
-      "inline_code_list": {
-        "LOINC": [
-          "9279-1"
-        ]
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.62",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1bb"
       },
-      "code_list_id": "drc-c1f61825d13c60f07759c8dada377e6750a31ee6c2a31c1236f489e2b93482b6"
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "physical_exam",
+      "qdmStatus": "performed",
+      "qdmTitle": "Physical Exam, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "_type": "QDM::PhysicalExamPerformed"
     },
-    "prefix_59408_5_PhysicalExamPerformed_434B3F9A_6F75_4AC6_85AD_3E52A073AFDD_source": {
-      "title": "Physical Exam, Performed: Physical Exam, Performed",
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "drc-c1f61825d13c60f07759c8dada377e6750a31ee6c2a31c1236f489e2b93482b6",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
       "description": "Physical Exam, Performed: Physical Exam, Performed",
-      "type": "physical_exams",
-      "definition": "physical_exam",
-      "status": "performed",
-      "hard_status": false,
-      "negation": false,
-      "source_data_criteria": "prefix_59408_5_PhysicalExamPerformed_434B3F9A_6F75_4AC6_85AD_3E52A073AFDD_source",
-      "variable": false,
-      "inline_code_list": {
-        "LOINC": [
-          "59408-5"
-        ]
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.62",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1bc"
       },
-      "code_list_id": "drc-d20f2fc48045688c795dd40ecdb30e2500a3e8e90fb984c2f4450b2ca529e690"
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "physical_exam",
+      "qdmStatus": "performed",
+      "qdmTitle": "Physical Exam, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "_type": "QDM::PhysicalExamPerformed"
+    },
+    {
+      "anatomicalLocationSite": null,
+      "authorDatetime": null,
+      "codeListId": "drc-d20f2fc48045688c795dd40ecdb30e2500a3e8e90fb984c2f4450b2ca529e690",
+      "components": null,
+      "dataElementCodes": [
+
+      ],
+      "description": "Physical Exam, Performed: Physical Exam, Performed",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.62",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5ca369c35cc9752fac10a1bd"
+      },
+      "method": null,
+      "negationRationale": null,
+      "qdmCategory": "physical_exam",
+      "qdmStatus": "performed",
+      "qdmTitle": "Physical Exam, Performed",
+      "qdmVersion": "5.4",
+      "reason": null,
+      "relevantPeriod": null,
+      "result": null,
+      "_type": "QDM::PhysicalExamPerformed"
     }
-  },
+  ],
   "title": "Core Clinical Data Elements for the Hybrid Hospital-Wide Readmission (HWR) Measure with Claims and Electronic Health Record Data",
   "updated_at": null,
   "value_set_ids": [
-    "5c924907a564ac36953fc55a",
-    "5c924907a564ac36953fc55b",
-    "5c924907a564ac36953fc55c",
-    "5c924907a564ac36953fc55d",
-    "5c924907a564ac36953fc55e",
-    "5c924907a564ac36953fc55f",
-    "5c924907a564ac36953fc560",
-    "5c924907a564ac36953fc561",
-    "5c924907a564ac36953fc562",
-    "5c924907a564ac36953fc563",
-    "5c924907a564ac36953fc564",
-    "5c924907a564ac36953fc565",
-    "5c924907a564ac36953fc566",
-    "5c924907a564ac36953fc567",
-    "5c924907a564ac36953fc568",
-    "5c924907a564ac36953fc569",
-    "5c924907a564ac36953fc56a",
-    "5c924907a564ac36953fc56b",
-    "5c924907a564ac36953fc56c",
-    "5c924907a564ac36953fc56d",
-    "5c924907a564ac36953fc56e"
+    "5ca369c35cc9752fac10a1be",
+    "5ca369c35cc9752fac10a1bf",
+    "5ca369c35cc9752fac10a1c0",
+    "5ca369c35cc9752fac10a1c1",
+    "5ca369c35cc9752fac10a1c2",
+    "5ca369c35cc9752fac10a1c3",
+    "5ca369c35cc9752fac10a1c4",
+    "5ca369c35cc9752fac10a1c5",
+    "5ca369c35cc9752fac10a1c6",
+    "5ca369c35cc9752fac10a1c7",
+    "5ca369c35cc9752fac10a1c8",
+    "5ca369c35cc9752fac10a1c9",
+    "5ca369c35cc9752fac10a1ca",
+    "5ca369c35cc9752fac10a1cb",
+    "5ca369c35cc9752fac10a1cc",
+    "5ca369c35cc9752fac10a1cd",
+    "5ca369c35cc9752fac10a1ce",
+    "5ca369c35cc9752fac10a1cf",
+    "5ca369c35cc9752fac10a1d0",
+    "5ca369c35cc9752fac10a1d1",
+    "5ca369c35cc9752fac10a1d2"
   ]
 }
