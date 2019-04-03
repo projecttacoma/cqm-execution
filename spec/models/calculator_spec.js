@@ -658,7 +658,7 @@ describe('Calculator', () => {
       const numPass = getJSONFixture('patients/CMS160v7/PHQ9EBEDec_PerDzDxSAEDec_NUM1Pass.json');
       const patients = [];
       patients.push(new CqmModels.QDMPatient(numPass.qdmPatient));
-      cqmMeasure = new CqmModels.Measure(measure);
+      const cqmMeasure = new CqmModels.Measure(measure);
 
       // sanity check number of population_sets
       expect(cqmMeasure.population_sets.length).toBe(3);
@@ -674,7 +674,6 @@ describe('Calculator', () => {
       const pop2Strat1 = numPassResults['PopulationCriteria2'];
       const pop2Strat1StatementResults = pop2Strat1.statement_results.DepressionUtilizationofthePHQ9Tool;
       expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
-
     });
   });
 });
