@@ -4,6 +4,7 @@
 const Calculator = require('../../lib/models/calculator.js');
 const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 const getEpisodeResults = require('../support/spec_helper.js').getEpisodeResults;
+const CqmModels = require('cqm-models');
 
 describe('Calculator', () => {
   describe('episode of care based relevance map', () => {
@@ -647,6 +648,32 @@ describe('Calculator', () => {
       expect(result.IPP).toEqual(1);
       expect(result.DENOM).toEqual(1);
       expect(result.NUMER).toEqual(1);
+    });
+  });
+
+  describe('Using cqm-models passed in', () => {
+    it('Doesn\'t pollute Measure model to calculate measure with stratification', () => {
+      const valueSets = getJSONFixture('cqm_measures/CMS160v7/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMS160v7/CMS160v7.json');
+      const numPass = getJSONFixture('patients/CMS160v7/PHQ9EBEDec_PerDzDxSAEDec_NUM1Pass.json');
+      const patients = [];
+      patients.push(new CqmModels.QDMPatient(numPass.qdmPatient));
+      const cqmMeasure = new CqmModels.Measure(measure);
+
+      // sanity check number of population_sets
+      expect(cqmMeasure.population_sets.length).toBe(3);
+
+      const options = { doPretty: true };
+      const calculationResults = Calculator.calculate(cqmMeasure, patients, valueSets, options);
+      const numPassResults = calculationResults[Object.keys(calculationResults)[0]];
+
+      // make sure number of population_sets did not change
+      expect(cqmMeasure.population_sets.length).toBe(3);
+
+      // Patient expiredDenexResults Population Set 1 - borrowed from 'multiple population and stratification measure correctly' abpve
+      const pop2Strat1 = numPassResults['PopulationCriteria2'];
+      const pop2Strat1StatementResults = pop2Strat1.statement_results.DepressionUtilizationofthePHQ9Tool;
+      expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
     });
   });
 });
