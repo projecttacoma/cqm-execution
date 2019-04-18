@@ -247,9 +247,9 @@ core-util-is@~1.0.0:
     moment "^2.20.1"
     ucum "0.0.7"
 
-"cqm-models@https://github.com/projecttacoma/cqm-models.git#bonnie-patch-update":
+"cqm-models@https://github.com/projecttacoma/cqm-models.git#bonnie-patch":
   version "1.0.2"
-  resolved "https://github.com/projecttacoma/cqm-models.git#fc57a295ac4402ef993ab378e2c94048d1f5eef8"
+  resolved "https://github.com/projecttacoma/cqm-models.git#804cdda6d12ce0752ca64a01ea001982247354c4"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution.git#bonnie-v3.2"
     mongoose "^5.0.7"
