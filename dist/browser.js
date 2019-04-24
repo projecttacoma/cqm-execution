@@ -80489,7 +80489,7 @@ const Code = require('../basetypes/Code');
 const Interval = require('../basetypes/Interval');
 const Quantity = require('../basetypes/Quantity');
 const DateTime = require('../basetypes/DateTime');
-const { QDMPatientSchema } = require('../QDMPatient');
+const { QDMPatientSchema, QDMPatient } = require('../QDMPatient');
 const { ProviderSchema } = require('./Provider');
 
 const [Schema, Number, String, Mixed] = [
@@ -80516,6 +80516,9 @@ module.exports.PatientSchema = PatientSchema;
 class Patient extends mongoose.Document {
   constructor(object) {
     super(object, PatientSchema);
+    if (this.qdmPatient) {
+      this.qdmPatient = new QDMPatient(this.qdmPatient.toJSON());
+    }
   }
 }
 module.exports.Patient = Patient;
@@ -108881,6 +108884,9 @@ module.exports = function cleanModifiedSubpaths(doc, path, options) {
   const skipDocArrays = options.skipDocArrays;
 
   let deleted = 0;
+  if (!doc) {
+    return deleted;
+  }
   for (const modifiedPath of Object.keys(doc.$__.activePaths.states.modify)) {
     if (skipDocArrays) {
       const schemaType = doc.schema.path(modifiedPath);
@@ -109802,17 +109808,13 @@ module.exports = function merge(s1, s2) {
 },{}],313:[function(require,module,exports){
 'use strict';
 
-exports.validatorErrorSymbol = Symbol.for('mongoose:validatorError');
-
+exports.arrayParentSymbol = Symbol('mongoose#Array#_parent');
 exports.documentArrayParent = Symbol.for('mongoose:documentArrayParent');
-
-exports.modelSymbol = Symbol.for('mongoose#Model');
-
 exports.getSymbol = Symbol.for('mongoose#Document#get');
-
+exports.modelSymbol = Symbol.for('mongoose#Model');
 exports.objectIdSymbol = Symbol.for('mongoose#ObjectId');
-
 exports.schemaTypeSymbol = Symbol.for('mongoose#schemaType');
+exports.validatorErrorSymbol = Symbol.for('mongoose:validatorError');
 },{}],314:[function(require,module,exports){
 'use strict';
 
@@ -114011,6 +114013,8 @@ const util = require('util');
 const utils = require('../utils');
 const getDiscriminatorByValue = require('../queryhelpers').getDiscriminatorByValue;
 
+const arrayParentSymbol = require('../helpers/symbols').arrayParentSymbol;
+
 let MongooseDocumentArray;
 let Subdocument;
 
@@ -114288,8 +114292,8 @@ DocumentArray.prototype.getDefault = function(scope) {
   }
 
   ret = new MongooseDocumentArray(ret, this.path, scope);
-  const _parent = ret._parent;
-  ret._parent = null;
+  const _parent = ret[arrayParentSymbol];
+  ret[arrayParentSymbol] = null;
 
   for (let i = 0; i < ret.length; ++i) {
     const Constructor = getConstructor(this, ret[i]);
@@ -114297,7 +114301,7 @@ DocumentArray.prototype.getDefault = function(scope) {
       undefined, i);
   }
 
-  ret._parent = _parent;
+  ret[arrayParentSymbol] = _parent;
 
   return ret;
 };
@@ -114352,7 +114356,7 @@ DocumentArray.prototype.cast = function(value, doc, init, prev, options) {
 
     // Check if the document has a different schema (re gh-3701)
     if ((value[i].$__) &&
-        value[i].schema !== Constructor.schema) {
+        !(value[i] instanceof Constructor)) {
       value[i] = value[i].toObject({ transform: false, virtuals: false });
     }
 
@@ -114442,12 +114446,12 @@ DocumentArray.prototype.clone = function() {
  */
 
 function _clearListeners(arr) {
-  if (arr == null || arr._parent == null) {
+  if (arr == null || arr[arrayParentSymbol] == null) {
     return;
   }
 
   for (const key in arr._handlers) {
-    arr._parent.removeListener(key, arr._handlers[key]);
+    arr[arrayParentSymbol].removeListener(key, arr._handlers[key]);
   }
 }
 
@@ -114497,7 +114501,7 @@ function scopePaths(array, fields, init) {
 
 module.exports = DocumentArray;
 
-},{"../error/cast":281,"../helpers/model/discriminator":304,"../queryhelpers":320,"../schematype":342,"../types/documentarray":347,"../types/embedded":348,"../utils":353,"./array":322,"events":256,"util":374}],328:[function(require,module,exports){
+},{"../error/cast":281,"../helpers/model/discriminator":304,"../helpers/symbols":313,"../queryhelpers":320,"../schematype":342,"../types/documentarray":347,"../types/embedded":348,"../utils":353,"./array":322,"events":256,"util":374}],328:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -118117,6 +118121,7 @@ const internalToObjectOptions = require('../options').internalToObjectOptions;
 const utils = require('../utils');
 const util = require('util');
 
+const arrayParentSymbol = require('../helpers/symbols').arrayParentSymbol;
 const isMongooseObject = utils.isMongooseObject;
 
 /**
@@ -118157,7 +118162,7 @@ function MongooseArray(values, path, doc) {
   // RB Jun 17, 2015 updated to check for presence of expected paths instead
   // to make more proof against unusual node environments
   if (doc && doc instanceof Document) {
-    arr._parent = doc;
+    arr[arrayParentSymbol] = doc;
     arr._schema = doc.schema.path(path);
   }
 
@@ -118181,15 +118186,13 @@ MongooseArray.mixin = {
 
   _atomics: undefined,
 
-  /**
-   * Parent owner document
-   *
-   * @property _parent
-   * @api private
-   * @memberOf MongooseArray
+  /*!
+   * ignore
    */
 
-  _parent: undefined,
+  $parent: function() {
+    return this[arrayParentSymbol];
+  },
 
   /**
    * Casts a member based on this arrays schema.
@@ -118205,8 +118208,8 @@ MongooseArray.mixin = {
     let populated = false;
     let Model;
 
-    if (this._parent) {
-      populated = this._parent.populated(this._path, true);
+    if (this[arrayParentSymbol]) {
+      populated = this[arrayParentSymbol].populated(this._path, true);
     }
 
     if (populated && value !== null && value !== undefined) {
@@ -118227,10 +118230,10 @@ MongooseArray.mixin = {
       if (!isDisc) {
         value = new Model(value);
       }
-      return this._schema.caster.applySetters(value, this._parent, true);
+      return this._schema.caster.applySetters(value, this[arrayParentSymbol], true);
     }
 
-    return this._schema.caster.applySetters(value, this._parent, false);
+    return this._schema.caster.applySetters(value, this[arrayParentSymbol], false);
   },
 
   /**
@@ -118246,7 +118249,7 @@ MongooseArray.mixin = {
    */
 
   _markModified: function(elem, embeddedPath) {
-    const parent = this._parent;
+    const parent = this[arrayParentSymbol];
     let dirtyPath;
 
     if (parent) {
@@ -118283,7 +118286,7 @@ MongooseArray.mixin = {
       // $set takes precedence over all other ops.
       // mark entire array modified.
       this._atomics = {$set: val};
-      cleanModifiedSubpaths(this._parent, this._path);
+      cleanModifiedSubpaths(this[arrayParentSymbol], this._path);
       this._markModified();
       return this;
     }
@@ -118293,7 +118296,7 @@ MongooseArray.mixin = {
     // reset pop/shift after save
     if (op === '$pop' && !('$pop' in atomics)) {
       const _this = this;
-      this._parent.once('save', function() {
+      this[arrayParentSymbol].once('save', function() {
         _this._popped = _this._shifted = null;
       });
     }
@@ -118426,7 +118429,7 @@ MongooseArray.mixin = {
   push: function() {
     _checkManualPopulation(this, arguments);
     let values = [].map.call(arguments, this._mapCast, this);
-    values = this._schema.applySetters(values, this._parent, undefined,
+    values = this._schema.applySetters(values, this[arrayParentSymbol], undefined,
       undefined, { skipDocumentArrayCast: true });
     const ret = [].push.apply(this, values);
 
@@ -118631,7 +118634,7 @@ MongooseArray.mixin = {
 
   pull: function() {
     const values = [].map.call(arguments, this._cast, this);
-    const cur = this._parent.get(this._path);
+    const cur = this[arrayParentSymbol].get(this._path);
     let i = cur.length;
     let mem;
 
@@ -118663,7 +118666,7 @@ MongooseArray.mixin = {
     // `doc.children[1].name = 'test';` followed by
     // `doc.children.remove(doc.children[0]);`. In this case we fall back
     // to a `$set` on the whole array. See #3511
-    if (cleanModifiedSubpaths(this._parent, this._path) > 0) {
+    if (cleanModifiedSubpaths(this[arrayParentSymbol], this._path) > 0) {
       this._registerAtomic('$set', this);
     }
 
@@ -118717,7 +118720,7 @@ MongooseArray.mixin = {
     _checkManualPopulation(this, arguments);
 
     let values = [].map.call(arguments, this._cast, this);
-    values = this._schema.applySetters(values, this._parent);
+    values = this._schema.applySetters(values, this[arrayParentSymbol]);
     [].unshift.apply(this, values);
     this._registerAtomic('$set', this);
     this._markModified();
@@ -118763,7 +118766,7 @@ MongooseArray.mixin = {
     _checkManualPopulation(this, arguments);
 
     let values = [].map.call(arguments, this._mapCast, this);
-    values = this._schema.applySetters(values, this._parent);
+    values = this._schema.applySetters(values, this[arrayParentSymbol]);
     const added = [];
     let type = '';
     if (values[0] instanceof EmbeddedDocument) {
@@ -118939,7 +118942,7 @@ function _checkManualPopulation(arr, docs) {
   if (arr.length === 0 &&
       docs.length > 0) {
     if (_isAllSubdocs(docs, ref)) {
-      arr._parent.populated(arr._path, [], { model: docs[0].constructor });
+      arr[arrayParentSymbol].populated(arr._path, [], { model: docs[0].constructor });
     }
   }
 }
@@ -118951,7 +118954,7 @@ function _checkManualPopulation(arr, docs) {
 module.exports = exports = MongooseArray;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":259,"../document":273,"../helpers/document/cleanModifiedSubpaths":298,"../helpers/get":301,"../options":317,"../utils":353,"./embedded":348,"./objectid":351,"util":374}],345:[function(require,module,exports){
+},{"../../../is-buffer/index.js":259,"../document":273,"../helpers/document/cleanModifiedSubpaths":298,"../helpers/get":301,"../helpers/symbols":313,"../options":317,"../utils":353,"./embedded":348,"./objectid":351,"util":374}],345:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -119265,6 +119268,7 @@ const internalToObjectOptions = require('../options').internalToObjectOptions;
 const util = require('util');
 const utils = require('../utils');
 
+const arrayParentSymbol = require('../helpers/symbols').arrayParentSymbol;
 const documentArrayParent = require('../helpers/symbols').documentArrayParent;
 
 /*!
@@ -119307,7 +119311,7 @@ function MongooseDocumentArray(values, path, doc) {
   if (Array.isArray(values)) {
     if (values instanceof CoreMongooseArray &&
         values._path === path &&
-        values._parent === doc) {
+        values[arrayParentSymbol] === doc) {
       props._atomics = Object.assign({}, values._atomics);
     }
     values.forEach(v => {
@@ -119344,7 +119348,7 @@ function MongooseDocumentArray(values, path, doc) {
   // RB Jun 17, 2015 updated to check for presence of expected paths instead
   // to make more proof against unusual node environments
   if (doc && doc instanceof Document) {
-    arr._parent = doc;
+    arr[arrayParentSymbol] = doc;
     arr._schema = doc.schema.path(path);
 
     // `schema.path()` doesn't drill into nested arrays properly yet, see
@@ -119404,7 +119408,7 @@ MongooseDocumentArray.mixin = {
         (value && value.constructor && value.constructor.baseCasterConstructor === Constructor)) {
       if (!(value[documentArrayParent] && value.__parentArray)) {
         // value may have been created using array.create()
-        value[documentArrayParent] = this._parent;
+        value[documentArrayParent] = this[arrayParentSymbol];
         value.__parentArray = this;
       }
       value.$setIndex(index);
@@ -119644,7 +119648,7 @@ const validatorErrorSymbol = require('../helpers/symbols').validatorErrorSymbol;
 function EmbeddedDocument(obj, parentArr, skipId, fields, index) {
   if (parentArr) {
     this.__parentArray = parentArr;
-    this[documentArrayParent] = parentArr._parent;
+    this[documentArrayParent] = parentArr.$parent();
   } else {
     this.__parentArray = undefined;
     this[documentArrayParent] = undefined;
