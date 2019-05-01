@@ -4,8 +4,7 @@
   "dataElements": [
     {
       "admissionSource": null,
-      "authorDatetime": "2012-06-10T05:00:00.000-04:00",
-      "category": "encounter",
+      "authorDatetime": null,
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -28,7 +27,7 @@
       "hqmfOid": "2.16.840.1.113883.3.560.1.79",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "59cbf4e7942c6d4064006399"
       },
       "lengthOfStay": {
@@ -43,8 +42,9 @@
         "codeSystemOid": null,
         "version": null
       },
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "relevantPeriod": {
         "low": "2012-06-10T09:00:00.000+00:00",
         "high": "2012-10-09T00:15:00.000+00:00",
@@ -55,7 +55,6 @@
     },
     {
       "birthDatetime": "1985-09-18T04:00:00.000-04:00",
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "21112-8",
@@ -70,15 +69,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb7f7ef33a57f8a68bcb9"
+        "qdmVersion": "5.4",
+        "value": "5cc9be87ef33a5a1c199c199"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicBirthdate"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2135-2",
@@ -93,15 +92,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb7f7ef33a57f8a68bcba"
+        "qdmVersion": "5.4",
+        "value": "5cc9be87ef33a5a1c199c19a"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2076-8",
@@ -116,15 +115,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb7f7ef33a57f8a68bcbb"
+        "qdmVersion": "5.4",
+        "value": "5cc9be87ef33a5a1c199c19b"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "F",
@@ -139,11 +138,12 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb7f7ef33a57f8a68bcbc"
+        "qdmVersion": "5.4",
+        "value": "5cc9be87ef33a5a1c199c19c"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicSex"
     }
   ],
@@ -222,5 +222,5 @@
   "givenNames": [
     "LOS=121Days"
   ],
-  "qdmVersion": "5.3"
+  "qdmVersion": "5.4"
 }
