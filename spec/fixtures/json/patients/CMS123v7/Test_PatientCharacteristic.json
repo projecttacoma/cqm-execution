@@ -3,7 +3,6 @@
   "bundleId": "5a57e977942c6d1e61d32f14",
   "dataElements": [
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "codeSystem": "Source of Payment Typology",
@@ -14,11 +13,12 @@
       "hqmfOid": "2.16.840.1.113883.3.560.1.405",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5b588789b84846559a53f764"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "relevantPeriod": {
         "low": "2012-07-25T08:00:00.000+00:00",
         "high": "2012-07-25T08:15:00.000+00:00",
@@ -29,7 +29,6 @@
     },
     {
       "birthDatetime": "1970-01-01T03:00:00.000-05:00",
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "21112-8",
@@ -44,15 +43,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb802ef33a57fb2218bf7"
+        "qdmVersion": "5.4",
+        "value": "5cc9be91ef33a5a20d547f32"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicBirthdate"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2186-5",
@@ -67,15 +66,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb802ef33a57fb2218bf8"
+        "qdmVersion": "5.4",
+        "value": "5cc9be91ef33a5a20d547f33"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "1002-5",
@@ -90,15 +89,15 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb802ef33a57fb2218bf9"
+        "qdmVersion": "5.4",
+        "value": "5cc9be91ef33a5a20d547f34"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
-      "category": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "M",
@@ -113,11 +112,12 @@
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
-        "value": "5b7eb802ef33a57fb2218bfa"
+        "qdmVersion": "5.4",
+        "value": "5cc9be91ef33a5a20d547f35"
       },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicSex"
     }
   ],
@@ -182,11 +182,11 @@
     "medical_record_assigner": "Bonnie",
     "description": null,
     "description_category": null,
-    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199145600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+    "insurance_providers": "[{\"author_datetime\":null,\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199145600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
   },
   "familyName": "PatientCharacteristic",
   "givenNames": [
     "Test"
   ],
-  "qdmVersion": "5.3"
+  "qdmVersion": "5.4"
 }
