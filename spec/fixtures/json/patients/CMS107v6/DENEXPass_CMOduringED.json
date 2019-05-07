@@ -15,12 +15,16 @@
     "CMOduringED"
   ],
   "notes": "Comfort measures in ED visit",
+  "provider_ids": [
+
+  ],
   "qdmPatient": {
     "birthDatetime": "1985-09-18T04:00:00.000-04:00",
     "dataElements": [
       {
         "admissionSource": null,
         "authorDatetime": "2012-10-10T04:00:00.000-04:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
@@ -49,6 +53,7 @@
         "principalDiagnosis": null,
         "qdmCategory": "encounter",
         "qdmStatus": "performed",
+        "qdmTitle": "Encounter, Performed",
         "qdmVersion": "5.4",
         "relevantPeriod": {
           "low": "2012-10-10T08:00:00.000+00:00",
@@ -61,6 +66,7 @@
       {
         "admissionSource": null,
         "authorDatetime": "2012-10-10T05:30:00.000-04:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
@@ -106,6 +112,7 @@
         },
         "qdmCategory": "encounter",
         "qdmStatus": "performed",
+        "qdmTitle": "Encounter, Performed",
         "qdmVersion": "5.4",
         "relevantPeriod": {
           "low": "2012-10-10T09:30:00.000+00:00",
@@ -117,6 +124,7 @@
       },
       {
         "authorDatetime": "2012-10-10T04:00:00.000-04:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
@@ -133,12 +141,14 @@
         "negationRationale": null,
         "qdmCategory": "intervention",
         "qdmStatus": "order",
+        "qdmTitle": "Intervention, Order",
         "qdmVersion": "5.4",
         "reason": null,
         "_type": "QDM::InterventionOrder"
       },
       {
         "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "21112-8",
@@ -150,18 +160,20 @@
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c82b57a11e47eee039cd"
+          "value": "5ccc6edda564ac9d81c1c5c9"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
+        "qdmTitle": "Patient Characteristic Birthdate",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicBirthdate"
       },
       {
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "2135-2",
@@ -173,18 +185,20 @@
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c82b57a11e47eee039ce"
+          "value": "5ccc6edda564ac9d81c1c5ca"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
+        "qdmTitle": "Patient Characteristic Ethnicity",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicEthnicity"
       },
       {
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "2076-8",
@@ -196,18 +210,20 @@
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c82b57a11e47eee039cf"
+          "value": "5ccc6edda564ac9d81c1c5cb"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
+        "qdmTitle": "Patient Characteristic Race",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicRace"
       },
       {
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "F",
@@ -219,14 +235,15 @@
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c82b57a11e47eee039d0"
+          "value": "5ccc6edda564ac9d81c1c5cc"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",
+        "qdmTitle": "Patient Characteristic Sex",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicSex"
       }
