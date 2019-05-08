@@ -14,6 +14,9 @@
   "givenNames": [
     "LOS=121Days"
   ],
+  "measure_ids": [
+    "217FDF0D-3D64-4720-9116-D5E5AFA27F2C"
+  ],
   "notes": "Patient is > 18 years, principal dx ischemic stroke, LOS > 120 days (121 days)",
   "provider_ids": [
 
@@ -178,10 +181,6 @@
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,

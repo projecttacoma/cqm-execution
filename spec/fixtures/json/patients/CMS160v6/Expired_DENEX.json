@@ -30,6 +30,9 @@
   "givenNames": [
     "Expired"
   ],
+  "measure_ids": [
+    "A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
+  ],
   "notes": "",
   "provider_ids": [
 
@@ -244,10 +247,6 @@
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,
