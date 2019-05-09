@@ -4114,9 +4114,6 @@
     }
   },
   "measure_scoring": "CONTINUOUS_VARIABLE",
-  "patient_ids": [
-
-  ],
   "population_criteria": {
     "OBSERV": {
       "conjunction?": false,
