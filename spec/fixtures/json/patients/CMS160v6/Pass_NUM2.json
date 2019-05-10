@@ -30,6 +30,9 @@
   "givenNames": [
     "Pass"
   ],
+  "measure_ids": [
+    "A4B9763C-847E-4E02-BB7E-ACC596E90E2C"
+  ],
   "notes": "Based on  NUM2Pass PHQ9>4mo<8moEASMP_BipolarDxSAEMP in epecqmtelligen@gmail.com",
   "provider_ids": [
 
@@ -272,10 +275,6 @@
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,

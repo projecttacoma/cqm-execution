@@ -13,6 +13,9 @@
   "givenNames": [
     "Pass"
   ],
+  "measure_ids": [
+    "FA75DE85-A934-45D7-A2F7-C700A756078B"
+  ],
   "notes": "",
   "provider_ids": [
 
@@ -187,10 +190,6 @@
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "FA75DE85-A934-45D7-A2F7-C700A756078B",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,

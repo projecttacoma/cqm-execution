@@ -47,6 +47,9 @@
   "givenNames": [
     "Visit"
   ],
+  "measure_ids": [
+    "3FD13096-2C8F-40B5-9297-B714E8DE9133"
+  ],
   "notes": "",
   "provider_ids": [
 
@@ -253,10 +256,6 @@
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "3FD13096-2C8F-40B5-9297-B714E8DE9133",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,

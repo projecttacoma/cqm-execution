@@ -13,6 +13,9 @@
   "givenNames": [
     "Fail"
   ],
+  "measure_ids": [
+    "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3"
+  ],
   "notes": "",
   "provider_ids": [
 
@@ -170,10 +173,6 @@
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,

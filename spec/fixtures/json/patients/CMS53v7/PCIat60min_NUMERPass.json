@@ -15,6 +15,9 @@
   "givenNames": [
     "PCIat60min"
   ],
+  "measure_ids": [
+    "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F"
+  ],
   "notes": "Correct age, enc., MP, ECG, PCI done at 60 minutes of arrival ",
   "provider_ids": [
 
@@ -311,10 +314,6 @@
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,

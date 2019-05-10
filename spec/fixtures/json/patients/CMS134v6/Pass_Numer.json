@@ -14,6 +14,9 @@
   "givenNames": [
     "Pass"
   ],
+  "measure_ids": [
+    "7B2A9277-43DA-4D99-9BEE-6AC271A07747"
+  ],
   "notes": "",
   "provider_ids": [
 
@@ -371,10 +374,6 @@
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,
