@@ -455,7 +455,7 @@ core-util-is@~1.0.0:
 
 "cqm-models@https://github.com/projecttacoma/cqm-models#saving_patients":
   version "1.0.2"
-  resolved "https://github.com/projecttacoma/cqm-models#d44c08a938a863ebd616fec8d66c501174302ff7"
+  resolved "https://github.com/projecttacoma/cqm-models#d2e494aae90bf4260f22a7054f7c83092b07b5f4"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution.git"
     mongoose "^5.4.14"
