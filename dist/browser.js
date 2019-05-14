@@ -79494,11 +79494,13 @@ const QDMPatientSchema = new Schema({
 // to its respective Mongoose Model
 QDMPatientSchema.methods.initializeDataElements = function initializeDataElements() {
   let typeStripped;
+  let elementTypeRemoved;
   const dataElementsInit = [];
   this.dataElements.forEach((element) => {
     typeStripped = element._type.replace(/QDM::/, '');
-    delete element._type;
-    dataElementsInit.push(new AllDataElements[typeStripped](element));
+    elementTypeRemoved = JSON.parse(JSON.stringify(element));
+    delete elementTypeRemoved._type;
+    dataElementsInit.push(new AllDataElements[typeStripped](elementTypeRemoved));
   });
   this.set({ dataElements: dataElementsInit });
 };
@@ -80434,11 +80436,13 @@ const MeasureSchema = new mongoose.Schema(
 // to its respective Mongoose Model
 MeasureSchema.methods.initializeDataElements = function initializeDataElements() {
   let typeStripped;
+  let elementTypeRemoved;
   const sourceDataCriteriaInit = [];
   this.source_data_criteria.forEach((element) => {
     typeStripped = element._type.replace(/QDM::/, '');
-    delete element._type;
-    sourceDataCriteriaInit.push(new AllDataElements[typeStripped](element));
+    elementTypeRemoved = JSON.parse(JSON.stringify(element));
+    delete elementTypeRemoved._type;
+    sourceDataCriteriaInit.push(new AllDataElements[typeStripped](elementTypeRemoved));
   });
   this.set('source_data_criteria', sourceDataCriteriaInit);
 };
