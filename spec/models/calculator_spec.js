@@ -192,7 +192,7 @@ describe('Calculator', () => {
 
     // Patient expiredDenexResults Population Set 1
     const pop2Strat1 = numPassResults['PopulationCriteria2'];
-    const pop2Strat1StatementResults = pop2Strat1.statement_results.DepressionUtilizationofthePHQ9Tool;
+    const pop2Strat1StatementResults = pop2Strat1.statement_results_by_statement().DepressionUtilizationofthePHQ9Tool;
     expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
   });
 
@@ -580,9 +580,11 @@ describe('Calculator', () => {
       '\n        CODE: RxNorm 1053647],' +
       '\n  period: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM' +
       '\n}]';
+      const resultsByStatement = result.statement_results_by_statement();
+      const conversionFactorResultsByStatement = conversionFactorResult.statement_results_by_statement();
 
-      expect(result.statement_results['PotentialOpioidOveruse']['Periods With and Without 7 Day Gap With Cumulative Med Duration 90 days or Greater']['pretty']).toEqual(indentedResult);
-      expect(conversionFactorResult.statement_results['PotentialOpioidOveruse']['Prescriptions with MME']['pretty']).toContain('conversionFactor: 4,');
+      expect(resultsByStatement['PotentialOpioidOveruse']['Periods With and Without 7 Day Gap With Cumulative Med Duration 90 days or Greater']['pretty']).toEqual(indentedResult);
+      expect(conversionFactorResultsByStatement['PotentialOpioidOveruse']['Prescriptions with MME']['pretty']).toContain('conversionFactor: 4,');
     });
   });
 
@@ -612,13 +614,14 @@ describe('Calculator', () => {
       const options = { doPretty: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSets, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      const resultsByStatement = result.statement_results_by_statement();
 
       // The expected strings are from the front end with PatientCharacteristic CODEs fixed
-      expect(result['statement_results']['DiabetesFootExam']['SDE Ethnicity']['pretty']).toEqual('[PatientCharacteristicEthnicity\nCODE: CDC Race 2186-5]');
+      expect(resultsByStatement['DiabetesFootExam']['SDE Ethnicity']['pretty']).toEqual('[PatientCharacteristicEthnicity\nCODE: CDC Race 2186-5]');
       const expectedPayer = '[Patient Characteristic Payer: Payer\nSTART: 07/25/2012 8:00 AM\nSTOP: 07/25/2012 8:15 AM\nCODE: Source of Payment Typology 1]';
-      expect(result['statement_results']['DiabetesFootExam']['SDE Payer']['pretty']).toEqual(expectedPayer);
-      expect(result['statement_results']['DiabetesFootExam']['SDE Race']['pretty']).toEqual('[PatientCharacteristicRace\nCODE: CDC Race 1002-5]');
-      expect(result['statement_results']['DiabetesFootExam']['SDE Sex']['pretty']).toEqual('[PatientCharacteristicSex\nCODE: AdministrativeGender M]');
+      expect(resultsByStatement['DiabetesFootExam']['SDE Payer']['pretty']).toEqual(expectedPayer);
+      expect(resultsByStatement['DiabetesFootExam']['SDE Race']['pretty']).toEqual('[PatientCharacteristicRace\nCODE: CDC Race 1002-5]');
+      expect(resultsByStatement['DiabetesFootExam']['SDE Sex']['pretty']).toEqual('[PatientCharacteristicSex\nCODE: AdministrativeGender M]');
     });
   });
 
@@ -630,8 +633,9 @@ describe('Calculator', () => {
       const options = { doPretty: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSets, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      const resultsByStatement = result.statement_results_by_statement();
 
-      const sampleResult = result.statement_results['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant'];
+      const sampleResult = resultsByStatement['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant'];
       const sampleResultId = sampleResult.raw[0].id.value;
       expect(sampleResult['pretty']).toEqual(`[{\n  authorDatetime: 11/01/2012 10:00 AM,\n  id: {\n    namingSystem: null,\n    value: "${sampleResultId}"\n  }\n}]`);
     });
@@ -672,7 +676,7 @@ describe('Calculator', () => {
 
       // Patient expiredDenexResults Population Set 1 - borrowed from 'multiple population and stratification measure correctly' abpve
       const pop2Strat1 = numPassResults['PopulationCriteria2'];
-      const pop2Strat1StatementResults = pop2Strat1.statement_results.DepressionUtilizationofthePHQ9Tool;
+      const pop2Strat1StatementResults = pop2Strat1.statement_results_by_statement().DepressionUtilizationofthePHQ9Tool;
       expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
     });
   });
