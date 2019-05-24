@@ -8,6 +8,7 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "code": "32485007"
         }
       ],
@@ -16,6 +17,7 @@
         {
           "code": "111297002",
           "codeSystem": "SNOMED-CT",
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null,
           "descriptor": "Ischemic Stroke"
         }
@@ -39,7 +41,7 @@
         "code": "111297002",
         "codeSystem": "SNOMED-CT",
         "descriptor": "Ischemic Stroke",
-        "codeSystemOid": null,
+        "codeSystemOid": "2.16.840.1.113883.6.96",
         "version": null
       },
       "qdmCategory": "encounter",
@@ -58,6 +60,7 @@
       "dataElementCodes": [
         {
           "codeSystem": "RxNorm",
+          "codeSystemOid": "2.16.840.1.113883.6.88",
           "code": "259255"
         }
       ],

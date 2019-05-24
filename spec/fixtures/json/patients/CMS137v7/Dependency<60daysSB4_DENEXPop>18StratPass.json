@@ -9,15 +9,18 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
-          "code": "125851000119106"
+          "code": "125851000119106",
+          "codeSystemOid": "2.16.840.1.113883.6.96"
         },
         {
           "codeSystem": "ICD-9-CM",
-          "code": "291.0"
+          "code": "291.0",
+          "codeSystemOid": "2.16.840.1.113883.6.103"
         },
         {
           "codeSystem": "ICD-10-CM",
-          "code": "F10.10"
+          "code": "F10.10",
+          "codeSystemOid": "2.16.840.1.113883.6.90"
         }
       ],
       "description": "Diagnosis: Alcohol And Drug Dependence",
@@ -40,15 +43,18 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
-          "code": "125851000119106"
+          "code": "125851000119106",
+          "codeSystemOid": "2.16.840.1.113883.6.96"
         },
         {
           "codeSystem": "ICD-9-CM",
-          "code": "291.0"
+          "code": "291.0",
+          "codeSystemOid": "2.16.840.1.113883.6.103"
         },
         {
           "codeSystem": "ICD-10-CM",
-          "code": "F10.10"
+          "code": "F10.10",
+          "codeSystemOid": "2.16.840.1.113883.6.90"
         }
       ],
       "description": "Diagnosis: Alcohol And Drug Dependence",
@@ -71,7 +77,8 @@
       "dataElementCodes": [
         {
           "codeSystem": "CPT",
-          "code": "99220"
+          "code": "99220",
+          "codeSystemOid": "2.16.840.1.113883.6.12"
         }
       ],
       "description": "Encounter, Performed: Hospital Observation Care - Initial",
@@ -106,7 +113,8 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
-          "code": "424589009"
+          "code": "424589009",
+          "codeSystemOid": "2.16.840.1.113883.6.96"
         }
       ],
       "description": "Encounter, Performed: Alcohol and Drug Dependence Treatment",
@@ -141,7 +149,8 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
-          "code": "408935001"
+          "code": "408935001",
+          "codeSystemOid": "2.16.840.1.113883.6.96"
         }
       ],
       "description": "Encounter, Performed: Alcohol and Drug Dependence Treatment",
@@ -176,7 +185,8 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
-          "code": "408935001"
+          "code": "408935001",
+          "codeSystemOid": "2.16.840.1.113883.6.96"
         }
       ],
       "description": "Encounter, Performed: Alcohol and Drug Dependence Treatment",
@@ -212,7 +222,7 @@
           "code": "21112-8",
           "codeSystem": "LOINC",
           "descriptor": null,
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.1",
           "version": null,
           "_type": "QDM::Code"
         }

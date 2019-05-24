@@ -32,7 +32,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "183452005"
+            "code": "183452005",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Encounter, Performed: Encounter Inpatient",
@@ -41,7 +42,8 @@
             "code": "10273003",
             "codeSystem": "SNOMED-CT",
             "version": null,
-            "descriptor": "Acute or Evolving MI"
+            "descriptor": "Acute or Evolving MI",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "dischargeDisposition": null,
@@ -50,9 +52,9 @@
             "_type": "QDM::FacilityLocation",
             "code": {
               "code": "183452005",
-              "codeSystem": "SNOMED-CT",
+              "codeSystemOid": "2.16.840.1.113883.6.96",
               "descriptor": "Encounter Inpatient",
-              "codeSystemOid": null,
+              "codeSystem": "SNOMED-CT",
               "version": null,
               "_type": "QDM::Code"
             },
@@ -81,7 +83,7 @@
           "code": "10273003",
           "codeSystem": "SNOMED-CT",
           "descriptor": "Acute or Evolving MI",
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "qdmCategory": "encounter",
@@ -102,7 +104,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "RxNorm",
-            "code": "1804799"
+            "code": "1804799",
+            "codeSystemOid": "2.16.840.1.113883.6.88"
           }
         ],
         "description": "Medication, Administered: Fibrinolytic Therapy",
@@ -138,7 +141,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "164847006"
+            "code": "164847006",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Diagnostic Study, Performed: Electrocardiogram (ECG)",
@@ -177,11 +181,13 @@
         "dataElementCodes": [
           {
             "codeSystem": "ICD-10-PCS",
-            "code": "0270346"
+            "code": "0270346",
+            "codeSystemOid": "2.16.840.1.113883.6.4"
           },
           {
             "codeSystem": "SNOMED-CT",
-            "code": "11101003"
+            "code": "11101003",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Procedure, Performed: PCI",
@@ -216,9 +222,9 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
@@ -228,7 +234,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6edaa564ac9d7ffb28a4"
+          "value": "5cffb2cf31fe5ffc64212d8d"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
@@ -241,9 +247,9 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "Not Hispanic or Latino",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "Not Hispanic or Latino",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -253,7 +259,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6edaa564ac9d7ffb28a5"
+          "value": "5cffb2cf31fe5ffc64212d8e"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
@@ -266,9 +272,9 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "American Indian or Alaska Native",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "American Indian or Alaska Native",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -278,7 +284,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6edaa564ac9d7ffb28a6"
+          "value": "5cffb2cf31fe5ffc64212d8f"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
@@ -291,9 +297,9 @@
         "dataElementCodes": [
           {
             "code": "M",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "M",
             "codeSystemOid": "2.16.840.1.113883.5.1",
+            "descriptor": "M",
+            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -303,7 +309,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6edaa564ac9d7ffb28a7"
+          "value": "5cffb2cf31fe5ffc64212d90"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",
