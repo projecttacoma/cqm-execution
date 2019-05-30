@@ -1064,7 +1064,7 @@ module.exports = class ResultsHelpers {
       for (const statement of statements) {
         const statementName = statement.statement_name;
         const rawStatementResult = this.findResultForStatementClause(library, statement, rawClauseResults);
-        let statementResult = { raw: rawStatementResult, libraryName: libraryName, statementName: statementName };
+        const statementResult = { raw: rawStatementResult, libraryName, statementName };
         const isSDE = MeasureHelpers.isSupplementalDataElementStatement(measure.population_sets, statementName);
         if ((!measure.calculate_sdes && isSDE) || statementRelevance[libraryName][statementName] === 'NA') {
           statementResult.final = 'NA';
@@ -1102,7 +1102,7 @@ module.exports = class ResultsHelpers {
             statementResult.pretty = `FALSE (${rawStatementResult})`;
           }
         }
-        statementResults.push(statementResult)
+        statementResults.push(statementResult);
 
         if (includeClauseResults) {
           // create clause results for all localIds in this statement
@@ -1116,8 +1116,8 @@ module.exports = class ResultsHelpers {
                   ? rawClauseResults[libraryName][clause.sourceLocalId != null ? clause.sourceLocalId : localId]
                   : undefined,
               statementName,
-              libraryName: libraryName,
-              localId: localId
+              libraryName,
+              localId,
             };
             clauseResult.final = this.setFinalResults({
               statementRelevance,
