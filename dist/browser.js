@@ -1059,24 +1059,24 @@ module.exports = class ResultsHelpers {
     const clauseResults = [];
     for (const library of measure.cql_libraries) {
       const statements = library.statement_dependencies;
-      const libraryName = library.library_name;
+      const library_name = library.library_name; // eslint-disable-line camelcase
 
       for (const statement of statements) {
-        const statementName = statement.statement_name;
+        const statement_name = statement.statement_name; // eslint-disable-line camelcase
         const rawStatementResult = this.findResultForStatementClause(library, statement, rawClauseResults);
-        const statementResult = { raw: rawStatementResult, libraryName, statementName };
-        const isSDE = MeasureHelpers.isSupplementalDataElementStatement(measure.population_sets, statementName);
-        if ((!measure.calculate_sdes && isSDE) || statementRelevance[libraryName][statementName] === 'NA') {
+        const statementResult = { raw: rawStatementResult, library_name, statement_name };
+        const isSDE = MeasureHelpers.isSupplementalDataElementStatement(measure.population_sets, statement_name);
+        if ((!measure.calculate_sdes && isSDE) || statementRelevance[library_name][statement_name] === 'NA') {
           statementResult.final = 'NA';
           if (doPretty) {
             statementResult.pretty = 'NA';
           }
-        } else if (statementRelevance[libraryName][statementName] === 'FALSE' || rawClauseResults[libraryName] == null) {
+        } else if (statementRelevance[library_name][statement_name] === 'FALSE' || rawClauseResults[library_name] == null) {
           statementResult.final = 'UNHIT';
           // even if the statement wasn't hit, we want the pretty result to just
           // be FUNCTION for functions
           if (doPretty) {
-            if (MeasureHelpers.isStatementFunction(library, statementName)) {
+            if (MeasureHelpers.isStatementFunction(library, statement_name)) {
               statementResult.pretty = 'FUNCTION';
             } else {
               statementResult.pretty = 'UNHIT';
@@ -1094,7 +1094,7 @@ module.exports = class ResultsHelpers {
             if (doPretty) {
               statementResult.pretty = 'FALSE ([])';
             }
-          } else if (MeasureHelpers.isStatementFunction(library, statementName)) {
+          } else if (MeasureHelpers.isStatementFunction(library, statement_name)) {
             if (doPretty) {
               statementResult.pretty = 'FUNCTION';
             }
@@ -1106,24 +1106,24 @@ module.exports = class ResultsHelpers {
 
         if (includeClauseResults) {
           // create clause results for all localIds in this statement
-          const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
+          const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statement_name);
           for (const localId in localIds) {
             const clause = localIds[localId];
             const clauseResult = {
               // if this clause is an alias or a usage of alias it will get the raw result from the sourceLocalId.
               raw:
-                rawClauseResults[libraryName] != null
-                  ? rawClauseResults[libraryName][clause.sourceLocalId != null ? clause.sourceLocalId : localId]
+                rawClauseResults[library_name] != null
+                  ? rawClauseResults[library_name][clause.sourceLocalId != null ? clause.sourceLocalId : localId]
                   : undefined,
-              statementName,
-              libraryName,
+              statement_name,
+              library_name,
               localId,
             };
             clauseResult.final = this.setFinalResults({
               statementRelevance,
-              statementName,
+              statement_name,
               rawClauseResults,
-              libraryName,
+              library_name,
               localId,
               clause,
               rawResult: clauseResult.raw,
@@ -1252,8 +1252,8 @@ module.exports = class ResultsHelpers {
      * @private
      * @param {object} rawClauseResults - The raw clause results from the calculation engine.
      * @param {object} statementRelevance - The statement relevance map.
-     * @param {object} statementName - The name of the statement the clause is in
-     * @param {object} lib - The name of the libarary the clause is in
+     * @param {object} statement_name - The name of the statement the clause is in
+     * @param {object} library_name - The name of the libarary the clause is in
      * @param {object} localId - The localId of the current clause
      * @param {object} clause - The clause we are getting the final result of
      * @param {Array|Object|Interval|??} rawResult - The raw result from the calculation engine.
@@ -1263,11 +1263,11 @@ module.exports = class ResultsHelpers {
     let finalResult = 'FALSE';
     if (params.clause.isUnsupported != null) {
       finalResult = 'NA';
-    } else if (params.statementRelevance[params.libraryName][params.statementName] === 'NA') {
+    } else if (params.statementRelevance[params.library_name][params.statement_name] === 'NA') {
       finalResult = 'NA';
     } else if (
-      params.statementRelevance[params.libraryName][params.statementName] === 'FALSE' ||
-      params.rawClauseResults[params.libraryName] == null
+      params.statementRelevance[params.library_name][params.statement_name] === 'FALSE' ||
+      params.rawClauseResults[params.library_name] == null
     ) {
       finalResult = 'UNHIT';
     } else if (this.doesResultPass(params.rawResult)) {
@@ -66228,10 +66228,10 @@ const IndividualResultSchema = mongoose.Schema(
 IndividualResultSchema.methods.clause_results_by_clause = function clause_results_by_clause() {
   const clause_results_hash = {};
   this.clause_results.forEach((result) => {
-    if (!clause_results_hash[result.libraryName]) {
-      clause_results_hash[result.libraryName] = {};
+    if (!clause_results_hash[result.library_name]) {
+      clause_results_hash[result.library_name] = {};
     }
-    clause_results_hash[result.libraryName][result.localId] = result;
+    clause_results_hash[result.library_name][result.localId] = result;
   });
   return clause_results_hash;
 };
@@ -66239,10 +66239,10 @@ IndividualResultSchema.methods.clause_results_by_clause = function clause_result
 IndividualResultSchema.methods.statement_results_by_statement = function statement_results_by_statement() {
   const statement_results_hash = {};
   this.statement_results.forEach((result) => {
-    if (!statement_results_hash[result.libraryName]) {
-      statement_results_hash[result.libraryName] = {};
+    if (!statement_results_hash[result.library_name]) {
+      statement_results_hash[result.library_name] = {};
     }
-    statement_results_hash[result.libraryName][result.statementName] = result;
+    statement_results_hash[result.library_name][result.statement_name] = result;
   });
   return statement_results_hash;
 };
