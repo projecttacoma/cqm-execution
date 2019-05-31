@@ -19,7 +19,7 @@ describe('Calculator', () => {
       // No results will be in the episode_results
       expect(result['episode_results']).toEqual({});
       // The IPP should be the only relevant population
-      expect(result.extendedData['population_relevance']).toEqual({
+      expect(result.population_relevance).toEqual({
         IPP: true, DENOM: false, DENEX: false, NUMER: false,
       });
     });
@@ -38,7 +38,7 @@ describe('Calculator', () => {
       });
 
       // NUMER should be the only non-relevant population
-      expect(result.extendedData['population_relevance']).toEqual({
+      expect(result.population_relevance).toEqual({
         IPP: true, DENOM: true, DENEX: true, NUMER: false,
       });
     });
@@ -56,7 +56,7 @@ describe('Calculator', () => {
       // There will not be episode_results on the result object
       expect(result['episode_results']).toBeUndefined();
       // The IPP should be the only relevant population
-      expect(result.extendedData['population_relevance']).toEqual({
+      expect(result.population_relevance).toEqual({
         IPP: true, DENOM: false, DENEX: false, NUMER: false, DENEXCEP: false,
       });
     });
@@ -313,7 +313,7 @@ describe('Calculator', () => {
 
 
     // Check Statement Relevance for Population Criteria 1
-    expect(visit1EdResults.PopulationCriteria1.extendedData.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+    expect(visit1EdResults.PopulationCriteria1.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
       'ED Visit': 'TRUE',
       'Initial Population': 'TRUE',
       'Measure Observation': 'TRUE',
@@ -330,7 +330,7 @@ describe('Calculator', () => {
     });
 
     // Check Statement Relevance for Population Set 1 Stratification 1
-    expect(visit1EdResults['PopulationCriteria1 - Stratification 1'].extendedData.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+    expect(visit1EdResults['PopulationCriteria1 - Stratification 1'].statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
       'ED Visit': 'TRUE',
       'Initial Population': 'TRUE',
       'Measure Observation': 'TRUE',
@@ -348,7 +348,7 @@ describe('Calculator', () => {
 
 
     // Check Statement Relevance for Population Set 1 Stratification 2
-    expect(visit1EdResults['PopulationCriteria1 - Stratification 2'].extendedData.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+    expect(visit1EdResults['PopulationCriteria1 - Stratification 2'].statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
       'ED Visit': 'TRUE',
       'Initial Population': 'FALSE',
       'Measure Observation': 'FALSE',
@@ -365,7 +365,7 @@ describe('Calculator', () => {
     });
 
     // Check Statement Relevance for Population Set 1 Stratification 3
-    expect(visit1EdResults['PopulationCriteria1 - Stratification 3'].extendedData.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+    expect(visit1EdResults['PopulationCriteria1 - Stratification 3'].statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
       'ED Visit': 'TRUE',
       'Initial Population': 'FALSE',
       'Measure Observation': 'FALSE',
