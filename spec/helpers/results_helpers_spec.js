@@ -82,7 +82,7 @@ describe('ResultsHelpers', () => {
         const measure = getJSONFixture('cqm_measures/CMS32v7/CMS32v7.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json').qdmPatient);
-        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, includeClauseResults: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
 
