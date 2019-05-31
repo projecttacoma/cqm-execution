@@ -844,6 +844,7 @@ module.exports = class MeasureHelpers {
 },{"lodash":254}],4:[function(require,module,exports){
 const _ = require('lodash');
 const CqmModels = require('cqm-models');
+
 const cql = CqmModels.CQL;
 
 const MeasureHelpers = require('../helpers/measure_helpers');
@@ -1068,7 +1069,9 @@ module.exports = class ResultsHelpers {
         const statement_name = statement.statement_name; // eslint-disable-line camelcase
         const relevance = statementRelevance[library_name][statement_name];
         const rawStatementResult = this.findResultForStatementClause(library, statement, rawClauseResults);
-        const statementResult = new CqmModels.StatementResult({raw: rawStatementResult, library_name: library_name, statement_name: statement_name, relevance: relevance});
+        const statementResult = new CqmModels.StatementResult({
+          raw: rawStatementResult, library_name, statement_name, relevance,
+        });
         const isSDE = MeasureHelpers.isSupplementalDataElementStatement(measure.population_sets, statement_name);
         if ((!measure.calculate_sdes && isSDE) || relevance === 'NA') {
           statementResult.final = 'NA';
@@ -1113,15 +1116,15 @@ module.exports = class ResultsHelpers {
           const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statement_name);
           for (const localId in localIds) {
             const clause = localIds[localId];
-            const clauseResult = new CqmModels.ClauseResult( {
+            const clauseResult = new CqmModels.ClauseResult({
               // if this clause is an alias or a usage of alias it will get the raw result from the sourceLocalId.
               raw:
                 rawClauseResults[library_name] != null
                   ? rawClauseResults[library_name][clause.sourceLocalId != null ? clause.sourceLocalId : localId]
                   : undefined,
-              statement_name: statement_name,
-              library_name: library_name,
-              localId: localId
+              statement_name,
+              library_name,
+              localId,
             });
             clauseResult.final = this.setFinalResults({
               statementRelevance,
