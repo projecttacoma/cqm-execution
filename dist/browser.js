@@ -1068,10 +1068,10 @@ module.exports = class ResultsHelpers {
       for (const statement of statements) {
         const statement_name = statement.statement_name; // eslint-disable-line camelcase
         const relevance = statementRelevance[library_name][statement_name];
-        if (rawStatementResult && rawStatementResult.isMongooseArray){
+        let rawStatementResult = this.findResultForStatementClause(library, statement, rawClauseResults);
+        if (rawStatementResult && rawStatementResult.isMongooseArray) {
           rawStatementResult = [].concat(rawStatementResult);
         }
-        const rawStatementResult = this.findResultForStatementClause(library, statement, rawClauseResults);
         const statementResult = new CqmModels.StatementResult({
           raw: rawStatementResult, library_name, statement_name, relevance,
         });
@@ -1119,12 +1119,15 @@ module.exports = class ResultsHelpers {
           const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statement_name);
           for (const localId in localIds) {
             const clause = localIds[localId];
+            let rawClauseResult = rawClauseResults[library_name] != null
+              ? rawClauseResults[library_name][clause.sourceLocalId != null ? clause.sourceLocalId : localId]
+              : undefined;
+            if (rawClauseResult && rawClauseResult.isMongooseArray) {
+              rawClauseResult = [].concat(rawClauseResult);
+            }
             const clauseResult = new CqmModels.ClauseResult({
               // if this clause is an alias or a usage of alias it will get the raw result from the sourceLocalId.
-              raw:
-                rawClauseResults[library_name] != null
-                  ? rawClauseResults[library_name][clause.sourceLocalId != null ? clause.sourceLocalId : localId]
-                  : undefined,
+              raw: rawClauseResult,
               statement_name,
               library_name,
               localId,
