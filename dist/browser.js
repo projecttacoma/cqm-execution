@@ -47,7 +47,7 @@ module.exports = class CalculatorHelpers {
       Object.keys(populationSet.populations.toObject()).forEach((popCode) => {
         populationResults[popCode] = 0;
         if (populationSet.observations.length > 0) {
-          populationResults.values = [];
+          populationResults.observation_values = [];
         }
       });
 
@@ -56,9 +56,9 @@ module.exports = class CalculatorHelpers {
         const episodeResult = episodeResults[e];
         Object.keys(episodeResult).forEach((popCode) => {
           const popResult = episodeResult[popCode];
-          if (popCode === 'values') {
+          if (popCode === 'observation_values') {
             popResult.forEach((value) => {
-              populationResults.values.push(value);
+              populationResults.observation_values.push(value);
             });
           } else {
             populationResults[popCode] += popResult;
@@ -92,8 +92,8 @@ module.exports = class CalculatorHelpers {
     if (populationResultsHandled.STRAT != null && this.isValueZero('STRAT', populationResults)) {
       // Set all values to 0
       Object.keys(populationResults).forEach((key) => {
-        if (key === 'values') {
-          populationResultsHandled.values = [];
+        if (key === 'observation_values') {
+          populationResultsHandled.observation_values = [];
         } else {
           populationResultsHandled[key] = 0;
         }
@@ -101,8 +101,8 @@ module.exports = class CalculatorHelpers {
     } else if (this.isValueZero('IPP', populationResults)) {
       Object.keys(populationResults).forEach((key) => {
         if (key !== 'STRAT') {
-          if (key === 'values') {
-            populationResultsHandled.values = [];
+          if (key === 'observation_values') {
+            populationResultsHandled.observation_values = [];
           } else {
             populationResultsHandled[key] = 0;
           }
@@ -124,8 +124,8 @@ module.exports = class CalculatorHelpers {
       if ('MSRPOPLEX' in populationResults) {
         populationResultsHandled.MSRPOPLEX = 0;
       }
-      if ('values' in populationResults) {
-        populationResultsHandled.values = [];
+      if ('observation_values' in populationResults) {
+        populationResultsHandled.observation_values = [];
       }
       // Can not be in the numerator if the same or more are excluded from the denominator
     } else if (populationResults.DENEX != null && !this.isValueZero('DENEX', populationResults) && populationResults.DENEX >= populationResults.DENOM) {
@@ -139,8 +139,8 @@ module.exports = class CalculatorHelpers {
         populationResultsHandled.DENEXCEP = 0;
       }
     } else if (populationResults.MSRPOPLEX != null && !this.isValueZero('MSRPOPLEX', populationResults)) {
-      if ('values' in populationResults) {
-        populationResultsHandled.values = [];
+      if ('observation_values' in populationResults) {
+        populationResultsHandled.observation_values = [];
       }
     } else if (this.isValueZero('NUMER', populationResults)) {
       if ('NUMEX' in populationResults) {
@@ -185,8 +185,8 @@ module.exports = class CalculatorHelpers {
       // Handle observations using the names of the define statements that
       // were added to the ELM to call the observation functions.
       observationDefs.forEach((obDef) => {
-        if (!populationResults.values) {
-          populationResults.values = [];
+        if (!populationResults.observation_values) {
+          populationResults.observation_values = [];
         }
         // Observations only have one result, based on how the HQMF is
         // structured (note the single 'value' section in the
@@ -201,10 +201,10 @@ module.exports = class CalculatorHelpers {
           // this calculation (allowing for more than one possible observation).
           if (obsResult != null ? Object.prototype.hasOwnProperty.call(obsResult, 'value') : undefined) {
             // If result is a Cql.Quantity type, add its value
-            populationResults.values.push(obsResult.observation.value);
+            populationResults.observation_values.push(obsResult.observation.value);
           } else {
             // In all other cases, add result
-            populationResults.values.push(obsResult.observation);
+            populationResults.observation_values.push(obsResult.observation);
           }
         });
       });
@@ -279,10 +279,10 @@ module.exports = class CalculatorHelpers {
 
           // if the episodeResult object already exist create or add to to the values structure
           if (episodeResults[episodeId] != null) {
-            if (episodeResults[episodeId].values != null) {
-              episodeResults[episodeId].values.push(resultValue);
+            if (episodeResults[episodeId].observation_values != null) {
+              episodeResults[episodeId].observation_values.push(resultValue);
             } else {
-              episodeResults[episodeId].values = [resultValue];
+              episodeResults[episodeId].observation_values = [resultValue];
             }
             // else create a new episodeResult structure
           } else {
@@ -290,7 +290,7 @@ module.exports = class CalculatorHelpers {
             for (const pc in populationSet.populations.toObject()) {
               newEpisode[pc] = 0;
             }
-            newEpisode.values = [resultValue];
+            newEpisode.observation_values = [resultValue];
             episodeResults[episodeId] = newEpisode;
           }
         });
@@ -300,10 +300,10 @@ module.exports = class CalculatorHelpers {
     // Correct any inconsistencies. ex. In DENEX but also in NUMER using same function used for patients.
     Object.keys(episodeResults).forEach((episodeId) => {
       const episodeResult = episodeResults[episodeId];
-      // ensure that an empty 'values' array exists for continuous variable measures if there were no observations
+      // ensure that an empty 'observation_values' array exists for continuous variable measures if there were no observations
       if (populationSet.observations.length > 0) {
-        if (!episodeResult.values) {
-          episodeResult.values = [];
+        if (!episodeResult.observation_values) {
+          episodeResult.observation_values = [];
         }
       }
       // Correct any inconsistencies. ex. In DENEX but also in NUMER using same function used for patients.
@@ -926,7 +926,7 @@ module.exports = class ResultsHelpers {
     for (const population in populationRelevance) {
       // If the population is values, that means we need to mark relevance for the OBSERVs
       const relevance = populationRelevance[population];
-      if (population === 'values') {
+      if (population === 'observation_values') {
         for (const observation of Array.from(populationSet.observations)) {
           this.markStatementRelevant(
             measure.cql_libraries,
@@ -1404,8 +1404,8 @@ module.exports = class ResultsHelpers {
       if (resultShown.MSRPOPLEX != null) {
         resultShown.MSRPOPLEX = false;
       }
-      if (resultShown.values != null) {
-        resultShown.values = false;
+      if (resultShown.observation_values != null) {
+        resultShown.observation_values = false;
       }
     }
 
@@ -1433,8 +1433,8 @@ module.exports = class ResultsHelpers {
         resultShown.MSRPOPLEX = false;
       }
       // values is the OBSERVs
-      if (resultShown.values != null) {
-        resultShown.values = false;
+      if (resultShown.observation_values != null) {
+        resultShown.observation_values = false;
       }
     }
 
@@ -1484,8 +1484,8 @@ module.exports = class ResultsHelpers {
     // If MSRPOPL is 0 then OBSERVs and MSRPOPLEX are not calculateed
     if (result.MSRPOPL != null && result.MSRPOPL === 0) {
       // values is the OBSERVs
-      if (resultShown.values != null) {
-        resultShown.values = false;
+      if (resultShown.observation_values != null) {
+        resultShown.observation_values = false;
       }
       if (resultShown.MSRPOPLEX) {
         resultShown.MSRPOPLEX = false;
@@ -1494,9 +1494,8 @@ module.exports = class ResultsHelpers {
 
     // If MSRPOPLEX is greater than or equal to MSRPOPL then OBSERVs are not calculated
     if (result.MSRPOPLEX != null && result.MSRPOPLEX >= result.MSRPOPL) {
-      // values is the OBSERVs
-      if (resultShown.values != null) {
-        resultShown.values = false;
+      if (resultShown.observation_values != null) {
+        resultShown.observation_values = false;
       }
     }
 
