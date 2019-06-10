@@ -97,7 +97,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "LOINC",
-            "code": "44261-6"
+            "code": "44261-6",
+            "codeSystemOid": "2.16.840.1.113883.6.1"
           }
         ],
         "description": "Assessment, Performed: Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
@@ -122,7 +123,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "191611001"
+            "code": "191611001",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Diagnosis: Major Depression Including Remission",
@@ -150,7 +152,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "ICD-9-CM",
-            "code": "301.83"
+            "code": "301.83",
+            "codeSystemOid": "2.16.840.1.113883.6.103"
           }
         ],
         "description": "Diagnosis: Personality Disorder",
@@ -178,7 +181,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "HCPCS",
-            "code": "G0402"
+            "code": "G0402",
+            "codeSystemOid": "2.16.840.1.113883.6.14"
           }
         ],
         "description": "Encounter, Performed: Contact or Office Visit",
@@ -219,7 +223,7 @@
             "code": "21112-8",
             "codeSystem": "LOINC",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "version": null,
             "_type": "QDM::Code"
           }

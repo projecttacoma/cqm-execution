@@ -9,6 +9,7 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "code": "183446009"
         }
       ],
@@ -17,6 +18,7 @@
         {
           "code": "13943000",
           "codeSystem": "SNOMED-CT",
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null,
           "descriptor": "Obstetrics VTE"
         }
@@ -49,6 +51,7 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "code": "8715000"
         }
       ],
@@ -88,10 +91,12 @@
       "dataElementCodes": [
         {
           "codeSystem": "ICD-10-PCS",
+          "codeSystemOid": "2.16.840.1.113883.6.4",
           "code": "3E030FZ"
         },
         {
           "codeSystem": "SNOMED-CT",
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "code": "18946005"
         }
       ],
@@ -123,6 +128,7 @@
       "dataElementCodes": [
         {
           "codeSystem": "LOINC",
+          "codeSystemOid": "2.16.840.1.113883.6.1",
           "code": "34714-6"
         }
       ],
@@ -153,7 +159,7 @@
           "code": "21112-8",
           "codeSystem": "LOINC",
           "descriptor": null,
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.1",
           "version": null,
           "_type": "QDM::Code"
         }

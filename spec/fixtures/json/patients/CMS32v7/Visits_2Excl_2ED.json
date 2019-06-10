@@ -66,7 +66,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "4525004"
+            "code": "4525004",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Encounter, Performed: Emergency Department Visit",
@@ -75,14 +76,15 @@
             "code": "10278007",
             "codeSystem": "SNOMED-CT",
             "version": null,
-            "descriptor": "Psychiatric/Mental Health Diagnosis"
+            "descriptor": "Psychiatric/Mental Health Diagnosis",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "dischargeDisposition": {
           "code": "371828006",
           "codeSystem": "SNOMED-CT",
           "descriptor": "Patient deceased during stay (discharge status = dead) (finding)",
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "facilityLocations": [
@@ -103,7 +105,7 @@
           "code": "10278007",
           "codeSystem": "SNOMED-CT",
           "descriptor": "Psychiatric/Mental Health Diagnosis",
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "qdmCategory": "encounter",
@@ -125,7 +127,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "4525004"
+            "code": "4525004",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Encounter, Performed: Emergency Department Visit",
@@ -134,14 +137,15 @@
             "code": "10278007",
             "codeSystem": "SNOMED-CT",
             "version": null,
-            "descriptor": "Psychiatric/Mental Health Diagnosis"
+            "descriptor": "Psychiatric/Mental Health Diagnosis",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "dischargeDisposition": {
           "code": "371828006",
           "codeSystem": "SNOMED-CT",
           "descriptor": "Patient deceased during stay (discharge status = dead) (finding)",
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "facilityLocations": [
@@ -162,7 +166,7 @@
           "code": "10278007",
           "codeSystem": "SNOMED-CT",
           "descriptor": "Psychiatric/Mental Health Diagnosis",
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "qdmCategory": "encounter",
@@ -184,7 +188,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "183452005"
+            "code": "183452005",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Encounter, Performed: Encounter Inpatient",
@@ -225,9 +230,9 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
@@ -237,7 +242,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ed7a564ac9d7d282d41"
+          "value": "5cfaa3e931fe5fb073eb2eb6"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
@@ -250,9 +255,9 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "Not Hispanic or Latino",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "Not Hispanic or Latino",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -262,7 +267,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ed7a564ac9d7d282d42"
+          "value": "5cfaa3e931fe5fb073eb2eb7"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
@@ -275,9 +280,9 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "American Indian or Alaska Native",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "American Indian or Alaska Native",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -287,7 +292,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ed7a564ac9d7d282d43"
+          "value": "5cfaa3e931fe5fb073eb2eb8"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
@@ -300,9 +305,9 @@
         "dataElementCodes": [
           {
             "code": "M",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "M",
             "codeSystemOid": "2.16.840.1.113883.5.1",
+            "descriptor": "M",
+            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -312,7 +317,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ed7a564ac9d7d282d44"
+          "value": "5cfaa3e931fe5fb073eb2eb9"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",

@@ -31,11 +31,13 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "17436001"
+            "code": "17436001",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           },
           {
             "codeSystem": "CPT",
-            "code": "99241"
+            "code": "99241",
+            "codeSystemOid": "2.16.840.1.113883.6.12"
           }
         ],
         "description": "Encounter, Performed: Outpatient Consultation",
@@ -76,7 +78,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "RxNorm",
-            "code": "1053647"
+            "code": "1053647",
+            "codeSystemOid": "2.16.840.1.113883.6.88"
           }
         ],
         "daysSupplied": null,
@@ -89,7 +92,7 @@
           "code": "229799001",
           "codeSystem": "SNOMED-CT",
           "descriptor": "Twice a day (qualifier value)",
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "hqmfOid": "2.16.840.1.113883.3.560.1.17",
@@ -99,7 +102,6 @@
           "value": "5b2a7bfeb8484678da8c686d"
         },
         "negationRationale": null,
-        "prescriberId": null,
         "qdmCategory": "medication",
         "qdmStatus": "order",
         "qdmTitle": "Medication, Order",
@@ -126,9 +128,9 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
@@ -138,7 +140,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6efba564ac9d956c96d8"
+          "value": "5cfaa40931fe5fb0a45db4e5"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
@@ -151,9 +153,9 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "Not Hispanic or Latino",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "Not Hispanic or Latino",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -163,7 +165,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6efba564ac9d956c96d9"
+          "value": "5cfaa40931fe5fb0a45db4e6"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
@@ -176,9 +178,9 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "American Indian or Alaska Native",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "American Indian or Alaska Native",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -188,7 +190,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6efba564ac9d956c96da"
+          "value": "5cfaa40931fe5fb0a45db4e7"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
@@ -201,9 +203,9 @@
         "dataElementCodes": [
           {
             "code": "M",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "M",
             "codeSystemOid": "2.16.840.1.113883.5.1",
+            "descriptor": "M",
+            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -213,7 +215,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6efba564ac9d956c96db"
+          "value": "5cfaa40931fe5fb0a45db4e8"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",

@@ -9,15 +9,19 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
-          "code": "125851000119106"
+          "code": "125851000119106",
+          "codeSystemOid": "2.16.840.1.113883.6.96"
         },
         {
           "codeSystem": "ICD-9-CM",
-          "code": "291.0"
+          "code": "291.0",
+          "codeSystemOid": "2.16.840.1.113883.6.103"
         },
         {
           "codeSystem": "ICD-10-CM",
-          "code": "F10.10"
+          "code": "F10.10",
+          "codeSystemOid": "2.16.840.1.113883.6.90"
+          
         }
       ],
       "description": "Diagnosis: Alcohol And Drug Dependence",
@@ -40,7 +44,8 @@
       "dataElementCodes": [
         {
           "codeSystem": "CPT",
-          "code": "99239"
+          "code": "99239",
+          "codeSystemOid": "2.16.840.1.113883.6.12"
         }
       ],
       "description": "Encounter, Performed: Discharge Services - Hospital Inpatient",
@@ -75,7 +80,8 @@
       "dataElementCodes": [
         {
           "codeSystem": "CPT",
-          "code": "90832"
+          "code": "90832",
+          "codeSystemOid": "2.16.840.1.113883.6.12"
         }
       ],
       "description": "Encounter, Performed: Psych Visit - Psychotherapy",
@@ -111,7 +117,7 @@
           "code": "21112-8",
           "codeSystem": "LOINC",
           "descriptor": null,
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.1",
           "version": null,
           "_type": "QDM::Code"
         }
