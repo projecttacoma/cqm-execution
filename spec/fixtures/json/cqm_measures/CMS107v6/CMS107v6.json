@@ -6071,14 +6071,14 @@
               {
                 "localId": "3",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
               {
                 "localId": "4",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -9574,14 +9574,14 @@
               {
                 "localId": "2",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
               {
                 "localId": "3",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -14077,7 +14077,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b50"
+        "value": "5cfeac4531fe5fd6a09eba70"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -14097,7 +14097,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b51"
+        "value": "5cfeac4531fe5fd6a09eba71"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -14118,7 +14118,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b52"
+        "value": "5cfeac4531fe5fd6a09eba72"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -14143,7 +14143,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b53"
+        "value": "5cfeac4531fe5fd6a09eba73"
       },
       "medium": null,
       "negationRationale": null,
@@ -14168,7 +14168,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b54"
+        "value": "5cfeac4531fe5fd6a09eba74"
       },
       "medium": null,
       "negationRationale": null,
@@ -14191,7 +14191,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b55"
+        "value": "5cfeac4531fe5fd6a09eba75"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -14211,7 +14211,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b56"
+        "value": "5cfeac4531fe5fd6a09eba76"
       },
       "medium": null,
       "negationRationale": null,
@@ -14236,7 +14236,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b57"
+        "value": "5cfeac4531fe5fd6a09eba77"
       },
       "medium": null,
       "negationRationale": null,
@@ -14261,7 +14261,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b58"
+        "value": "5cfeac4531fe5fd6a09eba78"
       },
       "medium": null,
       "negationRationale": null,
@@ -14284,7 +14284,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b59"
+        "value": "5cfeac4531fe5fd6a09eba79"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -14309,7 +14309,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b5a"
+        "value": "5cfeac4531fe5fd6a09eba7a"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -14338,7 +14338,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b5b"
+        "value": "5cfeac4531fe5fd6a09eba7b"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -14360,7 +14360,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b5c"
+        "value": "5cfeac4531fe5fd6a09eba7c"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -14380,7 +14380,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b5d"
+        "value": "5cfeac4531fe5fd6a09eba7d"
       },
       "medium": null,
       "negationRationale": null,
@@ -14405,7 +14405,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cb63f57e106f1d3142b2b5e"
+        "value": "5cfeac4531fe5fd6a09eba7e"
       },
       "medium": null,
       "negationRationale": null,
@@ -14422,56 +14422,56 @@
   "title": "Stroke Education",
   "updated_at": null,
   "value_set_ids": [
-    "5cb63f57e106f1d3142b2b5f",
-    "5cb63f57e106f1d3142b2b60",
-    "5cb63f57e106f1d3142b2b61",
-    "5cb63f57e106f1d3142b2b62",
-    "5cb63f57e106f1d3142b2b63",
-    "5cb63f57e106f1d3142b2b64",
-    "5cb63f57e106f1d3142b2b65",
-    "5cb63f57e106f1d3142b2b66",
-    "5cb63f57e106f1d3142b2b67",
-    "5cb63f57e106f1d3142b2b68",
-    "5cb63f57e106f1d3142b2b69",
-    "5cb63f57e106f1d3142b2b6a",
-    "5cb63f57e106f1d3142b2b6b",
-    "5cb63f57e106f1d3142b2b6c",
-    "5cb63f57e106f1d3142b2b6d",
-    "5cb63f57e106f1d3142b2b6e",
-    "5cb63f57e106f1d3142b2b6f",
-    "5cb63f57e106f1d3142b2b70",
-    "5cb63f57e106f1d3142b2b71",
-    "5cb63f57e106f1d3142b2b72",
-    "5cb63f57e106f1d3142b2b73",
-    "5cb63f57e106f1d3142b2b74",
-    "5cb63f57e106f1d3142b2b75",
-    "5cb63f57e106f1d3142b2b76",
-    "5cb63f57e106f1d3142b2b77",
-    "5cb63f57e106f1d3142b2b78",
-    "5cb63f57e106f1d3142b2b79",
-    "5cb63f57e106f1d3142b2b7a",
-    "5cb63f57e106f1d3142b2b7b",
-    "5cb63f57e106f1d3142b2b7c",
-    "5cb63f57e106f1d3142b2b7d",
-    "5cb63f57e106f1d3142b2b7e",
-    "5cb63f57e106f1d3142b2b7f",
-    "5cb63f57e106f1d3142b2b80",
-    "5cb63f57e106f1d3142b2b81",
-    "5cb63f57e106f1d3142b2b82",
-    "5cb63f57e106f1d3142b2b83",
-    "5cb63f57e106f1d3142b2b84",
-    "5cb63f57e106f1d3142b2b85",
-    "5cb63f57e106f1d3142b2b86",
-    "5cb63f57e106f1d3142b2b87",
-    "5cb63f57e106f1d3142b2b88",
-    "5cb63f57e106f1d3142b2b89",
-    "5cb63f57e106f1d3142b2b8a",
-    "5cb63f57e106f1d3142b2b8b",
-    "5cb63f57e106f1d3142b2b8c",
-    "5cb63f57e106f1d3142b2b8d",
-    "5cb63f57e106f1d3142b2b8e",
-    "5cb63f57e106f1d3142b2b8f",
-    "5cb63f57e106f1d3142b2b90",
-    "5cb63f57e106f1d3142b2b91"
+    "5cfeac4531fe5fd6a09eba7f",
+    "5cfeac4531fe5fd6a09eba80",
+    "5cfeac4531fe5fd6a09eba81",
+    "5cfeac4531fe5fd6a09eba82",
+    "5cfeac4531fe5fd6a09eba83",
+    "5cfeac4531fe5fd6a09eba84",
+    "5cfeac4531fe5fd6a09eba85",
+    "5cfeac4531fe5fd6a09eba86",
+    "5cfeac4531fe5fd6a09eba87",
+    "5cfeac4531fe5fd6a09eba88",
+    "5cfeac4531fe5fd6a09eba89",
+    "5cfeac4531fe5fd6a09eba8a",
+    "5cfeac4531fe5fd6a09eba8b",
+    "5cfeac4531fe5fd6a09eba8c",
+    "5cfeac4531fe5fd6a09eba8d",
+    "5cfeac4531fe5fd6a09eba8e",
+    "5cfeac4531fe5fd6a09eba8f",
+    "5cfeac4531fe5fd6a09eba90",
+    "5cfeac4531fe5fd6a09eba91",
+    "5cfeac4531fe5fd6a09eba92",
+    "5cfeac4531fe5fd6a09eba93",
+    "5cfeac4531fe5fd6a09eba94",
+    "5cfeac4531fe5fd6a09eba95",
+    "5cfeac4531fe5fd6a09eba96",
+    "5cfeac4531fe5fd6a09eba97",
+    "5cfeac4531fe5fd6a09eba98",
+    "5cfeac4531fe5fd6a09eba99",
+    "5cfeac4531fe5fd6a09eba9a",
+    "5cfeac4531fe5fd6a09eba9b",
+    "5cfeac4531fe5fd6a09eba9c",
+    "5cfeac4531fe5fd6a09eba9d",
+    "5cfeac4531fe5fd6a09eba9e",
+    "5cfeac4531fe5fd6a09eba9f",
+    "5cfeac4531fe5fd6a09ebaa0",
+    "5cfeac4531fe5fd6a09ebaa1",
+    "5cfeac4531fe5fd6a09ebaa2",
+    "5cfeac4531fe5fd6a09ebaa3",
+    "5cfeac4531fe5fd6a09ebaa4",
+    "5cfeac4531fe5fd6a09ebaa5",
+    "5cfeac4531fe5fd6a09ebaa6",
+    "5cfeac4531fe5fd6a09ebaa7",
+    "5cfeac4531fe5fd6a09ebaa8",
+    "5cfeac4531fe5fd6a09ebaa9",
+    "5cfeac4531fe5fd6a09ebaaa",
+    "5cfeac4531fe5fd6a09ebaab",
+    "5cfeac4531fe5fd6a09ebaac",
+    "5cfeac4531fe5fd6a09ebaad",
+    "5cfeac4531fe5fd6a09ebaae",
+    "5cfeac4531fe5fd6a09ebaaf",
+    "5cfeac4531fe5fd6a09ebab0",
+    "5cfeac4531fe5fd6a09ebab1"
   ]
 }

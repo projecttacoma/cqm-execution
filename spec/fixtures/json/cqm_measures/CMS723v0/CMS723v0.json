@@ -7494,14 +7494,14 @@
               {
                 "localId": "2",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
               {
                 "localId": "3",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -11715,7 +11715,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea288d"
+        "value": "5cfeac6e31fe5fd70cf5bb52"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -11737,7 +11737,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea288e"
+        "value": "5cfeac6e31fe5fd70cf5bb53"
       },
       "incisionDatetime": null,
       "method": null,
@@ -11764,7 +11764,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea288f"
+        "value": "5cfeac6e31fe5fd70cf5bb54"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -11785,7 +11785,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea2890"
+        "value": "5cfeac6e31fe5fd70cf5bb55"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -11808,7 +11808,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea2891"
+        "value": "5cfeac6e31fe5fd70cf5bb56"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -11826,7 +11826,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea2892"
+        "value": "5cfeac6e31fe5fd70cf5bb57"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -11851,7 +11851,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea2893"
+        "value": "5cfeac6e31fe5fd70cf5bb58"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -11877,7 +11877,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea2894"
+        "value": "5cfeac6e31fe5fd70cf5bb59"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -11903,7 +11903,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea2895"
+        "value": "5cfeac6e31fe5fd70cf5bb5a"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -11925,7 +11925,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea2896"
+        "value": "5cfeac6e31fe5fd70cf5bb5b"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -11945,7 +11945,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea2897"
+        "value": "5cfeac6e31fe5fd70cf5bb5c"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -11972,7 +11972,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369cb5cc9752fe9ea2898"
+        "value": "5cfeac6e31fe5fd70cf5bb5d"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -11988,16 +11988,16 @@
   "title": "Anticoagulation Therapy for Atrial Fibrillation/Flutter",
   "updated_at": null,
   "value_set_ids": [
-    "5ca369cb5cc9752fe9ea2899",
-    "5ca369cb5cc9752fe9ea289a",
-    "5ca369cb5cc9752fe9ea289b",
-    "5ca369cb5cc9752fe9ea289c",
-    "5ca369cb5cc9752fe9ea289d",
-    "5ca369cb5cc9752fe9ea289e",
-    "5ca369cb5cc9752fe9ea289f",
-    "5ca369cb5cc9752fe9ea28a0",
-    "5ca369cb5cc9752fe9ea28a1",
-    "5ca369cb5cc9752fe9ea28a2",
-    "5ca369cb5cc9752fe9ea28a3"
+    "5cfeac6e31fe5fd70cf5bb5e",
+    "5cfeac6e31fe5fd70cf5bb5f",
+    "5cfeac6e31fe5fd70cf5bb60",
+    "5cfeac6e31fe5fd70cf5bb61",
+    "5cfeac6e31fe5fd70cf5bb62",
+    "5cfeac6e31fe5fd70cf5bb63",
+    "5cfeac6e31fe5fd70cf5bb64",
+    "5cfeac6e31fe5fd70cf5bb65",
+    "5cfeac6e31fe5fd70cf5bb66",
+    "5cfeac6e31fe5fd70cf5bb67",
+    "5cfeac6e31fe5fd70cf5bb68"
   ]
 }

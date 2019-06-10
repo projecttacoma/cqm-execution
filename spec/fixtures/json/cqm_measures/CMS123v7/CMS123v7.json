@@ -88,7 +88,7 @@
                 "localId": "5",
                 "locator": "11:1-11:97",
                 "name": "SNOMEDCT:2017-09",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2017-09",
                 "accessLevel": "Public"
               }
@@ -7240,7 +7240,7 @@
                 "localId": "2",
                 "locator": "5:1-5:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -7248,7 +7248,7 @@
                 "localId": "3",
                 "locator": "6:1-6:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -15918,7 +15918,7 @@
                 "localId": "2",
                 "locator": "5:1-5:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -15926,7 +15926,7 @@
                 "localId": "3",
                 "locator": "6:1-6:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -16860,7 +16860,7 @@
                 "localId": "2",
                 "locator": "5:1-5:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -16868,7 +16868,7 @@
                 "localId": "3",
                 "locator": "6:1-6:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               },
@@ -16876,7 +16876,7 @@
                 "localId": "4",
                 "locator": "7:1-7:97",
                 "name": "SNOMEDCT:2017-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2017-03",
                 "accessLevel": "Public"
               },
@@ -16884,7 +16884,7 @@
                 "localId": "5",
                 "locator": "8:1-8:97",
                 "name": "SNOMEDCT:2017-09",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2017-09",
                 "accessLevel": "Public"
               }
@@ -19305,7 +19305,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6b5"
+        "value": "5cfeac4d31fe5fd6b699a246"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -19324,7 +19324,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6b6"
+        "value": "5cfeac4d31fe5fd6b699a247"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -19344,7 +19344,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6b7"
+        "value": "5cfeac4d31fe5fd6b699a248"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19366,7 +19366,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6b8"
+        "value": "5cfeac4d31fe5fd6b699a249"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19388,7 +19388,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6b9"
+        "value": "5cfeac4d31fe5fd6b699a24a"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19411,7 +19411,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6ba"
+        "value": "5cfeac4d31fe5fd6b699a24b"
       },
       "incisionDatetime": null,
       "method": null,
@@ -19444,7 +19444,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6bb"
+        "value": "5cfeac4d31fe5fd6b699a24c"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19473,7 +19473,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6bc"
+        "value": "5cfeac4d31fe5fd6b699a24d"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19498,7 +19498,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6bd"
+        "value": "5cfeac4d31fe5fd6b699a24e"
       },
       "incisionDatetime": null,
       "method": null,
@@ -19526,7 +19526,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6be"
+        "value": "5cfeac4d31fe5fd6b699a24f"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19547,7 +19547,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6bf"
+        "value": "5cfeac4d31fe5fd6b699a250"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -19568,7 +19568,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c0"
+        "value": "5cfeac4d31fe5fd6b699a251"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -19591,7 +19591,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c1"
+        "value": "5cfeac4d31fe5fd6b699a252"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -19616,7 +19616,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c2"
+        "value": "5cfeac4d31fe5fd6b699a253"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19645,7 +19645,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c3"
+        "value": "5cfeac4d31fe5fd6b699a254"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19674,7 +19674,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c4"
+        "value": "5cfeac4d31fe5fd6b699a255"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19703,7 +19703,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c5"
+        "value": "5cfeac4d31fe5fd6b699a256"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19725,7 +19725,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c6"
+        "value": "5cfeac4d31fe5fd6b699a257"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -19745,7 +19745,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c7"
+        "value": "5cfeac4d31fe5fd6b699a258"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19768,7 +19768,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c8"
+        "value": "5cfeac4d31fe5fd6b699a259"
       },
       "incisionDatetime": null,
       "method": null,
@@ -19796,7 +19796,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6c9"
+        "value": "5cfeac4d31fe5fd6b699a25a"
       },
       "method": null,
       "negationRationale": null,
@@ -19820,7 +19820,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6ca"
+        "value": "5cfeac4d31fe5fd6b699a25b"
       },
       "method": null,
       "negationRationale": null,
@@ -19844,7 +19844,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369905cc9752e74b9b6cb"
+        "value": "5cfeac4d31fe5fd6b699a25c"
       },
       "method": null,
       "negationRationale": null,
@@ -19860,35 +19860,35 @@
   "title": "Diabetes: Foot Exam",
   "updated_at": null,
   "value_set_ids": [
-    "5ca369905cc9752e74b9b6cc",
-    "5ca369905cc9752e74b9b6cd",
-    "5ca369905cc9752e74b9b6ce",
-    "5ca369905cc9752e74b9b6cf",
-    "5ca369905cc9752e74b9b6d0",
-    "5ca369905cc9752e74b9b6d1",
-    "5ca369905cc9752e74b9b6d2",
-    "5ca369905cc9752e74b9b6d3",
-    "5ca369905cc9752e74b9b6d4",
-    "5ca369905cc9752e74b9b6d5",
-    "5ca369905cc9752e74b9b6d6",
-    "5ca369905cc9752e74b9b6d7",
-    "5ca369905cc9752e74b9b6d8",
-    "5ca369905cc9752e74b9b6d9",
-    "5ca369905cc9752e74b9b6da",
-    "5ca369905cc9752e74b9b6db",
-    "5ca369905cc9752e74b9b6dc",
-    "5ca369905cc9752e74b9b6dd",
-    "5ca369905cc9752e74b9b6de",
-    "5ca369905cc9752e74b9b6df",
-    "5ca369905cc9752e74b9b6e0",
-    "5ca369905cc9752e74b9b6e1",
-    "5ca369905cc9752e74b9b6e2",
-    "5ca369905cc9752e74b9b6e3",
-    "5ca369905cc9752e74b9b6e4",
-    "5ca369905cc9752e74b9b6e5",
-    "5ca369905cc9752e74b9b6e6",
-    "5ca369905cc9752e74b9b6e7",
-    "5ca369905cc9752e74b9b6e8",
-    "5ca369905cc9752e74b9b6e9"
+    "5cfeac4d31fe5fd6b699a25d",
+    "5cfeac4d31fe5fd6b699a25e",
+    "5cfeac4d31fe5fd6b699a25f",
+    "5cfeac4d31fe5fd6b699a260",
+    "5cfeac4d31fe5fd6b699a261",
+    "5cfeac4d31fe5fd6b699a262",
+    "5cfeac4d31fe5fd6b699a263",
+    "5cfeac4d31fe5fd6b699a264",
+    "5cfeac4d31fe5fd6b699a265",
+    "5cfeac4d31fe5fd6b699a266",
+    "5cfeac4d31fe5fd6b699a267",
+    "5cfeac4d31fe5fd6b699a268",
+    "5cfeac4d31fe5fd6b699a269",
+    "5cfeac4d31fe5fd6b699a26a",
+    "5cfeac4d31fe5fd6b699a26b",
+    "5cfeac4d31fe5fd6b699a26c",
+    "5cfeac4d31fe5fd6b699a26d",
+    "5cfeac4d31fe5fd6b699a26e",
+    "5cfeac4d31fe5fd6b699a26f",
+    "5cfeac4d31fe5fd6b699a270",
+    "5cfeac4d31fe5fd6b699a271",
+    "5cfeac4d31fe5fd6b699a272",
+    "5cfeac4d31fe5fd6b699a273",
+    "5cfeac4d31fe5fd6b699a274",
+    "5cfeac4d31fe5fd6b699a275",
+    "5cfeac4d31fe5fd6b699a276",
+    "5cfeac4d31fe5fd6b699a277",
+    "5cfeac4d31fe5fd6b699a278",
+    "5cfeac4d31fe5fd6b699a279",
+    "5cfeac4d31fe5fd6b699a27a"
   ]
 }

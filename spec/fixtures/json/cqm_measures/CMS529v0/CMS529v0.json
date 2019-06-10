@@ -74,7 +74,7 @@
                 "localId": "3",
                 "locator": "7:1-7:87",
                 "name": "LOINC:2.58",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.58",
                 "accessLevel": "Public"
               },
@@ -82,7 +82,7 @@
                 "localId": "4",
                 "locator": "8:1-8:87",
                 "name": "LOINC:2.63",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.63",
                 "accessLevel": "Public"
               }
@@ -7293,7 +7293,7 @@
                 "localId": "2",
                 "locator": "5:1-5:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -7301,7 +7301,7 @@
                 "localId": "3",
                 "locator": "6:1-6:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -16414,7 +16414,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1ae"
+        "value": "5cfeac6931fe5fd6fd6eeca0"
       },
       "qdmCategory": "patient_characteristic",
       "qdmTitle": "Patient Characteristic",
@@ -16434,7 +16434,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1af"
+        "value": "5cfeac6931fe5fd6fd6eeca1"
       },
       "method": null,
       "negationRationale": null,
@@ -16464,7 +16464,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b0"
+        "value": "5cfeac6931fe5fd6fd6eeca2"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -16489,7 +16489,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b1"
+        "value": "5cfeac6931fe5fd6fd6eeca3"
       },
       "method": null,
       "negationRationale": null,
@@ -16514,7 +16514,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b2"
+        "value": "5cfeac6931fe5fd6fd6eeca4"
       },
       "method": null,
       "negationRationale": null,
@@ -16542,7 +16542,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b3"
+        "value": "5cfeac6931fe5fd6fd6eeca5"
       },
       "method": null,
       "negationRationale": null,
@@ -16570,7 +16570,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b4"
+        "value": "5cfeac6931fe5fd6fd6eeca6"
       },
       "method": null,
       "negationRationale": null,
@@ -16598,7 +16598,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b5"
+        "value": "5cfeac6931fe5fd6fd6eeca7"
       },
       "method": null,
       "negationRationale": null,
@@ -16626,7 +16626,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b6"
+        "value": "5cfeac6931fe5fd6fd6eeca8"
       },
       "method": null,
       "negationRationale": null,
@@ -16654,7 +16654,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b7"
+        "value": "5cfeac6931fe5fd6fd6eeca9"
       },
       "method": null,
       "negationRationale": null,
@@ -16687,7 +16687,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b8"
+        "value": "5cfeac6931fe5fd6fd6eecaa"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -16711,7 +16711,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1b9"
+        "value": "5cfeac6931fe5fd6fd6eecab"
       },
       "method": null,
       "negationRationale": null,
@@ -16740,7 +16740,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1ba"
+        "value": "5cfeac6931fe5fd6fd6eecac"
       },
       "method": null,
       "negationRationale": null,
@@ -16766,7 +16766,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1bb"
+        "value": "5cfeac6931fe5fd6fd6eecad"
       },
       "method": null,
       "negationRationale": null,
@@ -16792,7 +16792,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1bc"
+        "value": "5cfeac6931fe5fd6fd6eecae"
       },
       "method": null,
       "negationRationale": null,
@@ -16818,7 +16818,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c35cc9752fac10a1bd"
+        "value": "5cfeac6931fe5fd6fd6eecaf"
       },
       "method": null,
       "negationRationale": null,
@@ -16835,26 +16835,26 @@
   "title": "Core Clinical Data Elements for the Hybrid Hospital-Wide Readmission (HWR) Measure with Claims and Electronic Health Record Data",
   "updated_at": null,
   "value_set_ids": [
-    "5ca369c35cc9752fac10a1be",
-    "5ca369c35cc9752fac10a1bf",
-    "5ca369c35cc9752fac10a1c0",
-    "5ca369c35cc9752fac10a1c1",
-    "5ca369c35cc9752fac10a1c2",
-    "5ca369c35cc9752fac10a1c3",
-    "5ca369c35cc9752fac10a1c4",
-    "5ca369c35cc9752fac10a1c5",
-    "5ca369c35cc9752fac10a1c6",
-    "5ca369c35cc9752fac10a1c7",
-    "5ca369c35cc9752fac10a1c8",
-    "5ca369c35cc9752fac10a1c9",
-    "5ca369c35cc9752fac10a1ca",
-    "5ca369c35cc9752fac10a1cb",
-    "5ca369c35cc9752fac10a1cc",
-    "5ca369c35cc9752fac10a1cd",
-    "5ca369c35cc9752fac10a1ce",
-    "5ca369c35cc9752fac10a1cf",
-    "5ca369c35cc9752fac10a1d0",
-    "5ca369c35cc9752fac10a1d1",
-    "5ca369c35cc9752fac10a1d2"
+    "5cfeac6931fe5fd6fd6eecb0",
+    "5cfeac6931fe5fd6fd6eecb1",
+    "5cfeac6931fe5fd6fd6eecb2",
+    "5cfeac6931fe5fd6fd6eecb3",
+    "5cfeac6931fe5fd6fd6eecb4",
+    "5cfeac6931fe5fd6fd6eecb5",
+    "5cfeac6931fe5fd6fd6eecb6",
+    "5cfeac6931fe5fd6fd6eecb7",
+    "5cfeac6931fe5fd6fd6eecb8",
+    "5cfeac6931fe5fd6fd6eecb9",
+    "5cfeac6931fe5fd6fd6eecba",
+    "5cfeac6931fe5fd6fd6eecbb",
+    "5cfeac6931fe5fd6fd6eecbc",
+    "5cfeac6931fe5fd6fd6eecbd",
+    "5cfeac6931fe5fd6fd6eecbe",
+    "5cfeac6931fe5fd6fd6eecbf",
+    "5cfeac6931fe5fd6fd6eecc0",
+    "5cfeac6931fe5fd6fd6eecc1",
+    "5cfeac6931fe5fd6fd6eecc2",
+    "5cfeac6931fe5fd6fd6eecc3",
+    "5cfeac6931fe5fd6fd6eecc4"
   ]
 }
