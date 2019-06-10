@@ -94,7 +94,7 @@
           {
             "codeSystem": "HCPCS",
             "code": "G0438",
-            "codeSystemOid": "2.16.840.1.113883.6.14"
+            "codeSystemOid": "2.16.840.1.113883.6.285"
           }
         ],
         "description": "Encounter, Performed: Annual Wellness Visit",
@@ -107,7 +107,7 @@
             "_type": "QDM::FacilityLocation",
             "code": {
               "code": "G0438",
-              "codeSystemOid": "2.16.840.1.113883.6.14",
+              "codeSystemOid": "2.16.840.1.113883.6.285",
               "descriptor": "Annual Wellness Visit",
               "codeSystem": "HCPCS",
               "version": null,
@@ -126,7 +126,7 @@
             "_type": "QDM::FacilityLocation",
             "code": {
               "code": "G0438",
-              "codeSystemOid": "2.16.840.1.113883.6.14",
+              "codeSystemOid": "2.16.840.1.113883.6.285",
               "descriptor": "Annual Wellness Visit",
               "codeSystem": "HCPCS",
               "version": null,

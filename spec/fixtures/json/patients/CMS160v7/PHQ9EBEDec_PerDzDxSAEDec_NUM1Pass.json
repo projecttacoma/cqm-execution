@@ -182,7 +182,7 @@
           {
             "codeSystem": "HCPCS",
             "code": "G0402",
-            "codeSystemOid": "2.16.840.1.113883.6.14"
+            "codeSystemOid": "2.16.840.1.113883.6.285"
           }
         ],
         "description": "Encounter, Performed: Contact or Office Visit",
