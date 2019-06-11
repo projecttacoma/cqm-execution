@@ -66100,8 +66100,8 @@ function Interval(key, options) {
 Interval.prototype = Object.create(mongoose.SchemaType.prototype);
 
 Interval.prototype.cast = (interval) => {
-  if (typeof interval.low === 'undefined' || interval.low === null) {
-    throw new Error(`Interval: ${interval} does not have a low value`);
+  if (interval.isInterval) {
+    return interval;
   }
   const casted = new cql.Interval(interval.low, interval.high, interval.lowClosed, interval.highClosed);
 
@@ -66115,10 +66115,17 @@ Interval.prototype.cast = (interval) => {
   }
 
   // Cast to DateTime if it is a string representing a DateTime
-  if (casted.low && Date.parse(casted.low)) {
+  if (casted.low) {
+    if (!Date.parse(casted.low)) {
+      throw new Error(`DateTime: ${casted.low} is not a valid DateTime`);
+    }
     casted.low = cql.DateTime.fromJSDate(new Date(casted.low), 0);
   }
-  if (casted.high && Date.parse(casted.high)) {
+
+  if (casted.high) {
+    if (!Date.parse(casted.high)) {
+      throw new Error(`DateTime: ${casted.high} is not a valid DateTime`);
+    }
     casted.high = cql.DateTime.fromJSDate(new Date(casted.high), 0);
   }
   return casted;
@@ -66299,7 +66306,7 @@ const MeasureSchema = new mongoose.Schema(
     // HQMF/Tacoma-specific Measure-logic related data
     population_criteria: Mixed,
     source_data_criteria: [],
-    measure_period: Interval,
+    measure_period: Mixed,
     measure_attributes: [],
 
     population_sets: [PopulationSetSchema],
