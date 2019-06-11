@@ -206,10 +206,10 @@ describe('ResultsHelpers', () => {
 
     it('marks OBSERV calculated if MSRPOPLEX is less than MSRPOPL', () => {
       const populationResults = {
-        IPP: 3, MSRPOPL: 2, MSRPOPLEX: 1, values: [12],
+        IPP: 3, MSRPOPL: 2, MSRPOPLEX: 1, observation_values: [12],
       };
       const expectedRelevanceMap = {
-        IPP: true, MSRPOPL: true, MSRPOPLEX: true, values: true,
+        IPP: true, MSRPOPL: true, MSRPOPLEX: true, observation_values: true,
       };
       const relevanceMap = ResultsHelpers.buildPopulationRelevanceMap(populationResults);
       expect(relevanceMap).toEqual(expectedRelevanceMap);
@@ -217,10 +217,10 @@ describe('ResultsHelpers', () => {
 
     it('marks OBSERV not calculated if MSRPOPLEX is same as MSRPOPL', () => {
       const populationResults = {
-        IPP: 3, MSRPOPL: 2, MSRPOPLEX: 2, values: [12],
+        IPP: 3, MSRPOPL: 2, MSRPOPLEX: 2, observation_values: [12],
       };
       const expectedRelevanceMap = {
-        IPP: true, MSRPOPL: true, MSRPOPLEX: true, values: false,
+        IPP: true, MSRPOPL: true, MSRPOPLEX: true, observation_values: false,
       };
       const relevanceMap = ResultsHelpers.buildPopulationRelevanceMap(populationResults);
       expect(relevanceMap).toEqual(expectedRelevanceMap);
@@ -228,10 +228,10 @@ describe('ResultsHelpers', () => {
 
     it('marks OBSERV not calculated if MSRPOPLEX is greater than MSRPOPL', () => {
       const populationResults = {
-        IPP: 3, MSRPOPL: 2, MSRPOPLEX: 3, values: [12],
+        IPP: 3, MSRPOPL: 2, MSRPOPLEX: 3, observation_values: [12],
       };
       const expectedRelevanceMap = {
-        IPP: true, MSRPOPL: true, MSRPOPLEX: true, values: false,
+        IPP: true, MSRPOPL: true, MSRPOPLEX: true, observation_values: false,
       };
       const relevanceMap = ResultsHelpers.buildPopulationRelevanceMap(populationResults);
       expect(relevanceMap).toEqual(expectedRelevanceMap);
@@ -239,10 +239,10 @@ describe('ResultsHelpers', () => {
 
     it('marks MSRPOPLEX not calculated if MSRPOPL is zero', () => {
       const populationResults = {
-        IPP: 3, MSRPOPL: 0, MSRPOPLEX: 0, values: [],
+        IPP: 3, MSRPOPL: 0, MSRPOPLEX: 0, observation_values: [],
       };
       const expectedRelevanceMap = {
-        IPP: true, MSRPOPL: true, MSRPOPLEX: false, values: false,
+        IPP: true, MSRPOPL: true, MSRPOPLEX: false, observation_values: false,
       };
       let relevanceMap = ResultsHelpers.buildPopulationRelevanceMap(populationResults);
       expect(relevanceMap).toEqual(expectedRelevanceMap);

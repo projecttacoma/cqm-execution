@@ -11,7 +11,7 @@ module.exports.getJSONFixture = (fixturePath) => {
 module.exports.getEpisodeResults = (episodeResults) => {
   let results = [];
   Object.keys(episodeResults).forEach((result) => {
-    results = episodeResults[result].values.concat(results);
+    results = episodeResults[result].observation_values.concat(results);
   });
   return results;
 };
