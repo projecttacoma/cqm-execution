@@ -19305,7 +19305,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a246"
+        "value": "5cffb37731fe5ffd7712a839"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -19324,7 +19324,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a247"
+        "value": "5cffb37731fe5ffd7712a83a"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -19344,7 +19344,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a248"
+        "value": "5cffb37731fe5ffd7712a83b"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19366,7 +19366,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a249"
+        "value": "5cffb37731fe5ffd7712a83c"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19388,7 +19388,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a24a"
+        "value": "5cffb37731fe5ffd7712a83d"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19411,7 +19411,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a24b"
+        "value": "5cffb37731fe5ffd7712a83e"
       },
       "incisionDatetime": null,
       "method": null,
@@ -19444,7 +19444,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a24c"
+        "value": "5cffb37731fe5ffd7712a83f"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19473,7 +19473,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a24d"
+        "value": "5cffb37731fe5ffd7712a840"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19498,7 +19498,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a24e"
+        "value": "5cffb37731fe5ffd7712a841"
       },
       "incisionDatetime": null,
       "method": null,
@@ -19526,7 +19526,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a24f"
+        "value": "5cffb37731fe5ffd7712a842"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19547,7 +19547,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a250"
+        "value": "5cffb37731fe5ffd7712a843"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -19568,7 +19568,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a251"
+        "value": "5cffb37731fe5ffd7712a844"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -19591,7 +19591,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a252"
+        "value": "5cffb37731fe5ffd7712a845"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -19616,7 +19616,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a253"
+        "value": "5cffb37731fe5ffd7712a846"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19645,7 +19645,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a254"
+        "value": "5cffb37731fe5ffd7712a847"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19674,7 +19674,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a255"
+        "value": "5cffb37731fe5ffd7712a848"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19703,7 +19703,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a256"
+        "value": "5cffb37731fe5ffd7712a849"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19725,7 +19725,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a257"
+        "value": "5cffb37731fe5ffd7712a84a"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -19745,7 +19745,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a258"
+        "value": "5cffb37731fe5ffd7712a84b"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -19768,7 +19768,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a259"
+        "value": "5cffb37731fe5ffd7712a84c"
       },
       "incisionDatetime": null,
       "method": null,
@@ -19796,7 +19796,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a25a"
+        "value": "5cffb37731fe5ffd7712a84d"
       },
       "method": null,
       "negationRationale": null,
@@ -19820,7 +19820,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a25b"
+        "value": "5cffb37731fe5ffd7712a84e"
       },
       "method": null,
       "negationRationale": null,
@@ -19844,7 +19844,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4d31fe5fd6b699a25c"
+        "value": "5cffb37731fe5ffd7712a84f"
       },
       "method": null,
       "negationRationale": null,
@@ -19860,35 +19860,35 @@
   "title": "Diabetes: Foot Exam",
   "updated_at": null,
   "value_set_ids": [
-    "5cfeac4d31fe5fd6b699a25d",
-    "5cfeac4d31fe5fd6b699a25e",
-    "5cfeac4d31fe5fd6b699a25f",
-    "5cfeac4d31fe5fd6b699a260",
-    "5cfeac4d31fe5fd6b699a261",
-    "5cfeac4d31fe5fd6b699a262",
-    "5cfeac4d31fe5fd6b699a263",
-    "5cfeac4d31fe5fd6b699a264",
-    "5cfeac4d31fe5fd6b699a265",
-    "5cfeac4d31fe5fd6b699a266",
-    "5cfeac4d31fe5fd6b699a267",
-    "5cfeac4d31fe5fd6b699a268",
-    "5cfeac4d31fe5fd6b699a269",
-    "5cfeac4d31fe5fd6b699a26a",
-    "5cfeac4d31fe5fd6b699a26b",
-    "5cfeac4d31fe5fd6b699a26c",
-    "5cfeac4d31fe5fd6b699a26d",
-    "5cfeac4d31fe5fd6b699a26e",
-    "5cfeac4d31fe5fd6b699a26f",
-    "5cfeac4d31fe5fd6b699a270",
-    "5cfeac4d31fe5fd6b699a271",
-    "5cfeac4d31fe5fd6b699a272",
-    "5cfeac4d31fe5fd6b699a273",
-    "5cfeac4d31fe5fd6b699a274",
-    "5cfeac4d31fe5fd6b699a275",
-    "5cfeac4d31fe5fd6b699a276",
-    "5cfeac4d31fe5fd6b699a277",
-    "5cfeac4d31fe5fd6b699a278",
-    "5cfeac4d31fe5fd6b699a279",
-    "5cfeac4d31fe5fd6b699a27a"
+    "5cffb37731fe5ffd7712a850",
+    "5cffb37731fe5ffd7712a851",
+    "5cffb37731fe5ffd7712a852",
+    "5cffb37731fe5ffd7712a853",
+    "5cffb37731fe5ffd7712a854",
+    "5cffb37731fe5ffd7712a855",
+    "5cffb37731fe5ffd7712a856",
+    "5cffb37731fe5ffd7712a857",
+    "5cffb37731fe5ffd7712a858",
+    "5cffb37731fe5ffd7712a859",
+    "5cffb37731fe5ffd7712a85a",
+    "5cffb37731fe5ffd7712a85b",
+    "5cffb37731fe5ffd7712a85c",
+    "5cffb37731fe5ffd7712a85d",
+    "5cffb37731fe5ffd7712a85e",
+    "5cffb37731fe5ffd7712a85f",
+    "5cffb37731fe5ffd7712a860",
+    "5cffb37731fe5ffd7712a861",
+    "5cffb37731fe5ffd7712a862",
+    "5cffb37731fe5ffd7712a863",
+    "5cffb37731fe5ffd7712a864",
+    "5cffb37731fe5ffd7712a865",
+    "5cffb37731fe5ffd7712a866",
+    "5cffb37731fe5ffd7712a867",
+    "5cffb37731fe5ffd7712a868",
+    "5cffb37731fe5ffd7712a869",
+    "5cffb37731fe5ffd7712a86a",
+    "5cffb37731fe5ffd7712a86b",
+    "5cffb37731fe5ffd7712a86c",
+    "5cffb37731fe5ffd7712a86d"
   ]
 }

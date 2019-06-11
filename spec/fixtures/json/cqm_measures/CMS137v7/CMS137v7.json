@@ -18611,7 +18611,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce4fa"
+        "value": "5cffb37c31fe5ffd86018c7e"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -18630,7 +18630,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce4fb"
+        "value": "5cffb37c31fe5ffd86018c7f"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -18655,7 +18655,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce4fc"
+        "value": "5cffb37c31fe5ffd86018c80"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -18679,7 +18679,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce4fd"
+        "value": "5cffb37c31fe5ffd86018c81"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -18706,7 +18706,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce4fe"
+        "value": "5cffb37c31fe5ffd86018c82"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -18735,7 +18735,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce4ff"
+        "value": "5cffb37c31fe5ffd86018c83"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -18758,7 +18758,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce500"
+        "value": "5cffb37c31fe5ffd86018c84"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -18779,7 +18779,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce501"
+        "value": "5cffb37c31fe5ffd86018c85"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -18802,7 +18802,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce502"
+        "value": "5cffb37c31fe5ffd86018c86"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -18827,7 +18827,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce503"
+        "value": "5cffb37c31fe5ffd86018c87"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -18856,7 +18856,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce504"
+        "value": "5cffb37c31fe5ffd86018c88"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -18878,7 +18878,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce505"
+        "value": "5cffb37c31fe5ffd86018c89"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -18903,7 +18903,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce506"
+        "value": "5cffb37c31fe5ffd86018c8a"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -18932,7 +18932,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce507"
+        "value": "5cffb37c31fe5ffd86018c8b"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -18961,7 +18961,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce508"
+        "value": "5cffb37c31fe5ffd86018c8c"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -18990,7 +18990,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce509"
+        "value": "5cffb37c31fe5ffd86018c8d"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19019,7 +19019,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5231fe5fd6c55ce50a"
+        "value": "5cffb37c31fe5ffd86018c8e"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -19035,27 +19035,27 @@
   "title": "Initiation and Engagement of Alcohol and Other Drug Dependence Treatment",
   "updated_at": null,
   "value_set_ids": [
-    "5cfeac5331fe5fd6c55ce50b",
-    "5cfeac5331fe5fd6c55ce50c",
-    "5cfeac5331fe5fd6c55ce50d",
-    "5cfeac5331fe5fd6c55ce50e",
-    "5cfeac5331fe5fd6c55ce50f",
-    "5cfeac5331fe5fd6c55ce510",
-    "5cfeac5331fe5fd6c55ce511",
-    "5cfeac5331fe5fd6c55ce512",
-    "5cfeac5331fe5fd6c55ce513",
-    "5cfeac5331fe5fd6c55ce514",
-    "5cfeac5331fe5fd6c55ce515",
-    "5cfeac5331fe5fd6c55ce516",
-    "5cfeac5331fe5fd6c55ce517",
-    "5cfeac5331fe5fd6c55ce518",
-    "5cfeac5331fe5fd6c55ce519",
-    "5cfeac5331fe5fd6c55ce51a",
-    "5cfeac5331fe5fd6c55ce51b",
-    "5cfeac5331fe5fd6c55ce51c",
-    "5cfeac5331fe5fd6c55ce51d",
-    "5cfeac5331fe5fd6c55ce51e",
-    "5cfeac5331fe5fd6c55ce51f",
-    "5cfeac5331fe5fd6c55ce520"
+    "5cffb37c31fe5ffd86018c8f",
+    "5cffb37c31fe5ffd86018c90",
+    "5cffb37c31fe5ffd86018c91",
+    "5cffb37c31fe5ffd86018c92",
+    "5cffb37c31fe5ffd86018c93",
+    "5cffb37c31fe5ffd86018c94",
+    "5cffb37c31fe5ffd86018c95",
+    "5cffb37c31fe5ffd86018c96",
+    "5cffb37c31fe5ffd86018c97",
+    "5cffb37c31fe5ffd86018c98",
+    "5cffb37c31fe5ffd86018c99",
+    "5cffb37c31fe5ffd86018c9a",
+    "5cffb37c31fe5ffd86018c9b",
+    "5cffb37c31fe5ffd86018c9c",
+    "5cffb37c31fe5ffd86018c9d",
+    "5cffb37c31fe5ffd86018c9e",
+    "5cffb37c31fe5ffd86018c9f",
+    "5cffb37c31fe5ffd86018ca0",
+    "5cffb37c31fe5ffd86018ca1",
+    "5cffb37c31fe5ffd86018ca2",
+    "5cffb37c31fe5ffd86018ca3",
+    "5cffb37c31fe5ffd86018ca4"
   ]
 }

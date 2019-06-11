@@ -11715,7 +11715,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb52"
+        "value": "5cffb39631fe5ffdd2d77805"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -11737,7 +11737,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb53"
+        "value": "5cffb39631fe5ffdd2d77806"
       },
       "incisionDatetime": null,
       "method": null,
@@ -11764,7 +11764,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb54"
+        "value": "5cffb39631fe5ffdd2d77807"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -11785,7 +11785,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb55"
+        "value": "5cffb39631fe5ffdd2d77808"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -11808,7 +11808,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb56"
+        "value": "5cffb39631fe5ffdd2d77809"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -11826,7 +11826,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb57"
+        "value": "5cffb39631fe5ffdd2d7780a"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -11851,7 +11851,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb58"
+        "value": "5cffb39631fe5ffdd2d7780b"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -11877,7 +11877,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb59"
+        "value": "5cffb39631fe5ffdd2d7780c"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -11903,7 +11903,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb5a"
+        "value": "5cffb39631fe5ffdd2d7780d"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -11925,7 +11925,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb5b"
+        "value": "5cffb39631fe5ffdd2d7780e"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -11945,7 +11945,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb5c"
+        "value": "5cffb39631fe5ffdd2d7780f"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -11972,7 +11972,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6e31fe5fd70cf5bb5d"
+        "value": "5cffb39631fe5ffdd2d77810"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -11988,16 +11988,16 @@
   "title": "Anticoagulation Therapy for Atrial Fibrillation/Flutter",
   "updated_at": null,
   "value_set_ids": [
-    "5cfeac6e31fe5fd70cf5bb5e",
-    "5cfeac6e31fe5fd70cf5bb5f",
-    "5cfeac6e31fe5fd70cf5bb60",
-    "5cfeac6e31fe5fd70cf5bb61",
-    "5cfeac6e31fe5fd70cf5bb62",
-    "5cfeac6e31fe5fd70cf5bb63",
-    "5cfeac6e31fe5fd70cf5bb64",
-    "5cfeac6e31fe5fd70cf5bb65",
-    "5cfeac6e31fe5fd70cf5bb66",
-    "5cfeac6e31fe5fd70cf5bb67",
-    "5cfeac6e31fe5fd70cf5bb68"
+    "5cffb39631fe5ffdd2d77811",
+    "5cffb39631fe5ffdd2d77812",
+    "5cffb39631fe5ffdd2d77813",
+    "5cffb39631fe5ffdd2d77814",
+    "5cffb39631fe5ffdd2d77815",
+    "5cffb39631fe5ffdd2d77816",
+    "5cffb39631fe5ffdd2d77817",
+    "5cffb39631fe5ffdd2d77818",
+    "5cffb39631fe5ffdd2d77819",
+    "5cffb39631fe5ffdd2d7781a",
+    "5cffb39631fe5ffdd2d7781b"
   ]
 }

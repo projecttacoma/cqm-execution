@@ -17590,7 +17590,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc86"
+        "value": "5cffb39331fe5ffdc717c182"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -17612,7 +17612,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc87"
+        "value": "5cffb39331fe5ffdc717c183"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -17631,7 +17631,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc88"
+        "value": "5cffb39331fe5ffdc717c184"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -17652,7 +17652,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc89"
+        "value": "5cffb39331fe5ffdc717c185"
       },
       "incisionDatetime": null,
       "method": null,
@@ -17680,7 +17680,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc8a"
+        "value": "5cffb39331fe5ffdc717c186"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -17703,7 +17703,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc8b"
+        "value": "5cffb39331fe5ffdc717c187"
       },
       "incisionDatetime": null,
       "method": null,
@@ -17729,7 +17729,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc8c"
+        "value": "5cffb39331fe5ffdc717c188"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -17754,7 +17754,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc8d"
+        "value": "5cffb39331fe5ffdc717c189"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -17779,7 +17779,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc8e"
+        "value": "5cffb39331fe5ffdc717c18a"
       },
       "incisionDatetime": null,
       "method": null,
@@ -17805,7 +17805,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc8f"
+        "value": "5cffb39331fe5ffdc717c18b"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -17826,7 +17826,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc90"
+        "value": "5cffb39331fe5ffdc717c18c"
       },
       "incisionDatetime": null,
       "method": null,
@@ -17855,7 +17855,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc91"
+        "value": "5cffb39331fe5ffdc717c18d"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -17880,7 +17880,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6c31fe5fd708a1fc92"
+        "value": "5cffb39331fe5ffdc717c18e"
       },
       "method": null,
       "negationRationale": null,
@@ -17899,26 +17899,26 @@
   "title": "Primary PCI Received Within 90 Minutes of Hospital Arrival",
   "updated_at": null,
   "value_set_ids": [
-    "5cfeac6c31fe5fd708a1fc93",
-    "5cfeac6c31fe5fd708a1fc94",
-    "5cfeac6c31fe5fd708a1fc95",
-    "5cfeac6c31fe5fd708a1fc96",
-    "5cfeac6c31fe5fd708a1fc97",
-    "5cfeac6c31fe5fd708a1fc98",
-    "5cfeac6c31fe5fd708a1fc99",
-    "5cfeac6c31fe5fd708a1fc9a",
-    "5cfeac6c31fe5fd708a1fc9b",
-    "5cfeac6c31fe5fd708a1fc9c",
-    "5cfeac6c31fe5fd708a1fc9d",
-    "5cfeac6c31fe5fd708a1fc9e",
-    "5cfeac6c31fe5fd708a1fc9f",
-    "5cfeac6c31fe5fd708a1fca0",
-    "5cfeac6c31fe5fd708a1fca1",
-    "5cfeac6c31fe5fd708a1fca2",
-    "5cfeac6c31fe5fd708a1fca3",
-    "5cfeac6c31fe5fd708a1fca4",
-    "5cfeac6c31fe5fd708a1fca5",
-    "5cfeac6c31fe5fd708a1fca6",
-    "5cfeac6c31fe5fd708a1fca7"
+    "5cffb39431fe5ffdc717c18f",
+    "5cffb39431fe5ffdc717c190",
+    "5cffb39431fe5ffdc717c191",
+    "5cffb39431fe5ffdc717c192",
+    "5cffb39431fe5ffdc717c193",
+    "5cffb39431fe5ffdc717c194",
+    "5cffb39431fe5ffdc717c195",
+    "5cffb39431fe5ffdc717c196",
+    "5cffb39431fe5ffdc717c197",
+    "5cffb39431fe5ffdc717c198",
+    "5cffb39431fe5ffdc717c199",
+    "5cffb39431fe5ffdc717c19a",
+    "5cffb39431fe5ffdc717c19b",
+    "5cffb39431fe5ffdc717c19c",
+    "5cffb39431fe5ffdc717c19d",
+    "5cffb39431fe5ffdc717c19e",
+    "5cffb39431fe5ffdc717c19f",
+    "5cffb39431fe5ffdc717c1a0",
+    "5cffb39431fe5ffdc717c1a1",
+    "5cffb39431fe5ffdc717c1a2",
+    "5cffb39431fe5ffdc717c1a3"
   ]
 }

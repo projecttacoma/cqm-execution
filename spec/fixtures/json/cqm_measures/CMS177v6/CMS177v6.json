@@ -3640,7 +3640,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d19926"
+        "value": "5cffb38531fe5ffda47d25e1"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -3662,7 +3662,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d19927"
+        "value": "5cffb38531fe5ffda47d25e2"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -3681,7 +3681,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d19928"
+        "value": "5cffb38531fe5ffda47d25e3"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -3706,7 +3706,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d19929"
+        "value": "5cffb38531fe5ffda47d25e4"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -3735,7 +3735,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d1992a"
+        "value": "5cffb38531fe5ffda47d25e5"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -3764,7 +3764,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d1992b"
+        "value": "5cffb38531fe5ffda47d25e6"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -3793,7 +3793,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d1992c"
+        "value": "5cffb38531fe5ffda47d25e7"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -3822,7 +3822,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d1992d"
+        "value": "5cffb38531fe5ffda47d25e8"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -3844,7 +3844,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d1992e"
+        "value": "5cffb38531fe5ffda47d25e9"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -3869,7 +3869,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d1992f"
+        "value": "5cffb38531fe5ffda47d25ea"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -3891,7 +3891,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d19930"
+        "value": "5cffb38531fe5ffda47d25eb"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -3910,7 +3910,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d19931"
+        "value": "5cffb38531fe5ffda47d25ec"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -3940,7 +3940,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5d31fe5fd6e3d19932"
+        "value": "5cffb38531fe5ffda47d25ed"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -3956,19 +3956,19 @@
   "title": "Child and Adolescent Major Depressive Disorder (MDD): Suicide Risk Assessment",
   "updated_at": null,
   "value_set_ids": [
-    "5cfeac5d31fe5fd6e3d19933",
-    "5cfeac5d31fe5fd6e3d19934",
-    "5cfeac5d31fe5fd6e3d19935",
-    "5cfeac5d31fe5fd6e3d19936",
-    "5cfeac5d31fe5fd6e3d19937",
-    "5cfeac5d31fe5fd6e3d19938",
-    "5cfeac5d31fe5fd6e3d19939",
-    "5cfeac5d31fe5fd6e3d1993a",
-    "5cfeac5d31fe5fd6e3d1993b",
-    "5cfeac5d31fe5fd6e3d1993c",
-    "5cfeac5d31fe5fd6e3d1993d",
-    "5cfeac5d31fe5fd6e3d1993e",
-    "5cfeac5d31fe5fd6e3d1993f",
-    "5cfeac5d31fe5fd6e3d19940"
+    "5cffb38531fe5ffda47d25ee",
+    "5cffb38531fe5ffda47d25ef",
+    "5cffb38531fe5ffda47d25f0",
+    "5cffb38531fe5ffda47d25f1",
+    "5cffb38531fe5ffda47d25f2",
+    "5cffb38531fe5ffda47d25f3",
+    "5cffb38531fe5ffda47d25f4",
+    "5cffb38531fe5ffda47d25f5",
+    "5cffb38531fe5ffda47d25f6",
+    "5cffb38531fe5ffda47d25f7",
+    "5cffb38531fe5ffda47d25f8",
+    "5cffb38531fe5ffda47d25f9",
+    "5cffb38531fe5ffda47d25fa",
+    "5cffb38531fe5ffda47d25fb"
   ]
 }

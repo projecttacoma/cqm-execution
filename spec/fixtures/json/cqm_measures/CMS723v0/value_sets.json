@@ -1,9 +1,9 @@
 [
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb5e",
+    "_id": "5cffb39631fe5ffdd2d77811",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb69",
+        "_id": "5cffb39631fe5ffdd2d7781c",
         "code": "133918004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -11,7 +11,7 @@
         "display_name": "Comfort measures (regime/therapy)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb6a",
+        "_id": "5cffb39631fe5ffdd2d7781d",
         "code": "182964004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -19,7 +19,7 @@
         "display_name": "Terminal care (regime/therapy)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb6b",
+        "_id": "5cffb39631fe5ffdd2d7781e",
         "code": "385736008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -27,7 +27,7 @@
         "display_name": "Dying care (regime/therapy)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb6c",
+        "_id": "5cffb39631fe5ffdd2d7781f",
         "code": "385763009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -40,10 +40,10 @@
     "version": "Draft-9DD5F699-F535-48BB-8140-306C656A587E"
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb5f",
+    "_id": "5cffb39631fe5ffdd2d77812",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb6d",
+        "_id": "5cffb39631fe5ffdd2d77820",
         "code": "1037045",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -51,7 +51,7 @@
         "display_name": "dabigatran etexilate 150 MG Oral Capsule"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb6e",
+        "_id": "5cffb39631fe5ffdd2d77821",
         "code": "1037179",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -59,7 +59,7 @@
         "display_name": "dabigatran etexilate 75 MG Oral Capsule"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb6f",
+        "_id": "5cffb39631fe5ffdd2d77822",
         "code": "1114198",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -67,7 +67,7 @@
         "display_name": "rivaroxaban 10 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb70",
+        "_id": "5cffb39631fe5ffdd2d77823",
         "code": "1232082",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -75,7 +75,7 @@
         "display_name": "rivaroxaban 15 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb71",
+        "_id": "5cffb39631fe5ffdd2d77824",
         "code": "1232086",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -83,7 +83,7 @@
         "display_name": "rivaroxaban 20 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb72",
+        "_id": "5cffb39631fe5ffdd2d77825",
         "code": "1361574",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -91,7 +91,7 @@
         "display_name": "heparin sodium, porcine 20000 UNT/ML Injectable Solution"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb73",
+        "_id": "5cffb39631fe5ffdd2d77826",
         "code": "1361615",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -99,7 +99,7 @@
         "display_name": "heparin sodium, porcine 5000 UNT/ML Injectable Solution"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb74",
+        "_id": "5cffb39631fe5ffdd2d77827",
         "code": "1364435",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -107,7 +107,7 @@
         "display_name": "apixaban 2.5 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb75",
+        "_id": "5cffb39631fe5ffdd2d77828",
         "code": "1364445",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -115,7 +115,7 @@
         "display_name": "apixaban 5 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb76",
+        "_id": "5cffb39631fe5ffdd2d77829",
         "code": "1599543",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -123,7 +123,7 @@
         "display_name": "edoxaban 15 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb77",
+        "_id": "5cffb39631fe5ffdd2d7782a",
         "code": "1599551",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -131,7 +131,7 @@
         "display_name": "edoxaban 30 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb78",
+        "_id": "5cffb39631fe5ffdd2d7782b",
         "code": "1599555",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -139,7 +139,7 @@
         "display_name": "edoxaban 60 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb79",
+        "_id": "5cffb39631fe5ffdd2d7782c",
         "code": "1658717",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -147,7 +147,7 @@
         "display_name": "250 ML heparin sodium, porcine 100 UNT/ML Injection"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb7a",
+        "_id": "5cffb39631fe5ffdd2d7782d",
         "code": "1659195",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -155,7 +155,7 @@
         "display_name": "500 ML heparin sodium, porcine 50 UNT/ML Injection"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb7b",
+        "_id": "5cffb39631fe5ffdd2d7782e",
         "code": "1659197",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -163,7 +163,7 @@
         "display_name": "250 ML heparin sodium, porcine 50 UNT/ML Injection"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb7c",
+        "_id": "5cffb39631fe5ffdd2d7782f",
         "code": "1723476",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -171,7 +171,7 @@
         "display_name": "dabigatran etexilate 110 MG Oral Capsule"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb7d",
+        "_id": "5cffb39631fe5ffdd2d77830",
         "code": "1804735",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -179,7 +179,7 @@
         "display_name": "50 ML argatroban 1 MG/ML Injection"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb7e",
+        "_id": "5cffb39631fe5ffdd2d77831",
         "code": "1804737",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -187,7 +187,7 @@
         "display_name": "125 ML argatroban 1 MG/ML Injection"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb7f",
+        "_id": "5cffb39631fe5ffdd2d77832",
         "code": "1804738",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -195,7 +195,7 @@
         "display_name": "250 ML argatroban 1 MG/ML Injection"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb80",
+        "_id": "5cffb39631fe5ffdd2d77833",
         "code": "308351",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -203,7 +203,7 @@
         "display_name": "2.5 ML argatroban 100 MG/ML Injection"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb81",
+        "_id": "5cffb39631fe5ffdd2d77834",
         "code": "854238",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -211,7 +211,7 @@
         "display_name": "0.6 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb82",
+        "_id": "5cffb39631fe5ffdd2d77835",
         "code": "854241",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -219,7 +219,7 @@
         "display_name": "0.8 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb83",
+        "_id": "5cffb39631fe5ffdd2d77836",
         "code": "854245",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -227,7 +227,7 @@
         "display_name": "0.8 ML Enoxaparin sodium 150 MG/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb84",
+        "_id": "5cffb39631fe5ffdd2d77837",
         "code": "854248",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -235,7 +235,7 @@
         "display_name": "1 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb85",
+        "_id": "5cffb39631fe5ffdd2d77838",
         "code": "854252",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -243,7 +243,7 @@
         "display_name": "1 ML Enoxaparin sodium 150 MG/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb86",
+        "_id": "5cffb39631fe5ffdd2d77839",
         "code": "854255",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -251,7 +251,7 @@
         "display_name": "Enoxaparin sodium 100 MG/ML Injectable Solution"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb87",
+        "_id": "5cffb39631fe5ffdd2d7783a",
         "code": "855288",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -259,7 +259,7 @@
         "display_name": "Warfarin Sodium 1 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb88",
+        "_id": "5cffb39631fe5ffdd2d7783b",
         "code": "855296",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -267,7 +267,7 @@
         "display_name": "Warfarin Sodium 10 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb89",
+        "_id": "5cffb39631fe5ffdd2d7783c",
         "code": "855302",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -275,7 +275,7 @@
         "display_name": "Warfarin Sodium 2 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb8a",
+        "_id": "5cffb39631fe5ffdd2d7783d",
         "code": "855312",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -283,7 +283,7 @@
         "display_name": "Warfarin Sodium 2.5 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb8b",
+        "_id": "5cffb39631fe5ffdd2d7783e",
         "code": "855318",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -291,7 +291,7 @@
         "display_name": "Warfarin Sodium 3 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb8c",
+        "_id": "5cffb39631fe5ffdd2d7783f",
         "code": "855324",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -299,7 +299,7 @@
         "display_name": "Warfarin Sodium 4 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb8d",
+        "_id": "5cffb39631fe5ffdd2d77840",
         "code": "855332",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -307,7 +307,7 @@
         "display_name": "Warfarin Sodium 5 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb8e",
+        "_id": "5cffb39631fe5ffdd2d77841",
         "code": "855338",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -315,7 +315,7 @@
         "display_name": "Warfarin Sodium 6 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb8f",
+        "_id": "5cffb39631fe5ffdd2d77842",
         "code": "855344",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -323,7 +323,7 @@
         "display_name": "Warfarin Sodium 7.5 MG Oral Tablet"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb90",
+        "_id": "5cffb39631fe5ffdd2d77843",
         "code": "861356",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -331,7 +331,7 @@
         "display_name": "0.8 ML Fondaparinux sodium 12.5 MG/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb91",
+        "_id": "5cffb39631fe5ffdd2d77844",
         "code": "861360",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -339,7 +339,7 @@
         "display_name": "0.5 ML Fondaparinux sodium 5 MG/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb92",
+        "_id": "5cffb39631fe5ffdd2d77845",
         "code": "861363",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -347,7 +347,7 @@
         "display_name": "0.4 ML Fondaparinux sodium 12.5 MG/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb93",
+        "_id": "5cffb39631fe5ffdd2d77846",
         "code": "861365",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -355,7 +355,7 @@
         "display_name": "0.6 ML Fondaparinux sodium 12.5 MG/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb94",
+        "_id": "5cffb39631fe5ffdd2d77847",
         "code": "978725",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -363,7 +363,7 @@
         "display_name": "0.2 ML Dalteparin Sodium 12500 UNT/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb95",
+        "_id": "5cffb39631fe5ffdd2d77848",
         "code": "978733",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -371,7 +371,7 @@
         "display_name": "0.2 ML Dalteparin Sodium 25000 UNT/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb96",
+        "_id": "5cffb39631fe5ffdd2d77849",
         "code": "978736",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -379,7 +379,7 @@
         "display_name": "0.3 ML Dalteparin Sodium 25000 UNT/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb97",
+        "_id": "5cffb39631fe5ffdd2d7784a",
         "code": "978738",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -387,7 +387,7 @@
         "display_name": "0.4 ML Dalteparin Sodium 25000 UNT/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb98",
+        "_id": "5cffb39631fe5ffdd2d7784b",
         "code": "978740",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -395,7 +395,7 @@
         "display_name": "0.5 ML Dalteparin Sodium 25000 UNT/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb99",
+        "_id": "5cffb39631fe5ffdd2d7784c",
         "code": "978744",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -403,7 +403,7 @@
         "display_name": "0.6 ML Dalteparin Sodium 25000 UNT/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb9a",
+        "_id": "5cffb39631fe5ffdd2d7784d",
         "code": "978746",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -411,7 +411,7 @@
         "display_name": "0.72 ML Dalteparin Sodium 25000 UNT/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb9b",
+        "_id": "5cffb39631fe5ffdd2d7784e",
         "code": "978755",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -419,7 +419,7 @@
         "display_name": "1 ML Dalteparin Sodium 10000 UNT/ML Prefilled Syringe"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb9c",
+        "_id": "5cffb39631fe5ffdd2d7784f",
         "code": "978759",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -427,7 +427,7 @@
         "display_name": "Dalteparin Sodium 10000 UNT/ML Injectable Solution"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb9d",
+        "_id": "5cffb39631fe5ffdd2d77850",
         "code": "978777",
         "code_system_name": "RxNorm",
         "code_system_oid": "2.16.840.1.113883.6.88",
@@ -440,10 +440,10 @@
     "version": "Draft-9DD5F699-F535-48BB-8140-306C656A587E"
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb60",
+    "_id": "5cffb39631fe5ffdd2d77813",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb9e",
+        "_id": "5cffb39631fe5ffdd2d77851",
         "code": "195080001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -451,7 +451,7 @@
         "display_name": "Atrial fibrillation and flutter (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bb9f",
+        "_id": "5cffb39631fe5ffdd2d77852",
         "code": "233910005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -459,7 +459,7 @@
         "display_name": "Lone atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba0",
+        "_id": "5cffb39631fe5ffdd2d77853",
         "code": "233911009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -467,7 +467,7 @@
         "display_name": "Non-rheumatic atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba1",
+        "_id": "5cffb39631fe5ffdd2d77854",
         "code": "282825002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -475,7 +475,7 @@
         "display_name": "Paroxysmal atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba2",
+        "_id": "5cffb39631fe5ffdd2d77855",
         "code": "300996004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -483,7 +483,7 @@
         "display_name": "Controlled atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba3",
+        "_id": "5cffb39631fe5ffdd2d77856",
         "code": "314208002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -491,7 +491,7 @@
         "display_name": "Rapid atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba4",
+        "_id": "5cffb39631fe5ffdd2d77857",
         "code": "425615007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -499,7 +499,7 @@
         "display_name": "Chronic atrial flutter (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba5",
+        "_id": "5cffb39631fe5ffdd2d77858",
         "code": "426749004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -507,7 +507,7 @@
         "display_name": "Chronic atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba6",
+        "_id": "5cffb39631fe5ffdd2d77859",
         "code": "426814001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -515,7 +515,7 @@
         "display_name": "Transient cerebral ischemia due to atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba7",
+        "_id": "5cffb39631fe5ffdd2d7785a",
         "code": "427.31",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -523,7 +523,7 @@
         "display_name": "Atrial fibrillation"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba8",
+        "_id": "5cffb39631fe5ffdd2d7785b",
         "code": "427.32",
         "code_system_name": "ICD-9-CM",
         "code_system_oid": "2.16.840.1.113883.6.103",
@@ -531,7 +531,7 @@
         "display_name": "Atrial flutter"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bba9",
+        "_id": "5cffb39631fe5ffdd2d7785c",
         "code": "427665004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -539,7 +539,7 @@
         "display_name": "Paroxysmal atrial flutter (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbaa",
+        "_id": "5cffb39631fe5ffdd2d7785d",
         "code": "440028005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -547,7 +547,7 @@
         "display_name": "Permanent atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbab",
+        "_id": "5cffb39631fe5ffdd2d7785e",
         "code": "440059007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -555,7 +555,7 @@
         "display_name": "Persistent atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbac",
+        "_id": "5cffb39631fe5ffdd2d7785f",
         "code": "49436004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -563,7 +563,7 @@
         "display_name": "Atrial fibrillation (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbad",
+        "_id": "5cffb39631fe5ffdd2d77860",
         "code": "5370000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -571,7 +571,7 @@
         "display_name": "Atrial flutter (disorder)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbae",
+        "_id": "5cffb39631fe5ffdd2d77861",
         "code": "I48.0",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -579,7 +579,7 @@
         "display_name": "Paroxysmal atrial fibrillation"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbaf",
+        "_id": "5cffb39631fe5ffdd2d77862",
         "code": "I48.1",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -587,7 +587,7 @@
         "display_name": "Persistent atrial fibrillation"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb0",
+        "_id": "5cffb39631fe5ffdd2d77863",
         "code": "I48.2",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -595,7 +595,7 @@
         "display_name": "Chronic atrial fibrillation"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb1",
+        "_id": "5cffb39631fe5ffdd2d77864",
         "code": "I48.3",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -603,7 +603,7 @@
         "display_name": "Typical atrial flutter"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb2",
+        "_id": "5cffb39631fe5ffdd2d77865",
         "code": "I48.4",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -611,7 +611,7 @@
         "display_name": "Atypical atrial flutter"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb3",
+        "_id": "5cffb39631fe5ffdd2d77866",
         "code": "I48.91",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -619,7 +619,7 @@
         "display_name": "Unspecified atrial fibrillation"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb4",
+        "_id": "5cffb39631fe5ffdd2d77867",
         "code": "I48.92",
         "code_system_name": "ICD-10-CM",
         "code_system_oid": "2.16.840.1.113883.6.90",
@@ -632,10 +632,10 @@
     "version": "Draft-9DD5F699-F535-48BB-8140-306C656A587E"
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb61",
+    "_id": "5cffb39631fe5ffdd2d77814",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb5",
+        "_id": "5cffb39631fe5ffdd2d77868",
         "code": "02560ZZ",
         "code_system_name": "ICD-10-PCS",
         "code_system_oid": "2.16.840.1.113883.6.4",
@@ -643,7 +643,7 @@
         "display_name": "Destruction of Right Atrium, Open Approach"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb6",
+        "_id": "5cffb39631fe5ffdd2d77869",
         "code": "02563ZZ",
         "code_system_name": "ICD-10-PCS",
         "code_system_oid": "2.16.840.1.113883.6.4",
@@ -651,7 +651,7 @@
         "display_name": "Destruction of Right Atrium, Percutaneous Approach"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb7",
+        "_id": "5cffb39631fe5ffdd2d7786a",
         "code": "02564ZZ",
         "code_system_name": "ICD-10-PCS",
         "code_system_oid": "2.16.840.1.113883.6.4",
@@ -659,7 +659,7 @@
         "display_name": "Destruction of Right Atrium, Percutaneous Endoscopic Approach"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb8",
+        "_id": "5cffb39631fe5ffdd2d7786b",
         "code": "02580ZZ",
         "code_system_name": "ICD-10-PCS",
         "code_system_oid": "2.16.840.1.113883.6.4",
@@ -667,7 +667,7 @@
         "display_name": "Destruction of Conduction Mechanism, Open Approach"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbb9",
+        "_id": "5cffb39631fe5ffdd2d7786c",
         "code": "02583ZZ",
         "code_system_name": "ICD-10-PCS",
         "code_system_oid": "2.16.840.1.113883.6.4",
@@ -675,7 +675,7 @@
         "display_name": "Destruction of Conduction Mechanism, Percutaneous Approach"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbba",
+        "_id": "5cffb39631fe5ffdd2d7786d",
         "code": "02584ZZ",
         "code_system_name": "ICD-10-PCS",
         "code_system_oid": "2.16.840.1.113883.6.4",
@@ -683,7 +683,7 @@
         "display_name": "Destruction of Conduction Mechanism, Percutaneous Endoscopic Approach"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbbb",
+        "_id": "5cffb39631fe5ffdd2d7786e",
         "code": "175095005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -691,7 +691,7 @@
         "display_name": "Open ablation of atrioventricular node (procedure)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbbc",
+        "_id": "5cffb39631fe5ffdd2d7786f",
         "code": "175125003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -699,7 +699,7 @@
         "display_name": "Percutaneous transluminal ablation of atrioventricular node (procedure)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbbd",
+        "_id": "5cffb39631fe5ffdd2d77870",
         "code": "428290007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -707,7 +707,7 @@
         "display_name": "Percutaneous transluminal ablation of wall of atrium (procedure)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbbe",
+        "_id": "5cffb39631fe5ffdd2d77871",
         "code": "428663009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -715,7 +715,7 @@
         "display_name": "Ablation of atrioventricular node (procedure)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbbf",
+        "_id": "5cffb39631fe5ffdd2d77872",
         "code": "429211003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -728,10 +728,10 @@
     "version": "Draft-9DD5F699-F535-48BB-8140-306C656A587E"
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb62",
+    "_id": "5cffb39631fe5ffdd2d77815",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc0",
+        "_id": "5cffb39631fe5ffdd2d77873",
         "code": "371828006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -744,10 +744,10 @@
     "version": "Draft-9DD5F699-F535-48BB-8140-306C656A587E"
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb63",
+    "_id": "5cffb39631fe5ffdd2d77816",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc1",
+        "_id": "5cffb39631fe5ffdd2d77874",
         "code": "183452005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -755,7 +755,7 @@
         "display_name": "Emergency hospital admission (procedure)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc2",
+        "_id": "5cffb39631fe5ffdd2d77875",
         "code": "32485007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -768,10 +768,10 @@
     "version": "Draft-9DD5F699-F535-48BB-8140-306C656A587E"
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb64",
+    "_id": "5cffb39631fe5ffdd2d77817",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc3",
+        "_id": "5cffb39631fe5ffdd2d77876",
         "code": "306701001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -779,7 +779,7 @@
         "display_name": "Discharge to community hospital (procedure)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc4",
+        "_id": "5cffb39631fe5ffdd2d77877",
         "code": "306703003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -787,7 +787,7 @@
         "display_name": "Discharge to tertiary referral hospital (procedure)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc5",
+        "_id": "5cffb39631fe5ffdd2d77878",
         "code": "434781000124105",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -800,10 +800,10 @@
     "version": "Draft-9DD5F699-F535-48BB-8140-306C656A587E"
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb65",
+    "_id": "5cffb39631fe5ffdd2d77818",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc6",
+        "_id": "5cffb39631fe5ffdd2d77879",
         "code": "105480006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -811,7 +811,7 @@
         "display_name": "Refusal of treatment by patient (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc7",
+        "_id": "5cffb39631fe5ffdd2d7787a",
         "code": "182890002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -819,7 +819,7 @@
         "display_name": "Patient requests alternative treatment (finding)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc8",
+        "_id": "5cffb39631fe5ffdd2d7787b",
         "code": "182895007",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -827,7 +827,7 @@
         "display_name": "Drug declined by patient (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbc9",
+        "_id": "5cffb39631fe5ffdd2d7787c",
         "code": "182896008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -835,7 +835,7 @@
         "display_name": "Drug declined by patient - dislikes taste (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbca",
+        "_id": "5cffb39631fe5ffdd2d7787d",
         "code": "182897004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -843,7 +843,7 @@
         "display_name": "Drug declined by patient - side effects (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbcb",
+        "_id": "5cffb39631fe5ffdd2d7787e",
         "code": "182898009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -851,7 +851,7 @@
         "display_name": "Drug declined by patient - inconvenient (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbcc",
+        "_id": "5cffb39631fe5ffdd2d7787f",
         "code": "182900006",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -859,7 +859,7 @@
         "display_name": "Drug declined by patient - patient beliefs (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbcd",
+        "_id": "5cffb39631fe5ffdd2d77880",
         "code": "182901005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -867,7 +867,7 @@
         "display_name": "Drug declined by patient - alternative therapy (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbce",
+        "_id": "5cffb39631fe5ffdd2d77881",
         "code": "182903008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -875,7 +875,7 @@
         "display_name": "Drug declined by patient - reason unknown (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbcf",
+        "_id": "5cffb39631fe5ffdd2d77882",
         "code": "183944003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -883,7 +883,7 @@
         "display_name": "Procedure refused (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd0",
+        "_id": "5cffb39631fe5ffdd2d77883",
         "code": "183945002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -891,7 +891,7 @@
         "display_name": "Procedure refused for religious reason (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd1",
+        "_id": "5cffb39631fe5ffdd2d77884",
         "code": "183946001",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -899,7 +899,7 @@
         "display_name": "Procedure refused - uncooperative (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd2",
+        "_id": "5cffb39631fe5ffdd2d77885",
         "code": "183947005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -907,7 +907,7 @@
         "display_name": "Refused procedure - after thought (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd3",
+        "_id": "5cffb39631fe5ffdd2d77886",
         "code": "183948000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -915,7 +915,7 @@
         "display_name": "Refused procedure - parent's wish (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd4",
+        "_id": "5cffb39631fe5ffdd2d77887",
         "code": "183956002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -923,7 +923,7 @@
         "display_name": "Care/help refused by patient (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd5",
+        "_id": "5cffb39631fe5ffdd2d77888",
         "code": "275936005",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -931,7 +931,7 @@
         "display_name": "Patient noncompliance - general (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd6",
+        "_id": "5cffb39631fe5ffdd2d77889",
         "code": "371138003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -939,7 +939,7 @@
         "display_name": "Refusal of treatment by parents (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd7",
+        "_id": "5cffb39631fe5ffdd2d7788a",
         "code": "385648002",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -947,7 +947,7 @@
         "display_name": "Rejected by recipient (qualifier value)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd8",
+        "_id": "5cffb39631fe5ffdd2d7788b",
         "code": "406149000",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -955,7 +955,7 @@
         "display_name": "Medication refused (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbd9",
+        "_id": "5cffb39631fe5ffdd2d7788c",
         "code": "413312003",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -963,7 +963,7 @@
         "display_name": "Patient non-compliant - refused service (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbda",
+        "_id": "5cffb39631fe5ffdd2d7788d",
         "code": "416432009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -971,7 +971,7 @@
         "display_name": "Procedure not wanted (situation)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbdb",
+        "_id": "5cffb39631fe5ffdd2d7788e",
         "code": "443390004",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -979,7 +979,7 @@
         "display_name": "Refused (qualifier value)"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbdc",
+        "_id": "5cffb39631fe5ffdd2d7788f",
         "code": "609589008",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -992,10 +992,10 @@
     "version": "Draft-9DD5F699-F535-48BB-8140-306C656A587E"
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb66",
+    "_id": "5cffb39631fe5ffdd2d77819",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbdd",
+        "_id": "5cffb39631fe5ffdd2d77890",
         "code": "2135-2",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -1003,7 +1003,7 @@
         "display_name": "Hispanic or Latino"
       },
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbde",
+        "_id": "5cffb39631fe5ffdd2d77891",
         "code": "2186-5",
         "code_system_name": "CDC Race",
         "code_system_oid": "2.16.840.1.113883.6.238",
@@ -1016,10 +1016,10 @@
     "version": "Draft-9DD5F699-F535-48BB-8140-306C656A587E"
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb67",
+    "_id": "5cffb39631fe5ffdd2d7781a",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbdf",
+        "_id": "5cffb39631fe5ffdd2d77892",
         "code": "419099009",
         "code_system_name": "SNOMED-CT",
         "code_system_oid": "2.16.840.1.113883.6.96",
@@ -1032,10 +1032,10 @@
     "version": ""
   },
   {
-    "_id": "5cfeac6e31fe5fd70cf5bb68",
+    "_id": "5cffb39631fe5ffdd2d7781b",
     "concepts": [
       {
-        "_id": "5cfeac6e31fe5fd70cf5bbe0",
+        "_id": "5cffb39631fe5ffdd2d77893",
         "code": "21112-8",
         "code_system_name": "LOINC",
         "code_system_oid": "2.16.840.1.113883.6.1",

@@ -16414,7 +16414,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca0"
+        "value": "5cffb39131fe5ffdbeb96d91"
       },
       "qdmCategory": "patient_characteristic",
       "qdmTitle": "Patient Characteristic",
@@ -16434,7 +16434,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca1"
+        "value": "5cffb39131fe5ffdbeb96d92"
       },
       "method": null,
       "negationRationale": null,
@@ -16464,7 +16464,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca2"
+        "value": "5cffb39131fe5ffdbeb96d93"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -16489,7 +16489,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca3"
+        "value": "5cffb39131fe5ffdbeb96d94"
       },
       "method": null,
       "negationRationale": null,
@@ -16514,7 +16514,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca4"
+        "value": "5cffb39131fe5ffdbeb96d95"
       },
       "method": null,
       "negationRationale": null,
@@ -16542,7 +16542,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca5"
+        "value": "5cffb39131fe5ffdbeb96d96"
       },
       "method": null,
       "negationRationale": null,
@@ -16570,7 +16570,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca6"
+        "value": "5cffb39131fe5ffdbeb96d97"
       },
       "method": null,
       "negationRationale": null,
@@ -16598,7 +16598,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca7"
+        "value": "5cffb39131fe5ffdbeb96d98"
       },
       "method": null,
       "negationRationale": null,
@@ -16626,7 +16626,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca8"
+        "value": "5cffb39131fe5ffdbeb96d99"
       },
       "method": null,
       "negationRationale": null,
@@ -16654,7 +16654,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eeca9"
+        "value": "5cffb39131fe5ffdbeb96d9a"
       },
       "method": null,
       "negationRationale": null,
@@ -16687,7 +16687,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eecaa"
+        "value": "5cffb39131fe5ffdbeb96d9b"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -16711,7 +16711,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eecab"
+        "value": "5cffb39131fe5ffdbeb96d9c"
       },
       "method": null,
       "negationRationale": null,
@@ -16740,7 +16740,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eecac"
+        "value": "5cffb39131fe5ffdbeb96d9d"
       },
       "method": null,
       "negationRationale": null,
@@ -16766,7 +16766,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eecad"
+        "value": "5cffb39131fe5ffdbeb96d9e"
       },
       "method": null,
       "negationRationale": null,
@@ -16792,7 +16792,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eecae"
+        "value": "5cffb39131fe5ffdbeb96d9f"
       },
       "method": null,
       "negationRationale": null,
@@ -16818,7 +16818,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac6931fe5fd6fd6eecaf"
+        "value": "5cffb39131fe5ffdbeb96da0"
       },
       "method": null,
       "negationRationale": null,
@@ -16835,26 +16835,26 @@
   "title": "Core Clinical Data Elements for the Hybrid Hospital-Wide Readmission (HWR) Measure with Claims and Electronic Health Record Data",
   "updated_at": null,
   "value_set_ids": [
-    "5cfeac6931fe5fd6fd6eecb0",
-    "5cfeac6931fe5fd6fd6eecb1",
-    "5cfeac6931fe5fd6fd6eecb2",
-    "5cfeac6931fe5fd6fd6eecb3",
-    "5cfeac6931fe5fd6fd6eecb4",
-    "5cfeac6931fe5fd6fd6eecb5",
-    "5cfeac6931fe5fd6fd6eecb6",
-    "5cfeac6931fe5fd6fd6eecb7",
-    "5cfeac6931fe5fd6fd6eecb8",
-    "5cfeac6931fe5fd6fd6eecb9",
-    "5cfeac6931fe5fd6fd6eecba",
-    "5cfeac6931fe5fd6fd6eecbb",
-    "5cfeac6931fe5fd6fd6eecbc",
-    "5cfeac6931fe5fd6fd6eecbd",
-    "5cfeac6931fe5fd6fd6eecbe",
-    "5cfeac6931fe5fd6fd6eecbf",
-    "5cfeac6931fe5fd6fd6eecc0",
-    "5cfeac6931fe5fd6fd6eecc1",
-    "5cfeac6931fe5fd6fd6eecc2",
-    "5cfeac6931fe5fd6fd6eecc3",
-    "5cfeac6931fe5fd6fd6eecc4"
+    "5cffb39131fe5ffdbeb96da1",
+    "5cffb39131fe5ffdbeb96da2",
+    "5cffb39131fe5ffdbeb96da3",
+    "5cffb39131fe5ffdbeb96da4",
+    "5cffb39131fe5ffdbeb96da5",
+    "5cffb39131fe5ffdbeb96da6",
+    "5cffb39131fe5ffdbeb96da7",
+    "5cffb39131fe5ffdbeb96da8",
+    "5cffb39131fe5ffdbeb96da9",
+    "5cffb39131fe5ffdbeb96daa",
+    "5cffb39131fe5ffdbeb96dab",
+    "5cffb39131fe5ffdbeb96dac",
+    "5cffb39131fe5ffdbeb96dad",
+    "5cffb39131fe5ffdbeb96dae",
+    "5cffb39131fe5ffdbeb96daf",
+    "5cffb39131fe5ffdbeb96db0",
+    "5cffb39131fe5ffdbeb96db1",
+    "5cffb39131fe5ffdbeb96db2",
+    "5cffb39131fe5ffdbeb96db3",
+    "5cffb39131fe5ffdbeb96db4",
+    "5cffb39131fe5ffdbeb96db5"
   ]
 }

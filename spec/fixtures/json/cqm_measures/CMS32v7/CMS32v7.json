@@ -4313,7 +4313,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5f31fe5fd6e751110e"
+        "value": "5cffb38831fe5ffda80d95c4"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -4335,7 +4335,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5f31fe5fd6e751110f"
+        "value": "5cffb38831fe5ffda80d95c5"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -4354,7 +4354,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5f31fe5fd6e7511110"
+        "value": "5cffb38831fe5ffda80d95c6"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -4372,7 +4372,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5f31fe5fd6e7511111"
+        "value": "5cffb38831fe5ffda80d95c7"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -4390,7 +4390,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5f31fe5fd6e7511112"
+        "value": "5cffb38831fe5ffda80d95c8"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -4415,7 +4415,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac5f31fe5fd6e7511113"
+        "value": "5cffb38831fe5ffda80d95c9"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -4431,14 +4431,14 @@
   "title": "Median Time from ED Arrival to ED Departure for Discharged ED Patients",
   "updated_at": null,
   "value_set_ids": [
-    "5cfeac6031fe5fd6e7511114",
-    "5cfeac6031fe5fd6e7511115",
-    "5cfeac6031fe5fd6e7511116",
-    "5cfeac6031fe5fd6e7511117",
-    "5cfeac6031fe5fd6e7511118",
-    "5cfeac6031fe5fd6e7511119",
-    "5cfeac6031fe5fd6e751111a",
-    "5cfeac6031fe5fd6e751111b",
-    "5cfeac6031fe5fd6e751111c"
+    "5cffb38831fe5ffda80d95ca",
+    "5cffb38831fe5ffda80d95cb",
+    "5cffb38831fe5ffda80d95cc",
+    "5cffb38831fe5ffda80d95cd",
+    "5cffb38831fe5ffda80d95ce",
+    "5cffb38831fe5ffda80d95cf",
+    "5cffb38831fe5ffda80d95d0",
+    "5cffb38831fe5ffda80d95d1",
+    "5cffb38831fe5ffda80d95d2"
   ]
 }

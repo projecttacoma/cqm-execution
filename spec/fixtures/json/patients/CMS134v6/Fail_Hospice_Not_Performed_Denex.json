@@ -137,7 +137,7 @@
             "code": "21112-8",
             "codeSystemOid": "2.16.840.1.113883.6.1",
             "descriptor": null,
-            "codeSystem": "LOINC",
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
@@ -147,7 +147,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5cfaa3f831fe5fb0876f8c99"
+          "value": "5cffb2d931fe5ffc777a1959"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
@@ -172,7 +172,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5cfaa3f831fe5fb0876f8c9a"
+          "value": "5cffb2d931fe5ffc777a195a"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
@@ -197,7 +197,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5cfaa3f831fe5fb0876f8c9b"
+          "value": "5cffb2d931fe5ffc777a195b"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
@@ -222,7 +222,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5cfaa3f831fe5fb0876f8c9c"
+          "value": "5cffb2d931fe5ffc777a195c"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",

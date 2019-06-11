@@ -44939,7 +44939,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5170"
+        "value": "5cffb37331fe5ffd6cde64ff"
       },
       "negationRationale": null,
       "qdmCategory": "device",
@@ -44962,7 +44962,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5171"
+        "value": "5cffb37331fe5ffd6cde6500"
       },
       "negationRationale": null,
       "qdmCategory": "device",
@@ -44984,7 +44984,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5172"
+        "value": "5cffb37331fe5ffd6cde6501"
       },
       "negationRationale": null,
       "qdmCategory": "device",
@@ -45004,7 +45004,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5173"
+        "value": "5cffb37331fe5ffd6cde6502"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -45025,7 +45025,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5174"
+        "value": "5cffb37331fe5ffd6cde6503"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45050,7 +45050,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5175"
+        "value": "5cffb37331fe5ffd6cde6504"
       },
       "incisionDatetime": null,
       "method": null,
@@ -45079,7 +45079,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5176"
+        "value": "5cffb37331fe5ffd6cde6505"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45103,7 +45103,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5177"
+        "value": "5cffb37331fe5ffd6cde6506"
       },
       "method": null,
       "negationRationale": null,
@@ -45132,7 +45132,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5178"
+        "value": "5cffb37331fe5ffd6cde6507"
       },
       "incisionDatetime": null,
       "method": null,
@@ -45161,7 +45161,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5179"
+        "value": "5cffb37331fe5ffd6cde6508"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45185,7 +45185,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e517a"
+        "value": "5cffb37331fe5ffd6cde6509"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -45208,7 +45208,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e517b"
+        "value": "5cffb37331fe5ffd6cde650a"
       },
       "incisionDatetime": null,
       "method": null,
@@ -45237,7 +45237,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e517c"
+        "value": "5cffb37331fe5ffd6cde650b"
       },
       "incisionDatetime": null,
       "method": null,
@@ -45263,7 +45263,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e517d"
+        "value": "5cffb37331fe5ffd6cde650c"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -45284,7 +45284,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e517e"
+        "value": "5cffb37331fe5ffd6cde650d"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45309,7 +45309,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e517f"
+        "value": "5cffb37331fe5ffd6cde650e"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45335,7 +45335,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5180"
+        "value": "5cffb37331fe5ffd6cde650f"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45362,7 +45362,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5181"
+        "value": "5cffb37331fe5ffd6cde6510"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -45385,7 +45385,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5182"
+        "value": "5cffb37331fe5ffd6cde6511"
       },
       "incisionDatetime": null,
       "method": null,
@@ -45413,7 +45413,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5183"
+        "value": "5cffb37331fe5ffd6cde6512"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -45433,7 +45433,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5184"
+        "value": "5cffb37331fe5ffd6cde6513"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -45455,7 +45455,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5185"
+        "value": "5cffb37331fe5ffd6cde6514"
       },
       "incisionDatetime": null,
       "method": null,
@@ -45482,7 +45482,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5186"
+        "value": "5cffb37331fe5ffd6cde6515"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -45503,7 +45503,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5187"
+        "value": "5cffb37331fe5ffd6cde6516"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -45529,7 +45529,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5188"
+        "value": "5cffb37331fe5ffd6cde6517"
       },
       "incisionDatetime": null,
       "method": null,
@@ -45558,7 +45558,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5189"
+        "value": "5cffb37331fe5ffd6cde6518"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45583,7 +45583,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e518a"
+        "value": "5cffb37331fe5ffd6cde6519"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45609,7 +45609,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e518b"
+        "value": "5cffb37331fe5ffd6cde651a"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45641,7 +45641,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e518c"
+        "value": "5cffb37331fe5ffd6cde651b"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -45665,7 +45665,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e518d"
+        "value": "5cffb37331fe5ffd6cde651c"
       },
       "negationRationale": null,
       "qdmCategory": "device",
@@ -45688,7 +45688,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e518e"
+        "value": "5cffb37331fe5ffd6cde651d"
       },
       "negationRationale": null,
       "qdmCategory": "device",
@@ -45710,7 +45710,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e518f"
+        "value": "5cffb37331fe5ffd6cde651e"
       },
       "negationRationale": null,
       "qdmCategory": "device",
@@ -45733,7 +45733,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5190"
+        "value": "5cffb37331fe5ffd6cde651f"
       },
       "incisionDatetime": null,
       "method": null,
@@ -45761,7 +45761,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5191"
+        "value": "5cffb37331fe5ffd6cde6520"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -45784,7 +45784,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5192"
+        "value": "5cffb37331fe5ffd6cde6521"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45806,7 +45806,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5193"
+        "value": "5cffb37331fe5ffd6cde6522"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -45831,7 +45831,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5194"
+        "value": "5cffb37331fe5ffd6cde6523"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -45856,7 +45856,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5195"
+        "value": "5cffb37331fe5ffd6cde6524"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45881,7 +45881,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5196"
+        "value": "5cffb37331fe5ffd6cde6525"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45907,7 +45907,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5197"
+        "value": "5cffb37331fe5ffd6cde6526"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45935,7 +45935,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5198"
+        "value": "5cffb37331fe5ffd6cde6527"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45960,7 +45960,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e5199"
+        "value": "5cffb37331fe5ffd6cde6528"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -45986,7 +45986,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e519a"
+        "value": "5cffb37331fe5ffd6cde6529"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -46013,7 +46013,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e519b"
+        "value": "5cffb37331fe5ffd6cde652a"
       },
       "negationRationale": null,
       "qdmCategory": "device",
@@ -46036,7 +46036,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e519c"
+        "value": "5cffb37331fe5ffd6cde652b"
       },
       "negationRationale": null,
       "qdmCategory": "device",
@@ -46058,7 +46058,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e519d"
+        "value": "5cffb37331fe5ffd6cde652c"
       },
       "negationRationale": null,
       "qdmCategory": "device",
@@ -46080,7 +46080,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5cfeac4931fe5fd6ab0e519e"
+        "value": "5cffb37331fe5ffd6cde652d"
       },
       "method": null,
       "negationRationale": null,
@@ -46096,49 +46096,49 @@
   "title": "Venous Thromboembolism Prophylaxis",
   "updated_at": null,
   "value_set_ids": [
-    "5cfeac4a31fe5fd6ab0e51a6",
-    "5cfeac4a31fe5fd6ab0e51a7",
-    "5cfeac4a31fe5fd6ab0e51a8",
-    "5cfeac4a31fe5fd6ab0e51a9",
-    "5cfeac4a31fe5fd6ab0e51aa",
-    "5cfeac4a31fe5fd6ab0e51ab",
-    "5cfeac4a31fe5fd6ab0e51ac",
-    "5cfeac4a31fe5fd6ab0e51ad",
-    "5cfeac4a31fe5fd6ab0e51ae",
-    "5cfeac4a31fe5fd6ab0e51af",
-    "5cfeac4a31fe5fd6ab0e51b0",
-    "5cfeac4a31fe5fd6ab0e51b1",
-    "5cfeac4a31fe5fd6ab0e51b2",
-    "5cfeac4a31fe5fd6ab0e51b3",
-    "5cfeac4a31fe5fd6ab0e51b4",
-    "5cfeac4a31fe5fd6ab0e51b5",
-    "5cfeac4a31fe5fd6ab0e51b6",
-    "5cfeac4a31fe5fd6ab0e51b7",
-    "5cfeac4a31fe5fd6ab0e51b8",
-    "5cfeac4a31fe5fd6ab0e51b9",
-    "5cfeac4a31fe5fd6ab0e51ba",
-    "5cfeac4a31fe5fd6ab0e51bb",
-    "5cfeac4a31fe5fd6ab0e51bc",
-    "5cfeac4a31fe5fd6ab0e51bd",
-    "5cfeac4a31fe5fd6ab0e51be",
-    "5cfeac4a31fe5fd6ab0e51bf",
-    "5cfeac4a31fe5fd6ab0e51c0",
-    "5cfeac4a31fe5fd6ab0e51c1",
-    "5cfeac4a31fe5fd6ab0e51c2",
-    "5cfeac4a31fe5fd6ab0e51c3",
-    "5cfeac4a31fe5fd6ab0e51c4",
-    "5cfeac4a31fe5fd6ab0e51c5",
-    "5cfeac4a31fe5fd6ab0e51c6",
-    "5cfeac4a31fe5fd6ab0e51c7",
-    "5cfeac4a31fe5fd6ab0e51c8",
-    "5cfeac4a31fe5fd6ab0e51c9",
-    "5cfeac4a31fe5fd6ab0e51ca",
-    "5cfeac4a31fe5fd6ab0e51cb",
-    "5cfeac4a31fe5fd6ab0e51cc",
-    "5cfeac4a31fe5fd6ab0e51cd",
-    "5cfeac4a31fe5fd6ab0e51ce",
-    "5cfeac4a31fe5fd6ab0e51cf",
-    "5cfeac4a31fe5fd6ab0e51d0",
-    "5cfeac4a31fe5fd6ab0e51d1"
+    "5cffb37431fe5ffd6cde6535",
+    "5cffb37431fe5ffd6cde6536",
+    "5cffb37431fe5ffd6cde6537",
+    "5cffb37431fe5ffd6cde6538",
+    "5cffb37431fe5ffd6cde6539",
+    "5cffb37431fe5ffd6cde653a",
+    "5cffb37431fe5ffd6cde653b",
+    "5cffb37431fe5ffd6cde653c",
+    "5cffb37431fe5ffd6cde653d",
+    "5cffb37431fe5ffd6cde653e",
+    "5cffb37431fe5ffd6cde653f",
+    "5cffb37431fe5ffd6cde6540",
+    "5cffb37431fe5ffd6cde6541",
+    "5cffb37431fe5ffd6cde6542",
+    "5cffb37431fe5ffd6cde6543",
+    "5cffb37431fe5ffd6cde6544",
+    "5cffb37431fe5ffd6cde6545",
+    "5cffb37431fe5ffd6cde6546",
+    "5cffb37431fe5ffd6cde6547",
+    "5cffb37431fe5ffd6cde6548",
+    "5cffb37431fe5ffd6cde6549",
+    "5cffb37431fe5ffd6cde654a",
+    "5cffb37431fe5ffd6cde654b",
+    "5cffb37431fe5ffd6cde654c",
+    "5cffb37431fe5ffd6cde654d",
+    "5cffb37431fe5ffd6cde654e",
+    "5cffb37431fe5ffd6cde654f",
+    "5cffb37431fe5ffd6cde6550",
+    "5cffb37431fe5ffd6cde6551",
+    "5cffb37431fe5ffd6cde6552",
+    "5cffb37431fe5ffd6cde6553",
+    "5cffb37431fe5ffd6cde6554",
+    "5cffb37431fe5ffd6cde6555",
+    "5cffb37431fe5ffd6cde6556",
+    "5cffb37431fe5ffd6cde6557",
+    "5cffb37431fe5ffd6cde6558",
+    "5cffb37431fe5ffd6cde6559",
+    "5cffb37431fe5ffd6cde655a",
+    "5cffb37431fe5ffd6cde655b",
+    "5cffb37431fe5ffd6cde655c",
+    "5cffb37431fe5ffd6cde655d",
+    "5cffb37431fe5ffd6cde655e",
+    "5cffb37431fe5ffd6cde655f",
+    "5cffb37431fe5ffd6cde6560"
   ]
 }
