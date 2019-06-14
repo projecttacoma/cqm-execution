@@ -66243,6 +66243,7 @@ const IndividualResultSchema = mongoose.Schema(
     statement_results: [StatementResultSchema],
     population_relevance: Mixed,
     episode_results: Mixed,
+    observation_values: [Number],
 
     // This field is for application specific information only. If both Bonnie and
     // Cypress use a common field, it should be made a field on this model,
@@ -91283,14 +91284,14 @@ Document.prototype.$set = function $set(path, val, type, options) {
   if (pathType === 'nested' && val) {
     if (typeof val === 'object' && val != null) {
       if (!merge) {
-        this.setValue(path, null);
+        this.$__setValue(path, null);
         cleanModifiedSubpaths(this, path);
       } else {
         return this.$set(val, path, constructing);
       }
 
       const keys = Object.keys(val);
-      this.setValue(path, {});
+      this.$__setValue(path, {});
       for (const key of keys) {
         this.$set(path + '.' + key, val[key], constructing);
       }
@@ -91370,7 +91371,7 @@ Document.prototype.$set = function $set(path, val, type, options) {
       if (!this.isSelected(curPath)) {
         this.unmarkModified(curPath);
       }
-      cur = this.getValue(curPath);
+      cur = this.$__getValue(curPath);
     }
   }
 
@@ -91398,12 +91399,12 @@ Document.prototype.$set = function $set(path, val, type, options) {
   // if this doc is being constructed we should not trigger getters
   const priorVal = (() => {
     if (this.$__.$options.priorDoc != null) {
-      return this.$__.$options.priorDoc.getValue(path);
+      return this.$__.$options.priorDoc.$__getValue(path);
     }
     if (constructing) {
       return void 0;
     }
-    return this.getValue(path);
+    return this.$__getValue(path);
   })();
 
   if (!schema) {
@@ -91682,7 +91683,7 @@ Document.prototype.$__set = function(pathToMark, path, constructing, parts, sche
  * @api private
  */
 
-Document.prototype.getValue = function(path) {
+Document.prototype.$__getValue = function(path) {
   return utils.getValue(path, this._doc);
 };
 
@@ -91694,7 +91695,7 @@ Document.prototype.getValue = function(path) {
  * @api private
  */
 
-Document.prototype.setValue = function(path, val) {
+Document.prototype.$__setValue = function(path, val) {
   utils.setValue(path, val, this._doc);
   return this;
 };
@@ -92366,7 +92367,7 @@ function _getPathsToValidate(doc) {
       continue;
     }
 
-    const val = doc.getValue(path);
+    const val = doc.$__getValue(path);
     if (val) {
       const numElements = val.length;
       for (let j = 0; j < numElements; ++j) {
@@ -92380,7 +92381,7 @@ function _getPathsToValidate(doc) {
   for (i = 0; i < len; ++i) {
     const pathToCheck = paths[i];
     if (doc.schema.nested[pathToCheck]) {
-      let _v = doc.getValue(pathToCheck);
+      let _v = doc.$__getValue(pathToCheck);
       if (isMongooseObject(_v)) {
         _v = _v.toObject({ transform: false });
       }
@@ -92400,7 +92401,7 @@ function _getPathsToValidate(doc) {
       continue;
     }
 
-    const val = doc.getValue(path);
+    const val = doc.$__getValue(path);
     if (val == null) {
       continue;
     }
@@ -92505,7 +92506,7 @@ Document.prototype.$__validate = function(options, callback) {
         return;
       }
 
-      const val = _this.getValue(path);
+      const val = _this.$__getValue(path);
       const scope = path in _this.$__.pathsToScopes ?
         _this.$__.pathsToScopes[path] :
         _this;
@@ -92603,7 +92604,7 @@ Document.prototype.validateSync = function(pathsToValidate, options) {
       return;
     }
 
-    const val = _this.getValue(path);
+    const val = _this.$__getValue(path);
     const err = p.doValidateSync(val, _this, {
       skipSchemaValidators: skipSchemaValidators[path],
       path: path
@@ -92776,7 +92777,7 @@ Document.prototype.$__reset = function reset() {
 
   this.$__.activePaths
     .map('init', 'modify', function(i) {
-      return _this.getValue(i);
+      return _this.$__getValue(i);
     })
     .filter(function(val) {
       return val && val instanceof Array && val.isMongooseDocumentArray && val.length;
@@ -92798,7 +92799,7 @@ Document.prototype.$__reset = function reset() {
 
   this.$__.activePaths.
     map('init', 'modify', function(i) {
-      return _this.getValue(i);
+      return _this.$__getValue(i);
     }).
     filter(function(val) {
       return val && val.$isSingleNested;
@@ -92845,7 +92846,7 @@ Document.prototype.$__dirty = function() {
   let all = this.$__.activePaths.map('modify', function(path) {
     return {
       path: path,
-      value: _this.getValue(path),
+      value: _this.$__getValue(path),
       schema: _this.$__path(path)
     };
   });
@@ -92853,12 +92854,12 @@ Document.prototype.$__dirty = function() {
   // gh-2558: if we had to set a default and the value is not undefined,
   // we have to save as well
   all = all.concat(this.$__.activePaths.map('default', function(path) {
-    if (path === '_id' || _this.getValue(path) == null) {
+    if (path === '_id' || _this.$__getValue(path) == null) {
       return;
     }
     return {
       path: path,
-      value: _this.getValue(path),
+      value: _this.$__getValue(path),
       schema: _this.$__path(path)
     };
   }));
@@ -92937,7 +92938,7 @@ Document.prototype.$__getArrayPathsToValidate = function() {
   // validate all document arrays.
   return this.$__.activePaths
     .map('init', 'modify', function(i) {
-      return this.getValue(i);
+      return this.$__getValue(i);
     }.bind(this))
     .filter(function(val) {
       return val && val instanceof Array && val.isMongooseDocumentArray && val.length;
@@ -94302,20 +94303,23 @@ const util = require('util');
  * @inherits MongooseError
  */
 
-function DocumentNotFoundError(filter) {
+function DocumentNotFoundError(filter, model, numAffected, result) {
   let msg;
   const messages = MongooseError.messages;
   if (messages.DocumentNotFoundError != null) {
     msg = typeof messages.DocumentNotFoundError === 'function' ?
-      messages.DocumentNotFoundError(filter) :
+      messages.DocumentNotFoundError(filter, model) :
       messages.DocumentNotFoundError;
   } else {
-    msg = 'No document found for query "' + util.inspect(filter) + '"';
+    msg = 'No document found for query "' + util.inspect(filter) +
+      '" on model "' + model + '"';
   }
 
   MongooseError.call(this, msg);
 
   this.name = 'DocumentNotFoundError';
+  this.result = result;
+  this.numAffected = numAffected;
   if (Error.captureStackTrace) {
     Error.captureStackTrace(this);
   } else {
@@ -96988,7 +96992,7 @@ Schema.prototype.defaultOptions = function(options) {
 Schema.prototype.add = function add(obj, prefix) {
   if (obj instanceof Schema) {
     merge(this, obj);
-    return;
+    return this;
   }
 
   // Special case: setting top-level `_id` to false should convert to disabling
@@ -97196,8 +97200,15 @@ Schema.prototype.path = function(path, obj) {
     // The '$' is to imply this path should never be stored in MongoDB so we
     // can easily build a regexp out of this path, and '*' to imply "any key."
     const mapPath = path + '.$*';
+    let _mapType = { type: {} };
+    if (utils.hasUserDefinedProperty(obj, 'of')) {
+      const isInlineSchema = utils.isPOJO(obj.of) &&
+        Object.keys(obj.of).length > 0 &&
+        !utils.hasUserDefinedProperty(obj.of, this.options.typeKey);
+      _mapType = isInlineSchema ? new Schema(obj.of) : obj.of;
+    }
     this.paths[path + '.$*'] = this.interpretAsType(mapPath,
-      obj.of || { type: {} }, this.options);
+      _mapType, this.options);
     schemaType.$__schemaType = this.paths[path + '.$*'];
   }
 
@@ -97621,7 +97632,7 @@ Schema.prototype.setupTimestamp = function(timestamps) {
       let ts = defaultTimestamp;
       if (this.isNew) {
         if (createdAt != null) {
-          ts = this.getValue(createdAt);
+          ts = this.$__getValue(createdAt);
         } else if (auto_id) {
           ts = this._id.getTimestamp();
         }
@@ -98126,7 +98137,7 @@ Schema.prototype.indexes = function() {
  */
 
 Schema.prototype.virtual = function(name, options) {
-  if (options && options.ref) {
+  if (utils.hasUserDefinedProperty(options, ['ref', 'refPath'])) {
     if (!options.localField) {
       throw new Error('Reference virtuals require `localField` option');
     }
@@ -104200,9 +104211,12 @@ function MongooseArray(values, path, doc) {
   // TODO: replace this with `new CoreMongooseArray().concat()` when we remove
   // support for node 4.x and 5.x, see https://i.imgur.com/UAAHk4S.png
   const arr = new CoreMongooseArray();
+  arr[arrayAtomicsSymbol] = {};
 
   if (Array.isArray(values)) {
     values.forEach(v => { arr.push(v); });
+
+    arr[arrayAtomicsSymbol] = values[arrayAtomicsSymbol] || {};
   }
 
   const keysMA = Object.keys(MongooseArray.mixin);
@@ -104213,7 +104227,6 @@ function MongooseArray(values, path, doc) {
 
   arr[arrayPathSymbol] = path;
   arr.validators = [];
-  arr[arrayAtomicsSymbol] = {};
   arr[arraySchemaSymbol] = void 0;
   if (util.inspect.custom) {
     arr[util.inspect.custom] = arr.inspect;
@@ -107508,6 +107521,15 @@ exports.hasUserDefinedProperty = function(obj, key) {
     return false;
   }
 
+  if (Array.isArray(key)) {
+    for (const k of key) {
+      if (exports.hasUserDefinedProperty(obj, k)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   if (_hasOwnProperty.call(obj, key)) {
     return true;
   }
@@ -107887,7 +107909,7 @@ module.exports = function(val, options) {
   var type = typeof val;
   if (type === 'string' && val.length > 0) {
     return parse(val);
-  } else if (type === 'number' && isNaN(val) === false) {
+  } else if (type === 'number' && isFinite(val)) {
     return options.long ? fmtLong(val) : fmtShort(val);
   }
   throw new Error(
@@ -107909,7 +107931,7 @@ function parse(str) {
   if (str.length > 100) {
     return;
   }
-  var match = /^((?:\d+)?\-?\d?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
+  var match = /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
     str
   );
   if (!match) {
@@ -113048,7 +113070,7 @@ process.umask = function() { return 0; };
 
 },{}],364:[function(require,module,exports){
 
-var toString = Object.prototype.toString;
+const toString = Object.prototype.toString;
 
 function isRegExp (o) {
   return 'object' == typeof o
@@ -113060,11 +113082,18 @@ module.exports = exports = function (regexp) {
     throw new TypeError('Not a RegExp');
   }
 
-  var flags = [];
+  const flags = [];
   if (regexp.global) flags.push('g');
   if (regexp.multiline) flags.push('m');
   if (regexp.ignoreCase) flags.push('i');
-  return new RegExp(regexp.source, flags.join(''));
+  if (regexp.dotAll) flags.push('s');
+  if (regexp.unicode) flags.push('u');
+  if (regexp.sticky) flags.push('y');
+  const result = new RegExp(regexp.source, flags.join(''));
+  if (typeof regexp.lastIndex === 'number') {
+    result.lastIndex = regexp.lastIndex;
+  }
+  return result;
 }
 
 
