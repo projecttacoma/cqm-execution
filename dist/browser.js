@@ -1688,7 +1688,6 @@ module.exports = class Calculator {
           );
 
           result.population_relevance = populationRelevance;
-          result.statement_relevance = statementRelevance;
 
           result.set(ResultsHelpers.buildStatementAndClauseResults(measure, resultsRaw.localIdPatientResultsMap[patientId], statementRelevance, doPretty, includeClauseResults));
 

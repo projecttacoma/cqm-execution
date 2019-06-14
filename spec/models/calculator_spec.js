@@ -311,9 +311,13 @@ describe('Calculator', () => {
     expect(visit2exclResults['PopulationCriteria1 - Stratification 3'].MSRPOPLEX).toBe(0);
     expect(getEpisodeResults(visit2exclResults['PopulationCriteria1 - Stratification 3'].episode_results)).toEqual([]);
 
-
+    let statementRelevanceOnly = {};
+    let statements = visit1EdResults.PopulationCriteria1.statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
+    Object.keys(statements).forEach((key) => {
+      statementRelevanceOnly[key] = statements[key].relevance;
+    });
     // Check Statement Relevance for Population Criteria 1
-    expect(visit1EdResults.PopulationCriteria1.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+    expect(statementRelevanceOnly).toEqual({
       'ED Visit': 'TRUE',
       'Initial Population': 'TRUE',
       'Measure Observation': 'TRUE',
@@ -329,8 +333,13 @@ describe('Calculator', () => {
       'Stratification 3': 'NA',
     });
 
+    statements = visit1EdResults['PopulationCriteria1 - Stratification 1'].statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
+    statementRelevanceOnly = {};
+    Object.keys(statements).forEach((key) => {
+      statementRelevanceOnly[key] = statements[key].relevance;
+    });
     // Check Statement Relevance for Population Set 1 Stratification 1
-    expect(visit1EdResults['PopulationCriteria1 - Stratification 1'].statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+    expect(statementRelevanceOnly).toEqual({
       'ED Visit': 'TRUE',
       'Initial Population': 'TRUE',
       'Measure Observation': 'TRUE',
@@ -346,9 +355,13 @@ describe('Calculator', () => {
       'Stratification 3': 'NA',
     });
 
-
+    statements = visit1EdResults['PopulationCriteria1 - Stratification 2'].statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
+    statementRelevanceOnly = {};
+    Object.keys(statements).forEach((key) => {
+      statementRelevanceOnly[key] = statements[key].relevance;
+    });
     // Check Statement Relevance for Population Set 1 Stratification 2
-    expect(visit1EdResults['PopulationCriteria1 - Stratification 2'].statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+    expect(statementRelevanceOnly).toEqual({
       'ED Visit': 'TRUE',
       'Initial Population': 'FALSE',
       'Measure Observation': 'FALSE',
@@ -364,8 +377,13 @@ describe('Calculator', () => {
       'Stratification 3': 'NA',
     });
 
+    statements = visit1EdResults['PopulationCriteria1 - Stratification 3'].statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
+    statementRelevanceOnly = {};
+    Object.keys(statements).forEach((key) => {
+      statementRelevanceOnly[key] = statements[key].relevance;
+    });
     // Check Statement Relevance for Population Set 1 Stratification 3
-    expect(visit1EdResults['PopulationCriteria1 - Stratification 3'].statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
+    expect(statementRelevanceOnly).toEqual({
       'ED Visit': 'TRUE',
       'Initial Population': 'FALSE',
       'Measure Observation': 'FALSE',
