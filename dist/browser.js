@@ -1061,19 +1061,19 @@ module.exports = class ResultsHelpers {
       doPretty = false;
     }
     if (requestDocument == null) {
-      requestDocument = false
+      requestDocument = false;
     }
     let statementResults = {};
     let clauseResults = {};
 
-    if ( requestDocument ){
+    if (requestDocument) {
       statementResults = [];
       clauseResults = [];
     }
     for (const library of measure.cql_libraries) {
       const statements = library.statement_dependencies;
       const library_name = library.library_name; // eslint-disable-line camelcase
-      if (!requestDocument){
+      if (!requestDocument) {
         statementResults[library.library_name] = {};
         clauseResults[library.library_name] = {};
       }
@@ -1125,11 +1125,11 @@ module.exports = class ResultsHelpers {
           }
         }
 
-        if( requestDocument ){
+        if (requestDocument) {
           const statementResultDocument = new CqmModels.StatementResult(statementResult);
           statementResults.push(statementResultDocument);
-        }else{
-          statementResults[library_name][statement_name] = statementResult
+        } else {
+          statementResults[library_name][statement_name] = statementResult;
         }
 
         if (includeClauseResults) {
@@ -1160,10 +1160,10 @@ module.exports = class ResultsHelpers {
               clause,
               rawResult: clauseResult.raw,
             });
-            if ( requestDocument ){
+            if (requestDocument) {
               const clauseResultDocument = new CqmModels.ClauseResult(clauseResult);
               clauseResults.push(clauseResultDocument);
-            }else{
+            } else {
               clauseResults[library_name][localId] = clauseResult;
             }
           }
@@ -1583,7 +1583,7 @@ module.exports = class Calculator {
       effectiveDate = null, // will default to measure.measure_period.low.value if not included
       effectiveDateEnd = null, // will default to measure.measure_period.high.value if this and effective_date not provided, if effective_date is provided will default to end of the effective_date year
       executionDate = null, // will default to today
-      requestDocument = false // If true, returns results as IndividualResult Mongoose Documents
+      requestDocument = false, // If true, returns results as IndividualResult Mongoose Documents
     } = {}
   ) {
     // We store both the calculation result and the calculation code based on keys derived from the arguments
@@ -1686,9 +1686,9 @@ module.exports = class Calculator {
           observationDefs
         ));
         if (populationResults) {
-          let result = {}; //new CqmModels.IndividualResult();
+          let result = {}; // new CqmModels.IndividualResult();
           Object.assign(result, populationResults);
-          //result.set(populationResults);
+          // result.set(populationResults);
           if (episodeResults != null) {
             result.episode_results = episodeResults;
             if (Object.keys(episodeResults).length > 0) {
@@ -1713,7 +1713,7 @@ module.exports = class Calculator {
             populationSet
           );
 
-          if (!requestDocument){
+          if (!requestDocument) {
             // If not in a Mongoose Document, put statement relevance at top level so that it does not have
             // to be parsed out of result hashes which can be time consuming for larger measures
             result.statement_relevance = statementRelevance;
@@ -1726,8 +1726,9 @@ module.exports = class Calculator {
             statementRelevance,
             doPretty,
             includeClauseResults,
-            requestDocument);
-          
+            requestDocument
+          );
+
           Object.assign(result, statementAndClauseResults);
 
           // Populate result with info
@@ -1740,7 +1741,7 @@ module.exports = class Calculator {
             resultsByPatient[patientId] = {};
           }
 
-          if (requestDocument){
+          if (requestDocument) {
             result = new CqmModels.IndividualResult(result);
           }
 
