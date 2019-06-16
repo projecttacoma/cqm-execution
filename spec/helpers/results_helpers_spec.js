@@ -56,7 +56,7 @@ describe('ResultsHelpers', () => {
         const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
-        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
 
@@ -65,16 +65,27 @@ describe('ResultsHelpers', () => {
         expect(resultsByStatement.StrokeEducation.Numerator.pretty).toEqual('UNHIT');
       });
 
-      it('for CMS760v0 correctly', () => {
+      it('for CMS760v0 correctly requesting mongoose document', () => {
+        const valueSets = getJSONFixture('cqm_measures/CMS760v0/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS760v0/CMS760v0.json');
+        const patients = [];
+        patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
+        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const resultsByStatement = result.statement_results_by_statement();
+
+        expect(resultsByStatement.PD0329.IntervalWithTZOffsets.pretty).toEqual('INTERVAL: 08/01/2012 12:00 AM - 12/31/2012 12:00 AM');
+      });
+
+      it('for CMS760v0 correctly without mongoose document', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS760v0/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS760v0/CMS760v0.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
-        const resultsByStatement = result.statement_results_by_statement();
 
-        expect(resultsByStatement.PD0329.IntervalWithTZOffsets.pretty).toEqual('INTERVAL: 08/01/2012 12:00 AM - 12/31/2012 12:00 AM');
+        expect(result['statement_results'].PD0329.IntervalWithTZOffsets.pretty).toEqual('INTERVAL: 08/01/2012 12:00 AM - 12/31/2012 12:00 AM');
       });
 
       it('for CMS32v7 correctly', () => {
@@ -82,7 +93,7 @@ describe('ResultsHelpers', () => {
         const measure = getJSONFixture('cqm_measures/CMS32v7/CMS32v7.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json').qdmPatient);
-        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, includeClauseResults: true });
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, includeClauseResults: true, requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
 
@@ -92,12 +103,26 @@ describe('ResultsHelpers', () => {
         expect(resultsByStatement.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Population Exclusions'].pretty).toEqual('FALSE ([])');
       });
 
+      it('for CMS32v7 correctly without mongoose document result', () => {
+        const valueSets = getJSONFixture('cqm_measures/CMS32v7/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS32v7/CMS32v7.json');
+        const patients = [];
+        patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json').qdmPatient);
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
+        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+        expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Observation'].pretty).toEqual('FUNCTION');
+        expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['ED Visit'].pretty).toEqual('[Encounter, Performed: ' +
+        'Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMED-CT 4525004]');
+        expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Population Exclusions'].pretty).toEqual('FALSE ([])');
+      });
+
       it('for CMS735v0 correctly', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS735v0/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS735v0/CMS735v0.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS735v0/first_last.json'));
-        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
 
@@ -109,7 +134,7 @@ describe('ResultsHelpers', () => {
         const measure = getJSONFixture('cqm_measures/CMS460v0/CMS460v0.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json').qdmPatient);
-        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
 
@@ -123,13 +148,31 @@ describe('ResultsHelpers', () => {
         expect(resultsByStatement.OpioidData.DrugIngredients.pretty).toContain('drugName: "72 HR Fentanyl 0.075 MG/HR Transdermal System"');
       });
 
+      it('for CMS460v0 correctly without mongoose document result', () => {
+        const valueSets = getJSONFixture('cqm_measures/CMS460v0/value_sets.json');
+        const measure = getJSONFixture('cqm_measures/CMS460v0/CMS460v0.json');
+        const patients = [];
+        patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json').qdmPatient);
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
+        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+        expect(result['statement_results'].DayMonthTimings['Months Containing 29 Days'].pretty).toEqual('[1,\n2,\n3,\n4,\n5,\n6,\n7,\n8,\n9,\n10,\n11,\n12,\n13,\n14,\n15,\n16,' +
+          '\n17,\n18,\n19,\n20,\n21,\n22,\n23,\n24,\n25,\n26,\n27,\n28,\n29]');
+        expect(result['statement_results'].PotentialOpioidOveruse['Prescription Days'].pretty).toContain('05/09/2012 12:00 AM');
+        expect(result['statement_results'].PotentialOpioidOveruse['Prescription Days'].pretty).toContain('rxNormCode: CODE: RxNorm 1053647');
+        expect(result['statement_results'].PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('conversionFactor: 0.13');
+        expect(result['statement_results'].PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('effectivePeriod: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM');
+        expect(result['statement_results'].PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('rxNormCode: CODE: RxNorm 1053647');
+        expect(result['statement_results'].OpioidData.DrugIngredients.pretty).toContain('drugName: "72 HR Fentanyl 0.075 MG/HR Transdermal System"');
+      });
+
       it('should use prevalencePeriod for Diagnosis and infinity dates should not be included', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS134v6/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS134v6/CMS134v6.json');
         const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
         const patients = [];
         patients.push(passNumer.qdmPatient);
-        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const passNumerResults = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = passNumerResults.statement_results_by_statement();
 
@@ -143,7 +186,7 @@ describe('ResultsHelpers', () => {
         const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
         const patients = [];
         patients.push(passNumer.qdmPatient);
-        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const passNumerResults = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = passNumerResults.statement_results_by_statement();
 
@@ -156,7 +199,7 @@ describe('ResultsHelpers', () => {
         const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
-        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const denexPassresult = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = denexPassresult.statement_results_by_statement();
 
@@ -170,7 +213,7 @@ describe('ResultsHelpers', () => {
         const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
-        const calculationResults = Calculator.calculate(measure, patients, valueSets);
+        const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
 

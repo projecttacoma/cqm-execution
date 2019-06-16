@@ -1053,18 +1053,30 @@ module.exports = class ResultsHelpers {
      * @param {object} rawClauseResults - The raw clause results from the calculation engine.
      * @param {object} statementRelevance - The `statement_relevance` map. Used to determine if they were hit or not.
      * @param {boolean} doPretty - If true, also generate pretty versions of result.
+     * @param {boolean} requestDocument - If true, returns result as IndividualResult Mongoose Document
      * @returns {object} Object with the statement_results and clause_results structures, keyed as such.
      */
-  static buildStatementAndClauseResults(measure, rawClauseResults, statementRelevance, doPretty, includeClauseResults) {
+  static buildStatementAndClauseResults(measure, rawClauseResults, statementRelevance, doPretty, includeClauseResults, requestDocument) {
     if (doPretty == null) {
       doPretty = false;
     }
-    const statementResults = [];
-    const clauseResults = [];
+    if (requestDocument == null) {
+      requestDocument = false
+    }
+    let statementResults = {};
+    let clauseResults = {};
+
+    if ( requestDocument ){
+      statementResults = [];
+      clauseResults = [];
+    }
     for (const library of measure.cql_libraries) {
       const statements = library.statement_dependencies;
       const library_name = library.library_name; // eslint-disable-line camelcase
-
+      if (!requestDocument){
+        statementResults[library.library_name] = {};
+        clauseResults[library.library_name] = {};
+      }
       for (const statement of statements) {
         const statement_name = statement.statement_name; // eslint-disable-line camelcase
         const relevance = statementRelevance[library_name][statement_name];
@@ -1072,9 +1084,9 @@ module.exports = class ResultsHelpers {
         if (rawStatementResult && rawStatementResult.isMongooseArray) {
           rawStatementResult = [].concat(rawStatementResult);
         }
-        const statementResult = new CqmModels.StatementResult({
+        const statementResult = {
           raw: rawStatementResult, library_name, statement_name, relevance,
-        });
+        };
         const isSDE = MeasureHelpers.isSupplementalDataElementStatement(measure.population_sets, statement_name);
         if ((!measure.calculate_sdes && isSDE) || relevance === 'NA') {
           statementResult.final = 'NA';
@@ -1112,7 +1124,13 @@ module.exports = class ResultsHelpers {
             statementResult.pretty = `FALSE (${rawStatementResult})`;
           }
         }
-        statementResults.push(statementResult);
+
+        if( requestDocument ){
+          const statementResultDocument = new CqmModels.StatementResult(statementResult);
+          statementResults.push(statementResultDocument);
+        }else{
+          statementResults[library_name][statement_name] = statementResult
+        }
 
         if (includeClauseResults) {
           // create clause results for all localIds in this statement
@@ -1125,13 +1143,14 @@ module.exports = class ResultsHelpers {
             if (rawClauseResult && rawClauseResult.isMongooseArray) {
               rawClauseResult = [].concat(rawClauseResult);
             }
-            const clauseResult = new CqmModels.ClauseResult({
+            const clauseResult = {
               // if this clause is an alias or a usage of alias it will get the raw result from the sourceLocalId.
               raw: rawClauseResult,
               statement_name,
               library_name,
               localId,
-            });
+            };
+
             clauseResult.final = this.setFinalResults({
               statementRelevance,
               statement_name,
@@ -1141,7 +1160,12 @@ module.exports = class ResultsHelpers {
               clause,
               rawResult: clauseResult.raw,
             });
-            clauseResults.push(clauseResult);
+            if ( requestDocument ){
+              const clauseResultDocument = new CqmModels.ClauseResult(clauseResult);
+              clauseResults.push(clauseResultDocument);
+            }else{
+              clauseResults[library_name][localId] = clauseResult;
+            }
           }
         }
       }
@@ -1559,6 +1583,7 @@ module.exports = class Calculator {
       effectiveDate = null, // will default to measure.measure_period.low.value if not included
       effectiveDateEnd = null, // will default to measure.measure_period.high.value if this and effective_date not provided, if effective_date is provided will default to end of the effective_date year
       executionDate = null, // will default to today
+      requestDocument = false // If true, returns results as IndividualResult Mongoose Documents
     } = {}
   ) {
     // We store both the calculation result and the calculation code based on keys derived from the arguments
@@ -1661,8 +1686,9 @@ module.exports = class Calculator {
           observationDefs
         ));
         if (populationResults) {
-          const result = new CqmModels.IndividualResult();
-          result.set(populationResults);
+          let result = {}; //new CqmModels.IndividualResult();
+          Object.assign(result, populationResults);
+          //result.set(populationResults);
           if (episodeResults != null) {
             result.episode_results = episodeResults;
             if (Object.keys(episodeResults).length > 0) {
@@ -1687,9 +1713,22 @@ module.exports = class Calculator {
             populationSet
           );
 
+          if (!requestDocument){
+            // If not in a Mongoose Document, put statement relevance at top level so that it does not have
+            // to be parsed out of result hashes which can be time consuming for larger measures
+            result.statement_relevance = statementRelevance;
+          }
           result.population_relevance = populationRelevance;
 
-          result.set(ResultsHelpers.buildStatementAndClauseResults(measure, resultsRaw.localIdPatientResultsMap[patientId], statementRelevance, doPretty, includeClauseResults));
+          const statementAndClauseResults = ResultsHelpers.buildStatementAndClauseResults(
+            measure,
+            resultsRaw.localIdPatientResultsMap[patientId],
+            statementRelevance,
+            doPretty,
+            includeClauseResults,
+            requestDocument);
+          
+          Object.assign(result, statementAndClauseResults);
 
           // Populate result with info
           result.patient = patientId;
@@ -1700,6 +1739,11 @@ module.exports = class Calculator {
           if (!resultsByPatient[patientId]) {
             resultsByPatient[patientId] = {};
           }
+
+          if (requestDocument){
+            result = new CqmModels.IndividualResult(result);
+          }
+
           resultsByPatient[patientId][populationSet.population_set_id] = result;
         }
       });
