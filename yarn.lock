@@ -449,7 +449,7 @@ cql-execution@^1.3.3:
 
 "cqm-models@https://github.com/projecttacoma/cqm-models#codesystemoid":
   version "1.1.0"
-  resolved "https://github.com/projecttacoma/cqm-models#a8a25b1324c24cbd01de4c1b9710f12fb8dc72a9"
+  resolved "https://github.com/projecttacoma/cqm-models#f9d78dc8bccb3007599c914988e690f09dcf17d4"
   dependencies:
     cql-execution "^1.3.3"
     mongoose "^5.4.14"
@@ -1285,9 +1285,9 @@ mongoose-legacy-pluralize@1.0.2:
   integrity sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
 
 mongoose@^5.4.14:
-  version "5.5.14"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.5.14.tgz#fe70fa3b803206bdd703afa94b84492f4d7e64a9"
-  integrity sha512-BWrugOHZQLeiXlA9bA/xo9TvjZpV5O4T5vJJT7wsLmZyAi0heYkAPqzH206+NxgnPyAifqjrLR+M24vqXgugNQ==
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.6.0.tgz#6c3984d2330bc3b28ae800d8b8025a0686d1e450"
+  integrity sha512-bhevx8u4NfZf2Un+CcKWRsiNekrLH7dSI8mBC49FcY2SUXQPZf3w+Yby+cgDrpZA46nkqRW9Qaqhs7PT0XCtYQ==
   dependencies:
     async "2.6.2"
     bson "~1.1.1"
