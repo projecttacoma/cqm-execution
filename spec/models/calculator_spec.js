@@ -793,7 +793,7 @@ describe('Calculator', () => {
   });
 
   describe('results include clause results', () => {
-    it('only if requested', () => {
+    it('only if requested with document', () => {
       const valueSets = getJSONFixture('cqm_measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('cqm_measures/CMS760v0/CMS760v0.json');
       const patients = [getJSONFixture('patients/CMS760v0/Correct_Timezone.json')];
@@ -801,6 +801,20 @@ describe('Calculator', () => {
       const resultNoClauses = Object.values(calculationResultsNoClauses[Object.keys(calculationResultsNoClauses)[0]])[0];
 
       const calculationResultsWithClauses = Calculator.calculate(measure, patients, valueSets, { includeClauseResults: true, requestDocument: true });
+      const resultWithClauses = Object.values(calculationResultsWithClauses[Object.keys(calculationResultsWithClauses)[0]])[0];
+
+      expect(resultNoClauses.clause_results).toEqual(null);
+      expect(resultWithClauses.clause_results).toEqual(jasmine.any(Array));
+    });
+
+    it('only if requested without document', () => {
+      const valueSets = getJSONFixture('cqm_measures/CMS760v0/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMS760v0/CMS760v0.json');
+      const patients = [getJSONFixture('patients/CMS760v0/Correct_Timezone.json')];
+      const calculationResultsNoClauses = Calculator.calculate(measure, patients, valueSets, { includeClauseResults: false, requestDocument: false });
+      const resultNoClauses = Object.values(calculationResultsNoClauses[Object.keys(calculationResultsNoClauses)[0]])[0];
+
+      const calculationResultsWithClauses = Calculator.calculate(measure, patients, valueSets, { includeClauseResults: true, requestDocument: false });
       const resultWithClauses = Object.values(calculationResultsWithClauses[Object.keys(calculationResultsWithClauses)[0]])[0];
 
       expect(resultNoClauses.clause_results).toEqual(null);
