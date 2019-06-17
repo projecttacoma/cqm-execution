@@ -1060,9 +1060,7 @@ module.exports = class ResultsHelpers {
     if (doPretty == null) {
       doPretty = false;
     }
-    if (requestDocument == null) {
-      requestDocument = false;
-    }
+
     let statementResults = {};
     let clauseResults = {};
 
