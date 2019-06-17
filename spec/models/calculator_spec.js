@@ -191,7 +191,7 @@ describe('Calculator', () => {
     const numPassResults = calculationResults[Object.keys(calculationResults)[0]];
 
     // Patient expiredDenexResults Population Set 1
-    const pop2Strat1 = numPassResults['PopulationCriteria2'];
+    const pop2Strat1 = new CqmModels.IndividualResult(numPassResults['PopulationCriteria2']);
     const pop2Strat1StatementResults = pop2Strat1.statement_results_by_statement().DepressionUtilizationofthePHQ9Tool;
     expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
   });
@@ -498,7 +498,7 @@ describe('Calculator', () => {
     expect(getEpisodeResults(visit2exclResults['PopulationCriteria1 - Stratification 3'].episode_results)).toEqual([]);
 
     let statementRelevanceOnly = {};
-    let statements = visit1EdResults.PopulationCriteria1.statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
+    let statements = new CqmModels.IndividualResult(visit1EdResults.PopulationCriteria1).statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
     Object.keys(statements).forEach((key) => {
       statementRelevanceOnly[key] = statements[key].relevance;
     });
@@ -519,7 +519,8 @@ describe('Calculator', () => {
       'Stratification 3': 'NA',
     });
 
-    statements = visit1EdResults['PopulationCriteria1 - Stratification 1'].statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
+    let result = new CqmModels.IndividualResult(visit1EdResults['PopulationCriteria1 - Stratification 1']);
+    statements = result.statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
     statementRelevanceOnly = {};
     Object.keys(statements).forEach((key) => {
       statementRelevanceOnly[key] = statements[key].relevance;
@@ -541,7 +542,8 @@ describe('Calculator', () => {
       'Stratification 3': 'NA',
     });
 
-    statements = visit1EdResults['PopulationCriteria1 - Stratification 2'].statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
+    result = new CqmModels.IndividualResult(visit1EdResults['PopulationCriteria1 - Stratification 2']);
+    statements = result.statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
     statementRelevanceOnly = {};
     Object.keys(statements).forEach((key) => {
       statementRelevanceOnly[key] = statements[key].relevance;
@@ -563,7 +565,8 @@ describe('Calculator', () => {
       'Stratification 3': 'NA',
     });
 
-    statements = visit1EdResults['PopulationCriteria1 - Stratification 3'].statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
+    result = new CqmModels.IndividualResult(visit1EdResults['PopulationCriteria1 - Stratification 3']);
+    statements = result.statement_results_by_statement()['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'];
     statementRelevanceOnly = {};
     Object.keys(statements).forEach((key) => {
       statementRelevanceOnly[key] = statements[key].relevance;
@@ -774,8 +777,8 @@ describe('Calculator', () => {
       patients.push(getJSONFixture('patients/CMS460v0/MethadoneLessThan90MME_NUMERFail.json').qdmPatient);
       const options = { doPretty: true, requestDocument: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSets, options);
-      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
-      const conversionFactorResult = Object.values(calculationResults[Object.keys(calculationResults)[1]])[0];
+      const result = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
+      const conversionFactorResult = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[1]])[0]);
       const indentedResult = '[{' +
       '\n  cmd: 233,' +
       '\n  meds: [Medication, Order: Opioid Medications' +
@@ -831,7 +834,7 @@ describe('Calculator', () => {
 
       const options = { doPretty: true, requestDocument: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSets, options);
-      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      const result = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
       const resultsByStatement = result.statement_results_by_statement();
 
       // The expected strings are from the front end with PatientCharacteristic CODEs fixed
@@ -850,7 +853,7 @@ describe('Calculator', () => {
       const patients = [getJSONFixture('patients/CMS108v7/INR4no_decimal_DayOfAnes_NUMERPass.json')];
       const options = { doPretty: true, requestDocument: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSets, options);
-      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      const result = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
       const resultsByStatement = result.statement_results_by_statement();
 
       const sampleResult = resultsByStatement['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant'];
@@ -893,7 +896,7 @@ describe('Calculator', () => {
       expect(cqmMeasure.population_sets.length).toBe(3);
 
       // Patient expiredDenexResults Population Set 1 - borrowed from 'multiple population and stratification measure correctly' abpve
-      const pop2Strat1 = numPassResults['PopulationCriteria2'];
+      const pop2Strat1 = new CqmModels.IndividualResult(numPassResults['PopulationCriteria2']);
       const pop2Strat1StatementResults = pop2Strat1.statement_results_by_statement().DepressionUtilizationofthePHQ9Tool;
       expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
     });

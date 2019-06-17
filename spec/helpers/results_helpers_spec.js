@@ -1,5 +1,5 @@
 /* eslint dot-notation: 0 */ // --> OFF
-
+const CqmModels = require('cqm-models');
 const ResultsHelpers = require('../../lib/helpers/results_helpers');
 const cql = require('cqm-models').CQL;
 const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
@@ -57,7 +57,7 @@ describe('ResultsHelpers', () => {
         const patients = [];
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
-        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const result = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
         const resultsByStatement = result.statement_results_by_statement();
 
         expect(resultsByStatement.TJC_Overall['Encounter with Principal Diagnosis and Age'].pretty).toEqual('[Encounter, Performed: ' +
@@ -71,7 +71,7 @@ describe('ResultsHelpers', () => {
         const patients = [];
         patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
-        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const result = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
         const resultsByStatement = result.statement_results_by_statement();
 
         expect(resultsByStatement.PD0329.IntervalWithTZOffsets.pretty).toEqual('INTERVAL: 08/01/2012 12:00 AM - 12/31/2012 12:00 AM');
@@ -94,7 +94,7 @@ describe('ResultsHelpers', () => {
         const patients = [];
         patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, includeClauseResults: true, requestDocument: true });
-        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const result = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
         const resultsByStatement = result.statement_results_by_statement();
 
         expect(resultsByStatement.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Observation'].pretty).toEqual('FUNCTION');
@@ -123,7 +123,7 @@ describe('ResultsHelpers', () => {
         const patients = [];
         patients.push(getJSONFixture('patients/CMS735v0/first_last.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
-        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const result = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
         const resultsByStatement = result.statement_results_by_statement();
 
         expect(resultsByStatement.StatinTherapy['In Demographic'].pretty).toEqual('true');
@@ -135,7 +135,7 @@ describe('ResultsHelpers', () => {
         const patients = [];
         patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
-        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const result = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
         const resultsByStatement = result.statement_results_by_statement();
 
         expect(resultsByStatement.DayMonthTimings['Months Containing 29 Days'].pretty).toEqual('[1,\n2,\n3,\n4,\n5,\n6,\n7,\n8,\n9,\n10,\n11,\n12,\n13,\n14,\n15,\n16,' +
@@ -173,7 +173,7 @@ describe('ResultsHelpers', () => {
         const patients = [];
         patients.push(passNumer.qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
-        const passNumerResults = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const passNumerResults = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
         const resultsByStatement = passNumerResults.statement_results_by_statement();
 
         expect(resultsByStatement.DiabetesMedicalAttentionforNephropathy['Nephropathy Diagnoses'].pretty).toContain('START: 04/03/2012 12:00 PM');
@@ -187,7 +187,7 @@ describe('ResultsHelpers', () => {
         const patients = [];
         patients.push(passNumer.qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
-        const passNumerResults = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const passNumerResults = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
         const resultsByStatement = passNumerResults.statement_results_by_statement();
 
         expect(resultsByStatement.DiabetesMedicalAttentionforNephropathy['Qualifying Encounters'].pretty).toContain('START: 02/02/2012 8:45 AM');
@@ -200,7 +200,7 @@ describe('ResultsHelpers', () => {
         const patients = [];
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
-        const denexPassresult = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const denexPassresult = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
         const resultsByStatement = denexPassresult.statement_results_by_statement();
 
         expect(resultsByStatement.StrokeEducation['Intervention Comfort Measures'].pretty).toContain('START: 10/10/2012 8:00 AM');
@@ -214,7 +214,7 @@ describe('ResultsHelpers', () => {
         const patients = [];
         patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
-        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+        const result = new CqmModels.IndividualResult(Object.values(calculationResults[Object.keys(calculationResults)[0]])[0]);
         const resultsByStatement = result.statement_results_by_statement();
 
         expect(resultsByStatement.TJC_Overall['Encounter with Principal Diagnosis and Age'].pretty).toEqual(undefined);
