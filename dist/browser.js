@@ -1739,10 +1739,6 @@ module.exports = class Calculator {
             resultsByPatient[patientId] = {};
           }
 
-          if (requestDocument) {
-            result = new CqmModels.IndividualResult(result);
-          }
-
           resultsByPatient[patientId][populationSet.population_set_id] = result;
         }
       });
