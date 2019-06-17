@@ -1740,7 +1740,9 @@ module.exports = class Calculator {
           }
 
           if (requestDocument) {
-            result = new CqmModels.IndividualResult(result);
+            // Mongoid will need these fields to exist to preserve the belongs_to relationships
+            result.patient_id = patientId;
+            result.measure_id = measure._id;
           }
 
           resultsByPatient[patientId][populationSet.population_set_id] = result;
