@@ -8346,7 +8346,7 @@
                 "localId": "2",
                 "locator": "5:1-5:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -8354,7 +8354,7 @@
                 "localId": "3",
                 "locator": "6:1-6:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -17590,7 +17590,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee794"
+        "value": "5cffb39331fe5ffdc717c182"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -17612,7 +17612,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee795"
+        "value": "5cffb39331fe5ffdc717c183"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -17631,7 +17631,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee796"
+        "value": "5cffb39331fe5ffdc717c184"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -17652,7 +17652,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee797"
+        "value": "5cffb39331fe5ffdc717c185"
       },
       "incisionDatetime": null,
       "method": null,
@@ -17680,7 +17680,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee798"
+        "value": "5cffb39331fe5ffdc717c186"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -17703,7 +17703,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee799"
+        "value": "5cffb39331fe5ffdc717c187"
       },
       "incisionDatetime": null,
       "method": null,
@@ -17729,7 +17729,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee79a"
+        "value": "5cffb39331fe5ffdc717c188"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -17754,7 +17754,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee79b"
+        "value": "5cffb39331fe5ffdc717c189"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -17779,7 +17779,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee79c"
+        "value": "5cffb39331fe5ffdc717c18a"
       },
       "incisionDatetime": null,
       "method": null,
@@ -17805,7 +17805,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee79d"
+        "value": "5cffb39331fe5ffdc717c18b"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -17826,7 +17826,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee79e"
+        "value": "5cffb39331fe5ffdc717c18c"
       },
       "incisionDatetime": null,
       "method": null,
@@ -17855,7 +17855,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee79f"
+        "value": "5cffb39331fe5ffdc717c18d"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -17880,7 +17880,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369c75cc9752fcd3ee7a0"
+        "value": "5cffb39331fe5ffdc717c18e"
       },
       "method": null,
       "negationRationale": null,
@@ -17899,26 +17899,26 @@
   "title": "Primary PCI Received Within 90 Minutes of Hospital Arrival",
   "updated_at": null,
   "value_set_ids": [
-    "5ca369c75cc9752fcd3ee7a1",
-    "5ca369c75cc9752fcd3ee7a2",
-    "5ca369c75cc9752fcd3ee7a3",
-    "5ca369c75cc9752fcd3ee7a4",
-    "5ca369c75cc9752fcd3ee7a5",
-    "5ca369c75cc9752fcd3ee7a6",
-    "5ca369c75cc9752fcd3ee7a7",
-    "5ca369c75cc9752fcd3ee7a8",
-    "5ca369c75cc9752fcd3ee7a9",
-    "5ca369c75cc9752fcd3ee7aa",
-    "5ca369c75cc9752fcd3ee7ab",
-    "5ca369c75cc9752fcd3ee7ac",
-    "5ca369c75cc9752fcd3ee7ad",
-    "5ca369c75cc9752fcd3ee7ae",
-    "5ca369c75cc9752fcd3ee7af",
-    "5ca369c75cc9752fcd3ee7b0",
-    "5ca369c75cc9752fcd3ee7b1",
-    "5ca369c75cc9752fcd3ee7b2",
-    "5ca369c75cc9752fcd3ee7b3",
-    "5ca369c75cc9752fcd3ee7b4",
-    "5ca369c75cc9752fcd3ee7b5"
+    "5cffb39431fe5ffdc717c18f",
+    "5cffb39431fe5ffdc717c190",
+    "5cffb39431fe5ffdc717c191",
+    "5cffb39431fe5ffdc717c192",
+    "5cffb39431fe5ffdc717c193",
+    "5cffb39431fe5ffdc717c194",
+    "5cffb39431fe5ffdc717c195",
+    "5cffb39431fe5ffdc717c196",
+    "5cffb39431fe5ffdc717c197",
+    "5cffb39431fe5ffdc717c198",
+    "5cffb39431fe5ffdc717c199",
+    "5cffb39431fe5ffdc717c19a",
+    "5cffb39431fe5ffdc717c19b",
+    "5cffb39431fe5ffdc717c19c",
+    "5cffb39431fe5ffdc717c19d",
+    "5cffb39431fe5ffdc717c19e",
+    "5cffb39431fe5ffdc717c19f",
+    "5cffb39431fe5ffdc717c1a0",
+    "5cffb39431fe5ffdc717c1a1",
+    "5cffb39431fe5ffdc717c1a2",
+    "5cffb39431fe5ffdc717c1a3"
   ]
 }

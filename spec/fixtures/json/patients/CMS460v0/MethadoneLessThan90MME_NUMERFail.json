@@ -31,11 +31,13 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "17436001"
+            "code": "17436001",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           },
           {
             "codeSystem": "CPT",
-            "code": "99241"
+            "code": "99241",
+            "codeSystemOid": "2.16.840.1.113883.6.12"
           }
         ],
         "description": "Encounter, Performed: Outpatient Consultation",
@@ -76,7 +78,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "RxNorm",
-            "code": "864978"
+            "code": "864978",
+            "codeSystemOid": "2.16.840.1.113883.6.88"
           }
         ],
         "daysSupplied": null,
@@ -89,7 +92,7 @@
           "code": "229797004",
           "codeSystem": "SNOMED-CT",
           "descriptor": "Once daily (qualifier value)",
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "hqmfOid": "2.16.840.1.113883.3.560.1.17",
@@ -99,7 +102,6 @@
           "value": "5b9fe2ddd7c8acf1740e5c67"
         },
         "negationRationale": null,
-        "prescriberId": null,
         "qdmCategory": "medication",
         "qdmStatus": "order",
         "qdmTitle": "Medication, Order",
@@ -123,9 +125,9 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
@@ -135,7 +137,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6f04a564ac9d9bb838b3"
+          "value": "5cffb2f231fe5ffc98a70548"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
@@ -148,9 +150,9 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "Not Hispanic or Latino",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "Not Hispanic or Latino",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -160,7 +162,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6f04a564ac9d9bb838b4"
+          "value": "5cffb2f231fe5ffc98a70549"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
@@ -173,9 +175,9 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "American Indian or Alaska Native",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "American Indian or Alaska Native",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -185,7 +187,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6f04a564ac9d9bb838b5"
+          "value": "5cffb2f231fe5ffc98a7054a"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
@@ -198,9 +200,9 @@
         "dataElementCodes": [
           {
             "code": "M",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "M",
             "codeSystemOid": "2.16.840.1.113883.5.1",
+            "descriptor": "M",
+            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -210,7 +212,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6f04a564ac9d9bb838b6"
+          "value": "5cffb2f231fe5ffc98a7054b"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",

@@ -6433,7 +6433,7 @@
                 "localId": "2",
                 "locator": "5:1-5:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -6441,7 +6441,7 @@
                 "localId": "3",
                 "locator": "6:1-6:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -10509,7 +10509,7 @@
                 "localId": "2",
                 "locator": "5:1-5:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -10517,7 +10517,7 @@
                 "localId": "3",
                 "locator": "6:1-6:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               },
@@ -10525,7 +10525,7 @@
                 "localId": "4",
                 "locator": "7:1-7:97",
                 "name": "SNOMEDCT:2017-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2017-03",
                 "accessLevel": "Public"
               }
@@ -12961,7 +12961,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a0"
+        "value": "5cffb37a31fe5ffd7ba72a32"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -12986,7 +12986,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a1"
+        "value": "5cffb37a31fe5ffd7ba72a33"
       },
       "incisionDatetime": null,
       "method": null,
@@ -13015,7 +13015,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a2"
+        "value": "5cffb37a31fe5ffd7ba72a34"
       },
       "incisionDatetime": null,
       "method": null,
@@ -13041,7 +13041,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a3"
+        "value": "5cffb37a31fe5ffd7ba72a35"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -13066,7 +13066,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a4"
+        "value": "5cffb37a31fe5ffd7ba72a36"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -13090,7 +13090,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a5"
+        "value": "5cffb37a31fe5ffd7ba72a37"
       },
       "qdmCategory": "medication",
       "qdmStatus": "active",
@@ -13112,7 +13112,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a6"
+        "value": "5cffb37a31fe5ffd7ba72a38"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -13139,7 +13139,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a7"
+        "value": "5cffb37a31fe5ffd7ba72a39"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -13163,7 +13163,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a8"
+        "value": "5cffb37a31fe5ffd7ba72a3a"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -13190,7 +13190,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608a9"
+        "value": "5cffb37a31fe5ffd7ba72a3b"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -13213,7 +13213,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608aa"
+        "value": "5cffb37a31fe5ffd7ba72a3c"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -13234,7 +13234,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608ab"
+        "value": "5cffb37a31fe5ffd7ba72a3d"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -13258,7 +13258,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608ac"
+        "value": "5cffb37a31fe5ffd7ba72a3e"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -13281,7 +13281,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608ad"
+        "value": "5cffb37a31fe5ffd7ba72a3f"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -13306,7 +13306,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608ae"
+        "value": "5cffb37a31fe5ffd7ba72a40"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -13330,7 +13330,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608af"
+        "value": "5cffb37a31fe5ffd7ba72a41"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -13350,7 +13350,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b0"
+        "value": "5cffb37a31fe5ffd7ba72a42"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -13376,7 +13376,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b1"
+        "value": "5cffb37a31fe5ffd7ba72a43"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -13400,7 +13400,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b2"
+        "value": "5cffb37a31fe5ffd7ba72a44"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -13421,7 +13421,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b3"
+        "value": "5cffb37a31fe5ffd7ba72a45"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -13451,7 +13451,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b4"
+        "value": "5cffb37a31fe5ffd7ba72a46"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -13476,7 +13476,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b5"
+        "value": "5cffb37a31fe5ffd7ba72a47"
       },
       "incisionDatetime": null,
       "method": null,
@@ -13502,7 +13502,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b6"
+        "value": "5cffb37a31fe5ffd7ba72a48"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -13522,7 +13522,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b7"
+        "value": "5cffb37a31fe5ffd7ba72a49"
       },
       "method": null,
       "negationRationale": null,
@@ -13550,7 +13550,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b8"
+        "value": "5cffb37a31fe5ffd7ba72a4a"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -13577,7 +13577,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608b9"
+        "value": "5cffb37a31fe5ffd7ba72a4b"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -13601,7 +13601,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369955cc9752e90a608ba"
+        "value": "5cffb37a31fe5ffd7ba72a4c"
       },
       "prevalencePeriod": null,
       "qdmCategory": "condition",
@@ -13615,38 +13615,38 @@
   "title": "Diabetes: Medical Attention for Nephropathy",
   "updated_at": null,
   "value_set_ids": [
-    "5ca369955cc9752e90a608bb",
-    "5ca369955cc9752e90a608bc",
-    "5ca369955cc9752e90a608bd",
-    "5ca369955cc9752e90a608be",
-    "5ca369955cc9752e90a608bf",
-    "5ca369955cc9752e90a608c0",
-    "5ca369955cc9752e90a608c1",
-    "5ca369955cc9752e90a608c2",
-    "5ca369955cc9752e90a608c3",
-    "5ca369955cc9752e90a608c4",
-    "5ca369955cc9752e90a608c5",
-    "5ca369955cc9752e90a608c6",
-    "5ca369955cc9752e90a608c7",
-    "5ca369955cc9752e90a608c8",
-    "5ca369955cc9752e90a608c9",
-    "5ca369955cc9752e90a608ca",
-    "5ca369955cc9752e90a608cb",
-    "5ca369955cc9752e90a608cc",
-    "5ca369955cc9752e90a608cd",
-    "5ca369955cc9752e90a608ce",
-    "5ca369955cc9752e90a608cf",
-    "5ca369955cc9752e90a608d0",
-    "5ca369955cc9752e90a608d1",
-    "5ca369955cc9752e90a608d2",
-    "5ca369955cc9752e90a608d3",
-    "5ca369955cc9752e90a608d4",
-    "5ca369955cc9752e90a608d5",
-    "5ca369955cc9752e90a608d6",
-    "5ca369955cc9752e90a608d7",
-    "5ca369955cc9752e90a608d8",
-    "5ca369955cc9752e90a608d9",
-    "5ca369955cc9752e90a608da",
-    "5ca369955cc9752e90a608db"
+    "5cffb37a31fe5ffd7ba72a4d",
+    "5cffb37a31fe5ffd7ba72a4e",
+    "5cffb37a31fe5ffd7ba72a4f",
+    "5cffb37a31fe5ffd7ba72a50",
+    "5cffb37a31fe5ffd7ba72a51",
+    "5cffb37a31fe5ffd7ba72a52",
+    "5cffb37a31fe5ffd7ba72a53",
+    "5cffb37a31fe5ffd7ba72a54",
+    "5cffb37a31fe5ffd7ba72a55",
+    "5cffb37a31fe5ffd7ba72a56",
+    "5cffb37a31fe5ffd7ba72a57",
+    "5cffb37a31fe5ffd7ba72a58",
+    "5cffb37a31fe5ffd7ba72a59",
+    "5cffb37a31fe5ffd7ba72a5a",
+    "5cffb37a31fe5ffd7ba72a5b",
+    "5cffb37a31fe5ffd7ba72a5c",
+    "5cffb37a31fe5ffd7ba72a5d",
+    "5cffb37a31fe5ffd7ba72a5e",
+    "5cffb37a31fe5ffd7ba72a5f",
+    "5cffb37a31fe5ffd7ba72a60",
+    "5cffb37a31fe5ffd7ba72a61",
+    "5cffb37a31fe5ffd7ba72a62",
+    "5cffb37a31fe5ffd7ba72a63",
+    "5cffb37a31fe5ffd7ba72a64",
+    "5cffb37a31fe5ffd7ba72a65",
+    "5cffb37a31fe5ffd7ba72a66",
+    "5cffb37a31fe5ffd7ba72a67",
+    "5cffb37a31fe5ffd7ba72a68",
+    "5cffb37a31fe5ffd7ba72a69",
+    "5cffb37a31fe5ffd7ba72a6a",
+    "5cffb37a31fe5ffd7ba72a6b",
+    "5cffb37a31fe5ffd7ba72a6c",
+    "5cffb37a31fe5ffd7ba72a6d"
   ]
 }

@@ -31,7 +31,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "32485007"
+            "code": "32485007",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
@@ -40,7 +41,8 @@
             "code": "111297002",
             "codeSystem": "SNOMED-CT",
             "version": null,
-            "descriptor": "Ischemic Stroke"
+            "descriptor": "Ischemic Stroke",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "dischargeDisposition": null,
@@ -62,7 +64,7 @@
           "code": "111297002",
           "codeSystem": "SNOMED-CT",
           "descriptor": "Ischemic Stroke",
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "qdmCategory": "encounter",
@@ -83,9 +85,9 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
@@ -95,7 +97,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ee1a564ac9d8385069e"
+          "value": "5cffb2d431fe5ffc71594bd9"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
@@ -108,9 +110,9 @@
         "dataElementCodes": [
           {
             "code": "2135-2",
-            "codeSystem": "CDC Race",
-            "descriptor": "Hispanic Or Latino",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "Hispanic Or Latino",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -120,7 +122,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ee1a564ac9d8385069f"
+          "value": "5cffb2d431fe5ffc71594bda"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
@@ -133,9 +135,9 @@
         "dataElementCodes": [
           {
             "code": "2076-8",
-            "codeSystem": "CDC Race",
-            "descriptor": "Native Hawaiian or Other Pacific Islander",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "Native Hawaiian or Other Pacific Islander",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -145,7 +147,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ee1a564ac9d838506a0"
+          "value": "5cffb2d431fe5ffc71594bdb"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
@@ -158,9 +160,9 @@
         "dataElementCodes": [
           {
             "code": "F",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "F",
             "codeSystemOid": "2.16.840.1.113883.5.1",
+            "descriptor": "F",
+            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -170,7 +172,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ee1a564ac9d838506a1"
+          "value": "5cffb2d431fe5ffc71594bdc"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",

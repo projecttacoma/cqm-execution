@@ -4516,7 +4516,7 @@
                 "localId": "3",
                 "locator": "7:1-7:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -4524,7 +4524,7 @@
                 "localId": "4",
                 "locator": "8:1-8:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -8590,7 +8590,7 @@
                 "localId": "2",
                 "locator": "5:1-5:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -8598,7 +8598,7 @@
                 "localId": "3",
                 "locator": "6:1-6:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -17830,7 +17830,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a10"
+        "value": "5cffb36d31fe5ffd59c142f0"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -17849,7 +17849,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a11"
+        "value": "5cffb36d31fe5ffd59c142f1"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -17867,7 +17867,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a12"
+        "value": "5cffb36d31fe5ffd59c142f2"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -17892,7 +17892,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a13"
+        "value": "5cffb36d31fe5ffd59c142f3"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -17921,7 +17921,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a14"
+        "value": "5cffb36d31fe5ffd59c142f4"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -17945,7 +17945,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a15"
+        "value": "5cffb36d31fe5ffd59c142f5"
       },
       "method": null,
       "negationRationale": null,
@@ -17972,7 +17972,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a16"
+        "value": "5cffb36d31fe5ffd59c142f6"
       },
       "prevalencePeriod": null,
       "qdmCategory": "allergy",
@@ -17993,7 +17993,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a17"
+        "value": "5cffb36d31fe5ffd59c142f7"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -18012,7 +18012,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a18"
+        "value": "5cffb36d31fe5ffd59c142f8"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -18033,7 +18033,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a19"
+        "value": "5cffb36d31fe5ffd59c142f9"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -18060,7 +18060,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a1a"
+        "value": "5cffb36d31fe5ffd59c142fa"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -18086,7 +18086,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3697b5cc9752df8ec3a1b"
+        "value": "5cffb36d31fe5ffd59c142fb"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -18102,28 +18102,28 @@
   "title": "Discharged on Statin Medication",
   "updated_at": null,
   "value_set_ids": [
-    "5ca3697c5cc9752df8ec3a1c",
-    "5ca3697c5cc9752df8ec3a1d",
-    "5ca3697c5cc9752df8ec3a1e",
-    "5ca3697c5cc9752df8ec3a1f",
-    "5ca3697c5cc9752df8ec3a20",
-    "5ca3697c5cc9752df8ec3a21",
-    "5ca3697c5cc9752df8ec3a22",
-    "5ca3697c5cc9752df8ec3a23",
-    "5ca3697c5cc9752df8ec3a24",
-    "5ca3697c5cc9752df8ec3a25",
-    "5ca3697c5cc9752df8ec3a26",
-    "5ca3697c5cc9752df8ec3a27",
-    "5ca3697c5cc9752df8ec3a28",
-    "5ca3697c5cc9752df8ec3a29",
-    "5ca3697c5cc9752df8ec3a2a",
-    "5ca3697c5cc9752df8ec3a2b",
-    "5ca3697c5cc9752df8ec3a2c",
-    "5ca3697c5cc9752df8ec3a2d",
-    "5ca3697c5cc9752df8ec3a2e",
-    "5ca3697c5cc9752df8ec3a2f",
-    "5ca3697c5cc9752df8ec3a30",
-    "5ca3697c5cc9752df8ec3a31",
-    "5ca3697c5cc9752df8ec3a32"
+    "5cffb36d31fe5ffd59c142fc",
+    "5cffb36d31fe5ffd59c142fd",
+    "5cffb36d31fe5ffd59c142fe",
+    "5cffb36d31fe5ffd59c142ff",
+    "5cffb36d31fe5ffd59c14300",
+    "5cffb36d31fe5ffd59c14301",
+    "5cffb36d31fe5ffd59c14302",
+    "5cffb36d31fe5ffd59c14303",
+    "5cffb36d31fe5ffd59c14304",
+    "5cffb36d31fe5ffd59c14305",
+    "5cffb36d31fe5ffd59c14306",
+    "5cffb36d31fe5ffd59c14307",
+    "5cffb36d31fe5ffd59c14308",
+    "5cffb36d31fe5ffd59c14309",
+    "5cffb36d31fe5ffd59c1430a",
+    "5cffb36d31fe5ffd59c1430b",
+    "5cffb36d31fe5ffd59c1430c",
+    "5cffb36d31fe5ffd59c1430d",
+    "5cffb36d31fe5ffd59c1430e",
+    "5cffb36d31fe5ffd59c1430f",
+    "5cffb36d31fe5ffd59c14310",
+    "5cffb36d31fe5ffd59c14311",
+    "5cffb36d31fe5ffd59c14312"
   ]
 }

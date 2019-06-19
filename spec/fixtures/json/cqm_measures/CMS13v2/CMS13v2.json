@@ -4476,7 +4476,7 @@
                 "localId": "3",
                 "locator": "7:1-7:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -4484,7 +4484,7 @@
                 "localId": "4",
                 "locator": "8:1-8:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -8048,7 +8048,7 @@
                 "localId": "2",
                 "locator": "5:1-5:87",
                 "name": "LOINC:2.46",
-                "id": "LOINC",
+                "id": "2.16.840.1.113883.6.1",
                 "version": "urn:hl7:version:2.46",
                 "accessLevel": "Public"
               },
@@ -8056,7 +8056,7 @@
                 "localId": "3",
                 "locator": "6:1-6:97",
                 "name": "SNOMEDCT:2016-03",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2016-03",
                 "accessLevel": "Public"
               }
@@ -12715,7 +12715,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c03"
+        "value": "5cffb37e31fe5ffd8afef97e"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -12735,7 +12735,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c04"
+        "value": "5cffb37e31fe5ffd8afef97f"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -12759,7 +12759,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c05"
+        "value": "5cffb37e31fe5ffd8afef980"
       },
       "negationRationale": null,
       "qdmCategory": "intervention",
@@ -12779,7 +12779,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c06"
+        "value": "5cffb37e31fe5ffd8afef981"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -12797,7 +12797,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c07"
+        "value": "5cffb37e31fe5ffd8afef982"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -12822,7 +12822,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c08"
+        "value": "5cffb37e31fe5ffd8afef983"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -12844,7 +12844,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c09"
+        "value": "5cffb37e31fe5ffd8afef984"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -12869,7 +12869,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c0a"
+        "value": "5cffb37e31fe5ffd8afef985"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -12895,7 +12895,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c0b"
+        "value": "5cffb37e31fe5ffd8afef986"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -12921,7 +12921,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca3699e5cc9752eced01c0c"
+        "value": "5cffb37e31fe5ffd8afef987"
       },
       "negationRationale": null,
       "qdmCategory": "medication",
@@ -12937,27 +12937,27 @@
   "title": "Test104",
   "updated_at": null,
   "value_set_ids": [
-    "5ca3699e5cc9752eced01c0d",
-    "5ca3699e5cc9752eced01c0e",
-    "5ca3699e5cc9752eced01c0f",
-    "5ca3699e5cc9752eced01c10",
-    "5ca3699e5cc9752eced01c11",
-    "5ca3699e5cc9752eced01c12",
-    "5ca3699e5cc9752eced01c13",
-    "5ca3699e5cc9752eced01c14",
-    "5ca3699e5cc9752eced01c15",
-    "5ca3699e5cc9752eced01c16",
-    "5ca3699e5cc9752eced01c17",
-    "5ca3699e5cc9752eced01c18",
-    "5ca3699e5cc9752eced01c19",
-    "5ca3699e5cc9752eced01c1a",
-    "5ca3699e5cc9752eced01c1b",
-    "5ca3699e5cc9752eced01c1c",
-    "5ca3699e5cc9752eced01c1d",
-    "5ca3699e5cc9752eced01c1e",
-    "5ca3699e5cc9752eced01c1f",
-    "5ca3699e5cc9752eced01c20",
-    "5ca3699e5cc9752eced01c21",
-    "5ca3699e5cc9752eced01c22"
+    "5cffb37f31fe5ffd8afef988",
+    "5cffb37f31fe5ffd8afef989",
+    "5cffb37f31fe5ffd8afef98a",
+    "5cffb37f31fe5ffd8afef98b",
+    "5cffb37f31fe5ffd8afef98c",
+    "5cffb37f31fe5ffd8afef98d",
+    "5cffb37f31fe5ffd8afef98e",
+    "5cffb37f31fe5ffd8afef98f",
+    "5cffb37f31fe5ffd8afef990",
+    "5cffb37f31fe5ffd8afef991",
+    "5cffb37f31fe5ffd8afef992",
+    "5cffb37f31fe5ffd8afef993",
+    "5cffb37f31fe5ffd8afef994",
+    "5cffb37f31fe5ffd8afef995",
+    "5cffb37f31fe5ffd8afef996",
+    "5cffb37f31fe5ffd8afef997",
+    "5cffb37f31fe5ffd8afef998",
+    "5cffb37f31fe5ffd8afef999",
+    "5cffb37f31fe5ffd8afef99a",
+    "5cffb37f31fe5ffd8afef99b",
+    "5cffb37f31fe5ffd8afef99c",
+    "5cffb37f31fe5ffd8afef99d"
   ]
 }

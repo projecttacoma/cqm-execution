@@ -31,7 +31,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "190372001"
+            "code": "190372001",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Diagnosis: Diabetes",
@@ -61,7 +62,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "HCPCS",
-            "code": "G0438"
+            "code": "G0438",
+            "codeSystemOid": "2.16.840.1.113883.6.285"
           }
         ],
         "description": "Encounter, Performed: Annual Wellness Visit",
@@ -102,7 +104,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
-            "code": "385763009"
+            "code": "385763009",
+            "codeSystemOid": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Intervention, Order: Hospice care ambulatory",
@@ -116,7 +119,7 @@
           "code": "4525004",
           "codeSystem": "SNOMED-CT",
           "descriptor": null,
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "qdmCategory": "intervention",
@@ -132,9 +135,9 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
@@ -144,7 +147,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ee7a564ac9d8713cc6c"
+          "value": "5cffb2d931fe5ffc777a1959"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
@@ -157,9 +160,9 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "Not Hispanic or Latino",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "Not Hispanic or Latino",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -169,7 +172,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ee7a564ac9d8713cc6d"
+          "value": "5cffb2d931fe5ffc777a195a"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
@@ -182,9 +185,9 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "American Indian or Alaska Native",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "American Indian or Alaska Native",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -194,7 +197,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ee7a564ac9d8713cc6e"
+          "value": "5cffb2d931fe5ffc777a195b"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
@@ -207,9 +210,9 @@
         "dataElementCodes": [
           {
             "code": "F",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "F",
             "codeSystemOid": "2.16.840.1.113883.5.1",
+            "descriptor": "F",
+            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -219,7 +222,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6ee7a564ac9d8713cc6f"
+          "value": "5cffb2d931fe5ffc777a195c"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",

@@ -63,7 +63,7 @@
                 "localId": "2",
                 "locator": "5:1-5:97",
                 "name": "SNOMEDCT:2013-09",
-                "id": "SNOMED-CT",
+                "id": "2.16.840.1.113883.6.96",
                 "version": "urn:hl7:version:2013-09",
                 "accessLevel": "Public"
               }
@@ -4313,7 +4313,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369b05cc9752f3e6b5f2f"
+        "value": "5cffb38831fe5ffda80d95c4"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -4335,7 +4335,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369b05cc9752f3e6b5f30"
+        "value": "5cffb38831fe5ffda80d95c5"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
@@ -4354,7 +4354,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369b05cc9752f3e6b5f31"
+        "value": "5cffb38831fe5ffda80d95c6"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
@@ -4372,7 +4372,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369b05cc9752f3e6b5f32"
+        "value": "5cffb38831fe5ffda80d95c7"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
@@ -4390,7 +4390,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369b05cc9752f3e6b5f33"
+        "value": "5cffb38831fe5ffda80d95c8"
       },
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
@@ -4415,7 +4415,7 @@
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
-        "value": "5ca369b05cc9752f3e6b5f34"
+        "value": "5cffb38831fe5ffda80d95c9"
       },
       "lengthOfStay": null,
       "negationRationale": null,
@@ -4431,14 +4431,14 @@
   "title": "Median Time from ED Arrival to ED Departure for Discharged ED Patients",
   "updated_at": null,
   "value_set_ids": [
-    "5ca369b15cc9752f3e6b5f35",
-    "5ca369b15cc9752f3e6b5f36",
-    "5ca369b15cc9752f3e6b5f37",
-    "5ca369b15cc9752f3e6b5f38",
-    "5ca369b15cc9752f3e6b5f39",
-    "5ca369b15cc9752f3e6b5f3a",
-    "5ca369b15cc9752f3e6b5f3b",
-    "5ca369b15cc9752f3e6b5f3c",
-    "5ca369b15cc9752f3e6b5f3d"
+    "5cffb38831fe5ffda80d95ca",
+    "5cffb38831fe5ffda80d95cb",
+    "5cffb38831fe5ffda80d95cc",
+    "5cffb38831fe5ffda80d95cd",
+    "5cffb38831fe5ffda80d95ce",
+    "5cffb38831fe5ffda80d95cf",
+    "5cffb38831fe5ffda80d95d0",
+    "5cffb38831fe5ffda80d95d1",
+    "5cffb38831fe5ffda80d95d2"
   ]
 }

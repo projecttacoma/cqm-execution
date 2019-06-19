@@ -29,9 +29,9 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
@@ -41,7 +41,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6f01a564ac9d99fc527d"
+          "value": "5cffb2ef31fe5ffc94d0a61d"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
@@ -54,9 +54,9 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "Not Hispanic or Latino",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "Not Hispanic or Latino",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -66,7 +66,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6f01a564ac9d99fc527e"
+          "value": "5cffb2ef31fe5ffc94d0a61e"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
@@ -79,9 +79,9 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "American Indian or Alaska Native",
             "codeSystemOid": "2.16.840.1.113883.6.238",
+            "descriptor": "American Indian or Alaska Native",
+            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -91,7 +91,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6f01a564ac9d99fc527f"
+          "value": "5cffb2ef31fe5ffc94d0a61f"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
@@ -104,9 +104,9 @@
         "dataElementCodes": [
           {
             "code": "M",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "M",
             "codeSystemOid": "2.16.840.1.113883.5.1",
+            "descriptor": "M",
+            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -116,7 +116,7 @@
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5ccc6f01a564ac9d99fc5280"
+          "value": "5cffb2ef31fe5ffc94d0a620"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",
