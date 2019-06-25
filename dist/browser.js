@@ -1273,8 +1273,8 @@ module.exports = class ResultsHelpers {
       if (endDateTime && endDateTime.year !== 9999) {
         endTimeString = `STOP: ${moment.utc(endDateTime.toString()).format('MM/DD/YYYY h:mm A')}\n`;
       }
-
-      const codeDisplay = result.dataElementCodes && result.dataElementCodes[0] ? `CODE: ${nameOidHash[result.dataElementCodes[0].system] || result.dataElementCodes[0].system} ${result.dataElementCodes[0].code}` : '';
+      const system = result.dataElementCodes[0].system;
+      const codeDisplay = result.dataElementCodes && result.dataElementCodes[0] ? `CODE: ${nameOidHash[system] || system} ${result.dataElementCodes[0].code}` : '';
       // Add indentation
       const returnString = `${description}${startTimeString}${endTimeString}${codeDisplay}`;
       return returnString.replace(/\n/g, `\n${currentIndentation}${keyIndentation}`);
