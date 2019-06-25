@@ -98,7 +98,7 @@
           {
             "codeSystem": "LOINC",
             "code": "44261-6",
-            "codeSystemOid": "2.16.840.1.113883.6.1"
+            "system": "2.16.840.1.113883.6.1"
           }
         ],
         "description": "Assessment, Performed: Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
@@ -124,7 +124,7 @@
           {
             "codeSystem": "SNOMED-CT",
             "code": "191611001",
-            "codeSystemOid": "2.16.840.1.113883.6.96"
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Diagnosis: Major Depression Including Remission",
@@ -153,7 +153,7 @@
           {
             "codeSystem": "ICD-9-CM",
             "code": "301.83",
-            "codeSystemOid": "2.16.840.1.113883.6.103"
+            "system": "2.16.840.1.113883.6.103"
           }
         ],
         "description": "Diagnosis: Personality Disorder",
@@ -182,7 +182,7 @@
           {
             "codeSystem": "HCPCS",
             "code": "G0402",
-            "codeSystemOid": "2.16.840.1.113883.6.285"
+            "system": "2.16.840.1.113883.6.285"
           }
         ],
         "description": "Encounter, Performed: Contact or Office Visit",
@@ -222,8 +222,8 @@
           {
             "code": "21112-8",
             "codeSystem": "LOINC",
-            "descriptor": null,
-            "codeSystemOid": "2.16.840.1.113883.6.1",
+            "display": null,
+            "system": "2.16.840.1.113883.6.1",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -245,8 +245,8 @@
           {
             "code": "2186-5",
             "codeSystem": "CDC Race",
-            "descriptor": "Not Hispanic or Latino",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "display": "Not Hispanic or Latino",
+            "system": "2.16.840.1.113883.6.238",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -268,8 +268,8 @@
           {
             "code": "2131-1",
             "codeSystem": "CDC Race",
-            "descriptor": "Other",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "display": "Other",
+            "system": "2.16.840.1.113883.6.238",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -291,8 +291,8 @@
           {
             "code": "F",
             "codeSystem": "AdministrativeGender",
-            "descriptor": "F",
-            "codeSystemOid": "2.16.840.1.113883.5.1",
+            "display": "F",
+            "system": "2.16.840.1.113883.5.1",
             "version": null,
             "_type": "QDM::Code"
           }

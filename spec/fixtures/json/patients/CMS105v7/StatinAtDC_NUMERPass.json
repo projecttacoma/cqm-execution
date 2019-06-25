@@ -8,7 +8,7 @@
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
-          "codeSystemOid": "2.16.840.1.113883.6.96",
+          "system": "2.16.840.1.113883.6.96",
           "code": "32485007"
         }
       ],
@@ -17,9 +17,9 @@
         {
           "code": "111297002",
           "codeSystem": "SNOMED-CT",
-          "codeSystemOid": "2.16.840.1.113883.6.96",
+          "system": "2.16.840.1.113883.6.96",
           "version": null,
-          "descriptor": "Ischemic Stroke"
+          "display": "Ischemic Stroke"
         }
       ],
       "dischargeDisposition": null,
@@ -40,8 +40,8 @@
       "principalDiagnosis": {
         "code": "111297002",
         "codeSystem": "SNOMED-CT",
-        "descriptor": "Ischemic Stroke",
-        "codeSystemOid": "2.16.840.1.113883.6.96",
+        "display": "Ischemic Stroke",
+        "system": "2.16.840.1.113883.6.96",
         "version": null
       },
       "qdmCategory": "encounter",
@@ -60,7 +60,7 @@
       "dataElementCodes": [
         {
           "codeSystem": "RxNorm",
-          "codeSystemOid": "2.16.840.1.113883.6.88",
+          "system": "2.16.840.1.113883.6.88",
           "code": "259255"
         }
       ],
@@ -89,8 +89,8 @@
         {
           "code": "21112-8",
           "codeSystem": "LOINC",
-          "descriptor": null,
-          "codeSystemOid": null,
+          "display": null,
+          "system": null,
           "version": null,
           "_type": "QDM::Code"
         }
@@ -112,8 +112,8 @@
         {
           "code": "2186-5",
           "codeSystem": "CDC Race",
-          "descriptor": "Not Hispanic or Latino",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "display": "Not Hispanic or Latino",
+          "system": "2.16.840.1.113883.6.238",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -135,8 +135,8 @@
         {
           "code": "1002-5",
           "codeSystem": "CDC Race",
-          "descriptor": "American Indian or Alaska Native",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "display": "American Indian or Alaska Native",
+          "system": "2.16.840.1.113883.6.238",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -158,8 +158,8 @@
         {
           "code": "M",
           "codeSystem": "AdministrativeGender",
-          "descriptor": "M",
-          "codeSystemOid": "2.16.840.1.113883.5.1",
+          "display": "M",
+          "system": "2.16.840.1.113883.5.1",
           "version": null,
           "_type": "QDM::Code"
         }

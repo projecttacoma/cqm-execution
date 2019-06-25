@@ -65991,19 +65991,18 @@ function RecursiveCast(any) {
   if (any && any.value && any.unit) {
     return new cql.Quantity(any);
   }
-  if (any && any.code && (any.codeSystemOid || any.system)) {
+  if (any && any.code && any.system) {
     if (typeof any.code === 'undefined') {
       throw new Error(`Code: ${any} does not have a code`);
-    } else if (typeof any.codeSystemOid === 'undefined' && typeof any.system === 'undefined') {
+    } else if (typeof any.system === 'undefined') {
       throw new Error(`Code: ${any} does not have a code system oid`);
     }
 
-    const val = { code: any.code, codeSystemOid: any.codeSystemOid || any.system };
-
-    val.descriptor = (typeof any.descriptor !== 'undefined') ? any.descriptor : null;
+    const val = { code: any.code, system: any.system };
+    val.display = (typeof any.display !== 'undefined') ? any.display : null;
     val.version = (typeof any.version !== 'undefined') ? any.version : null;
 
-    return new cql.Code(val.code, val.codeSystemOid, val.version, val.descriptor);
+    return new cql.Code(val.code, val.system, val.version, val.display);
   }
   if (any && any.low) {
     const casted = new cql.Interval(any.low, any.high, any.lowClosed, any.highClosed);
@@ -66059,19 +66058,19 @@ Code.prototype = Object.create(mongoose.SchemaType.prototype);
 Code.prototype.cast = (code) => {
   if (code != null) {
     // handles codes that have not yet been cast to a code and those that have already been cast to a code
-    if (code.code && (code.codeSystemOid || code.system)) {
+    if (code.code && code.system) {
       if (typeof code.code === 'undefined') {
         throw new Error(`Code: ${code} does not have a code`);
-      } else if (typeof code.codeSystemOid === 'undefined' && typeof code.system === 'undefined') {
+      } else if (typeof code.system === 'undefined' && typeof code.system === 'undefined') {
         throw new Error(`Code: ${code} does not have a system oid`);
       }
 
-      const val = { code: code.code, codeSystemOid: code.codeSystemOid || code.system };
+      const val = { code: code.code, system: code.system };
 
-      val.descriptor = (typeof code.descriptor !== 'undefined') ? code.descriptor : null;
+      val.display = (typeof code.display !== 'undefined') ? code.display : null;
       val.version = (typeof code.version !== 'undefined') ? code.version : null;
 
-      return new cql.Code(val.code, val.codeSystemOid, val.version, val.descriptor);
+      return new cql.Code(val.code, val.system, val.version, val.display);
     }
     throw new Error(`Expected a code. Received ${code}.`);
   } else {
@@ -66111,7 +66110,7 @@ function DataElementSchema(add, options) {
   // Returns all of the codes on this data element in a format usable by
   // the cql-execution framework.
   extended.methods.getCode = function getCode() {
-    return this.dataElementCodes.map(code => new cql.Code(code.code, code.codeSystemOid, code.version, code.descriptor));
+    return this.dataElementCodes.map(code => new cql.Code(code.code, code.system, code.version, code.display));
   };
 
   // Return the first code on this data element in a format usable by
@@ -66119,7 +66118,7 @@ function DataElementSchema(add, options) {
   extended.methods.code = function code() {
     if (this.dataElementCodes && this.dataElementCodes[0]) {
       const qdmCode = this.dataElementCodes[0];
-      return new cql.Code(qdmCode.code, qdmCode.codeSystemOid, qdmCode.version, qdmCode.descriptor);
+      return new cql.Code(qdmCode.code, qdmCode.system, qdmCode.version, qdmCode.display);
     }
     return null;
   };
@@ -91371,7 +91370,7 @@ Document.prototype.$set = function $set(path, val, type, options) {
     }
 
     if (typeof path[key] === 'object' &&
-        !Array.isArray(path[key]) &&
+        !utils.isNativeObject(path[key]) &&
         path[key] != null &&
         pathtype !== 'virtual' &&
         pathtype !== 'real' &&
@@ -94182,7 +94181,49 @@ module.exports = DivergentArrayError;
 },{"./":276}],276:[function(require,module,exports){
 'use strict';
 
+/**
+ * MongooseError constructor. MongooseError is the base class for all
+ * Mongoose-specific errors.
+ *
+ * ####Example:
+ *     const Model = mongoose.model('Test', new Schema({ answer: Number }));
+ *     const doc = new Model({ answer: 'not a number' });
+ *     const err = doc.validateSync();
+ *
+ *     err instanceof mongoose.Error; // true
+ *
+ * @constructor Error
+ * @param {String} msg Error message
+ * @inherits Error https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error
+ */
+
 const MongooseError = require('./mongooseError');
+
+/**
+ * The name of the error. The name uniquely identifies this Mongoose error. The
+ * possible values are:
+ *
+ * - `MongooseError`: general Mongoose error
+ * - `CastError`: Mongoose could not convert a value to the type defined in the schema path. May be in a `ValidationError` class' `errors` property.
+ * - `DisconnectedError`: This [connection](connections.html) timed out in trying to reconnect to MongoDB and will not successfully reconnect to MongoDB unless you explicitly reconnect.
+ * - `DivergentArrayError`: You attempted to `save()` an array that was modified after you loaded it with a `$elemMatch` or similar projection
+ * - `MissingSchemaError`: You tried to access a model with [`mongoose.model()`](api.html#mongoose_Mongoose-model) that was not defined
+ * - `DocumentNotFoundError`: The document you tried to [`save()`](api.html#document_Document-save) was not found
+ * - `ValidatorError`: error from an individual schema path's validator
+ * - `ValidationError`: error returned from [`validate()`](api.html#document_Document-validate) or [`validateSync()`](api.html#document_Document-validateSync). Contains zero or more `ValidatorError` instances in `.errors` property.
+ * - `MissingSchemaError`: You called `mongoose.Document()` without a schema
+ * - `ObjectExpectedError`: Thrown when you set a nested path to a non-object value with [strict mode set](guide.html#strict).
+ * - `ObjectParameterError`: Thrown when you pass a non-object value to a function which expects an object as a paramter
+ * - `OverwriteModelError`: Thrown when you call [`mongoose.model()`](api.html#mongoose_Mongoose-model) to re-define a model that was already defined.
+ * - `ParallelSaveError`: Thrown when you call [`save()`](api.html#model_Model-save) on a document when the same document instance is already saving.
+ * - `StrictModeError`: Thrown when you set a path that isn't the schema and [strict mode](guide.html#strict) is set to `throw`.
+ * - `VersionError`: Thrown when the [document is out of sync](guide.html#versionKey)
+ *
+ * @api public
+ * @property {String} name
+ * @memberOf Error
+ * @instance
+ */
 
 /*!
  * Module exports.
@@ -94195,6 +94236,8 @@ module.exports = exports = MongooseError;
  *
  * @see Error.messages #error_messages_MongooseError-messages
  * @api public
+ * @memberOf Error
+ * @static messages
  */
 
 MongooseError.messages = require('./messages');
@@ -94210,6 +94253,8 @@ MongooseError.Messages = MongooseError.messages;
  * the document.
  *
  * @api public
+ * @memberOf Error
+ * @static DocumentNotFoundError
  */
 
 MongooseError.DocumentNotFoundError = require('./notFound');
@@ -94219,6 +94264,8 @@ MongooseError.DocumentNotFoundError = require('./notFound');
  * cast a value.
  *
  * @api public
+ * @memberOf Error
+ * @static CastError
  */
 
 MongooseError.CastError = require('./cast');
@@ -94229,6 +94276,8 @@ MongooseError.CastError = require('./cast');
  * instances of CastError or ValidationError.
  *
  * @api public
+ * @memberOf Error
+ * @static ValidationError
  */
 
 MongooseError.ValidationError = require('./validation');
@@ -94237,6 +94286,8 @@ MongooseError.ValidationError = require('./validation');
  * A `ValidationError` has a hash of `errors` that contain individual `ValidatorError` instances
  *
  * @api public
+ * @memberOf Error
+ * @static ValidatorError
  */
 
 MongooseError.ValidatorError = require('./validator');
@@ -94247,6 +94298,8 @@ MongooseError.ValidatorError = require('./validator');
  * the [`versionKey` option](/docs/guide.html#versionKey) for more information.
  *
  * @api public
+ * @memberOf Error
+ * @static VersionError
  */
 
 MongooseError.VersionError = require('./version');
@@ -94257,6 +94310,8 @@ MongooseError.VersionError = require('./version');
  * information.
  *
  * @api public
+ * @memberOf Error
+ * @static ParallelSaveError
  */
 
 MongooseError.ParallelSaveError = require('./parallelSave');
@@ -94266,6 +94321,8 @@ MongooseError.ParallelSaveError = require('./parallelSave');
  * See [the FAQ about `OverwriteModelError`](/docs/faq.html#overwrite-model-error).
  *
  * @api public
+ * @memberOf Error
+ * @static OverwriteModelError
  */
 
 MongooseError.OverwriteModelError = require('./overwriteModel');
@@ -94274,6 +94331,8 @@ MongooseError.OverwriteModelError = require('./overwriteModel');
  * Thrown when you try to access a model that has not been registered yet
  *
  * @api public
+ * @memberOf Error
+ * @static MissingSchemaError
  */
 
 MongooseError.MissingSchemaError = require('./missingSchema');
@@ -94283,6 +94342,8 @@ MongooseError.MissingSchemaError = require('./missingSchema');
  * and then modified the array in an unsafe way.
  *
  * @api public
+ * @memberOf Error
+ * @static DivergentArrayError
  */
 
 MongooseError.DivergentArrayError = require('./divergentArray');
@@ -94379,12 +94440,8 @@ module.exports = MissingSchemaError;
 },{"./":276}],279:[function(require,module,exports){
 'use strict';
 
-/**
- * MongooseError constructor. MongooseError is the base class for all
- * Mongoose-specific errors.
- *
- * @param {String} msg Error message
- * @inherits Error https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error
+/*!
+ * ignore
  */
 
 function MongooseError(msg) {
@@ -94405,34 +94462,7 @@ function MongooseError(msg) {
 MongooseError.prototype = Object.create(Error.prototype);
 MongooseError.prototype.constructor = Error;
 
-/**
- * The name of the error. The name uniquely identifies this Mongoose error. The
- * possible values are:
- *
- * - `MongooseError`: general Mongoose error
- * - `CastError`: Mongoose could not convert a value to the type defined in the schema path. May be in a `ValidationError` class' `errors` property.
- * - `DisconnectedError`: This [connection](connections.html) timed out in trying to reconnect to MongoDB and will not successfully reconnect to MongoDB unless you explicitly reconnect.
- * - `DivergentArrayError`: You attempted to `save()` an array that was modified after you loaded it with a `$elemMatch` or similar projection
- * - `MissingSchemaError`: You tried to access a model with [`mongoose.model()`](api.html#mongoose_Mongoose-model) that was not defined
- * - `DocumentNotFoundError`: The document you tried to [`save()`](api.html#document_Document-save) was not found
- * - `ValidatorError`: error from an individual schema path's validator
- * - `ValidationError`: error returned from [`validate()`](api.html#document_Document-validate) or [`validateSync()`](api.html#document_Document-validateSync). Contains zero or more `ValidatorError` instances in `.errors` property.
- * - `MissingSchemaError`: You called `mongoose.Document()` without a schema
- * - `ObjectExpectedError`: Thrown when you set a nested path to a non-object value with [strict mode set](guide.html#strict).
- * - `ObjectParameterError`: Thrown when you pass a non-object value to a function which expects an object as a paramter
- * - `OverwriteModelError`: Thrown when you call [`mongoose.model()`](api.html#mongoose_Mongoose-model) to re-define a model that was already defined.
- * - `ParallelSaveError`: Thrown when you call [`save()`](api.html#model_Model-save) on a document when the same document instance is already saving.
- * - `StrictModeError`: Thrown when you set a path that isn't the schema and [strict mode](guide.html#strict) is set to `throw`.
- * - `VersionError`: Thrown when the [document is out of sync](guide.html#versionKey)
- *
- * @api public
- * @property {String} name
- * @memberOf MongooseError
- * @instance
- */
-
 module.exports = MongooseError;
-
 },{}],280:[function(require,module,exports){
 'use strict';
 
@@ -95605,6 +95635,11 @@ module.exports = function discriminator(model, name, schema, tiedValue, applyPlu
       delete schema.paths[conflictingPaths[i]];
     }
 
+    // Rebuild schema models because schemas may have been merged re: #7884
+    schema.childSchemas.forEach(obj => {
+      obj.model.prototype.$__setSchema(obj.schema);
+    });
+
     const obj = {};
     obj[key] = {
       default: value,
@@ -95994,7 +96029,7 @@ function handleTimestampOption(arg, prop) {
 'use strict';
 
 module.exports = function merge(s1, s2) {
-  s1.add(s2.obj);
+  s1.add(s2.obj || {});
 
   s1.callQueue = s1.callQueue.concat(s2.callQueue);
   s1.method(s2.methods);
@@ -96855,7 +96890,7 @@ let id = 0;
  * - [collection](/docs/guide.html#collection): string - no default
  * - [id](/docs/guide.html#id): bool - defaults to true
  * - [_id](/docs/guide.html#_id): bool - defaults to true
- * - `minimize`: bool - controls [document#toObject](#document_Document-toObject) behavior when called manually - defaults to true
+ * - [minimize](/docs/guide.html#minimize): bool - controls [document#toObject](#document_Document-toObject) behavior when called manually - defaults to true
  * - [read](/docs/guide.html#read): string
  * - [writeConcern](/docs/guide.html#writeConcern): object - defaults to null, use to override [the MongoDB server's default write concern settings](https://docs.mongodb.com/manual/reference/write-concern/)
  * - [shardKey](/docs/guide.html#shardKey): object - defaults to `null`
@@ -97119,7 +97154,7 @@ Schema.prototype.clone = function() {
   if (this.discriminatorMapping != null) {
     s.discriminatorMapping = Object.assign({}, this.discriminatorMapping);
   }
-  if (s.discriminators != null) {
+  if (this.discriminators != null) {
     s.discriminators = Object.assign({}, this.discriminators);
   }
 
@@ -100688,7 +100723,12 @@ DocumentArray.prototype.cast = function(value, doc, init, prev, options) {
     // Check if the document has a different schema (re gh-3701)
     if ((value[i].$__) &&
         !(value[i] instanceof Constructor)) {
-      value[i] = value[i].toObject({ transform: false, virtuals: false });
+      value[i] = value[i].toObject({
+        transform: false,
+        // Special case: if different model, but same schema, apply virtuals
+        // re: gh-7898
+        virtuals: value[i].schema === Constructor.schema
+      });
     }
 
     if (value[i] instanceof Subdocument) {
@@ -101103,6 +101143,7 @@ Embedded.prototype.clone = function() {
   const options = Object.assign({}, this.options);
   const schematype = new this.constructor(this.schema, this.path, options);
   schematype.validators = this.validators.slice();
+  schematype.caster.discriminators = Object.assign({}, this.caster.discriminators);
   return schematype;
 };
 
@@ -107394,7 +107435,11 @@ exports.merge = function merge(to, from, options, path) {
       }
       if (from[key] != null) {
         if (from[key].instanceOfSchema) {
-          to[key] = from[key].clone();
+          if (to[key].instanceOfSchema) {
+            to[key].add(from[key].clone());
+          } else {
+            to[key] = from[key].clone();
+          }
           continue;
         } else if (from[key] instanceof ObjectId) {
           to[key] = new ObjectId(from[key]);
@@ -107490,6 +107535,19 @@ exports.isPOJO = function isPOJO(arg) {
   // Checking `proto`'s constructor is safe because `getPrototypeOf()`
   // explicitly crosses the boundary from object data to object metadata
   return !proto || proto.constructor.name === 'Object';
+};
+
+/*!
+ * Determines if `obj` is a built-in object like an array, date, boolean,
+ * etc.
+ */
+
+exports.isNativeObject = function(arg) {
+  return Array.isArray(arg) ||
+    arg instanceof Date ||
+    arg instanceof Boolean ||
+    arg instanceof Number ||
+    arg instanceof String;
 };
 
 /*!
@@ -107610,13 +107668,7 @@ exports.populate = function populate(path, select, model, match, options, subPop
 
     if (Array.isArray(path)) {
       const singles = makeSingles(path);
-      return singles.map(function(o) {
-        if (o.populate && !(o.match || o.options)) {
-          return exports.populate(o)[0];
-        } else {
-          return exports.populate(o)[0];
-        }
-      });
+      return singles.map(o => exports.populate(o)[0]);
     }
 
     if (exports.isObject(path)) {

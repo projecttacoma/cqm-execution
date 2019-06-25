@@ -32,7 +32,7 @@
           {
             "codeSystem": "SNOMED-CT",
             "code": "190372001",
-            "codeSystemOid": "2.16.840.1.113883.6.96"
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Diagnosis: Diabetes",
@@ -63,7 +63,7 @@
           {
             "codeSystem": "SNOMED-CT",
             "code": "236499007",
-            "codeSystemOid": "2.16.840.1.113883.6.96"
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Diagnosis: Diabetic Nephropathy",
@@ -94,7 +94,7 @@
           {
             "codeSystem": "HCPCS",
             "code": "G0438",
-            "codeSystemOid": "2.16.840.1.113883.6.285"
+            "system": "2.16.840.1.113883.6.285"
           }
         ],
         "description": "Encounter, Performed: Annual Wellness Visit",
@@ -107,8 +107,8 @@
             "_type": "QDM::FacilityLocation",
             "code": {
               "code": "G0438",
-              "codeSystemOid": "2.16.840.1.113883.6.285",
-              "descriptor": "Annual Wellness Visit",
+              "system": "2.16.840.1.113883.6.285",
+              "display": "Annual Wellness Visit",
               "codeSystem": "HCPCS",
               "version": null,
               "_type": "QDM::Code"
@@ -126,8 +126,8 @@
             "_type": "QDM::FacilityLocation",
             "code": {
               "code": "G0438",
-              "codeSystemOid": "2.16.840.1.113883.6.285",
-              "descriptor": "Annual Wellness Visit",
+              "system": "2.16.840.1.113883.6.285",
+              "display": "Annual Wellness Visit",
               "codeSystem": "HCPCS",
               "version": null,
               "_type": "QDM::Code"
@@ -179,8 +179,8 @@
               "code": "129151000119102",
               "codeSystem": "SNOMED-CT",
               "version": null,
-              "descriptor": null,
-              "codeSystemOid": "2.16.840.1.113883.6.96"
+              "display": null,
+              "system": "2.16.840.1.113883.6.96"
             }
           },
           {
@@ -192,8 +192,8 @@
               "code": "129151000119102",
               "codeSystem": "SNOMED-CT",
               "version": null,
-              "descriptor": null,
-              "codeSystemOid": "2.16.840.1.113883.6.96"
+              "display": null,
+              "system": "2.16.840.1.113883.6.96"
             }
           }
         ],
@@ -201,7 +201,7 @@
           {
             "codeSystem": "LOINC",
             "code": "11218-5",
-            "codeSystemOid": "2.16.840.1.113883.6.1"
+            "system": "2.16.840.1.113883.6.1"
           }
         ],
         "description": "Laboratory Test, Performed: Urine Protein Tests",
@@ -229,8 +229,8 @@
           "code": "129151000119102",
           "codeSystem": "SNOMED-CT",
           "version": null,
-          "descriptor": "Kidney Failure",
-          "codeSystemOid": "2.16.840.1.113883.6.96"
+          "display": "Kidney Failure",
+          "system": "2.16.840.1.113883.6.96"
         },
         "resultDatetime": null,
         "status": null,
@@ -246,7 +246,7 @@
           {
             "codeSystem": "LOINC",
             "code": "11218-5",
-            "codeSystemOid": "2.16.840.1.113883.6.1"
+            "system": "2.16.840.1.113883.6.1"
           }
         ],
         "description": "Laboratory Test, Performed: Urine Protein Tests",
@@ -284,8 +284,8 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystemOid": "2.16.840.1.113883.6.1",
-            "descriptor": null,
+            "system": "2.16.840.1.113883.6.1",
+            "display": null,
             "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
@@ -309,8 +309,8 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
-            "descriptor": "Not Hispanic or Latino",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "Not Hispanic or Latino",
             "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
@@ -334,8 +334,8 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
-            "descriptor": "American Indian or Alaska Native",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "American Indian or Alaska Native",
             "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
@@ -359,8 +359,8 @@
         "dataElementCodes": [
           {
             "code": "F",
-            "codeSystemOid": "2.16.840.1.113883.5.1",
-            "descriptor": "F",
+            "system": "2.16.840.1.113883.5.1",
+            "display": "F",
             "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"

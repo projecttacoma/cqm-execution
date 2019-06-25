@@ -10,17 +10,17 @@
         {
           "codeSystem": "SNOMED-CT",
           "code": "125851000119106",
-          "codeSystemOid": "2.16.840.1.113883.6.96"
+          "system": "2.16.840.1.113883.6.96"
         },
         {
           "codeSystem": "ICD-9-CM",
           "code": "291.0",
-          "codeSystemOid": "2.16.840.1.113883.6.103"
+          "system": "2.16.840.1.113883.6.103"
         },
         {
           "codeSystem": "ICD-10-CM",
           "code": "F10.10",
-          "codeSystemOid": "2.16.840.1.113883.6.90"
+          "system": "2.16.840.1.113883.6.90"
           
         }
       ],
@@ -45,7 +45,7 @@
         {
           "codeSystem": "CPT",
           "code": "99239",
-          "codeSystemOid": "2.16.840.1.113883.6.12"
+          "system": "2.16.840.1.113883.6.12"
         }
       ],
       "description": "Encounter, Performed: Discharge Services - Hospital Inpatient",
@@ -81,7 +81,7 @@
         {
           "codeSystem": "CPT",
           "code": "90832",
-          "codeSystemOid": "2.16.840.1.113883.6.12"
+          "system": "2.16.840.1.113883.6.12"
         }
       ],
       "description": "Encounter, Performed: Psych Visit - Psychotherapy",
@@ -116,8 +116,8 @@
         {
           "code": "21112-8",
           "codeSystem": "LOINC",
-          "descriptor": null,
-          "codeSystemOid": "2.16.840.1.113883.6.1",
+          "display": null,
+          "system": "2.16.840.1.113883.6.1",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -134,8 +134,8 @@
         {
           "code": "2186-5",
           "codeSystem": "CDC Race",
-          "descriptor": "Not Hispanic or Latino",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "display": "Not Hispanic or Latino",
+          "system": "2.16.840.1.113883.6.238",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -152,8 +152,8 @@
         {
           "code": "1002-5",
           "codeSystem": "CDC Race",
-          "descriptor": "American Indian or Alaska Native",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "display": "American Indian or Alaska Native",
+          "system": "2.16.840.1.113883.6.238",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -170,8 +170,8 @@
         {
           "code": "M",
           "codeSystem": "AdministrativeGender",
-          "descriptor": "M",
-          "codeSystemOid": "2.16.840.1.113883.5.1",
+          "display": "M",
+          "system": "2.16.840.1.113883.5.1",
           "version": null,
           "_type": "QDM::Code"
         }

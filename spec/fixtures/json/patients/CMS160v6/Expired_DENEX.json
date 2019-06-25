@@ -48,12 +48,12 @@
           {
             "codeSystem": "SNOMED-CT",
             "code": "19694002",
-            "codeSystemOid": "2.16.840.1.113883.6.96"
+            "system": "2.16.840.1.113883.6.96"
           },
           {
             "codeSystem": "ICD-10-CM",
             "code": "F34.1",
-            "codeSystemOid": "2.16.840.1.113883.6.90"
+            "system": "2.16.840.1.113883.6.90"
           }
         ],
         "description": "Diagnosis: Dysthymia",
@@ -84,7 +84,7 @@
           {
             "codeSystem": "CPT",
             "code": "99201",
-            "codeSystemOid": "2.16.840.1.113883.6.12"
+            "system": "2.16.840.1.113883.6.12"
           }
         ],
         "description": "Encounter, Performed: Office Visit",
@@ -125,8 +125,8 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystemOid": "2.16.840.1.113883.6.1",
-            "descriptor": null,
+            "system": "2.16.840.1.113883.6.1",
+            "display": null,
             "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
@@ -150,8 +150,8 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
-            "descriptor": "Not Hispanic or Latino",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "Not Hispanic or Latino",
             "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
@@ -176,8 +176,8 @@
         "dataElementCodes": [
           {
             "code": "419099009",
-            "codeSystemOid": "2.16.840.1.113883.6.96",
-            "descriptor": null,
+            "system": "2.16.840.1.113883.6.96",
+            "display": null,
             "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
@@ -202,8 +202,8 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
-            "descriptor": "American Indian or Alaska Native",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "American Indian or Alaska Native",
             "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
@@ -227,8 +227,8 @@
         "dataElementCodes": [
           {
             "code": "M",
-            "codeSystemOid": "2.16.840.1.113883.5.1",
-            "descriptor": "M",
+            "system": "2.16.840.1.113883.5.1",
+            "display": "M",
             "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"

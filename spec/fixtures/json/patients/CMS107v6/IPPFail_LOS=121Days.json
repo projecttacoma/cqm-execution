@@ -32,7 +32,7 @@
           {
             "codeSystem": "SNOMED-CT",
             "code": "32485007",
-            "codeSystemOid": "2.16.840.1.113883.6.96"
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
@@ -41,8 +41,8 @@
             "code": "111297002",
             "codeSystem": "SNOMED-CT",
             "version": null,
-            "descriptor": "Ischemic Stroke",
-            "codeSystemOid": "2.16.840.1.113883.6.96"
+            "display": "Ischemic Stroke",
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "dischargeDisposition": null,
@@ -63,8 +63,8 @@
         "principalDiagnosis": {
           "code": "111297002",
           "codeSystem": "SNOMED-CT",
-          "descriptor": "Ischemic Stroke",
-          "codeSystemOid": "2.16.840.1.113883.6.96",
+          "display": "Ischemic Stroke",
+          "system": "2.16.840.1.113883.6.96",
           "version": null
         },
         "qdmCategory": "encounter",
@@ -85,8 +85,8 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystemOid": "2.16.840.1.113883.6.1",
-            "descriptor": null,
+            "system": "2.16.840.1.113883.6.1",
+            "display": null,
             "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
@@ -110,8 +110,8 @@
         "dataElementCodes": [
           {
             "code": "2135-2",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
-            "descriptor": "Hispanic Or Latino",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "Hispanic Or Latino",
             "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
@@ -135,8 +135,8 @@
         "dataElementCodes": [
           {
             "code": "2076-8",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
-            "descriptor": "Native Hawaiian or Other Pacific Islander",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "Native Hawaiian or Other Pacific Islander",
             "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
@@ -160,8 +160,8 @@
         "dataElementCodes": [
           {
             "code": "F",
-            "codeSystemOid": "2.16.840.1.113883.5.1",
-            "descriptor": "F",
+            "system": "2.16.840.1.113883.5.1",
+            "display": "F",
             "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"

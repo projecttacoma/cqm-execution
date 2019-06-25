@@ -50,7 +50,7 @@
           {
             "codeSystem": "LOINC",
             "code": "44261-6",
-            "codeSystemOid": "2.16.840.1.113883.6.1"
+            "system": "2.16.840.1.113883.6.1"
           }
         ],
         "description": "Assessment, Performed: PHQ-9 Tool",
@@ -78,7 +78,7 @@
           {
             "codeSystem": "ICD-10-CM",
             "code": "F33.9",
-            "codeSystemOid": "2.16.840.1.113883.6.90"
+            "system": "2.16.840.1.113883.6.90"
           }
         ],
         "description": "Diagnosis: Major Depression Including Remission",
@@ -109,7 +109,7 @@
           {
             "codeSystem": "SNOMED-CT",
             "code": "81319007",
-            "codeSystemOid": "2.16.840.1.113883.6.96"
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Diagnosis: Bipolar Disorder",
@@ -140,7 +140,7 @@
           {
             "codeSystem": "CPT",
             "code": "99201",
-            "codeSystemOid": "2.16.840.1.113883.6.12"
+            "system": "2.16.840.1.113883.6.12"
           }
         ],
         "description": "Encounter, Performed: Office Visit",
@@ -181,8 +181,8 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystemOid": "2.16.840.1.113883.6.1",
-            "descriptor": null,
+            "system": "2.16.840.1.113883.6.1",
+            "display": null,
             "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
@@ -206,8 +206,8 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
-            "descriptor": "Not Hispanic or Latino",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "Not Hispanic or Latino",
             "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
@@ -231,8 +231,8 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
-            "descriptor": "American Indian or Alaska Native",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "American Indian or Alaska Native",
             "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
@@ -256,8 +256,8 @@
         "dataElementCodes": [
           {
             "code": "F",
-            "codeSystemOid": "2.16.840.1.113883.5.1",
-            "descriptor": "F",
+            "system": "2.16.840.1.113883.5.1",
+            "display": "F",
             "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
