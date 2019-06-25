@@ -30,7 +30,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "4525004",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -73,7 +72,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "32485007",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -82,7 +80,6 @@
         "diagnoses": [
           {
             "code": "111297002",
-            "codeSystem": "SNOMED-CT",
             "version": null,
             "display": "Ischemic Stroke",
             "system": "2.16.840.1.113883.6.96"
@@ -90,7 +87,6 @@
         ],
         "dischargeDisposition": {
           "code": "10161009",
-          "codeSystem": "SNOMED-CT",
           "display": "Discharge To Home Or Police Custody",
           "system": "2.16.840.1.113883.6.96",
           "version": null
@@ -111,7 +107,6 @@
         "negationRationale": null,
         "principalDiagnosis": {
           "code": "111297002",
-          "codeSystem": "SNOMED-CT",
           "display": "Ischemic Stroke",
           "system": "2.16.840.1.113883.6.96",
           "version": null
@@ -133,7 +128,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "133918004",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -186,7 +180,6 @@
             "code": "2135-2",
             "system": "2.16.840.1.113883.6.238",
             "display": "Hispanic Or Latino",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -211,7 +204,6 @@
             "code": "2076-8",
             "system": "2.16.840.1.113883.6.238",
             "display": "Native Hawaiian or Other Pacific Islander",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -236,7 +228,6 @@
             "code": "F",
             "system": "2.16.840.1.113883.5.1",
             "display": "F",
-            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }

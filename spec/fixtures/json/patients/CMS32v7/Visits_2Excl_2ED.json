@@ -65,7 +65,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "4525004",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -74,7 +73,6 @@
         "diagnoses": [
           {
             "code": "10278007",
-            "codeSystem": "SNOMED-CT",
             "version": null,
             "display": "Psychiatric/Mental Health Diagnosis",
             "system": "2.16.840.1.113883.6.96"
@@ -82,7 +80,6 @@
         ],
         "dischargeDisposition": {
           "code": "371828006",
-          "codeSystem": "SNOMED-CT",
           "display": "Patient deceased during stay (discharge status = dead) (finding)",
           "system": "2.16.840.1.113883.6.96",
           "version": null
@@ -103,7 +100,6 @@
         "negationRationale": null,
         "principalDiagnosis": {
           "code": "10278007",
-          "codeSystem": "SNOMED-CT",
           "display": "Psychiatric/Mental Health Diagnosis",
           "system": "2.16.840.1.113883.6.96",
           "version": null
@@ -126,7 +122,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "4525004",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -135,7 +130,6 @@
         "diagnoses": [
           {
             "code": "10278007",
-            "codeSystem": "SNOMED-CT",
             "version": null,
             "display": "Psychiatric/Mental Health Diagnosis",
             "system": "2.16.840.1.113883.6.96"
@@ -143,7 +137,6 @@
         ],
         "dischargeDisposition": {
           "code": "371828006",
-          "codeSystem": "SNOMED-CT",
           "display": "Patient deceased during stay (discharge status = dead) (finding)",
           "system": "2.16.840.1.113883.6.96",
           "version": null
@@ -164,7 +157,6 @@
         "negationRationale": null,
         "principalDiagnosis": {
           "code": "10278007",
-          "codeSystem": "SNOMED-CT",
           "display": "Psychiatric/Mental Health Diagnosis",
           "system": "2.16.840.1.113883.6.96",
           "version": null
@@ -187,7 +179,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "183452005",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -257,7 +248,6 @@
             "code": "2186-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "Not Hispanic or Latino",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -282,7 +272,6 @@
             "code": "1002-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "American Indian or Alaska Native",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -307,7 +296,6 @@
             "code": "M",
             "system": "2.16.840.1.113883.5.1",
             "display": "M",
-            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }

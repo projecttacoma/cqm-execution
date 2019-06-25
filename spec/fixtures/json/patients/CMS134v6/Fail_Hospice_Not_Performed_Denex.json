@@ -30,7 +30,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "190372001",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -61,7 +60,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "HCPCS",
             "code": "G0438",
             "system": "2.16.840.1.113883.6.285"
           }
@@ -103,7 +101,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "385763009",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -117,7 +114,6 @@
         },
         "negationRationale": {
           "code": "4525004",
-          "codeSystem": "SNOMED-CT",
           "display": null,
           "system": "2.16.840.1.113883.6.96",
           "version": null
@@ -162,7 +158,6 @@
             "code": "2186-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "Not Hispanic or Latino",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -187,7 +182,6 @@
             "code": "1002-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "American Indian or Alaska Native",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -212,7 +206,6 @@
             "code": "F",
             "system": "2.16.840.1.113883.5.1",
             "display": "F",
-            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }

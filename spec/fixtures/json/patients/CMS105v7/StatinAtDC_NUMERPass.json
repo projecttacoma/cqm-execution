@@ -7,7 +7,6 @@
       "authorDatetime": "2012-08-21T04:00:00.000-04:00",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
           "system": "2.16.840.1.113883.6.96",
           "code": "32485007"
         }
@@ -16,7 +15,6 @@
       "diagnoses": [
         {
           "code": "111297002",
-          "codeSystem": "SNOMED-CT",
           "system": "2.16.840.1.113883.6.96",
           "version": null,
           "display": "Ischemic Stroke"
@@ -39,7 +37,6 @@
       "negationRationale": null,
       "principalDiagnosis": {
         "code": "111297002",
-        "codeSystem": "SNOMED-CT",
         "display": "Ischemic Stroke",
         "system": "2.16.840.1.113883.6.96",
         "version": null
@@ -59,7 +56,6 @@
       "authorDatetime": "2012-12-19T03:15:00.000-05:00",
       "dataElementCodes": [
         {
-          "codeSystem": "RxNorm",
           "system": "2.16.840.1.113883.6.88",
           "code": "259255"
         }
@@ -88,7 +84,6 @@
       "dataElementCodes": [
         {
           "code": "21112-8",
-          "codeSystem": "LOINC",
           "display": null,
           "system": null,
           "version": null,
@@ -111,7 +106,6 @@
       "dataElementCodes": [
         {
           "code": "2186-5",
-          "codeSystem": "CDC Race",
           "display": "Not Hispanic or Latino",
           "system": "2.16.840.1.113883.6.238",
           "version": null,
@@ -134,7 +128,6 @@
       "dataElementCodes": [
         {
           "code": "1002-5",
-          "codeSystem": "CDC Race",
           "display": "American Indian or Alaska Native",
           "system": "2.16.840.1.113883.6.238",
           "version": null,
@@ -157,7 +150,6 @@
       "dataElementCodes": [
         {
           "code": "M",
-          "codeSystem": "AdministrativeGender",
           "display": "M",
           "system": "2.16.840.1.113883.5.1",
           "version": null,

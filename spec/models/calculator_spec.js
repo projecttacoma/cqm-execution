@@ -835,10 +835,10 @@ describe('Calculator', () => {
       const resultsByStatement = result.statement_results_by_statement();
 
       // The expected strings are from the front end with PatientCharacteristic CODEs fixed
-      expect(resultsByStatement['DiabetesFootExam']['SDE Ethnicity']['pretty']).toEqual('[PatientCharacteristicEthnicity\nCODE: CDC Race 2186-5]');
+      expect(resultsByStatement['DiabetesFootExam']['SDE Ethnicity']['pretty']).toEqual('[PatientCharacteristicEthnicity\nCODE: CDCREC 2186-5]');
       const expectedPayer = '[Patient Characteristic Payer: Payer\nSTART: 07/25/2012 8:00 AM\nSTOP: 07/25/2012 8:15 AM\nCODE: Source of Payment Typology 1]';
       expect(resultsByStatement['DiabetesFootExam']['SDE Payer']['pretty']).toEqual(expectedPayer);
-      expect(resultsByStatement['DiabetesFootExam']['SDE Race']['pretty']).toEqual('[PatientCharacteristicRace\nCODE: CDC Race 1002-5]');
+      expect(resultsByStatement['DiabetesFootExam']['SDE Race']['pretty']).toEqual('[PatientCharacteristicRace\nCODE: CDCREC 1002-5]');
       expect(resultsByStatement['DiabetesFootExam']['SDE Sex']['pretty']).toEqual('[PatientCharacteristicSex\nCODE: AdministrativeGender M]');
     });
   });

@@ -1274,7 +1274,7 @@ module.exports = class ResultsHelpers {
         endTimeString = `STOP: ${moment.utc(endDateTime.toString()).format('MM/DD/YYYY h:mm A')}\n`;
       }
 
-      const codeDisplay = result.dataElementCodes && result.dataElementCodes[0] ? `CODE: ${result.dataElementCodes[0].codeSystem} ${result.dataElementCodes[0].code}` : '';
+      const codeDisplay = result.dataElementCodes && result.dataElementCodes[0] ? `CODE: ${nameOidHash[result.dataElementCodes[0].system] || result.dataElementCodes[0].system} ${result.dataElementCodes[0].code}` : '';
       // Add indentation
       const returnString = `${description}${startTimeString}${endTimeString}${codeDisplay}`;
       return returnString.replace(/\n/g, `\n${currentIndentation}${keyIndentation}`);

@@ -31,7 +31,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "183452005",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -40,7 +39,6 @@
         "diagnoses": [
           {
             "code": "10273003",
-            "codeSystem": "SNOMED-CT",
             "version": null,
             "display": "Acute or Evolving MI",
             "system": "2.16.840.1.113883.6.96"
@@ -54,7 +52,6 @@
               "code": "183452005",
               "system": "2.16.840.1.113883.6.96",
               "display": "Encounter Inpatient",
-              "codeSystem": "SNOMED-CT",
               "version": null,
               "_type": "QDM::Code"
             },
@@ -81,7 +78,6 @@
         "negationRationale": null,
         "principalDiagnosis": {
           "code": "10273003",
-          "codeSystem": "SNOMED-CT",
           "display": "Acute or Evolving MI",
           "system": "2.16.840.1.113883.6.96",
           "version": null
@@ -103,7 +99,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "RxNorm",
             "code": "1804799",
             "system": "2.16.840.1.113883.6.88"
           }
@@ -140,7 +135,6 @@
         ],
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "164847006",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -180,12 +174,10 @@
         ],
         "dataElementCodes": [
           {
-            "codeSystem": "ICD-10-PCS",
             "code": "0270346",
             "system": "2.16.840.1.113883.6.4"
           },
           {
-            "codeSystem": "SNOMED-CT",
             "code": "11101003",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -249,7 +241,6 @@
             "code": "2186-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "Not Hispanic or Latino",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -274,7 +265,6 @@
             "code": "1002-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "American Indian or Alaska Native",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -299,7 +289,6 @@
             "code": "M",
             "system": "2.16.840.1.113883.5.1",
             "display": "M",
-            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }

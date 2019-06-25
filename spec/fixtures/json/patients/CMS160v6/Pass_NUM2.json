@@ -48,7 +48,6 @@
         ],
         "dataElementCodes": [
           {
-            "codeSystem": "LOINC",
             "code": "44261-6",
             "system": "2.16.840.1.113883.6.1"
           }
@@ -76,7 +75,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "ICD-10-CM",
             "code": "F33.9",
             "system": "2.16.840.1.113883.6.90"
           }
@@ -107,7 +105,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "81319007",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -138,7 +135,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "CPT",
             "code": "99201",
             "system": "2.16.840.1.113883.6.12"
           }
@@ -208,7 +204,6 @@
             "code": "2186-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "Not Hispanic or Latino",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -233,7 +228,6 @@
             "code": "1002-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "American Indian or Alaska Native",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -258,7 +252,6 @@
             "code": "F",
             "system": "2.16.840.1.113883.5.1",
             "display": "F",
-            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }

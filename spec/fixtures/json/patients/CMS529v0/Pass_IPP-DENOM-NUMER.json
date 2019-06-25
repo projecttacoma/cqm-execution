@@ -28,7 +28,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "Source of Payment Typology",
             "code": "1",
             "system": "2.16.840.1.113883.3.221.5"
           }
@@ -51,7 +50,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "112689000",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -121,7 +119,6 @@
             "code": "2186-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "Not Hispanic or Latino",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -146,7 +143,6 @@
             "code": "1002-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "American Indian or Alaska Native",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -171,7 +167,6 @@
             "code": "M",
             "system": "2.16.840.1.113883.5.1",
             "display": "M",
-            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }

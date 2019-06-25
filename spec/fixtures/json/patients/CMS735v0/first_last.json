@@ -10,7 +10,6 @@
       ],
       "dataElementCodes": [
         {
-          "codeSystem": "LOINC",
           "code": "12773-8",
           "system": "2.16.840.1.113883.6.1"
         }
@@ -40,7 +39,6 @@
       "dataElementCodes": [
         {
           "code": "21112-8",
-          "codeSystem": "LOINC",
           "display": null,
           "system": "2.16.840.1.113883.6.1",
           "version": null,
@@ -58,7 +56,6 @@
       "dataElementCodes": [
         {
           "code": "2186-5",
-          "codeSystem": "CDC Race",
           "display": "Not Hispanic or Latino",
           "system": "2.16.840.1.113883.6.238",
           "version": null,
@@ -76,7 +73,6 @@
       "dataElementCodes": [
         {
           "code": "1002-5",
-          "codeSystem": "CDC Race",
           "display": "American Indian or Alaska Native",
           "system": "2.16.840.1.113883.6.238",
           "version": null,
@@ -94,7 +90,6 @@
       "dataElementCodes": [
         {
           "code": "M",
-          "codeSystem": "AdministrativeGender",
           "display": "M",
           "system": "2.16.840.1.113883.5.1",
           "version": null,

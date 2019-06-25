@@ -30,7 +30,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "190372001",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -61,7 +60,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
             "code": "236499007",
             "system": "2.16.840.1.113883.6.96"
           }
@@ -92,7 +90,6 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "HCPCS",
             "code": "G0438",
             "system": "2.16.840.1.113883.6.285"
           }
@@ -109,7 +106,6 @@
               "code": "G0438",
               "system": "2.16.840.1.113883.6.285",
               "display": "Annual Wellness Visit",
-              "codeSystem": "HCPCS",
               "version": null,
               "_type": "QDM::Code"
             },
@@ -128,7 +124,6 @@
               "code": "G0438",
               "system": "2.16.840.1.113883.6.285",
               "display": "Annual Wellness Visit",
-              "codeSystem": "HCPCS",
               "version": null,
               "_type": "QDM::Code"
             },
@@ -177,7 +172,6 @@
             },
             "code": {
               "code": "129151000119102",
-              "codeSystem": "SNOMED-CT",
               "version": null,
               "display": null,
               "system": "2.16.840.1.113883.6.96"
@@ -190,7 +184,6 @@
             },
             "code": {
               "code": "129151000119102",
-              "codeSystem": "SNOMED-CT",
               "version": null,
               "display": null,
               "system": "2.16.840.1.113883.6.96"
@@ -199,7 +192,6 @@
         ],
         "dataElementCodes": [
           {
-            "codeSystem": "LOINC",
             "code": "11218-5",
             "system": "2.16.840.1.113883.6.1"
           }
@@ -227,7 +219,6 @@
         },
         "result": {
           "code": "129151000119102",
-          "codeSystem": "SNOMED-CT",
           "version": null,
           "display": "Kidney Failure",
           "system": "2.16.840.1.113883.6.96"
@@ -244,7 +235,6 @@
         ],
         "dataElementCodes": [
           {
-            "codeSystem": "LOINC",
             "code": "11218-5",
             "system": "2.16.840.1.113883.6.1"
           }
@@ -311,7 +301,6 @@
             "code": "2186-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "Not Hispanic or Latino",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -336,7 +325,6 @@
             "code": "1002-5",
             "system": "2.16.840.1.113883.6.238",
             "display": "American Indian or Alaska Native",
-            "codeSystem": "CDC Race",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -361,7 +349,6 @@
             "code": "F",
             "system": "2.16.840.1.113883.5.1",
             "display": "F",
-            "codeSystem": "AdministrativeGender",
             "version": null,
             "_type": "QDM::Code"
           }

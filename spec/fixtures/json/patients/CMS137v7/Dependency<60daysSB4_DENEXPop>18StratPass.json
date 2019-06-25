@@ -8,17 +8,14 @@
       "category": "condition",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
           "code": "125851000119106",
           "system": "2.16.840.1.113883.6.96"
         },
         {
-          "codeSystem": "ICD-9-CM",
           "code": "291.0",
           "system": "2.16.840.1.113883.6.103"
         },
         {
-          "codeSystem": "ICD-10-CM",
           "code": "F10.10",
           "system": "2.16.840.1.113883.6.90"
         }
@@ -42,17 +39,15 @@
       "category": "condition",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
           "code": "125851000119106",
           "system": "2.16.840.1.113883.6.96"
         },
         {
-          "codeSystem": "ICD-9-CM",
           "code": "291.0",
           "system": "2.16.840.1.113883.6.103"
         },
         {
-          "codeSystem": "ICD-10-CM",
+          "coeSystem": "ICD-10-CM",
           "code": "F10.10",
           "system": "2.16.840.1.113883.6.90"
         }
@@ -76,7 +71,6 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "CPT",
           "code": "99220",
           "system": "2.16.840.1.113883.6.12"
         }
@@ -112,7 +106,6 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
           "code": "424589009",
           "system": "2.16.840.1.113883.6.96"
         }
@@ -148,7 +141,6 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
           "code": "408935001",
           "system": "2.16.840.1.113883.6.96"
         }
@@ -184,7 +176,6 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
           "code": "408935001",
           "system": "2.16.840.1.113883.6.96"
         }
@@ -220,7 +211,6 @@
       "dataElementCodes": [
         {
           "code": "21112-8",
-          "codeSystem": "LOINC",
           "display": null,
           "system": "2.16.840.1.113883.6.1",
           "version": null,
@@ -238,7 +228,6 @@
       "dataElementCodes": [
         {
           "code": "2186-5",
-          "codeSystem": "CDC Race",
           "display": "Not Hispanic or Latino",
           "system": "2.16.840.1.113883.6.238",
           "version": null,
@@ -256,7 +245,6 @@
       "dataElementCodes": [
         {
           "code": "2131-1",
-          "codeSystem": "CDC Race",
           "display": "Other",
           "system": "2.16.840.1.113883.6.238",
           "version": null,
@@ -274,7 +262,6 @@
       "dataElementCodes": [
         {
           "code": "M",
-          "codeSystem": "AdministrativeGender",
           "display": "M",
           "system": "2.16.840.1.113883.5.1",
           "version": null,
