@@ -65991,13 +65991,12 @@ function RecursiveCast(any) {
   if (any && any.value && any.unit) {
     return new cql.Quantity(any);
   }
-  if (any && any.code && any.system) {
-    if (typeof any.code === 'undefined') {
-      throw new Error(`Code: ${any} does not have a code`);
-    } else if (typeof any.system === 'undefined') {
-      throw new Error(`Code: ${any} does not have a code system oid`);
-    }
 
+  if (any.isCode) {
+    return any;
+  }
+
+  if (any && any.code && any.system) {
     const val = { code: any.code, system: any.system };
     val.display = (typeof any.display !== 'undefined') ? any.display : null;
     val.version = (typeof any.version !== 'undefined') ? any.version : null;
@@ -66057,16 +66056,13 @@ Code.prototype = Object.create(mongoose.SchemaType.prototype);
 
 Code.prototype.cast = (code) => {
   if (code != null) {
+    // return code if it doesn't even need casting
+    if (code.isCode) {
+      return code;
+    }
     // handles codes that have not yet been cast to a code and those that have already been cast to a code
     if (code.code && code.system) {
-      if (typeof code.code === 'undefined') {
-        throw new Error(`Code: ${code} does not have a code`);
-      } else if (typeof code.system === 'undefined' && typeof code.system === 'undefined') {
-        throw new Error(`Code: ${code} does not have a system oid`);
-      }
-
       const val = { code: code.code, system: code.system };
-
       val.display = (typeof code.display !== 'undefined') ? code.display : null;
       val.version = (typeof code.version !== 'undefined') ? code.version : null;
 
@@ -66110,7 +66106,12 @@ function DataElementSchema(add, options) {
   // Returns all of the codes on this data element in a format usable by
   // the cql-execution framework.
   extended.methods.getCode = function getCode() {
-    return this.dataElementCodes.map(code => new cql.Code(code.code, code.system, code.version, code.display));
+    return this.dataElementCodes.map((code) => {
+      if (code.isCode) {
+        return code;
+      }
+      return new cql.Code(code.code, code.system, code.version, code.display);
+    });
   };
 
   // Return the first code on this data element in a format usable by
@@ -66118,6 +66119,9 @@ function DataElementSchema(add, options) {
   extended.methods.code = function code() {
     if (this.dataElementCodes && this.dataElementCodes[0]) {
       const qdmCode = this.dataElementCodes[0];
+      if (qdmCode.isCode) {
+        return qdmCode;
+      }
       return new cql.Code(qdmCode.code, qdmCode.system, qdmCode.version, qdmCode.display);
     }
     return null;
