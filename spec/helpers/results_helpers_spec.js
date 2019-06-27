@@ -61,7 +61,7 @@ describe('ResultsHelpers', () => {
         const resultsByStatement = result.statement_results_by_statement();
 
         expect(resultsByStatement.TJC_Overall['Encounter with Principal Diagnosis and Age'].pretty).toEqual('[Encounter, Performed: ' +
-        'Non-Elective Inpatient Encounter\nSTART: 10/10/2012 9:30 AM\nSTOP: 10/12/2012 12:15 AM\nCODE: SNOMED-CT 32485007]');
+        'Non-Elective Inpatient Encounter\nSTART: 10/10/2012 9:30 AM\nSTOP: 10/12/2012 12:15 AM\nCODE: SNOMEDCT 32485007]');
         expect(resultsByStatement.StrokeEducation.Numerator.pretty).toEqual('UNHIT');
       });
 
@@ -99,7 +99,7 @@ describe('ResultsHelpers', () => {
 
         expect(resultsByStatement.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Observation'].pretty).toEqual('FUNCTION');
         expect(resultsByStatement.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['ED Visit'].pretty).toEqual('[Encounter, Performed: ' +
-        'Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMED-CT 4525004]');
+        'Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMEDCT 4525004]');
         expect(resultsByStatement.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Population Exclusions'].pretty).toEqual('FALSE ([])');
       });
 
@@ -113,7 +113,7 @@ describe('ResultsHelpers', () => {
 
         expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Observation'].pretty).toEqual('FUNCTION');
         expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['ED Visit'].pretty).toEqual('[Encounter, Performed: ' +
-        'Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMED-CT 4525004]');
+        'Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMEDCT 4525004]');
         expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Population Exclusions'].pretty).toEqual('FALSE ([])');
       });
 
