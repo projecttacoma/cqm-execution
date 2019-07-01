@@ -67,6 +67,8 @@ Starting with version **2.0.0** released on !!date!!, cqm-execution versioning h
 
 * **Y** indicates major changes (incompatible API changes)
 
+* **Z** indicates minor changes (added functionality in a backwards-compatible manner) and patch changes (backwards-compatible bug fixes)
+
 For the versions available, see [tags on this repository](https://github.com/projecttacoma/cqm-execution/tags).
 
 
