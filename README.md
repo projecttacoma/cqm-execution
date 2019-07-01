@@ -57,15 +57,15 @@ const calculationResults = Calculator.calculate(measure, patients, valueSetsByOi
 
 ## Versioning
 
-Starting with version **1.1.0.2** released on !!date!!, cqm-execution versioning has the format **W.X.Y.Z**, where:
+Starting with version **2.0.0** released on !!date!!, cqm-execution versioning has the format **X.Y.Z**, where:
 
-* **W** maps to a version of CQL. See the table below to see the existing mapping to CQL versions.
+* **X** maps to a version of CQL. See the table below to see the existing mapping to CQL versions.
 
-  | W | CQL version |
+  | X | CQL version |
   | --- | --- |
-  | 1 | 1.3 |
+  | 2 | 1.3 |
 
-* **X.Y.Z** uses [SemVer](http://semver.org/) for versioning. **X.Y.Z** starts at 0.0.0 when **W** is incremented.
+* **Y** indicates major changes (incompatible API changes)
 
 For the versions available, see [tags on this repository](https://github.com/projecttacoma/cqm-execution/tags).
 
