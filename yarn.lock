@@ -439,19 +439,18 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cql-execution@^1.3.3:
+"cql-execution@https://github.com/cqframework/cql-execution":
   version "1.3.4"
-  resolved "https://registry.yarnpkg.com/cql-execution/-/cql-execution-1.3.4.tgz#8b9be14756062318be708533436674675b1c5cfc"
-  integrity sha512-o0NxnrrWke5mQLco+8CBl/9T8PtQtDsuvJcwi4D9j//IhTlU2xjbuZxfrTo9D7nS85RuhAHJwpXqoAXcSaE6cg==
+  resolved "https://github.com/cqframework/cql-execution#cf599c9720b5f0d1338d838d3059b11f52b9b91e"
   dependencies:
     moment "^2.20.1"
     ucum "0.0.7"
 
-"cqm-models@https://github.com/projecttacoma/cqm-models":
+"cqm-models@https://github.com/projecttacoma/cqm-models#new-cql":
   version "2.0.0"
-  resolved "https://github.com/projecttacoma/cqm-models#b2b5856295755ac4324d8326588cf9d18ae6fe98"
+  resolved "https://github.com/projecttacoma/cqm-models#cc2181dd117a545ac16704f05f5c4b40d844dacb"
   dependencies:
-    cql-execution "^1.3.3"
+    cql-execution "https://github.com/cqframework/cql-execution"
     mongoose "^5.4.14"
 
 create-ecdh@^4.0.0:

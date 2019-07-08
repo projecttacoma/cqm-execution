@@ -41,12 +41,12 @@ describe('ResultsHelpers', () => {
     });
 
     it('should properly print Quantity with unit', () => {
-      const quantity = new cql.Quantity({ value: 1, unit: 'g' });
+      const quantity = new cql.Quantity(1, 'g');
       expect(ResultsHelpers.prettyResult(quantity)).toEqual('QUANTITY: 1 g');
     });
 
     it('should properly print Quantity without unit', () => {
-      const quantity = new cql.Quantity({ value: 5 });
+      const quantity = new cql.Quantity(5, '');
       expect(ResultsHelpers.prettyResult(quantity)).toEqual('QUANTITY: 5');
     });
 
