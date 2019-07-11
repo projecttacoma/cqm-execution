@@ -1,0 +1,307 @@
+{
+  "birthDatetime": "1994-08-21T03:00:00.000-04:00",
+  "bundleId": "578565956c5d1c3d49000007",
+  "dataElements": [
+    {
+      "admissionSource": null,
+      "authorDatetime": "2012-08-21T04:00:00.000-04:00",
+      "dataElementCodes": [
+        {
+          "system": "2.16.840.1.113883.6.96",
+          "code": "32485007"
+        }
+      ],
+      "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+      "diagnoses": [
+        {
+          "code": "111297002",
+          "system": "2.16.840.1.113883.6.96",
+          "version": null,
+          "display": "Ischemic Stroke"
+        }
+      ],
+      "dischargeDisposition": null,
+      "facilityLocations": [
+
+      ],
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5aeb7730b848463d625b1e4b"
+      },
+      "lengthOfStay": {
+        "value": 120,
+        "unit": "days"
+      },
+      "negationRationale": null,
+      "principalDiagnosis": {
+        "code": "111297002",
+        "display": "Ischemic Stroke",
+        "system": "2.16.840.1.113883.6.96",
+        "version": null
+      },
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmVersion": "5.4",
+      "relevantPeriod": {
+        "low": "2012-08-21T08:00:00.000+00:00",
+        "high": "2012-12-19T08:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "_type": "QDM::EncounterPerformed"
+    },
+    {
+      "authorDatetime": "2012-12-19T03:15:00.000-05:00",
+      "dataElementCodes": [
+        {
+          "system": "2.16.840.1.113883.6.88",
+          "code": "259255"
+        }
+      ],
+      "daysSupplied": null,
+      "description": "Medication, Discharge: Statin Grouper",
+      "dosage": null,
+      "frequency": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.199",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5aeb7730b848463d625b1e4d"
+      },
+      "negationRationale": null,
+      "qdmCategory": "medication",
+      "qdmStatus": "discharge",
+      "qdmVersion": "5.4",
+      "refills": null,
+      "route": null,
+      "supply": null,
+      "_type": "QDM::MedicationDischarge"
+    },
+    {
+      "birthDatetime": "1994-08-21T03:00:00.000-04:00",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "display": null,
+          "system": null,
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5c4b5b3ad7c8ac3425339c32"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "2186-5",
+          "display": "Not Hispanic or Latino",
+          "system": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5c4b5b3ad7c8ac3425339c33"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "1002-5",
+          "display": "American Indian or Alaska Native",
+          "system": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5c4b5b3ad7c8ac3425339c34"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "race",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "M",
+          "display": "M",
+          "system": "2.16.840.1.113883.5.1",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5c4b5b3ad7c8ac3425339c35"
+      },
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.4",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "type": null,
+    "measure_ids": [
+      "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+      null
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "encounter",
+        "status": "performed",
+        "title": "Non-Elective Inpatient Encounter",
+        "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.424",
+        "type": "encounters",
+        "id": "OccurrenceANonElectiveInpatientEncounter2",
+        "start_date": 1345536000000,
+        "end_date": 1355904900000,
+        "value": [
+
+        ],
+        "field_values": {
+          "PRINCIPAL_DIAGNOSIS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+            "title": "Ischemic Stroke",
+            "field_title": "Principal Diagnosis"
+          }
+        },
+        "hqmf_set_id": "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+        "cms_id": "CMS12v0",
+        "codes": {
+          "SNOMED-CT": [
+            "32485007"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": {
+          "$oid": "5aeb7730b848463d625b1e4b"
+        },
+        "code_source": "DEFAULT",
+        "references": null,
+        "criteria_id": "1529d1365f4BC"
+      },
+      {
+        "negation": false,
+        "definition": "medication",
+        "status": "discharge",
+        "title": "Statin Grouper",
+        "description": "Medication, Discharge: Statin Grouper",
+        "code_list_id": "2.16.840.1.113762.1.4.1110.19",
+        "type": "medications",
+        "id": "StartsDuring_43239DBD_A8A6_4F29_9A7A_384431415282_E4D8B733_3A8E_4595_A156_EEAC44DD67ED",
+        "start_date": 1355904900000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+        "cms_id": "CMS12v0",
+        "criteria_id": "152d759349fsj",
+        "codes": {
+          "RxNorm": [
+            "259255"
+          ]
+        },
+        "fulfillments": null,
+        "dose_value": "",
+        "dose_unit": "mg",
+        "frequency_value": "",
+        "frequency_unit": "h",
+        "negation_code_list_id": "",
+        "coded_entry_id": {
+          "$oid": "5aeb7730b848463d625b1e4d"
+        },
+        "code_source": "DEFAULT"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": [
+      {
+        "measure_id": "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+        "population_index": 0,
+        "IPP": 1,
+        "DENOM": 1,
+        "DENEX": 0,
+        "NUMER": 1,
+        "DENEXCEP": 0
+      }
+    ],
+    "notes": "Patient receives statin medication at discharge",
+    "is_shared": false,
+    "origin_data": [
+      [
+        {
+          "patient_id": "547b7e1769702d7715120e00",
+          "measure_ids": [
+            "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9"
+          ],
+          "cms_id": "CMS104v5",
+          "user_id": "546130af69702d0650ce1000",
+          "user_email": "hmdmtjc@gmail.com"
+        },
+        [
+          {
+            "patient_id": "547b7e1769702d7715120e00",
+            "measure_ids": [
+              "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9"
+            ],
+            "cms_id": "CMS104v5",
+            "user_id": "546130af69702d0650ce1000",
+            "user_email": "hmdmtjc@gmail.com"
+          }
+        ]
+      ]
+    ],
+    "test_id": null,
+    "medical_record_number": "0162d937abf5c88e9e3f0386a1871b47",
+    "medical_record_assigner": "Bonnie",
+    "description": null,
+    "description_category": null,
+    "insurance_providers": "[]"
+  },
+  "familyName": "NUMERPass",
+  "givenNames": [
+    "StatinAtDC"
+  ],
+  "qdmVersion": "5.4"
+}

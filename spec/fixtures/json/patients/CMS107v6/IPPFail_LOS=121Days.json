@@ -14,26 +14,33 @@
   "givenNames": [
     "LOS=121Days"
   ],
+  "measure_ids": [
+    "217FDF0D-3D64-4720-9116-D5E5AFA27F2C"
+  ],
   "notes": "Patient is > 18 years, principal dx ischemic stroke, LOS > 120 days (121 days)",
+  "provider_ids": [
+
+  ],
   "qdmPatient": {
     "birthDatetime": "1985-09-18T04:00:00.000-04:00",
     "dataElements": [
       {
         "admissionSource": null,
         "authorDatetime": "2012-06-10T05:00:00.000-04:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
-            "code": "32485007"
+            "code": "32485007",
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Encounter, Performed: Non-Elective Inpatient Encounter",
         "diagnoses": [
           {
             "code": "111297002",
-            "codeSystem": "SNOMED-CT",
             "version": null,
-            "descriptor": "Ischemic Stroke"
+            "display": "Ischemic Stroke",
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "dischargeDisposition": null,
@@ -53,13 +60,13 @@
         "negationRationale": null,
         "principalDiagnosis": {
           "code": "111297002",
-          "codeSystem": "SNOMED-CT",
-          "descriptor": "Ischemic Stroke",
-          "codeSystemOid": null,
+          "display": "Ischemic Stroke",
+          "system": "2.16.840.1.113883.6.96",
           "version": null
         },
         "qdmCategory": "encounter",
         "qdmStatus": "performed",
+        "qdmTitle": "Encounter, Performed",
         "qdmVersion": "5.4",
         "relevantPeriod": {
           "low": "2012-06-10T09:00:00.000+00:00",
@@ -71,104 +78,105 @@
       },
       {
         "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
-            "descriptor": null,
-            "codeSystemOid": null,
+            "system": "2.16.840.1.113883.6.1",
+            "display": null,
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c83057a11e482dcc2ac6"
+          "value": "5cffb2d431fe5ffc71594bd9"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
+        "qdmTitle": "Patient Characteristic Birthdate",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicBirthdate"
       },
       {
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "2135-2",
-            "codeSystem": "CDC Race",
-            "descriptor": "Hispanic Or Latino",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "Hispanic Or Latino",
             "version": null,
             "_type": "QDM::Code"
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c83057a11e482dcc2ac7"
+          "value": "5cffb2d431fe5ffc71594bda"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
+        "qdmTitle": "Patient Characteristic Ethnicity",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicEthnicity"
       },
       {
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "2076-8",
-            "codeSystem": "CDC Race",
-            "descriptor": "Native Hawaiian or Other Pacific Islander",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "Native Hawaiian or Other Pacific Islander",
             "version": null,
             "_type": "QDM::Code"
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c83057a11e482dcc2ac8"
+          "value": "5cffb2d431fe5ffc71594bdb"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
+        "qdmTitle": "Patient Characteristic Race",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicRace"
       },
       {
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "F",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "F",
-            "codeSystemOid": "2.16.840.1.113883.5.1",
+            "system": "2.16.840.1.113883.5.1",
+            "display": "F",
             "version": null,
             "_type": "QDM::Code"
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c83057a11e482dcc2ac9"
+          "value": "5cffb2d431fe5ffc71594bdc"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",
+        "qdmTitle": "Patient Characteristic Sex",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicSex"
       }
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,

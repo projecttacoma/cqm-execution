@@ -7,12 +7,12 @@ describe('MeasureHelpers', () => {
       // Loads Anticoagulation Therapy for Atrial Fibrillation/Flutter measure.
       // This measure has the MAT global functions library included and the measure uses the
       // "CalendarAgeInYearsAt" function.
-      const measure = getJSONFixture('measures/CMS723v0/CMS723v0.json');
+      const measure = getJSONFixture('cqm_measures/CMS723v0/CMS723v0.json');
 
       // Find the localid for the specific statement with the global function ref.
-      const libraryName = 'AnticoagulationTherapyforAtrialFibrillationFlutter';
+      const library = measure.cql_libraries.find(lib => lib.library_name === 'AnticoagulationTherapyforAtrialFibrillationFlutter');
       const statementName = 'Encounter with Principal Diagnosis and Age';
-      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(measure, libraryName, statementName);
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
 
       // For the fixture loaded for this test it is known that the library reference is 49 and the functionRef itself is 55.
       expect(localIds[49]).not.toBeUndefined();
@@ -22,12 +22,12 @@ describe('MeasureHelpers', () => {
     it('finds localIds for library ExpressionRefs while finding localIds in statements', () => {
       // Loads Test104 aka. CMS13 measure.
       // This measure has both the TJC_Overall and MAT global libraries
-      const measure = getJSONFixture('measures/CMS13v2/CMS13v2.json');
+      const measure = getJSONFixture('cqm_measures/CMS13v2/CMS13v2.json');
 
       // Find the localid for the specific statement with the global function ref.
-      const libraryName = 'Test104';
+      const library = measure.cql_libraries.find(lib => lib.library_name === 'Test104');
       const statementName = 'Initial Population';
-      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(measure, libraryName, statementName);
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
 
       // For the fixture loaded for this test it is known that the library reference is 109 and the functionRef itself is 110.
       expect(localIds[109]).not.toBeUndefined();
@@ -37,12 +37,12 @@ describe('MeasureHelpers', () => {
     it('handles library ExpressionRefs with libraryRef embedded in the clause', () => {
       // Loads Test104 aka. CMS13 measure.
       // This measure has both the TJC_Overall and MAT global libraries
-      const measure = getJSONFixture('measures/CMS13v2/CMS13v2.json');
+      const measure = getJSONFixture('cqm_measures/CMS13v2/CMS13v2.json');
 
       // Find the localid for the specific statement with the global function ref.
-      const libraryName = 'Test104';
+      const library = measure.cql_libraries.find(lib => lib.library_name === 'Test104');
       const statementName = 'Comfort Measures during Hospitalization';
-      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(measure, libraryName, statementName);
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
 
       // For the fixture loaded for this test it is known that the library reference is 109 and the functionRef itself is 110.
       expect(localIds[42]).not.toBeUndefined();
@@ -54,11 +54,11 @@ describe('MeasureHelpers', () => {
   describe('findLocalIdForLibraryRef for functionRefs', () => {
     beforeEach(() => {
       // Use a chunk of this fixture for these tests.
-      const measure = getJSONFixture('measures/CMS723v0/CMS723v0.json');
+      const measure = getJSONFixture('cqm_measures/CMS723v0/CMS723v0.json');
 
       // The annotation for the 'Encounter with Principal Diagnosis and Age' will be used for these tests
       // it is known the functionRef 'global.CalendarAgeInYearsAt' is a '55' and the libraryRef clause is at '49'
-      this.annotationSnippet = measure.elm[0].library.statements.def[6].annotation;
+      this.annotationSnippet = measure.cql_libraries[0].elm.library.statements.def[6].annotation;
     });
 
     it('returns correct localId for functionRef if when found', () => {
@@ -90,12 +90,12 @@ describe('MeasureHelpers', () => {
   describe('findLocalIdForLibraryRef for expressionRefs', () => {
     beforeEach(() => {
       // Use a chunk of this fixture for these tests.
-      const measure = getJSONFixture('measures/CMS13v2/CMS13v2.json');
+      const measure = getJSONFixture('cqm_measures/CMS13v2/CMS13v2.json');
 
       // The annotation for the 'Initial Population' will be used for these tests
       // it is known the expressionRef 'TJC."Encounter with Principal Diagnosis and Age"' is '110' and the libraryRef
       // clause is at '109'
-      this.annotationSnippet = measure.elm[0].library.statements.def[12].annotation;
+      this.annotationSnippet = measure.cql_libraries[0].elm.library.statements.def[12].annotation;
     });
 
     it('returns correct localId for expressionRef when found', () => {
@@ -117,12 +117,12 @@ describe('MeasureHelpers', () => {
   describe('findLocalIdForLibraryRef for expressionRefs with libraryRef in clause', () => {
     beforeEach(() => {
       // Use a chunk of this fixture for these tests.
-      const measure = getJSONFixture('measures/CMS13v2/CMS13v2.json');
+      const measure = getJSONFixture('cqm_measures/CMS13v2/CMS13v2.json');
 
       // The annotation for the 'Comfort Measures during Hospitalization' will be used for these tests
       // it is known the expressionRef 'TJC."Encounter with Principal Diagnosis of Ischemic Stroke"' is '42' and the
       // libraryRef is embedded in the clause without a localId of its own.
-      this.annotationSnippet = measure.elm[0].library.statements.def[8].annotation;
+      this.annotationSnippet = measure.cql_libraries[0].elm.library.statements.def[8].annotation;
     });
 
     it('returns null for expressionRef when found yet it is embedded', () => {

@@ -8,7 +8,7 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
+          "system": "2.16.840.1.113883.6.96",
           "code": "183446009"
         }
       ],
@@ -16,9 +16,9 @@
       "diagnoses": [
         {
           "code": "13943000",
-          "codeSystem": "SNOMED-CT",
+          "system": "2.16.840.1.113883.6.96",
           "version": null,
-          "descriptor": "Obstetrics VTE"
+          "display": "Obstetrics VTE"
         }
       ],
       "dischargeDisposition": null,
@@ -48,7 +48,7 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
+          "system": "2.16.840.1.113883.6.96",
           "code": "8715000"
         }
       ],
@@ -87,11 +87,11 @@
       ],
       "dataElementCodes": [
         {
-          "codeSystem": "ICD-10-PCS",
+          "system": "2.16.840.1.113883.6.4",
           "code": "3E030FZ"
         },
         {
-          "codeSystem": "SNOMED-CT",
+          "system": "2.16.840.1.113883.6.96",
           "code": "18946005"
         }
       ],
@@ -122,7 +122,7 @@
       ],
       "dataElementCodes": [
         {
-          "codeSystem": "LOINC",
+          "system": "2.16.840.1.113883.6.1",
           "code": "34714-6"
         }
       ],
@@ -151,9 +151,8 @@
       "dataElementCodes": [
         {
           "code": "21112-8",
-          "codeSystem": "LOINC",
-          "descriptor": null,
-          "codeSystemOid": null,
+          "display": null,
+          "system": "2.16.840.1.113883.6.1",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -169,9 +168,8 @@
       "dataElementCodes": [
         {
           "code": "2186-5",
-          "codeSystem": "CDC Race",
-          "descriptor": "Not Hispanic or Latino",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "display": "Not Hispanic or Latino",
+          "system": "2.16.840.1.113883.6.238",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -187,9 +185,8 @@
       "dataElementCodes": [
         {
           "code": "1002-5",
-          "codeSystem": "CDC Race",
-          "descriptor": "American Indian or Alaska Native",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "display": "American Indian or Alaska Native",
+          "system": "2.16.840.1.113883.6.238",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -205,9 +202,8 @@
       "dataElementCodes": [
         {
           "code": "M",
-          "codeSystem": "AdministrativeGender",
-          "descriptor": "M",
-          "codeSystemOid": "2.16.840.1.113883.5.1",
+          "display": "M",
+          "system": "2.16.840.1.113883.5.1",
           "version": null,
           "_type": "QDM::Code"
         }

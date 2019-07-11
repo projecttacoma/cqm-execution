@@ -8,16 +8,16 @@
       "category": "condition",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
-          "code": "125851000119106"
+          "code": "125851000119106",
+          "system": "2.16.840.1.113883.6.96"
         },
         {
-          "codeSystem": "ICD-9-CM",
-          "code": "291.0"
+          "code": "291.0",
+          "system": "2.16.840.1.113883.6.103"
         },
         {
-          "codeSystem": "ICD-10-CM",
-          "code": "F10.10"
+          "code": "F10.10",
+          "system": "2.16.840.1.113883.6.90"
         }
       ],
       "description": "Diagnosis: Alcohol And Drug Dependence",
@@ -39,8 +39,8 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "CPT",
-          "code": "99218"
+          "code": "99218",
+          "system": "2.16.840.1.113883.6.12"
         }
       ],
       "description": "Encounter, Performed: Hospital Observation Care - Initial",
@@ -74,8 +74,8 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
-          "code": "313071005"
+          "code": "313071005",
+          "system": "2.16.840.1.113883.6.96"
         }
       ],
       "description": "Encounter, Performed: Alcohol and Drug Dependence Treatment",
@@ -109,8 +109,8 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "CPT",
-          "code": "90837"
+          "code": "90837",
+          "system": "2.16.840.1.113883.6.12"
         }
       ],
       "description": "Encounter, Performed: Psych Visit - Psychotherapy",
@@ -144,8 +144,8 @@
       "category": "encounter",
       "dataElementCodes": [
         {
-          "codeSystem": "CPT",
-          "code": "90834"
+          "code": "90834",
+          "system": "2.16.840.1.113883.6.12"
         }
       ],
       "description": "Encounter, Performed: Psych Visit - Psychotherapy",
@@ -179,9 +179,8 @@
       "dataElementCodes": [
         {
           "code": "21112-8",
-          "codeSystem": "LOINC",
-          "descriptor": null,
-          "codeSystemOid": null,
+          "display": null,
+          "system": "2.16.840.1.113883.6.1",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -197,9 +196,8 @@
       "dataElementCodes": [
         {
           "code": "2186-5",
-          "codeSystem": "CDC Race",
-          "descriptor": "Not Hispanic or Latino",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "display": "Not Hispanic or Latino",
+          "system": "2.16.840.1.113883.6.238",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -215,9 +213,8 @@
       "dataElementCodes": [
         {
           "code": "2131-1",
-          "codeSystem": "CDC Race",
-          "descriptor": "Other",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
+          "display": "Other",
+          "system": "2.16.840.1.113883.6.238",
           "version": null,
           "_type": "QDM::Code"
         }
@@ -233,9 +230,8 @@
       "dataElementCodes": [
         {
           "code": "M",
-          "codeSystem": "AdministrativeGender",
-          "descriptor": "M",
-          "codeSystemOid": "2.16.840.1.113883.5.1",
+          "display": "M",
+          "system": "2.16.840.1.113883.5.1",
           "version": null,
           "_type": "QDM::Code"
         }

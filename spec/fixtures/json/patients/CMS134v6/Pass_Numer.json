@@ -14,17 +14,24 @@
   "givenNames": [
     "Pass"
   ],
+  "measure_ids": [
+    "7B2A9277-43DA-4D99-9BEE-6AC271A07747"
+  ],
   "notes": "",
+  "provider_ids": [
+
+  ],
   "qdmPatient": {
     "birthDatetime": "1937-07-01T04:00:00.000-04:00",
     "dataElements": [
       {
         "anatomicalLocationSite": null,
         "authorDatetime": "1949-02-17T04:00:00.000-05:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
-            "code": "190372001"
+            "code": "190372001",
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Diagnosis: Diabetes",
@@ -41,6 +48,7 @@
           "highClosed": true
         },
         "qdmCategory": "condition",
+        "qdmTitle": "Diagnosis",
         "qdmVersion": "5.4",
         "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
         "severity": null,
@@ -49,10 +57,11 @@
       {
         "anatomicalLocationSite": null,
         "authorDatetime": "2012-04-03T08:00:00.000-04:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
-            "code": "236499007"
+            "code": "236499007",
+            "system": "2.16.840.1.113883.6.96"
           }
         ],
         "description": "Diagnosis: Diabetic Nephropathy",
@@ -69,6 +78,7 @@
           "highClosed": true
         },
         "qdmCategory": "condition",
+        "qdmTitle": "Diagnosis",
         "qdmVersion": "5.4",
         "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
         "severity": null,
@@ -77,10 +87,11 @@
       {
         "admissionSource": null,
         "authorDatetime": "2012-02-02T03:45:00.000-05:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "HCPCS",
-            "code": "G0438"
+            "code": "G0438",
+            "system": "2.16.840.1.113883.6.285"
           }
         ],
         "description": "Encounter, Performed: Annual Wellness Visit",
@@ -90,16 +101,11 @@
         "dischargeDisposition": null,
         "facilityLocations": [
           {
-            "dataElementCodes": [
-
-            ],
-            "description": null,
             "_type": "QDM::FacilityLocation",
             "code": {
               "code": "G0438",
-              "codeSystem": "HCPCS",
-              "descriptor": "Annual Wellness Visit",
-              "codeSystemOid": null,
+              "system": "2.16.840.1.113883.6.285",
+              "display": "Annual Wellness Visit",
               "version": null,
               "_type": "QDM::Code"
             },
@@ -113,16 +119,11 @@
             "qdmVersion": "5.4"
           },
           {
-            "dataElementCodes": [
-
-            ],
-            "description": null,
             "_type": "QDM::FacilityLocation",
             "code": {
               "code": "G0438",
-              "codeSystem": "HCPCS",
-              "descriptor": "Annual Wellness Visit",
-              "codeSystemOid": null,
+              "system": "2.16.840.1.113883.6.285",
+              "display": "Annual Wellness Visit",
               "version": null,
               "_type": "QDM::Code"
             },
@@ -150,6 +151,7 @@
         "principalDiagnosis": null,
         "qdmCategory": "encounter",
         "qdmStatus": "performed",
+        "qdmTitle": "Encounter, Performed",
         "qdmVersion": "5.4",
         "relevantPeriod": {
           "low": "2012-02-02T08:45:00.000+00:00",
@@ -161,6 +163,7 @@
       },
       {
         "authorDatetime": "2012-07-30T03:45:00.000-04:00",
+        "codeListId": null,
         "components": [
           {
             "result": {
@@ -169,9 +172,9 @@
             },
             "code": {
               "code": "129151000119102",
-              "codeSystem": "SNOMED-CT",
               "version": null,
-              "descriptor": null
+              "display": null,
+              "system": "2.16.840.1.113883.6.96"
             }
           },
           {
@@ -181,16 +184,16 @@
             },
             "code": {
               "code": "129151000119102",
-              "codeSystem": "SNOMED-CT",
               "version": null,
-              "descriptor": null
+              "display": null,
+              "system": "2.16.840.1.113883.6.96"
             }
           }
         ],
         "dataElementCodes": [
           {
-            "codeSystem": "LOINC",
-            "code": "11218-5"
+            "code": "11218-5",
+            "system": "2.16.840.1.113883.6.1"
           }
         ],
         "description": "Laboratory Test, Performed: Urine Protein Tests",
@@ -204,6 +207,7 @@
         "negationRationale": null,
         "qdmCategory": "laboratory_test",
         "qdmStatus": "performed",
+        "qdmTitle": "Laboratory Test, Performed",
         "qdmVersion": "5.4",
         "reason": null,
         "referenceRange": null,
@@ -215,9 +219,9 @@
         },
         "result": {
           "code": "129151000119102",
-          "codeSystem": "SNOMED-CT",
           "version": null,
-          "descriptor": "Kidney Failure"
+          "display": "Kidney Failure",
+          "system": "2.16.840.1.113883.6.96"
         },
         "resultDatetime": null,
         "status": null,
@@ -225,13 +229,14 @@
       },
       {
         "authorDatetime": "2012-07-30T04:00:00.000-04:00",
+        "codeListId": null,
         "components": [
 
         ],
         "dataElementCodes": [
           {
-            "codeSystem": "LOINC",
-            "code": "11218-5"
+            "code": "11218-5",
+            "system": "2.16.840.1.113883.6.1"
           }
         ],
         "description": "Laboratory Test, Performed: Urine Protein Tests",
@@ -245,6 +250,7 @@
         "negationRationale": null,
         "qdmCategory": "laboratory_test",
         "qdmStatus": "performed",
+        "qdmTitle": "Laboratory Test, Performed",
         "qdmVersion": "5.4",
         "reason": null,
         "referenceRange": null,
@@ -264,104 +270,105 @@
       },
       {
         "birthDatetime": "1937-07-01T04:00:00.000-04:00",
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
-            "descriptor": null,
-            "codeSystemOid": null,
+            "system": "2.16.840.1.113883.6.1",
+            "display": null,
+            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c84057a11e48cdb9e63e"
+          "value": "5cffb2dc31fe5ffc7a57cf4e"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
+        "qdmTitle": "Patient Characteristic Birthdate",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicBirthdate"
       },
       {
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "Not Hispanic or Latino",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "Not Hispanic or Latino",
             "version": null,
             "_type": "QDM::Code"
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c84057a11e48cdb9e63f"
+          "value": "5cffb2dc31fe5ffc7a57cf4f"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
+        "qdmTitle": "Patient Characteristic Ethnicity",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicEthnicity"
       },
       {
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "American Indian or Alaska Native",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "system": "2.16.840.1.113883.6.238",
+            "display": "American Indian or Alaska Native",
             "version": null,
             "_type": "QDM::Code"
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c84057a11e48cdb9e640"
+          "value": "5cffb2dc31fe5ffc7a57cf50"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
+        "qdmTitle": "Patient Characteristic Race",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicRace"
       },
       {
+        "codeListId": null,
         "dataElementCodes": [
           {
             "code": "F",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "F",
-            "codeSystemOid": "2.16.840.1.113883.5.1",
+            "system": "2.16.840.1.113883.5.1",
+            "display": "F",
             "version": null,
             "_type": "QDM::Code"
           }
         ],
         "description": null,
-        "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+        "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
         "id": {
           "namingSystem": null,
           "qdmVersion": "5.4",
-          "value": "5c40c84057a11e48cdb9e641"
+          "value": "5cffb2dc31fe5ffc7a57cf51"
         },
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",
+        "qdmTitle": "Patient Characteristic Sex",
         "qdmVersion": "5.4",
         "_type": "QDM::PatientCharacteristicSex"
       }
     ],
     "extendedData": {
       "type": null,
-      "measure_ids": [
-        "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
-        null
-      ],
       "source_data_criteria": [
         {
           "negation": false,
