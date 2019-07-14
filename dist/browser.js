@@ -236,8 +236,8 @@ module.exports = class CalculatorHelpers {
         qdmDataElements.forEach((qdmDataElement) => {
           if (qdmDataElement.id != null) {
             // if an episode has already been created set the result for the population to 1
-            if (episodeResults[qdmDataElement.id.value]) {
-              episodeResults[qdmDataElement.id.value][popCode] = 1;
+            if (episodeResults[qdmDataElement.id]) {
+              episodeResults[qdmDataElement.id][popCode] = 1;
               // else create a new episode using the list of all popcodes for the population
             } else {
               newEpisode = {};
@@ -246,7 +246,7 @@ module.exports = class CalculatorHelpers {
               }
 
               newEpisode[popCode] = 1;
-              episodeResults[qdmDataElement.id.value] = newEpisode;
+              episodeResults[qdmDataElement.id] = newEpisode;
             }
           }
         });
@@ -266,7 +266,7 @@ module.exports = class CalculatorHelpers {
 
         obsResults.forEach((obsResult) => {
           let resultValue = null;
-          const episodeId = obsResult.episode.id.value;
+          const episodeId = obsResult.episode.id;
           // Add the single result value to the values array on the results of
           // this calculation (allowing for more than one possible observation).
           if (obsResult != null ? Object.prototype.hasOwnProperty.call(obsResult, 'value') : undefined) {
