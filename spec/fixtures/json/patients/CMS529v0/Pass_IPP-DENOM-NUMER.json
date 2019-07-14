@@ -25,7 +25,7 @@
     "dataElements": [
       {
         "authorDatetime": "2012-05-22T04:00:00.000-04:00",
-        "codeListId": null,
+        "codeListId": "2.16.840.1.114222.4.11.3591",
         "dataElementCodes": [
           {
             "code": "1",
@@ -35,19 +35,18 @@
         "description": "Patient Characteristic: Payer",
         "hqmfOid": "2.16.840.1.113883.3.560.1.1001",
         "id": {
-          "namingSystem": null,
-          "qdmVersion": "5.4",
-          "value": "5b27e172868280d1a5c0fbb3"
+          "value": "5b27e172868280d1a5c0fbb3",
+          "namingSystem": null
         },
         "qdmCategory": "patient_characteristic",
         "qdmTitle": "Patient Characteristic",
-        "qdmVersion": "5.4",
+        "qdmVersion": "5.5",
         "_type": "QDM::PatientCharacteristic"
       },
       {
         "admissionSource": null,
         "authorDatetime": "2012-05-22T04:00:00.000-04:00",
-        "codeListId": null,
+        "codeListId": "2.16.840.1.113883.3.666.5.2289",
         "dataElementCodes": [
           {
             "code": "112689000",
@@ -64,20 +63,20 @@
         ],
         "hqmfOid": "2.16.840.1.113883.3.560.1.79",
         "id": {
-          "namingSystem": null,
-          "qdmVersion": "5.4",
-          "value": "5b27e172868280d1a5c0fbb4"
+          "value": "5b27e172868280d1a5c0fbb4",
+          "namingSystem": null
         },
         "lengthOfStay": {
           "value": 0,
           "unit": "days"
         },
         "negationRationale": null,
-        "principalDiagnosis": null,
+        "participant": null,
+        "priority": null,
         "qdmCategory": "encounter",
         "qdmStatus": "performed",
         "qdmTitle": "Encounter, Performed",
-        "qdmVersion": "5.4",
+        "qdmVersion": "5.5",
         "relevantPeriod": {
           "low": "2012-05-22T08:00:00.000+00:00",
           "high": "2012-05-22T08:15:00.000+00:00",
@@ -94,22 +93,17 @@
             "code": "21112-8",
             "system": "2.16.840.1.113883.6.1",
             "display": null,
-            "codeSystem": null,
             "version": null,
             "_type": "QDM::Code"
           }
         ],
         "description": null,
         "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
-        "id": {
-          "namingSystem": null,
-          "qdmVersion": "5.4",
-          "value": "5cffb2ec31fe5ffc91cb057c"
-        },
+        "id": "5d28fc5d31fe5fa105d8f085",
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "birthdate",
         "qdmTitle": "Patient Characteristic Birthdate",
-        "qdmVersion": "5.4",
+        "qdmVersion": "5.5",
         "_type": "QDM::PatientCharacteristicBirthdate"
       },
       {
@@ -125,15 +119,11 @@
         ],
         "description": null,
         "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
-        "id": {
-          "namingSystem": null,
-          "qdmVersion": "5.4",
-          "value": "5cffb2ec31fe5ffc91cb057d"
-        },
+        "id": "5d28fc5d31fe5fa105d8f086",
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "ethnicity",
         "qdmTitle": "Patient Characteristic Ethnicity",
-        "qdmVersion": "5.4",
+        "qdmVersion": "5.5",
         "_type": "QDM::PatientCharacteristicEthnicity"
       },
       {
@@ -149,15 +139,11 @@
         ],
         "description": null,
         "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
-        "id": {
-          "namingSystem": null,
-          "qdmVersion": "5.4",
-          "value": "5cffb2ec31fe5ffc91cb057e"
-        },
+        "id": "5d28fc5d31fe5fa105d8f087",
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "race",
         "qdmTitle": "Patient Characteristic Race",
-        "qdmVersion": "5.4",
+        "qdmVersion": "5.5",
         "_type": "QDM::PatientCharacteristicRace"
       },
       {
@@ -173,15 +159,11 @@
         ],
         "description": null,
         "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
-        "id": {
-          "namingSystem": null,
-          "qdmVersion": "5.4",
-          "value": "5cffb2ec31fe5ffc91cb057f"
-        },
+        "id": "5d28fc5d31fe5fa105d8f088",
         "qdmCategory": "patient_characteristic",
         "qdmStatus": "gender",
         "qdmTitle": "Patient Characteristic Sex",
-        "qdmVersion": "5.4",
+        "qdmVersion": "5.5",
         "_type": "QDM::PatientCharacteristicSex"
       }
     ],
@@ -261,6 +243,6 @@
       "description_category": null,
       "insurance_providers": "[]"
     },
-    "qdmVersion": "5.4"
+    "qdmVersion": "5.5"
   }
 }

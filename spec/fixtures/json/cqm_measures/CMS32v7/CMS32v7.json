@@ -4310,18 +4310,15 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38831fe5ffda80d95c4"
-      },
+      "id": "5d289ccc31fe5f8b7bf50c29",
       "lengthOfStay": null,
       "negationRationale": null,
-      "principalDiagnosis": null,
+      "participant": null,
+      "priority": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmTitle": "Encounter, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::EncounterPerformed"
     },
@@ -4332,15 +4329,11 @@
       ],
       "description": "Patient Characteristic Payer: Payer",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.58",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38831fe5ffda80d95c5"
-      },
+      "id": "5d289ccc31fe5f8b7bf50c2a",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
       "qdmTitle": "Patient Characteristic Payer",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::PatientCharacteristicPayer"
     },
@@ -4351,15 +4344,11 @@
       ],
       "description": "Patient Characteristic Ethnicity: Ethnicity",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38831fe5ffda80d95c6"
-      },
+      "id": "5d289ccc31fe5f8b7bf50c2b",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
       "qdmTitle": "Patient Characteristic Ethnicity",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
@@ -4369,15 +4358,11 @@
       ],
       "description": "Patient Characteristic Sex: ONCAdministrativeSex",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38831fe5ffda80d95c7"
-      },
+      "id": "5d289ccc31fe5f8b7bf50c2c",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
       "qdmTitle": "Patient Characteristic Sex",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicSex"
     },
     {
@@ -4387,15 +4372,11 @@
       ],
       "description": "Patient Characteristic Race: Race",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38831fe5ffda80d95c8"
-      },
+      "id": "5d289ccc31fe5f8b7bf50c2d",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
       "qdmTitle": "Patient Characteristic Race",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
@@ -4412,18 +4393,15 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38831fe5ffda80d95c9"
-      },
+      "id": "5d289ccc31fe5f8b7bf50c2e",
       "lengthOfStay": null,
       "negationRationale": null,
-      "principalDiagnosis": null,
+      "participant": null,
+      "priority": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmTitle": "Encounter, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::EncounterPerformed"
     }
@@ -4431,14 +4409,14 @@
   "title": "Median Time from ED Arrival to ED Departure for Discharged ED Patients",
   "updated_at": null,
   "value_set_ids": [
-    "5cffb38831fe5ffda80d95ca",
-    "5cffb38831fe5ffda80d95cb",
-    "5cffb38831fe5ffda80d95cc",
-    "5cffb38831fe5ffda80d95cd",
-    "5cffb38831fe5ffda80d95ce",
-    "5cffb38831fe5ffda80d95cf",
-    "5cffb38831fe5ffda80d95d0",
-    "5cffb38831fe5ffda80d95d1",
-    "5cffb38831fe5ffda80d95d2"
+    "5d289ccb31fe5f8b7bf50c20",
+    "5d289ccb31fe5f8b7bf50c21",
+    "5d289ccb31fe5f8b7bf50c22",
+    "5d289ccb31fe5f8b7bf50c23",
+    "5d289ccb31fe5f8b7bf50c24",
+    "5d289ccb31fe5f8b7bf50c25",
+    "5d289ccb31fe5f8b7bf50c26",
+    "5d289ccb31fe5f8b7bf50c27",
+    "5d289ccb31fe5f8b7bf50c28"
   ]
 }
