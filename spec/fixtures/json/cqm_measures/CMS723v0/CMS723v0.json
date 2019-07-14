@@ -11712,15 +11712,11 @@
       ],
       "description": "Patient Characteristic Payer: Payer",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.58",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d77805"
-      },
+      "id": "5d289cdb31fe5f8b990524a7",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
       "qdmTitle": "Patient Characteristic Payer",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::PatientCharacteristicPayer"
     },
@@ -11734,20 +11730,19 @@
       ],
       "description": "Procedure, Performed: AtrialAblation",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d77806"
-      },
+      "id": "5d289cdb31fe5f8b990524a8",
       "incisionDatetime": null,
       "method": null,
       "negationRationale": null,
-      "ordinality": null,
+      "performer": null,
+      "priority": null,
       "qdmCategory": "procedure",
       "qdmStatus": "performed",
       "qdmTitle": "Procedure, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
+      "rank": null,
       "reason": null,
+      "relevantDatetime": null,
       "relevantPeriod": null,
       "result": null,
       "status": null,
@@ -11761,17 +11756,14 @@
       ],
       "description": "Intervention, Order: ComfortMeasures",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.35",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d77807"
-      },
+      "id": "5d289cdb31fe5f8b990524a9",
       "negationRationale": null,
       "qdmCategory": "intervention",
       "qdmStatus": "order",
       "qdmTitle": "Intervention, Order",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "reason": null,
+      "requester": null,
       "_type": "QDM::InterventionOrder"
     },
     {
@@ -11782,17 +11774,15 @@
       ],
       "description": "Intervention, Performed: ComfortMeasures",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.36",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d77808"
-      },
+      "id": "5d289cdb31fe5f8b990524aa",
       "negationRationale": null,
+      "performer": null,
       "qdmCategory": "intervention",
       "qdmStatus": "performed",
       "qdmTitle": "Intervention, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "reason": null,
+      "relevantDatetime": null,
       "relevantPeriod": null,
       "result": null,
       "status": null,
@@ -11805,15 +11795,11 @@
       ],
       "description": "Patient Characteristic Ethnicity: Ethnicity",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d77809"
-      },
+      "id": "5d289cdb31fe5f8b990524ab",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
       "qdmTitle": "Patient Characteristic Ethnicity",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
@@ -11823,15 +11809,11 @@
       ],
       "description": "Patient Characteristic Sex: ONCAdministrativeSex",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d7780a"
-      },
+      "id": "5d289cdb31fe5f8b990524ac",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
       "qdmTitle": "Patient Characteristic Sex",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicSex"
     },
     {
@@ -11848,18 +11830,15 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d7780b"
-      },
+      "id": "5d289cdb31fe5f8b990524ad",
       "lengthOfStay": null,
       "negationRationale": null,
-      "principalDiagnosis": null,
+      "participant": null,
+      "priority": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmTitle": "Encounter, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::EncounterPerformed"
     },
@@ -11874,16 +11853,14 @@
       "dosage": null,
       "frequency": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.48",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d7780c"
-      },
+      "id": "5d289cdb31fe5f8b990524ae",
       "negationRationale": null,
+      "prescriber": null,
       "qdmCategory": "medication",
       "qdmStatus": "discharge",
       "qdmTitle": "Medication, Discharge",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
+      "recorder": null,
       "refills": null,
       "route": null,
       "supply": null,
@@ -11900,16 +11877,14 @@
       "dosage": null,
       "frequency": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.48",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d7780d"
-      },
+      "id": "5d289cdb31fe5f8b990524af",
       "negationRationale": null,
+      "prescriber": null,
       "qdmCategory": "medication",
       "qdmStatus": "discharge",
       "qdmTitle": "Medication, Discharge",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
+      "recorder": null,
       "refills": null,
       "route": null,
       "supply": null,
@@ -11922,15 +11897,11 @@
       ],
       "description": "Patient Characteristic Race: Race",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d7780e"
-      },
+      "id": "5d289cdb31fe5f8b990524b0",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
       "qdmTitle": "Patient Characteristic Race",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
@@ -11942,16 +11913,13 @@
       ],
       "description": "Diagnosis: AtrialFibrillation/Flutter",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d7780f"
-      },
+      "id": "5d289cdb31fe5f8b990524b1",
       "prevalencePeriod": null,
       "qdmCategory": "condition",
       "qdmTitle": "Diagnosis",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "recorder": null,
       "severity": null,
       "_type": "QDM::Diagnosis"
     },
@@ -11969,18 +11937,15 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39631fe5ffdd2d77810"
-      },
+      "id": "5d289cdb31fe5f8b990524b2",
       "lengthOfStay": null,
       "negationRationale": null,
-      "principalDiagnosis": null,
+      "participant": null,
+      "priority": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmTitle": "Encounter, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::EncounterPerformed"
     }
@@ -11988,16 +11953,16 @@
   "title": "Anticoagulation Therapy for Atrial Fibrillation/Flutter",
   "updated_at": null,
   "value_set_ids": [
-    "5cffb39631fe5ffdd2d77811",
-    "5cffb39631fe5ffdd2d77812",
-    "5cffb39631fe5ffdd2d77813",
-    "5cffb39631fe5ffdd2d77814",
-    "5cffb39631fe5ffdd2d77815",
-    "5cffb39631fe5ffdd2d77816",
-    "5cffb39631fe5ffdd2d77817",
-    "5cffb39631fe5ffdd2d77818",
-    "5cffb39631fe5ffdd2d77819",
-    "5cffb39631fe5ffdd2d7781a",
-    "5cffb39631fe5ffdd2d7781b"
+    "5d289cdb31fe5f8b9905249c",
+    "5d289cdb31fe5f8b9905249d",
+    "5d289cdb31fe5f8b9905249e",
+    "5d289cdb31fe5f8b9905249f",
+    "5d289cdb31fe5f8b990524a0",
+    "5d289cdb31fe5f8b990524a1",
+    "5d289cdb31fe5f8b990524a2",
+    "5d289cdb31fe5f8b990524a3",
+    "5d289cdb31fe5f8b990524a4",
+    "5d289cdb31fe5f8b990524a5",
+    "5d289cdb31fe5f8b990524a6"
   ]
 }
