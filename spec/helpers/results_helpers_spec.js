@@ -51,7 +51,8 @@ describe('ResultsHelpers', () => {
     });
 
     describe('pretty statement results when requested', () => {
-      it('for CMS107v6 correctly', () => {
+      xit('for CMS107v6 correctly', () => {
+        // TODO: Find another measure to use. PrincipalDiagnosis is no longer a QDM attribute and is used in this measure logic
         const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
@@ -194,7 +195,8 @@ describe('ResultsHelpers', () => {
         expect(resultsByStatement.DiabetesMedicalAttentionforNephropathy['Qualifying Encounters'].pretty).toContain('STOP: 02/02/2012 8:45 AM');
       });
 
-      it('should use authorDatetime for START date for Intervention Order', () => {
+      xit('should use authorDatetime for START date for Intervention Order', () => {
+        // TODO: Find another measure to use. PrincipalDiagnosis is no longer a QDM attribute and is used in this measure logic
         const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
