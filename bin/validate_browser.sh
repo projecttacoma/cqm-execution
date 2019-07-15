@@ -1,6 +1,7 @@
 #!/bin/bash
 
 yarn run browser
+rm dist/browser.js-e
 
 if git diff-index --quiet HEAD --; then
   echo "dist/browser.js is up to date"
