@@ -11,6 +11,7 @@ cache:
 script:
   - yarn install
   - ./bin/validate_browser.sh
+  - diff dist/browser.js tmp/dist/browser.js
   - yarn run lint
   - yarn test
   - codecov
