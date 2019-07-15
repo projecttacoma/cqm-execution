@@ -3099,19 +3099,19 @@ function fromByteArray (uint8) {
 (function (process,global,setImmediate){
 /* @preserve
  * The MIT License (MIT)
- *
+ * 
  * Copyright (c) 2013-2017 Petka Antonov
- *
+ * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- *
+ * 
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
@@ -3119,7 +3119,7 @@ function fromByteArray (uint8) {
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
- *
+ * 
  */
 /**
  * bluebird build version 3.5.1
@@ -6614,28 +6614,28 @@ _dereq_('./some.js')(Promise, PromiseArray, apiRejection);
 _dereq_('./filter.js')(Promise, INTERNAL);
 _dereq_('./each.js')(Promise, INTERNAL);
 _dereq_('./any.js')(Promise);
-
-    util.toFastProperties(Promise);
-    util.toFastProperties(Promise.prototype);
-    function fillTypes(value) {
-        var p = new Promise(INTERNAL);
-        p._fulfillmentHandler0 = value;
-        p._rejectionHandler0 = value;
-        p._promise0 = value;
-        p._receiver0 = value;
-    }
-    // Complete slack tracking, opt out of field-type tracking and
-    // stabilize map
-    fillTypes({a: 1});
-    fillTypes({b: 2});
-    fillTypes({c: 3});
-    fillTypes(1);
-    fillTypes(function(){});
-    fillTypes(undefined);
-    fillTypes(false);
-    fillTypes(new Promise(INTERNAL));
-    debug.setBounds(Async.firstLineError, util.lastLineError);
-    return Promise;
+                                                         
+    util.toFastProperties(Promise);                                          
+    util.toFastProperties(Promise.prototype);                                
+    function fillTypes(value) {                                              
+        var p = new Promise(INTERNAL);                                       
+        p._fulfillmentHandler0 = value;                                      
+        p._rejectionHandler0 = value;                                        
+        p._promise0 = value;                                                 
+        p._receiver0 = value;                                                
+    }                                                                        
+    // Complete slack tracking, opt out of field-type tracking and           
+    // stabilize map                                                         
+    fillTypes({a: 1});                                                       
+    fillTypes({b: 2});                                                       
+    fillTypes({c: 3});                                                       
+    fillTypes(1);                                                            
+    fillTypes(function(){});                                                 
+    fillTypes(undefined);                                                    
+    fillTypes(false);                                                        
+    fillTypes(new Promise(INTERNAL));                                        
+    debug.setBounds(Async.firstLineError, util.lastLineError);               
+    return Promise;                                                          
 
 };
 
@@ -7423,8 +7423,8 @@ function ReductionPromiseArray(promises, fn, initialValue, _each) {
 util.inherits(ReductionPromiseArray, PromiseArray);
 
 ReductionPromiseArray.prototype._gotAccum = function(accum) {
-    if (this._eachValues !== undefined &&
-        this._eachValues !== null &&
+    if (this._eachValues !== undefined && 
+        this._eachValues !== null && 
         accum !== INTERNAL) {
         this._eachValues.push(accum);
     }
@@ -9166,7 +9166,7 @@ BSON.prototype.serialize = function serialize(object, options) {
     typeof options.ignoreUndefined === 'boolean' ? options.ignoreUndefined : true;
   var minInternalBufferSize =
     typeof options.minInternalBufferSize === 'number' ? options.minInternalBufferSize : MAXSIZE;
-
+  
   // Resize the internal serialization buffer if needed
   if (buffer.length < minInternalBufferSize) {
     buffer = utils.allocBuffer(minInternalBufferSize);
@@ -14353,7 +14353,7 @@ module.exports.Symbol = Symbol;
 /**
  * This type is for INTERNAL use in MongoDB only and should not be used in applications.
  * The appropriate corresponding type is the JavaScript Date type.
- *
+ * 
  * Defines a Timestamp class for representing a 64-bit two's-complement
  * integer value, which faithfully simulates the behavior of a Java "Timestamp". This
  * implementation is derived from TimestampLib in GWT.
@@ -26316,7 +26316,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class AllergyIntoleranceEventComponent
   @exports  AllergyIntoleranceEventComponent as AllergyIntoleranceEventComponent
@@ -26674,7 +26674,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class AppointmentParticipantComponent
   @exports  AppointmentParticipantComponent as AppointmentParticipantComponent
@@ -27665,7 +27665,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class BundleLinkComponent
   @exports  BundleLinkComponent as BundleLinkComponent
@@ -27704,7 +27704,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class BundleEntryDeletedComponent
   @exports  BundleEntryDeletedComponent as BundleEntryDeletedComponent
@@ -27765,7 +27765,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class BundleEntryComponent
   @exports  BundleEntryComponent as BundleEntryComponent
@@ -28013,7 +28013,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class CarePlanParticipantComponent
   @exports  CarePlanParticipantComponent as CarePlanParticipantComponent
@@ -28056,7 +28056,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class CarePlanGoalComponent
   @exports  CarePlanGoalComponent as CarePlanGoalComponent
@@ -28124,7 +28124,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class CarePlanActivitySimpleComponent
   @exports  CarePlanActivitySimpleComponent as CarePlanActivitySimpleComponent
@@ -28276,7 +28276,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class CarePlanActivityComponent
   @exports  CarePlanActivityComponent as CarePlanActivityComponent
@@ -28613,7 +28613,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ItemAdjudicationComponent
   @exports  ItemAdjudicationComponent as ItemAdjudicationComponent
@@ -28666,7 +28666,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class DetailAdjudicationComponent
   @exports  DetailAdjudicationComponent as DetailAdjudicationComponent
@@ -28719,7 +28719,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SubdetailAdjudicationComponent
   @exports  SubdetailAdjudicationComponent as SubdetailAdjudicationComponent
@@ -28772,7 +28772,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ItemSubdetailComponent
   @exports  ItemSubdetailComponent as ItemSubdetailComponent
@@ -28820,7 +28820,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ItemDetailComponent
   @exports  ItemDetailComponent as ItemDetailComponent
@@ -28887,7 +28887,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ItemsComponent
   @exports  ItemsComponent as ItemsComponent
@@ -28964,7 +28964,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class AddedItemAdjudicationComponent
   @exports  AddedItemAdjudicationComponent as AddedItemAdjudicationComponent
@@ -29017,7 +29017,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class AddedItemDetailAdjudicationComponent
   @exports  AddedItemDetailAdjudicationComponent as AddedItemDetailAdjudicationComponent
@@ -29070,7 +29070,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class AddedItemsDetailComponent
   @exports  AddedItemsDetailComponent as AddedItemsDetailComponent
@@ -29132,7 +29132,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class AddedItemComponent
   @exports  AddedItemComponent as AddedItemComponent
@@ -29233,7 +29233,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ErrorsComponent
   @exports  ErrorsComponent as ErrorsComponent
@@ -29294,7 +29294,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class NotesComponent
   @exports  NotesComponent as NotesComponent
@@ -29760,7 +29760,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class CommunicationRequestMessagePartComponent
   @exports  CommunicationRequestMessagePartComponent as CommunicationRequestMessagePartComponent
@@ -30108,7 +30108,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class CompositionAttesterComponent
   @exports  CompositionAttesterComponent as CompositionAttesterComponent
@@ -30161,7 +30161,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class CompositionEventComponent
   @exports  CompositionEventComponent as CompositionEventComponent
@@ -30230,7 +30230,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SectionComponent
   @exports  SectionComponent as SectionComponent
@@ -30578,7 +30578,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class OtherElementComponent
   @exports  OtherElementComponent as OtherElementComponent
@@ -30627,7 +30627,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConceptMapElementMapComponent
   @exports  ConceptMapElementMapComponent as ConceptMapElementMapComponent
@@ -30705,7 +30705,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConceptMapElementComponent
   @exports  ConceptMapElementComponent as ConceptMapElementComponent
@@ -31040,7 +31040,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ConditionStageComponent
   @exports  ConditionStageComponent as ConditionStageComponent
@@ -31090,7 +31090,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConditionEvidenceComponent
   @exports  ConditionEvidenceComponent as ConditionEvidenceComponent
@@ -31140,7 +31140,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConditionLocationComponent
   @exports  ConditionLocationComponent as ConditionLocationComponent
@@ -31181,7 +31181,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConditionDueToComponent
   @exports  ConditionDueToComponent as ConditionDueToComponent
@@ -31224,7 +31224,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConditionOccurredFollowingComponent
   @exports  ConditionOccurredFollowingComponent as ConditionOccurredFollowingComponent
@@ -31616,7 +31616,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceSoftwareComponent
   @exports  ConformanceSoftwareComponent as ConformanceSoftwareComponent
@@ -31667,7 +31667,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceImplementationComponent
   @exports  ConformanceImplementationComponent as ConformanceImplementationComponent
@@ -31706,7 +31706,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceRestSecurityCertificateComponent
   @exports  ConformanceRestSecurityCertificateComponent as ConformanceRestSecurityCertificateComponent
@@ -31745,7 +31745,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceRestSecurityComponent
   @exports  ConformanceRestSecurityComponent as ConformanceRestSecurityComponent
@@ -31822,7 +31822,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ResourceInteractionComponent
   @exports  ResourceInteractionComponent as ResourceInteractionComponent
@@ -31861,7 +31861,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceRestResourceSearchParamComponent
   @exports  ConformanceRestResourceSearchParamComponent as ConformanceRestResourceSearchParamComponent
@@ -31940,7 +31940,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceRestResourceComponent
   @exports  ConformanceRestResourceComponent as ConformanceRestResourceComponent
@@ -32059,7 +32059,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SystemInteractionComponent
   @exports  SystemInteractionComponent as SystemInteractionComponent
@@ -32098,7 +32098,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceRestOperationComponent
   @exports  ConformanceRestOperationComponent as ConformanceRestOperationComponent
@@ -32139,7 +32139,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceRestComponent
   @exports  ConformanceRestComponent as ConformanceRestComponent
@@ -32257,7 +32257,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceMessagingEventComponent
   @exports  ConformanceMessagingEventComponent as ConformanceMessagingEventComponent
@@ -32371,7 +32371,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceMessagingComponent
   @exports  ConformanceMessagingComponent as ConformanceMessagingComponent
@@ -32439,7 +32439,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConformanceDocumentComponent
   @exports  ConformanceDocumentComponent as ConformanceDocumentComponent
@@ -32805,7 +32805,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ContractSignerComponent
   @exports  ContractSignerComponent as ContractSignerComponent
@@ -32846,7 +32846,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ContractTermComponent
   @exports  ContractTermComponent as ContractTermComponent
@@ -33344,7 +33344,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ContraindicationMitigationComponent
   @exports  ContraindicationMitigationComponent as ContraindicationMitigationComponent
@@ -34395,7 +34395,7 @@ function numberIsNaN (obj) {
   module.exports.Identifier = Identifier;
 
 
-  /**
+  /** 
   Embedded class
   @class ElementDefinitionSlicingComponent
   @exports  ElementDefinitionSlicingComponent as ElementDefinitionSlicingComponent
@@ -34454,7 +34454,7 @@ function numberIsNaN (obj) {
   })(Element);
 
 
-  /**
+  /** 
   Embedded class
   @class TypeRefComponent
   @exports  TypeRefComponent as TypeRefComponent
@@ -34503,7 +34503,7 @@ function numberIsNaN (obj) {
   })(Element);
 
 
-  /**
+  /** 
   Embedded class
   @class ElementDefinitionConstraintComponent
   @exports  ElementDefinitionConstraintComponent as ElementDefinitionConstraintComponent
@@ -34572,7 +34572,7 @@ function numberIsNaN (obj) {
   })(Element);
 
 
-  /**
+  /** 
   Embedded class
   @class ElementDefinitionBindingComponent
   @exports  ElementDefinitionBindingComponent as ElementDefinitionBindingComponent
@@ -34653,7 +34653,7 @@ function numberIsNaN (obj) {
   })(Element);
 
 
-  /**
+  /** 
   Embedded class
   @class ElementDefinitionMappingComponent
   @exports  ElementDefinitionMappingComponent as ElementDefinitionMappingComponent
@@ -35004,7 +35004,7 @@ function numberIsNaN (obj) {
   module.exports.ElementDefinition = ElementDefinition;
 
 
-  /**
+  /** 
   Embedded class
   @class TimingRepeatComponent
   @exports  TimingRepeatComponent as TimingRepeatComponent
@@ -35173,7 +35173,7 @@ function numberIsNaN (obj) {
 
 
     /**
-    This component contains the house number, apartment number, street name, street direction,
+    This component contains the house number, apartment number, street name, street direction, 
     P.O. Box number, delivery hints, and similar address information.
     @returns {Array} an array of {@link String} objects
      */
@@ -35397,7 +35397,7 @@ function numberIsNaN (obj) {
   module.exports.ContactPoint = ContactPoint;
 
 
-  /**
+  /** 
   Embedded class
   @class ResourceMetaComponent
   @exports  ResourceMetaComponent as ResourceMetaComponent
@@ -35550,7 +35550,7 @@ function numberIsNaN (obj) {
 
 
   /**
-
+  
   @class DomainResource
   @exports DomainResource as DomainResource
    */
@@ -35641,7 +35641,7 @@ function numberIsNaN (obj) {
   module.exports.DomainResource = DomainResource;
 
 
-  /**
+  /** 
   Embedded class
   @class ParametersParameterComponent
   @exports  ParametersParameterComponent as ParametersParameterComponent
@@ -36030,7 +36030,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class DataElementBindingComponent
   @exports  DataElementBindingComponent as DataElementBindingComponent
@@ -36091,7 +36091,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class DataElementMappingComponent
   @exports  DataElementMappingComponent as DataElementMappingComponent
@@ -36730,7 +36730,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class DeviceComponentProductionSpecificationComponent
   @exports  DeviceComponentProductionSpecificationComponent as DeviceComponentProductionSpecificationComponent
@@ -37530,7 +37530,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class DiagnosticOrderEventComponent
   @exports  DiagnosticOrderEventComponent as DiagnosticOrderEventComponent
@@ -37595,7 +37595,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class DiagnosticOrderItemComponent
   @exports  DiagnosticOrderItemComponent as DiagnosticOrderItemComponent
@@ -37931,7 +37931,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class DiagnosticReportImageComponent
   @exports  DiagnosticReportImageComponent as DiagnosticReportImageComponent
@@ -38574,7 +38574,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class DocumentReferenceRelatesToComponent
   @exports  DocumentReferenceRelatesToComponent as DocumentReferenceRelatesToComponent
@@ -38615,7 +38615,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class DocumentReferenceServiceParameterComponent
   @exports  DocumentReferenceServiceParameterComponent as DocumentReferenceServiceParameterComponent
@@ -38654,7 +38654,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class DocumentReferenceServiceComponent
   @exports  DocumentReferenceServiceComponent as DocumentReferenceServiceComponent
@@ -38714,7 +38714,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class DocumentReferenceContextComponent
   @exports  DocumentReferenceContextComponent as DocumentReferenceContextComponent
@@ -39540,7 +39540,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class EncounterParticipantComponent
   @exports  EncounterParticipantComponent as EncounterParticipantComponent
@@ -39590,7 +39590,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class EncounterHospitalizationAccomodationComponent
   @exports  EncounterHospitalizationAccomodationComponent as EncounterHospitalizationAccomodationComponent
@@ -39633,7 +39633,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class EncounterHospitalizationComponent
   @exports  EncounterHospitalizationComponent as EncounterHospitalizationComponent
@@ -39815,7 +39815,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class EncounterLocationComponent
   @exports  EncounterLocationComponent as EncounterLocationComponent
@@ -40783,7 +40783,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ExtensionDefinitionMappingComponent
   @exports  ExtensionDefinitionMappingComponent as ExtensionDefinitionMappingComponent
@@ -41133,7 +41133,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class FamilyHistoryRelationConditionComponent
   @exports  FamilyHistoryRelationConditionComponent as FamilyHistoryRelationConditionComponent
@@ -41212,7 +41212,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class FamilyHistoryRelationComponent
   @exports  FamilyHistoryRelationComponent as FamilyHistoryRelationComponent
@@ -41546,7 +41546,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class GroupCharacteristicComponent
   @exports  GroupCharacteristicComponent as GroupCharacteristicComponent
@@ -41819,7 +41819,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ServiceTypeComponent
   @exports  ServiceTypeComponent as ServiceTypeComponent
@@ -41869,7 +41869,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class HealthcareServiceAvailableTimeComponent
   @exports  HealthcareServiceAvailableTimeComponent as HealthcareServiceAvailableTimeComponent
@@ -41941,7 +41941,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class HealthcareServiceNotAvailableTimeComponent
   @exports  HealthcareServiceNotAvailableTimeComponent as HealthcareServiceNotAvailableTimeComponent
@@ -42446,7 +42446,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class InstanceComponent
   @exports  InstanceComponent as InstanceComponent
@@ -42509,7 +42509,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SeriesComponent
   @exports  SeriesComponent as SeriesComponent
@@ -42580,7 +42580,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class StudyComponent
   @exports  StudyComponent as StudyComponent
@@ -42824,7 +42824,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ImagingStudySeriesInstanceComponent
   @exports  ImagingStudySeriesInstanceComponent as ImagingStudySeriesInstanceComponent
@@ -42919,7 +42919,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ImagingStudySeriesComponent
   @exports  ImagingStudySeriesComponent as ImagingStudySeriesComponent
@@ -43355,7 +43355,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ImmunizationExplanationComponent
   @exports  ImmunizationExplanationComponent as ImmunizationExplanationComponent
@@ -43412,7 +43412,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ImmunizationReactionComponent
   @exports  ImmunizationReactionComponent as ImmunizationReactionComponent
@@ -43465,7 +43465,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ImmunizationVaccinationProtocolComponent
   @exports  ImmunizationVaccinationProtocolComponent as ImmunizationVaccinationProtocolComponent
@@ -43887,7 +43887,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ImmunizationRecommendationRecommendationDateCriterionComponent
   @exports  ImmunizationRecommendationRecommendationDateCriterionComponent as ImmunizationRecommendationRecommendationDateCriterionComponent
@@ -43930,7 +43930,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ImmunizationRecommendationRecommendationProtocolComponent
   @exports  ImmunizationRecommendationRecommendationProtocolComponent as ImmunizationRecommendationRecommendationProtocolComponent
@@ -43991,7 +43991,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ImmunizationRecommendationRecommendationComponent
   @exports  ImmunizationRecommendationRecommendationComponent as ImmunizationRecommendationRecommendationComponent
@@ -44259,7 +44259,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ListEntryComponent
   @exports  ListEntryComponent as ListEntryComponent
@@ -44533,7 +44533,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class LocationPositionComponent
   @exports  LocationPositionComponent as LocationPositionComponent
@@ -45051,7 +45051,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationProductIngredientComponent
   @exports  MedicationProductIngredientComponent as MedicationProductIngredientComponent
@@ -45094,7 +45094,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationProductComponent
   @exports  MedicationProductComponent as MedicationProductComponent
@@ -45144,7 +45144,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationPackageContentComponent
   @exports  MedicationPackageContentComponent as MedicationPackageContentComponent
@@ -45187,7 +45187,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationPackageComponent
   @exports  MedicationPackageComponent as MedicationPackageComponent
@@ -45399,7 +45399,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationAdministrationDosageComponent
   @exports  MedicationAdministrationDosageComponent as MedicationAdministrationDosageComponent
@@ -45486,7 +45486,7 @@ function numberIsNaN (obj) {
 
     /**
     A coded value indicating the method by which the medication was introduced into or onto the body. Most commonly used for injections.  Examples:  Slow Push; Deep IV.
-
+    
     Terminologies used often pre-coordinate this term with the route and or form of administration.
     @returns {CodeableConcept}
      */
@@ -45540,7 +45540,7 @@ function numberIsNaN (obj) {
 
   /**
   Describes the event of a patient being given a dose of a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.
-
+  
   Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
   @class MedicationAdministration
   @exports MedicationAdministration as MedicationAdministration
@@ -45804,7 +45804,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationDispenseDispenseDosageComponent
   @exports  MedicationDispenseDispenseDosageComponent as MedicationDispenseDispenseDosageComponent
@@ -45915,7 +45915,7 @@ function numberIsNaN (obj) {
 
     /**
     A coded value indicating the method by which the medication is introduced into or onto the body. Most commonly used for injections.  Examples:  Slow Push; Deep IV.
-
+    
     Terminologies used often pre-coordinate this term with the route and or form of administration.
     @returns {CodeableConcept}
      */
@@ -45967,7 +45967,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationDispenseDispenseComponent
   @exports  MedicationDispenseDispenseComponent as MedicationDispenseDispenseComponent
@@ -46118,7 +46118,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationDispenseSubstitutionComponent
   @exports  MedicationDispenseSubstitutionComponent as MedicationDispenseSubstitutionComponent
@@ -46367,7 +46367,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationPrescriptionDosageInstructionComponent
   @exports  MedicationPrescriptionDosageInstructionComponent as MedicationPrescriptionDosageInstructionComponent
@@ -46488,7 +46488,7 @@ function numberIsNaN (obj) {
 
     /**
     A coded value indicating the method by which the medication is introduced into or onto the body. Most commonly used for injections.  Examples:  Slow Push; Deep IV.
-
+    
     Terminologies used often pre-coordinate this term with the route and or form of administration.
     @returns {CodeableConcept}
      */
@@ -46540,7 +46540,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationPrescriptionDispenseComponent
   @exports  MedicationPrescriptionDispenseComponent as MedicationPrescriptionDispenseComponent
@@ -46568,8 +46568,8 @@ function numberIsNaN (obj) {
 
 
     /**
-    Design Comments: This indicates the validity period of a prescription (stale dating the Prescription)
-    It reflects the prescriber perspective for the validity of the prescription. Dispenses must not be made against the prescription outside of this period. The lower-bound of the Dispensing Window signifies the earliest date that the prescription can be filled for the first time. If an upper-bound is not specified then the Prescription is open-ended or will default to a stale-date based on regulations.
+    Design Comments: This indicates the validity period of a prescription (stale dating the Prescription) 
+    It reflects the prescriber perspective for the validity of the prescription. Dispenses must not be made against the prescription outside of this period. The lower-bound of the Dispensing Window signifies the earliest date that the prescription can be filled for the first time. If an upper-bound is not specified then the Prescription is open-ended or will default to a stale-date based on regulations. 
     Rationale: Indicates when the Prescription becomes valid, and when it ceases to be a dispensable Prescription.
     @returns {Period}
      */
@@ -46582,7 +46582,7 @@ function numberIsNaN (obj) {
 
 
     /**
-    An integer indicating the number of repeats of the Dispense.
+    An integer indicating the number of repeats of the Dispense. 
     UsageNotes: For example, the number of times the prescribed quantity is to be supplied including the initial standard fill.
     @returns {Array} an array of {@link Number} objects
      */
@@ -46605,7 +46605,7 @@ function numberIsNaN (obj) {
 
 
     /**
-    Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last.
+    Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last. 
     In some situations, this attribute may be used instead of quantity to identify the amount supplied by how long it is expected to last, rather than the physical quantity issued, e.g. 90 days supply of medication (based on an ordered dosage) When possible, it is always better to specify quantity, as this tends to be more precise. expectedSupplyDuration will always be an estimate that can be influenced by external factors.
     @returns {Duration}
      */
@@ -46621,7 +46621,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationPrescriptionSubstitutionComponent
   @exports  MedicationPrescriptionSubstitutionComponent as MedicationPrescriptionSubstitutionComponent
@@ -46904,7 +46904,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class MedicationStatementDosageComponent
   @exports  MedicationStatementDosageComponent as MedicationStatementDosageComponent
@@ -46979,7 +46979,7 @@ function numberIsNaN (obj) {
 
     /**
     A coded value indicating the method by which the medication is introduced into or onto the body. Most commonly used for injections.  Examples:  Slow Push; Deep IV.
-
+    
     Terminologies used often pre-coordinate this term with the route and or form of administration.
     @returns {CodeableConcept}
      */
@@ -47237,7 +47237,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class MessageHeaderResponseComponent
   @exports  MessageHeaderResponseComponent as MessageHeaderResponseComponent
@@ -47288,7 +47288,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MessageSourceComponent
   @exports  MessageSourceComponent as MessageSourceComponent
@@ -47359,7 +47359,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MessageDestinationComponent
   @exports  MessageDestinationComponent as MessageDestinationComponent
@@ -47835,7 +47835,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class NamingSystemUniqueIdComponent
   @exports  NamingSystemUniqueIdComponent as NamingSystemUniqueIdComponent
@@ -47896,7 +47896,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class NamingSystemContactComponent
   @exports  NamingSystemContactComponent as NamingSystemContactComponent
@@ -48155,7 +48155,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class NutritionOrderItemOralDietNutrientsComponent
   @exports  NutritionOrderItemOralDietNutrientsComponent as NutritionOrderItemOralDietNutrientsComponent
@@ -48210,7 +48210,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class NutritionOrderItemOralDietTextureComponent
   @exports  NutritionOrderItemOralDietTextureComponent as NutritionOrderItemOralDietTextureComponent
@@ -48253,7 +48253,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class NutritionOrderItemOralDietComponent
   @exports  NutritionOrderItemOralDietComponent as NutritionOrderItemOralDietComponent
@@ -48358,7 +48358,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class NutritionOrderItemSupplementComponent
   @exports  NutritionOrderItemSupplementComponent as NutritionOrderItemSupplementComponent
@@ -48418,7 +48418,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class NutritionOrderItemEnteralFormulaComponent
   @exports  NutritionOrderItemEnteralFormulaComponent as NutritionOrderItemEnteralFormulaComponent
@@ -48535,7 +48535,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class NutritionOrderItemComponent
   @exports  NutritionOrderItemComponent as NutritionOrderItemComponent
@@ -48861,7 +48861,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ObservationReferenceRangeComponent
   @exports  ObservationReferenceRangeComponent as ObservationReferenceRangeComponent
@@ -48938,7 +48938,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ObservationRelatedComponent
   @exports  ObservationRelatedComponent as ObservationRelatedComponent
@@ -49398,7 +49398,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class OperationDefinitionParameterComponent
   @exports  OperationDefinitionParameterComponent as OperationDefinitionParameterComponent
@@ -49786,7 +49786,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class OperationOutcomeIssueComponent
   @exports  OperationOutcomeIssueComponent as OperationOutcomeIssueComponent
@@ -49950,7 +49950,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class PayeeComponent
   @exports  PayeeComponent as PayeeComponent
@@ -50017,7 +50017,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class DiagnosisComponent
   @exports  DiagnosisComponent as DiagnosisComponent
@@ -50058,7 +50058,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class CoverageComponent
   @exports  CoverageComponent as CoverageComponent
@@ -50165,7 +50165,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class MissingTeethComponent
   @exports  MissingTeethComponent as MissingTeethComponent
@@ -50220,7 +50220,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class OrthodonticPlanComponent
   @exports  OrthodonticPlanComponent as OrthodonticPlanComponent
@@ -50319,7 +50319,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SubDetailComponent
   @exports  SubDetailComponent as SubDetailComponent
@@ -50440,7 +50440,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class DetailComponent
   @exports  DetailComponent as DetailComponent
@@ -50580,7 +50580,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ProsthesisComponent
   @exports  ProsthesisComponent as ProsthesisComponent
@@ -50633,7 +50633,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ItemsComponent
   @exports  ItemsComponent as ItemsComponent
@@ -51326,7 +51326,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class OrderWhenComponent
   @exports  OrderWhenComponent as OrderWhenComponent
@@ -51789,7 +51789,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class OrganizationContactComponent
   @exports  OrganizationContactComponent as OrganizationContactComponent
@@ -52247,7 +52247,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ContactComponent
   @exports  ContactComponent as ContactComponent
@@ -52362,7 +52362,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class AnimalComponent
   @exports  AnimalComponent as AnimalComponent
@@ -52417,7 +52417,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class PatientLinkComponent
   @exports  PatientLinkComponent as PatientLinkComponent
@@ -53034,7 +53034,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class DetailsComponent
   @exports  DetailsComponent as DetailsComponent
@@ -53137,7 +53137,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class NotesComponent
   @exports  NotesComponent as NotesComponent
@@ -53685,7 +53685,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class PractitionerQualificationComponent
   @exports  PractitionerQualificationComponent as PractitionerQualificationComponent
@@ -54072,7 +54072,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ProcedurePerformerComponent
   @exports  ProcedurePerformerComponent as ProcedurePerformerComponent
@@ -54115,7 +54115,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ProcedureRelatedItemComponent
   @exports  ProcedureRelatedItemComponent as ProcedureRelatedItemComponent
@@ -54762,7 +54762,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ProfileMappingComponent
   @exports  ProfileMappingComponent as ProfileMappingComponent
@@ -54821,7 +54821,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConstraintComponent
   @exports  ConstraintComponent as ConstraintComponent
@@ -55165,7 +55165,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ProvenanceAgentComponent
   @exports  ProvenanceAgentComponent as ProvenanceAgentComponent
@@ -55228,7 +55228,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ProvenanceEntityComponent
   @exports  ProvenanceEntityComponent as ProvenanceEntityComponent
@@ -55510,7 +55510,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class QueryResponseComponent
   @exports  QueryResponseComponent as QueryResponseComponent
@@ -55798,7 +55798,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class QuestionComponent
   @exports  QuestionComponent as QuestionComponent
@@ -55917,7 +55917,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class GroupComponent
   @exports  GroupComponent as GroupComponent
@@ -56200,7 +56200,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class QuestionAnswerComponent
   @exports  QuestionAnswerComponent as QuestionAnswerComponent
@@ -56355,7 +56355,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class QuestionComponent
   @exports  QuestionComponent as QuestionComponent
@@ -56432,7 +56432,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class GroupComponent
   @exports  GroupComponent as GroupComponent
@@ -56721,7 +56721,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ItemsComponent
   @exports  ItemsComponent as ItemsComponent
@@ -57465,7 +57465,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class PayeeComponent
   @exports  PayeeComponent as PayeeComponent
@@ -57532,7 +57532,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ReversalCoverageComponent
   @exports  ReversalCoverageComponent as ReversalCoverageComponent
@@ -57838,7 +57838,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class RiskAssessmentPredictionComponent
   @exports  RiskAssessmentPredictionComponent as RiskAssessmentPredictionComponent
@@ -58344,7 +58344,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class SecurityEventEventComponent
   @exports  SecurityEventEventComponent as SecurityEventEventComponent
@@ -58436,7 +58436,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SecurityEventParticipantNetworkComponent
   @exports  SecurityEventParticipantNetworkComponent as SecurityEventParticipantNetworkComponent
@@ -58475,7 +58475,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SecurityEventParticipantComponent
   @exports  SecurityEventParticipantComponent as SecurityEventParticipantComponent
@@ -58589,7 +58589,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SecurityEventSourceComponent
   @exports  SecurityEventSourceComponent as SecurityEventSourceComponent
@@ -58647,7 +58647,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SecurityEventObjectDetailComponent
   @exports  SecurityEventObjectDetailComponent as SecurityEventObjectDetailComponent
@@ -58686,7 +58686,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SecurityEventObjectComponent
   @exports  SecurityEventObjectComponent as SecurityEventObjectComponent
@@ -59159,7 +59159,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class SpecimenSourceComponent
   @exports  SpecimenSourceComponent as SpecimenSourceComponent
@@ -59207,7 +59207,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SpecimenCollectionComponent
   @exports  SpecimenCollectionComponent as SpecimenCollectionComponent
@@ -59308,7 +59308,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SpecimenTreatmentComponent
   @exports  SpecimenTreatmentComponent as SpecimenTreatmentComponent
@@ -59368,7 +59368,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SpecimenContainerComponent
   @exports  SpecimenContainerComponent as SpecimenContainerComponent
@@ -59895,7 +59895,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class StatusResponseNotesComponent
   @exports  StatusResponseNotesComponent as StatusResponseNotesComponent
@@ -60195,7 +60195,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class SubscriptionChannelComponent
   @exports  SubscriptionChannelComponent as SubscriptionChannelComponent
@@ -60254,7 +60254,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SubscriptionTagComponent
   @exports  SubscriptionTagComponent as SubscriptionTagComponent
@@ -60489,7 +60489,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class SubstanceInstanceComponent
   @exports  SubstanceInstanceComponent as SubstanceInstanceComponent
@@ -60544,7 +60544,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class SubstanceIngredientComponent
   @exports  SubstanceIngredientComponent as SubstanceIngredientComponent
@@ -60724,7 +60724,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class SupplyDispenseComponent
   @exports  SupplyDispenseComponent as SupplyDispenseComponent
@@ -61029,7 +61029,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class SupportingDocumentationDetailComponent
   @exports  SupportingDocumentationDetailComponent as SupportingDocumentationDetailComponent
@@ -61336,7 +61336,7 @@ function numberIsNaN (obj) {
   Element = CORE.Element;
 
 
-  /**
+  /** 
   Embedded class
   @class ConceptDefinitionDesignationComponent
   @exports  ConceptDefinitionDesignationComponent as ConceptDefinitionDesignationComponent
@@ -61387,7 +61387,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConceptDefinitionComponent
   @exports  ConceptDefinitionComponent as ConceptDefinitionComponent
@@ -61484,7 +61484,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ValueSetDefineComponent
   @exports  ValueSetDefineComponent as ValueSetDefineComponent
@@ -61552,7 +61552,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConceptReferenceComponent
   @exports  ConceptReferenceComponent as ConceptReferenceComponent
@@ -61610,7 +61610,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConceptSetFilterComponent
   @exports  ConceptSetFilterComponent as ConceptSetFilterComponent
@@ -61659,7 +61659,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ConceptSetComponent
   @exports  ConceptSetComponent as ConceptSetComponent
@@ -61736,7 +61736,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ValueSetComposeComponent
   @exports  ValueSetComposeComponent as ValueSetComposeComponent
@@ -61803,7 +61803,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ValueSetExpansionContainsComponent
   @exports  ValueSetExpansionContainsComponent as ValueSetExpansionContainsComponent
@@ -61891,7 +61891,7 @@ function numberIsNaN (obj) {
   })(BackboneElement);
 
 
-  /**
+  /** 
   Embedded class
   @class ValueSetExpansionComponent
   @exports  ValueSetExpansionComponent as ValueSetExpansionComponent
@@ -77371,7 +77371,7 @@ function conformant(a, b){
       ret = false;
     }
   });
-
+  
   return ret;
 }
 
@@ -77420,19 +77420,19 @@ function format(value, units, includeValue){
   var numeratorUnits = [];
   var denominatorUnits = [];
   var printableUnits = "";
-
+  
   units.forEach(function(unit, index){
     var exponent = obj.units[unit];
     var absExponent = Math.abs(exponent);
     var printable = metadata[unit].printSymbols ? metadata[unit].printSymbols[0] : metadata[unit].names[0];
     var prefix = metadata[unit].prefix ? metadata[unit].prefix.printSymbols[0] : "";
     pUnit = prefix + printable;
-    if(absExponent !== 1){
+    if(absExponent !== 1){      
       pUnit += "<sup>";
       pUnit += Math.abs(exponent);
       pUnit += "</sup>";
     }
-
+    
     if(exponent > 0){
       numeratorUnits.push(pUnit);
     }
@@ -77448,11 +77448,11 @@ function format(value, units, includeValue){
   else if(numeratorUnits.length > 0){
     printableUnits = numeratorUnits.join("*");
   }
-
+  
   if(denominatorUnits.length > 0){
     printableUnits += "/";
-  }
-
+  } 
+  
   printableUnits += denominatorUnits.join("/");
 
   if(includeValue){
