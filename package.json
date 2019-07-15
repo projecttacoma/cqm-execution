@@ -51,7 +51,7 @@
     "require-directory": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "https://github.com/projecttacoma/cqm-models#2019-standards-update",
+    "cqm-models": "https://github.com/projecttacoma/cqm-models#2019-standards-update-EntityCaster",
     "lodash": "^4.17.5",
     "moment": "^2.21.0"
   }
