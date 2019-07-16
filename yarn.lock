@@ -145,6 +145,7 @@ async@1.x:
 async@2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.2.tgz#18330ea7e6e313887f5d2f2a904bac6fe4dd5381"
+  integrity sha512-H1qVYh1MYhEEFLsP97cVKqCGo7KfCyTt6uEWqsTBr9SO84oK9Uwbyd/yCW+6rKJLHksBNUVWZDAjfS+Ccx0Bbg==
   dependencies:
     lodash "^4.17.11"
 
@@ -480,9 +481,9 @@ core-util-is@~1.0.0:
     moment "^2.20.1"
     ucum "0.0.7"
 
-"cqm-models@https://github.com/projecttacoma/cqm-models#2019-standards-update":
+"cqm-models@https://github.com/projecttacoma/cqm-models#status-date":
   version "2.0.0"
-  resolved "https://github.com/projecttacoma/cqm-models#8c74b7e4b1b799f350cdc4bdcdca3c41bbd5419f"
+  resolved "https://github.com/projecttacoma/cqm-models#31b97ca588c0dd4dda3fd97f393b6a03f3fdcb69"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution#master"
     mongoose "^5.4.14"
