@@ -480,9 +480,9 @@ core-util-is@~1.0.0:
     moment "^2.20.1"
     ucum "0.0.7"
 
-"cqm-models@https://github.com/projecttacoma/cqm-models#2019-standards-update-EntityCaster":
+"cqm-models@https://github.com/projecttacoma/cqm-models#2019-standards-update":
   version "2.0.0"
-  resolved "https://github.com/projecttacoma/cqm-models#fc966df293583aca226597ca4cee0065400f10b4"
+  resolved "https://github.com/projecttacoma/cqm-models#8c74b7e4b1b799f350cdc4bdcdca3c41bbd5419f"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution#master"
     mongoose "^5.4.14"
