@@ -1,17 +1,14 @@
 #!/bin/bash
 
-mkdir -p tmp/dist/
+yarn run browser
+# Remove a temporary file created by browserify if it exists
+rm -f dist/browser.js-e
 
-# browser_test browserifies index.js to tmp/dist
-yarn run browser_test
-
-# comm -3 only returns lines that differ between the two files. If none are different, diff will be empty
-diff=`diff dist/browser.js tmp/dist/browser.js`
-
-# Exit with a non-zero code if the diff isn't empty
-if [ "$diff" != "" ]; then
+if git diff-index --quiet HEAD --; then
   echo "dist/browser.js is out of date. Please run 'yarn run browser' locally and commit/push the result"
   exit 1
+else
+  echo "dist/browser.js is up to date"
+  exit 0
 fi
 
-echo "dist/browser.js is up to date"

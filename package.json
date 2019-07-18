@@ -8,8 +8,7 @@
     "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js'",
     "build-cql": "cd ./node_modules/cql-execution && yarn install && cd ../../",
     "prepublish": "./bin/build_cql_execution.sh",
-    "browser": "browserify lib/browser.js > dist/browser.js",
-    "browser_test": "browserify lib/browser.js > tmp/dist/browser.js"
+    "browser": "browserify lib/browser.js > dist/browser.js && ./bin/fix-mongoose.sh"
   },
   "repository": "git+https://github.com/projecttacoma/cqm-execution.git",
   "contributors": [
