@@ -57,7 +57,19 @@ const calculationResults = Calculator.calculate(measure, patients, valueSets, op
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see [tags on this repository](https://github.com/projecttacoma/cqm-execution/tags). 
+Starting with version **2.0.0** released on 6/20/2019, cqm-execution versioning has the format **X.Y.Z**, where:
+
+* **X** maps to a version of CQL. See the table below to see the existing mapping to CQL versions.
+
+  | X | CQL version |
+  | --- | --- |
+  | 2 | 1.3 |
+
+* **Y** indicates major changes (incompatible API changes)
+
+* **Z** indicates minor changes (added functionality in a backwards-compatible manner) and patch changes (backwards-compatible bug fixes)
+
+For the versions available, see [tags on this repository](https://github.com/projecttacoma/cqm-execution/tags).
 
 
 ## License
