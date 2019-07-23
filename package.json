@@ -51,7 +51,7 @@
     "require-directory": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "https://github.com/projecttacoma/cqm-models",
+    "cqm-models": "https://github.com/projecttacoma/cqm-models#aggregate-incompatible-quantities",
     "lodash": "^4.17.5",
     "moment": "^2.21.0"
   }
