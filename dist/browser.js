@@ -17351,7 +17351,7 @@ function numberIsNaN (obj) {
 
   module.exports.PatientContext = context.PatientContext;
 
-  module.exports.PopulationContext = context.PopulationContext;
+  module.exports.UnfilteredContext = context.UnfilteredContext;
 
   module.exports.Results = results.Results;
 
@@ -20006,12 +20006,17 @@ function numberIsNaN (obj) {
     }
 
     Sum.prototype.exec = function(ctx) {
-      var items, sum, values;
+      var e, items, sum, values;
       items = this.source.execute(ctx);
       if (!typeIsArray(items)) {
         return null;
       }
-      items = processQuantities(items);
+      try {
+        items = processQuantities(items);
+      } catch (error) {
+        e = error;
+        return null;
+      }
       if (!(items.length > 0)) {
         return null;
       }
@@ -20040,12 +20045,18 @@ function numberIsNaN (obj) {
     }
 
     Min.prototype.exec = function(ctx) {
-      var element, i, len, list, listWithoutNulls, minimum;
+      var e, element, i, len, list, listWithoutNulls, minimum;
       list = this.source.execute(ctx);
       if (list == null) {
         return null;
       }
       listWithoutNulls = removeNulls(list);
+      try {
+        processQuantities(list);
+      } catch (error) {
+        e = error;
+        return null;
+      }
       if (!(listWithoutNulls.length > 0)) {
         return null;
       }
@@ -20071,12 +20082,18 @@ function numberIsNaN (obj) {
     }
 
     Max.prototype.exec = function(ctx) {
-      var element, i, items, len, listWithoutNulls, maximum;
+      var e, element, i, items, len, listWithoutNulls, maximum;
       items = this.source.execute(ctx);
       if (items == null) {
         return null;
       }
       listWithoutNulls = removeNulls(items);
+      try {
+        processQuantities(items);
+      } catch (error) {
+        e = error;
+        return null;
+      }
       if (!(listWithoutNulls.length > 0)) {
         return null;
       }
@@ -20102,12 +20119,17 @@ function numberIsNaN (obj) {
     }
 
     Avg.prototype.exec = function(ctx) {
-      var items, sum, values;
+      var e, items, sum, values;
       items = this.source.execute(ctx);
       if (!typeIsArray(items)) {
         return null;
       }
-      items = processQuantities(items);
+      try {
+        items = processQuantities(items);
+      } catch (error) {
+        e = error;
+        return null;
+      }
       if (items.length === 0) {
         return null;
       }
@@ -20137,7 +20159,7 @@ function numberIsNaN (obj) {
     }
 
     Median.prototype.exec = function(ctx) {
-      var items, median, values;
+      var e, items, median, values;
       items = this.source.execute(ctx);
       if (!typeIsArray(items)) {
         return null;
@@ -20145,7 +20167,12 @@ function numberIsNaN (obj) {
       if (!(items.length > 0)) {
         return null;
       }
-      items = processQuantities(items);
+      try {
+        items = processQuantities(items);
+      } catch (error) {
+        e = error;
+        return null;
+      }
       if (!hasOnlyQuantities(items)) {
         return medianOfNumbers(items);
       }
@@ -20166,7 +20193,7 @@ function numberIsNaN (obj) {
     }
 
     Mode.prototype.exec = function(ctx) {
-      var filtered, items, mode, values;
+      var e, filtered, items, mode, values;
       items = this.source.execute(ctx);
       if (!typeIsArray(items)) {
         return null;
@@ -20174,7 +20201,12 @@ function numberIsNaN (obj) {
       if (!(items.length > 0)) {
         return null;
       }
-      filtered = processQuantities(items);
+      try {
+        filtered = processQuantities(items);
+      } catch (error) {
+        e = error;
+        return null;
+      }
       if (hasOnlyQuantities(filtered)) {
         values = getValuesFromQuantities(filtered);
         mode = this.mode(values);
@@ -20223,12 +20255,17 @@ function numberIsNaN (obj) {
     }
 
     StdDev.prototype.exec = function(ctx) {
-      var items, stdDev, values;
+      var e, items, stdDev, values;
       items = this.source.execute(ctx);
       if (!typeIsArray(items)) {
         return null;
       }
-      items = processQuantities(items);
+      try {
+        items = processQuantities(items);
+      } catch (error) {
+        e = error;
+        return null;
+      }
       if (!(items.length > 0)) {
         return null;
       }
@@ -20284,12 +20321,17 @@ function numberIsNaN (obj) {
     }
 
     Product.prototype.exec = function(ctx) {
-      var items, product, values;
+      var e, items, product, values;
       items = this.source.execute(ctx);
       if (!typeIsArray(items)) {
         return null;
       }
-      items = processQuantities(items);
+      try {
+        items = processQuantities(items);
+      } catch (error) {
+        e = error;
+        return null;
+      }
       if (!(items.length > 0)) {
         return null;
       }
@@ -20318,12 +20360,17 @@ function numberIsNaN (obj) {
     }
 
     GeometricMean.prototype.exec = function(ctx) {
-      var geoMean, items, product, values;
+      var e, geoMean, items, product, values;
       items = this.source.execute(ctx);
       if (!typeIsArray(items)) {
         return null;
       }
-      items = processQuantities(items);
+      try {
+        items = processQuantities(items);
+      } catch (error) {
+        e = error;
+        return null;
+      }
       if (!(items.length > 0)) {
         return null;
       }
@@ -20493,21 +20540,28 @@ function numberIsNaN (obj) {
     }
 
     Add.prototype.exec = function(ctx) {
-      var args;
+      var args, sum;
       args = this.execArgs(ctx);
+      sum = null;
       if ((args == null) || args.some(function(x) {
         return x == null;
       })) {
-        return null;
+        null;
       } else {
-        return args != null ? args.reduce(function(x, y) {
-          if (x.isQuantity || x.isDateTime || x.isDate) {
-            return doAddition(x, y);
-          } else {
-            return x + y;
-          }
-        }) : void 0;
+        if (args != null) {
+          args.reduce(function(x, y) {
+            if (x.isQuantity || x.isDateTime || x.isDate || x.isTime) {
+              return sum = doAddition(x, y);
+            } else {
+              return sum = x + y;
+            }
+          });
+        }
       }
+      if (MathUtil.overflowsOrUnderflows(sum)) {
+        return null;
+      }
+      return sum;
     };
 
     return Add;
@@ -20522,21 +20576,26 @@ function numberIsNaN (obj) {
     }
 
     Subtract.prototype.exec = function(ctx) {
-      var args;
+      var args, difference;
       args = this.execArgs(ctx);
+      difference = null;
       if ((args == null) || args.some(function(x) {
         return x == null;
       })) {
-        return null;
+        null;
       } else {
-        return args.reduce(function(x, y) {
+        args.reduce(function(x, y) {
           if (x.isQuantity || x.isDateTime || x.isDate) {
-            return doSubtraction(x, y);
+            return difference = doSubtraction(x, y);
           } else {
-            return x - y;
+            return difference = x - y;
           }
         });
       }
+      if (MathUtil.overflowsOrUnderflows(difference)) {
+        return null;
+      }
+      return difference;
     };
 
     return Subtract;
@@ -20551,21 +20610,28 @@ function numberIsNaN (obj) {
     }
 
     Multiply.prototype.exec = function(ctx) {
-      var args;
+      var args, product;
       args = this.execArgs(ctx);
+      product = null;
       if ((args == null) || args.some(function(x) {
         return x == null;
       })) {
-        return null;
+        null;
       } else {
-        return args != null ? args.reduce(function(x, y) {
-          if (x.isQuantity || y.isQuantity) {
-            return doMultiplication(x, y);
-          } else {
-            return x * y;
-          }
-        }) : void 0;
+        if (args != null) {
+          args.reduce(function(x, y) {
+            if (x.isQuantity || y.isQuantity) {
+              return product = doMultiplication(x, y);
+            } else {
+              return product = x * y;
+            }
+          });
+        }
       }
+      if (MathUtil.overflowsOrUnderflows(product)) {
+        return null;
+      }
+      return product;
     };
 
     return Multiply;
@@ -20580,21 +20646,28 @@ function numberIsNaN (obj) {
     }
 
     Divide.prototype.exec = function(ctx) {
-      var args;
+      var args, quotient;
       args = this.execArgs(ctx);
+      quotient = null;
       if ((args == null) || args.some(function(x) {
         return x == null;
       })) {
-        return null;
+        null;
       } else {
-        return args != null ? args.reduce(function(x, y) {
-          if (x.isQuantity) {
-            return doDivision(x, y);
-          } else {
-            return x / y;
-          }
-        }) : void 0;
+        if (args != null) {
+          args.reduce(function(x, y) {
+            if (x.isQuantity) {
+              return quotient = doDivision(x, y);
+            } else {
+              return quotient = x / y;
+            }
+          });
+        }
       }
+      if (MathUtil.overflowsOrUnderflows(quotient)) {
+        return null;
+      }
+      return quotient;
     };
 
     return Divide;
@@ -20609,17 +20682,21 @@ function numberIsNaN (obj) {
     }
 
     TruncatedDivide.prototype.exec = function(ctx) {
-      var args;
+      var args, quotient;
       args = this.execArgs(ctx);
       if ((args == null) || args.some(function(x) {
         return x == null;
       })) {
-        return null;
+        null;
       } else {
-        return Math.floor(args.reduce(function(x, y) {
+        quotient = Math.floor(args.reduce(function(x, y) {
           return x / y;
         }));
       }
+      if (MathUtil.overflowsOrUnderflows(quotient)) {
+        return null;
+      }
+      return quotient;
     };
 
     return TruncatedDivide;
@@ -20802,13 +20879,17 @@ function numberIsNaN (obj) {
     }
 
     Exp.prototype.exec = function(ctx) {
-      var arg;
+      var arg, power;
       arg = this.execArgs(ctx);
       if (arg == null) {
-        return null;
+        null;
       } else {
-        return Math.exp(arg);
+        power = Math.exp(arg);
       }
+      if (MathUtil.overflowsOrUnderflows(power)) {
+        return null;
+      }
+      return power;
     };
 
     return Exp;
@@ -20848,17 +20929,22 @@ function numberIsNaN (obj) {
     }
 
     Power.prototype.exec = function(ctx) {
-      var args;
+      var args, power;
       args = this.execArgs(ctx);
+      power = null;
       if ((args == null) || args.some(function(x) {
         return x == null;
       })) {
-        return null;
+        null;
       } else {
-        return args.reduce(function(x, y) {
+        power = args.reduce(function(x, y) {
           return Math.pow(x, y);
         });
       }
+      if (MathUtil.overflowsOrUnderflows(power)) {
+        return null;
+      }
+      return power;
     };
 
     return Power;
@@ -20876,7 +20962,9 @@ function numberIsNaN (obj) {
 
     MIN_VALUES['{urn:hl7-org:elm-types:r1}Decimal'] = MathUtil.MIN_FLOAT_VALUE;
 
-    MIN_VALUES['{urn:hl7-org:elm-types:r1}DateTime'] = MathUtil.MIN_DATE_VALUE;
+    MIN_VALUES['{urn:hl7-org:elm-types:r1}DateTime'] = MathUtil.MIN_DATETIME_VALUE;
+
+    MIN_VALUES['{urn:hl7-org:elm-types:r1}Date'] = MathUtil.MIN_DATE_VALUE;
 
     MIN_VALUES['{urn:hl7-org:elm-types:r1}Time'] = MathUtil.MIN_TIME_VALUE;
 
@@ -20915,7 +21003,9 @@ function numberIsNaN (obj) {
 
     MAX_VALUES['{urn:hl7-org:elm-types:r1}Decimal'] = MathUtil.MAX_FLOAT_VALUE;
 
-    MAX_VALUES['{urn:hl7-org:elm-types:r1}DateTime'] = MathUtil.MAX_DATE_VALUE;
+    MAX_VALUES['{urn:hl7-org:elm-types:r1}DateTime'] = MathUtil.MAX_DATETIME_VALUE;
+
+    MAX_VALUES['{urn:hl7-org:elm-types:r1}Date'] = MathUtil.MAX_DATE_VALUE;
 
     MAX_VALUES['{urn:hl7-org:elm-types:r1}Time'] = MathUtil.MAX_TIME_VALUE;
 
@@ -20951,13 +21041,25 @@ function numberIsNaN (obj) {
     }
 
     Successor.prototype.exec = function(ctx) {
-      var arg;
+      var arg, e, successor;
       arg = this.execArgs(ctx);
+      successor = null;
       if (arg == null) {
-        return null;
+        null;
       } else {
-        return MathUtil.successor(arg);
+        try {
+          successor = MathUtil.successor(arg);
+        } catch (error) {
+          e = error;
+          if (e instanceof MathUtil.OverFlowException) {
+            return null;
+          }
+        }
       }
+      if (MathUtil.overflowsOrUnderflows(successor)) {
+        return null;
+      }
+      return successor;
     };
 
     return Successor;
@@ -20972,13 +21074,25 @@ function numberIsNaN (obj) {
     }
 
     Predecessor.prototype.exec = function(ctx) {
-      var arg;
+      var arg, e, predecessor;
       arg = this.execArgs(ctx);
+      predecessor = null;
       if (arg == null) {
-        return null;
+        null;
       } else {
-        return MathUtil.predecessor(arg);
+        try {
+          predecessor = MathUtil.predecessor(arg);
+        } catch (error) {
+          e = error;
+          if (e instanceof MathUtil.OverFlowException) {
+            return null;
+          }
+        }
       }
+      if (MathUtil.overflowsOrUnderflows(predecessor)) {
+        return null;
+      }
+      return predecessor;
     };
 
     return Predecessor;
@@ -22330,7 +22444,7 @@ function numberIsNaN (obj) {
 },{"../datatypes/datatypes":40,"../datatypes/quantity":45,"./builder":50,"./expression":56}],60:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
-  var Collapse, End, Ends, Expand, Expression, Interval, MIN_FLOAT_PRECISION_VALUE, Meets, MeetsAfter, MeetsBefore, Overlaps, OverlapsAfter, OverlapsBefore, Quantity, Size, Start, Starts, ThreeValuedLogic, UnimplementedExpression, Width, build, cmp, collapseIntervals, compare_units, convert_value, doAddition, doIncludes, dtivl, intervalListType, predecessor, ref, ref1, ref2, successor,
+  var Collapse, End, Ends, Expand, Expression, Interval, MAX_DATETIME_VALUE, MIN_DATETIME_VALUE, Meets, MeetsAfter, MeetsBefore, Overlaps, OverlapsAfter, OverlapsBefore, Quantity, Size, Start, Starts, ThreeValuedLogic, UnimplementedExpression, Width, build, cmp, collapseIntervals, compare_units, convert_value, doAddition, doIncludes, doSubtraction, dtivl, intervalListType, predecessor, ref, ref1, ref2, successor, truncateDecimal,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty,
     indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
@@ -22341,9 +22455,9 @@ function numberIsNaN (obj) {
 
   build = require('./builder').build;
 
-  ref1 = require('../datatypes/quantity'), Quantity = ref1.Quantity, doAddition = ref1.doAddition, compare_units = ref1.compare_units, convert_value = ref1.convert_value;
+  ref1 = require('../datatypes/quantity'), Quantity = ref1.Quantity, doAddition = ref1.doAddition, doSubtraction = ref1.doSubtraction, compare_units = ref1.compare_units, convert_value = ref1.convert_value;
 
-  ref2 = require('../util/math'), successor = ref2.successor, predecessor = ref2.predecessor, MIN_FLOAT_PRECISION_VALUE = ref2.MIN_FLOAT_PRECISION_VALUE;
+  ref2 = require('../util/math'), successor = ref2.successor, predecessor = ref2.predecessor, MAX_DATETIME_VALUE = ref2.MAX_DATETIME_VALUE, MIN_DATETIME_VALUE = ref2.MIN_DATETIME_VALUE;
 
   dtivl = require('../datatypes/interval');
 
@@ -22598,12 +22712,16 @@ function numberIsNaN (obj) {
     }
 
     Start.prototype.exec = function(ctx) {
-      var interval;
+      var interval, start;
       interval = this.arg.execute(ctx);
       if (interval == null) {
         return null;
       }
-      return interval.start();
+      start = interval.start();
+      if ((start != null ? start.isDateTime : void 0) && start.equals(MIN_DATETIME_VALUE)) {
+        start.timezoneOffset = ctx.getTimezoneOffset();
+      }
+      return start;
     };
 
     return Start;
@@ -22618,12 +22736,16 @@ function numberIsNaN (obj) {
     }
 
     End.prototype.exec = function(ctx) {
-      var interval;
+      var end, interval;
       interval = this.arg.execute(ctx);
       if (interval == null) {
         return null;
       }
-      return interval.end();
+      end = interval.end();
+      if ((end != null ? end.isDateTime : void 0) && end.equals(MAX_DATETIME_VALUE)) {
+        end.timezoneOffset = ctx.getTimezoneOffset();
+      }
+      return end;
     };
 
     return End;
@@ -22677,10 +22799,10 @@ function numberIsNaN (obj) {
   })(Expression);
 
   intervalListType = function(intervals) {
-    var high, itvl, j, len, low, ref3, ref4, type;
+    var high, i, itvl, len, low, ref3, ref4, type;
     type = null;
-    for (j = 0, len = intervals.length; j < len; j++) {
-      itvl = intervals[j];
+    for (i = 0, len = intervals.length; i < len; i++) {
+      itvl = intervals[i];
       if (itvl == null) {
         continue;
       }
@@ -22752,7 +22874,7 @@ function numberIsNaN (obj) {
     }
 
     Expand.prototype.exec = function(ctx) {
-      var defaultPer, expandFunction, interval, intervals, items, j, len, per, ref3, results, type;
+      var defaultPer, expandFunction, i, interval, intervals, items, len, per, ref3, results, type;
       ref3 = this.execArgs(ctx), intervals = ref3[0], per = ref3[1];
       type = intervalListType(intervals);
       if (type === 'mismatch') {
@@ -22784,8 +22906,8 @@ function numberIsNaN (obj) {
         throw new Error("Interval list type not yet supported.");
       }
       results = [];
-      for (j = 0, len = intervals.length; j < len; j++) {
-        interval = intervals[j];
+      for (i = 0, len = intervals.length; i < len; i++) {
+        interval = intervals[i];
         if (interval == null) {
           continue;
         }
@@ -22807,7 +22929,7 @@ function numberIsNaN (obj) {
     };
 
     Expand.prototype.expandDTishInterval = function(interval, per) {
-      var count, current_high, current_low, high, i, j, k, low, point_intervals, ref3, ref4, ref5, ref6, results;
+      var current_high, current_low, high, intervalToAdd, low, ref3, ref4, results;
       if ((ref3 = per.unit) === 'week' || ref3 === 'weeks') {
         per.value *= 7;
         per.unit = 'day';
@@ -22815,7 +22937,7 @@ function numberIsNaN (obj) {
       if (ref4 = per.unit, indexOf.call(interval.low.constructor.FIELDS, ref4) < 0) {
         return null;
       }
-      if (interval.low.isLessPrecise(per.unit)) {
+      if (!((interval.low != null) && (interval.high != null))) {
         return null;
       }
       low = interval.lowClosed ? interval.low : interval.low.successor();
@@ -22823,34 +22945,42 @@ function numberIsNaN (obj) {
       if (low.after(high)) {
         return [];
       }
+      if (interval.low.isLessPrecise(per.unit) || interval.high.isLessPrecise(per.unit)) {
+        return [];
+      }
       current_low = low;
       results = [];
-      point_intervals = current_low.add(per.value, per.unit).predecessor().equals(current_low);
-      if (per.unit === low.getPrecision()) {
-        count = Math.floor((low.durationBetween(high, per.unit).high + 1) / per.value);
-      } else {
-        count = Math.floor((low.durationBetween(high, per.unit).low + 1) / per.value);
-      }
-      if (point_intervals) {
-        for (i = j = 1, ref5 = count + 1; 1 <= ref5 ? j <= ref5 : j >= ref5; i = 1 <= ref5 ? ++j : --j) {
-          results.push(new dtivl.Interval(current_low, current_low.copy(), true, true));
-          current_low = current_low.add(per.value, per.unit);
-        }
-      } else {
-        for (i = k = 1, ref6 = count; 1 <= ref6 ? k <= ref6 : k >= ref6; i = 1 <= ref6 ? ++k : --k) {
-          current_high = current_low.add(per.value, per.unit).predecessor();
-          results.push(new dtivl.Interval(current_low, current_high, true, true));
-          current_low = current_low.add(per.value, per.unit);
-        }
-      }
-      if (results.length > 0 && !results[results.length - 1].high.sameOrBefore(high)) {
-        results.pop();
+      low = this.truncateToPrecision(low, per.unit);
+      high = this.truncateToPrecision(high, per.unit);
+      current_high = current_low.add(per.value, per.unit).predecessor();
+      intervalToAdd = new dtivl.Interval(current_low, current_high, true, true);
+      while (intervalToAdd.high.sameOrBefore(high)) {
+        results.push(intervalToAdd);
+        current_low = current_low.add(per.value, per.unit);
+        current_high = current_low.add(per.value, per.unit).predecessor();
+        intervalToAdd = new dtivl.Interval(current_low, current_high, true, true);
       }
       return results;
     };
 
+    Expand.prototype.truncateToPrecision = function(value, unit) {
+      var field, i, len, ref3, shouldTruncate;
+      shouldTruncate = false;
+      ref3 = value.constructor.FIELDS;
+      for (i = 0, len = ref3.length; i < len; i++) {
+        field = ref3[i];
+        if (shouldTruncate) {
+          value[field] = null;
+        }
+        if (field === unit) {
+          shouldTruncate = true;
+        }
+      }
+      return value;
+    };
+
     Expand.prototype.expandQuantityInterval = function(interval, per) {
-      var high_value, itvl, j, len, low_value, per_value, result_units, results;
+      var high_value, i, itvl, len, low_value, per_value, result_units, results;
       if (compare_units(interval.low.unit, per.unit) > 0) {
         result_units = per.unit;
       } else {
@@ -22863,8 +22993,8 @@ function numberIsNaN (obj) {
         return null;
       }
       results = this.makeNumericIntervalList(low_value, high_value, interval.lowClosed, interval.highClosed, per_value);
-      for (j = 0, len = results.length; j < len; j++) {
-        itvl = results[j];
+      for (i = 0, len = results.length; i < len; i++) {
+        itvl = results[i];
         itvl.low = new Quantity(itvl.low, result_units);
         itvl.high = new Quantity(itvl.high, result_units);
       }
@@ -22872,34 +23002,43 @@ function numberIsNaN (obj) {
     };
 
     Expand.prototype.expandNumericInterval = function(interval, per) {
-      if (per.unit !== '1') {
+      if (!(per.unit === '1' || per.unit === '')) {
         return null;
       }
       return this.makeNumericIntervalList(interval.low, interval.high, interval.lowClosed, interval.highClosed, per.value);
     };
 
-    Expand.prototype.makeNumericIntervalList = function(low, high, lowClosed, highClosed, per) {
-      var gap, point_intervals, results, width, x;
-      point_intervals = Number.isInteger(low) && Number.isInteger(high) && Number.isInteger(per);
-      gap = point_intervals ? 1 : MIN_FLOAT_PRECISION_VALUE;
-      if (!lowClosed) {
-        low = low + gap;
-      }
-      if (!highClosed) {
-        high = high - gap;
-      }
-      width = per - gap;
+    Expand.prototype.makeNumericIntervalList = function(low, high, lowClosed, highClosed, perValue) {
+      var current_high, current_low, decimalPrecision, intervalToAdd, perIsDecimal, perUnitSize, results;
+      perIsDecimal = perValue.toString().includes('.');
+      decimalPrecision = perIsDecimal ? 8 : 0;
+      low = lowClosed ? low : successor(low);
+      high = highClosed ? high : predecessor(high);
+      low = truncateDecimal(low, decimalPrecision);
+      high = truncateDecimal(high, decimalPrecision);
       if (low > high) {
         return [];
       }
-      results = (function() {
-        var j, ref3, ref4, ref5, results1;
-        results1 = [];
-        for (x = j = ref3 = low, ref4 = high - width, ref5 = per; ref5 > 0 ? j <= ref4 : j >= ref4; x = j += ref5) {
-          results1.push(new dtivl.Interval(x, x + width, true, true));
-        }
-        return results1;
-      })();
+      if (!((low != null) && (high != null))) {
+        return [];
+      }
+      perUnitSize = perIsDecimal ? 0.00000001 : 1;
+      if (low === high && Number.isInteger(low) && Number.isInteger(high) && !Number.isInteger(perValue)) {
+        high = parseFloat((high + 1).toFixed(decimalPrecision));
+      }
+      current_low = low;
+      results = [];
+      if (perValue > (high - low + perUnitSize)) {
+        return [];
+      }
+      current_high = parseFloat((current_low + perValue - perUnitSize).toFixed(decimalPrecision));
+      intervalToAdd = new dtivl.Interval(current_low, current_high, true, true);
+      while (intervalToAdd.high <= high) {
+        results.push(intervalToAdd);
+        current_low = parseFloat((current_low + perValue).toFixed(decimalPrecision));
+        current_high = parseFloat((current_low + perValue - perUnitSize).toFixed(decimalPrecision));
+        intervalToAdd = new dtivl.Interval(current_low, current_high, true, true);
+      }
       return results;
     };
 
@@ -22925,10 +23064,10 @@ function numberIsNaN (obj) {
   })(Expression);
 
   collapseIntervals = function(intervals, perWidth) {
-    var a, b, collapsedIntervals, interval, intervalsClone, j, len, ref3, ref4, ref5, ref6;
+    var a, b, collapsedIntervals, i, interval, intervalsClone, len, ref3, ref4, ref5, ref6;
     intervalsClone = [];
-    for (j = 0, len = intervals.length; j < len; j++) {
-      interval = intervals[j];
+    for (i = 0, len = intervals.length; i < len; i++) {
+      interval = intervals[i];
       if (interval != null) {
         intervalsClone.push(interval.copy());
       }
@@ -23022,6 +23161,12 @@ function numberIsNaN (obj) {
       collapsedIntervals.push(a);
       return collapsedIntervals;
     }
+  };
+
+  truncateDecimal = function(decimal, decimalPlaces) {
+    var re;
+    re = new RegExp('^-?\\d+(?:\.\\d{0,' + (decimalPlaces || -1) + '})?');
+    return parseFloat(decimal.toString().match(re)[0]);
   };
 
 }).call(this);
@@ -23133,7 +23278,7 @@ function numberIsNaN (obj) {
 },{"../runtime/results":168,"./expressions":57}],62:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
-  var Current, Distinct, Exists, Expression, Filter, First, Flatten, ForEach, IndexOf, Last, List, SingletonFrom, Times, ToList, UnimplementedExpression, ValueSet, build, doContains, doDistinct, doIncludes, equals, ref, typeIsArray,
+  var Current, Distinct, Exists, Expression, Filter, First, Flatten, ForEach, IndexOf, Last, List, SingletonFrom, Times, ToList, UnimplementedExpression, ValueSet, build, doContains, doDistinct, doIncludes, equals, ref, removeDuplicateNulls, typeIsArray,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
@@ -23205,12 +23350,15 @@ function numberIsNaN (obj) {
   })(Expression);
 
   module.exports.doUnion = function(a, b) {
-    return doDistinct(a.concat(b));
+    var distinct;
+    distinct = doDistinct(a.concat(b));
+    return removeDuplicateNulls(distinct);
   };
 
   module.exports.doExcept = function(a, b) {
-    var itm, j, len, results, setList;
-    setList = doDistinct(a);
+    var distinct, itm, j, len, results, setList;
+    distinct = doDistinct(a);
+    setList = removeDuplicateNulls(distinct);
     results = [];
     for (j = 0, len = setList.length; j < len; j++) {
       itm = setList[j];
@@ -23222,8 +23370,9 @@ function numberIsNaN (obj) {
   };
 
   module.exports.doIntersect = function(a, b) {
-    var itm, j, len, results, setList;
-    setList = doDistinct(a);
+    var distinct, itm, j, len, results, setList;
+    distinct = doDistinct(a);
+    setList = removeDuplicateNulls(distinct);
     results = [];
     for (j = 0, len = setList.length; j < len; j++) {
       itm = setList[j];
@@ -23412,22 +23561,27 @@ function numberIsNaN (obj) {
   })(Expression);
 
   doDistinct = function(list) {
-    var firstNullFound, item, j, len, seen, setList;
-    seen = [];
+    var distinct;
+    distinct = [];
     list.filter(function(item) {
       var isNew;
-      isNew = seen.every(function(seenItem) {
+      isNew = distinct.every(function(seenItem) {
         return !equals(item, seenItem);
       });
       if (isNew) {
-        seen.push(item);
+        distinct.push(item);
       }
       return isNew;
     });
+    return distinct;
+  };
+
+  removeDuplicateNulls = function(list) {
+    var firstNullFound, item, j, len, setList;
     firstNullFound = false;
     setList = [];
-    for (j = 0, len = seen.length; j < len; j++) {
-      item = seen[j];
+    for (j = 0, len = list.length; j < len; j++) {
+      item = list[j];
       if (item !== null) {
         setList.push(item);
       }
@@ -25046,15 +25200,20 @@ function numberIsNaN (obj) {
     }
 
     Combine.prototype.exec = function(ctx) {
-      var separator, source;
+      var filteredArray, separator, source;
       source = this.source.execute(ctx);
       separator = this.separator != null ? this.separator.execute(ctx) : '';
-      if ((source == null) || source.some(function(x) {
-        return x == null;
-      })) {
+      if (source == null) {
         return null;
       } else {
-        return source.join(separator);
+        filteredArray = source.filter(function(x) {
+          return x !== null && x !== void 0;
+        });
+        if (filteredArray.length < 1) {
+          return null;
+        } else {
+          return filteredArray.join(separator);
+        }
       }
     };
 
@@ -62169,7 +62328,7 @@ function numberIsNaN (obj) {
 },{"../cql-datatypes":36,"./core":92}],165:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
-  var Context, Exception, Library, PatientContext, PopulationContext, dt, typeIsArray, util,
+  var Context, Exception, Library, PatientContext, UnfilteredContext, dt, typeIsArray, util,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
@@ -62563,34 +62722,34 @@ function numberIsNaN (obj) {
 
   })(Context);
 
-  module.exports.PopulationContext = PopulationContext = (function(superClass) {
-    extend(PopulationContext, superClass);
+  module.exports.UnfilteredContext = UnfilteredContext = (function(superClass) {
+    extend(UnfilteredContext, superClass);
 
-    function PopulationContext(library1, results, codeService, parameters, executionDateTime) {
+    function UnfilteredContext(library1, results, codeService, parameters, executionDateTime) {
       this.library = library1;
       this.results = results;
       this.executionDateTime = executionDateTime != null ? executionDateTime : dt.DateTime.fromJSDate(new Date());
-      PopulationContext.__super__.constructor.call(this, this.library, codeService, parameters);
+      UnfilteredContext.__super__.constructor.call(this, this.library, codeService, parameters);
     }
 
-    PopulationContext.prototype.rootContext = function() {
+    UnfilteredContext.prototype.rootContext = function() {
       return this;
     };
 
-    PopulationContext.prototype.findRecords = function(template) {
-      throw new Exception("Retreives are not currently supported in Population Context");
+    UnfilteredContext.prototype.findRecords = function(template) {
+      throw new Exception("Retreives are not currently supported in Unfiltered Context");
     };
 
-    PopulationContext.prototype.getLibraryContext = function(library) {
-      throw new Exception("Library expressions are not currently supported in Population Context");
+    UnfilteredContext.prototype.getLibraryContext = function(library) {
+      throw new Exception("Library expressions are not currently supported in Unfiltered Context");
     };
 
-    PopulationContext.prototype.get = function(identifier) {
+    UnfilteredContext.prototype.get = function(identifier) {
       var pid, ref, ref1, res, results;
       if (this.context_values[identifier]) {
         return this.context_values[identifier];
       }
-      if (((ref = this.library[identifier]) != null ? ref.context : void 0) === "Population") {
+      if (((ref = this.library[identifier]) != null ? ref.context : void 0) === "Unfiltered") {
         return this.library.expressions[identifier];
       }
       ref1 = this.results.patientResults;
@@ -62602,7 +62761,7 @@ function numberIsNaN (obj) {
       return results;
     };
 
-    return PopulationContext;
+    return UnfilteredContext;
 
   })(Context);
 
@@ -62613,7 +62772,7 @@ function numberIsNaN (obj) {
 },{"../datatypes/datatypes":40,"../datatypes/exception":42,"../elm/library":61,"../util/util":171,"util":390}],166:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
-  var Executor, PatientContext, PopulationContext, Results, ref;
+  var Executor, PatientContext, Results, UnfilteredContext, ref;
 
   module.exports.Executor = Executor = (function() {
     function Executor(library, codeService, parameters) {
@@ -62650,14 +62809,14 @@ function numberIsNaN (obj) {
     };
 
     Executor.prototype.exec = function(patientSource, executionDateTime) {
-      var expr, key, popContext, r, ref;
+      var expr, key, r, ref, unfilteredContext;
       Results(r = this.exec_patient_context(patientSource, executionDateTime));
-      popContext = new PopulationContext(this.library, r, this.codeService, this.parameters);
+      unfilteredContext = new UnfilteredContext(this.library, r, this.codeService, this.parameters);
       ref = this.library.expressions;
       for (key in ref) {
         expr = ref[key];
-        if (expr.context === "Population") {
-          r.recordPopulationResult(key, expr.exec(popContext));
+        if (expr.context === "Unfiltered") {
+          r.recordUnfilteredResult(key, expr.exec(unfilteredContext));
         }
       }
       return r;
@@ -62686,7 +62845,7 @@ function numberIsNaN (obj) {
 
   Results = require('./results').Results;
 
-  ref = require('./context'), PopulationContext = ref.PopulationContext, PatientContext = ref.PatientContext;
+  ref = require('./context'), UnfilteredContext = ref.UnfilteredContext, PatientContext = ref.PatientContext;
 
 }).call(this);
 
@@ -62742,7 +62901,7 @@ function numberIsNaN (obj) {
   module.exports.Results = Results = (function() {
     function Results() {
       this.patientResults = {};
-      this.populationResults = {};
+      this.unfilteredResults = {};
       this.localIdPatientResultsMap = {};
     }
 
@@ -62757,8 +62916,8 @@ function numberIsNaN (obj) {
       return this.localIdPatientResultsMap[patientId] = patient_ctx.getAllLocalIds();
     };
 
-    Results.prototype.recordPopulationResult = function(resultName, result) {
-      return this.populationResults[resultName] = result;
+    Results.prototype.recordUnfilteredResult = function(resultName, result) {
+      return this.unfilteredResults[resultName] = result;
     };
 
     return Results;
@@ -63023,13 +63182,13 @@ function numberIsNaN (obj) {
 },{"../datatypes/datetime":41,"../datatypes/uncertainty":47}],170:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
-  var DateTime, Exception, MAX_DATE_VALUE, MAX_FLOAT_VALUE, MAX_INT_VALUE, MAX_TIME_VALUE, MIN_DATE_VALUE, MIN_FLOAT_PRECISION_VALUE, MIN_FLOAT_VALUE, MIN_INT_VALUE, MIN_TIME_VALUE, OverFlowException, Uncertainty, isValidDecimal, isValidInteger, predecessor, successor,
+  var Date, DateTime, Exception, MAX_DATETIME_VALUE, MAX_DATE_VALUE, MAX_FLOAT_VALUE, MAX_INT_VALUE, MAX_TIME_VALUE, MIN_DATETIME_VALUE, MIN_DATE_VALUE, MIN_FLOAT_PRECISION_VALUE, MIN_FLOAT_VALUE, MIN_INT_VALUE, MIN_TIME_VALUE, OverFlowException, Uncertainty, isValidDecimal, isValidInteger, predecessor, ref, successor,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
   Exception = require('../datatypes/exception').Exception;
 
-  DateTime = require('../datatypes/datetime').DateTime;
+  ref = require('../datatypes/datetime'), DateTime = ref.DateTime, Date = ref.Date;
 
   Uncertainty = require('../datatypes/uncertainty').Uncertainty;
 
@@ -63043,13 +63202,58 @@ function numberIsNaN (obj) {
 
   module.exports.MIN_FLOAT_PRECISION_VALUE = MIN_FLOAT_PRECISION_VALUE = Math.pow(10, -8);
 
-  module.exports.MIN_DATE_VALUE = MIN_DATE_VALUE = DateTime.parse("0001-01-01T00:00:00.000");
+  module.exports.MIN_DATETIME_VALUE = MIN_DATETIME_VALUE = DateTime.parse("0001-01-01T00:00:00.000");
 
-  module.exports.MAX_DATE_VALUE = MAX_DATE_VALUE = DateTime.parse("9999-12-31T23:59:59.999");
+  module.exports.MAX_DATETIME_VALUE = MAX_DATETIME_VALUE = DateTime.parse("9999-12-31T23:59:59.999");
+
+  module.exports.MIN_DATE_VALUE = MIN_DATE_VALUE = Date.parse("0001-01-01");
+
+  module.exports.MAX_DATE_VALUE = MAX_DATE_VALUE = Date.parse("9999-12-31");
 
   module.exports.MIN_TIME_VALUE = MIN_TIME_VALUE = DateTime.parse("0000-01-01T00:00:00.000");
 
   module.exports.MAX_TIME_VALUE = MAX_TIME_VALUE = DateTime.parse("0000-01-01T23:59:59.999");
+
+  module.exports.overflowsOrUnderflows = function(value) {
+    if (value == null) {
+      return false;
+    }
+    if (value.isQuantity) {
+      if (!isValidDecimal(value.value)) {
+        return true;
+      }
+    } else if (value.isDateTime) {
+      if (value.after(MAX_DATETIME_VALUE)) {
+        return true;
+      }
+      if (value.before(MIN_DATETIME_VALUE)) {
+        return true;
+      }
+    } else if (value.isDate) {
+      if (value.after(MAX_DATE_VALUE)) {
+        return true;
+      }
+      if (value.before(MIN_DATE_VALUE)) {
+        return true;
+      }
+    } else if (value.isTime) {
+      if (value.after(MAX_TIME_VALUE)) {
+        return true;
+      }
+      if (value.before(MIN_TIME_VALUE)) {
+        return true;
+      }
+    } else if (Number.isInteger(value)) {
+      if (!isValidInteger(value)) {
+        return true;
+      }
+    } else {
+      if (!isValidDecimal(value)) {
+        return true;
+      }
+    }
+    return false;
+  };
 
   module.exports.isValidInteger = isValidInteger = function(integer) {
     if (isNaN(integer)) {
@@ -63115,13 +63319,19 @@ function numberIsNaN (obj) {
         return val + MIN_FLOAT_PRECISION_VALUE;
       }
     } else if (val instanceof DateTime) {
-      if (val.sameAs(MAX_DATE_VALUE)) {
+      if (val.sameAs(MAX_DATETIME_VALUE)) {
         throw new OverFlowException();
       } else {
         return val.successor();
       }
     } else if (val != null ? val.isDate : void 0) {
-      if (val.sameAs(MAX_DATE_VALUE.getDate())) {
+      if (val.sameAs(MAX_DATE_VALUE)) {
+        throw new OverFlowException();
+      } else {
+        return val.successor();
+      }
+    } else if (val != null ? val.isTime : void 0) {
+      if (val.sameAs(MAX_TIME_VALUE)) {
         throw new OverFlowException();
       } else {
         return val.successor();
@@ -63158,13 +63368,19 @@ function numberIsNaN (obj) {
         return val - MIN_FLOAT_PRECISION_VALUE;
       }
     } else if (val instanceof DateTime) {
-      if (val.sameAs(MIN_DATE_VALUE)) {
+      if (val.sameAs(MIN_DATETIME_VALUE)) {
         throw new OverFlowException();
       } else {
         return val.predecessor();
       }
     } else if (val != null ? val.isDate : void 0) {
-      if (val.sameAs(MIN_DATE_VALUE.getDate())) {
+      if (val.sameAs(MIN_DATE_VALUE)) {
+        throw new OverFlowException();
+      } else {
+        return val.predecessor();
+      }
+    } else if (val != null ? val.isTime : void 0) {
+      if (val.sameAs(MIN_TIME_VALUE)) {
         throw new OverFlowException();
       } else {
         return val.predecessor();
@@ -63197,9 +63413,11 @@ function numberIsNaN (obj) {
         return MAX_FLOAT_VALUE;
       }
     } else if (val instanceof DateTime) {
-      return MAX_DATE_VALUE;
+      return MAX_DATETIME_VALUE.copy();
     } else if (val != null ? val.isDate : void 0) {
-      return MAX_DATE_VALUE.getDate();
+      return MAX_DATE_VALUE.copy();
+    } else if (val != null ? val.isTime : void 0) {
+      return MAX_TIME_VALUE.copy();
     } else if (val != null ? val.isQuantity : void 0) {
       val2 = val.clone();
       val2.value = maxValueForInstance(val2.value);
@@ -63218,9 +63436,11 @@ function numberIsNaN (obj) {
         return MIN_FLOAT_VALUE;
       }
     } else if (val instanceof DateTime) {
-      return MIN_DATE_VALUE;
+      return MIN_DATETIME_VALUE.copy();
     } else if (val != null ? val.isDate : void 0) {
-      return MIN_DATE_VALUE.getDate();
+      return MIN_DATE_VALUE.copy();
+    } else if (val != null ? val.isTime : void 0) {
+      return MIN_TIME_VALUE.copy();
     } else if (val != null ? val.isQuantity : void 0) {
       val2 = val.clone();
       val2.value = minValueForInstance(val2.value);
@@ -106376,6 +106596,7 @@ Document.prototype.$set = function $set(path, val, type, options) {
 
     if (typeof path[key] === 'object' &&
         !utils.isNativeObject(path[key]) &&
+        !utils.isMongooseType(path[key]) &&
         path[key] != null &&
         pathtype !== 'virtual' &&
         pathtype !== 'real' &&
@@ -106535,7 +106756,7 @@ Document.prototype.$set = function $set(path, val, type, options) {
   } else {
     for (i = 0; i < parts.length; ++i) {
       const subpath = parts.slice(0, i + 1).join('.');
-      if (this.get(subpath) === null) {
+      if (this.get(subpath, null, { getters: false }) === null) {
         pathToMark = subpath;
         break;
       }
@@ -110498,8 +110719,10 @@ function applyHooks(model, schema, options) {
 
   objToDecorate.$__save = middleware.
     createWrapper('save', objToDecorate.$__save, null, kareemOptions);
+
+  objToDecorate.$__originalValidate = objToDecorate.$__originalValidate || objToDecorate.$__validate;
   objToDecorate.$__validate = middleware.
-    createWrapper('validate', objToDecorate.$__validate, null, kareemOptions);
+    createWrapper('validate', objToDecorate.$__originalValidate, null, kareemOptions);
   objToDecorate.$__remove = middleware.
     createWrapper('remove', objToDecorate.$__remove, null, kareemOptions);
   objToDecorate.$__deleteOne = middleware.
@@ -112264,26 +112487,29 @@ Schema.prototype.add = function add(obj, prefix) {
 
   for (let i = 0; i < keys.length; ++i) {
     const key = keys[i];
+    const fullPath = prefix + key;
 
     if (obj[key] == null) {
-      throw new TypeError('Invalid value for schema path `' + prefix + key + '`');
+      throw new TypeError('Invalid value for schema path `' + fullPath +
+        '`, got value "' + obj[key] + '"');
     }
 
     if (Array.isArray(obj[key]) && obj[key].length === 1 && obj[key][0] == null) {
-      throw new TypeError('Invalid value for schema Array path `' + prefix + key + '`');
+      throw new TypeError('Invalid value for schema Array path `' + fullPath +
+        '`, got value "' + obj[key][0] + '"');
     }
 
     if (utils.isPOJO(obj[key]) &&
         (!obj[key][this.options.typeKey] || (this.options.typeKey === 'type' && obj[key].type.type))) {
       if (Object.keys(obj[key]).length) {
         // nested object { last: { name: String }}
-        this.nested[prefix + key] = true;
-        this.add(obj[key], prefix + key + '.');
+        this.nested[fullPath] = true;
+        this.add(obj[key], fullPath + '.');
       } else {
         if (prefix) {
           this.nested[prefix.substr(0, prefix.length - 1)] = true;
         }
-        this.path(prefix + key, obj[key]); // mixed type
+        this.path(fullPath, obj[key]); // mixed type
       }
     } else {
       if (prefix) {
@@ -113848,6 +114074,312 @@ exports.ObjectId = MongooseTypes.ObjectId;
  * Module dependencies.
  */
 
+const CastError = require('../error/cast');
+const EventEmitter = require('events').EventEmitter;
+const ObjectExpectedError = require('../error/objectExpected');
+const SchemaType = require('../schematype');
+const $exists = require('./operators/exists');
+const castToNumber = require('./operators/helpers').castToNumber;
+const discriminator = require('../helpers/model/discriminator');
+const geospatial = require('./operators/geospatial');
+const get = require('../helpers/get');
+const getConstructor = require('../helpers/discriminator/getConstructor');
+const internalToObjectOptions = require('../options').internalToObjectOptions;
+
+let Subdocument;
+
+module.exports = SingleNestedPath;
+
+/**
+ * Single nested subdocument SchemaType constructor.
+ *
+ * @param {Schema} schema
+ * @param {String} key
+ * @param {Object} options
+ * @inherits SchemaType
+ * @api public
+ */
+
+function SingleNestedPath(schema, path, options) {
+  this.caster = _createConstructor(schema);
+  this.caster.path = path;
+  this.caster.prototype.$basePath = path;
+  this.schema = schema;
+  this.$isSingleNested = true;
+  SchemaType.call(this, path, options, 'Embedded');
+}
+
+/*!
+ * ignore
+ */
+
+SingleNestedPath.prototype = Object.create(SchemaType.prototype);
+SingleNestedPath.prototype.constructor = SingleNestedPath;
+
+/*!
+ * ignore
+ */
+
+function _createConstructor(schema, baseClass) {
+  // lazy load
+  Subdocument || (Subdocument = require('../types/subdocument'));
+
+  const _embedded = function SingleNested(value, path, parent) {
+    const _this = this;
+
+    this.$parent = parent;
+    Subdocument.apply(this, arguments);
+
+    this.$session(this.ownerDocument().$session());
+
+    if (parent) {
+      parent.on('save', function() {
+        _this.emit('save', _this);
+        _this.constructor.emit('save', _this);
+      });
+
+      parent.on('isNew', function(val) {
+        _this.isNew = val;
+        _this.emit('isNew', val);
+        _this.constructor.emit('isNew', val);
+      });
+    }
+  };
+
+  const proto = baseClass != null ? baseClass.prototype : Subdocument.prototype;
+  _embedded.prototype = Object.create(proto);
+  _embedded.prototype.$__setSchema(schema);
+  _embedded.prototype.constructor = _embedded;
+  _embedded.schema = schema;
+  _embedded.$isSingleNested = true;
+  _embedded.events = new EventEmitter();
+  _embedded.prototype.toBSON = function() {
+    return this.toObject(internalToObjectOptions);
+  };
+
+  // apply methods
+  for (const i in schema.methods) {
+    _embedded.prototype[i] = schema.methods[i];
+  }
+
+  // apply statics
+  for (const i in schema.statics) {
+    _embedded[i] = schema.statics[i];
+  }
+
+  for (const i in EventEmitter.prototype) {
+    _embedded[i] = EventEmitter.prototype[i];
+  }
+
+  return _embedded;
+}
+
+/*!
+ * Special case for when users use a common location schema to represent
+ * locations for use with $geoWithin.
+ * https://docs.mongodb.org/manual/reference/operator/query/geoWithin/
+ *
+ * @param {Object} val
+ * @api private
+ */
+
+SingleNestedPath.prototype.$conditionalHandlers.$geoWithin = function handle$geoWithin(val) {
+  return { $geometry: this.castForQuery(val.$geometry) };
+};
+
+/*!
+ * ignore
+ */
+
+SingleNestedPath.prototype.$conditionalHandlers.$near =
+SingleNestedPath.prototype.$conditionalHandlers.$nearSphere = geospatial.cast$near;
+
+SingleNestedPath.prototype.$conditionalHandlers.$within =
+SingleNestedPath.prototype.$conditionalHandlers.$geoWithin = geospatial.cast$within;
+
+SingleNestedPath.prototype.$conditionalHandlers.$geoIntersects =
+  geospatial.cast$geoIntersects;
+
+SingleNestedPath.prototype.$conditionalHandlers.$minDistance = castToNumber;
+SingleNestedPath.prototype.$conditionalHandlers.$maxDistance = castToNumber;
+
+SingleNestedPath.prototype.$conditionalHandlers.$exists = $exists;
+
+/**
+ * Casts contents
+ *
+ * @param {Object} value
+ * @api private
+ */
+
+SingleNestedPath.prototype.cast = function(val, doc, init, priorVal) {
+  if (val && val.$isSingleNested) {
+    return val;
+  }
+
+  if (val != null && (typeof val !== 'object' || Array.isArray(val))) {
+    throw new ObjectExpectedError(this.path, val);
+  }
+
+  const Constructor = getConstructor(this.caster, val);
+
+  let subdoc;
+
+  // Only pull relevant selected paths and pull out the base path
+  const parentSelected = get(doc, '$__.selected', {});
+  const path = this.path;
+  const selected = Object.keys(parentSelected).reduce((obj, key) => {
+    if (key.startsWith(path + '.')) {
+      obj[key.substr(path.length + 1)] = parentSelected[key];
+    }
+    return obj;
+  }, {});
+
+  if (init) {
+    subdoc = new Constructor(void 0, selected, doc);
+    subdoc.init(val);
+  } else {
+    if (Object.keys(val).length === 0) {
+      return new Constructor({}, selected, doc);
+    }
+
+    return new Constructor(val, selected, doc, undefined, { priorDoc: priorVal });
+  }
+
+  return subdoc;
+};
+
+/**
+ * Casts contents for query
+ *
+ * @param {string} [$conditional] optional query operator (like `$eq` or `$in`)
+ * @param {any} value
+ * @api private
+ */
+
+SingleNestedPath.prototype.castForQuery = function($conditional, val) {
+  let handler;
+  if (arguments.length === 2) {
+    handler = this.$conditionalHandlers[$conditional];
+    if (!handler) {
+      throw new Error('Can\'t use ' + $conditional);
+    }
+    return handler.call(this, val);
+  }
+  val = $conditional;
+  if (val == null) {
+    return val;
+  }
+
+  if (this.options.runSetters) {
+    val = this._applySetters(val);
+  }
+
+  const Constructor = getConstructor(this.caster, val);
+
+  try {
+    val = new Constructor(val);
+  } catch (error) {
+    // Make sure we always wrap in a CastError (gh-6803)
+    if (!(error instanceof CastError)) {
+      throw new CastError('Embedded', val, this.path, error);
+    }
+    throw error;
+  }
+  return val;
+};
+
+/**
+ * Async validation on this single nested doc.
+ *
+ * @api private
+ */
+
+SingleNestedPath.prototype.doValidate = function(value, fn, scope, options) {
+  const Constructor = getConstructor(this.caster, value);
+
+  if (options && options.skipSchemaValidators) {
+    if (!(value instanceof Constructor)) {
+      value = new Constructor(value, null, scope);
+    }
+
+    return value.validate(fn);
+  }
+
+  SchemaType.prototype.doValidate.call(this, value, function(error) {
+    if (error) {
+      return fn(error);
+    }
+    if (!value) {
+      return fn(null);
+    }
+
+    value.validate(fn);
+  }, scope);
+};
+
+/**
+ * Synchronously validate this single nested doc
+ *
+ * @api private
+ */
+
+SingleNestedPath.prototype.doValidateSync = function(value, scope, options) {
+  if (!options || !options.skipSchemaValidators) {
+    const schemaTypeError = SchemaType.prototype.doValidateSync.call(this, value, scope);
+    if (schemaTypeError) {
+      return schemaTypeError;
+    }
+  }
+  if (!value) {
+    return;
+  }
+  return value.validateSync();
+};
+
+/**
+ * Adds a discriminator to this single nested subdocument.
+ *
+ * ####Example:
+ *     const shapeSchema = Schema({ name: String }, { discriminatorKey: 'kind' });
+ *     const schema = Schema({ shape: shapeSchema });
+ *
+ *     const singleNestedPath = parentSchema.path('child');
+ *     singleNestedPath.discriminator('Circle', Schema({ radius: Number }));
+ *
+ * @param {String} name
+ * @param {Schema} schema fields to add to the schema for instances of this sub-class
+ * @see discriminators /docs/discriminators.html
+ * @api public
+ */
+
+SingleNestedPath.prototype.discriminator = function(name, schema) {
+  discriminator(this.caster, name, schema);
+
+  this.caster.discriminators[name] = _createConstructor(schema, this.caster);
+
+  return this.caster.discriminators[name];
+};
+
+/*!
+ * ignore
+ */
+
+SingleNestedPath.prototype.clone = function() {
+  const options = Object.assign({}, this.options);
+  const schematype = new this.constructor(this.schema, this.path, options);
+  schematype.validators = this.validators.slice();
+  schematype.caster.discriminators = Object.assign({}, this.caster.discriminators);
+  return schematype;
+};
+
+},{"../error/cast":293,"../error/objectExpected":300,"../helpers/discriminator/getConstructor":310,"../helpers/get":314,"../helpers/model/discriminator":317,"../options":331,"../schematype":357,"../types/subdocument":368,"./operators/exists":350,"./operators/geospatial":351,"./operators/helpers":352,"events":268}],338:[function(require,module,exports){
+'use strict';
+
+/*!
+ * Module dependencies.
+ */
+
 const $exists = require('./operators/exists');
 const $type = require('./operators/type');
 const MongooseError = require('../error/mongooseError');
@@ -114345,7 +114877,7 @@ handle.$in = SchemaType.prototype.$conditionalHandlers.$in;
 
 module.exports = SchemaArray;
 
-},{"../cast":278,"../error/mongooseError":298,"../helpers/get":314,"../queryhelpers":335,"../schematype":357,"../types":365,"../utils":369,"./boolean":338,"./buffer":339,"./date":340,"./map":345,"./mixed":346,"./number":347,"./objectid":348,"./operators/exists":350,"./operators/geospatial":351,"./operators/helpers":352,"./operators/type":354,"./string":355,"util":390}],338:[function(require,module,exports){
+},{"../cast":278,"../error/mongooseError":298,"../helpers/get":314,"../queryhelpers":335,"../schematype":357,"../types":365,"../utils":369,"./boolean":339,"./buffer":340,"./date":341,"./map":345,"./mixed":346,"./number":347,"./objectid":348,"./operators/exists":350,"./operators/geospatial":351,"./operators/helpers":352,"./operators/type":354,"./string":355,"util":390}],339:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -114555,7 +115087,7 @@ SchemaBoolean.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaBoolean;
 
-},{"../cast/boolean":279,"../error/cast":293,"../schematype":357,"../utils":369}],339:[function(require,module,exports){
+},{"../cast/boolean":279,"../error/cast":293,"../schematype":357,"../utils":369}],340:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -114811,7 +115343,7 @@ SchemaBuffer.prototype.castForQuery = function($conditional, val) {
 module.exports = SchemaBuffer;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":271,"../helpers/symbols":327,"../schematype":357,"../types/buffer":360,"../utils":369,"./../document":285,"./operators/bitwise":349}],340:[function(require,module,exports){
+},{"../../../is-buffer/index.js":271,"../helpers/symbols":327,"../schematype":357,"../types/buffer":360,"../utils":369,"./../document":285,"./operators/bitwise":349}],341:[function(require,module,exports){
 /*!
  * Module requirements.
  */
@@ -115175,7 +115707,7 @@ SchemaDate.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaDate;
 
-},{"../cast/date":280,"../error/index":295,"../schematype":357,"../utils":369}],341:[function(require,module,exports){
+},{"../cast/date":280,"../error/index":295,"../schematype":357,"../utils":369}],342:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -115391,7 +115923,7 @@ Decimal128.prototype.$conditionalHandlers =
 module.exports = Decimal128;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":271,"../cast/decimal128":281,"../helpers/symbols":327,"../schematype":357,"../types/decimal128":362,"../utils":369,"./../document":285}],342:[function(require,module,exports){
+},{"../../../is-buffer/index.js":271,"../cast/decimal128":281,"../helpers/symbols":327,"../schematype":357,"../types/decimal128":362,"../utils":369,"./../document":285}],343:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -115479,7 +116011,7 @@ DocumentArray.prototype.constructor = DocumentArray;
  * Ignore
  */
 
-function _createConstructor(schema, options) {
+function _createConstructor(schema, options, baseClass) {
   Subdocument || (Subdocument = require('../types/embedded'));
 
   // compile an embedded document for this schema
@@ -115489,7 +116021,8 @@ function _createConstructor(schema, options) {
     this.$session(this.ownerDocument().$session());
   }
 
-  EmbeddedDocument.prototype = Object.create(Subdocument.prototype);
+  const proto = baseClass != null ? baseClass.prototype : Subdocument.prototype;
+  EmbeddedDocument.prototype = Object.create(proto);
   EmbeddedDocument.prototype.$__setSchema(schema);
   EmbeddedDocument.schema = schema;
   EmbeddedDocument.prototype.constructor = EmbeddedDocument;
@@ -115526,7 +116059,7 @@ DocumentArray.prototype.discriminator = function(name, schema) {
 
   schema = discriminator(this.casterConstructor, name, schema);
 
-  const EmbeddedDocument = _createConstructor(schema);
+  const EmbeddedDocument = _createConstructor(schema, null, this.casterConstructor);
   EmbeddedDocument.baseCasterConstructor = this.casterConstructor;
 
   try {
@@ -115882,303 +116415,7 @@ function scopePaths(array, fields, init) {
 
 module.exports = DocumentArray;
 
-},{"../error/cast":293,"../helpers/discriminator/getConstructor":310,"../helpers/model/discriminator":317,"../helpers/symbols":327,"../schematype":357,"../types/documentarray":363,"../types/embedded":364,"../utils":369,"./array":337,"events":268,"util":390}],343:[function(require,module,exports){
-'use strict';
-
-/*!
- * Module dependencies.
- */
-
-const CastError = require('../error/cast');
-const EventEmitter = require('events').EventEmitter;
-const ObjectExpectedError = require('../error/objectExpected');
-const SchemaType = require('../schematype');
-const $exists = require('./operators/exists');
-const castToNumber = require('./operators/helpers').castToNumber;
-const discriminator = require('../helpers/model/discriminator');
-const geospatial = require('./operators/geospatial');
-const get = require('../helpers/get');
-const getConstructor = require('../helpers/discriminator/getConstructor');
-const internalToObjectOptions = require('../options').internalToObjectOptions;
-
-let Subdocument;
-
-module.exports = Embedded;
-
-/**
- * Sub-schema schematype constructor
- *
- * @param {Schema} schema
- * @param {String} key
- * @param {Object} options
- * @inherits SchemaType
- * @api public
- */
-
-function Embedded(schema, path, options) {
-  this.caster = _createConstructor(schema);
-  this.caster.path = path;
-  this.caster.prototype.$basePath = path;
-  this.schema = schema;
-  this.$isSingleNested = true;
-  SchemaType.call(this, path, options, 'Embedded');
-}
-
-/*!
- * ignore
- */
-
-Embedded.prototype = Object.create(SchemaType.prototype);
-Embedded.prototype.constructor = Embedded;
-
-/*!
- * ignore
- */
-
-function _createConstructor(schema) {
-  // lazy load
-  Subdocument || (Subdocument = require('../types/subdocument'));
-
-  const _embedded = function SingleNested(value, path, parent) {
-    const _this = this;
-
-    this.$parent = parent;
-    Subdocument.apply(this, arguments);
-
-    this.$session(this.ownerDocument().$session());
-
-    if (parent) {
-      parent.on('save', function() {
-        _this.emit('save', _this);
-        _this.constructor.emit('save', _this);
-      });
-
-      parent.on('isNew', function(val) {
-        _this.isNew = val;
-        _this.emit('isNew', val);
-        _this.constructor.emit('isNew', val);
-      });
-    }
-  };
-  _embedded.prototype = Object.create(Subdocument.prototype);
-  _embedded.prototype.$__setSchema(schema);
-  _embedded.prototype.constructor = _embedded;
-  _embedded.schema = schema;
-  _embedded.$isSingleNested = true;
-  _embedded.events = new EventEmitter();
-  _embedded.prototype.toBSON = function() {
-    return this.toObject(internalToObjectOptions);
-  };
-
-  // apply methods
-  for (const i in schema.methods) {
-    _embedded.prototype[i] = schema.methods[i];
-  }
-
-  // apply statics
-  for (const i in schema.statics) {
-    _embedded[i] = schema.statics[i];
-  }
-
-  for (const i in EventEmitter.prototype) {
-    _embedded[i] = EventEmitter.prototype[i];
-  }
-
-  return _embedded;
-}
-
-/*!
- * Special case for when users use a common location schema to represent
- * locations for use with $geoWithin.
- * https://docs.mongodb.org/manual/reference/operator/query/geoWithin/
- *
- * @param {Object} val
- * @api private
- */
-
-Embedded.prototype.$conditionalHandlers.$geoWithin = function handle$geoWithin(val) {
-  return { $geometry: this.castForQuery(val.$geometry) };
-};
-
-/*!
- * ignore
- */
-
-Embedded.prototype.$conditionalHandlers.$near =
-Embedded.prototype.$conditionalHandlers.$nearSphere = geospatial.cast$near;
-
-Embedded.prototype.$conditionalHandlers.$within =
-Embedded.prototype.$conditionalHandlers.$geoWithin = geospatial.cast$within;
-
-Embedded.prototype.$conditionalHandlers.$geoIntersects =
-  geospatial.cast$geoIntersects;
-
-Embedded.prototype.$conditionalHandlers.$minDistance = castToNumber;
-Embedded.prototype.$conditionalHandlers.$maxDistance = castToNumber;
-
-Embedded.prototype.$conditionalHandlers.$exists = $exists;
-
-/**
- * Casts contents
- *
- * @param {Object} value
- * @api private
- */
-
-Embedded.prototype.cast = function(val, doc, init, priorVal) {
-  if (val && val.$isSingleNested) {
-    return val;
-  }
-
-  if (val != null && (typeof val !== 'object' || Array.isArray(val))) {
-    throw new ObjectExpectedError(this.path, val);
-  }
-
-  const Constructor = getConstructor(this.caster, val);
-
-  let subdoc;
-
-  // Only pull relevant selected paths and pull out the base path
-  const parentSelected = get(doc, '$__.selected', {});
-  const path = this.path;
-  const selected = Object.keys(parentSelected).reduce((obj, key) => {
-    if (key.startsWith(path + '.')) {
-      obj[key.substr(path.length + 1)] = parentSelected[key];
-    }
-    return obj;
-  }, {});
-
-  if (init) {
-    subdoc = new Constructor(void 0, selected, doc);
-    subdoc.init(val);
-  } else {
-    if (Object.keys(val).length === 0) {
-      return new Constructor({}, selected, doc);
-    }
-
-    return new Constructor(val, selected, doc, undefined, { priorDoc: priorVal });
-  }
-
-  return subdoc;
-};
-
-/**
- * Casts contents for query
- *
- * @param {string} [$conditional] optional query operator (like `$eq` or `$in`)
- * @param {any} value
- * @api private
- */
-
-Embedded.prototype.castForQuery = function($conditional, val) {
-  let handler;
-  if (arguments.length === 2) {
-    handler = this.$conditionalHandlers[$conditional];
-    if (!handler) {
-      throw new Error('Can\'t use ' + $conditional);
-    }
-    return handler.call(this, val);
-  }
-  val = $conditional;
-  if (val == null) {
-    return val;
-  }
-
-  if (this.options.runSetters) {
-    val = this._applySetters(val);
-  }
-
-  const Constructor = getConstructor(this.caster, val);
-
-  try {
-    val = new Constructor(val);
-  } catch (error) {
-    // Make sure we always wrap in a CastError (gh-6803)
-    if (!(error instanceof CastError)) {
-      throw new CastError('Embedded', val, this.path, error);
-    }
-    throw error;
-  }
-  return val;
-};
-
-/**
- * Async validation on this single nested doc.
- *
- * @api private
- */
-
-Embedded.prototype.doValidate = function(value, fn, scope, options) {
-  const Constructor = getConstructor(this.caster, value);
-
-  if (options && options.skipSchemaValidators) {
-    if (!(value instanceof Constructor)) {
-      value = new Constructor(value, null, scope);
-    }
-
-    return value.validate(fn);
-  }
-
-  SchemaType.prototype.doValidate.call(this, value, function(error) {
-    if (error) {
-      return fn(error);
-    }
-    if (!value) {
-      return fn(null);
-    }
-
-    value.validate(fn);
-  }, scope);
-};
-
-/**
- * Synchronously validate this single nested doc
- *
- * @api private
- */
-
-Embedded.prototype.doValidateSync = function(value, scope, options) {
-  if (!options || !options.skipSchemaValidators) {
-    const schemaTypeError = SchemaType.prototype.doValidateSync.call(this, value, scope);
-    if (schemaTypeError) {
-      return schemaTypeError;
-    }
-  }
-  if (!value) {
-    return;
-  }
-  return value.validateSync();
-};
-
-/**
- * Adds a discriminator to this property
- *
- * @param {String} name
- * @param {Schema} schema fields to add to the schema for instances of this sub-class
- * @api public
- */
-
-Embedded.prototype.discriminator = function(name, schema) {
-  discriminator(this.caster, name, schema);
-
-  this.caster.discriminators[name] = _createConstructor(schema);
-
-  return this.caster.discriminators[name];
-};
-
-/*!
- * ignore
- */
-
-Embedded.prototype.clone = function() {
-  const options = Object.assign({}, this.options);
-  const schematype = new this.constructor(this.schema, this.path, options);
-  schematype.validators = this.validators.slice();
-  schematype.caster.discriminators = Object.assign({}, this.caster.discriminators);
-  return schematype;
-};
-
-},{"../error/cast":293,"../error/objectExpected":300,"../helpers/discriminator/getConstructor":310,"../helpers/get":314,"../helpers/model/discriminator":317,"../options":331,"../schematype":357,"../types/subdocument":368,"./operators/exists":350,"./operators/geospatial":351,"./operators/helpers":352,"events":268}],344:[function(require,module,exports){
+},{"../error/cast":293,"../helpers/discriminator/getConstructor":310,"../helpers/model/discriminator":317,"../helpers/symbols":327,"../schematype":357,"../types/documentarray":363,"../types/embedded":364,"../utils":369,"./array":338,"events":268,"util":390}],344:[function(require,module,exports){
 
 /*!
  * Module exports.
@@ -116194,7 +116431,7 @@ exports.Boolean = require('./boolean');
 
 exports.DocumentArray = require('./documentarray');
 
-exports.Embedded = require('./embedded');
+exports.Embedded = require('./SingleNestedPath');
 
 exports.Array = require('./array');
 
@@ -116216,7 +116453,7 @@ exports.Oid = exports.ObjectId;
 exports.Object = exports.Mixed;
 exports.Bool = exports.Boolean;
 
-},{"./array":337,"./boolean":338,"./buffer":339,"./date":340,"./decimal128":341,"./documentarray":342,"./embedded":343,"./map":345,"./mixed":346,"./number":347,"./objectid":348,"./string":355}],345:[function(require,module,exports){
+},{"./SingleNestedPath":337,"./array":338,"./boolean":339,"./buffer":340,"./date":341,"./decimal128":342,"./documentarray":343,"./map":345,"./mixed":346,"./number":347,"./objectid":348,"./string":355}],345:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -117207,7 +117444,7 @@ function _castMinMaxDistance(self, val) {
   }
 }
 
-},{"../array":337,"./helpers":352}],352:[function(require,module,exports){
+},{"../array":338,"./helpers":352}],352:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -119577,7 +119814,6 @@ function MongooseArray(values, path, doc) {
   }
 
   arr[arrayPathSymbol] = path;
-  arr.validators = [];
   arr[arraySchemaSymbol] = void 0;
 
   // Because doc comes from the context of another function, doc === global
@@ -119900,6 +120136,8 @@ const populateModelSymbol = require('../helpers/symbols').populateModelSymbol;
 
 const _basePush = Array.prototype.push;
 
+const validatorsSymbol = Symbol('mongoose#MongooseCoreArray#validators');
+
 /*!
  * ignore
  */
@@ -119907,6 +120145,14 @@ const _basePush = Array.prototype.push;
 class CoreMongooseArray extends Array {
   get isMongooseArray() {
     return true;
+  }
+
+  get validators() {
+    return this[validatorsSymbol];
+  }
+
+  set validators(v) {
+    this[validatorsSymbol] = v;
   }
 
   /**
@@ -121930,7 +122176,7 @@ Subdocument.prototype.markModified = function(path) {
  * @param {String} path the field to mark as valid
  * @api private
  * @method $markValid
- * @receiver EmbeddedDocument
+ * @receiver Subdocument
  */
 
 Subdocument.prototype.$markValid = function(path) {
@@ -122051,7 +122297,7 @@ Subdocument.prototype.populate = function() {
  * Registers remove event listeners for triggering
  * on subdocuments.
  *
- * @param {EmbeddedDocument} sub
+ * @param {Subdocument} sub
  * @api private
  */
 
@@ -122362,6 +122608,25 @@ exports.promiseOrCallback = function promiseOrCallback(callback, fn, ee) {
  * ignore
  */
 
+exports.omit = function omit(obj, keys) {
+  if (keys == null) {
+    return Object.assign({}, obj);
+  }
+  if (!Array.isArray(keys)) {
+    keys = [keys];
+  }
+
+  const ret = Object.assign({}, obj);
+  for (const key of keys) {
+    delete ret[key];
+  }
+  return ret;
+};
+
+/*!
+ * ignore
+ */
+
 function cloneObject(obj, options, isArrayChild) {
   const minimize = options && options.minimize;
   const ret = {};
@@ -122642,6 +122907,15 @@ exports.tick = function tick(callback) {
       });
     }
   };
+};
+
+/*!
+ * Returns true if `v` is an object that can be serialized as a primitive in
+ * MongoDB
+ */
+
+exports.isMongooseType = function(v) {
+  return v instanceof ObjectId || v instanceof Decimal || v instanceof Buffer;
 };
 
 /*!
