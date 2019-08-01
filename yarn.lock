@@ -483,7 +483,7 @@ core-util-is@~1.0.0:
 
 "cqm-models@https://github.com/projecttacoma/cqm-models#2019-standards-update-speedups":
   version "2.0.0"
-  resolved "https://github.com/projecttacoma/cqm-models#c8f13e47f25544f27d7ab49a24e50186c5748159"
+  resolved "https://github.com/projecttacoma/cqm-models#e0751cab5b36aaf2d602c8ac3d28c4fb9841f9ae"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution#master"
     mongoose "^5.4.14"
