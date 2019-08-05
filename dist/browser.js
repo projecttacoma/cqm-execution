@@ -80287,11 +80287,13 @@ QDMPatientSchema.methods.getByProfile = function getByProfile(profile, isNegated
 // @param {String} profile - the data criteria requested by the execution engine
 // @returns {Object}
 QDMPatientSchema.methods.findRecords = function findRecords(profile) {
+  // Clear profile cache for this patient if there is no cache or the patient has changed
   if (QDMPatientSchema._dataElementCache == null
-    || QDMPatientSchema._dataElementCachePatientId != this._id.toString()) {
+    || QDMPatientSchema._dataElementCachePatientId != this._id) {
     QDMPatientSchema._dataElementCache = {};
-    QDMPatientSchema._dataElementCachePatientId = this._id.toString();
+    QDMPatientSchema._dataElementCachePatientId = this._id;
   }
+  // If there is a cache 'hit', return it
   if (QDMPatientSchema._dataElementCache.hasOwnProperty(profile)) {
     return QDMPatientSchema._dataElementCache[profile];
   }
@@ -80969,7 +80971,6 @@ const IdentifierSchema = mongoose.Schema({
   namingSystem: String,
   value: String,
   qdmVersion: { type: String, default: '5.5' },
-  _type: { type: String, default: 'QDM::Identifier' },
 
 }, { _id: false, id: false });
 
@@ -80977,7 +80978,6 @@ module.exports.IdentifierSchema = IdentifierSchema;
 class Identifier extends mongoose.Document {
   constructor(object) {
     super(object, IdentifierSchema);
-    this._type = 'QDM::Identifier';
   }
 }
 module.exports.Identifier = Identifier;
@@ -81283,7 +81283,7 @@ const [Schema] = [mongoose.Schema];
 
 function DataElementSchema(add, options) {
   const extended = new Schema({
-    dataElementCodes: { type: [Code] },
+    dataElementCodes: { type: [] },
     description: { type: String },
     codeListId: { type: String },
     id: {
@@ -107112,7 +107112,16 @@ Document.prototype.get = function(path, type, options) {
     adhoc = this.schema.interpretAsType(path, type, this.schema.options);
   }
 
-  const schema = this.$__path(path) || this.schema.virtualpath(path);
+  let schema = this.$__path(path);
+  if (schema == null) {
+    schema = this.schema.virtualpath(path);
+  }
+  if (schema instanceof MixedSchema) {
+    const virtual = this.schema.virtualpath(path);
+    if (virtual != null) {
+      schema = virtual;
+    }
+  }
   const pieces = path.split('.');
   let obj = this._doc;
 
@@ -107900,7 +107909,15 @@ Document.prototype.$__validate = function(options, callback) {
         return;
       }
 
-      const val = _this.$__getValue(path);
+      let val = _this.$__getValue(path);
+
+      // If you `populate()` and get back a null value, required validators
+      // shouldn't fail (gh-8018). We should always fall back to the populated
+      // value.
+      let pop;
+      if (val == null && (pop = _this.populated(path))) {
+        val = pop;
+      }
       const scope = path in _this.$__.pathsToScopes ?
         _this.$__.pathsToScopes[path] :
         _this;
@@ -112655,21 +112672,24 @@ warnings.increment = '`increment` should not be used as a schema path name ' +
  */
 
 Schema.prototype.path = function(path, obj) {
+  // Convert to '.$' to check subpaths re: gh-6405
+  const cleanPath = _pathToPositionalSyntax(path);
   if (obj === undefined) {
-    if (this.paths.hasOwnProperty(path)) {
-      return this.paths[path];
-    }
-    if (this.subpaths.hasOwnProperty(path)) {
-      return this.subpaths[path];
-    }
-    if (this.singleNestedPaths.hasOwnProperty(path)) {
-      return this.singleNestedPaths[path];
+    let schematype = _getPath(this, path, cleanPath);
+    if (schematype != null) {
+      return schematype;
     }
 
     // Look for maps
     const mapPath = getMapPath(this, path);
     if (mapPath != null) {
       return mapPath;
+    }
+
+    // Look if a parent of this path is mixed
+    schematype = this.hasMixedParent(cleanPath);
+    if (schematype != null) {
+      return schematype;
     }
 
     // subpaths?
@@ -112741,6 +112761,10 @@ Schema.prototype.path = function(path, obj) {
       this.singleNestedPaths[path + '.' + key] =
         schemaType.schema.singleNestedPaths[key];
     }
+    for (const key in schemaType.schema.subpaths) {
+      this.singleNestedPaths[path + '.' + key] =
+        schemaType.schema.subpaths[key];
+    }
 
     Object.defineProperty(schemaType.schema, 'base', {
       configurable: true,
@@ -112769,6 +112793,29 @@ Schema.prototype.path = function(path, obj) {
     });
   }
 
+  if (schemaType.$isMongooseArray && schemaType.caster instanceof SchemaType) {
+    let arrayPath = path;
+    let _schemaType = schemaType;
+
+    let toAdd = [];
+    while (_schemaType.$isMongooseArray) {
+      arrayPath = arrayPath + '.$';
+
+      // Skip arrays of document arrays
+      if (_schemaType.$isMongooseDocumentArray) {
+        toAdd = [];
+        break;
+      }
+      _schemaType = _schemaType.caster.clone();
+      _schemaType.path = arrayPath;
+      toAdd.push(_schemaType);
+    }
+
+    for (const _schemaType of toAdd) {
+      this.subpaths[_schemaType.path] = _schemaType;
+    }
+  }
+
   return this;
 };
 
@@ -112787,6 +112834,32 @@ function gatherChildSchemas(schema) {
   }
 
   return childSchemas;
+}
+
+/*!
+ * ignore
+ */
+
+function _getPath(schema, path, cleanPath) {
+  if (schema.paths.hasOwnProperty(path)) {
+    return schema.paths[path];
+  }
+  if (schema.subpaths.hasOwnProperty(cleanPath)) {
+    return schema.subpaths[cleanPath];
+  }
+  if (schema.singleNestedPaths.hasOwnProperty(cleanPath)) {
+    return schema.singleNestedPaths[cleanPath];
+  }
+
+  return null;
+}
+
+/*!
+ * ignore
+ */
+
+function _pathToPositionalSyntax(path) {
+  return path.replace(/\.\d+\./g, '.$.').replace(/\.\d+$/, '.$');
 }
 
 /*!
@@ -113052,6 +113125,9 @@ Schema.prototype.indexedPaths = function indexedPaths() {
  */
 
 Schema.prototype.pathType = function(path) {
+  // Convert to '.$' to check subpaths re: gh-6405
+  const cleanPath = path.replace(/\.\d+\./g, '.$.').replace(/\.\d+$/, '.$');
+
   if (this.paths.hasOwnProperty(path)) {
     return 'real';
   }
@@ -113061,10 +113137,10 @@ Schema.prototype.pathType = function(path) {
   if (this.nested.hasOwnProperty(path)) {
     return 'nested';
   }
-  if (this.subpaths.hasOwnProperty(path)) {
+  if (this.subpaths.hasOwnProperty(cleanPath)) {
     return 'real';
   }
-  if (this.singleNestedPaths.hasOwnProperty(path)) {
+  if (this.singleNestedPaths.hasOwnProperty(cleanPath)) {
     return 'real';
   }
 
@@ -113095,11 +113171,11 @@ Schema.prototype.hasMixedParent = function(path) {
     path = i > 0 ? path + '.' + subpaths[i] : subpaths[i];
     if (path in this.paths &&
         this.paths[path] instanceof MongooseTypes.Mixed) {
-      return true;
+      return this.paths[path];
     }
   }
 
-  return false;
+  return null;
 };
 
 /**
@@ -113193,7 +113269,7 @@ Schema.prototype.setupTimestamp = function(timestamps) {
 };
 
 /*!
- * ignore
+ * ignore. Deprecated re: #6405
  */
 
 function getPositionalPathType(self, path) {
