@@ -80956,6 +80956,7 @@ const IdentifierSchema = mongoose.Schema({
   namingSystem: String,
   value: String,
   qdmVersion: { type: String, default: '5.5' },
+  _type: { type: String, default: 'QDM::Identifier' },
 
 }, { _id: false, id: false });
 
@@ -80963,6 +80964,7 @@ module.exports.IdentifierSchema = IdentifierSchema;
 class Identifier extends mongoose.Document {
   constructor(object) {
     super(object, IdentifierSchema);
+    this._type = 'QDM::Identifier';
   }
 }
 module.exports.Identifier = Identifier;
@@ -81268,7 +81270,7 @@ const [Schema] = [mongoose.Schema];
 
 function DataElementSchema(add, options) {
   const extended = new Schema({
-    dataElementCodes: { type: [] },
+    dataElementCodes: { type: [Code] },
     description: { type: String },
     codeListId: { type: String },
     id: {
@@ -107739,10 +107741,18 @@ function _getPathsToValidate(doc) {
     }
 
     const val = doc.$__getValue(path);
-    if (val) {
+    _pushNestedArrayPaths(val, paths, path);
+  }
+
+  function _pushNestedArrayPaths(val, paths, path) {
+    if (val != null) {
       const numElements = val.length;
       for (let j = 0; j < numElements; ++j) {
-        paths.push(path + '.' + j);
+        if (Array.isArray(val[j])) {
+          _pushNestedArrayPaths(val[j], paths, path + '.' + j);
+        } else {
+          paths.push(path + '.' + j);
+        }
       }
     }
   }
@@ -108829,7 +108839,15 @@ Document.prototype.inspect = function(options) {
     opts = options;
     opts.minimize = false;
   }
-  return this.toObject(opts);
+  const ret = this.toObject(opts);
+
+  if (ret == null) {
+    // If `toObject()` returns null, `this` is still an object, so if `inspect()`
+    // prints out null this can cause some serious confusion. See gh-7942.
+    return 'MongooseDocument { ' + ret + ' }';
+  }
+
+  return ret;
 };
 
 if (inspect.custom) {
@@ -108850,7 +108868,11 @@ if (inspect.custom) {
  */
 
 Document.prototype.toString = function() {
-  return inspect(this.inspect());
+  const ret = this.inspect();
+  if (typeof ret === 'string') {
+    return ret;
+  }
+  return inspect(ret);
 };
 
 /**
@@ -111410,7 +111432,7 @@ function applyTimestampsToChildren(now, update, schema) {
           createdAt = handleTimestampOption(timestamps, 'createdAt');
           updatedAt = handleTimestampOption(timestamps, 'updatedAt');
 
-          if (updatedAt == null) {
+          if (!timestamps || updatedAt == null) {
             continue;
           }
 
@@ -111435,6 +111457,10 @@ function applyTimestampsToChildren(now, update, schema) {
           timestamps = path.schema.options.timestamps;
           createdAt = handleTimestampOption(timestamps, 'createdAt');
           updatedAt = handleTimestampOption(timestamps, 'updatedAt');
+
+          if (!timestamps) {
+            continue;
+          }
 
           if (updatedAt != null) {
             update.$set[key][updatedAt] = now;
@@ -113200,6 +113226,10 @@ function getPositionalPathType(self, path) {
 
     // ignore if its just a position segment: path.0.subpath
     if (!/\D/.test(subpath)) {
+      // Nested array
+      if (val instanceof MongooseTypes.Array && i !== last) {
+        val = val.caster;
+      }
       continue;
     }
 
@@ -113273,6 +113303,11 @@ Schema.prototype.queue = function(name, args) {
  *
  *     // Equivalent to calling `pre()` on `find`, `findOne`, `findOneAndUpdate`.
  *     toySchema.pre(/^find/, function(next) {
+ *       console.log(this.getFilter());
+ *     });
+ *
+ *     // Equivalent to calling `pre()` on `updateOne`, `findOneAndUpdate`.
+ *     toySchema.pre(['updateOne', 'findOneAndUpdate'], function(next) {
  *       console.log(this.getFilter());
  *     });
  *
@@ -114581,11 +114616,19 @@ SchemaArray.prototype.checkRequired = function checkRequired(value, doc) {
  */
 
 SchemaArray.prototype.enum = function() {
-  const instance = get(this, 'caster.instance');
-  if (instance !== 'String') {
-    throw new Error('`enum` can only be set on an array of strings, not ' + instance);
+  let arr = this; /* eslint consistent-this: 0 */
+  while (true) { /* eslint no-constant-condition: 0 */
+    const instance = get(arr, 'caster.instance');
+    if (instance === 'Array') {
+      arr = arr.caster;
+      continue;
+    }
+    if (instance !== 'String') {
+      throw new Error('`enum` can only be set on an array of strings, not ' + instance);
+    }
+    break;
   }
-  this.caster.enum.apply(this.caster, arguments);
+  arr.caster.enum.apply(arr.caster, arguments);
   return this;
 };
 
@@ -118378,9 +118421,9 @@ SchemaType.prototype.default = function(val) {
  *     var s = new Schema({ loc: { type: [Number], index: '2d', sparse: true })
  *     var s = new Schema({ loc: { type: [Number], index: { type: '2dsphere', sparse: true }})
  *     var s = new Schema({ date: { type: Date, index: { unique: true, expires: '1d' }})
- *     Schema.path('my.path').index(true);
- *     Schema.path('my.date').index({ expires: 60 });
- *     Schema.path('my.path').index({ unique: true, sparse: true });
+ *     s.path('my.path').index(true);
+ *     s.path('my.date').index({ expires: 60 });
+ *     s.path('my.path').index({ unique: true, sparse: true });
  *
  * ####NOTE:
  *
@@ -118406,7 +118449,7 @@ SchemaType.prototype.index = function(options) {
  * ####Example:
  *
  *     var s = new Schema({ name: { type: String, unique: true }});
- *     Schema.path('name').index({ unique: true });
+ *     s.path('name').index({ unique: true });
  *
  * _NOTE: violating the constraint returns an `E11000` error from MongoDB when saving, not a Mongoose validation error._
  *
@@ -118439,7 +118482,7 @@ SchemaType.prototype.unique = function(bool) {
  * ###Example:
  *
  *      var s = new Schema({name : {type: String, text : true })
- *      Schema.path('name').index({text : true});
+ *      s.path('name').index({text : true});
  * @param {Boolean} bool
  * @return {SchemaType} this
  * @api public
@@ -118471,7 +118514,7 @@ SchemaType.prototype.text = function(bool) {
  * ####Example:
  *
  *     var s = new Schema({ name: { type: String, sparse: true } });
- *     Schema.path('name').index({ sparse: true });
+ *     s.path('name').index({ sparse: true });
  *
  * @param {Boolean} bool
  * @return {SchemaType} this
@@ -118919,15 +118962,15 @@ const handleIsAsync = util.deprecate(function handleIsAsync() {},
  *
  *     // or through the path API
  *
- *     Schema.path('name').required(true);
+ *     s.path('name').required(true);
  *
  *     // with custom error messaging
  *
- *     Schema.path('name').required(true, 'grrr :( ');
+ *     s.path('name').required(true, 'grrr :( ');
  *
  *     // or make a path conditionally required based on a function
  *     var isOver18 = function() { return this.age >= 18; };
- *     Schema.path('voterRegistrationId').required(isOver18);
+ *     s.path('voterRegistrationId').required(isOver18);
  *
  * The required validator uses the SchemaType's `checkRequired` function to
  * determine whether a given value satisfies the required validator. By default,
