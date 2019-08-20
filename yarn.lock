@@ -483,7 +483,7 @@ core-util-is@~1.0.0:
 
 "cqm-models@https://github.com/projecttacoma/cqm-models#2019-standards-update-interval-sameOrBefore":
   version "2.0.0"
-  resolved "https://github.com/projecttacoma/cqm-models#63f80700f909e5260821a9ed6adbb2e6dbcac7f5"
+  resolved "https://github.com/projecttacoma/cqm-models#40a0df782a62845067b53c1a459520fce1c4dd70"
   dependencies:
     cql-execution "https://github.com/cqframework/cql-execution#master"
     mongoose "^5.4.14"

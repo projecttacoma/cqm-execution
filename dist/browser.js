@@ -19060,7 +19060,7 @@ function numberIsNaN (obj) {
     };
 
     Interval.prototype.sameOrBefore = function(other, precision) {
-      if ((this.end() == null) || (other.start() == null)) {
+      if ((this.end() == null) || ((other != null ? other.start() : void 0) == null)) {
         return null;
       } else {
         return this.end().sameOrBefore(other.start(), precision);
@@ -19068,7 +19068,7 @@ function numberIsNaN (obj) {
     };
 
     Interval.prototype.sameOrAfter = function(other, precision) {
-      if ((this.start() == null) || (other.end() == null)) {
+      if ((this.start() == null) || ((other != null ? other.end() : void 0) == null)) {
         return null;
       } else {
         return this.start().sameOrAfter(other.end(), precision);
@@ -113014,7 +113014,7 @@ Schema.prototype.interpretAsType = function(path, obj, options) {
         ? type
         : type.schemaName || utils.getFunctionName(type);
 
-      if (!(name in MongooseTypes)) {
+      if (!MongooseTypes.hasOwnProperty(name)) {
         throw new TypeError('Invalid schema configuration: ' +
           `\`${name}\` is not a valid type within the array \`${path}\`.` +
           'See http://bit.ly/mongoose-schematypes for a list of valid schema types.');
@@ -114538,16 +114538,6 @@ const $type = require('./operators/type');
 const MongooseError = require('../error/mongooseError');
 const SchemaType = require('../schematype');
 const CastError = SchemaType.CastError;
-const Types = {
-  Array: SchemaArray,
-  Boolean: require('./boolean'),
-  Date: require('./date'),
-  Number: require('./number'),
-  String: require('./string'),
-  ObjectId: require('./objectid'),
-  Buffer: require('./buffer'),
-  Map: require('./map')
-};
 const Mixed = require('./mixed');
 const cast = require('../cast');
 const get = require('../helpers/get');
@@ -114603,9 +114593,8 @@ function SchemaArray(key, cast, options, schemaOptions) {
       ? cast
       : utils.getFunctionName(cast);
 
-    const caster = name in Types
-      ? Types[name]
-      : cast;
+    const Types = require('./');
+    const caster = Types.hasOwnProperty(name) ? Types[name] : cast;
 
     this.casterConstructor = caster;
 
@@ -115038,7 +115027,7 @@ handle.$in = SchemaType.prototype.$conditionalHandlers.$in;
 
 module.exports = SchemaArray;
 
-},{"../cast":278,"../error/mongooseError":298,"../helpers/get":314,"../queryhelpers":335,"../schematype":357,"../types":365,"../utils":369,"./boolean":339,"./buffer":340,"./date":341,"./map":345,"./mixed":346,"./number":347,"./objectid":348,"./operators/exists":350,"./operators/geospatial":351,"./operators/helpers":352,"./operators/type":354,"./string":355,"util":390}],339:[function(require,module,exports){
+},{"../cast":278,"../error/mongooseError":298,"../helpers/get":314,"../queryhelpers":335,"../schematype":357,"../types":365,"../utils":369,"./":344,"./mixed":346,"./operators/exists":350,"./operators/geospatial":351,"./operators/helpers":352,"./operators/type":354,"util":390}],339:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -116613,6 +116602,7 @@ exports.Map = require('./map');
 exports.Oid = exports.ObjectId;
 exports.Object = exports.Mixed;
 exports.Bool = exports.Boolean;
+exports.ObjectID = exports.ObjectId;
 
 },{"./SingleNestedPath":337,"./array":338,"./boolean":339,"./buffer":340,"./date":341,"./decimal128":342,"./documentarray":343,"./map":345,"./mixed":346,"./number":347,"./objectid":348,"./string":355}],345:[function(require,module,exports){
 (function (global){
