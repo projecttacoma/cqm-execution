@@ -1693,6 +1693,13 @@ module.exports = class Calculator {
     // Clear cache of execution friendly dataElements
     CqmModels.QDMPatientSchema.clearDataElementCache();
 
+    const getValueType = function getValueType(object) {
+      if (object == null || object._type == null) {
+        return null;
+      }
+      return `{${CqmModels.QDMurl}}${object._type.replace('QDM::', '')}`;
+    };
+
     // Calculate results for each CQL statement
     const resultsRaw = Calculator.executeEngine(
       allElm,
@@ -1701,6 +1708,7 @@ module.exports = class Calculator {
       measure.main_cql_library,
       mainLibraryElm.library.identifier.version,
       executionDateTime,
+      getValueType,
       params
     );
 
@@ -1790,7 +1798,7 @@ module.exports = class Calculator {
   /**
    * Call into the CQL execution engine for raw results.
    */
-  static executeEngine(elm, patientSource, valueSets, libraryName, version, executionDateTime, parameters = {}) {
+  static executeEngine(elm, patientSource, valueSets, libraryName, version, executionDateTime, getValueType, parameters = {}) {
     let lib;
     let rep;
     if (Array.isArray(elm)) {
@@ -1805,7 +1813,7 @@ module.exports = class Calculator {
     }
     const codeService = new cql.CodeService(valueSets);
     const executor = new cql.Executor(lib, codeService, parameters);
-    return executor.exec(patientSource, executionDateTime);
+    return executor.exec(patientSource, executionDateTime, getValueType);
   }
 };
 
@@ -24954,7 +24962,7 @@ function numberIsNaN (obj) {
       results = [];
       for (i = 0, len = records.length; i < len; i++) {
         rec = records[i];
-        rctx = new Context(ctx);
+        rctx = new Context(ctx, ctx.codeService, ctx.parameters, ctx.executionDateTime, ctx.getValueType);
         rctx.set(this.alias, rec);
         if (this.rest) {
           results.push(this.rest.forEach(rctx, func));
@@ -26222,13 +26230,47 @@ function numberIsNaN (obj) {
   module.exports.Is = Is = (function(superClass) {
     extend(Is, superClass);
 
-    function Is() {
-      return Is.__super__.constructor.apply(this, arguments);
+    function Is(json) {
+      this.expectedType = json.isTypeSpecifier.name;
+      Is.__super__.constructor.apply(this, arguments);
     }
+
+    Is.prototype.exec = function(ctx) {
+      var obj;
+      if (this.arg.valueType != null) {
+        return this.arg.valueType === this.expectedType;
+      }
+      obj = this.execArgs(ctx);
+      switch (this.expectedType) {
+        case "{urn:hl7-org:elm-types:r1}Boolean":
+          return (obj.isBooleanLiteral != null) || typeof obj === "boolean";
+        case "{urn:hl7-org:elm-types:r1}Decimal":
+          return (obj.isDecimalLiteral != null) || (typeof obj === "number" && parseInt(obj) !== obj);
+        case "{urn:hl7-org:elm-types:r1}Integer":
+          return (obj.isIntegerLiteral != null) || (typeof obj === "number" && parseInt(obj) === obj);
+        case "{urn:hl7-org:elm-types:r1}String":
+          return (obj.isStringLiteral != null) || typeof obj === "string";
+        case "{urn:hl7-org:elm-types:r1}Code":
+          return obj.isCode != null;
+        case "{urn:hl7-org:elm-types:r1}Concept":
+          return obj.isConcept != null;
+        case "{http://hl7.org/fhir}ValueSet":
+          return obj.isValueSet != null;
+        case "{urn:hl7-org:elm-types:r1}Quantity":
+          return obj.isQuantity != null;
+        case "{urn:hl7-org:elm-types:r1}DateTime":
+          return obj.isDateTime != null;
+        case "{urn:hl7-org:elm-types:r1}Date":
+          return obj.isDate != null;
+        case "{urn:hl7-org:elm-types:r1}Time":
+          return (obj.isTime != null) && obj.isTime();
+      }
+      return ctx.getValueType(obj) === this.expectedType;
+    };
 
     return Is;
 
-  })(UnimplementedExpression);
+  })(Expression);
 
   module.exports.IntervalTypeSpecifier = IntervalTypeSpecifier = (function(superClass) {
     extend(IntervalTypeSpecifier, superClass);
@@ -62369,12 +62411,14 @@ function numberIsNaN (obj) {
   };
 
   module.exports.Context = Context = (function() {
-    function Context(parent, _codeService, _parameters) {
+    function Context(parent, _codeService, _parameters, executionDateTime, getValueType) {
       this.parent = parent;
       this._codeService = _codeService != null ? _codeService : null;
       if (_parameters == null) {
         _parameters = {};
       }
+      this.executionDateTime = executionDateTime;
+      this.getValueType = getValueType != null ? getValueType : function() {};
       this.context_values = {};
       this.library_context = {};
       this.localId_context = {};
@@ -62714,11 +62758,12 @@ function numberIsNaN (obj) {
   module.exports.PatientContext = PatientContext = (function(superClass) {
     extend(PatientContext, superClass);
 
-    function PatientContext(library1, patient, codeService, parameters, executionDateTime) {
+    function PatientContext(library1, patient, codeService, parameters, executionDateTime, getValueType) {
       this.library = library1;
       this.patient = patient;
       this.executionDateTime = executionDateTime != null ? executionDateTime : dt.DateTime.fromJSDate(new Date());
-      PatientContext.__super__.constructor.call(this, this.library, codeService, parameters);
+      this.getValueType = getValueType != null ? getValueType : function() {};
+      PatientContext.__super__.constructor.call(this, this.library, codeService, parameters, this.executionDateTime, this.getValueType);
     }
 
     PatientContext.prototype.rootContext = function() {
@@ -62727,12 +62772,12 @@ function numberIsNaN (obj) {
 
     PatientContext.prototype.getLibraryContext = function(library) {
       var base;
-      return (base = this.library_context)[library] || (base[library] = new PatientContext(this.get(library), this.patient, this.codeService, this.parameters, this.executionDateTime));
+      return (base = this.library_context)[library] || (base[library] = new PatientContext(this.get(library), this.patient, this.codeService, this.parameters, this.executionDateTime, this.getValueType));
     };
 
     PatientContext.prototype.getLocalIdContext = function(localId) {
       var base;
-      return (base = this.localId_context)[localId] || (base[localId] = new PatientContext(this.get(library), this.patient, this.codeService, this.parameters, this.executionDateTime));
+      return (base = this.localId_context)[localId] || (base[localId] = new PatientContext(this.get(library), this.patient, this.codeService, this.parameters, this.executionDateTime, this.getValueType));
     };
 
     PatientContext.prototype.findRecords = function(profile) {
@@ -62747,11 +62792,12 @@ function numberIsNaN (obj) {
   module.exports.UnfilteredContext = UnfilteredContext = (function(superClass) {
     extend(UnfilteredContext, superClass);
 
-    function UnfilteredContext(library1, results, codeService, parameters, executionDateTime) {
+    function UnfilteredContext(library1, results, codeService, parameters, executionDateTime, getValueType) {
       this.library = library1;
       this.results = results;
       this.executionDateTime = executionDateTime != null ? executionDateTime : dt.DateTime.fromJSDate(new Date());
-      UnfilteredContext.__super__.constructor.call(this, this.library, codeService, parameters);
+      this.getValueType = getValueType != null ? getValueType : function() {};
+      UnfilteredContext.__super__.constructor.call(this, this.library, codeService, parameters, this.executionDateTime, this.getValueType);
     }
 
     UnfilteredContext.prototype.rootContext = function() {
@@ -62818,22 +62864,28 @@ function numberIsNaN (obj) {
       return this;
     };
 
-    Executor.prototype.exec_expression = function(expression, patientSource) {
+    Executor.prototype.exec_expression = function(expression, patientSource, getValueType) {
       var expr, p, patient_ctx, r;
+      if (getValueType == null) {
+        getValueType = function() {};
+      }
       Results(r = new Results());
       expr = this.library.expressions[expression];
       while (expr && (p = patientSource.currentPatient())) {
-        patient_ctx = new PatientContext(this.library, p, this.codeService, this.parameters);
+        patient_ctx = new PatientContext(this.library, p, this.codeService, this.parameters, getValueType);
         r.recordPatientResult(patient_ctx, expression, expr.execute(patient_ctx));
         patientSource.nextPatient();
       }
       return r;
     };
 
-    Executor.prototype.exec = function(patientSource, executionDateTime) {
+    Executor.prototype.exec = function(patientSource, executionDateTime, getValueType) {
       var expr, key, r, ref, unfilteredContext;
-      Results(r = this.exec_patient_context(patientSource, executionDateTime));
-      unfilteredContext = new UnfilteredContext(this.library, r, this.codeService, this.parameters);
+      if (getValueType == null) {
+        getValueType = function() {};
+      }
+      Results(r = this.exec_patient_context(patientSource, executionDateTime, getValueType));
+      unfilteredContext = new UnfilteredContext(this.library, r, this.codeService, this.parameters, getValueType);
       ref = this.library.expressions;
       for (key in ref) {
         expr = ref[key];
@@ -62844,11 +62896,14 @@ function numberIsNaN (obj) {
       return r;
     };
 
-    Executor.prototype.exec_patient_context = function(patientSource, executionDateTime) {
+    Executor.prototype.exec_patient_context = function(patientSource, executionDateTime, getValueType) {
       var expr, key, p, patient_ctx, r, ref;
+      if (getValueType == null) {
+        getValueType = function() {};
+      }
       Results(r = new Results());
       while (p = patientSource.currentPatient()) {
-        patient_ctx = new PatientContext(this.library, p, this.codeService, this.parameters, executionDateTime);
+        patient_ctx = new PatientContext(this.library, p, this.codeService, this.parameters, executionDateTime, getValueType);
         ref = this.library.expressions;
         for (key in ref) {
           expr = ref[key];
@@ -63244,6 +63299,13 @@ function numberIsNaN (obj) {
       if (!isValidDecimal(value.value)) {
         return true;
       }
+    } else if (value.isTime && value.isTime()) {
+      if (value.after(MAX_TIME_VALUE)) {
+        return true;
+      }
+      if (value.before(MIN_TIME_VALUE)) {
+        return true;
+      }
     } else if (value.isDateTime) {
       if (value.after(MAX_DATETIME_VALUE)) {
         return true;
@@ -63256,13 +63318,6 @@ function numberIsNaN (obj) {
         return true;
       }
       if (value.before(MIN_DATE_VALUE)) {
-        return true;
-      }
-    } else if (value.isTime) {
-      if (value.after(MAX_TIME_VALUE)) {
-        return true;
-      }
-      if (value.before(MIN_TIME_VALUE)) {
         return true;
       }
     } else if (Number.isInteger(value)) {
@@ -82094,6 +82149,8 @@ module.exports.ClauseResult = require('./cqm/ClauseResult.js').ClauseResult;
 module.exports.ClauseResultSchema = require('./cqm/ClauseResult.js').ClauseResultSchema;
 module.exports.StatementResult = require('./cqm/StatementResult.js').StatementResult;
 module.exports.StatementResultSchema = require('./cqm/StatementResult.js').StatementResultchema;
+
+module.exports.QDMurl = 'urn:healthit-gov:qdm:v5_5';
 
 },{"./AllDataElements.js":182,"./Result.js":232,"./cqm/CQLLibrary.js":255,"./cqm/CQLStatementDependency.js":256,"./cqm/ClauseResult.js":257,"./cqm/Concept.js":258,"./cqm/IndividualResult.js":259,"./cqm/Measure.js":260,"./cqm/MeasurePackage.js":261,"./cqm/Patient.js":262,"./cqm/PopulationSet.js":263,"./cqm/Provider.js":264,"./cqm/StatementResult.js":265,"./cqm/ValueSet.js":266,"cql-execution":38}],268:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
@@ -106277,11 +106334,12 @@ Document.prototype.init = function(doc, opts, fn) {
 Document.prototype.$__init = function(doc, opts) {
   this.isNew = false;
   this.$init = true;
+  opts = opts || {};
 
   // handle docs with populated paths
   // If doc._id is not null or undefined
   if (doc._id !== null && doc._id !== undefined &&
-    opts && opts.populated && opts.populated.length) {
+    opts.populated && opts.populated.length) {
     const id = String(doc._id);
     for (let i = 0; i < opts.populated.length; ++i) {
       const item = opts.populated[i];
@@ -106293,7 +106351,7 @@ Document.prototype.$__init = function(doc, opts) {
     }
   }
 
-  init(this, doc, this._doc);
+  init(this, doc, this._doc, opts);
 
   this.emit('init', this);
   this.constructor.emit('init', this);
@@ -106312,7 +106370,7 @@ Document.prototype.$__init = function(doc, opts) {
  * @api private
  */
 
-function init(self, obj, doc, prefix) {
+function init(self, obj, doc, opts, prefix) {
   prefix = prefix || '';
 
   const keys = Object.keys(obj);
@@ -106343,7 +106401,7 @@ function init(self, obj, doc, prefix) {
       if (!doc[i]) {
         doc[i] = {};
       }
-      init(self, obj[i], doc[i], path + '.');
+      init(self, obj[i], doc[i], opts, path + '.');
     } else if (!schema) {
       doc[i] = obj[i];
     } else {
@@ -106352,6 +106410,7 @@ function init(self, obj, doc, prefix) {
       } else if (obj[i] !== undefined) {
         const intCache = obj[i].$__ || {};
         const wasPopulated = intCache.wasPopulated || null;
+
         if (schema && !wasPopulated) {
           try {
             doc[i] = schema.cast(obj[i], self, true);
@@ -107817,7 +107876,7 @@ function _getPathsToValidate(doc) {
       if (isMongooseObject(_v)) {
         _v = _v.toObject({ transform: false });
       }
-      const flat = flatten(_v, '', flattenOptions);
+      const flat = flatten(_v, pathToCheck, flattenOptions, doc.schema);
       const _subpaths = Object.keys(flat).map(function(p) {
         return pathToCheck + '.' + p;
       });
@@ -110288,7 +110347,7 @@ exports.modifiedPaths = modifiedPaths;
  * ignore
  */
 
-function flatten(update, path, options) {
+function flatten(update, path, options, schema) {
   let keys;
   if (update && utils.isMongooseObject(update) && !Buffer.isBuffer(update)) {
     keys = Object.keys(update.toObject({ transform: false, virtuals: false }));
@@ -110304,6 +110363,12 @@ function flatten(update, path, options) {
     const key = keys[i];
     const val = update[key];
     result[path + key] = val;
+
+    // Avoid going into mixed paths if schema is specified
+    if (schema != null && schema.paths[path + key] != null && schema.paths[path + key].instance === 'Mixed') {
+      continue;
+    }
+
     if (shouldFlatten(val)) {
       if (options && options.skipArrays && Array.isArray(val)) {
         continue;
@@ -112845,6 +112910,21 @@ Schema.prototype.path = function(path, obj) {
     }
   }
 
+  if (schemaType.$isMongooseDocumentArray) {
+    for (const key of Object.keys(schemaType.schema.paths)) {
+      this.subpaths[path + '.' + key] = schemaType.schema.paths[key];
+      schemaType.schema.paths[key].$isUnderneathDocArray = true;
+    }
+    for (const key of Object.keys(schemaType.schema.subpaths)) {
+      this.subpaths[path + '.' + key] = schemaType.schema.subpaths[key];
+      schemaType.schema.subpaths[key].$isUnderneathDocArray = true;
+    }
+    for (const key of Object.keys(schemaType.schema.singleNestedPaths)) {
+      this.subpaths[path + '.' + key] = schemaType.schema.singleNestedPaths[key];
+      schemaType.schema.singleNestedPaths[key].$isUnderneathDocArray = true;
+    }
+  }
+
   return this;
 };
 
@@ -114593,7 +114673,7 @@ function SchemaArray(key, cast, options, schemaOptions) {
       ? cast
       : utils.getFunctionName(cast);
 
-    const Types = require('./');
+    const Types = require('./index.js');
     const caster = Types.hasOwnProperty(name) ? Types[name] : cast;
 
     this.casterConstructor = caster;
@@ -114804,6 +114884,11 @@ SchemaArray.prototype.cast = function(value, doc, init) {
       // We need to create a new array, otherwise change tracking will
       // update the old doc (gh-4449)
       value = new MongooseArray(value, this.path, doc);
+    }
+
+    const isPopulated = doc != null && doc.$__ != null && doc.populated(this.path);
+    if (isPopulated) {
+      return value;
     }
 
     if (this.caster && this.casterConstructor !== Mixed) {
@@ -115027,7 +115112,7 @@ handle.$in = SchemaType.prototype.$conditionalHandlers.$in;
 
 module.exports = SchemaArray;
 
-},{"../cast":278,"../error/mongooseError":298,"../helpers/get":314,"../queryhelpers":335,"../schematype":357,"../types":365,"../utils":369,"./":344,"./mixed":346,"./operators/exists":350,"./operators/geospatial":351,"./operators/helpers":352,"./operators/type":354,"util":390}],339:[function(require,module,exports){
+},{"../cast":278,"../error/mongooseError":298,"../helpers/get":314,"../queryhelpers":335,"../schematype":357,"../types":365,"../utils":369,"./index.js":344,"./mixed":346,"./operators/exists":350,"./operators/geospatial":351,"./operators/helpers":352,"./operators/type":354,"util":390}],339:[function(require,module,exports){
 'use strict';
 
 /*!

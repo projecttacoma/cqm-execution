@@ -905,4 +905,21 @@ describe('Calculator', () => {
       expect(pop2Strat1StatementResults['May through August of Measurement Period'].pretty).toBe('INTERVAL: 05/01/2012 12:00 AM - 09/01/2012 12:00 AM');
     });
   });
+
+  describe('Is Operator', () => {
+    it('Calculates correctly for Participant', () => {
+      const valueSets = getJSONFixture('cqm_measures/CMSv1155/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMSv1155/CMSv1155.json');
+      const patients = [getJSONFixture('patients/CMSv1155/Is_Operator_Test.json').qdmPatient];
+      const options = { doPretty: true, requestDocument: true };
+      const calculationResults = Calculator.calculate(measure, patients, valueSets, options);
+
+      const id = Object.keys(calculationResults)[0];
+      const lib = 'MeasureUsingNewQDMElementsandAttributes';
+      const define = 'Inpatient Encounters with Appropriate Entity Identifiers';
+      const resultsByStatement = calculationResults[id]['PopulationSet_1'].statement_results_by_statement();
+      const result = resultsByStatement[lib][define];
+      expect(result.final).toEqual('TRUE');
+    });
+  });
 });
