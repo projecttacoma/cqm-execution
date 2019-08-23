@@ -47,11 +47,11 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "istanbul": "^0.4.5",
-    "jasmine-node": "^1.15.0",
+    "jasmine-node": "^3.0.0",
     "require-directory": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "https://github.com/projecttacoma/cqm-models#master",
+    "cqm-models": "3.0.0",
     "lodash": "^4.17.5",
     "moment": "^2.21.0"
   }

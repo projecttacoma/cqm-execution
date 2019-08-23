@@ -31176,15 +31176,11 @@
       ],
       "description": "Patient Characteristic Payer: Payer",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.58",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9bb"
-      },
+      "id": "5d289cc631fe5f8b6c7291e5",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
       "qdmTitle": "Patient Characteristic Payer",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::PatientCharacteristicPayer"
     },
@@ -31195,15 +31191,11 @@
       ],
       "description": "Patient Characteristic Sex: ONCAdministrativeSex",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9bc"
-      },
+      "id": "5d289cc631fe5f8b6c7291e6",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
       "qdmTitle": "Patient Characteristic Sex",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicSex"
     },
     {
@@ -31215,16 +31207,13 @@
       ],
       "description": "Diagnosis: PersonalityDisorder",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9bd"
-      },
+      "id": "5d289cc631fe5f8b6c7291e7",
       "prevalencePeriod": null,
       "qdmCategory": "condition",
       "qdmTitle": "Diagnosis",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "recorder": null,
       "severity": null,
       "_type": "QDM::Diagnosis"
     },
@@ -31236,17 +31225,14 @@
       ],
       "description": "Intervention, Order: PalliativeCare",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.35",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9be"
-      },
+      "id": "5d289cc631fe5f8b6c7291e8",
       "negationRationale": null,
       "qdmCategory": "intervention",
       "qdmStatus": "order",
       "qdmTitle": "Intervention, Order",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "reason": null,
+      "requester": null,
       "_type": "QDM::InterventionOrder"
     },
     {
@@ -31263,18 +31249,15 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9bf"
-      },
+      "id": "5d289cc631fe5f8b6c7291e9",
       "lengthOfStay": null,
       "negationRationale": null,
-      "principalDiagnosis": null,
+      "participant": null,
+      "priority": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmTitle": "Encounter, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::EncounterPerformed"
     },
@@ -31287,16 +31270,13 @@
       ],
       "description": "Diagnosis: PervasiveDevelopmentalDisorder",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c0"
-      },
+      "id": "5d289cc631fe5f8b6c7291ea",
       "prevalencePeriod": null,
       "qdmCategory": "condition",
       "qdmTitle": "Diagnosis",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "recorder": null,
       "severity": null,
       "_type": "QDM::Diagnosis"
     },
@@ -31309,16 +31289,13 @@
       ],
       "description": "Diagnosis: Dysthymia",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c1"
-      },
+      "id": "5d289cc631fe5f8b6c7291eb",
       "prevalencePeriod": null,
       "qdmCategory": "condition",
       "qdmTitle": "Diagnosis",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "recorder": null,
       "severity": null,
       "_type": "QDM::Diagnosis"
     },
@@ -31329,15 +31306,11 @@
       ],
       "description": "Patient Characteristic Ethnicity: Ethnicity",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c2"
-      },
+      "id": "5d289cc631fe5f8b6c7291ec",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
       "qdmTitle": "Patient Characteristic Ethnicity",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
@@ -31349,16 +31322,13 @@
       ],
       "description": "Diagnosis: BipolarDisorder",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c3"
-      },
+      "id": "5d289cc631fe5f8b6c7291ed",
       "prevalencePeriod": null,
       "qdmCategory": "condition",
       "qdmTitle": "Diagnosis",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "recorder": null,
       "severity": null,
       "_type": "QDM::Diagnosis"
     },
@@ -31376,18 +31346,15 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c4"
-      },
+      "id": "5d289cc631fe5f8b6c7291ee",
       "lengthOfStay": null,
       "negationRationale": null,
-      "principalDiagnosis": null,
+      "participant": null,
+      "priority": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmTitle": "Encounter, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::EncounterPerformed"
     },
@@ -31398,15 +31365,11 @@
       ],
       "description": "Patient Characteristic Race: Race",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c5"
-      },
+      "id": "5d289cc631fe5f8b6c7291ef",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
       "qdmTitle": "Patient Characteristic Race",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
@@ -31418,16 +31381,13 @@
       ],
       "description": "Diagnosis: SchizophreniaorPsychoticDisorder",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c6"
-      },
+      "id": "5d289cc631fe5f8b6c7291f0",
       "prevalencePeriod": null,
       "qdmCategory": "condition",
       "qdmTitle": "Diagnosis",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "recorder": null,
       "severity": null,
       "_type": "QDM::Diagnosis"
     },
@@ -31445,18 +31405,15 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c7"
-      },
+      "id": "5d289cc631fe5f8b6c7291f1",
       "lengthOfStay": null,
       "negationRationale": null,
-      "principalDiagnosis": null,
+      "participant": null,
+      "priority": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmTitle": "Encounter, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::EncounterPerformed"
     },
@@ -31469,16 +31426,13 @@
       ],
       "description": "Diagnosis: MajorDepressionIncludingRemission",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.110",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c8"
-      },
+      "id": "5d289cc631fe5f8b6c7291f2",
       "prevalencePeriod": null,
       "qdmCategory": "condition",
       "qdmTitle": "Diagnosis",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
+      "recorder": null,
       "severity": null,
       "_type": "QDM::Diagnosis"
     },
@@ -31491,18 +31445,18 @@
       ],
       "description": "Assessment, Performed: Assessment, Performed",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.117",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb38331fe5ffd9967a9c9"
-      },
+      "id": "5d289cc631fe5f8b6c7291f3",
       "method": null,
       "negationRationale": null,
+      "performer": null,
       "qdmCategory": "assessment",
       "qdmStatus": "performed",
       "qdmTitle": "Assessment, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "reason": null,
+      "relatedTo": null,
+      "relevantDatetime": null,
+      "relevantPeriod": null,
       "result": null,
       "_type": "QDM::AssessmentPerformed"
     }
@@ -31510,25 +31464,25 @@
   "title": "Depression Utilization of the PHQ-9 Tool",
   "updated_at": null,
   "value_set_ids": [
-    "5cffb38331fe5ffd9967a9ca",
-    "5cffb38331fe5ffd9967a9cb",
-    "5cffb38331fe5ffd9967a9cc",
-    "5cffb38331fe5ffd9967a9cd",
-    "5cffb38331fe5ffd9967a9ce",
-    "5cffb38331fe5ffd9967a9cf",
-    "5cffb38331fe5ffd9967a9d0",
-    "5cffb38331fe5ffd9967a9d1",
-    "5cffb38331fe5ffd9967a9d2",
-    "5cffb38331fe5ffd9967a9d3",
-    "5cffb38331fe5ffd9967a9d4",
-    "5cffb38331fe5ffd9967a9d5",
-    "5cffb38331fe5ffd9967a9d6",
-    "5cffb38331fe5ffd9967a9d7",
-    "5cffb38331fe5ffd9967a9d8",
-    "5cffb38331fe5ffd9967a9d9",
-    "5cffb38331fe5ffd9967a9da",
-    "5cffb38331fe5ffd9967a9db",
-    "5cffb38331fe5ffd9967a9dc",
-    "5cffb38331fe5ffd9967a9dd"
+    "5d289cc631fe5f8b6c7291d1",
+    "5d289cc631fe5f8b6c7291d2",
+    "5d289cc631fe5f8b6c7291d3",
+    "5d289cc631fe5f8b6c7291d4",
+    "5d289cc631fe5f8b6c7291d5",
+    "5d289cc631fe5f8b6c7291d6",
+    "5d289cc631fe5f8b6c7291d7",
+    "5d289cc631fe5f8b6c7291d8",
+    "5d289cc631fe5f8b6c7291d9",
+    "5d289cc631fe5f8b6c7291da",
+    "5d289cc631fe5f8b6c7291db",
+    "5d289cc631fe5f8b6c7291dc",
+    "5d289cc631fe5f8b6c7291dd",
+    "5d289cc631fe5f8b6c7291de",
+    "5d289cc631fe5f8b6c7291df",
+    "5d289cc631fe5f8b6c7291e0",
+    "5d289cc631fe5f8b6c7291e1",
+    "5d289cc631fe5f8b6c7291e2",
+    "5d289cc631fe5f8b6c7291e3",
+    "5d289cc631fe5f8b6c7291e4"
   ]
 }

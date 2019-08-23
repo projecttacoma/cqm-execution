@@ -2672,15 +2672,11 @@
       ],
       "description": "Patient Characteristic Payer: Payer",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.58",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39b31fe5ffde1129a1a"
-      },
+      "id": "5d289ce031fe5f8ba62f7752",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
       "qdmTitle": "Patient Characteristic Payer",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::PatientCharacteristicPayer"
     },
@@ -2691,15 +2687,11 @@
       ],
       "description": "Patient Characteristic Ethnicity: Ethnicity",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39b31fe5ffde1129a1b"
-      },
+      "id": "5d289ce031fe5f8ba62f7753",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
       "qdmTitle": "Patient Characteristic Ethnicity",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
@@ -2709,15 +2701,11 @@
       ],
       "description": "Patient Characteristic Sex: ONCAdministrativeSex",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39b31fe5ffde1129a1c"
-      },
+      "id": "5d289ce031fe5f8ba62f7754",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
       "qdmTitle": "Patient Characteristic Sex",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicSex"
     },
     {
@@ -2727,15 +2715,11 @@
       ],
       "description": "Patient Characteristic Payer: MedicareFeeForService",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.58",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39b31fe5ffde1129a1d"
-      },
+      "id": "5d289ce031fe5f8ba62f7755",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "payer",
       "qdmTitle": "Patient Characteristic Payer",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::PatientCharacteristicPayer"
     },
@@ -2746,15 +2730,11 @@
       ],
       "description": "Patient Characteristic Race: Race",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39b31fe5ffde1129a1e"
-      },
+      "id": "5d289ce031fe5f8ba62f7756",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
       "qdmTitle": "Patient Characteristic Race",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
@@ -2771,18 +2751,15 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
-      "id": {
-        "namingSystem": null,
-        "qdmVersion": "5.4",
-        "value": "5cffb39b31fe5ffde1129a1f"
-      },
+      "id": "5d289ce031fe5f8ba62f7757",
       "lengthOfStay": null,
       "negationRationale": null,
-      "principalDiagnosis": null,
+      "participant": null,
+      "priority": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmTitle": "Encounter, Performed",
-      "qdmVersion": "5.4",
+      "qdmVersion": "5.5",
       "relevantPeriod": null,
       "_type": "QDM::EncounterPerformed"
     }
@@ -2790,11 +2767,11 @@
   "title": "PD0329",
   "updated_at": null,
   "value_set_ids": [
-    "5cffb39b31fe5ffde1129a20",
-    "5cffb39b31fe5ffde1129a21",
-    "5cffb39b31fe5ffde1129a22",
-    "5cffb39b31fe5ffde1129a23",
-    "5cffb39b31fe5ffde1129a24",
-    "5cffb39b31fe5ffde1129a25"
+    "5d289ce031fe5f8ba62f774c",
+    "5d289ce031fe5f8ba62f774d",
+    "5d289ce031fe5f8ba62f774e",
+    "5d289ce031fe5f8ba62f774f",
+    "5d289ce031fe5f8ba62f7750",
+    "5d289ce031fe5f8ba62f7751"
   ]
 }
