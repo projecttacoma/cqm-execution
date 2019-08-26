@@ -64,6 +64,7 @@ Starting with version **2.0.0** released on 6/20/2019, cqm-execution versioning 
   | X | CQL version |
   | --- | --- |
   | 2 | 1.3 |
+  | 3 | 1.4 |
 
 * **Y** indicates major changes (incompatible API changes)
 
