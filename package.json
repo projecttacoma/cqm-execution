@@ -51,7 +51,7 @@
     "require-directory": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "3.0.0",
+    "cqm-models": "https://github.com/projecttacoma/cqm-models.git#1c6eddf8f0c51fde342d88ea8e7cafec6885ea2b",
     "lodash": "^4.17.5",
     "moment": "^2.21.0"
   }
