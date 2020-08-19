@@ -517,10 +517,10 @@ cql-execution@~1.4.0:
     moment "^2.20.1"
     ucum "0.0.7"
 
-cqm-models@~3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/cqm-models/-/cqm-models-3.0.1.tgz#c157c2c0ab590cf55569143b9c1d8342309ac834"
-  integrity sha512-TOpM92oKYhgPmo+IkWqq1H038ZiK5SZJkKYTfz7pcH5ouOE4yUQgOiPnn7/lhiA934weynEn9FJnFjSsiXUQ9Q==
+cqm-models@~3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/cqm-models/-/cqm-models-3.0.2.tgz#4173e738dafbc13ce045af9f7b1f0a79b061d01e"
+  integrity sha512-2k0SYGLoGZnJyvRpx4uL080cC6AUPbDGDigeErF7mlRqhMbSm3p5gM7Eqh4UEidI+61ikXj99p4/pytnseAHvg==
   dependencies:
     cql-execution "~1.4.0"
     mongoose "^5.7.5"
@@ -1420,7 +1420,12 @@ lodash.memoize@~3.0.3:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-3.0.4.tgz#2dcbd2c287cbc0a55cc42328bd0c736150d53e3f"
   integrity sha1-LcvSwofLwKVcxCMovQxzYVDVPj8=
 
-lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@~4.17.12:
+lodash@^4.17.19:
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+
+lodash@^4.17.4, lodash@^4.3.0, lodash@~4.17.12:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
