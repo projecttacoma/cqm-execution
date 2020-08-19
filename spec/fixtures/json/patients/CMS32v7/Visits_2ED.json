@@ -57,8 +57,9 @@
   "provider_ids": [
 
   ],
-  "qdmPatient": {
+  "fhir_patient": {
     "_id": "5d278b6731fe5f6f3e4b4ef7",
+    "resourceType": "Patient",
     "birthDatetime": "1994-01-01T08:00:00.000+00:00",
     "dataElements": [
       {

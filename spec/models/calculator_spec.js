@@ -4,7 +4,7 @@
 const Calculator = require('../../lib/models/calculator.js');
 const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 const getEpisodeResults = require('../support/spec_helper.js').getEpisodeResults;
-const CqmModels = require('cqm-models');
+const CqmModels = require('fhir-typescript-models');
 
 describe('Calculator', () => {
   describe('episode of care based relevance map', () => {
@@ -886,8 +886,8 @@ describe('Calculator', () => {
       const measure = getJSONFixture('cqm_measures/CMS160v7/CMS160v7.json');
       const numPass = getJSONFixture('patients/CMS160v7/PHQ9EBEDec_PerDzDxSAEDec_NUM1Pass.json');
       const patients = [];
-      patients.push(new CqmModels.QDMPatient(numPass.qdmPatient));
-      const cqmMeasure = new CqmModels.Measure(measure);
+      patients.push(CqmModels.CqmPatient.parse(numPass));
+      const cqmMeasure = CqmModels.CqmMeasure.parse(measure);
 
       // sanity check number of population_sets
       expect(cqmMeasure.population_sets.length).toBe(3);

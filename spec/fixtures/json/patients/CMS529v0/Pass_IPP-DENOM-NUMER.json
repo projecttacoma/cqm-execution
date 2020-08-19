@@ -20,7 +20,8 @@
   "provider_ids": [
 
   ],
-  "qdmPatient": {
+  "fhir_patient": {
+    "resourceType": "Patient",
     "birthDatetime": "1930-05-01T04:00:00.000-04:00",
     "dataElements": [
       {

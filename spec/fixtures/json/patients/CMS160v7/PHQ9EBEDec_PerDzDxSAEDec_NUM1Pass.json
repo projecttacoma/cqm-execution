@@ -85,8 +85,9 @@
     "PHQ9EBEDec_PerDzDxSAEDec"
   ],
   "notes": "",
-  "qdmPatient": {
+  "fhir_patient": {
     "birthDatetime": "1967-06-06T04:00:00.000-04:00",
+    "resourceType": "Patient",
     "dataElements": [
       {
         "authorDatetime": "2012-09-01T10:35:00.000-04:00",

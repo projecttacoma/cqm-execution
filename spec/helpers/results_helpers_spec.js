@@ -1,9 +1,9 @@
 /* eslint dot-notation: 0 */ // --> OFF
 
-const ResultsHelpers = require('../../lib/helpers/results_helpers');
-const cql = require('cqm-models').CQL;
-const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
-const Calculator = require('../../lib/models/calculator.js');
+const ResultsHelpers = require("../../lib/helpers/results_helpers");
+const cql = require("cql-execution");
+const getJSONFixture = require("../support/spec_helper.js").getJSONFixture;
+const Calculator = require("../../lib/models/calculator.js");
 
 describe('ResultsHelpers', () => {
   describe('prettyResult', () => {
@@ -56,7 +56,7 @@ describe('ResultsHelpers', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
+        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
@@ -70,7 +70,7 @@ describe('ResultsHelpers', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS760v0/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS760v0/CMS760v0.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
+        patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
@@ -82,7 +82,7 @@ describe('ResultsHelpers', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS760v0/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS760v0/CMS760v0.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json').qdmPatient);
+        patients.push(getJSONFixture('patients/CMS760v0/Correct_Timezone.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -93,7 +93,7 @@ describe('ResultsHelpers', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS32v7/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS32v7/CMS32v7.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json').qdmPatient);
+        patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, includeClauseResults: true, requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
@@ -108,7 +108,7 @@ describe('ResultsHelpers', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS32v7/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS32v7/CMS32v7.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json').qdmPatient);
+        patients.push(getJSONFixture('patients/CMS32v7/Visit_1ED.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -134,7 +134,7 @@ describe('ResultsHelpers', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS460v0/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS460v0/CMS460v0.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json').qdmPatient);
+        patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
@@ -153,7 +153,7 @@ describe('ResultsHelpers', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS460v0/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS460v0/CMS460v0.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json').qdmPatient);
+        patients.push(getJSONFixture('patients/CMS460v0/Opioid_Test.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
@@ -172,7 +172,7 @@ describe('ResultsHelpers', () => {
         const measure = getJSONFixture('cqm_measures/CMS134v6/CMS134v6.json');
         const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
         const patients = [];
-        patients.push(passNumer.qdmPatient);
+        patients.push(passNumer);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const passNumerResults = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = passNumerResults.statement_results_by_statement();
@@ -186,7 +186,7 @@ describe('ResultsHelpers', () => {
         const measure = getJSONFixture('cqm_measures/CMS134v6/CMS134v6.json');
         const passNumer = getJSONFixture('patients/CMS134v6/Pass_Numer.json');
         const patients = [];
-        patients.push(passNumer.qdmPatient);
+        patients.push(passNumer);
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const passNumerResults = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = passNumerResults.statement_results_by_statement();
@@ -200,7 +200,7 @@ describe('ResultsHelpers', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
+        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
         const denexPassresult = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = denexPassresult.statement_results_by_statement();
@@ -214,7 +214,7 @@ describe('ResultsHelpers', () => {
         const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
         const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
         const patients = [];
-        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
+        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json'));
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();

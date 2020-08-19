@@ -21,8 +21,9 @@
   "provider_ids": [
 
   ],
-  "qdmPatient": {
+  "fhir_patient": {
     "birthDatetime": "1937-07-01T04:00:00.000-04:00",
+    "resourceType": "Patient",
     "dataElements": [
       {
         "anatomicalLocationSite": null,
