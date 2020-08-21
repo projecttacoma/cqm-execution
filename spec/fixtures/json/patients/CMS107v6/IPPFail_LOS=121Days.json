@@ -23,7 +23,7 @@
   ],
   "fhir_patient": {
     "resourceType": "Patient",
-    "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+    "birthDate": "1985-09-18T04:00:00.000-04:00",
     "dataElements": [
       {
         "admissionSource": null,
@@ -78,7 +78,7 @@
         "_type": "QDM::EncounterPerformed"
       },
       {
-        "birthDatetime": "1985-09-18T04:00:00.000-04:00",
+        "birthDate": "1985-09-18T04:00:00.000-04:00",
         "codeListId": null,
         "dataElementCodes": [
           {

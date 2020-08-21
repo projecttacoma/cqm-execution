@@ -1,5 +1,5 @@
 {
-  "birthDatetime": "2000-12-31T03:00:00.000-05:00",
+  "birthDate": "2000-12-31T03:00:00.000-05:00",
   "bundleId": "5a2ee976942c6d1fee845b69",
   "dataElements": [
     {
@@ -174,7 +174,7 @@
       "_type": "QDM::EncounterPerformed"
     },
     {
-      "birthDatetime": "2000-12-31T03:00:00.000-05:00",
+      "birthDate": "2000-12-31T03:00:00.000-05:00",
       "category": "patient_characteristic",
       "dataElementCodes": [
         {

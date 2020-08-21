@@ -22,7 +22,7 @@
 
   ],
   "fhir_patient": {
-    "birthDatetime": "1937-07-01T04:00:00.000-04:00",
+    "birthDate": "1937-07-01T04:00:00.000-04:00",
     "resourceType": "Patient",
     "dataElements": [
       {
@@ -270,7 +270,7 @@
         "_type": "QDM::LaboratoryTestPerformed"
       },
       {
-        "birthDatetime": "1937-07-01T04:00:00.000-04:00",
+        "birthDate": "1937-07-01T04:00:00.000-04:00",
         "codeListId": null,
         "dataElementCodes": [
           {

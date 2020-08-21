@@ -24,7 +24,7 @@
   "fhir_patient": {
     "_id": "5d278b4d31fe5f6f3e4b457d",
     "resourceType": "Patient",
-    "birthDatetime": "1995-12-13T08:00:00.000+00:00",
+    "birthDate": "1995-12-13T08:00:00.000+00:00",
     "dataElements": [
       {
         "_id": "5d278b4d31fe5f6f3e4b457e",
@@ -112,7 +112,7 @@
       },
       {
         "_id": "5d278b4d31fe5f6f3e4b4578",
-        "birthDatetime": "1995-12-13T08:00:00.000+00:00",
+        "birthDate": "1995-12-13T08:00:00.000+00:00",
         "codeListId": null,
         "dataElementCodes": [
           {

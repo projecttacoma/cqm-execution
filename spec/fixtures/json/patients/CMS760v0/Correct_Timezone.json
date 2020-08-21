@@ -24,7 +24,7 @@
   "fhir_patient": {
     "_id": "5d278be731fe5f6f3e4b7cfd",
     "resourceType": "Patient",
-    "birthDatetime": "2012-12-31T04:00:00.000+00:00",
+    "birthDate": "2012-12-31T04:00:00.000+00:00",
     "extendedData": {
       "type": null,
       "source_data_criteria": [
@@ -51,7 +51,7 @@
   "dataElements": [
     {
       "_id": "5d278be731fe5f6f3e4b7cf8",
-      "birthDatetime": "2012-12-31T04:00:00.000+00:00",
+      "birthDate": "2012-12-31T04:00:00.000+00:00",
       "codeListId": null,
       "dataElementCodes": [
         {

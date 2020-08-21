@@ -86,7 +86,7 @@
   ],
   "notes": "",
   "fhir_patient": {
-    "birthDatetime": "1967-06-06T04:00:00.000-04:00",
+    "birthDate": "1967-06-06T04:00:00.000-04:00",
     "resourceType": "Patient",
     "dataElements": [
       {
@@ -213,7 +213,7 @@
         "_type": "QDM::EncounterPerformed"
       },
       {
-        "birthDatetime": "1967-06-06T04:00:00.000-04:00",
+        "birthDate": "1967-06-06T04:00:00.000-04:00",
         "category": "patient_characteristic",
         "dataElementCodes": [
           {
