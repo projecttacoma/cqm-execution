@@ -2,7 +2,7 @@
   "id": "5f451837b7b4da2b74633ccc",
   "fhir_patient": {
     "resourceType": "Patient",
-    "id": "numer-strat1-EXM74",
+    "id": "numer-strat2-EXM74",
     "meta": {
       "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" ]
     },
@@ -44,13 +44,13 @@
       "given": [ "Louise" ]
     } ],
     "gender": "female",
-    "birthDate": "2017-11-21"
+    "birthDate": "2010-11-21"
   },
   "data_elements": [
     {
       "fhir_resource": {
         "resourceType": "Encounter",
-        "id": "numer-strat1-EXM74-Encounter",
+        "id": "numer-strat2-EXM74-Encounter",
         "meta": {
           "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter" ]
         },
@@ -68,7 +68,7 @@
           } ]
         } ],
         "subject": {
-          "reference": "Patient/numer-strat1-EXM74"
+          "reference": "Patient/numer-strat2-EXM74"
         },
         "period": {
           "start": "2019-08-21T08:00:00-07:00",
@@ -79,7 +79,7 @@
     {
       "fhir_resource": {
         "resourceType": "Procedure",
-        "id": "numer-strat1-EXM74-Procedure",
+        "id": "numer-strat2-EXM74-Procedure",
         "meta": {
           "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure" ]
         },
@@ -92,7 +92,7 @@
           } ]
         },
         "subject": {
-          "reference": "Patient/numer-strat1-EXM74"
+          "reference": "Patient/numer-strat2-EXM74"
         },
         "performedPeriod": {
           "start": "2019-08-21T08:05:00-07:00",
