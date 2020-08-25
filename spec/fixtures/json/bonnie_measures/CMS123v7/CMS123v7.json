@@ -1,5 +1,5 @@
 {
-  "_id": "5b58b5cdd7c8ac639fd9614a",
+  "id": "5b58b5cdd7c8ac639fd9614a",
   "bundle_id": "5a57e977942c6d1e61d32f14",
   "calculate_sdes": true,
   "category": "Miscellaneous",
@@ -19289,7 +19289,7 @@
   "episode_ids": null,
   "episode_of_care": false,
   "hqmf_id": "40280382-62C4-DE26-0162-FE2505800CC9",
-  "hqmf_set_id": "C0D72444-7C26-4863-9B51-8080F8928A85",
+  "set_id": "C0D72444-7C26-4863-9B51-8080F8928A85",
   "hqmf_version_number": 7,
   "id": "5b58b5cdd7c8ac639fd9614a",
   "main_cql_library": "DiabetesFootExam",

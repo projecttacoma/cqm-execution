@@ -27,14 +27,6 @@
     "birthDate": "2012-12-31T04:00:00.000+00:00",
     "extendedData": {
       "type": null,
-      "source_data_criteria": [
-        {
-          "id": "MeasurePeriod",
-          "start_date": 0,
-          "end_date": 0,
-          "references": null
-        }
-      ],
       "is_shared": null,
       "origin_data": [
 
@@ -48,6 +40,14 @@
     },
     "qdmVersion": "5.5"
   },
+  "source_data_criteria": [
+    {
+      "id": "MeasurePeriod",
+      "start_date": 0,
+      "end_date": 0,
+      "references": null
+    }
+  ],
   "dataElements": [
     {
       "_id": "5d278be731fe5f6f3e4b7cf8",

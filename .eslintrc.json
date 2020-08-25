@@ -28,8 +28,8 @@
       {
         "allow": [
           "_id",
-	  "_type",
-	  "__guard__"
+          "_type",
+          "__guard__"
         ]
       }
     ]

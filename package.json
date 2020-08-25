@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx jest",
     "coverage": "npx jest --coverage",
-    "lint": "npx eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js' --ext .js",
+    "lint": "npx eslint 'lib/*.js' 'lib/**/*.js' --ext .js",
     "build-cql": "cd ./node_modules/cql-execution && yarn install && cd ../../",
     "prepublish": "./bin/build_cql_execution.sh",
     "browser": "browserify lib/browser.js > dist/browser.js"

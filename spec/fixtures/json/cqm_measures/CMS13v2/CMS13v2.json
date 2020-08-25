@@ -4,7 +4,6 @@
   "cms_id": "CMS13v2",
   "component": false,
   "component_hqmf_set_ids": [
-
   ],
   "composite": false,
   "composite_hqmf_set_id": null,
@@ -632,7 +631,6 @@
                     }
                   ],
                   "relationship": [
-
                   ],
                   "where": {
                     "localId": "35",
@@ -775,7 +773,6 @@
                     }
                   ],
                   "relationship": [
-
                   ]
                 }
               },
@@ -2004,7 +2001,6 @@
                           }
                         ],
                         "relationship": [
-
                         ],
                         "where": {
                           "localId": "103",
@@ -4845,7 +4841,6 @@
                     }
                   ],
                   "relationship": [
-
                   ],
                   "where": {
                     "localId": "33",
@@ -5101,7 +5096,6 @@
                     }
                   ],
                   "relationship": [
-
                   ],
                   "where": {
                     "localId": "46",
@@ -5589,7 +5583,6 @@
                     }
                   ],
                   "relationship": [
-
                   ],
                   "where": {
                     "localId": "70",
@@ -5838,7 +5831,6 @@
                     }
                   ],
                   "relationship": [
-
                   ],
                   "where": {
                     "localId": "83",
@@ -6309,7 +6301,6 @@
                       }
                     ],
                     "relationship": [
-
                     ],
                     "where": {
                       "localId": "111",
@@ -9962,7 +9953,6 @@
                             }
                           ],
                           "relationship": [
-
                           ],
                           "where": {
                             "localId": "83",
@@ -10040,7 +10030,6 @@
                     }
                   ],
                   "relationship": [
-
                   ],
                   "return": {
                     "localId": "99",
@@ -12708,7 +12697,6 @@
     {
       "codeListId": "2.16.840.1.114222.4.11.3591",
       "dataElementCodes": [
-
       ],
       "description": "Patient Characteristic Payer: Payer",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.58",
@@ -12724,7 +12712,6 @@
       "authorDatetime": null,
       "codeListId": "1.3.6.1.4.1.33895.1.3.0.45",
       "dataElementCodes": [
-
       ],
       "description": "Intervention, Performed: ComfortMeasures",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.36",
@@ -12746,7 +12733,6 @@
       "authorDatetime": null,
       "codeListId": "1.3.6.1.4.1.33895.1.3.0.45",
       "dataElementCodes": [
-
       ],
       "description": "Intervention, Order: ComfortMeasures",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.35",
@@ -12763,7 +12749,6 @@
     {
       "codeListId": "2.16.840.1.114222.4.11.837",
       "dataElementCodes": [
-
       ],
       "description": "Patient Characteristic Ethnicity: Ethnicity",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
@@ -12777,7 +12762,6 @@
     {
       "codeListId": "2.16.840.1.113762.1.4.1",
       "dataElementCodes": [
-
       ],
       "description": "Patient Characteristic Sex: ONCAdministrativeSex",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
@@ -12793,13 +12777,11 @@
       "authorDatetime": null,
       "codeListId": "2.16.840.1.113883.3.117.1.7.1.424",
       "dataElementCodes": [
-
       ],
       "description": "Encounter, Performed: Non-ElectiveInpatientEncounter",
       "diagnoses": null,
       "dischargeDisposition": null,
       "facilityLocations": [
-
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
       "id": "5d289cc131fe5f8b5e9bc314",
@@ -12817,7 +12799,6 @@
     {
       "codeListId": "2.16.840.1.114222.4.11.836",
       "dataElementCodes": [
-
       ],
       "description": "Patient Characteristic Race: Race",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
@@ -12833,13 +12814,11 @@
       "authorDatetime": null,
       "codeListId": "2.16.840.1.113883.3.117.1.7.1.292",
       "dataElementCodes": [
-
       ],
       "description": "Encounter, Performed: EmergencyDepartmentVisit",
       "diagnoses": null,
       "dischargeDisposition": null,
       "facilityLocations": [
-
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
       "id": "5d289cc131fe5f8b5e9bc316",
@@ -12858,7 +12837,6 @@
       "authorDatetime": null,
       "codeListId": "2.16.840.1.113883.3.117.1.7.1.201",
       "dataElementCodes": [
-
       ],
       "daysSupplied": null,
       "description": "Medication, Not Discharged: AntithromboticTherapy",
@@ -12882,7 +12860,6 @@
       "authorDatetime": null,
       "codeListId": "2.16.840.1.113883.3.117.1.7.1.201",
       "dataElementCodes": [
-
       ],
       "daysSupplied": null,
       "description": "Medication, Discharge: AntithromboticTherapy",
