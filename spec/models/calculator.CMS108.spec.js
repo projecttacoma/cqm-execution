@@ -9,6 +9,7 @@ describe("Calculator.CMS108", () => {
     patients.push(getJSONFixture("fhir_cqm_measures/CMS108/tests-patient1-CMS108-cqm-patient.json"));
     const calculationResults = Calculator.calculate(measure, patients, valueSets, {});
     expect(Object.keys(calculationResults).length).toEqual(1);
+    expect(Object.keys(calculationResults[Object.keys(calculationResults)[0]])).toEqual(["PopulationSet_1"]);
     const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
     // There will not be episode_results on the result object
@@ -17,7 +18,7 @@ describe("Calculator.CMS108", () => {
       IPP: true,
       DENEX: false,
       DENOM: false,
-      NUMER: false
+      NUMER: false,
     });
     expect(result.clause_results).toBeNull();
     expect(result.state).toEqual("complete");
@@ -32,6 +33,7 @@ describe("Calculator.CMS108", () => {
     patients.push(getJSONFixture("fhir_cqm_measures/CMS108/tests-patient2-CMS108-cqm-patient.json"));
     const calculationResults = Calculator.calculate(measure, patients, valueSets, {});
     expect(Object.keys(calculationResults).length).toEqual(1);
+    expect(Object.keys(calculationResults[Object.keys(calculationResults)[0]])).toEqual(["PopulationSet_1"]);
     const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
     // There will not be episode_results on the result object
