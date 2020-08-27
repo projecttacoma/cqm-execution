@@ -6,6 +6,7 @@ module.exports = {
   modulePathIgnorePatterns: ["<rootDir>/dist/"],
   collectCoverageFrom: [
     "lib/**/*.js",
+    "!lib/browser.js",
     "!**/node_modules/**"
   ],
   setupFilesAfterEnv: ['jest-extended']
