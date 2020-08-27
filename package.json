@@ -66,7 +66,7 @@
     "cql-execution": "~1.4.0",
     "cql-exec-fhir": "^1.4.0",
     "fhir-typescript-models": "../fhir-typescript-models",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.19",
     "moment": "^2.21.0"
   }
 }
