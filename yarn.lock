@@ -2173,8 +2173,10 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-fhir-typescript-models@../fhir-typescript-models:
-  version "0.0.1"
+fhir-typescript-models@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/fhir-typescript-models/-/fhir-typescript-models-0.0.4.tgz#1cdd626ff3acb2a7ec180ad263ecc60063c3e1c7"
+  integrity sha512-vWnzRdCezm6xrsJE/wf6PilPKByT282Q+W1MmCHpV04nz6aw5mSY0+oICqNM6BUmyk5W/IqATgYNkfNHS0XqqQ==
 
 file-entry-cache@^5.0.1:
   version "5.0.1"
