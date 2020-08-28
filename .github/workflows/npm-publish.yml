@@ -1,0 +1,63 @@
+name: npm-publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  npm-publish:
+    name: npm-publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 14.x
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install node dependencies
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install --frozen-lockfile
+
+      - name: Audit the code
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: audit
+
+      - name: Check browser.js
+        run: ./bin/validate_browser.sh
+
+      - name: Lint the source code
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: run lint
+
+      - name: Execute test coverage
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: run test
+
+      - name: Publish if version has been updated
+        uses: pascalgn/npm-publish-action@master
+        with: # All of theses inputs are optional
+          tag_name: "v%s"
+          tag_message: "v%s"
+          commit_pattern: "[\\s\\S]*Release (\\S+)"
+        env: # More info about the environment variables in the README
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

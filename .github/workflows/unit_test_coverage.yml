@@ -1,0 +1,93 @@
+# This workflow will do the following:
+# - perform a clean install of node dependencies
+# - audit the code for vulnerabilities
+# - verify browser.js
+# - lint the source code for errors
+# - run tests and capture code coverage
+# - upload the code coverage report to Codacy
+# - upload the code coverage report to Codecov
+
+name: Continuous Integration
+
+on:
+  push:
+    branches: [main, develop, bonnie-on-fhir]
+  pull_request:
+    branches: [main, develop, bonnie-on-fhir]
+
+jobs:
+  build:
+    name: Checkout, install, lint, build and test with coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 14.x
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install node dependencies
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install --frozen-lockfile
+
+      - name: Audit the code
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: audit
+
+      - name: Check browser.js
+        run: ./bin/validate_browser.sh
+
+      - name: Lint the source code
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: run lint
+
+      - name: Execute test coverage
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: test
+
+      - name: Upload code coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          file: coverage/lcov.info
+          fail_ci_if_error: true
+
+      - name: Store the coverage report as an artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage/lcov.info
+
+  upload-codacy-coverage:
+    name: Upload code coverage to Codacy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download coverage artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage
+
+      - name: Upload code coverage to Codacy
+        uses: codacy/codacy-coverage-reporter-action@master
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: lcov.info
