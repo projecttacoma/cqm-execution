@@ -1,6 +1,7 @@
 {
   "extends": "airbnb-base",
   "rules": {
+    "quotes": ["error", "double"],
     "max-len": [
       "error",
       {
@@ -27,8 +28,8 @@
       {
         "allow": [
           "_id",
-	  "_type",
-	  "__guard__"
+          "_type",
+          "__guard__"
         ]
       }
     ]

@@ -4,11 +4,12 @@
   "description": "NPM module for calculating eCQMs (electronic clinical quality measures) written in CQL (clinical quality language).",
   "main": "lib/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/istanbul cover -x **/spec/** --reporter=text-lcov --reporter=html ./node_modules/.bin/jasmine-node spec",
-    "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js'",
+    "test": "npx jest",
+    "coverage": "npx jest --coverage",
+    "lint": "npx eslint 'lib/*.js' 'lib/**/*.js' --ext .js",
     "build-cql": "cd ./node_modules/cql-execution && yarn install && cd ../../",
     "prepublish": "./bin/build_cql_execution.sh",
-    "browser": "browserify lib/browser.js > dist/browser.js && ./bin/fix-mongoose.sh"
+    "browser": "browserify lib/browser.js > dist/browser.js"
   },
   "repository": "git+https://github.com/projecttacoma/cqm-execution.git",
   "contributors": [
@@ -42,16 +43,29 @@
   },
   "homepage": "https://github.com/projecttacoma/cqm-execution#readme",
   "devDependencies": {
+    "@types/faker": "^4.1.12",
+    "@types/jest": "^25.2.3",
+    "@types/lodash": "^4.14.153",
+    "@types/node": "^14.0.5",
+    "@types/xml2js": "^0.4.5",
     "browserify": "^16.2.3",
-    "eslint": "^4.17.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "istanbul": "^0.4.5",
-    "jasmine-node": "^3.0.0",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.13.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "faker": "^4.1.0",
+    "jest": "^26.0.1",
+    "jest-extended": "^0.11.5",
+    "prettier": "^2.0.5",
     "require-directory": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "~3.0.3",
+    "cql-execution": "~1.4.0",
+    "cql-exec-fhir": "^1.4.0",
+    "fhir-typescript-models": "0.0.4",
     "lodash": "^4.17.19",
     "moment": "^2.21.0"
   }
