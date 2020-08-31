@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.com/projecttacoma/cqm-execution.svg?branch=main)](https://travis-ci.com/projecttacoma/cqm-execution)
-[![codecov](https://codecov.io/gh/projecttacoma/cqm-execution/branch/main/graph/badge.svg)](https://codecov.io/gh/projecttacoma/cqm-execution)
+[![Build Status](https://travis-ci.com/projecttacoma/cqm-execution.svg?branch=master)](https://travis-ci.com/projecttacoma/cqm-execution)
+[![codecov](https://codecov.io/gh/projecttacoma/cqm-execution/branch/master/graph/badge.svg)](https://codecov.io/gh/projecttacoma/cqm-execution)
 ![NPM](https://img.shields.io/npm/v/cqm-execution.svg)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/cb1f6f862af64f29bd72416eb5eabeeb)](https://www.codacy.com/gh/projecttacoma/cqm-execution?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=projecttacoma/cqm-execution&amp;utm_campaign=Badge_Grade)
 
