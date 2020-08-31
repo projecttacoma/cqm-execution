@@ -41,28 +41,23 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
+      - name: Install yarn
+        run: npm install -g yarn
+
       - name: Install node dependencies
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install --frozen-lockfile
+        run: yarn install --frozen-lockfile
 
       - name: Audit the code
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: audit
+        run: yarn audit
 
       - name: Check browser.js
         run: ./bin/validate_browser.sh
 
       - name: Lint the source code
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: run lint
+        run: yarn run lint
 
       - name: Execute test coverage
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: test
+        run: yarn test
 
       - name: Upload code coverage to Codecov
         uses: codecov/codecov-action@v1
