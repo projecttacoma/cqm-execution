@@ -51,7 +51,7 @@
     "require-directory": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "projecttacoma/cqm-models#MAT-1708",
+    "cqm-models": "~3.0.4",
     "lodash": "^4.17.19",
     "moment": "^2.21.0"
   }

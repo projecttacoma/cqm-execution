@@ -3,7 +3,7 @@ window.cqm = window.cqm || {};
 window.cqm.execution = require('./index');
 window.cqm.models = require('cqm-models');
 
-},{"./index":5,"cqm-models":267}],2:[function(require,module,exports){
+},{"./index":5,"cqm-models":258}],2:[function(require,module,exports){
 const moment = require('moment');
 const CqmModels = require('cqm-models');
 
@@ -462,7 +462,7 @@ module.exports = class CalculatorHelpers {
   }
 };
 
-},{"cqm-models":267,"moment":273}],3:[function(require,module,exports){
+},{"cqm-models":258,"moment":264}],3:[function(require,module,exports){
 const _ = require('lodash');
 
 
@@ -841,7 +841,7 @@ module.exports = class MeasureHelpers {
   }
 };
 
-},{"lodash":272}],4:[function(require,module,exports){
+},{"lodash":263}],4:[function(require,module,exports){
 const _ = require('lodash');
 const CqmModels = require('cqm-models');
 
@@ -1574,7 +1574,7 @@ module.exports = class ResultsHelpers {
   }
 };
 
-},{"../helpers/measure_helpers":3,"cqm-models":267,"lodash":272,"moment":273}],5:[function(require,module,exports){
+},{"../helpers/measure_helpers":3,"cqm-models":258,"lodash":263,"moment":264}],5:[function(require,module,exports){
 module.exports.CalculatorHelpers = require('./helpers/calculator_helpers.js');
 module.exports.MeasureHelpers = require('./helpers/measure_helpers.js');
 module.exports.ResultsHelpers = require('./helpers/results_helpers.js');
@@ -1809,7 +1809,7 @@ module.exports = class Calculator {
   }
 };
 
-},{"../helpers/calculator_helpers":2,"../helpers/results_helpers":4,"./patient_source":7,"cqm-models":267,"lodash":272}],7:[function(require,module,exports){
+},{"../helpers/calculator_helpers":2,"../helpers/results_helpers":4,"./patient_source":7,"cqm-models":258,"lodash":263}],7:[function(require,module,exports){
 // This is a wrapper class for an array of QDM Patients
 // This class adds functions used by the execution engine to
 // traverse an array of QDM Patients
@@ -2339,7 +2339,7 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"object-assign":412,"util/":11}],9:[function(require,module,exports){
+},{"object-assign":403,"util/":11}],9:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -2961,7 +2961,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":10,"_process":413,"inherits":9}],12:[function(require,module,exports){
+},{"./support/isBuffer":10,"_process":404,"inherits":9}],12:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -8741,7 +8741,7 @@ module.exports = ret;
 },{"./es5":13}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("timers").setImmediate)
-},{"_process":413,"timers":417}],14:[function(require,module,exports){
+},{"_process":404,"timers":408}],14:[function(require,module,exports){
 (function (global){
 /**
  * Module dependencies.
@@ -12008,7 +12008,7 @@ module.exports.ObjectID = ObjectID;
 module.exports.ObjectId = ObjectID;
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"./parser/utils":30,"_process":413,"buffer":34,"util":420}],27:[function(require,module,exports){
+},{"./parser/utils":30,"_process":404,"buffer":34,"util":419}],27:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -14243,7 +14243,7 @@ BSON.JS_INT_MIN = -0x20000000000000; // Any integer down to -2^53 can be precise
 module.exports = serializeInto;
 
 }).call(this,{"isBuffer":require("../../../../is-buffer/index.js")})
-},{"../../../../is-buffer/index.js":270,"../binary":14,"../float_parser":20,"../long":22,"../map":23,"./utils":30}],30:[function(require,module,exports){
+},{"../../../../is-buffer/index.js":261,"../binary":14,"../float_parser":20,"../long":22,"../map":23,"./utils":30}],30:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -14364,7 +14364,7 @@ module.exports = Symbol;
 module.exports.Symbol = Symbol;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":34,"util":420}],33:[function(require,module,exports){
+},{"buffer":34,"util":419}],33:[function(require,module,exports){
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -17001,7 +17001,7 @@ function numberIsNaN (obj) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"base64-js":12,"buffer":34,"ieee754":269}],35:[function(require,module,exports){
+},{"base64-js":12,"buffer":34,"ieee754":260}],35:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Code, CodeService, ValueSet, ref;
@@ -18775,7 +18775,7 @@ function numberIsNaN (obj) {
 
 
 
-},{"../util/util":171,"./uncertainty":47,"moment":172}],42:[function(require,module,exports){
+},{"../util/util":171,"./uncertainty":47,"moment":264}],42:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Exception;
@@ -19831,7 +19831,7 @@ function numberIsNaN (obj) {
 
 
 
-},{"../util/math":170,"ucum":180}],46:[function(require,module,exports){
+},{"../util/math":170,"ucum":416}],46:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Ratio;
@@ -62880,7 +62880,7 @@ function numberIsNaN (obj) {
 
 
 
-},{"../datatypes/datatypes":40,"../datatypes/exception":42,"../elm/library":61,"../util/util":171,"util":420}],166:[function(require,module,exports){
+},{"../datatypes/datatypes":40,"../datatypes/exception":42,"../elm/library":61,"../util/util":171,"util":419}],166:[function(require,module,exports){
 // Generated by CoffeeScript 1.12.7
 (function() {
   var Executor, PatientContext, Results, UnfilteredContext, ref;
@@ -63671,14177 +63671,6 @@ function numberIsNaN (obj) {
 
 
 },{}],172:[function(require,module,exports){
-//! moment.js
-//! version : 2.20.1
-//! authors : Tim Wood, Iskren Chernev, Moment.js contributors
-//! license : MIT
-//! momentjs.com
-
-;(function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-    global.moment = factory()
-}(this, (function () { 'use strict';
-
-var hookCallback;
-
-function hooks () {
-    return hookCallback.apply(null, arguments);
-}
-
-// This is done to register the method called with moment()
-// without creating circular dependencies.
-function setHookCallback (callback) {
-    hookCallback = callback;
-}
-
-function isArray(input) {
-    return input instanceof Array || Object.prototype.toString.call(input) === '[object Array]';
-}
-
-function isObject(input) {
-    // IE8 will treat undefined and null as object if it wasn't for
-    // input != null
-    return input != null && Object.prototype.toString.call(input) === '[object Object]';
-}
-
-function isObjectEmpty(obj) {
-    if (Object.getOwnPropertyNames) {
-        return (Object.getOwnPropertyNames(obj).length === 0);
-    } else {
-        var k;
-        for (k in obj) {
-            if (obj.hasOwnProperty(k)) {
-                return false;
-            }
-        }
-        return true;
-    }
-}
-
-function isUndefined(input) {
-    return input === void 0;
-}
-
-function isNumber(input) {
-    return typeof input === 'number' || Object.prototype.toString.call(input) === '[object Number]';
-}
-
-function isDate(input) {
-    return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
-}
-
-function map(arr, fn) {
-    var res = [], i;
-    for (i = 0; i < arr.length; ++i) {
-        res.push(fn(arr[i], i));
-    }
-    return res;
-}
-
-function hasOwnProp(a, b) {
-    return Object.prototype.hasOwnProperty.call(a, b);
-}
-
-function extend(a, b) {
-    for (var i in b) {
-        if (hasOwnProp(b, i)) {
-            a[i] = b[i];
-        }
-    }
-
-    if (hasOwnProp(b, 'toString')) {
-        a.toString = b.toString;
-    }
-
-    if (hasOwnProp(b, 'valueOf')) {
-        a.valueOf = b.valueOf;
-    }
-
-    return a;
-}
-
-function createUTC (input, format, locale, strict) {
-    return createLocalOrUTC(input, format, locale, strict, true).utc();
-}
-
-function defaultParsingFlags() {
-    // We need to deep clone this object.
-    return {
-        empty           : false,
-        unusedTokens    : [],
-        unusedInput     : [],
-        overflow        : -2,
-        charsLeftOver   : 0,
-        nullInput       : false,
-        invalidMonth    : null,
-        invalidFormat   : false,
-        userInvalidated : false,
-        iso             : false,
-        parsedDateParts : [],
-        meridiem        : null,
-        rfc2822         : false,
-        weekdayMismatch : false
-    };
-}
-
-function getParsingFlags(m) {
-    if (m._pf == null) {
-        m._pf = defaultParsingFlags();
-    }
-    return m._pf;
-}
-
-var some;
-if (Array.prototype.some) {
-    some = Array.prototype.some;
-} else {
-    some = function (fun) {
-        var t = Object(this);
-        var len = t.length >>> 0;
-
-        for (var i = 0; i < len; i++) {
-            if (i in t && fun.call(this, t[i], i, t)) {
-                return true;
-            }
-        }
-
-        return false;
-    };
-}
-
-function isValid(m) {
-    if (m._isValid == null) {
-        var flags = getParsingFlags(m);
-        var parsedParts = some.call(flags.parsedDateParts, function (i) {
-            return i != null;
-        });
-        var isNowValid = !isNaN(m._d.getTime()) &&
-            flags.overflow < 0 &&
-            !flags.empty &&
-            !flags.invalidMonth &&
-            !flags.invalidWeekday &&
-            !flags.weekdayMismatch &&
-            !flags.nullInput &&
-            !flags.invalidFormat &&
-            !flags.userInvalidated &&
-            (!flags.meridiem || (flags.meridiem && parsedParts));
-
-        if (m._strict) {
-            isNowValid = isNowValid &&
-                flags.charsLeftOver === 0 &&
-                flags.unusedTokens.length === 0 &&
-                flags.bigHour === undefined;
-        }
-
-        if (Object.isFrozen == null || !Object.isFrozen(m)) {
-            m._isValid = isNowValid;
-        }
-        else {
-            return isNowValid;
-        }
-    }
-    return m._isValid;
-}
-
-function createInvalid (flags) {
-    var m = createUTC(NaN);
-    if (flags != null) {
-        extend(getParsingFlags(m), flags);
-    }
-    else {
-        getParsingFlags(m).userInvalidated = true;
-    }
-
-    return m;
-}
-
-// Plugins that add properties should also add the key here (null value),
-// so we can properly clone ourselves.
-var momentProperties = hooks.momentProperties = [];
-
-function copyConfig(to, from) {
-    var i, prop, val;
-
-    if (!isUndefined(from._isAMomentObject)) {
-        to._isAMomentObject = from._isAMomentObject;
-    }
-    if (!isUndefined(from._i)) {
-        to._i = from._i;
-    }
-    if (!isUndefined(from._f)) {
-        to._f = from._f;
-    }
-    if (!isUndefined(from._l)) {
-        to._l = from._l;
-    }
-    if (!isUndefined(from._strict)) {
-        to._strict = from._strict;
-    }
-    if (!isUndefined(from._tzm)) {
-        to._tzm = from._tzm;
-    }
-    if (!isUndefined(from._isUTC)) {
-        to._isUTC = from._isUTC;
-    }
-    if (!isUndefined(from._offset)) {
-        to._offset = from._offset;
-    }
-    if (!isUndefined(from._pf)) {
-        to._pf = getParsingFlags(from);
-    }
-    if (!isUndefined(from._locale)) {
-        to._locale = from._locale;
-    }
-
-    if (momentProperties.length > 0) {
-        for (i = 0; i < momentProperties.length; i++) {
-            prop = momentProperties[i];
-            val = from[prop];
-            if (!isUndefined(val)) {
-                to[prop] = val;
-            }
-        }
-    }
-
-    return to;
-}
-
-var updateInProgress = false;
-
-// Moment prototype object
-function Moment(config) {
-    copyConfig(this, config);
-    this._d = new Date(config._d != null ? config._d.getTime() : NaN);
-    if (!this.isValid()) {
-        this._d = new Date(NaN);
-    }
-    // Prevent infinite loop in case updateOffset creates new moment
-    // objects.
-    if (updateInProgress === false) {
-        updateInProgress = true;
-        hooks.updateOffset(this);
-        updateInProgress = false;
-    }
-}
-
-function isMoment (obj) {
-    return obj instanceof Moment || (obj != null && obj._isAMomentObject != null);
-}
-
-function absFloor (number) {
-    if (number < 0) {
-        // -0 -> 0
-        return Math.ceil(number) || 0;
-    } else {
-        return Math.floor(number);
-    }
-}
-
-function toInt(argumentForCoercion) {
-    var coercedNumber = +argumentForCoercion,
-        value = 0;
-
-    if (coercedNumber !== 0 && isFinite(coercedNumber)) {
-        value = absFloor(coercedNumber);
-    }
-
-    return value;
-}
-
-// compare two arrays, return the number of differences
-function compareArrays(array1, array2, dontConvert) {
-    var len = Math.min(array1.length, array2.length),
-        lengthDiff = Math.abs(array1.length - array2.length),
-        diffs = 0,
-        i;
-    for (i = 0; i < len; i++) {
-        if ((dontConvert && array1[i] !== array2[i]) ||
-            (!dontConvert && toInt(array1[i]) !== toInt(array2[i]))) {
-            diffs++;
-        }
-    }
-    return diffs + lengthDiff;
-}
-
-function warn(msg) {
-    if (hooks.suppressDeprecationWarnings === false &&
-            (typeof console !==  'undefined') && console.warn) {
-        console.warn('Deprecation warning: ' + msg);
-    }
-}
-
-function deprecate(msg, fn) {
-    var firstTime = true;
-
-    return extend(function () {
-        if (hooks.deprecationHandler != null) {
-            hooks.deprecationHandler(null, msg);
-        }
-        if (firstTime) {
-            var args = [];
-            var arg;
-            for (var i = 0; i < arguments.length; i++) {
-                arg = '';
-                if (typeof arguments[i] === 'object') {
-                    arg += '\n[' + i + '] ';
-                    for (var key in arguments[0]) {
-                        arg += key + ': ' + arguments[0][key] + ', ';
-                    }
-                    arg = arg.slice(0, -2); // Remove trailing comma and space
-                } else {
-                    arg = arguments[i];
-                }
-                args.push(arg);
-            }
-            warn(msg + '\nArguments: ' + Array.prototype.slice.call(args).join('') + '\n' + (new Error()).stack);
-            firstTime = false;
-        }
-        return fn.apply(this, arguments);
-    }, fn);
-}
-
-var deprecations = {};
-
-function deprecateSimple(name, msg) {
-    if (hooks.deprecationHandler != null) {
-        hooks.deprecationHandler(name, msg);
-    }
-    if (!deprecations[name]) {
-        warn(msg);
-        deprecations[name] = true;
-    }
-}
-
-hooks.suppressDeprecationWarnings = false;
-hooks.deprecationHandler = null;
-
-function isFunction(input) {
-    return input instanceof Function || Object.prototype.toString.call(input) === '[object Function]';
-}
-
-function set (config) {
-    var prop, i;
-    for (i in config) {
-        prop = config[i];
-        if (isFunction(prop)) {
-            this[i] = prop;
-        } else {
-            this['_' + i] = prop;
-        }
-    }
-    this._config = config;
-    // Lenient ordinal parsing accepts just a number in addition to
-    // number + (possibly) stuff coming from _dayOfMonthOrdinalParse.
-    // TODO: Remove "ordinalParse" fallback in next major release.
-    this._dayOfMonthOrdinalParseLenient = new RegExp(
-        (this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) +
-            '|' + (/\d{1,2}/).source);
-}
-
-function mergeConfigs(parentConfig, childConfig) {
-    var res = extend({}, parentConfig), prop;
-    for (prop in childConfig) {
-        if (hasOwnProp(childConfig, prop)) {
-            if (isObject(parentConfig[prop]) && isObject(childConfig[prop])) {
-                res[prop] = {};
-                extend(res[prop], parentConfig[prop]);
-                extend(res[prop], childConfig[prop]);
-            } else if (childConfig[prop] != null) {
-                res[prop] = childConfig[prop];
-            } else {
-                delete res[prop];
-            }
-        }
-    }
-    for (prop in parentConfig) {
-        if (hasOwnProp(parentConfig, prop) &&
-                !hasOwnProp(childConfig, prop) &&
-                isObject(parentConfig[prop])) {
-            // make sure changes to properties don't modify parent config
-            res[prop] = extend({}, res[prop]);
-        }
-    }
-    return res;
-}
-
-function Locale(config) {
-    if (config != null) {
-        this.set(config);
-    }
-}
-
-var keys;
-
-if (Object.keys) {
-    keys = Object.keys;
-} else {
-    keys = function (obj) {
-        var i, res = [];
-        for (i in obj) {
-            if (hasOwnProp(obj, i)) {
-                res.push(i);
-            }
-        }
-        return res;
-    };
-}
-
-var defaultCalendar = {
-    sameDay : '[Today at] LT',
-    nextDay : '[Tomorrow at] LT',
-    nextWeek : 'dddd [at] LT',
-    lastDay : '[Yesterday at] LT',
-    lastWeek : '[Last] dddd [at] LT',
-    sameElse : 'L'
-};
-
-function calendar (key, mom, now) {
-    var output = this._calendar[key] || this._calendar['sameElse'];
-    return isFunction(output) ? output.call(mom, now) : output;
-}
-
-var defaultLongDateFormat = {
-    LTS  : 'h:mm:ss A',
-    LT   : 'h:mm A',
-    L    : 'MM/DD/YYYY',
-    LL   : 'MMMM D, YYYY',
-    LLL  : 'MMMM D, YYYY h:mm A',
-    LLLL : 'dddd, MMMM D, YYYY h:mm A'
-};
-
-function longDateFormat (key) {
-    var format = this._longDateFormat[key],
-        formatUpper = this._longDateFormat[key.toUpperCase()];
-
-    if (format || !formatUpper) {
-        return format;
-    }
-
-    this._longDateFormat[key] = formatUpper.replace(/MMMM|MM|DD|dddd/g, function (val) {
-        return val.slice(1);
-    });
-
-    return this._longDateFormat[key];
-}
-
-var defaultInvalidDate = 'Invalid date';
-
-function invalidDate () {
-    return this._invalidDate;
-}
-
-var defaultOrdinal = '%d';
-var defaultDayOfMonthOrdinalParse = /\d{1,2}/;
-
-function ordinal (number) {
-    return this._ordinal.replace('%d', number);
-}
-
-var defaultRelativeTime = {
-    future : 'in %s',
-    past   : '%s ago',
-    s  : 'a few seconds',
-    ss : '%d seconds',
-    m  : 'a minute',
-    mm : '%d minutes',
-    h  : 'an hour',
-    hh : '%d hours',
-    d  : 'a day',
-    dd : '%d days',
-    M  : 'a month',
-    MM : '%d months',
-    y  : 'a year',
-    yy : '%d years'
-};
-
-function relativeTime (number, withoutSuffix, string, isFuture) {
-    var output = this._relativeTime[string];
-    return (isFunction(output)) ?
-        output(number, withoutSuffix, string, isFuture) :
-        output.replace(/%d/i, number);
-}
-
-function pastFuture (diff, output) {
-    var format = this._relativeTime[diff > 0 ? 'future' : 'past'];
-    return isFunction(format) ? format(output) : format.replace(/%s/i, output);
-}
-
-var aliases = {};
-
-function addUnitAlias (unit, shorthand) {
-    var lowerCase = unit.toLowerCase();
-    aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
-}
-
-function normalizeUnits(units) {
-    return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
-}
-
-function normalizeObjectUnits(inputObject) {
-    var normalizedInput = {},
-        normalizedProp,
-        prop;
-
-    for (prop in inputObject) {
-        if (hasOwnProp(inputObject, prop)) {
-            normalizedProp = normalizeUnits(prop);
-            if (normalizedProp) {
-                normalizedInput[normalizedProp] = inputObject[prop];
-            }
-        }
-    }
-
-    return normalizedInput;
-}
-
-var priorities = {};
-
-function addUnitPriority(unit, priority) {
-    priorities[unit] = priority;
-}
-
-function getPrioritizedUnits(unitsObj) {
-    var units = [];
-    for (var u in unitsObj) {
-        units.push({unit: u, priority: priorities[u]});
-    }
-    units.sort(function (a, b) {
-        return a.priority - b.priority;
-    });
-    return units;
-}
-
-function zeroFill(number, targetLength, forceSign) {
-    var absNumber = '' + Math.abs(number),
-        zerosToFill = targetLength - absNumber.length,
-        sign = number >= 0;
-    return (sign ? (forceSign ? '+' : '') : '-') +
-        Math.pow(10, Math.max(0, zerosToFill)).toString().substr(1) + absNumber;
-}
-
-var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
-
-var localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
-
-var formatFunctions = {};
-
-var formatTokenFunctions = {};
-
-// token:    'M'
-// padded:   ['MM', 2]
-// ordinal:  'Mo'
-// callback: function () { this.month() + 1 }
-function addFormatToken (token, padded, ordinal, callback) {
-    var func = callback;
-    if (typeof callback === 'string') {
-        func = function () {
-            return this[callback]();
-        };
-    }
-    if (token) {
-        formatTokenFunctions[token] = func;
-    }
-    if (padded) {
-        formatTokenFunctions[padded[0]] = function () {
-            return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
-        };
-    }
-    if (ordinal) {
-        formatTokenFunctions[ordinal] = function () {
-            return this.localeData().ordinal(func.apply(this, arguments), token);
-        };
-    }
-}
-
-function removeFormattingTokens(input) {
-    if (input.match(/\[[\s\S]/)) {
-        return input.replace(/^\[|\]$/g, '');
-    }
-    return input.replace(/\\/g, '');
-}
-
-function makeFormatFunction(format) {
-    var array = format.match(formattingTokens), i, length;
-
-    for (i = 0, length = array.length; i < length; i++) {
-        if (formatTokenFunctions[array[i]]) {
-            array[i] = formatTokenFunctions[array[i]];
-        } else {
-            array[i] = removeFormattingTokens(array[i]);
-        }
-    }
-
-    return function (mom) {
-        var output = '', i;
-        for (i = 0; i < length; i++) {
-            output += isFunction(array[i]) ? array[i].call(mom, format) : array[i];
-        }
-        return output;
-    };
-}
-
-// format date using native date object
-function formatMoment(m, format) {
-    if (!m.isValid()) {
-        return m.localeData().invalidDate();
-    }
-
-    format = expandFormat(format, m.localeData());
-    formatFunctions[format] = formatFunctions[format] || makeFormatFunction(format);
-
-    return formatFunctions[format](m);
-}
-
-function expandFormat(format, locale) {
-    var i = 5;
-
-    function replaceLongDateFormatTokens(input) {
-        return locale.longDateFormat(input) || input;
-    }
-
-    localFormattingTokens.lastIndex = 0;
-    while (i >= 0 && localFormattingTokens.test(format)) {
-        format = format.replace(localFormattingTokens, replaceLongDateFormatTokens);
-        localFormattingTokens.lastIndex = 0;
-        i -= 1;
-    }
-
-    return format;
-}
-
-var match1         = /\d/;            //       0 - 9
-var match2         = /\d\d/;          //      00 - 99
-var match3         = /\d{3}/;         //     000 - 999
-var match4         = /\d{4}/;         //    0000 - 9999
-var match6         = /[+-]?\d{6}/;    // -999999 - 999999
-var match1to2      = /\d\d?/;         //       0 - 99
-var match3to4      = /\d\d\d\d?/;     //     999 - 9999
-var match5to6      = /\d\d\d\d\d\d?/; //   99999 - 999999
-var match1to3      = /\d{1,3}/;       //       0 - 999
-var match1to4      = /\d{1,4}/;       //       0 - 9999
-var match1to6      = /[+-]?\d{1,6}/;  // -999999 - 999999
-
-var matchUnsigned  = /\d+/;           //       0 - inf
-var matchSigned    = /[+-]?\d+/;      //    -inf - inf
-
-var matchOffset    = /Z|[+-]\d\d:?\d\d/gi; // +00:00 -00:00 +0000 -0000 or Z
-var matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi; // +00 -00 +00:00 -00:00 +0000 -0000 or Z
-
-var matchTimestamp = /[+-]?\d+(\.\d{1,3})?/; // 123456789 123456789.123
-
-// any word (or two) characters or numbers including two/three word month in arabic.
-// includes scottish gaelic two word and hyphenated months
-var matchWord = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i;
-
-
-var regexes = {};
-
-function addRegexToken (token, regex, strictRegex) {
-    regexes[token] = isFunction(regex) ? regex : function (isStrict, localeData) {
-        return (isStrict && strictRegex) ? strictRegex : regex;
-    };
-}
-
-function getParseRegexForToken (token, config) {
-    if (!hasOwnProp(regexes, token)) {
-        return new RegExp(unescapeFormat(token));
-    }
-
-    return regexes[token](config._strict, config._locale);
-}
-
-// Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
-function unescapeFormat(s) {
-    return regexEscape(s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
-        return p1 || p2 || p3 || p4;
-    }));
-}
-
-function regexEscape(s) {
-    return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-}
-
-var tokens = {};
-
-function addParseToken (token, callback) {
-    var i, func = callback;
-    if (typeof token === 'string') {
-        token = [token];
-    }
-    if (isNumber(callback)) {
-        func = function (input, array) {
-            array[callback] = toInt(input);
-        };
-    }
-    for (i = 0; i < token.length; i++) {
-        tokens[token[i]] = func;
-    }
-}
-
-function addWeekParseToken (token, callback) {
-    addParseToken(token, function (input, array, config, token) {
-        config._w = config._w || {};
-        callback(input, config._w, config, token);
-    });
-}
-
-function addTimeToArrayFromToken(token, input, config) {
-    if (input != null && hasOwnProp(tokens, token)) {
-        tokens[token](input, config._a, config, token);
-    }
-}
-
-var YEAR = 0;
-var MONTH = 1;
-var DATE = 2;
-var HOUR = 3;
-var MINUTE = 4;
-var SECOND = 5;
-var MILLISECOND = 6;
-var WEEK = 7;
-var WEEKDAY = 8;
-
-// FORMATTING
-
-addFormatToken('Y', 0, 0, function () {
-    var y = this.year();
-    return y <= 9999 ? '' + y : '+' + y;
-});
-
-addFormatToken(0, ['YY', 2], 0, function () {
-    return this.year() % 100;
-});
-
-addFormatToken(0, ['YYYY',   4],       0, 'year');
-addFormatToken(0, ['YYYYY',  5],       0, 'year');
-addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
-
-// ALIASES
-
-addUnitAlias('year', 'y');
-
-// PRIORITIES
-
-addUnitPriority('year', 1);
-
-// PARSING
-
-addRegexToken('Y',      matchSigned);
-addRegexToken('YY',     match1to2, match2);
-addRegexToken('YYYY',   match1to4, match4);
-addRegexToken('YYYYY',  match1to6, match6);
-addRegexToken('YYYYYY', match1to6, match6);
-
-addParseToken(['YYYYY', 'YYYYYY'], YEAR);
-addParseToken('YYYY', function (input, array) {
-    array[YEAR] = input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
-});
-addParseToken('YY', function (input, array) {
-    array[YEAR] = hooks.parseTwoDigitYear(input);
-});
-addParseToken('Y', function (input, array) {
-    array[YEAR] = parseInt(input, 10);
-});
-
-// HELPERS
-
-function daysInYear(year) {
-    return isLeapYear(year) ? 366 : 365;
-}
-
-function isLeapYear(year) {
-    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-}
-
-// HOOKS
-
-hooks.parseTwoDigitYear = function (input) {
-    return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
-};
-
-// MOMENTS
-
-var getSetYear = makeGetSet('FullYear', true);
-
-function getIsLeapYear () {
-    return isLeapYear(this.year());
-}
-
-function makeGetSet (unit, keepTime) {
-    return function (value) {
-        if (value != null) {
-            set$1(this, unit, value);
-            hooks.updateOffset(this, keepTime);
-            return this;
-        } else {
-            return get(this, unit);
-        }
-    };
-}
-
-function get (mom, unit) {
-    return mom.isValid() ?
-        mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]() : NaN;
-}
-
-function set$1 (mom, unit, value) {
-    if (mom.isValid() && !isNaN(value)) {
-        if (unit === 'FullYear' && isLeapYear(mom.year()) && mom.month() === 1 && mom.date() === 29) {
-            mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value, mom.month(), daysInMonth(value, mom.month()));
-        }
-        else {
-            mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
-        }
-    }
-}
-
-// MOMENTS
-
-function stringGet (units) {
-    units = normalizeUnits(units);
-    if (isFunction(this[units])) {
-        return this[units]();
-    }
-    return this;
-}
-
-
-function stringSet (units, value) {
-    if (typeof units === 'object') {
-        units = normalizeObjectUnits(units);
-        var prioritized = getPrioritizedUnits(units);
-        for (var i = 0; i < prioritized.length; i++) {
-            this[prioritized[i].unit](units[prioritized[i].unit]);
-        }
-    } else {
-        units = normalizeUnits(units);
-        if (isFunction(this[units])) {
-            return this[units](value);
-        }
-    }
-    return this;
-}
-
-function mod(n, x) {
-    return ((n % x) + x) % x;
-}
-
-var indexOf;
-
-if (Array.prototype.indexOf) {
-    indexOf = Array.prototype.indexOf;
-} else {
-    indexOf = function (o) {
-        // I know
-        var i;
-        for (i = 0; i < this.length; ++i) {
-            if (this[i] === o) {
-                return i;
-            }
-        }
-        return -1;
-    };
-}
-
-function daysInMonth(year, month) {
-    if (isNaN(year) || isNaN(month)) {
-        return NaN;
-    }
-    var modMonth = mod(month, 12);
-    year += (month - modMonth) / 12;
-    return modMonth === 1 ? (isLeapYear(year) ? 29 : 28) : (31 - modMonth % 7 % 2);
-}
-
-// FORMATTING
-
-addFormatToken('M', ['MM', 2], 'Mo', function () {
-    return this.month() + 1;
-});
-
-addFormatToken('MMM', 0, 0, function (format) {
-    return this.localeData().monthsShort(this, format);
-});
-
-addFormatToken('MMMM', 0, 0, function (format) {
-    return this.localeData().months(this, format);
-});
-
-// ALIASES
-
-addUnitAlias('month', 'M');
-
-// PRIORITY
-
-addUnitPriority('month', 8);
-
-// PARSING
-
-addRegexToken('M',    match1to2);
-addRegexToken('MM',   match1to2, match2);
-addRegexToken('MMM',  function (isStrict, locale) {
-    return locale.monthsShortRegex(isStrict);
-});
-addRegexToken('MMMM', function (isStrict, locale) {
-    return locale.monthsRegex(isStrict);
-});
-
-addParseToken(['M', 'MM'], function (input, array) {
-    array[MONTH] = toInt(input) - 1;
-});
-
-addParseToken(['MMM', 'MMMM'], function (input, array, config, token) {
-    var month = config._locale.monthsParse(input, token, config._strict);
-    // if we didn't find a month name, mark the date as invalid.
-    if (month != null) {
-        array[MONTH] = month;
-    } else {
-        getParsingFlags(config).invalidMonth = input;
-    }
-});
-
-// LOCALES
-
-var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
-var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
-function localeMonths (m, format) {
-    if (!m) {
-        return isArray(this._months) ? this._months :
-            this._months['standalone'];
-    }
-    return isArray(this._months) ? this._months[m.month()] :
-        this._months[(this._months.isFormat || MONTHS_IN_FORMAT).test(format) ? 'format' : 'standalone'][m.month()];
-}
-
-var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
-function localeMonthsShort (m, format) {
-    if (!m) {
-        return isArray(this._monthsShort) ? this._monthsShort :
-            this._monthsShort['standalone'];
-    }
-    return isArray(this._monthsShort) ? this._monthsShort[m.month()] :
-        this._monthsShort[MONTHS_IN_FORMAT.test(format) ? 'format' : 'standalone'][m.month()];
-}
-
-function handleStrictParse(monthName, format, strict) {
-    var i, ii, mom, llc = monthName.toLocaleLowerCase();
-    if (!this._monthsParse) {
-        // this is not used
-        this._monthsParse = [];
-        this._longMonthsParse = [];
-        this._shortMonthsParse = [];
-        for (i = 0; i < 12; ++i) {
-            mom = createUTC([2000, i]);
-            this._shortMonthsParse[i] = this.monthsShort(mom, '').toLocaleLowerCase();
-            this._longMonthsParse[i] = this.months(mom, '').toLocaleLowerCase();
-        }
-    }
-
-    if (strict) {
-        if (format === 'MMM') {
-            ii = indexOf.call(this._shortMonthsParse, llc);
-            return ii !== -1 ? ii : null;
-        } else {
-            ii = indexOf.call(this._longMonthsParse, llc);
-            return ii !== -1 ? ii : null;
-        }
-    } else {
-        if (format === 'MMM') {
-            ii = indexOf.call(this._shortMonthsParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf.call(this._longMonthsParse, llc);
-            return ii !== -1 ? ii : null;
-        } else {
-            ii = indexOf.call(this._longMonthsParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf.call(this._shortMonthsParse, llc);
-            return ii !== -1 ? ii : null;
-        }
-    }
-}
-
-function localeMonthsParse (monthName, format, strict) {
-    var i, mom, regex;
-
-    if (this._monthsParseExact) {
-        return handleStrictParse.call(this, monthName, format, strict);
-    }
-
-    if (!this._monthsParse) {
-        this._monthsParse = [];
-        this._longMonthsParse = [];
-        this._shortMonthsParse = [];
-    }
-
-    // TODO: add sorting
-    // Sorting makes sure if one month (or abbr) is a prefix of another
-    // see sorting in computeMonthsParse
-    for (i = 0; i < 12; i++) {
-        // make the regex if we don't have it already
-        mom = createUTC([2000, i]);
-        if (strict && !this._longMonthsParse[i]) {
-            this._longMonthsParse[i] = new RegExp('^' + this.months(mom, '').replace('.', '') + '$', 'i');
-            this._shortMonthsParse[i] = new RegExp('^' + this.monthsShort(mom, '').replace('.', '') + '$', 'i');
-        }
-        if (!strict && !this._monthsParse[i]) {
-            regex = '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
-            this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
-        }
-        // test the regex
-        if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) {
-            return i;
-        } else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) {
-            return i;
-        } else if (!strict && this._monthsParse[i].test(monthName)) {
-            return i;
-        }
-    }
-}
-
-// MOMENTS
-
-function setMonth (mom, value) {
-    var dayOfMonth;
-
-    if (!mom.isValid()) {
-        // No op
-        return mom;
-    }
-
-    if (typeof value === 'string') {
-        if (/^\d+$/.test(value)) {
-            value = toInt(value);
-        } else {
-            value = mom.localeData().monthsParse(value);
-            // TODO: Another silent failure?
-            if (!isNumber(value)) {
-                return mom;
-            }
-        }
-    }
-
-    dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
-    mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
-    return mom;
-}
-
-function getSetMonth (value) {
-    if (value != null) {
-        setMonth(this, value);
-        hooks.updateOffset(this, true);
-        return this;
-    } else {
-        return get(this, 'Month');
-    }
-}
-
-function getDaysInMonth () {
-    return daysInMonth(this.year(), this.month());
-}
-
-var defaultMonthsShortRegex = matchWord;
-function monthsShortRegex (isStrict) {
-    if (this._monthsParseExact) {
-        if (!hasOwnProp(this, '_monthsRegex')) {
-            computeMonthsParse.call(this);
-        }
-        if (isStrict) {
-            return this._monthsShortStrictRegex;
-        } else {
-            return this._monthsShortRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_monthsShortRegex')) {
-            this._monthsShortRegex = defaultMonthsShortRegex;
-        }
-        return this._monthsShortStrictRegex && isStrict ?
-            this._monthsShortStrictRegex : this._monthsShortRegex;
-    }
-}
-
-var defaultMonthsRegex = matchWord;
-function monthsRegex (isStrict) {
-    if (this._monthsParseExact) {
-        if (!hasOwnProp(this, '_monthsRegex')) {
-            computeMonthsParse.call(this);
-        }
-        if (isStrict) {
-            return this._monthsStrictRegex;
-        } else {
-            return this._monthsRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_monthsRegex')) {
-            this._monthsRegex = defaultMonthsRegex;
-        }
-        return this._monthsStrictRegex && isStrict ?
-            this._monthsStrictRegex : this._monthsRegex;
-    }
-}
-
-function computeMonthsParse () {
-    function cmpLenRev(a, b) {
-        return b.length - a.length;
-    }
-
-    var shortPieces = [], longPieces = [], mixedPieces = [],
-        i, mom;
-    for (i = 0; i < 12; i++) {
-        // make the regex if we don't have it already
-        mom = createUTC([2000, i]);
-        shortPieces.push(this.monthsShort(mom, ''));
-        longPieces.push(this.months(mom, ''));
-        mixedPieces.push(this.months(mom, ''));
-        mixedPieces.push(this.monthsShort(mom, ''));
-    }
-    // Sorting makes sure if one month (or abbr) is a prefix of another it
-    // will match the longer piece.
-    shortPieces.sort(cmpLenRev);
-    longPieces.sort(cmpLenRev);
-    mixedPieces.sort(cmpLenRev);
-    for (i = 0; i < 12; i++) {
-        shortPieces[i] = regexEscape(shortPieces[i]);
-        longPieces[i] = regexEscape(longPieces[i]);
-    }
-    for (i = 0; i < 24; i++) {
-        mixedPieces[i] = regexEscape(mixedPieces[i]);
-    }
-
-    this._monthsRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-    this._monthsShortRegex = this._monthsRegex;
-    this._monthsStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-    this._monthsShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-}
-
-function createDate (y, m, d, h, M, s, ms) {
-    // can't just apply() to create a date:
-    // https://stackoverflow.com/q/181348
-    var date = new Date(y, m, d, h, M, s, ms);
-
-    // the date constructor remaps years 0-99 to 1900-1999
-    if (y < 100 && y >= 0 && isFinite(date.getFullYear())) {
-        date.setFullYear(y);
-    }
-    return date;
-}
-
-function createUTCDate (y) {
-    var date = new Date(Date.UTC.apply(null, arguments));
-
-    // the Date.UTC function remaps years 0-99 to 1900-1999
-    if (y < 100 && y >= 0 && isFinite(date.getUTCFullYear())) {
-        date.setUTCFullYear(y);
-    }
-    return date;
-}
-
-// start-of-first-week - start-of-year
-function firstWeekOffset(year, dow, doy) {
-    var // first-week day -- which january is always in the first week (4 for iso, 1 for other)
-        fwd = 7 + dow - doy,
-        // first-week day local weekday -- which local weekday is fwd
-        fwdlw = (7 + createUTCDate(year, 0, fwd).getUTCDay() - dow) % 7;
-
-    return -fwdlw + fwd - 1;
-}
-
-// https://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
-function dayOfYearFromWeeks(year, week, weekday, dow, doy) {
-    var localWeekday = (7 + weekday - dow) % 7,
-        weekOffset = firstWeekOffset(year, dow, doy),
-        dayOfYear = 1 + 7 * (week - 1) + localWeekday + weekOffset,
-        resYear, resDayOfYear;
-
-    if (dayOfYear <= 0) {
-        resYear = year - 1;
-        resDayOfYear = daysInYear(resYear) + dayOfYear;
-    } else if (dayOfYear > daysInYear(year)) {
-        resYear = year + 1;
-        resDayOfYear = dayOfYear - daysInYear(year);
-    } else {
-        resYear = year;
-        resDayOfYear = dayOfYear;
-    }
-
-    return {
-        year: resYear,
-        dayOfYear: resDayOfYear
-    };
-}
-
-function weekOfYear(mom, dow, doy) {
-    var weekOffset = firstWeekOffset(mom.year(), dow, doy),
-        week = Math.floor((mom.dayOfYear() - weekOffset - 1) / 7) + 1,
-        resWeek, resYear;
-
-    if (week < 1) {
-        resYear = mom.year() - 1;
-        resWeek = week + weeksInYear(resYear, dow, doy);
-    } else if (week > weeksInYear(mom.year(), dow, doy)) {
-        resWeek = week - weeksInYear(mom.year(), dow, doy);
-        resYear = mom.year() + 1;
-    } else {
-        resYear = mom.year();
-        resWeek = week;
-    }
-
-    return {
-        week: resWeek,
-        year: resYear
-    };
-}
-
-function weeksInYear(year, dow, doy) {
-    var weekOffset = firstWeekOffset(year, dow, doy),
-        weekOffsetNext = firstWeekOffset(year + 1, dow, doy);
-    return (daysInYear(year) - weekOffset + weekOffsetNext) / 7;
-}
-
-// FORMATTING
-
-addFormatToken('w', ['ww', 2], 'wo', 'week');
-addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
-
-// ALIASES
-
-addUnitAlias('week', 'w');
-addUnitAlias('isoWeek', 'W');
-
-// PRIORITIES
-
-addUnitPriority('week', 5);
-addUnitPriority('isoWeek', 5);
-
-// PARSING
-
-addRegexToken('w',  match1to2);
-addRegexToken('ww', match1to2, match2);
-addRegexToken('W',  match1to2);
-addRegexToken('WW', match1to2, match2);
-
-addWeekParseToken(['w', 'ww', 'W', 'WW'], function (input, week, config, token) {
-    week[token.substr(0, 1)] = toInt(input);
-});
-
-// HELPERS
-
-// LOCALES
-
-function localeWeek (mom) {
-    return weekOfYear(mom, this._week.dow, this._week.doy).week;
-}
-
-var defaultLocaleWeek = {
-    dow : 0, // Sunday is the first day of the week.
-    doy : 6  // The week that contains Jan 1st is the first week of the year.
-};
-
-function localeFirstDayOfWeek () {
-    return this._week.dow;
-}
-
-function localeFirstDayOfYear () {
-    return this._week.doy;
-}
-
-// MOMENTS
-
-function getSetWeek (input) {
-    var week = this.localeData().week(this);
-    return input == null ? week : this.add((input - week) * 7, 'd');
-}
-
-function getSetISOWeek (input) {
-    var week = weekOfYear(this, 1, 4).week;
-    return input == null ? week : this.add((input - week) * 7, 'd');
-}
-
-// FORMATTING
-
-addFormatToken('d', 0, 'do', 'day');
-
-addFormatToken('dd', 0, 0, function (format) {
-    return this.localeData().weekdaysMin(this, format);
-});
-
-addFormatToken('ddd', 0, 0, function (format) {
-    return this.localeData().weekdaysShort(this, format);
-});
-
-addFormatToken('dddd', 0, 0, function (format) {
-    return this.localeData().weekdays(this, format);
-});
-
-addFormatToken('e', 0, 0, 'weekday');
-addFormatToken('E', 0, 0, 'isoWeekday');
-
-// ALIASES
-
-addUnitAlias('day', 'd');
-addUnitAlias('weekday', 'e');
-addUnitAlias('isoWeekday', 'E');
-
-// PRIORITY
-addUnitPriority('day', 11);
-addUnitPriority('weekday', 11);
-addUnitPriority('isoWeekday', 11);
-
-// PARSING
-
-addRegexToken('d',    match1to2);
-addRegexToken('e',    match1to2);
-addRegexToken('E',    match1to2);
-addRegexToken('dd',   function (isStrict, locale) {
-    return locale.weekdaysMinRegex(isStrict);
-});
-addRegexToken('ddd',   function (isStrict, locale) {
-    return locale.weekdaysShortRegex(isStrict);
-});
-addRegexToken('dddd',   function (isStrict, locale) {
-    return locale.weekdaysRegex(isStrict);
-});
-
-addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config, token) {
-    var weekday = config._locale.weekdaysParse(input, token, config._strict);
-    // if we didn't get a weekday name, mark the date as invalid
-    if (weekday != null) {
-        week.d = weekday;
-    } else {
-        getParsingFlags(config).invalidWeekday = input;
-    }
-});
-
-addWeekParseToken(['d', 'e', 'E'], function (input, week, config, token) {
-    week[token] = toInt(input);
-});
-
-// HELPERS
-
-function parseWeekday(input, locale) {
-    if (typeof input !== 'string') {
-        return input;
-    }
-
-    if (!isNaN(input)) {
-        return parseInt(input, 10);
-    }
-
-    input = locale.weekdaysParse(input);
-    if (typeof input === 'number') {
-        return input;
-    }
-
-    return null;
-}
-
-function parseIsoWeekday(input, locale) {
-    if (typeof input === 'string') {
-        return locale.weekdaysParse(input) % 7 || 7;
-    }
-    return isNaN(input) ? null : input;
-}
-
-// LOCALES
-
-var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
-function localeWeekdays (m, format) {
-    if (!m) {
-        return isArray(this._weekdays) ? this._weekdays :
-            this._weekdays['standalone'];
-    }
-    return isArray(this._weekdays) ? this._weekdays[m.day()] :
-        this._weekdays[this._weekdays.isFormat.test(format) ? 'format' : 'standalone'][m.day()];
-}
-
-var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
-function localeWeekdaysShort (m) {
-    return (m) ? this._weekdaysShort[m.day()] : this._weekdaysShort;
-}
-
-var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
-function localeWeekdaysMin (m) {
-    return (m) ? this._weekdaysMin[m.day()] : this._weekdaysMin;
-}
-
-function handleStrictParse$1(weekdayName, format, strict) {
-    var i, ii, mom, llc = weekdayName.toLocaleLowerCase();
-    if (!this._weekdaysParse) {
-        this._weekdaysParse = [];
-        this._shortWeekdaysParse = [];
-        this._minWeekdaysParse = [];
-
-        for (i = 0; i < 7; ++i) {
-            mom = createUTC([2000, 1]).day(i);
-            this._minWeekdaysParse[i] = this.weekdaysMin(mom, '').toLocaleLowerCase();
-            this._shortWeekdaysParse[i] = this.weekdaysShort(mom, '').toLocaleLowerCase();
-            this._weekdaysParse[i] = this.weekdays(mom, '').toLocaleLowerCase();
-        }
-    }
-
-    if (strict) {
-        if (format === 'dddd') {
-            ii = indexOf.call(this._weekdaysParse, llc);
-            return ii !== -1 ? ii : null;
-        } else if (format === 'ddd') {
-            ii = indexOf.call(this._shortWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
-        } else {
-            ii = indexOf.call(this._minWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
-        }
-    } else {
-        if (format === 'dddd') {
-            ii = indexOf.call(this._weekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf.call(this._shortWeekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf.call(this._minWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
-        } else if (format === 'ddd') {
-            ii = indexOf.call(this._shortWeekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf.call(this._weekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf.call(this._minWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
-        } else {
-            ii = indexOf.call(this._minWeekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf.call(this._weekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf.call(this._shortWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
-        }
-    }
-}
-
-function localeWeekdaysParse (weekdayName, format, strict) {
-    var i, mom, regex;
-
-    if (this._weekdaysParseExact) {
-        return handleStrictParse$1.call(this, weekdayName, format, strict);
-    }
-
-    if (!this._weekdaysParse) {
-        this._weekdaysParse = [];
-        this._minWeekdaysParse = [];
-        this._shortWeekdaysParse = [];
-        this._fullWeekdaysParse = [];
-    }
-
-    for (i = 0; i < 7; i++) {
-        // make the regex if we don't have it already
-
-        mom = createUTC([2000, 1]).day(i);
-        if (strict && !this._fullWeekdaysParse[i]) {
-            this._fullWeekdaysParse[i] = new RegExp('^' + this.weekdays(mom, '').replace('.', '\.?') + '$', 'i');
-            this._shortWeekdaysParse[i] = new RegExp('^' + this.weekdaysShort(mom, '').replace('.', '\.?') + '$', 'i');
-            this._minWeekdaysParse[i] = new RegExp('^' + this.weekdaysMin(mom, '').replace('.', '\.?') + '$', 'i');
-        }
-        if (!this._weekdaysParse[i]) {
-            regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
-            this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
-        }
-        // test the regex
-        if (strict && format === 'dddd' && this._fullWeekdaysParse[i].test(weekdayName)) {
-            return i;
-        } else if (strict && format === 'ddd' && this._shortWeekdaysParse[i].test(weekdayName)) {
-            return i;
-        } else if (strict && format === 'dd' && this._minWeekdaysParse[i].test(weekdayName)) {
-            return i;
-        } else if (!strict && this._weekdaysParse[i].test(weekdayName)) {
-            return i;
-        }
-    }
-}
-
-// MOMENTS
-
-function getSetDayOfWeek (input) {
-    if (!this.isValid()) {
-        return input != null ? this : NaN;
-    }
-    var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
-    if (input != null) {
-        input = parseWeekday(input, this.localeData());
-        return this.add(input - day, 'd');
-    } else {
-        return day;
-    }
-}
-
-function getSetLocaleDayOfWeek (input) {
-    if (!this.isValid()) {
-        return input != null ? this : NaN;
-    }
-    var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
-    return input == null ? weekday : this.add(input - weekday, 'd');
-}
-
-function getSetISODayOfWeek (input) {
-    if (!this.isValid()) {
-        return input != null ? this : NaN;
-    }
-
-    // behaves the same as moment#day except
-    // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
-    // as a setter, sunday should belong to the previous week.
-
-    if (input != null) {
-        var weekday = parseIsoWeekday(input, this.localeData());
-        return this.day(this.day() % 7 ? weekday : weekday - 7);
-    } else {
-        return this.day() || 7;
-    }
-}
-
-var defaultWeekdaysRegex = matchWord;
-function weekdaysRegex (isStrict) {
-    if (this._weekdaysParseExact) {
-        if (!hasOwnProp(this, '_weekdaysRegex')) {
-            computeWeekdaysParse.call(this);
-        }
-        if (isStrict) {
-            return this._weekdaysStrictRegex;
-        } else {
-            return this._weekdaysRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_weekdaysRegex')) {
-            this._weekdaysRegex = defaultWeekdaysRegex;
-        }
-        return this._weekdaysStrictRegex && isStrict ?
-            this._weekdaysStrictRegex : this._weekdaysRegex;
-    }
-}
-
-var defaultWeekdaysShortRegex = matchWord;
-function weekdaysShortRegex (isStrict) {
-    if (this._weekdaysParseExact) {
-        if (!hasOwnProp(this, '_weekdaysRegex')) {
-            computeWeekdaysParse.call(this);
-        }
-        if (isStrict) {
-            return this._weekdaysShortStrictRegex;
-        } else {
-            return this._weekdaysShortRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_weekdaysShortRegex')) {
-            this._weekdaysShortRegex = defaultWeekdaysShortRegex;
-        }
-        return this._weekdaysShortStrictRegex && isStrict ?
-            this._weekdaysShortStrictRegex : this._weekdaysShortRegex;
-    }
-}
-
-var defaultWeekdaysMinRegex = matchWord;
-function weekdaysMinRegex (isStrict) {
-    if (this._weekdaysParseExact) {
-        if (!hasOwnProp(this, '_weekdaysRegex')) {
-            computeWeekdaysParse.call(this);
-        }
-        if (isStrict) {
-            return this._weekdaysMinStrictRegex;
-        } else {
-            return this._weekdaysMinRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_weekdaysMinRegex')) {
-            this._weekdaysMinRegex = defaultWeekdaysMinRegex;
-        }
-        return this._weekdaysMinStrictRegex && isStrict ?
-            this._weekdaysMinStrictRegex : this._weekdaysMinRegex;
-    }
-}
-
-
-function computeWeekdaysParse () {
-    function cmpLenRev(a, b) {
-        return b.length - a.length;
-    }
-
-    var minPieces = [], shortPieces = [], longPieces = [], mixedPieces = [],
-        i, mom, minp, shortp, longp;
-    for (i = 0; i < 7; i++) {
-        // make the regex if we don't have it already
-        mom = createUTC([2000, 1]).day(i);
-        minp = this.weekdaysMin(mom, '');
-        shortp = this.weekdaysShort(mom, '');
-        longp = this.weekdays(mom, '');
-        minPieces.push(minp);
-        shortPieces.push(shortp);
-        longPieces.push(longp);
-        mixedPieces.push(minp);
-        mixedPieces.push(shortp);
-        mixedPieces.push(longp);
-    }
-    // Sorting makes sure if one weekday (or abbr) is a prefix of another it
-    // will match the longer piece.
-    minPieces.sort(cmpLenRev);
-    shortPieces.sort(cmpLenRev);
-    longPieces.sort(cmpLenRev);
-    mixedPieces.sort(cmpLenRev);
-    for (i = 0; i < 7; i++) {
-        shortPieces[i] = regexEscape(shortPieces[i]);
-        longPieces[i] = regexEscape(longPieces[i]);
-        mixedPieces[i] = regexEscape(mixedPieces[i]);
-    }
-
-    this._weekdaysRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-    this._weekdaysShortRegex = this._weekdaysRegex;
-    this._weekdaysMinRegex = this._weekdaysRegex;
-
-    this._weekdaysStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-    this._weekdaysShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-    this._weekdaysMinStrictRegex = new RegExp('^(' + minPieces.join('|') + ')', 'i');
-}
-
-// FORMATTING
-
-function hFormat() {
-    return this.hours() % 12 || 12;
-}
-
-function kFormat() {
-    return this.hours() || 24;
-}
-
-addFormatToken('H', ['HH', 2], 0, 'hour');
-addFormatToken('h', ['hh', 2], 0, hFormat);
-addFormatToken('k', ['kk', 2], 0, kFormat);
-
-addFormatToken('hmm', 0, 0, function () {
-    return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2);
-});
-
-addFormatToken('hmmss', 0, 0, function () {
-    return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2) +
-        zeroFill(this.seconds(), 2);
-});
-
-addFormatToken('Hmm', 0, 0, function () {
-    return '' + this.hours() + zeroFill(this.minutes(), 2);
-});
-
-addFormatToken('Hmmss', 0, 0, function () {
-    return '' + this.hours() + zeroFill(this.minutes(), 2) +
-        zeroFill(this.seconds(), 2);
-});
-
-function meridiem (token, lowercase) {
-    addFormatToken(token, 0, 0, function () {
-        return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
-    });
-}
-
-meridiem('a', true);
-meridiem('A', false);
-
-// ALIASES
-
-addUnitAlias('hour', 'h');
-
-// PRIORITY
-addUnitPriority('hour', 13);
-
-// PARSING
-
-function matchMeridiem (isStrict, locale) {
-    return locale._meridiemParse;
-}
-
-addRegexToken('a',  matchMeridiem);
-addRegexToken('A',  matchMeridiem);
-addRegexToken('H',  match1to2);
-addRegexToken('h',  match1to2);
-addRegexToken('k',  match1to2);
-addRegexToken('HH', match1to2, match2);
-addRegexToken('hh', match1to2, match2);
-addRegexToken('kk', match1to2, match2);
-
-addRegexToken('hmm', match3to4);
-addRegexToken('hmmss', match5to6);
-addRegexToken('Hmm', match3to4);
-addRegexToken('Hmmss', match5to6);
-
-addParseToken(['H', 'HH'], HOUR);
-addParseToken(['k', 'kk'], function (input, array, config) {
-    var kInput = toInt(input);
-    array[HOUR] = kInput === 24 ? 0 : kInput;
-});
-addParseToken(['a', 'A'], function (input, array, config) {
-    config._isPm = config._locale.isPM(input);
-    config._meridiem = input;
-});
-addParseToken(['h', 'hh'], function (input, array, config) {
-    array[HOUR] = toInt(input);
-    getParsingFlags(config).bigHour = true;
-});
-addParseToken('hmm', function (input, array, config) {
-    var pos = input.length - 2;
-    array[HOUR] = toInt(input.substr(0, pos));
-    array[MINUTE] = toInt(input.substr(pos));
-    getParsingFlags(config).bigHour = true;
-});
-addParseToken('hmmss', function (input, array, config) {
-    var pos1 = input.length - 4;
-    var pos2 = input.length - 2;
-    array[HOUR] = toInt(input.substr(0, pos1));
-    array[MINUTE] = toInt(input.substr(pos1, 2));
-    array[SECOND] = toInt(input.substr(pos2));
-    getParsingFlags(config).bigHour = true;
-});
-addParseToken('Hmm', function (input, array, config) {
-    var pos = input.length - 2;
-    array[HOUR] = toInt(input.substr(0, pos));
-    array[MINUTE] = toInt(input.substr(pos));
-});
-addParseToken('Hmmss', function (input, array, config) {
-    var pos1 = input.length - 4;
-    var pos2 = input.length - 2;
-    array[HOUR] = toInt(input.substr(0, pos1));
-    array[MINUTE] = toInt(input.substr(pos1, 2));
-    array[SECOND] = toInt(input.substr(pos2));
-});
-
-// LOCALES
-
-function localeIsPM (input) {
-    // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
-    // Using charAt should be more compatible.
-    return ((input + '').toLowerCase().charAt(0) === 'p');
-}
-
-var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i;
-function localeMeridiem (hours, minutes, isLower) {
-    if (hours > 11) {
-        return isLower ? 'pm' : 'PM';
-    } else {
-        return isLower ? 'am' : 'AM';
-    }
-}
-
-
-// MOMENTS
-
-// Setting the hour should keep the time, because the user explicitly
-// specified which hour he wants. So trying to maintain the same hour (in
-// a new timezone) makes sense. Adding/subtracting hours does not follow
-// this rule.
-var getSetHour = makeGetSet('Hours', true);
-
-// months
-// week
-// weekdays
-// meridiem
-var baseConfig = {
-    calendar: defaultCalendar,
-    longDateFormat: defaultLongDateFormat,
-    invalidDate: defaultInvalidDate,
-    ordinal: defaultOrdinal,
-    dayOfMonthOrdinalParse: defaultDayOfMonthOrdinalParse,
-    relativeTime: defaultRelativeTime,
-
-    months: defaultLocaleMonths,
-    monthsShort: defaultLocaleMonthsShort,
-
-    week: defaultLocaleWeek,
-
-    weekdays: defaultLocaleWeekdays,
-    weekdaysMin: defaultLocaleWeekdaysMin,
-    weekdaysShort: defaultLocaleWeekdaysShort,
-
-    meridiemParse: defaultLocaleMeridiemParse
-};
-
-// internal storage for locale config files
-var locales = {};
-var localeFamilies = {};
-var globalLocale;
-
-function normalizeLocale(key) {
-    return key ? key.toLowerCase().replace('_', '-') : key;
-}
-
-// pick the locale from the array
-// try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
-// substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
-function chooseLocale(names) {
-    var i = 0, j, next, locale, split;
-
-    while (i < names.length) {
-        split = normalizeLocale(names[i]).split('-');
-        j = split.length;
-        next = normalizeLocale(names[i + 1]);
-        next = next ? next.split('-') : null;
-        while (j > 0) {
-            locale = loadLocale(split.slice(0, j).join('-'));
-            if (locale) {
-                return locale;
-            }
-            if (next && next.length >= j && compareArrays(split, next, true) >= j - 1) {
-                //the next array item is better than a shallower substring of this one
-                break;
-            }
-            j--;
-        }
-        i++;
-    }
-    return null;
-}
-
-function loadLocale(name) {
-    var oldLocale = null;
-    // TODO: Find a better way to register and load all the locales in Node
-    if (!locales[name] && (typeof module !== 'undefined') &&
-            module && module.exports) {
-        try {
-            oldLocale = globalLocale._abbr;
-            var aliasedRequire = require;
-            aliasedRequire('./locale/' + name);
-            getSetGlobalLocale(oldLocale);
-        } catch (e) {}
-    }
-    return locales[name];
-}
-
-// This function will load locale and then set the global locale.  If
-// no arguments are passed in, it will simply return the current global
-// locale key.
-function getSetGlobalLocale (key, values) {
-    var data;
-    if (key) {
-        if (isUndefined(values)) {
-            data = getLocale(key);
-        }
-        else {
-            data = defineLocale(key, values);
-        }
-
-        if (data) {
-            // moment.duration._locale = moment._locale = data;
-            globalLocale = data;
-        }
-    }
-
-    return globalLocale._abbr;
-}
-
-function defineLocale (name, config) {
-    if (config !== null) {
-        var parentConfig = baseConfig;
-        config.abbr = name;
-        if (locales[name] != null) {
-            deprecateSimple('defineLocaleOverride',
-                    'use moment.updateLocale(localeName, config) to change ' +
-                    'an existing locale. moment.defineLocale(localeName, ' +
-                    'config) should only be used for creating a new locale ' +
-                    'See http://momentjs.com/guides/#/warnings/define-locale/ for more info.');
-            parentConfig = locales[name]._config;
-        } else if (config.parentLocale != null) {
-            if (locales[config.parentLocale] != null) {
-                parentConfig = locales[config.parentLocale]._config;
-            } else {
-                if (!localeFamilies[config.parentLocale]) {
-                    localeFamilies[config.parentLocale] = [];
-                }
-                localeFamilies[config.parentLocale].push({
-                    name: name,
-                    config: config
-                });
-                return null;
-            }
-        }
-        locales[name] = new Locale(mergeConfigs(parentConfig, config));
-
-        if (localeFamilies[name]) {
-            localeFamilies[name].forEach(function (x) {
-                defineLocale(x.name, x.config);
-            });
-        }
-
-        // backwards compat for now: also set the locale
-        // make sure we set the locale AFTER all child locales have been
-        // created, so we won't end up with the child locale set.
-        getSetGlobalLocale(name);
-
-
-        return locales[name];
-    } else {
-        // useful for testing
-        delete locales[name];
-        return null;
-    }
-}
-
-function updateLocale(name, config) {
-    if (config != null) {
-        var locale, tmpLocale, parentConfig = baseConfig;
-        // MERGE
-        tmpLocale = loadLocale(name);
-        if (tmpLocale != null) {
-            parentConfig = tmpLocale._config;
-        }
-        config = mergeConfigs(parentConfig, config);
-        locale = new Locale(config);
-        locale.parentLocale = locales[name];
-        locales[name] = locale;
-
-        // backwards compat for now: also set the locale
-        getSetGlobalLocale(name);
-    } else {
-        // pass null for config to unupdate, useful for tests
-        if (locales[name] != null) {
-            if (locales[name].parentLocale != null) {
-                locales[name] = locales[name].parentLocale;
-            } else if (locales[name] != null) {
-                delete locales[name];
-            }
-        }
-    }
-    return locales[name];
-}
-
-// returns locale data
-function getLocale (key) {
-    var locale;
-
-    if (key && key._locale && key._locale._abbr) {
-        key = key._locale._abbr;
-    }
-
-    if (!key) {
-        return globalLocale;
-    }
-
-    if (!isArray(key)) {
-        //short-circuit everything else
-        locale = loadLocale(key);
-        if (locale) {
-            return locale;
-        }
-        key = [key];
-    }
-
-    return chooseLocale(key);
-}
-
-function listLocales() {
-    return keys(locales);
-}
-
-function checkOverflow (m) {
-    var overflow;
-    var a = m._a;
-
-    if (a && getParsingFlags(m).overflow === -2) {
-        overflow =
-            a[MONTH]       < 0 || a[MONTH]       > 11  ? MONTH :
-            a[DATE]        < 1 || a[DATE]        > daysInMonth(a[YEAR], a[MONTH]) ? DATE :
-            a[HOUR]        < 0 || a[HOUR]        > 24 || (a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0)) ? HOUR :
-            a[MINUTE]      < 0 || a[MINUTE]      > 59  ? MINUTE :
-            a[SECOND]      < 0 || a[SECOND]      > 59  ? SECOND :
-            a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND :
-            -1;
-
-        if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) {
-            overflow = DATE;
-        }
-        if (getParsingFlags(m)._overflowWeeks && overflow === -1) {
-            overflow = WEEK;
-        }
-        if (getParsingFlags(m)._overflowWeekday && overflow === -1) {
-            overflow = WEEKDAY;
-        }
-
-        getParsingFlags(m).overflow = overflow;
-    }
-
-    return m;
-}
-
-// Pick the first defined of two or three arguments.
-function defaults(a, b, c) {
-    if (a != null) {
-        return a;
-    }
-    if (b != null) {
-        return b;
-    }
-    return c;
-}
-
-function currentDateArray(config) {
-    // hooks is actually the exported moment object
-    var nowValue = new Date(hooks.now());
-    if (config._useUTC) {
-        return [nowValue.getUTCFullYear(), nowValue.getUTCMonth(), nowValue.getUTCDate()];
-    }
-    return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
-}
-
-// convert an array to a date.
-// the array should mirror the parameters below
-// note: all values past the year are optional and will default to the lowest possible value.
-// [year, month, day , hour, minute, second, millisecond]
-function configFromArray (config) {
-    var i, date, input = [], currentDate, expectedWeekday, yearToUse;
-
-    if (config._d) {
-        return;
-    }
-
-    currentDate = currentDateArray(config);
-
-    //compute day of the year from weeks and weekdays
-    if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
-        dayOfYearFromWeekInfo(config);
-    }
-
-    //if the day of the year is set, figure out what it is
-    if (config._dayOfYear != null) {
-        yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
-
-        if (config._dayOfYear > daysInYear(yearToUse) || config._dayOfYear === 0) {
-            getParsingFlags(config)._overflowDayOfYear = true;
-        }
-
-        date = createUTCDate(yearToUse, 0, config._dayOfYear);
-        config._a[MONTH] = date.getUTCMonth();
-        config._a[DATE] = date.getUTCDate();
-    }
-
-    // Default to current date.
-    // * if no year, month, day of month are given, default to today
-    // * if day of month is given, default month and year
-    // * if month is given, default only year
-    // * if year is given, don't default anything
-    for (i = 0; i < 3 && config._a[i] == null; ++i) {
-        config._a[i] = input[i] = currentDate[i];
-    }
-
-    // Zero out whatever was not defaulted, including time
-    for (; i < 7; i++) {
-        config._a[i] = input[i] = (config._a[i] == null) ? (i === 2 ? 1 : 0) : config._a[i];
-    }
-
-    // Check for 24:00:00.000
-    if (config._a[HOUR] === 24 &&
-            config._a[MINUTE] === 0 &&
-            config._a[SECOND] === 0 &&
-            config._a[MILLISECOND] === 0) {
-        config._nextDay = true;
-        config._a[HOUR] = 0;
-    }
-
-    config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
-    expectedWeekday = config._useUTC ? config._d.getUTCDay() : config._d.getDay();
-
-    // Apply timezone offset from input. The actual utcOffset can be changed
-    // with parseZone.
-    if (config._tzm != null) {
-        config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
-    }
-
-    if (config._nextDay) {
-        config._a[HOUR] = 24;
-    }
-
-    // check for mismatching day of week
-    if (config._w && typeof config._w.d !== 'undefined' && config._w.d !== expectedWeekday) {
-        getParsingFlags(config).weekdayMismatch = true;
-    }
-}
-
-function dayOfYearFromWeekInfo(config) {
-    var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow;
-
-    w = config._w;
-    if (w.GG != null || w.W != null || w.E != null) {
-        dow = 1;
-        doy = 4;
-
-        // TODO: We need to take the current isoWeekYear, but that depends on
-        // how we interpret now (local, utc, fixed offset). So create
-        // a now version of current config (take local/utc/offset flags, and
-        // create now).
-        weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(createLocal(), 1, 4).year);
-        week = defaults(w.W, 1);
-        weekday = defaults(w.E, 1);
-        if (weekday < 1 || weekday > 7) {
-            weekdayOverflow = true;
-        }
-    } else {
-        dow = config._locale._week.dow;
-        doy = config._locale._week.doy;
-
-        var curWeek = weekOfYear(createLocal(), dow, doy);
-
-        weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
-
-        // Default to current week.
-        week = defaults(w.w, curWeek.week);
-
-        if (w.d != null) {
-            // weekday -- low day numbers are considered next week
-            weekday = w.d;
-            if (weekday < 0 || weekday > 6) {
-                weekdayOverflow = true;
-            }
-        } else if (w.e != null) {
-            // local weekday -- counting starts from begining of week
-            weekday = w.e + dow;
-            if (w.e < 0 || w.e > 6) {
-                weekdayOverflow = true;
-            }
-        } else {
-            // default to begining of week
-            weekday = dow;
-        }
-    }
-    if (week < 1 || week > weeksInYear(weekYear, dow, doy)) {
-        getParsingFlags(config)._overflowWeeks = true;
-    } else if (weekdayOverflow != null) {
-        getParsingFlags(config)._overflowWeekday = true;
-    } else {
-        temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
-        config._a[YEAR] = temp.year;
-        config._dayOfYear = temp.dayOfYear;
-    }
-}
-
-// iso 8601 regex
-// 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
-var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
-var basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
-
-var tzRegex = /Z|[+-]\d\d(?::?\d\d)?/;
-
-var isoDates = [
-    ['YYYYYY-MM-DD', /[+-]\d{6}-\d\d-\d\d/],
-    ['YYYY-MM-DD', /\d{4}-\d\d-\d\d/],
-    ['GGGG-[W]WW-E', /\d{4}-W\d\d-\d/],
-    ['GGGG-[W]WW', /\d{4}-W\d\d/, false],
-    ['YYYY-DDD', /\d{4}-\d{3}/],
-    ['YYYY-MM', /\d{4}-\d\d/, false],
-    ['YYYYYYMMDD', /[+-]\d{10}/],
-    ['YYYYMMDD', /\d{8}/],
-    // YYYYMM is NOT allowed by the standard
-    ['GGGG[W]WWE', /\d{4}W\d{3}/],
-    ['GGGG[W]WW', /\d{4}W\d{2}/, false],
-    ['YYYYDDD', /\d{7}/]
-];
-
-// iso time formats and regexes
-var isoTimes = [
-    ['HH:mm:ss.SSSS', /\d\d:\d\d:\d\d\.\d+/],
-    ['HH:mm:ss,SSSS', /\d\d:\d\d:\d\d,\d+/],
-    ['HH:mm:ss', /\d\d:\d\d:\d\d/],
-    ['HH:mm', /\d\d:\d\d/],
-    ['HHmmss.SSSS', /\d\d\d\d\d\d\.\d+/],
-    ['HHmmss,SSSS', /\d\d\d\d\d\d,\d+/],
-    ['HHmmss', /\d\d\d\d\d\d/],
-    ['HHmm', /\d\d\d\d/],
-    ['HH', /\d\d/]
-];
-
-var aspNetJsonRegex = /^\/?Date\((\-?\d+)/i;
-
-// date from iso format
-function configFromISO(config) {
-    var i, l,
-        string = config._i,
-        match = extendedIsoRegex.exec(string) || basicIsoRegex.exec(string),
-        allowTime, dateFormat, timeFormat, tzFormat;
-
-    if (match) {
-        getParsingFlags(config).iso = true;
-
-        for (i = 0, l = isoDates.length; i < l; i++) {
-            if (isoDates[i][1].exec(match[1])) {
-                dateFormat = isoDates[i][0];
-                allowTime = isoDates[i][2] !== false;
-                break;
-            }
-        }
-        if (dateFormat == null) {
-            config._isValid = false;
-            return;
-        }
-        if (match[3]) {
-            for (i = 0, l = isoTimes.length; i < l; i++) {
-                if (isoTimes[i][1].exec(match[3])) {
-                    // match[2] should be 'T' or space
-                    timeFormat = (match[2] || ' ') + isoTimes[i][0];
-                    break;
-                }
-            }
-            if (timeFormat == null) {
-                config._isValid = false;
-                return;
-            }
-        }
-        if (!allowTime && timeFormat != null) {
-            config._isValid = false;
-            return;
-        }
-        if (match[4]) {
-            if (tzRegex.exec(match[4])) {
-                tzFormat = 'Z';
-            } else {
-                config._isValid = false;
-                return;
-            }
-        }
-        config._f = dateFormat + (timeFormat || '') + (tzFormat || '');
-        configFromStringAndFormat(config);
-    } else {
-        config._isValid = false;
-    }
-}
-
-// RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
-var rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/;
-
-function extractFromRFC2822Strings(yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr) {
-    var result = [
-        untruncateYear(yearStr),
-        defaultLocaleMonthsShort.indexOf(monthStr),
-        parseInt(dayStr, 10),
-        parseInt(hourStr, 10),
-        parseInt(minuteStr, 10)
-    ];
-
-    if (secondStr) {
-        result.push(parseInt(secondStr, 10));
-    }
-
-    return result;
-}
-
-function untruncateYear(yearStr) {
-    var year = parseInt(yearStr, 10);
-    if (year <= 49) {
-        return 2000 + year;
-    } else if (year <= 999) {
-        return 1900 + year;
-    }
-    return year;
-}
-
-function preprocessRFC2822(s) {
-    // Remove comments and folding whitespace and replace multiple-spaces with a single space
-    return s.replace(/\([^)]*\)|[\n\t]/g, ' ').replace(/(\s\s+)/g, ' ').trim();
-}
-
-function checkWeekday(weekdayStr, parsedInput, config) {
-    if (weekdayStr) {
-        // TODO: Replace the vanilla JS Date object with an indepentent day-of-week check.
-        var weekdayProvided = defaultLocaleWeekdaysShort.indexOf(weekdayStr),
-            weekdayActual = new Date(parsedInput[0], parsedInput[1], parsedInput[2]).getDay();
-        if (weekdayProvided !== weekdayActual) {
-            getParsingFlags(config).weekdayMismatch = true;
-            config._isValid = false;
-            return false;
-        }
-    }
-    return true;
-}
-
-var obsOffsets = {
-    UT: 0,
-    GMT: 0,
-    EDT: -4 * 60,
-    EST: -5 * 60,
-    CDT: -5 * 60,
-    CST: -6 * 60,
-    MDT: -6 * 60,
-    MST: -7 * 60,
-    PDT: -7 * 60,
-    PST: -8 * 60
-};
-
-function calculateOffset(obsOffset, militaryOffset, numOffset) {
-    if (obsOffset) {
-        return obsOffsets[obsOffset];
-    } else if (militaryOffset) {
-        // the only allowed military tz is Z
-        return 0;
-    } else {
-        var hm = parseInt(numOffset, 10);
-        var m = hm % 100, h = (hm - m) / 100;
-        return h * 60 + m;
-    }
-}
-
-// date and time from ref 2822 format
-function configFromRFC2822(config) {
-    var match = rfc2822.exec(preprocessRFC2822(config._i));
-    if (match) {
-        var parsedArray = extractFromRFC2822Strings(match[4], match[3], match[2], match[5], match[6], match[7]);
-        if (!checkWeekday(match[1], parsedArray, config)) {
-            return;
-        }
-
-        config._a = parsedArray;
-        config._tzm = calculateOffset(match[8], match[9], match[10]);
-
-        config._d = createUTCDate.apply(null, config._a);
-        config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
-
-        getParsingFlags(config).rfc2822 = true;
-    } else {
-        config._isValid = false;
-    }
-}
-
-// date from iso format or fallback
-function configFromString(config) {
-    var matched = aspNetJsonRegex.exec(config._i);
-
-    if (matched !== null) {
-        config._d = new Date(+matched[1]);
-        return;
-    }
-
-    configFromISO(config);
-    if (config._isValid === false) {
-        delete config._isValid;
-    } else {
-        return;
-    }
-
-    configFromRFC2822(config);
-    if (config._isValid === false) {
-        delete config._isValid;
-    } else {
-        return;
-    }
-
-    // Final attempt, use Input Fallback
-    hooks.createFromInputFallback(config);
-}
-
-hooks.createFromInputFallback = deprecate(
-    'value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), ' +
-    'which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are ' +
-    'discouraged and will be removed in an upcoming major release. Please refer to ' +
-    'http://momentjs.com/guides/#/warnings/js-date/ for more info.',
-    function (config) {
-        config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
-    }
-);
-
-// constant that refers to the ISO standard
-hooks.ISO_8601 = function () {};
-
-// constant that refers to the RFC 2822 form
-hooks.RFC_2822 = function () {};
-
-// date from string and format string
-function configFromStringAndFormat(config) {
-    // TODO: Move this to another part of the creation flow to prevent circular deps
-    if (config._f === hooks.ISO_8601) {
-        configFromISO(config);
-        return;
-    }
-    if (config._f === hooks.RFC_2822) {
-        configFromRFC2822(config);
-        return;
-    }
-    config._a = [];
-    getParsingFlags(config).empty = true;
-
-    // This array is used to make a Date, either with `new Date` or `Date.UTC`
-    var string = '' + config._i,
-        i, parsedInput, tokens, token, skipped,
-        stringLength = string.length,
-        totalParsedInputLength = 0;
-
-    tokens = expandFormat(config._f, config._locale).match(formattingTokens) || [];
-
-    for (i = 0; i < tokens.length; i++) {
-        token = tokens[i];
-        parsedInput = (string.match(getParseRegexForToken(token, config)) || [])[0];
-        // console.log('token', token, 'parsedInput', parsedInput,
-        //         'regex', getParseRegexForToken(token, config));
-        if (parsedInput) {
-            skipped = string.substr(0, string.indexOf(parsedInput));
-            if (skipped.length > 0) {
-                getParsingFlags(config).unusedInput.push(skipped);
-            }
-            string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
-            totalParsedInputLength += parsedInput.length;
-        }
-        // don't parse if it's not a known token
-        if (formatTokenFunctions[token]) {
-            if (parsedInput) {
-                getParsingFlags(config).empty = false;
-            }
-            else {
-                getParsingFlags(config).unusedTokens.push(token);
-            }
-            addTimeToArrayFromToken(token, parsedInput, config);
-        }
-        else if (config._strict && !parsedInput) {
-            getParsingFlags(config).unusedTokens.push(token);
-        }
-    }
-
-    // add remaining unparsed input length to the string
-    getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
-    if (string.length > 0) {
-        getParsingFlags(config).unusedInput.push(string);
-    }
-
-    // clear _12h flag if hour is <= 12
-    if (config._a[HOUR] <= 12 &&
-        getParsingFlags(config).bigHour === true &&
-        config._a[HOUR] > 0) {
-        getParsingFlags(config).bigHour = undefined;
-    }
-
-    getParsingFlags(config).parsedDateParts = config._a.slice(0);
-    getParsingFlags(config).meridiem = config._meridiem;
-    // handle meridiem
-    config._a[HOUR] = meridiemFixWrap(config._locale, config._a[HOUR], config._meridiem);
-
-    configFromArray(config);
-    checkOverflow(config);
-}
-
-
-function meridiemFixWrap (locale, hour, meridiem) {
-    var isPm;
-
-    if (meridiem == null) {
-        // nothing to do
-        return hour;
-    }
-    if (locale.meridiemHour != null) {
-        return locale.meridiemHour(hour, meridiem);
-    } else if (locale.isPM != null) {
-        // Fallback
-        isPm = locale.isPM(meridiem);
-        if (isPm && hour < 12) {
-            hour += 12;
-        }
-        if (!isPm && hour === 12) {
-            hour = 0;
-        }
-        return hour;
-    } else {
-        // this is not supposed to happen
-        return hour;
-    }
-}
-
-// date from string and array of format strings
-function configFromStringAndArray(config) {
-    var tempConfig,
-        bestMoment,
-
-        scoreToBeat,
-        i,
-        currentScore;
-
-    if (config._f.length === 0) {
-        getParsingFlags(config).invalidFormat = true;
-        config._d = new Date(NaN);
-        return;
-    }
-
-    for (i = 0; i < config._f.length; i++) {
-        currentScore = 0;
-        tempConfig = copyConfig({}, config);
-        if (config._useUTC != null) {
-            tempConfig._useUTC = config._useUTC;
-        }
-        tempConfig._f = config._f[i];
-        configFromStringAndFormat(tempConfig);
-
-        if (!isValid(tempConfig)) {
-            continue;
-        }
-
-        // if there is any input that was not parsed add a penalty for that format
-        currentScore += getParsingFlags(tempConfig).charsLeftOver;
-
-        //or tokens
-        currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
-
-        getParsingFlags(tempConfig).score = currentScore;
-
-        if (scoreToBeat == null || currentScore < scoreToBeat) {
-            scoreToBeat = currentScore;
-            bestMoment = tempConfig;
-        }
-    }
-
-    extend(config, bestMoment || tempConfig);
-}
-
-function configFromObject(config) {
-    if (config._d) {
-        return;
-    }
-
-    var i = normalizeObjectUnits(config._i);
-    config._a = map([i.year, i.month, i.day || i.date, i.hour, i.minute, i.second, i.millisecond], function (obj) {
-        return obj && parseInt(obj, 10);
-    });
-
-    configFromArray(config);
-}
-
-function createFromConfig (config) {
-    var res = new Moment(checkOverflow(prepareConfig(config)));
-    if (res._nextDay) {
-        // Adding is smart enough around DST
-        res.add(1, 'd');
-        res._nextDay = undefined;
-    }
-
-    return res;
-}
-
-function prepareConfig (config) {
-    var input = config._i,
-        format = config._f;
-
-    config._locale = config._locale || getLocale(config._l);
-
-    if (input === null || (format === undefined && input === '')) {
-        return createInvalid({nullInput: true});
-    }
-
-    if (typeof input === 'string') {
-        config._i = input = config._locale.preparse(input);
-    }
-
-    if (isMoment(input)) {
-        return new Moment(checkOverflow(input));
-    } else if (isDate(input)) {
-        config._d = input;
-    } else if (isArray(format)) {
-        configFromStringAndArray(config);
-    } else if (format) {
-        configFromStringAndFormat(config);
-    }  else {
-        configFromInput(config);
-    }
-
-    if (!isValid(config)) {
-        config._d = null;
-    }
-
-    return config;
-}
-
-function configFromInput(config) {
-    var input = config._i;
-    if (isUndefined(input)) {
-        config._d = new Date(hooks.now());
-    } else if (isDate(input)) {
-        config._d = new Date(input.valueOf());
-    } else if (typeof input === 'string') {
-        configFromString(config);
-    } else if (isArray(input)) {
-        config._a = map(input.slice(0), function (obj) {
-            return parseInt(obj, 10);
-        });
-        configFromArray(config);
-    } else if (isObject(input)) {
-        configFromObject(config);
-    } else if (isNumber(input)) {
-        // from milliseconds
-        config._d = new Date(input);
-    } else {
-        hooks.createFromInputFallback(config);
-    }
-}
-
-function createLocalOrUTC (input, format, locale, strict, isUTC) {
-    var c = {};
-
-    if (locale === true || locale === false) {
-        strict = locale;
-        locale = undefined;
-    }
-
-    if ((isObject(input) && isObjectEmpty(input)) ||
-            (isArray(input) && input.length === 0)) {
-        input = undefined;
-    }
-    // object construction must be done this way.
-    // https://github.com/moment/moment/issues/1423
-    c._isAMomentObject = true;
-    c._useUTC = c._isUTC = isUTC;
-    c._l = locale;
-    c._i = input;
-    c._f = format;
-    c._strict = strict;
-
-    return createFromConfig(c);
-}
-
-function createLocal (input, format, locale, strict) {
-    return createLocalOrUTC(input, format, locale, strict, false);
-}
-
-var prototypeMin = deprecate(
-    'moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/',
-    function () {
-        var other = createLocal.apply(null, arguments);
-        if (this.isValid() && other.isValid()) {
-            return other < this ? this : other;
-        } else {
-            return createInvalid();
-        }
-    }
-);
-
-var prototypeMax = deprecate(
-    'moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/',
-    function () {
-        var other = createLocal.apply(null, arguments);
-        if (this.isValid() && other.isValid()) {
-            return other > this ? this : other;
-        } else {
-            return createInvalid();
-        }
-    }
-);
-
-// Pick a moment m from moments so that m[fn](other) is true for all
-// other. This relies on the function fn to be transitive.
-//
-// moments should either be an array of moment objects or an array, whose
-// first element is an array of moment objects.
-function pickBy(fn, moments) {
-    var res, i;
-    if (moments.length === 1 && isArray(moments[0])) {
-        moments = moments[0];
-    }
-    if (!moments.length) {
-        return createLocal();
-    }
-    res = moments[0];
-    for (i = 1; i < moments.length; ++i) {
-        if (!moments[i].isValid() || moments[i][fn](res)) {
-            res = moments[i];
-        }
-    }
-    return res;
-}
-
-// TODO: Use [].sort instead?
-function min () {
-    var args = [].slice.call(arguments, 0);
-
-    return pickBy('isBefore', args);
-}
-
-function max () {
-    var args = [].slice.call(arguments, 0);
-
-    return pickBy('isAfter', args);
-}
-
-var now = function () {
-    return Date.now ? Date.now() : +(new Date());
-};
-
-var ordering = ['year', 'quarter', 'month', 'week', 'day', 'hour', 'minute', 'second', 'millisecond'];
-
-function isDurationValid(m) {
-    for (var key in m) {
-        if (!(indexOf.call(ordering, key) !== -1 && (m[key] == null || !isNaN(m[key])))) {
-            return false;
-        }
-    }
-
-    var unitHasDecimal = false;
-    for (var i = 0; i < ordering.length; ++i) {
-        if (m[ordering[i]]) {
-            if (unitHasDecimal) {
-                return false; // only allow non-integers for smallest unit
-            }
-            if (parseFloat(m[ordering[i]]) !== toInt(m[ordering[i]])) {
-                unitHasDecimal = true;
-            }
-        }
-    }
-
-    return true;
-}
-
-function isValid$1() {
-    return this._isValid;
-}
-
-function createInvalid$1() {
-    return createDuration(NaN);
-}
-
-function Duration (duration) {
-    var normalizedInput = normalizeObjectUnits(duration),
-        years = normalizedInput.year || 0,
-        quarters = normalizedInput.quarter || 0,
-        months = normalizedInput.month || 0,
-        weeks = normalizedInput.week || 0,
-        days = normalizedInput.day || 0,
-        hours = normalizedInput.hour || 0,
-        minutes = normalizedInput.minute || 0,
-        seconds = normalizedInput.second || 0,
-        milliseconds = normalizedInput.millisecond || 0;
-
-    this._isValid = isDurationValid(normalizedInput);
-
-    // representation for dateAddRemove
-    this._milliseconds = +milliseconds +
-        seconds * 1e3 + // 1000
-        minutes * 6e4 + // 1000 * 60
-        hours * 1000 * 60 * 60; //using 1000 * 60 * 60 instead of 36e5 to avoid floating point rounding errors https://github.com/moment/moment/issues/2978
-    // Because of dateAddRemove treats 24 hours as different from a
-    // day when working around DST, we need to store them separately
-    this._days = +days +
-        weeks * 7;
-    // It is impossible to translate months into days without knowing
-    // which months you are are talking about, so we have to store
-    // it separately.
-    this._months = +months +
-        quarters * 3 +
-        years * 12;
-
-    this._data = {};
-
-    this._locale = getLocale();
-
-    this._bubble();
-}
-
-function isDuration (obj) {
-    return obj instanceof Duration;
-}
-
-function absRound (number) {
-    if (number < 0) {
-        return Math.round(-1 * number) * -1;
-    } else {
-        return Math.round(number);
-    }
-}
-
-// FORMATTING
-
-function offset (token, separator) {
-    addFormatToken(token, 0, 0, function () {
-        var offset = this.utcOffset();
-        var sign = '+';
-        if (offset < 0) {
-            offset = -offset;
-            sign = '-';
-        }
-        return sign + zeroFill(~~(offset / 60), 2) + separator + zeroFill(~~(offset) % 60, 2);
-    });
-}
-
-offset('Z', ':');
-offset('ZZ', '');
-
-// PARSING
-
-addRegexToken('Z',  matchShortOffset);
-addRegexToken('ZZ', matchShortOffset);
-addParseToken(['Z', 'ZZ'], function (input, array, config) {
-    config._useUTC = true;
-    config._tzm = offsetFromString(matchShortOffset, input);
-});
-
-// HELPERS
-
-// timezone chunker
-// '+10:00' > ['10',  '00']
-// '-1530'  > ['-15', '30']
-var chunkOffset = /([\+\-]|\d\d)/gi;
-
-function offsetFromString(matcher, string) {
-    var matches = (string || '').match(matcher);
-
-    if (matches === null) {
-        return null;
-    }
-
-    var chunk   = matches[matches.length - 1] || [];
-    var parts   = (chunk + '').match(chunkOffset) || ['-', 0, 0];
-    var minutes = +(parts[1] * 60) + toInt(parts[2]);
-
-    return minutes === 0 ?
-      0 :
-      parts[0] === '+' ? minutes : -minutes;
-}
-
-// Return a moment from input, that is local/utc/zone equivalent to model.
-function cloneWithOffset(input, model) {
-    var res, diff;
-    if (model._isUTC) {
-        res = model.clone();
-        diff = (isMoment(input) || isDate(input) ? input.valueOf() : createLocal(input).valueOf()) - res.valueOf();
-        // Use low-level api, because this fn is low-level api.
-        res._d.setTime(res._d.valueOf() + diff);
-        hooks.updateOffset(res, false);
-        return res;
-    } else {
-        return createLocal(input).local();
-    }
-}
-
-function getDateOffset (m) {
-    // On Firefox.24 Date#getTimezoneOffset returns a floating point.
-    // https://github.com/moment/moment/pull/1871
-    return -Math.round(m._d.getTimezoneOffset() / 15) * 15;
-}
-
-// HOOKS
-
-// This function will be called whenever a moment is mutated.
-// It is intended to keep the offset in sync with the timezone.
-hooks.updateOffset = function () {};
-
-// MOMENTS
-
-// keepLocalTime = true means only change the timezone, without
-// affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
-// 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
-// +0200, so we adjust the time as needed, to be valid.
-//
-// Keeping the time actually adds/subtracts (one hour)
-// from the actual represented time. That is why we call updateOffset
-// a second time. In case it wants us to change the offset again
-// _changeInProgress == true case, then we have to adjust, because
-// there is no such time in the given timezone.
-function getSetOffset (input, keepLocalTime, keepMinutes) {
-    var offset = this._offset || 0,
-        localAdjust;
-    if (!this.isValid()) {
-        return input != null ? this : NaN;
-    }
-    if (input != null) {
-        if (typeof input === 'string') {
-            input = offsetFromString(matchShortOffset, input);
-            if (input === null) {
-                return this;
-            }
-        } else if (Math.abs(input) < 16 && !keepMinutes) {
-            input = input * 60;
-        }
-        if (!this._isUTC && keepLocalTime) {
-            localAdjust = getDateOffset(this);
-        }
-        this._offset = input;
-        this._isUTC = true;
-        if (localAdjust != null) {
-            this.add(localAdjust, 'm');
-        }
-        if (offset !== input) {
-            if (!keepLocalTime || this._changeInProgress) {
-                addSubtract(this, createDuration(input - offset, 'm'), 1, false);
-            } else if (!this._changeInProgress) {
-                this._changeInProgress = true;
-                hooks.updateOffset(this, true);
-                this._changeInProgress = null;
-            }
-        }
-        return this;
-    } else {
-        return this._isUTC ? offset : getDateOffset(this);
-    }
-}
-
-function getSetZone (input, keepLocalTime) {
-    if (input != null) {
-        if (typeof input !== 'string') {
-            input = -input;
-        }
-
-        this.utcOffset(input, keepLocalTime);
-
-        return this;
-    } else {
-        return -this.utcOffset();
-    }
-}
-
-function setOffsetToUTC (keepLocalTime) {
-    return this.utcOffset(0, keepLocalTime);
-}
-
-function setOffsetToLocal (keepLocalTime) {
-    if (this._isUTC) {
-        this.utcOffset(0, keepLocalTime);
-        this._isUTC = false;
-
-        if (keepLocalTime) {
-            this.subtract(getDateOffset(this), 'm');
-        }
-    }
-    return this;
-}
-
-function setOffsetToParsedOffset () {
-    if (this._tzm != null) {
-        this.utcOffset(this._tzm, false, true);
-    } else if (typeof this._i === 'string') {
-        var tZone = offsetFromString(matchOffset, this._i);
-        if (tZone != null) {
-            this.utcOffset(tZone);
-        }
-        else {
-            this.utcOffset(0, true);
-        }
-    }
-    return this;
-}
-
-function hasAlignedHourOffset (input) {
-    if (!this.isValid()) {
-        return false;
-    }
-    input = input ? createLocal(input).utcOffset() : 0;
-
-    return (this.utcOffset() - input) % 60 === 0;
-}
-
-function isDaylightSavingTime () {
-    return (
-        this.utcOffset() > this.clone().month(0).utcOffset() ||
-        this.utcOffset() > this.clone().month(5).utcOffset()
-    );
-}
-
-function isDaylightSavingTimeShifted () {
-    if (!isUndefined(this._isDSTShifted)) {
-        return this._isDSTShifted;
-    }
-
-    var c = {};
-
-    copyConfig(c, this);
-    c = prepareConfig(c);
-
-    if (c._a) {
-        var other = c._isUTC ? createUTC(c._a) : createLocal(c._a);
-        this._isDSTShifted = this.isValid() &&
-            compareArrays(c._a, other.toArray()) > 0;
-    } else {
-        this._isDSTShifted = false;
-    }
-
-    return this._isDSTShifted;
-}
-
-function isLocal () {
-    return this.isValid() ? !this._isUTC : false;
-}
-
-function isUtcOffset () {
-    return this.isValid() ? this._isUTC : false;
-}
-
-function isUtc () {
-    return this.isValid() ? this._isUTC && this._offset === 0 : false;
-}
-
-// ASP.NET json date format regex
-var aspNetRegex = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/;
-
-// from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
-// somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
-// and further modified to allow for strings containing both week and day
-var isoRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
-
-function createDuration (input, key) {
-    var duration = input,
-        // matching against regexp is expensive, do it on demand
-        match = null,
-        sign,
-        ret,
-        diffRes;
-
-    if (isDuration(input)) {
-        duration = {
-            ms : input._milliseconds,
-            d  : input._days,
-            M  : input._months
-        };
-    } else if (isNumber(input)) {
-        duration = {};
-        if (key) {
-            duration[key] = input;
-        } else {
-            duration.milliseconds = input;
-        }
-    } else if (!!(match = aspNetRegex.exec(input))) {
-        sign = (match[1] === '-') ? -1 : 1;
-        duration = {
-            y  : 0,
-            d  : toInt(match[DATE])                         * sign,
-            h  : toInt(match[HOUR])                         * sign,
-            m  : toInt(match[MINUTE])                       * sign,
-            s  : toInt(match[SECOND])                       * sign,
-            ms : toInt(absRound(match[MILLISECOND] * 1000)) * sign // the millisecond decimal point is included in the match
-        };
-    } else if (!!(match = isoRegex.exec(input))) {
-        sign = (match[1] === '-') ? -1 : (match[1] === '+') ? 1 : 1;
-        duration = {
-            y : parseIso(match[2], sign),
-            M : parseIso(match[3], sign),
-            w : parseIso(match[4], sign),
-            d : parseIso(match[5], sign),
-            h : parseIso(match[6], sign),
-            m : parseIso(match[7], sign),
-            s : parseIso(match[8], sign)
-        };
-    } else if (duration == null) {// checks for null or undefined
-        duration = {};
-    } else if (typeof duration === 'object' && ('from' in duration || 'to' in duration)) {
-        diffRes = momentsDifference(createLocal(duration.from), createLocal(duration.to));
-
-        duration = {};
-        duration.ms = diffRes.milliseconds;
-        duration.M = diffRes.months;
-    }
-
-    ret = new Duration(duration);
-
-    if (isDuration(input) && hasOwnProp(input, '_locale')) {
-        ret._locale = input._locale;
-    }
-
-    return ret;
-}
-
-createDuration.fn = Duration.prototype;
-createDuration.invalid = createInvalid$1;
-
-function parseIso (inp, sign) {
-    // We'd normally use ~~inp for this, but unfortunately it also
-    // converts floats to ints.
-    // inp may be undefined, so careful calling replace on it.
-    var res = inp && parseFloat(inp.replace(',', '.'));
-    // apply sign while we're at it
-    return (isNaN(res) ? 0 : res) * sign;
-}
-
-function positiveMomentsDifference(base, other) {
-    var res = {milliseconds: 0, months: 0};
-
-    res.months = other.month() - base.month() +
-        (other.year() - base.year()) * 12;
-    if (base.clone().add(res.months, 'M').isAfter(other)) {
-        --res.months;
-    }
-
-    res.milliseconds = +other - +(base.clone().add(res.months, 'M'));
-
-    return res;
-}
-
-function momentsDifference(base, other) {
-    var res;
-    if (!(base.isValid() && other.isValid())) {
-        return {milliseconds: 0, months: 0};
-    }
-
-    other = cloneWithOffset(other, base);
-    if (base.isBefore(other)) {
-        res = positiveMomentsDifference(base, other);
-    } else {
-        res = positiveMomentsDifference(other, base);
-        res.milliseconds = -res.milliseconds;
-        res.months = -res.months;
-    }
-
-    return res;
-}
-
-// TODO: remove 'name' arg after deprecation is removed
-function createAdder(direction, name) {
-    return function (val, period) {
-        var dur, tmp;
-        //invert the arguments, but complain about it
-        if (period !== null && !isNaN(+period)) {
-            deprecateSimple(name, 'moment().' + name  + '(period, number) is deprecated. Please use moment().' + name + '(number, period). ' +
-            'See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.');
-            tmp = val; val = period; period = tmp;
-        }
-
-        val = typeof val === 'string' ? +val : val;
-        dur = createDuration(val, period);
-        addSubtract(this, dur, direction);
-        return this;
-    };
-}
-
-function addSubtract (mom, duration, isAdding, updateOffset) {
-    var milliseconds = duration._milliseconds,
-        days = absRound(duration._days),
-        months = absRound(duration._months);
-
-    if (!mom.isValid()) {
-        // No op
-        return;
-    }
-
-    updateOffset = updateOffset == null ? true : updateOffset;
-
-    if (months) {
-        setMonth(mom, get(mom, 'Month') + months * isAdding);
-    }
-    if (days) {
-        set$1(mom, 'Date', get(mom, 'Date') + days * isAdding);
-    }
-    if (milliseconds) {
-        mom._d.setTime(mom._d.valueOf() + milliseconds * isAdding);
-    }
-    if (updateOffset) {
-        hooks.updateOffset(mom, days || months);
-    }
-}
-
-var add      = createAdder(1, 'add');
-var subtract = createAdder(-1, 'subtract');
-
-function getCalendarFormat(myMoment, now) {
-    var diff = myMoment.diff(now, 'days', true);
-    return diff < -6 ? 'sameElse' :
-            diff < -1 ? 'lastWeek' :
-            diff < 0 ? 'lastDay' :
-            diff < 1 ? 'sameDay' :
-            diff < 2 ? 'nextDay' :
-            diff < 7 ? 'nextWeek' : 'sameElse';
-}
-
-function calendar$1 (time, formats) {
-    // We want to compare the start of today, vs this.
-    // Getting start-of-today depends on whether we're local/utc/offset or not.
-    var now = time || createLocal(),
-        sod = cloneWithOffset(now, this).startOf('day'),
-        format = hooks.calendarFormat(this, sod) || 'sameElse';
-
-    var output = formats && (isFunction(formats[format]) ? formats[format].call(this, now) : formats[format]);
-
-    return this.format(output || this.localeData().calendar(format, this, createLocal(now)));
-}
-
-function clone () {
-    return new Moment(this);
-}
-
-function isAfter (input, units) {
-    var localInput = isMoment(input) ? input : createLocal(input);
-    if (!(this.isValid() && localInput.isValid())) {
-        return false;
-    }
-    units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
-    if (units === 'millisecond') {
-        return this.valueOf() > localInput.valueOf();
-    } else {
-        return localInput.valueOf() < this.clone().startOf(units).valueOf();
-    }
-}
-
-function isBefore (input, units) {
-    var localInput = isMoment(input) ? input : createLocal(input);
-    if (!(this.isValid() && localInput.isValid())) {
-        return false;
-    }
-    units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
-    if (units === 'millisecond') {
-        return this.valueOf() < localInput.valueOf();
-    } else {
-        return this.clone().endOf(units).valueOf() < localInput.valueOf();
-    }
-}
-
-function isBetween (from, to, units, inclusivity) {
-    inclusivity = inclusivity || '()';
-    return (inclusivity[0] === '(' ? this.isAfter(from, units) : !this.isBefore(from, units)) &&
-        (inclusivity[1] === ')' ? this.isBefore(to, units) : !this.isAfter(to, units));
-}
-
-function isSame (input, units) {
-    var localInput = isMoment(input) ? input : createLocal(input),
-        inputMs;
-    if (!(this.isValid() && localInput.isValid())) {
-        return false;
-    }
-    units = normalizeUnits(units || 'millisecond');
-    if (units === 'millisecond') {
-        return this.valueOf() === localInput.valueOf();
-    } else {
-        inputMs = localInput.valueOf();
-        return this.clone().startOf(units).valueOf() <= inputMs && inputMs <= this.clone().endOf(units).valueOf();
-    }
-}
-
-function isSameOrAfter (input, units) {
-    return this.isSame(input, units) || this.isAfter(input,units);
-}
-
-function isSameOrBefore (input, units) {
-    return this.isSame(input, units) || this.isBefore(input,units);
-}
-
-function diff (input, units, asFloat) {
-    var that,
-        zoneDelta,
-        delta, output;
-
-    if (!this.isValid()) {
-        return NaN;
-    }
-
-    that = cloneWithOffset(input, this);
-
-    if (!that.isValid()) {
-        return NaN;
-    }
-
-    zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4;
-
-    units = normalizeUnits(units);
-
-    switch (units) {
-        case 'year': output = monthDiff(this, that) / 12; break;
-        case 'month': output = monthDiff(this, that); break;
-        case 'quarter': output = monthDiff(this, that) / 3; break;
-        case 'second': output = (this - that) / 1e3; break; // 1000
-        case 'minute': output = (this - that) / 6e4; break; // 1000 * 60
-        case 'hour': output = (this - that) / 36e5; break; // 1000 * 60 * 60
-        case 'day': output = (this - that - zoneDelta) / 864e5; break; // 1000 * 60 * 60 * 24, negate dst
-        case 'week': output = (this - that - zoneDelta) / 6048e5; break; // 1000 * 60 * 60 * 24 * 7, negate dst
-        default: output = this - that;
-    }
-
-    return asFloat ? output : absFloor(output);
-}
-
-function monthDiff (a, b) {
-    // difference in months
-    var wholeMonthDiff = ((b.year() - a.year()) * 12) + (b.month() - a.month()),
-        // b is in (anchor - 1 month, anchor + 1 month)
-        anchor = a.clone().add(wholeMonthDiff, 'months'),
-        anchor2, adjust;
-
-    if (b - anchor < 0) {
-        anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
-        // linear across the month
-        adjust = (b - anchor) / (anchor - anchor2);
-    } else {
-        anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
-        // linear across the month
-        adjust = (b - anchor) / (anchor2 - anchor);
-    }
-
-    //check for negative zero, return zero if negative zero
-    return -(wholeMonthDiff + adjust) || 0;
-}
-
-hooks.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ';
-hooks.defaultFormatUtc = 'YYYY-MM-DDTHH:mm:ss[Z]';
-
-function toString () {
-    return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
-}
-
-function toISOString(keepOffset) {
-    if (!this.isValid()) {
-        return null;
-    }
-    var utc = keepOffset !== true;
-    var m = utc ? this.clone().utc() : this;
-    if (m.year() < 0 || m.year() > 9999) {
-        return formatMoment(m, utc ? 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYYYY-MM-DD[T]HH:mm:ss.SSSZ');
-    }
-    if (isFunction(Date.prototype.toISOString)) {
-        // native implementation is ~50x faster, use it when we can
-        if (utc) {
-            return this.toDate().toISOString();
-        } else {
-            return new Date(this._d.valueOf()).toISOString().replace('Z', formatMoment(m, 'Z'));
-        }
-    }
-    return formatMoment(m, utc ? 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYY-MM-DD[T]HH:mm:ss.SSSZ');
-}
-
-/**
- * Return a human readable representation of a moment that can
- * also be evaluated to get a new moment which is the same
- *
- * @link https://nodejs.org/dist/latest/docs/api/util.html#util_custom_inspect_function_on_objects
- */
-function inspect () {
-    if (!this.isValid()) {
-        return 'moment.invalid(/* ' + this._i + ' */)';
-    }
-    var func = 'moment';
-    var zone = '';
-    if (!this.isLocal()) {
-        func = this.utcOffset() === 0 ? 'moment.utc' : 'moment.parseZone';
-        zone = 'Z';
-    }
-    var prefix = '[' + func + '("]';
-    var year = (0 <= this.year() && this.year() <= 9999) ? 'YYYY' : 'YYYYYY';
-    var datetime = '-MM-DD[T]HH:mm:ss.SSS';
-    var suffix = zone + '[")]';
-
-    return this.format(prefix + year + datetime + suffix);
-}
-
-function format (inputString) {
-    if (!inputString) {
-        inputString = this.isUtc() ? hooks.defaultFormatUtc : hooks.defaultFormat;
-    }
-    var output = formatMoment(this, inputString);
-    return this.localeData().postformat(output);
-}
-
-function from (time, withoutSuffix) {
-    if (this.isValid() &&
-            ((isMoment(time) && time.isValid()) ||
-             createLocal(time).isValid())) {
-        return createDuration({to: this, from: time}).locale(this.locale()).humanize(!withoutSuffix);
-    } else {
-        return this.localeData().invalidDate();
-    }
-}
-
-function fromNow (withoutSuffix) {
-    return this.from(createLocal(), withoutSuffix);
-}
-
-function to (time, withoutSuffix) {
-    if (this.isValid() &&
-            ((isMoment(time) && time.isValid()) ||
-             createLocal(time).isValid())) {
-        return createDuration({from: this, to: time}).locale(this.locale()).humanize(!withoutSuffix);
-    } else {
-        return this.localeData().invalidDate();
-    }
-}
-
-function toNow (withoutSuffix) {
-    return this.to(createLocal(), withoutSuffix);
-}
-
-// If passed a locale key, it will set the locale for this
-// instance.  Otherwise, it will return the locale configuration
-// variables for this instance.
-function locale (key) {
-    var newLocaleData;
-
-    if (key === undefined) {
-        return this._locale._abbr;
-    } else {
-        newLocaleData = getLocale(key);
-        if (newLocaleData != null) {
-            this._locale = newLocaleData;
-        }
-        return this;
-    }
-}
-
-var lang = deprecate(
-    'moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.',
-    function (key) {
-        if (key === undefined) {
-            return this.localeData();
-        } else {
-            return this.locale(key);
-        }
-    }
-);
-
-function localeData () {
-    return this._locale;
-}
-
-function startOf (units) {
-    units = normalizeUnits(units);
-    // the following switch intentionally omits break keywords
-    // to utilize falling through the cases.
-    switch (units) {
-        case 'year':
-            this.month(0);
-            /* falls through */
-        case 'quarter':
-        case 'month':
-            this.date(1);
-            /* falls through */
-        case 'week':
-        case 'isoWeek':
-        case 'day':
-        case 'date':
-            this.hours(0);
-            /* falls through */
-        case 'hour':
-            this.minutes(0);
-            /* falls through */
-        case 'minute':
-            this.seconds(0);
-            /* falls through */
-        case 'second':
-            this.milliseconds(0);
-    }
-
-    // weeks are a special case
-    if (units === 'week') {
-        this.weekday(0);
-    }
-    if (units === 'isoWeek') {
-        this.isoWeekday(1);
-    }
-
-    // quarters are also special
-    if (units === 'quarter') {
-        this.month(Math.floor(this.month() / 3) * 3);
-    }
-
-    return this;
-}
-
-function endOf (units) {
-    units = normalizeUnits(units);
-    if (units === undefined || units === 'millisecond') {
-        return this;
-    }
-
-    // 'date' is an alias for 'day', so it should be considered as such.
-    if (units === 'date') {
-        units = 'day';
-    }
-
-    return this.startOf(units).add(1, (units === 'isoWeek' ? 'week' : units)).subtract(1, 'ms');
-}
-
-function valueOf () {
-    return this._d.valueOf() - ((this._offset || 0) * 60000);
-}
-
-function unix () {
-    return Math.floor(this.valueOf() / 1000);
-}
-
-function toDate () {
-    return new Date(this.valueOf());
-}
-
-function toArray () {
-    var m = this;
-    return [m.year(), m.month(), m.date(), m.hour(), m.minute(), m.second(), m.millisecond()];
-}
-
-function toObject () {
-    var m = this;
-    return {
-        years: m.year(),
-        months: m.month(),
-        date: m.date(),
-        hours: m.hours(),
-        minutes: m.minutes(),
-        seconds: m.seconds(),
-        milliseconds: m.milliseconds()
-    };
-}
-
-function toJSON () {
-    // new Date(NaN).toJSON() === null
-    return this.isValid() ? this.toISOString() : null;
-}
-
-function isValid$2 () {
-    return isValid(this);
-}
-
-function parsingFlags () {
-    return extend({}, getParsingFlags(this));
-}
-
-function invalidAt () {
-    return getParsingFlags(this).overflow;
-}
-
-function creationData() {
-    return {
-        input: this._i,
-        format: this._f,
-        locale: this._locale,
-        isUTC: this._isUTC,
-        strict: this._strict
-    };
-}
-
-// FORMATTING
-
-addFormatToken(0, ['gg', 2], 0, function () {
-    return this.weekYear() % 100;
-});
-
-addFormatToken(0, ['GG', 2], 0, function () {
-    return this.isoWeekYear() % 100;
-});
-
-function addWeekYearFormatToken (token, getter) {
-    addFormatToken(0, [token, token.length], 0, getter);
-}
-
-addWeekYearFormatToken('gggg',     'weekYear');
-addWeekYearFormatToken('ggggg',    'weekYear');
-addWeekYearFormatToken('GGGG',  'isoWeekYear');
-addWeekYearFormatToken('GGGGG', 'isoWeekYear');
-
-// ALIASES
-
-addUnitAlias('weekYear', 'gg');
-addUnitAlias('isoWeekYear', 'GG');
-
-// PRIORITY
-
-addUnitPriority('weekYear', 1);
-addUnitPriority('isoWeekYear', 1);
-
-
-// PARSING
-
-addRegexToken('G',      matchSigned);
-addRegexToken('g',      matchSigned);
-addRegexToken('GG',     match1to2, match2);
-addRegexToken('gg',     match1to2, match2);
-addRegexToken('GGGG',   match1to4, match4);
-addRegexToken('gggg',   match1to4, match4);
-addRegexToken('GGGGG',  match1to6, match6);
-addRegexToken('ggggg',  match1to6, match6);
-
-addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (input, week, config, token) {
-    week[token.substr(0, 2)] = toInt(input);
-});
-
-addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
-    week[token] = hooks.parseTwoDigitYear(input);
-});
-
-// MOMENTS
-
-function getSetWeekYear (input) {
-    return getSetWeekYearHelper.call(this,
-            input,
-            this.week(),
-            this.weekday(),
-            this.localeData()._week.dow,
-            this.localeData()._week.doy);
-}
-
-function getSetISOWeekYear (input) {
-    return getSetWeekYearHelper.call(this,
-            input, this.isoWeek(), this.isoWeekday(), 1, 4);
-}
-
-function getISOWeeksInYear () {
-    return weeksInYear(this.year(), 1, 4);
-}
-
-function getWeeksInYear () {
-    var weekInfo = this.localeData()._week;
-    return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
-}
-
-function getSetWeekYearHelper(input, week, weekday, dow, doy) {
-    var weeksTarget;
-    if (input == null) {
-        return weekOfYear(this, dow, doy).year;
-    } else {
-        weeksTarget = weeksInYear(input, dow, doy);
-        if (week > weeksTarget) {
-            week = weeksTarget;
-        }
-        return setWeekAll.call(this, input, week, weekday, dow, doy);
-    }
-}
-
-function setWeekAll(weekYear, week, weekday, dow, doy) {
-    var dayOfYearData = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy),
-        date = createUTCDate(dayOfYearData.year, 0, dayOfYearData.dayOfYear);
-
-    this.year(date.getUTCFullYear());
-    this.month(date.getUTCMonth());
-    this.date(date.getUTCDate());
-    return this;
-}
-
-// FORMATTING
-
-addFormatToken('Q', 0, 'Qo', 'quarter');
-
-// ALIASES
-
-addUnitAlias('quarter', 'Q');
-
-// PRIORITY
-
-addUnitPriority('quarter', 7);
-
-// PARSING
-
-addRegexToken('Q', match1);
-addParseToken('Q', function (input, array) {
-    array[MONTH] = (toInt(input) - 1) * 3;
-});
-
-// MOMENTS
-
-function getSetQuarter (input) {
-    return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
-}
-
-// FORMATTING
-
-addFormatToken('D', ['DD', 2], 'Do', 'date');
-
-// ALIASES
-
-addUnitAlias('date', 'D');
-
-// PRIOROITY
-addUnitPriority('date', 9);
-
-// PARSING
-
-addRegexToken('D',  match1to2);
-addRegexToken('DD', match1to2, match2);
-addRegexToken('Do', function (isStrict, locale) {
-    // TODO: Remove "ordinalParse" fallback in next major release.
-    return isStrict ?
-      (locale._dayOfMonthOrdinalParse || locale._ordinalParse) :
-      locale._dayOfMonthOrdinalParseLenient;
-});
-
-addParseToken(['D', 'DD'], DATE);
-addParseToken('Do', function (input, array) {
-    array[DATE] = toInt(input.match(match1to2)[0]);
-});
-
-// MOMENTS
-
-var getSetDayOfMonth = makeGetSet('Date', true);
-
-// FORMATTING
-
-addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
-
-// ALIASES
-
-addUnitAlias('dayOfYear', 'DDD');
-
-// PRIORITY
-addUnitPriority('dayOfYear', 4);
-
-// PARSING
-
-addRegexToken('DDD',  match1to3);
-addRegexToken('DDDD', match3);
-addParseToken(['DDD', 'DDDD'], function (input, array, config) {
-    config._dayOfYear = toInt(input);
-});
-
-// HELPERS
-
-// MOMENTS
-
-function getSetDayOfYear (input) {
-    var dayOfYear = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 864e5) + 1;
-    return input == null ? dayOfYear : this.add((input - dayOfYear), 'd');
-}
-
-// FORMATTING
-
-addFormatToken('m', ['mm', 2], 0, 'minute');
-
-// ALIASES
-
-addUnitAlias('minute', 'm');
-
-// PRIORITY
-
-addUnitPriority('minute', 14);
-
-// PARSING
-
-addRegexToken('m',  match1to2);
-addRegexToken('mm', match1to2, match2);
-addParseToken(['m', 'mm'], MINUTE);
-
-// MOMENTS
-
-var getSetMinute = makeGetSet('Minutes', false);
-
-// FORMATTING
-
-addFormatToken('s', ['ss', 2], 0, 'second');
-
-// ALIASES
-
-addUnitAlias('second', 's');
-
-// PRIORITY
-
-addUnitPriority('second', 15);
-
-// PARSING
-
-addRegexToken('s',  match1to2);
-addRegexToken('ss', match1to2, match2);
-addParseToken(['s', 'ss'], SECOND);
-
-// MOMENTS
-
-var getSetSecond = makeGetSet('Seconds', false);
-
-// FORMATTING
-
-addFormatToken('S', 0, 0, function () {
-    return ~~(this.millisecond() / 100);
-});
-
-addFormatToken(0, ['SS', 2], 0, function () {
-    return ~~(this.millisecond() / 10);
-});
-
-addFormatToken(0, ['SSS', 3], 0, 'millisecond');
-addFormatToken(0, ['SSSS', 4], 0, function () {
-    return this.millisecond() * 10;
-});
-addFormatToken(0, ['SSSSS', 5], 0, function () {
-    return this.millisecond() * 100;
-});
-addFormatToken(0, ['SSSSSS', 6], 0, function () {
-    return this.millisecond() * 1000;
-});
-addFormatToken(0, ['SSSSSSS', 7], 0, function () {
-    return this.millisecond() * 10000;
-});
-addFormatToken(0, ['SSSSSSSS', 8], 0, function () {
-    return this.millisecond() * 100000;
-});
-addFormatToken(0, ['SSSSSSSSS', 9], 0, function () {
-    return this.millisecond() * 1000000;
-});
-
-
-// ALIASES
-
-addUnitAlias('millisecond', 'ms');
-
-// PRIORITY
-
-addUnitPriority('millisecond', 16);
-
-// PARSING
-
-addRegexToken('S',    match1to3, match1);
-addRegexToken('SS',   match1to3, match2);
-addRegexToken('SSS',  match1to3, match3);
-
-var token;
-for (token = 'SSSS'; token.length <= 9; token += 'S') {
-    addRegexToken(token, matchUnsigned);
-}
-
-function parseMs(input, array) {
-    array[MILLISECOND] = toInt(('0.' + input) * 1000);
-}
-
-for (token = 'S'; token.length <= 9; token += 'S') {
-    addParseToken(token, parseMs);
-}
-// MOMENTS
-
-var getSetMillisecond = makeGetSet('Milliseconds', false);
-
-// FORMATTING
-
-addFormatToken('z',  0, 0, 'zoneAbbr');
-addFormatToken('zz', 0, 0, 'zoneName');
-
-// MOMENTS
-
-function getZoneAbbr () {
-    return this._isUTC ? 'UTC' : '';
-}
-
-function getZoneName () {
-    return this._isUTC ? 'Coordinated Universal Time' : '';
-}
-
-var proto = Moment.prototype;
-
-proto.add               = add;
-proto.calendar          = calendar$1;
-proto.clone             = clone;
-proto.diff              = diff;
-proto.endOf             = endOf;
-proto.format            = format;
-proto.from              = from;
-proto.fromNow           = fromNow;
-proto.to                = to;
-proto.toNow             = toNow;
-proto.get               = stringGet;
-proto.invalidAt         = invalidAt;
-proto.isAfter           = isAfter;
-proto.isBefore          = isBefore;
-proto.isBetween         = isBetween;
-proto.isSame            = isSame;
-proto.isSameOrAfter     = isSameOrAfter;
-proto.isSameOrBefore    = isSameOrBefore;
-proto.isValid           = isValid$2;
-proto.lang              = lang;
-proto.locale            = locale;
-proto.localeData        = localeData;
-proto.max               = prototypeMax;
-proto.min               = prototypeMin;
-proto.parsingFlags      = parsingFlags;
-proto.set               = stringSet;
-proto.startOf           = startOf;
-proto.subtract          = subtract;
-proto.toArray           = toArray;
-proto.toObject          = toObject;
-proto.toDate            = toDate;
-proto.toISOString       = toISOString;
-proto.inspect           = inspect;
-proto.toJSON            = toJSON;
-proto.toString          = toString;
-proto.unix              = unix;
-proto.valueOf           = valueOf;
-proto.creationData      = creationData;
-
-// Year
-proto.year       = getSetYear;
-proto.isLeapYear = getIsLeapYear;
-
-// Week Year
-proto.weekYear    = getSetWeekYear;
-proto.isoWeekYear = getSetISOWeekYear;
-
-// Quarter
-proto.quarter = proto.quarters = getSetQuarter;
-
-// Month
-proto.month       = getSetMonth;
-proto.daysInMonth = getDaysInMonth;
-
-// Week
-proto.week           = proto.weeks        = getSetWeek;
-proto.isoWeek        = proto.isoWeeks     = getSetISOWeek;
-proto.weeksInYear    = getWeeksInYear;
-proto.isoWeeksInYear = getISOWeeksInYear;
-
-// Day
-proto.date       = getSetDayOfMonth;
-proto.day        = proto.days             = getSetDayOfWeek;
-proto.weekday    = getSetLocaleDayOfWeek;
-proto.isoWeekday = getSetISODayOfWeek;
-proto.dayOfYear  = getSetDayOfYear;
-
-// Hour
-proto.hour = proto.hours = getSetHour;
-
-// Minute
-proto.minute = proto.minutes = getSetMinute;
-
-// Second
-proto.second = proto.seconds = getSetSecond;
-
-// Millisecond
-proto.millisecond = proto.milliseconds = getSetMillisecond;
-
-// Offset
-proto.utcOffset            = getSetOffset;
-proto.utc                  = setOffsetToUTC;
-proto.local                = setOffsetToLocal;
-proto.parseZone            = setOffsetToParsedOffset;
-proto.hasAlignedHourOffset = hasAlignedHourOffset;
-proto.isDST                = isDaylightSavingTime;
-proto.isLocal              = isLocal;
-proto.isUtcOffset          = isUtcOffset;
-proto.isUtc                = isUtc;
-proto.isUTC                = isUtc;
-
-// Timezone
-proto.zoneAbbr = getZoneAbbr;
-proto.zoneName = getZoneName;
-
-// Deprecations
-proto.dates  = deprecate('dates accessor is deprecated. Use date instead.', getSetDayOfMonth);
-proto.months = deprecate('months accessor is deprecated. Use month instead', getSetMonth);
-proto.years  = deprecate('years accessor is deprecated. Use year instead', getSetYear);
-proto.zone   = deprecate('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', getSetZone);
-proto.isDSTShifted = deprecate('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', isDaylightSavingTimeShifted);
-
-function createUnix (input) {
-    return createLocal(input * 1000);
-}
-
-function createInZone () {
-    return createLocal.apply(null, arguments).parseZone();
-}
-
-function preParsePostFormat (string) {
-    return string;
-}
-
-var proto$1 = Locale.prototype;
-
-proto$1.calendar        = calendar;
-proto$1.longDateFormat  = longDateFormat;
-proto$1.invalidDate     = invalidDate;
-proto$1.ordinal         = ordinal;
-proto$1.preparse        = preParsePostFormat;
-proto$1.postformat      = preParsePostFormat;
-proto$1.relativeTime    = relativeTime;
-proto$1.pastFuture      = pastFuture;
-proto$1.set             = set;
-
-// Month
-proto$1.months            =        localeMonths;
-proto$1.monthsShort       =        localeMonthsShort;
-proto$1.monthsParse       =        localeMonthsParse;
-proto$1.monthsRegex       = monthsRegex;
-proto$1.monthsShortRegex  = monthsShortRegex;
-
-// Week
-proto$1.week = localeWeek;
-proto$1.firstDayOfYear = localeFirstDayOfYear;
-proto$1.firstDayOfWeek = localeFirstDayOfWeek;
-
-// Day of Week
-proto$1.weekdays       =        localeWeekdays;
-proto$1.weekdaysMin    =        localeWeekdaysMin;
-proto$1.weekdaysShort  =        localeWeekdaysShort;
-proto$1.weekdaysParse  =        localeWeekdaysParse;
-
-proto$1.weekdaysRegex       =        weekdaysRegex;
-proto$1.weekdaysShortRegex  =        weekdaysShortRegex;
-proto$1.weekdaysMinRegex    =        weekdaysMinRegex;
-
-// Hours
-proto$1.isPM = localeIsPM;
-proto$1.meridiem = localeMeridiem;
-
-function get$1 (format, index, field, setter) {
-    var locale = getLocale();
-    var utc = createUTC().set(setter, index);
-    return locale[field](utc, format);
-}
-
-function listMonthsImpl (format, index, field) {
-    if (isNumber(format)) {
-        index = format;
-        format = undefined;
-    }
-
-    format = format || '';
-
-    if (index != null) {
-        return get$1(format, index, field, 'month');
-    }
-
-    var i;
-    var out = [];
-    for (i = 0; i < 12; i++) {
-        out[i] = get$1(format, i, field, 'month');
-    }
-    return out;
-}
-
-// ()
-// (5)
-// (fmt, 5)
-// (fmt)
-// (true)
-// (true, 5)
-// (true, fmt, 5)
-// (true, fmt)
-function listWeekdaysImpl (localeSorted, format, index, field) {
-    if (typeof localeSorted === 'boolean') {
-        if (isNumber(format)) {
-            index = format;
-            format = undefined;
-        }
-
-        format = format || '';
-    } else {
-        format = localeSorted;
-        index = format;
-        localeSorted = false;
-
-        if (isNumber(format)) {
-            index = format;
-            format = undefined;
-        }
-
-        format = format || '';
-    }
-
-    var locale = getLocale(),
-        shift = localeSorted ? locale._week.dow : 0;
-
-    if (index != null) {
-        return get$1(format, (index + shift) % 7, field, 'day');
-    }
-
-    var i;
-    var out = [];
-    for (i = 0; i < 7; i++) {
-        out[i] = get$1(format, (i + shift) % 7, field, 'day');
-    }
-    return out;
-}
-
-function listMonths (format, index) {
-    return listMonthsImpl(format, index, 'months');
-}
-
-function listMonthsShort (format, index) {
-    return listMonthsImpl(format, index, 'monthsShort');
-}
-
-function listWeekdays (localeSorted, format, index) {
-    return listWeekdaysImpl(localeSorted, format, index, 'weekdays');
-}
-
-function listWeekdaysShort (localeSorted, format, index) {
-    return listWeekdaysImpl(localeSorted, format, index, 'weekdaysShort');
-}
-
-function listWeekdaysMin (localeSorted, format, index) {
-    return listWeekdaysImpl(localeSorted, format, index, 'weekdaysMin');
-}
-
-getSetGlobalLocale('en', {
-    dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
-    ordinal : function (number) {
-        var b = number % 10,
-            output = (toInt(number % 100 / 10) === 1) ? 'th' :
-            (b === 1) ? 'st' :
-            (b === 2) ? 'nd' :
-            (b === 3) ? 'rd' : 'th';
-        return number + output;
-    }
-});
-
-// Side effect imports
-hooks.lang = deprecate('moment.lang is deprecated. Use moment.locale instead.', getSetGlobalLocale);
-hooks.langData = deprecate('moment.langData is deprecated. Use moment.localeData instead.', getLocale);
-
-var mathAbs = Math.abs;
-
-function abs () {
-    var data           = this._data;
-
-    this._milliseconds = mathAbs(this._milliseconds);
-    this._days         = mathAbs(this._days);
-    this._months       = mathAbs(this._months);
-
-    data.milliseconds  = mathAbs(data.milliseconds);
-    data.seconds       = mathAbs(data.seconds);
-    data.minutes       = mathAbs(data.minutes);
-    data.hours         = mathAbs(data.hours);
-    data.months        = mathAbs(data.months);
-    data.years         = mathAbs(data.years);
-
-    return this;
-}
-
-function addSubtract$1 (duration, input, value, direction) {
-    var other = createDuration(input, value);
-
-    duration._milliseconds += direction * other._milliseconds;
-    duration._days         += direction * other._days;
-    duration._months       += direction * other._months;
-
-    return duration._bubble();
-}
-
-// supports only 2.0-style add(1, 's') or add(duration)
-function add$1 (input, value) {
-    return addSubtract$1(this, input, value, 1);
-}
-
-// supports only 2.0-style subtract(1, 's') or subtract(duration)
-function subtract$1 (input, value) {
-    return addSubtract$1(this, input, value, -1);
-}
-
-function absCeil (number) {
-    if (number < 0) {
-        return Math.floor(number);
-    } else {
-        return Math.ceil(number);
-    }
-}
-
-function bubble () {
-    var milliseconds = this._milliseconds;
-    var days         = this._days;
-    var months       = this._months;
-    var data         = this._data;
-    var seconds, minutes, hours, years, monthsFromDays;
-
-    // if we have a mix of positive and negative values, bubble down first
-    // check: https://github.com/moment/moment/issues/2166
-    if (!((milliseconds >= 0 && days >= 0 && months >= 0) ||
-            (milliseconds <= 0 && days <= 0 && months <= 0))) {
-        milliseconds += absCeil(monthsToDays(months) + days) * 864e5;
-        days = 0;
-        months = 0;
-    }
-
-    // The following code bubbles up values, see the tests for
-    // examples of what that means.
-    data.milliseconds = milliseconds % 1000;
-
-    seconds           = absFloor(milliseconds / 1000);
-    data.seconds      = seconds % 60;
-
-    minutes           = absFloor(seconds / 60);
-    data.minutes      = minutes % 60;
-
-    hours             = absFloor(minutes / 60);
-    data.hours        = hours % 24;
-
-    days += absFloor(hours / 24);
-
-    // convert days to months
-    monthsFromDays = absFloor(daysToMonths(days));
-    months += monthsFromDays;
-    days -= absCeil(monthsToDays(monthsFromDays));
-
-    // 12 months -> 1 year
-    years = absFloor(months / 12);
-    months %= 12;
-
-    data.days   = days;
-    data.months = months;
-    data.years  = years;
-
-    return this;
-}
-
-function daysToMonths (days) {
-    // 400 years have 146097 days (taking into account leap year rules)
-    // 400 years have 12 months === 4800
-    return days * 4800 / 146097;
-}
-
-function monthsToDays (months) {
-    // the reverse of daysToMonths
-    return months * 146097 / 4800;
-}
-
-function as (units) {
-    if (!this.isValid()) {
-        return NaN;
-    }
-    var days;
-    var months;
-    var milliseconds = this._milliseconds;
-
-    units = normalizeUnits(units);
-
-    if (units === 'month' || units === 'year') {
-        days   = this._days   + milliseconds / 864e5;
-        months = this._months + daysToMonths(days);
-        return units === 'month' ? months : months / 12;
-    } else {
-        // handle milliseconds separately because of floating point math errors (issue #1867)
-        days = this._days + Math.round(monthsToDays(this._months));
-        switch (units) {
-            case 'week'   : return days / 7     + milliseconds / 6048e5;
-            case 'day'    : return days         + milliseconds / 864e5;
-            case 'hour'   : return days * 24    + milliseconds / 36e5;
-            case 'minute' : return days * 1440  + milliseconds / 6e4;
-            case 'second' : return days * 86400 + milliseconds / 1000;
-            // Math.floor prevents floating point math errors here
-            case 'millisecond': return Math.floor(days * 864e5) + milliseconds;
-            default: throw new Error('Unknown unit ' + units);
-        }
-    }
-}
-
-// TODO: Use this.as('ms')?
-function valueOf$1 () {
-    if (!this.isValid()) {
-        return NaN;
-    }
-    return (
-        this._milliseconds +
-        this._days * 864e5 +
-        (this._months % 12) * 2592e6 +
-        toInt(this._months / 12) * 31536e6
-    );
-}
-
-function makeAs (alias) {
-    return function () {
-        return this.as(alias);
-    };
-}
-
-var asMilliseconds = makeAs('ms');
-var asSeconds      = makeAs('s');
-var asMinutes      = makeAs('m');
-var asHours        = makeAs('h');
-var asDays         = makeAs('d');
-var asWeeks        = makeAs('w');
-var asMonths       = makeAs('M');
-var asYears        = makeAs('y');
-
-function clone$1 () {
-    return createDuration(this);
-}
-
-function get$2 (units) {
-    units = normalizeUnits(units);
-    return this.isValid() ? this[units + 's']() : NaN;
-}
-
-function makeGetter(name) {
-    return function () {
-        return this.isValid() ? this._data[name] : NaN;
-    };
-}
-
-var milliseconds = makeGetter('milliseconds');
-var seconds      = makeGetter('seconds');
-var minutes      = makeGetter('minutes');
-var hours        = makeGetter('hours');
-var days         = makeGetter('days');
-var months       = makeGetter('months');
-var years        = makeGetter('years');
-
-function weeks () {
-    return absFloor(this.days() / 7);
-}
-
-var round = Math.round;
-var thresholds = {
-    ss: 44,         // a few seconds to seconds
-    s : 45,         // seconds to minute
-    m : 45,         // minutes to hour
-    h : 22,         // hours to day
-    d : 26,         // days to month
-    M : 11          // months to year
-};
-
-// helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
-function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
-    return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
-}
-
-function relativeTime$1 (posNegDuration, withoutSuffix, locale) {
-    var duration = createDuration(posNegDuration).abs();
-    var seconds  = round(duration.as('s'));
-    var minutes  = round(duration.as('m'));
-    var hours    = round(duration.as('h'));
-    var days     = round(duration.as('d'));
-    var months   = round(duration.as('M'));
-    var years    = round(duration.as('y'));
-
-    var a = seconds <= thresholds.ss && ['s', seconds]  ||
-            seconds < thresholds.s   && ['ss', seconds] ||
-            minutes <= 1             && ['m']           ||
-            minutes < thresholds.m   && ['mm', minutes] ||
-            hours   <= 1             && ['h']           ||
-            hours   < thresholds.h   && ['hh', hours]   ||
-            days    <= 1             && ['d']           ||
-            days    < thresholds.d   && ['dd', days]    ||
-            months  <= 1             && ['M']           ||
-            months  < thresholds.M   && ['MM', months]  ||
-            years   <= 1             && ['y']           || ['yy', years];
-
-    a[2] = withoutSuffix;
-    a[3] = +posNegDuration > 0;
-    a[4] = locale;
-    return substituteTimeAgo.apply(null, a);
-}
-
-// This function allows you to set the rounding function for relative time strings
-function getSetRelativeTimeRounding (roundingFunction) {
-    if (roundingFunction === undefined) {
-        return round;
-    }
-    if (typeof(roundingFunction) === 'function') {
-        round = roundingFunction;
-        return true;
-    }
-    return false;
-}
-
-// This function allows you to set a threshold for relative time strings
-function getSetRelativeTimeThreshold (threshold, limit) {
-    if (thresholds[threshold] === undefined) {
-        return false;
-    }
-    if (limit === undefined) {
-        return thresholds[threshold];
-    }
-    thresholds[threshold] = limit;
-    if (threshold === 's') {
-        thresholds.ss = limit - 1;
-    }
-    return true;
-}
-
-function humanize (withSuffix) {
-    if (!this.isValid()) {
-        return this.localeData().invalidDate();
-    }
-
-    var locale = this.localeData();
-    var output = relativeTime$1(this, !withSuffix, locale);
-
-    if (withSuffix) {
-        output = locale.pastFuture(+this, output);
-    }
-
-    return locale.postformat(output);
-}
-
-var abs$1 = Math.abs;
-
-function sign(x) {
-    return ((x > 0) - (x < 0)) || +x;
-}
-
-function toISOString$1() {
-    // for ISO strings we do not use the normal bubbling rules:
-    //  * milliseconds bubble up until they become hours
-    //  * days do not bubble at all
-    //  * months bubble up until they become years
-    // This is because there is no context-free conversion between hours and days
-    // (think of clock changes)
-    // and also not between days and months (28-31 days per month)
-    if (!this.isValid()) {
-        return this.localeData().invalidDate();
-    }
-
-    var seconds = abs$1(this._milliseconds) / 1000;
-    var days         = abs$1(this._days);
-    var months       = abs$1(this._months);
-    var minutes, hours, years;
-
-    // 3600 seconds -> 60 minutes -> 1 hour
-    minutes           = absFloor(seconds / 60);
-    hours             = absFloor(minutes / 60);
-    seconds %= 60;
-    minutes %= 60;
-
-    // 12 months -> 1 year
-    years  = absFloor(months / 12);
-    months %= 12;
-
-
-    // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
-    var Y = years;
-    var M = months;
-    var D = days;
-    var h = hours;
-    var m = minutes;
-    var s = seconds ? seconds.toFixed(3).replace(/\.?0+$/, '') : '';
-    var total = this.asSeconds();
-
-    if (!total) {
-        // this is the same as C#'s (Noda) and python (isodate)...
-        // but not other JS (goog.date)
-        return 'P0D';
-    }
-
-    var totalSign = total < 0 ? '-' : '';
-    var ymSign = sign(this._months) !== sign(total) ? '-' : '';
-    var daysSign = sign(this._days) !== sign(total) ? '-' : '';
-    var hmsSign = sign(this._milliseconds) !== sign(total) ? '-' : '';
-
-    return totalSign + 'P' +
-        (Y ? ymSign + Y + 'Y' : '') +
-        (M ? ymSign + M + 'M' : '') +
-        (D ? daysSign + D + 'D' : '') +
-        ((h || m || s) ? 'T' : '') +
-        (h ? hmsSign + h + 'H' : '') +
-        (m ? hmsSign + m + 'M' : '') +
-        (s ? hmsSign + s + 'S' : '');
-}
-
-var proto$2 = Duration.prototype;
-
-proto$2.isValid        = isValid$1;
-proto$2.abs            = abs;
-proto$2.add            = add$1;
-proto$2.subtract       = subtract$1;
-proto$2.as             = as;
-proto$2.asMilliseconds = asMilliseconds;
-proto$2.asSeconds      = asSeconds;
-proto$2.asMinutes      = asMinutes;
-proto$2.asHours        = asHours;
-proto$2.asDays         = asDays;
-proto$2.asWeeks        = asWeeks;
-proto$2.asMonths       = asMonths;
-proto$2.asYears        = asYears;
-proto$2.valueOf        = valueOf$1;
-proto$2._bubble        = bubble;
-proto$2.clone          = clone$1;
-proto$2.get            = get$2;
-proto$2.milliseconds   = milliseconds;
-proto$2.seconds        = seconds;
-proto$2.minutes        = minutes;
-proto$2.hours          = hours;
-proto$2.days           = days;
-proto$2.weeks          = weeks;
-proto$2.months         = months;
-proto$2.years          = years;
-proto$2.humanize       = humanize;
-proto$2.toISOString    = toISOString$1;
-proto$2.toString       = toISOString$1;
-proto$2.toJSON         = toISOString$1;
-proto$2.locale         = locale;
-proto$2.localeData     = localeData;
-
-// Deprecations
-proto$2.toIsoString = deprecate('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', toISOString$1);
-proto$2.lang = lang;
-
-// Side effect imports
-
-// FORMATTING
-
-addFormatToken('X', 0, 0, 'unix');
-addFormatToken('x', 0, 0, 'valueOf');
-
-// PARSING
-
-addRegexToken('x', matchSigned);
-addRegexToken('X', matchTimestamp);
-addParseToken('X', function (input, array, config) {
-    config._d = new Date(parseFloat(input, 10) * 1000);
-});
-addParseToken('x', function (input, array, config) {
-    config._d = new Date(toInt(input));
-});
-
-// Side effect imports
-
-
-hooks.version = '2.20.1';
-
-setHookCallback(createLocal);
-
-hooks.fn                    = proto;
-hooks.min                   = min;
-hooks.max                   = max;
-hooks.now                   = now;
-hooks.utc                   = createUTC;
-hooks.unix                  = createUnix;
-hooks.months                = listMonths;
-hooks.isDate                = isDate;
-hooks.locale                = getSetGlobalLocale;
-hooks.invalid               = createInvalid;
-hooks.duration              = createDuration;
-hooks.isMoment              = isMoment;
-hooks.weekdays              = listWeekdays;
-hooks.parseZone             = createInZone;
-hooks.localeData            = getLocale;
-hooks.isDuration            = isDuration;
-hooks.monthsShort           = listMonthsShort;
-hooks.weekdaysMin           = listWeekdaysMin;
-hooks.defineLocale          = defineLocale;
-hooks.updateLocale          = updateLocale;
-hooks.locales               = listLocales;
-hooks.weekdaysShort         = listWeekdaysShort;
-hooks.normalizeUnits        = normalizeUnits;
-hooks.relativeTimeRounding  = getSetRelativeTimeRounding;
-hooks.relativeTimeThreshold = getSetRelativeTimeThreshold;
-hooks.calendarFormat        = getCalendarFormat;
-hooks.prototype             = proto;
-
-// currently HTML5 input type only supports 24-hour formats
-hooks.HTML5_FMT = {
-    DATETIME_LOCAL: 'YYYY-MM-DDTHH:mm',             // <input type="datetime-local" />
-    DATETIME_LOCAL_SECONDS: 'YYYY-MM-DDTHH:mm:ss',  // <input type="datetime-local" step="1" />
-    DATETIME_LOCAL_MS: 'YYYY-MM-DDTHH:mm:ss.SSS',   // <input type="datetime-local" step="0.001" />
-    DATE: 'YYYY-MM-DD',                             // <input type="date" />
-    TIME: 'HH:mm',                                  // <input type="time" />
-    TIME_SECONDS: 'HH:mm:ss',                       // <input type="time" step="1" />
-    TIME_MS: 'HH:mm:ss.SSS',                        // <input type="time" step="0.001" />
-    WEEK: 'YYYY-[W]WW',                             // <input type="week" />
-    MONTH: 'YYYY-MM'                                // <input type="month" />
-};
-
-return hooks;
-
-})));
-
-},{}],173:[function(require,module,exports){
-module.exports={
-  "10*": {
-    "value": 10,
-    "ucum": "1"
-  },
-  "10^": {
-    "value": 10,
-    "ucum": "1"
-  },
-  "[pi]": {
-    "value": 3.141592653589793,
-    "ucum": "1"
-  },
-  "%": {
-    "value": 1,
-    "ucum": "10*-2"
-  },
-  "[ppth]": {
-    "value": 1,
-    "ucum": "10*-3"
-  },
-  "[ppm]": {
-    "value": 1,
-    "ucum": "10*-6"
-  },
-  "[ppb]": {
-    "value": 1,
-    "ucum": "10*-9"
-  },
-  "[pptr]": {
-    "value": 1,
-    "ucum": "10*-12"
-  },
-  "mol": {
-    "value": 6.0221367,
-    "ucum": "10*23"
-  },
-  "sr": {
-    "value": 1,
-    "ucum": "rad2"
-  },
-  "Hz": {
-    "value": 1,
-    "ucum": "s-1"
-  },
-  "N": {
-    "value": 1,
-    "ucum": "kg.m/s2"
-  },
-  "Pa": {
-    "value": 1,
-    "ucum": "N/m2"
-  },
-  "J": {
-    "value": 1,
-    "ucum": "N.m"
-  },
-  "W": {
-    "value": 1,
-    "ucum": "J/s"
-  },
-  "A": {
-    "value": 1,
-    "ucum": "C/s"
-  },
-  "V": {
-    "value": 1,
-    "ucum": "J/C"
-  },
-  "F": {
-    "value": 1,
-    "ucum": "C/V"
-  },
-  "Ohm": {
-    "value": 1,
-    "ucum": "V/A"
-  },
-  "S": {
-    "value": 1,
-    "ucum": "Ohm-1"
-  },
-  "Wb": {
-    "value": 1,
-    "ucum": "V.s"
-  },
-  "Cel": {
-    "value": null,
-    "ucum": "cel(1 K)"
-  },
-  "T": {
-    "value": 1,
-    "ucum": "Wb/m2"
-  },
-  "H": {
-    "value": 1,
-    "ucum": "Wb/A"
-  },
-  "lm": {
-    "value": 1,
-    "ucum": "cd.sr"
-  },
-  "lx": {
-    "value": 1,
-    "ucum": "lm/m2"
-  },
-  "Bq": {
-    "value": 1,
-    "ucum": "s-1"
-  },
-  "Gy": {
-    "value": 1,
-    "ucum": "J/kg"
-  },
-  "Sv": {
-    "value": 1,
-    "ucum": "J/kg"
-  },
-  "gon": {
-    "value": 0.9,
-    "ucum": "deg"
-  },
-  "deg": {
-    "value": 2,
-    "ucum": "[pi].rad/360"
-  },
-  "'": {
-    "value": 1,
-    "ucum": "deg/60"
-  },
-  "''": {
-    "value": 1,
-    "ucum": "'/60"
-  },
-  "l": {
-    "value": 1,
-    "ucum": "dm3"
-  },
-  "L": {
-    "value": 1,
-    "ucum": "l"
-  },
-  "ar": {
-    "value": 100,
-    "ucum": "m2"
-  },
-  "min": {
-    "value": 60,
-    "ucum": "s"
-  },
-  "h": {
-    "value": 60,
-    "ucum": "min"
-  },
-  "d": {
-    "value": 24,
-    "ucum": "h"
-  },
-  "a_t": {
-    "value": 365.24219,
-    "ucum": "d"
-  },
-  "a_j": {
-    "value": 365.25,
-    "ucum": "d"
-  },
-  "a_g": {
-    "value": 365.2425,
-    "ucum": "d"
-  },
-  "a": {
-    "value": 1,
-    "ucum": "a_j"
-  },
-  "wk": {
-    "value": 7,
-    "ucum": "d"
-  },
-  "mo_s": {
-    "value": 29.53059,
-    "ucum": "d"
-  },
-  "mo_j": {
-    "value": 1,
-    "ucum": "a_j/12"
-  },
-  "mo_g": {
-    "value": 1,
-    "ucum": "a_g/12"
-  },
-  "mo": {
-    "value": 1,
-    "ucum": "mo_j"
-  },
-  "t": {
-    "value": 1000,
-    "ucum": "kg"
-  },
-  "bar": {
-    "value": 100000,
-    "ucum": "Pa"
-  },
-  "u": {
-    "value": 1.6605402e-24,
-    "ucum": "g"
-  },
-  "eV": {
-    "value": 1,
-    "ucum": "[e].V"
-  },
-  "AU": {
-    "value": 149597.870691,
-    "ucum": "Mm"
-  },
-  "pc": {
-    "value": 30856780000000000,
-    "ucum": "m"
-  },
-  "[c]": {
-    "value": 299792458,
-    "ucum": "m/s"
-  },
-  "[h]": {
-    "value": 6.6260755e-24,
-    "ucum": "J.s"
-  },
-  "[k]": {
-    "value": 1.380658e-23,
-    "ucum": "J/K"
-  },
-  "[eps_0]": {
-    "value": 8.854187817e-12,
-    "ucum": "F/m"
-  },
-  "[mu_0]": {
-    "value": 1,
-    "ucum": "4.[pi].10*-7.N/A2"
-  },
-  "[e]": {
-    "value": 1.60217733e-19,
-    "ucum": "C"
-  },
-  "[m_e]": {
-    "value": 9.1093897e-28,
-    "ucum": "g"
-  },
-  "[m_p]": {
-    "value": 1.6726231e-24,
-    "ucum": "g"
-  },
-  "[G]": {
-    "value": 6.67259e-11,
-    "ucum": "m3.kg-1.s-2"
-  },
-  "[g]": {
-    "value": 9.80665,
-    "ucum": "m/s2"
-  },
-  "atm": {
-    "value": 101325,
-    "ucum": "Pa"
-  },
-  "[ly]": {
-    "value": 1,
-    "ucum": "[c].a_j"
-  },
-  "gf": {
-    "value": 1,
-    "ucum": "g.[g]"
-  },
-  "[lbf_av]": {
-    "value": 1,
-    "ucum": "[lb_av].[g]"
-  },
-  "Ky": {
-    "value": 1,
-    "ucum": "cm-1"
-  },
-  "Gal": {
-    "value": 1,
-    "ucum": "cm/s2"
-  },
-  "dyn": {
-    "value": 1,
-    "ucum": "g.cm/s2"
-  },
-  "erg": {
-    "value": 1,
-    "ucum": "dyn.cm"
-  },
-  "P": {
-    "value": 1,
-    "ucum": "dyn.s/cm2"
-  },
-  "Bi": {
-    "value": 10,
-    "ucum": "A"
-  },
-  "St": {
-    "value": 1,
-    "ucum": "cm2/s"
-  },
-  "Mx": {
-    "value": 1e-8,
-    "ucum": "Wb"
-  },
-  "G": {
-    "value": 0.0001,
-    "ucum": "T"
-  },
-  "Oe": {
-    "value": 250,
-    "ucum": "/[pi].A/m"
-  },
-  "Gb": {
-    "value": 1,
-    "ucum": "Oe.cm"
-  },
-  "sb": {
-    "value": 1,
-    "ucum": "cd/cm2"
-  },
-  "Lmb": {
-    "value": 1,
-    "ucum": "cd/cm2/[pi]"
-  },
-  "ph": {
-    "value": 0.0001,
-    "ucum": "lx"
-  },
-  "Ci": {
-    "value": 37000000000,
-    "ucum": "Bq"
-  },
-  "R": {
-    "value": 0.000258,
-    "ucum": "C/kg"
-  },
-  "RAD": {
-    "value": 100,
-    "ucum": "erg/g"
-  },
-  "REM": {
-    "value": 1,
-    "ucum": "RAD"
-  },
-  "[in_i]": {
-    "value": 2.54,
-    "ucum": "cm"
-  },
-  "[ft_i]": {
-    "value": 12,
-    "ucum": "[in_i]"
-  },
-  "[yd_i]": {
-    "value": 3,
-    "ucum": "[ft_i]"
-  },
-  "[mi_i]": {
-    "value": 5280,
-    "ucum": "[ft_i]"
-  },
-  "[fth_i]": {
-    "value": 6,
-    "ucum": "[ft_i]"
-  },
-  "[nmi_i]": {
-    "value": 1852,
-    "ucum": "m"
-  },
-  "[kn_i]": {
-    "value": 1,
-    "ucum": "[nmi_i]/h"
-  },
-  "[sin_i]": {
-    "value": 1,
-    "ucum": "[in_i]2"
-  },
-  "[sft_i]": {
-    "value": 1,
-    "ucum": "[ft_i]2"
-  },
-  "[syd_i]": {
-    "value": 1,
-    "ucum": "[yd_i]2"
-  },
-  "[cin_i]": {
-    "value": 1,
-    "ucum": "[in_i]3"
-  },
-  "[cft_i]": {
-    "value": 1,
-    "ucum": "[ft_i]3"
-  },
-  "[cyd_i]": {
-    "value": 1,
-    "ucum": "[yd_i]3"
-  },
-  "[bf_i]": {
-    "value": 144,
-    "ucum": "[in_i]3"
-  },
-  "[cr_i]": {
-    "value": 128,
-    "ucum": "[ft_i]3"
-  },
-  "[mil_i]": {
-    "value": 0.001,
-    "ucum": "[in_i]"
-  },
-  "[cml_i]": {
-    "value": 1,
-    "ucum": "[pi]/4.[mil_i]2"
-  },
-  "[hd_i]": {
-    "value": 4,
-    "ucum": "[in_i]"
-  },
-  "[ft_us]": {
-    "value": 1200,
-    "ucum": "m/3937"
-  },
-  "[yd_us]": {
-    "value": 3,
-    "ucum": "[ft_us]"
-  },
-  "[in_us]": {
-    "value": 1,
-    "ucum": "[ft_us]/12"
-  },
-  "[rd_us]": {
-    "value": 16.5,
-    "ucum": "[ft_us]"
-  },
-  "[ch_us]": {
-    "value": 4,
-    "ucum": "[rd_us]"
-  },
-  "[lk_us]": {
-    "value": 1,
-    "ucum": "[ch_us]/100"
-  },
-  "[rch_us]": {
-    "value": 100,
-    "ucum": "[ft_us]"
-  },
-  "[rlk_us]": {
-    "value": 1,
-    "ucum": "[rch_us]/100"
-  },
-  "[fth_us]": {
-    "value": 6,
-    "ucum": "[ft_us]"
-  },
-  "[fur_us]": {
-    "value": 40,
-    "ucum": "[rd_us]"
-  },
-  "[mi_us]": {
-    "value": 8,
-    "ucum": "[fur_us]"
-  },
-  "[acr_us]": {
-    "value": 160,
-    "ucum": "[rd_us]2"
-  },
-  "[srd_us]": {
-    "value": 1,
-    "ucum": "[rd_us]2"
-  },
-  "[smi_us]": {
-    "value": 1,
-    "ucum": "[mi_us]2"
-  },
-  "[sct]": {
-    "value": 1,
-    "ucum": "[mi_us]2"
-  },
-  "[twp]": {
-    "value": 36,
-    "ucum": "[sct]"
-  },
-  "[mil_us]": {
-    "value": 0.001,
-    "ucum": "[in_us]"
-  },
-  "[in_br]": {
-    "value": 2.539998,
-    "ucum": "cm"
-  },
-  "[ft_br]": {
-    "value": 12,
-    "ucum": "[in_br]"
-  },
-  "[rd_br]": {
-    "value": 16.5,
-    "ucum": "[ft_br]"
-  },
-  "[ch_br]": {
-    "value": 4,
-    "ucum": "[rd_br]"
-  },
-  "[lk_br]": {
-    "value": 1,
-    "ucum": "[ch_br]/100"
-  },
-  "[fth_br]": {
-    "value": 6,
-    "ucum": "[ft_br]"
-  },
-  "[pc_br]": {
-    "value": 2.5,
-    "ucum": "[ft_br]"
-  },
-  "[yd_br]": {
-    "value": 3,
-    "ucum": "[ft_br]"
-  },
-  "[mi_br]": {
-    "value": 5280,
-    "ucum": "[ft_br]"
-  },
-  "[nmi_br]": {
-    "value": 6080,
-    "ucum": "[ft_br]"
-  },
-  "[kn_br]": {
-    "value": 1,
-    "ucum": "[nmi_br]/h"
-  },
-  "[acr_br]": {
-    "value": 4840,
-    "ucum": "[yd_br]2"
-  },
-  "[gal_us]": {
-    "value": 231,
-    "ucum": "[in_i]3"
-  },
-  "[bbl_us]": {
-    "value": 42,
-    "ucum": "[gal_us]"
-  },
-  "[qt_us]": {
-    "value": 1,
-    "ucum": "[gal_us]/4"
-  },
-  "[pt_us]": {
-    "value": 1,
-    "ucum": "[qt_us]/2"
-  },
-  "[gil_us]": {
-    "value": 1,
-    "ucum": "[pt_us]/4"
-  },
-  "[foz_us]": {
-    "value": 1,
-    "ucum": "[gil_us]/4"
-  },
-  "[fdr_us]": {
-    "value": 1,
-    "ucum": "[foz_us]/8"
-  },
-  "[min_us]": {
-    "value": 1,
-    "ucum": "[fdr_us]/60"
-  },
-  "[crd_us]": {
-    "value": 128,
-    "ucum": "[ft_i]3"
-  },
-  "[bu_us]": {
-    "value": 2150.42,
-    "ucum": "[in_i]3"
-  },
-  "[gal_wi]": {
-    "value": 1,
-    "ucum": "[bu_us]/8"
-  },
-  "[pk_us]": {
-    "value": 1,
-    "ucum": "[bu_us]/4"
-  },
-  "[dqt_us]": {
-    "value": 1,
-    "ucum": "[pk_us]/8"
-  },
-  "[dpt_us]": {
-    "value": 1,
-    "ucum": "[dqt_us]/2"
-  },
-  "[tbs_us]": {
-    "value": 1,
-    "ucum": "[foz_us]/2"
-  },
-  "[tsp_us]": {
-    "value": 1,
-    "ucum": "[tbs_us]/3"
-  },
-  "[cup_us]": {
-    "value": 16,
-    "ucum": "[tbs_us]"
-  },
-  "[foz_m]": {
-    "value": 30,
-    "ucum": "mL"
-  },
-  "[cup_m]": {
-    "value": 240,
-    "ucum": "mL"
-  },
-  "[tsp_m]": {
-    "value": 5,
-    "ucum": "mL"
-  },
-  "[tbs_m]": {
-    "value": 15,
-    "ucum": "mL"
-  },
-  "[gal_br]": {
-    "value": 4.54609,
-    "ucum": "l"
-  },
-  "[pk_br]": {
-    "value": 2,
-    "ucum": "[gal_br]"
-  },
-  "[bu_br]": {
-    "value": 4,
-    "ucum": "[pk_br]"
-  },
-  "[qt_br]": {
-    "value": 1,
-    "ucum": "[gal_br]/4"
-  },
-  "[pt_br]": {
-    "value": 1,
-    "ucum": "[qt_br]/2"
-  },
-  "[gil_br]": {
-    "value": 1,
-    "ucum": "[pt_br]/4"
-  },
-  "[foz_br]": {
-    "value": 1,
-    "ucum": "[gil_br]/5"
-  },
-  "[fdr_br]": {
-    "value": 1,
-    "ucum": "[foz_br]/8"
-  },
-  "[min_br]": {
-    "value": 1,
-    "ucum": "[fdr_br]/60"
-  },
-  "[gr]": {
-    "value": 64.79891,
-    "ucum": "mg"
-  },
-  "[lb_av]": {
-    "value": 7000,
-    "ucum": "[gr]"
-  },
-  "[oz_av]": {
-    "value": 1,
-    "ucum": "[lb_av]/16"
-  },
-  "[dr_av]": {
-    "value": 1,
-    "ucum": "[oz_av]/16"
-  },
-  "[scwt_av]": {
-    "value": 100,
-    "ucum": "[lb_av]"
-  },
-  "[lcwt_av]": {
-    "value": 112,
-    "ucum": "[lb_av]"
-  },
-  "[ston_av]": {
-    "value": 20,
-    "ucum": "[scwt_av]"
-  },
-  "[lton_av]": {
-    "value": 20,
-    "ucum": "[lcwt_av]"
-  },
-  "[stone_av]": {
-    "value": 14,
-    "ucum": "[lb_av]"
-  },
-  "[pwt_tr]": {
-    "value": 24,
-    "ucum": "[gr]"
-  },
-  "[oz_tr]": {
-    "value": 20,
-    "ucum": "[pwt_tr]"
-  },
-  "[lb_tr]": {
-    "value": 12,
-    "ucum": "[oz_tr]"
-  },
-  "[sc_ap]": {
-    "value": 20,
-    "ucum": "[gr]"
-  },
-  "[dr_ap]": {
-    "value": 3,
-    "ucum": "[sc_ap]"
-  },
-  "[oz_ap]": {
-    "value": 8,
-    "ucum": "[dr_ap]"
-  },
-  "[lb_ap]": {
-    "value": 12,
-    "ucum": "[oz_ap]"
-  },
-  "[oz_m]": {
-    "value": 28,
-    "ucum": "g"
-  },
-  "[lne]": {
-    "value": 1,
-    "ucum": "[in_i]/12"
-  },
-  "[pnt]": {
-    "value": 1,
-    "ucum": "[lne]/6"
-  },
-  "[pca]": {
-    "value": 12,
-    "ucum": "[pnt]"
-  },
-  "[pnt_pr]": {
-    "value": 0.013837,
-    "ucum": "[in_i]"
-  },
-  "[pca_pr]": {
-    "value": 12,
-    "ucum": "[pnt_pr]"
-  },
-  "[pied]": {
-    "value": 32.48,
-    "ucum": "cm"
-  },
-  "[pouce]": {
-    "value": 1,
-    "ucum": "[pied]/12"
-  },
-  "[ligne]": {
-    "value": 1,
-    "ucum": "[pouce]/12"
-  },
-  "[didot]": {
-    "value": 1,
-    "ucum": "[ligne]/6"
-  },
-  "[cicero]": {
-    "value": 12,
-    "ucum": "[didot]"
-  },
-  "[degF]": {
-    "value": null,
-    "ucum": "degf(5 K/9)"
-  },
-  "[degR]": {
-    "value": 5,
-    "ucum": "K/9"
-  },
-  "cal_[15]": {
-    "value": 4.1858,
-    "ucum": "J"
-  },
-  "cal_[20]": {
-    "value": 4.1819,
-    "ucum": "J"
-  },
-  "cal_m": {
-    "value": 4.19002,
-    "ucum": "J"
-  },
-  "cal_IT": {
-    "value": 4.1868,
-    "ucum": "J"
-  },
-  "cal_th": {
-    "value": 4.184,
-    "ucum": "J"
-  },
-  "cal": {
-    "value": 1,
-    "ucum": "cal_th"
-  },
-  "[Cal]": {
-    "value": 1,
-    "ucum": "kcal_th"
-  },
-  "[Btu_39]": {
-    "value": 1.05967,
-    "ucum": "kJ"
-  },
-  "[Btu_59]": {
-    "value": 1.0548,
-    "ucum": "kJ"
-  },
-  "[Btu_60]": {
-    "value": 1.05468,
-    "ucum": "kJ"
-  },
-  "[Btu_m]": {
-    "value": 1.05587,
-    "ucum": "kJ"
-  },
-  "[Btu_IT]": {
-    "value": 1.05505585262,
-    "ucum": "kJ"
-  },
-  "[Btu_th]": {
-    "value": 1.05435,
-    "ucum": "kJ"
-  },
-  "[Btu]": {
-    "value": 1,
-    "ucum": "[Btu_th]"
-  },
-  "[HP]": {
-    "value": 550,
-    "ucum": "[ft_i].[lbf_av]/s"
-  },
-  "tex": {
-    "value": 1,
-    "ucum": "g/km"
-  },
-  "[den]": {
-    "value": 1,
-    "ucum": "g/9/km"
-  },
-  "m[H2O]": {
-    "value": 9.80665,
-    "ucum": "kPa"
-  },
-  "m[Hg]": {
-    "value": 133.322,
-    "ucum": "kPa"
-  },
-  "[in_i'H2O]": {
-    "value": 1,
-    "ucum": "m[H2O].[in_i]/m"
-  },
-  "[in_i'Hg]": {
-    "value": 1,
-    "ucum": "m[Hg].[in_i]/m"
-  },
-  "[PRU]": {
-    "value": 1,
-    "ucum": "mm[Hg].s/ml"
-  },
-  "[wood'U]": {
-    "value": 1,
-    "ucum": "mm[Hg].min/L"
-  },
-  "[diop]": {
-    "value": 1,
-    "ucum": "/m"
-  },
-  "[p'diop]": {
-    "value": null,
-    "ucum": "100tan(1 rad)"
-  },
-  "%[slope]": {
-    "value": null,
-    "ucum": "100tan(1 rad)"
-  },
-  "[mesh_i]": {
-    "value": 1,
-    "ucum": "/[in_i]"
-  },
-  "[Ch]": {
-    "value": 1,
-    "ucum": "mm/3"
-  },
-  "[drp]": {
-    "value": 1,
-    "ucum": "ml/20"
-  },
-  "[hnsf'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[MET]": {
-    "value": 3.5,
-    "ucum": "mL/min/kg"
-  },
-  "[hp'_X]": {
-    "value": null,
-    "ucum": "hpX(1 1)"
-  },
-  "[hp'_C]": {
-    "value": null,
-    "ucum": "hpC(1 1)"
-  },
-  "[hp'_M]": {
-    "value": null,
-    "ucum": "hpM(1 1)"
-  },
-  "[hp'_Q]": {
-    "value": null,
-    "ucum": "hpQ(1 1)"
-  },
-  "[hp_X]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[hp_C]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[hp_M]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[hp_Q]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[kp_X]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[kp_C]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[kp_M]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[kp_Q]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "eq": {
-    "value": 1,
-    "ucum": "mol"
-  },
-  "osm": {
-    "value": 1,
-    "ucum": "mol"
-  },
-  "[pH]": {
-    "value": null,
-    "ucum": "pH(1 mol/l)"
-  },
-  "g%": {
-    "value": 1,
-    "ucum": "g/dl"
-  },
-  "[S]": {
-    "value": 1,
-    "ucum": "10*-13.s"
-  },
-  "[HPF]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[LPF]": {
-    "value": 100,
-    "ucum": "1"
-  },
-  "kat": {
-    "value": 1,
-    "ucum": "mol/s"
-  },
-  "U": {
-    "value": 1,
-    "ucum": "umol/min"
-  },
-  "[iU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[IU]": {
-    "value": 1,
-    "ucum": "[iU]"
-  },
-  "[arb'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[USP'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[GPL'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[MPL'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[APL'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[beth'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[anti'Xa'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[todd'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[dye'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[smgy'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[bdsk'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[ka'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[knk'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[mclg'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[tb'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[CCID_50]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[TCID_50]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[EID_50]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[PFU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[FFU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[CFU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[BAU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[AU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[Amb'a'1'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[PNU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[Lf]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[D'ag'U]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[FEU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[ELU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "[EU]": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "Np": {
-    "value": null,
-    "ucum": "ln(1 1)"
-  },
-  "B": {
-    "value": null,
-    "ucum": "lg(1 1)"
-  },
-  "B[SPL]": {
-    "value": null,
-    "ucum": "2lg(2 10*-5.Pa)"
-  },
-  "B[V]": {
-    "value": null,
-    "ucum": "2lg(1 V)"
-  },
-  "B[mV]": {
-    "value": null,
-    "ucum": "2lg(1 mV)"
-  },
-  "B[uV]": {
-    "value": null,
-    "ucum": "2lg(1 uV)"
-  },
-  "B[10.nV]": {
-    "value": null,
-    "ucum": "2lg(10 nV)"
-  },
-  "B[W]": {
-    "value": null,
-    "ucum": "lg(1 W)"
-  },
-  "B[kW]": {
-    "value": null,
-    "ucum": "lg(1 kW)"
-  },
-  "st": {
-    "value": 1,
-    "ucum": "m3"
-  },
-  "Ao": {
-    "value": 0.1,
-    "ucum": "nm"
-  },
-  "b": {
-    "value": 100,
-    "ucum": "fm2"
-  },
-  "att": {
-    "value": 1,
-    "ucum": "kgf/cm2"
-  },
-  "mho": {
-    "value": 1,
-    "ucum": "S"
-  },
-  "[psi]": {
-    "value": 1,
-    "ucum": "[lbf_av]/[in_i]2"
-  },
-  "circ": {
-    "value": 2,
-    "ucum": "[pi].rad"
-  },
-  "sph": {
-    "value": 4,
-    "ucum": "[pi].sr"
-  },
-  "[car_m]": {
-    "value": 0.2,
-    "ucum": "g"
-  },
-  "[car_Au]": {
-    "value": 1,
-    "ucum": "/24"
-  },
-  "[smoot]": {
-    "value": 67,
-    "ucum": "[in_i]"
-  },
-  "bit_s": {
-    "value": null,
-    "ucum": "ld(1 1)"
-  },
-  "bit": {
-    "value": 1,
-    "ucum": "1"
-  },
-  "By": {
-    "value": 8,
-    "ucum": "bit"
-  },
-  "Bd": {
-    "value": 1,
-    "ucum": "/s"
-  }
-}
-
-},{}],174:[function(require,module,exports){
-module.exports={"mol":true,"sr":true,"Hz":true,"N":true,"Pa":true,"J":true,"W":true,"A":true,"V":true,"F":true,"Ohm":true,"S":true,"Wb":true,"Cel":true,"T":true,"H":true,"lm":true,"lx":true,"Bq":true,"Gy":true,"Sv":true,"l":true,"L":true,"ar":true,"t":true,"bar":true,"u":true,"eV":true,"pc":true,"[c]":true,"[h]":true,"[k]":true,"[eps_0]":true,"[mu_0]":true,"[e]":true,"[m_e]":true,"[m_p]":true,"[G]":true,"[g]":true,"[ly]":true,"gf":true,"Ky":true,"Gal":true,"dyn":true,"erg":true,"P":true,"Bi":true,"St":true,"Mx":true,"G":true,"Oe":true,"Gb":true,"sb":true,"Lmb":true,"ph":true,"Ci":true,"R":true,"RAD":true,"REM":true,"cal_[15]":true,"cal_[20]":true,"cal_m":true,"cal_IT":true,"cal_th":true,"cal":true,"tex":true,"m[H2O]":true,"m[Hg]":true,"eq":true,"osm":true,"g%":true,"kat":true,"U":true,"[iU]":true,"[IU]":true,"Np":true,"B":true,"B[SPL]":true,"B[V]":true,"B[mV]":true,"B[uV]":true,"B[10.nV]":true,"B[W]":true,"B[kW]":true,"st":true,"mho":true,"bit":true,"By":true,"Bd":true,"m":true,"s":true,"g":true,"rad":true,"K":true,"C":true,"cd":true}
-
-},{}],175:[function(require,module,exports){
-module.exports={
-  "Y": {
-    "CODE": "YA",
-    "names": [
-      "yotta"
-    ],
-    "printSymbols": [
-      "Y"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>24</sup>",
-        "numeric": 1e+24
-      }
-    ]
-  },
-  "Z": {
-    "CODE": "ZA",
-    "names": [
-      "zetta"
-    ],
-    "printSymbols": [
-      "Z"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>21</sup>",
-        "numeric": 1e+21
-      }
-    ]
-  },
-  "E": {
-    "CODE": "EX",
-    "names": [
-      "exa"
-    ],
-    "printSymbols": [
-      "E"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>18</sup>",
-        "numeric": 1000000000000000000
-      }
-    ]
-  },
-  "P": {
-    "CODE": "PT",
-    "names": [
-      "peta"
-    ],
-    "printSymbols": [
-      "P"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>15</sup>",
-        "numeric": 1000000000000000
-      }
-    ]
-  },
-  "T": {
-    "CODE": "TR",
-    "names": [
-      "tera"
-    ],
-    "printSymbols": [
-      "T"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>12</sup>",
-        "numeric": 1000000000000
-      }
-    ]
-  },
-  "G": {
-    "CODE": "GA",
-    "names": [
-      "giga"
-    ],
-    "printSymbols": [
-      "G"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>9</sup>",
-        "numeric": 1000000000
-      }
-    ]
-  },
-  "M": {
-    "CODE": "MA",
-    "names": [
-      "mega"
-    ],
-    "printSymbols": [
-      "M"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>6</sup>",
-        "numeric": 1000000
-      }
-    ]
-  },
-  "k": {
-    "CODE": "K",
-    "names": [
-      "kilo"
-    ],
-    "printSymbols": [
-      "k"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>3</sup>",
-        "numeric": 1000
-      }
-    ]
-  },
-  "h": {
-    "CODE": "H",
-    "names": [
-      "hecto"
-    ],
-    "printSymbols": [
-      "h"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>2</sup>",
-        "numeric": 100
-      }
-    ]
-  },
-  "da": {
-    "CODE": "DA",
-    "names": [
-      "deka"
-    ],
-    "printSymbols": [
-      "da"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>1</sup>",
-        "numeric": 10
-      }
-    ]
-  },
-  "d": {
-    "CODE": "D",
-    "names": [
-      "deci"
-    ],
-    "printSymbols": [
-      "d"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-1</sup>",
-        "numeric": 0.1
-      }
-    ]
-  },
-  "c": {
-    "CODE": "C",
-    "names": [
-      "centi"
-    ],
-    "printSymbols": [
-      "c"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-2</sup>",
-        "numeric": 0.01
-      }
-    ]
-  },
-  "m": {
-    "CODE": "M",
-    "names": [
-      "milli"
-    ],
-    "printSymbols": [
-      "m"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-3</sup>",
-        "numeric": 0.001
-      }
-    ]
-  },
-  "u": {
-    "CODE": "U",
-    "names": [
-      "micro"
-    ],
-    "printSymbols": [
-      "&#956;"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-6</sup>",
-        "numeric": 0.000001
-      }
-    ]
-  },
-  "n": {
-    "CODE": "N",
-    "names": [
-      "nano"
-    ],
-    "printSymbols": [
-      "n"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-9</sup>",
-        "numeric": 1e-9
-      }
-    ]
-  },
-  "p": {
-    "CODE": "P",
-    "names": [
-      "pico"
-    ],
-    "printSymbols": [
-      "p"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-12</sup>",
-        "numeric": 1e-12
-      }
-    ]
-  },
-  "f": {
-    "CODE": "F",
-    "names": [
-      "femto"
-    ],
-    "printSymbols": [
-      "f"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-15</sup>",
-        "numeric": 1e-15
-      }
-    ]
-  },
-  "a": {
-    "CODE": "A",
-    "names": [
-      "atto"
-    ],
-    "printSymbols": [
-      "a"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-18</sup>",
-        "numeric": 1e-18
-      }
-    ]
-  },
-  "z": {
-    "CODE": "ZO",
-    "names": [
-      "zepto"
-    ],
-    "printSymbols": [
-      "z"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-21</sup>",
-        "numeric": 1e-21
-      }
-    ]
-  },
-  "y": {
-    "CODE": "YO",
-    "names": [
-      "yocto"
-    ],
-    "printSymbols": [
-      "y"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-24</sup>",
-        "numeric": 1e-24
-      }
-    ]
-  },
-  "Ki": {
-    "CODE": "KIB",
-    "names": [
-      "kibi"
-    ],
-    "printSymbols": [
-      "Ki"
-    ],
-    "values": [
-      {
-        "printable": "1024",
-        "numeric": 1024
-      }
-    ]
-  },
-  "Mi": {
-    "CODE": "MIB",
-    "names": [
-      "mebi"
-    ],
-    "printSymbols": [
-      "Mi"
-    ],
-    "values": [
-      {
-        "printable": "1048576",
-        "numeric": 1048576
-      }
-    ]
-  },
-  "Gi": {
-    "CODE": "GIB",
-    "names": [
-      "gibi"
-    ],
-    "printSymbols": [
-      "Gi"
-    ],
-    "values": [
-      {
-        "printable": "1073741824",
-        "numeric": 1073741824
-      }
-    ]
-  },
-  "Ti": {
-    "CODE": "TIB",
-    "names": [
-      "tebi"
-    ],
-    "printSymbols": [
-      "Ti"
-    ],
-    "values": [
-      {
-        "printable": "1099511627776",
-        "numeric": 1099511627776
-      }
-    ]
-  }
-}
-
-},{}],176:[function(require,module,exports){
-module.exports={
-  "Y": 1e+24,
-  "Z": 1e+21,
-  "E": 1000000000000000000,
-  "P": 1000000000000000,
-  "T": 1000000000000,
-  "G": 1000000000,
-  "M": 1000000,
-  "k": 1000,
-  "h": 100,
-  "da": 10,
-  "d": 0.1,
-  "c": 0.01,
-  "m": 0.001,
-  "u": 0.000001,
-  "n": 1e-9,
-  "p": 1e-12,
-  "f": 1e-15,
-  "a": 1e-18,
-  "z": 1e-21,
-  "y": 1e-24,
-  "Ki": 1024,
-  "Mi": 1048576,
-  "Gi": 1073741824,
-  "Ti": 1099511627776
-}
-
-},{}],177:[function(require,module,exports){
-module.exports = (function() {
-  /*
-   * Generated by PEG.js 0.8.0.
-   *
-   * http://pegjs.majda.cz/
-   */
-
-  function peg$subclass(child, parent) {
-    function ctor() { this.constructor = child; }
-    ctor.prototype = parent.prototype;
-    child.prototype = new ctor();
-  }
-
-  function SyntaxError(message, expected, found, offset, line, column) {
-    this.message  = message;
-    this.expected = expected;
-    this.found    = found;
-    this.offset   = offset;
-    this.line     = line;
-    this.column   = column;
-
-    this.name     = "SyntaxError";
-  }
-
-  peg$subclass(SyntaxError, Error);
-
-  function parse(input) {
-    var options = arguments.length > 1 ? arguments[1] : {},
-
-        peg$FAILED = {},
-
-        peg$startRuleIndices = { start: 0 },
-        peg$startRuleIndex   = 0,
-
-        peg$consts = [
-          function(e) {
-            return e ; // cleanup(e);
-          },
-          peg$FAILED,
-          "/",
-          { type: "literal", value: "/", description: "\"/\"" },
-          function(e) {return multiply({value:1, units:{}}, [["/", e]]);},
-          ".",
-          { type: "literal", value: ".", description: "\".\"" },
-          [],
-          function(t, ms) {
-            return multiply(t, ms);
-          },
-          null,
-          function(e, exp) {return e.ann && exp;},
-          void 0,
-          function(e, exp) {
-            return topower(e, exp);
-          },
-          function(d) {
-           var ret = {
-              value: d,
-              units: {}
-            };
-            return ret;
-          },
-          function(u) {return u;},
-          "(",
-          { type: "literal", value: "(", description: "\"(\"" },
-          ")",
-          { type: "literal", value: ")", description: "\")\"" },
-          function(e) {return e;},
-          /^[+\-]/,
-          { type: "class", value: "[+\\-]", description: "[+\\-]" },
-          function(s, d) {return (s=="-") ? (-1*d) : d},
-          function(p, a) {return(p && !ismetric(a));},
-          function(p, a) {
-            var ret = a;
-            var u = Object.keys(ret.units)[0];
-
-            // console.log("simpleUnit: p:", JSON.stringify(p, null, 2), "a: ", JSON.stringify(a, null, 2));
-
-            if (p){
-              ret.value = ret.value * prefixes[p];
-              ret.metadata = {};
-              if(prefixMetadata[p]){
-                // if this prefix has metadata, augment the return with it
-                Object.keys(prefixMetadata[p]).forEach(function(key){
-                  if(!ret.metadata[u]){
-                    ret.metadata[u] = { prefix: {} };
-                  }
-                  ret.metadata[u].prefix[key] = prefixMetadata[p][key];
-                });
-              }
-
-              // merge in the unit metadata
-              if(unitMetadata[u]){
-                //console.log("simpleUnit: ", JSON.stringify(unitMetadata[u], null ,2));
-                Object.keys(unitMetadata[u]).forEach(function(key){
-                  if(!ret.metadata[u]){
-                    ret.metadata[u] = {};
-                  }
-                  ret.metadata[u][key] = unitMetadata[u][key];
-                });
-              }
-            }
-
-            //console.log("simpleUnit: ret: ", JSON.stringify(ret, null ,2));
-            return ret;
-          },
-          /^[0-9]/,
-          { type: "class", value: "[0-9]", description: "[0-9]" },
-          "e",
-          { type: "literal", value: "e", description: "\"e\"" },
-          function(v, epresent, e) {return (!epresent && !!e);},
-          function(v, epresent, e) {
-            return parseInt(v.join(""))*Math.pow(10, e||0);
-          },
-          "{",
-          { type: "literal", value: "{", description: "\"{\"" },
-          /^[^}]/,
-          { type: "class", value: "[^}]", description: "[^}]" },
-          "}",
-          { type: "literal", value: "}", description: "\"}\"" },
-          function(m) {return /[^\x00-\x7F]/.test(m);},
-          function(m) { return {value: 1, units:{}, ann: m} },
-          "[anti'Xa'U]",
-          { type: "literal", value: "[anti'Xa'U]", description: "\"[anti'Xa'U]\"" },
-          function(u) {return {"value": 1, "units": {"[anti'Xa'U]": 1}, "metadata": {"[anti'Xa'U]":{"isBase":false,"CODE":"[ANTI'XA'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["anti factor Xa unit"],"properties":["biologic activity of factor Xa inhibitor (heparin)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[Amb'a'1'U]",
-          { type: "literal", value: "[Amb'a'1'U]", description: "\"[Amb'a'1'U]\"" },
-          function(u) {return {"value": 1, "units": {"[Amb'a'1'U]": 1}, "metadata": {"[Amb'a'1'U]":{"isBase":false,"CODE":"[AMB'A'1'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["allergen unit for Ambrosia artemisiifolia"],"printSymbols":["Amb a 1 U"],"properties":["procedure defined amount of the major allergen of ragweed."],"values":[{"printable":"1","numeric":1}]}}};},
-          "[stone_av]",
-          { type: "literal", value: "[stone_av]", description: "\"[stone_av]\"" },
-          function(u) {return {"value": 1, "units": {"[stone_av]": 1}, "metadata": {"[stone_av]":{"isBase":false,"CODE":"[STONE_AV]","isMetric":"no","class":"avoirdupois","names":["stone","British stone"],"properties":["mass"],"values":[{"printable":"14","numeric":14}]}}};},
-          "[in_i'H2O]",
-          { type: "literal", value: "[in_i'H2O]", description: "\"[in_i'H2O]\"" },
-          function(u) {return {"value": 1, "units": {"[in_i'H2O]": 1}, "metadata": {"[in_i'H2O]":{"isBase":false,"CODE":"[IN_I'H2O]","isMetric":"no","class":"clinical","names":["inch of water column"],"printSymbols":["in&#160;H<sub>\n            <r>2</r>\n         </sub>O"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[ston_av]",
-          { type: "literal", value: "[ston_av]", description: "\"[ston_av]\"" },
-          function(u) {return {"value": 1, "units": {"[ston_av]": 1}, "metadata": {"[ston_av]":{"isBase":false,"CODE":"[STON_AV]","isMetric":"no","class":"avoirdupois","names":["short ton","U.S. ton"],"properties":["mass"],"values":[{"printable":"20","numeric":20}]}}};},
-          "[TCID_50]",
-          { type: "literal", value: "[TCID_50]", description: "\"[TCID_50]\"" },
-          function(u) {return {"value": 1, "units": {"[TCID_50]": 1}, "metadata": {"[TCID_50]":{"isBase":false,"CODE":"[TCID_50]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["50% tissue culture infectious dose"],"printSymbols":["TCID<sub>50</sub>"],"properties":["biologic activity (infectivity) of an infectious agent preparation"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[CCID_50]",
-          { type: "literal", value: "[CCID_50]", description: "\"[CCID_50]\"" },
-          function(u) {return {"value": 1, "units": {"[CCID_50]": 1}, "metadata": {"[CCID_50]":{"isBase":false,"CODE":"[CCID_50]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["50% cell culture infectious dose"],"printSymbols":["CCID<sub>50</sub>"],"properties":["biologic activity (infectivity) of an infectious agent preparation"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[scwt_av]",
-          { type: "literal", value: "[scwt_av]", description: "\"[scwt_av]\"" },
-          function(u) {return {"value": 1, "units": {"[scwt_av]": 1}, "metadata": {"[scwt_av]":{"isBase":false,"CODE":"[SCWT_AV]","isMetric":"no","class":"avoirdupois","names":["short hundredweight","U.S. hundredweight"],"properties":["mass"],"values":[{"printable":"100","numeric":100}]}}};},
-          "[lcwt_av]",
-          { type: "literal", value: "[lcwt_av]", description: "\"[lcwt_av]\"" },
-          function(u) {return {"value": 1, "units": {"[lcwt_av]": 1}, "metadata": {"[lcwt_av]":{"isBase":false,"CODE":"[LCWT_AV]","isMetric":"no","class":"avoirdupois","names":["long hunderdweight","British hundredweight"],"properties":["mass"],"values":[{"printable":"112","numeric":112}]}}};},
-          "[lton_av]",
-          { type: "literal", value: "[lton_av]", description: "\"[lton_av]\"" },
-          function(u) {return {"value": 1, "units": {"[lton_av]": 1}, "metadata": {"[lton_av]":{"isBase":false,"CODE":"[LTON_AV]","isMetric":"no","class":"avoirdupois","names":["long ton","British ton"],"properties":["mass"],"values":[{"printable":"20","numeric":20}]}}};},
-          "[in_i'Hg]",
-          { type: "literal", value: "[in_i'Hg]", description: "\"[in_i'Hg]\"" },
-          function(u) {return {"value": 1, "units": {"[in_i'Hg]": 1}, "metadata": {"[in_i'Hg]":{"isBase":false,"CODE":"[IN_I'HG]","isMetric":"no","class":"clinical","names":["inch of mercury column"],"printSymbols":["in&#160;Hg"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[tbs_us]",
-          { type: "literal", value: "[tbs_us]", description: "\"[tbs_us]\"" },
-          function(u) {return {"value": 1, "units": {"[tbs_us]": 1}, "metadata": {"[tbs_us]":{"isBase":false,"CODE":"[TBS_US]","isMetric":"no","class":"us-volumes","names":["tablespoon"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[dpt_us]",
-          { type: "literal", value: "[dpt_us]", description: "\"[dpt_us]\"" },
-          function(u) {return {"value": 1, "units": {"[dpt_us]": 1}, "metadata": {"[dpt_us]":{"isBase":false,"CODE":"[DPT_US]","isMetric":"no","class":"us-volumes","names":["dry pint"],"properties":["dry volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[bdsk'U]",
-          { type: "literal", value: "[bdsk'U]", description: "\"[bdsk'U]\"" },
-          function(u) {return {"value": 1, "units": {"[bdsk'U]": 1}, "metadata": {"[bdsk'U]":{"isBase":false,"CODE":"[BDSK'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Bodansky unit"],"properties":["biologic activity of phosphatase"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[smgy'U]",
-          { type: "literal", value: "[smgy'U]", description: "\"[smgy'U]\"" },
-          function(u) {return {"value": 1, "units": {"[smgy'U]": 1}, "metadata": {"[smgy'U]":{"isBase":false,"CODE":"[SMGY'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Somogyi unit"],"properties":["biologic activity of amylase"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[dqt_us]",
-          { type: "literal", value: "[dqt_us]", description: "\"[dqt_us]\"" },
-          function(u) {return {"value": 1, "units": {"[dqt_us]": 1}, "metadata": {"[dqt_us]":{"isBase":false,"CODE":"[DQT_US]","isMetric":"no","class":"us-volumes","names":["dry quart"],"properties":["dry volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[todd'U]",
-          { type: "literal", value: "[todd'U]", description: "\"[todd'U]\"" },
-          function(u) {return {"value": 1, "units": {"[todd'U]": 1}, "metadata": {"[todd'U]":{"isBase":false,"CODE":"[TODD'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Todd unit"],"properties":["biologic activity antistreptolysin O"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[D'ag'U]",
-          { type: "literal", value: "[D'ag'U]", description: "\"[D'ag'U]\"" },
-          function(u) {return {"value": 1, "units": {"[D'ag'U]": 1}, "metadata": {"[D'ag'U]":{"isBase":false,"CODE":"[D'AG'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["D-antigen unit"],"printSymbols":[""],"properties":["procedure defined amount of a poliomyelitis d-antigen substance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[beth'U]",
-          { type: "literal", value: "[beth'U]", description: "\"[beth'U]\"" },
-          function(u) {return {"value": 1, "units": {"[beth'U]": 1}, "metadata": {"[beth'U]":{"isBase":false,"CODE":"[BETH'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Bethesda unit"],"properties":["biologic activity of factor VIII inhibitor"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[gal_wi]",
-          { type: "literal", value: "[gal_wi]", description: "\"[gal_wi]\"" },
-          function(u) {return {"value": 1, "units": {"[gal_wi]": 1}, "metadata": {"[gal_wi]":{"isBase":false,"CODE":"[GAL_WI]","isMetric":"no","class":"us-volumes","names":["historical winchester gallon"],"properties":["dry volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[crd_us]",
-          { type: "literal", value: "[crd_us]", description: "\"[crd_us]\"" },
-          function(u) {return {"value": 1, "units": {"[crd_us]": 1}, "metadata": {"[crd_us]":{"isBase":false,"CODE":"[CRD_US]","isMetric":"no","class":"us-volumes","names":["cord"],"properties":["fluid volume"],"values":[{"printable":"128","numeric":128}]}}};},
-          "[min_us]",
-          { type: "literal", value: "[min_us]", description: "\"[min_us]\"" },
-          function(u) {return {"value": 1, "units": {"[min_us]": 1}, "metadata": {"[min_us]":{"isBase":false,"CODE":"[MIN_US]","isMetric":"no","class":"us-volumes","names":["minim"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[fdr_us]",
-          { type: "literal", value: "[fdr_us]", description: "\"[fdr_us]\"" },
-          function(u) {return {"value": 1, "units": {"[fdr_us]": 1}, "metadata": {"[fdr_us]":{"isBase":false,"CODE":"[FDR_US]","isMetric":"no","class":"us-volumes","names":["fluid dram"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[foz_us]",
-          { type: "literal", value: "[foz_us]", description: "\"[foz_us]\"" },
-          function(u) {return {"value": 1, "units": {"[foz_us]": 1}, "metadata": {"[foz_us]":{"isBase":false,"CODE":"[FOZ_US]","isMetric":"no","class":"us-volumes","names":["fluid ounce"],"printSymbols":["oz fl"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[gil_us]",
-          { type: "literal", value: "[gil_us]", description: "\"[gil_us]\"" },
-          function(u) {return {"value": 1, "units": {"[gil_us]": 1}, "metadata": {"[gil_us]":{"isBase":false,"CODE":"[GIL_US]","isMetric":"no","class":"us-volumes","names":["gill"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[bbl_us]",
-          { type: "literal", value: "[bbl_us]", description: "\"[bbl_us]\"" },
-          function(u) {return {"value": 1, "units": {"[bbl_us]": 1}, "metadata": {"[bbl_us]":{"isBase":false,"CODE":"[BBL_US]","isMetric":"no","class":"us-volumes","names":["barrel"],"properties":["fluid volume"],"values":[{"printable":"42","numeric":42}]}}};},
-          "[gal_us]",
-          { type: "literal", value: "[gal_us]", description: "\"[gal_us]\"" },
-          function(u) {return {"value": 1, "units": {"[gal_us]": 1}, "metadata": {"[gal_us]":{"isBase":false,"CODE":"[GAL_US]","isMetric":"no","class":"us-volumes","names":["Queen Anne's wine gallon"],"properties":["fluid volume"],"values":[{"printable":"231","numeric":231}]}}};},
-          "[acr_br]",
-          { type: "literal", value: "[acr_br]", description: "\"[acr_br]\"" },
-          function(u) {return {"value": 1, "units": {"[acr_br]": 1}, "metadata": {"[acr_br]":{"isBase":false,"CODE":"[ACR_BR]","isMetric":"no","class":"brit-length","names":["acre"],"properties":["area"],"values":[{"printable":"4840","numeric":4840}]}}};},
-          "[nmi_br]",
-          { type: "literal", value: "[nmi_br]", description: "\"[nmi_br]\"" },
-          function(u) {return {"value": 1, "units": {"[nmi_br]": 1}, "metadata": {"[nmi_br]":{"isBase":false,"CODE":"[NMI_BR]","isMetric":"no","class":"brit-length","names":["nautical mile"],"properties":["length"],"values":[{"printable":"6080","numeric":6080}]}}};},
-          "[fth_br]",
-          { type: "literal", value: "[fth_br]", description: "\"[fth_br]\"" },
-          function(u) {return {"value": 1, "units": {"[fth_br]": 1}, "metadata": {"[fth_br]":{"isBase":false,"CODE":"[FTH_BR]","isMetric":"no","class":"brit-length","names":["fathom"],"properties":["length"],"values":[{"printable":"6","numeric":6}]}}};},
-          "[mil_us]",
-          { type: "literal", value: "[mil_us]", description: "\"[mil_us]\"" },
-          function(u) {return {"value": 1, "units": {"[mil_us]": 1}, "metadata": {"[mil_us]":{"isBase":false,"CODE":"[MIL_US]","isMetric":"no","class":"us-lengths","names":["mil"],"properties":["length"],"values":[{"printable":"1 &#215; 10<sup>-3</sup>","numeric":0.001}]}}};},
-          "[smi_us]",
-          { type: "literal", value: "[smi_us]", description: "\"[smi_us]\"" },
-          function(u) {return {"value": 1, "units": {"[smi_us]": 1}, "metadata": {"[smi_us]":{"isBase":false,"CODE":"[SMI_US]","isMetric":"no","class":"us-lengths","names":["square mile"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[acr_us]",
-          { type: "literal", value: "[acr_us]", description: "\"[acr_us]\"" },
-          function(u) {return {"value": 1, "units": {"[acr_us]": 1}, "metadata": {"[acr_us]":{"isBase":false,"CODE":"[ACR_US]","isMetric":"no","class":"us-lengths","names":["acre"],"properties":["area"],"values":[{"printable":"160","numeric":160}]}}};},
-          "[fur_us]",
-          { type: "literal", value: "[fur_us]", description: "\"[fur_us]\"" },
-          function(u) {return {"value": 1, "units": {"[fur_us]": 1}, "metadata": {"[fur_us]":{"isBase":false,"CODE":"[FUR_US]","isMetric":"no","class":"us-lengths","names":["furlong"],"properties":["length"],"values":[{"printable":"40","numeric":40}]}}};},
-          "[fth_us]",
-          { type: "literal", value: "[fth_us]", description: "\"[fth_us]\"" },
-          function(u) {return {"value": 1, "units": {"[fth_us]": 1}, "metadata": {"[fth_us]":{"isBase":false,"CODE":"[FTH_US]","isMetric":"no","class":"us-lengths","names":["fathom"],"properties":["length"],"values":[{"printable":"6","numeric":6}]}}};},
-          "[rlk_us]",
-          { type: "literal", value: "[rlk_us]", description: "\"[rlk_us]\"" },
-          function(u) {return {"value": 1, "units": {"[rlk_us]": 1}, "metadata": {"[rlk_us]":{"isBase":false,"CODE":"[RLK_US]","isMetric":"no","class":"us-lengths","names":["link for Ramden's chain"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[rch_us]",
-          { type: "literal", value: "[rch_us]", description: "\"[rch_us]\"" },
-          function(u) {return {"value": 1, "units": {"[rch_us]": 1}, "metadata": {"[rch_us]":{"isBase":false,"CODE":"[RCH_US]","isMetric":"no","class":"us-lengths","names":["Ramden's chain","Engineer's chain"],"properties":["length"],"values":[{"printable":"100","numeric":100}]}}};},
-          "[lbf_av]",
-          { type: "literal", value: "[lbf_av]", description: "\"[lbf_av]\"" },
-          function(u) {return {"value": 1, "units": {"[lbf_av]": 1}, "metadata": {"[lbf_av]":{"isBase":false,"CODE":"[LBF_AV]","isMetric":"no","class":"const","names":["pound force"],"printSymbols":["lbf"],"properties":["force"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[hnsf'U]",
-          { type: "literal", value: "[hnsf'U]", description: "\"[hnsf'U]\"" },
-          function(u) {return {"value": 1, "units": {"[hnsf'U]": 1}, "metadata": {"[hnsf'U]":{"isBase":false,"CODE":"[HNSF'U]","isMetric":"no","class":"clinical","names":["Hounsfield unit"],"printSymbols":["HF"],"properties":["x-ray attenuation"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[mesh_i]",
-          { type: "literal", value: "[mesh_i]", description: "\"[mesh_i]\"" },
-          function(u) {return {"value": 1, "units": {"[mesh_i]": 1}, "metadata": {"[mesh_i]":{"isBase":false,"CODE":"[MESH_I]","isMetric":"no","class":"clinical","names":["mesh"],"properties":["lineic number"],"values":[{"printable":"1","numeric":1}]}}};},
-          "%[slope]",
-          { type: "literal", value: "%[slope]", description: "\"%[slope]\"" },
-          function(u) {return {"value": 1, "units": {"%[slope]": 1}, "metadata": {"%[slope]":{"isBase":false,"CODE":"%[SLOPE]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["percent of slope"],"printSymbols":["%"],"properties":["slope"],"values":[{"printable":"<function name=\"100tan\" value=\"1\" Unit=\"deg\"/>","numeric":null}]}}};},
-          "[p'diop]",
-          { type: "literal", value: "[p'diop]", description: "\"[p'diop]\"" },
-          function(u) {return {"value": 1, "units": {"[p'diop]": 1}, "metadata": {"[p'diop]":{"isBase":false,"CODE":"[P'DIOP]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["prism diopter"],"printSymbols":["PD"],"properties":["refraction of a prism"],"values":[{"printable":"<function name=\"tanTimes100\" value=\"1\" Unit=\"deg\"/>","numeric":null}]}}};},
-          "[gil_br]",
-          { type: "literal", value: "[gil_br]", description: "\"[gil_br]\"" },
-          function(u) {return {"value": 1, "units": {"[gil_br]": 1}, "metadata": {"[gil_br]":{"isBase":false,"CODE":"[GIL_BR]","isMetric":"no","class":"brit-volumes","names":["gill"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[wood'U]",
-          { type: "literal", value: "[wood'U]", description: "\"[wood'U]\"" },
-          function(u) {return {"value": 1, "units": {"[wood'U]": 1}, "metadata": {"[wood'U]":{"isBase":false,"CODE":"[WOOD'U]","isMetric":"no","class":"clinical","names":["Wood unit"],"printSymbols":["Wood U."],"properties":["fluid resistance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "cal_[15]",
-          { type: "literal", value: "cal_[15]", description: "\"cal_[15]\"" },
-          function(u) {return {"value": 1, "units": {"cal_[15]": 1}, "metadata": {"cal_[15]":{"isBase":false,"CODE":"CAL_[15]","isMetric":"yes","class":"heat","names":["calorie at 15 °C"],"printSymbols":["cal<sub>15&#176;C</sub>"],"properties":["energy"],"values":[{"printable":"4.18580","numeric":4.1858}]}}};},
-          "cal_[20]",
-          { type: "literal", value: "cal_[20]", description: "\"cal_[20]\"" },
-          function(u) {return {"value": 1, "units": {"cal_[20]": 1}, "metadata": {"cal_[20]":{"isBase":false,"CODE":"CAL_[20]","isMetric":"yes","class":"heat","names":["calorie at 20 °C"],"printSymbols":["cal<sub>20&#176;C</sub>"],"properties":["energy"],"values":[{"printable":"4.18190","numeric":4.1819}]}}};},
-          "[foz_br]",
-          { type: "literal", value: "[foz_br]", description: "\"[foz_br]\"" },
-          function(u) {return {"value": 1, "units": {"[foz_br]": 1}, "metadata": {"[foz_br]":{"isBase":false,"CODE":"[FOZ_BR]","isMetric":"no","class":"brit-volumes","names":["fluid ounce"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[fdr_br]",
-          { type: "literal", value: "[fdr_br]", description: "\"[fdr_br]\"" },
-          function(u) {return {"value": 1, "units": {"[fdr_br]": 1}, "metadata": {"[fdr_br]":{"isBase":false,"CODE":"[FDR_BR]","isMetric":"no","class":"brit-volumes","names":["fluid dram"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[srd_us]",
-          { type: "literal", value: "[srd_us]", description: "\"[srd_us]\"" },
-          function(u) {return {"value": 1, "units": {"[srd_us]": 1}, "metadata": {"[srd_us]":{"isBase":false,"CODE":"[SRD_US]","isMetric":"no","class":"us-lengths","names":["square rod"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[min_br]",
-          { type: "literal", value: "[min_br]", description: "\"[min_br]\"" },
-          function(u) {return {"value": 1, "units": {"[min_br]": 1}, "metadata": {"[min_br]":{"isBase":false,"CODE":"[MIN_BR]","isMetric":"no","class":"brit-volumes","names":["minim"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[EID_50]",
-          { type: "literal", value: "[EID_50]", description: "\"[EID_50]\"" },
-          function(u) {return {"value": 1, "units": {"[EID_50]": 1}, "metadata": {"[EID_50]":{"isBase":false,"CODE":"[EID_50]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["50% embryo infectious dose"],"printSymbols":["EID<sub>50</sub>"],"properties":["biologic activity (infectivity) of an infectious agent preparation"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[Btu_th]",
-          { type: "literal", value: "[Btu_th]", description: "\"[Btu_th]\"" },
-          function(u) {return {"value": 1, "units": {"[Btu_th]": 1}, "metadata": {"[Btu_th]":{"isBase":false,"CODE":"[BTU_TH]","isMetric":"no","class":"heat","names":["thermochemical British thermal unit"],"printSymbols":["Btu<sub>th</sub>"],"properties":["energy"],"values":[{"printable":"1.054350","numeric":1.05435}]}}};},
-          "[Btu_IT]",
-          { type: "literal", value: "[Btu_IT]", description: "\"[Btu_IT]\"" },
-          function(u) {return {"value": 1, "units": {"[Btu_IT]": 1}, "metadata": {"[Btu_IT]":{"isBase":false,"CODE":"[BTU_IT]","isMetric":"no","class":"heat","names":["international table British thermal unit"],"printSymbols":["Btu<sub>IT</sub>"],"properties":["energy"],"values":[{"printable":"1.05505585262","numeric":1.05505585262}]}}};},
-          "[car_Au]",
-          { type: "literal", value: "[car_Au]", description: "\"[car_Au]\"" },
-          function(u) {return {"value": 1, "units": {"[car_Au]": 1}, "metadata": {"[car_Au]":{"isBase":false,"CODE":"[CAR_AU]","isMetric":"no","class":"misc","names":["carat of gold alloys"],"printSymbols":["ct<sub>\n            <r>Au</r>\n         </sub>"],"properties":["mass fraction"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[Btu_60]",
-          { type: "literal", value: "[Btu_60]", description: "\"[Btu_60]\"" },
-          function(u) {return {"value": 1, "units": {"[Btu_60]": 1}, "metadata": {"[Btu_60]":{"isBase":false,"CODE":"[BTU_60]","isMetric":"no","class":"heat","names":["British thermal unit at 60 °F"],"printSymbols":["Btu<sub>60&#176;F</sub>"],"properties":["energy"],"values":[{"printable":"1.05468","numeric":1.05468}]}}};},
-          "[Btu_59]",
-          { type: "literal", value: "[Btu_59]", description: "\"[Btu_59]\"" },
-          function(u) {return {"value": 1, "units": {"[Btu_59]": 1}, "metadata": {"[Btu_59]":{"isBase":false,"CODE":"[BTU_59]","isMetric":"no","class":"heat","names":["British thermal unit at 59 °F"],"printSymbols":["Btu<sub>59&#176;F</sub>"],"properties":["energy"],"values":[{"printable":"1.05480","numeric":1.0548}]}}};},
-          "[Btu_39]",
-          { type: "literal", value: "[Btu_39]", description: "\"[Btu_39]\"" },
-          function(u) {return {"value": 1, "units": {"[Btu_39]": 1}, "metadata": {"[Btu_39]":{"isBase":false,"CODE":"[BTU_39]","isMetric":"no","class":"heat","names":["British thermal unit at 39 °F"],"printSymbols":["Btu<sub>39&#176;F</sub>"],"properties":["energy"],"values":[{"printable":"1.05967","numeric":1.05967}]}}};},
-          "[cup_us]",
-          { type: "literal", value: "[cup_us]", description: "\"[cup_us]\"" },
-          function(u) {return {"value": 1, "units": {"[cup_us]": 1}, "metadata": {"[cup_us]":{"isBase":false,"CODE":"[CUP_US]","isMetric":"no","class":"us-volumes","names":["cup"],"properties":["volume"],"values":[{"printable":"16","numeric":16}]}}};},
-          "B[10.nV]",
-          { type: "literal", value: "B[10.nV]", description: "\"B[10.nV]\"" },
-          function(u) {return {"value": 1, "units": {"B[10.nV]": 1}, "metadata": {"B[10.nV]":{"isBase":false,"CODE":"B[10.NV]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel 10 nanovolt"],"printSymbols":["B(10 nV)"],"properties":["electric potential level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"10\" Unit=\"nV\"/>","numeric":null}]}}};},
-          "[tsp_us]",
-          { type: "literal", value: "[tsp_us]", description: "\"[tsp_us]\"" },
-          function(u) {return {"value": 1, "units": {"[tsp_us]": 1}, "metadata": {"[tsp_us]":{"isBase":false,"CODE":"[TSP_US]","isMetric":"no","class":"us-volumes","names":["teaspoon"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[mclg'U]",
-          { type: "literal", value: "[mclg'U]", description: "\"[mclg'U]\"" },
-          function(u) {return {"value": 1, "units": {"[mclg'U]": 1}, "metadata": {"[mclg'U]":{"isBase":false,"CODE":"[MCLG'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Mac Lagan unit"],"properties":["arbitrary biologic activity"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[cicero]",
-          { type: "literal", value: "[cicero]", description: "\"[cicero]\"" },
-          function(u) {return {"value": 1, "units": {"[cicero]": 1}, "metadata": {"[cicero]":{"isBase":false,"CODE":"[CICERO]","isMetric":"no","class":"typeset","names":["cicero","Didot's pica"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
-          "[pwt_tr]",
-          { type: "literal", value: "[pwt_tr]", description: "\"[pwt_tr]\"" },
-          function(u) {return {"value": 1, "units": {"[pwt_tr]": 1}, "metadata": {"[pwt_tr]":{"isBase":false,"CODE":"[PWT_TR]","isMetric":"no","class":"troy","names":["pennyweight"],"printSymbols":["dwt"],"properties":["mass"],"values":[{"printable":"24","numeric":24}]}}};},
-          "[pnt_pr]",
-          { type: "literal", value: "[pnt_pr]", description: "\"[pnt_pr]\"" },
-          function(u) {return {"value": 1, "units": {"[pnt_pr]": 1}, "metadata": {"[pnt_pr]":{"isBase":false,"CODE":"[PNT_PR]","isMetric":"no","class":"typeset","names":["Printer's point"],"properties":["length"],"values":[{"printable":"0.013837","numeric":0.013837}]}}};},
-          "[pca_pr]",
-          { type: "literal", value: "[pca_pr]", description: "\"[pca_pr]\"" },
-          function(u) {return {"value": 1, "units": {"[pca_pr]": 1}, "metadata": {"[pca_pr]":{"isBase":false,"CODE":"[PCA_PR]","isMetric":"no","class":"typeset","names":["Printer's pica"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
-          "[gal_br]",
-          { type: "literal", value: "[gal_br]", description: "\"[gal_br]\"" },
-          function(u) {return {"value": 1, "units": {"[gal_br]": 1}, "metadata": {"[gal_br]":{"isBase":false,"CODE":"[GAL_BR]","isMetric":"no","class":"brit-volumes","names":["gallon"],"properties":["volume"],"values":[{"printable":"4.54609","numeric":4.54609}]}}};},
-          "[yd_us]",
-          { type: "literal", value: "[yd_us]", description: "\"[yd_us]\"" },
-          function(u) {return {"value": 1, "units": {"[yd_us]": 1}, "metadata": {"[yd_us]":{"isBase":false,"CODE":"[YD_US]","isMetric":"no","class":"us-lengths","names":["yard"],"properties":["length"],"values":[{"printable":"3","numeric":3}]}}};},
-          "[ligne]",
-          { type: "literal", value: "[ligne]", description: "\"[ligne]\"" },
-          function(u) {return {"value": 1, "units": {"[ligne]": 1}, "metadata": {"[ligne]":{"isBase":false,"CODE":"[LIGNE]","isMetric":"no","class":"typeset","names":["ligne","French line"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[tbs_m]",
-          { type: "literal", value: "[tbs_m]", description: "\"[tbs_m]\"" },
-          function(u) {return {"value": 1, "units": {"[tbs_m]": 1}, "metadata": {"[tbs_m]":{"isBase":false,"CODE":"[TBS_M]","isMetric":"no","class":"us-volumes","names":["metric tablespoon"],"properties":["volume"],"values":[{"printable":"15","numeric":15}]}}};},
-          "[lb_ap]",
-          { type: "literal", value: "[lb_ap]", description: "\"[lb_ap]\"" },
-          function(u) {return {"value": 1, "units": {"[lb_ap]": 1}, "metadata": {"[lb_ap]":{"isBase":false,"CODE":"[LB_AP]","isMetric":"no","class":"apoth","names":["pound"],"printSymbols":["<strike>lb</strike>"],"properties":["mass"],"values":[{"printable":"12","numeric":12}]}}};},
-          "[oz_ap]",
-          { type: "literal", value: "[oz_ap]", description: "\"[oz_ap]\"" },
-          function(u) {return {"value": 1, "units": {"[oz_ap]": 1}, "metadata": {"[oz_ap]":{"isBase":false,"CODE":"[OZ_AP]","isMetric":"no","class":"apoth","names":["ounce"],"printSymbols":["&#8485;"],"properties":["mass"],"values":[{"printable":"8","numeric":8}]}}};},
-          "[dr_ap]",
-          { type: "literal", value: "[dr_ap]", description: "\"[dr_ap]\"" },
-          function(u) {return {"value": 1, "units": {"[dr_ap]": 1}, "metadata": {"[dr_ap]":{"isBase":false,"CODE":"[DR_AP]","isMetric":"no","class":"apoth","names":["dram","drachm"],"printSymbols":["&#658;"],"properties":["mass"],"values":[{"printable":"3","numeric":3}]}}};},
-          "[sc_ap]",
-          { type: "literal", value: "[sc_ap]", description: "\"[sc_ap]\"" },
-          function(u) {return {"value": 1, "units": {"[sc_ap]": 1}, "metadata": {"[sc_ap]":{"isBase":false,"CODE":"[SC_AP]","isMetric":"no","class":"apoth","names":["scruple"],"printSymbols":["&#8456;"],"properties":["mass"],"values":[{"printable":"20","numeric":20}]}}};},
-          "[tsp_m]",
-          { type: "literal", value: "[tsp_m]", description: "\"[tsp_m]\"" },
-          function(u) {return {"value": 1, "units": {"[tsp_m]": 1}, "metadata": {"[tsp_m]":{"isBase":false,"CODE":"[TSP_M]","isMetric":"no","class":"us-volumes","names":["metric teaspoon"],"properties":["volume"],"values":[{"printable":"5","numeric":5}]}}};},
-          "[cup_m]",
-          { type: "literal", value: "[cup_m]", description: "\"[cup_m]\"" },
-          function(u) {return {"value": 1, "units": {"[cup_m]": 1}, "metadata": {"[cup_m]":{"isBase":false,"CODE":"[CUP_M]","isMetric":"no","class":"us-volumes","names":["metric cup"],"properties":["volume"],"values":[{"printable":"240","numeric":240}]}}};},
-          "[lb_tr]",
-          { type: "literal", value: "[lb_tr]", description: "\"[lb_tr]\"" },
-          function(u) {return {"value": 1, "units": {"[lb_tr]": 1}, "metadata": {"[lb_tr]":{"isBase":false,"CODE":"[LB_TR]","isMetric":"no","class":"troy","names":["troy pound"],"printSymbols":["lb t"],"properties":["mass"],"values":[{"printable":"12","numeric":12}]}}};},
-          "[oz_tr]",
-          { type: "literal", value: "[oz_tr]", description: "\"[oz_tr]\"" },
-          function(u) {return {"value": 1, "units": {"[oz_tr]": 1}, "metadata": {"[oz_tr]":{"isBase":false,"CODE":"[OZ_TR]","isMetric":"no","class":"troy","names":["troy ounce"],"printSymbols":["oz t"],"properties":["mass"],"values":[{"printable":"20","numeric":20}]}}};},
-          "[didot]",
-          { type: "literal", value: "[didot]", description: "\"[didot]\"" },
-          function(u) {return {"value": 1, "units": {"[didot]": 1}, "metadata": {"[didot]":{"isBase":false,"CODE":"[DIDOT]","isMetric":"no","class":"typeset","names":["didot","Didot's point"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[foz_m]",
-          { type: "literal", value: "[foz_m]", description: "\"[foz_m]\"" },
-          function(u) {return {"value": 1, "units": {"[foz_m]": 1}, "metadata": {"[foz_m]":{"isBase":false,"CODE":"[FOZ_M]","isMetric":"no","class":"us-volumes","names":["metric fluid ounce"],"printSymbols":["oz fl"],"properties":["fluid volume"],"values":[{"printable":"30","numeric":30}]}}};},
-          "[car_m]",
-          { type: "literal", value: "[car_m]", description: "\"[car_m]\"" },
-          function(u) {return {"value": 1, "units": {"[car_m]": 1}, "metadata": {"[car_m]":{"isBase":false,"CODE":"[CAR_M]","isMetric":"no","class":"misc","names":["metric carat"],"printSymbols":["ct<sub>m</sub>"],"properties":["mass"],"values":[{"printable":"0.2","numeric":0.2}]}}};},
-          "[smoot]",
-          { type: "literal", value: "[smoot]", description: "\"[smoot]\"" },
-          function(u) {return {"value": 1, "units": {"[smoot]": 1}, "metadata": {"[smoot]":{"isBase":false,"CODE":"[SMOOT]","isMetric":"no","class":"misc","names":["Smoot"],"printSymbols":[""],"properties":["length"],"values":[{"printable":"67","numeric":67}]}}};},
-          "[knk'U]",
-          { type: "literal", value: "[knk'U]", description: "\"[knk'U]\"" },
-          function(u) {return {"value": 1, "units": {"[knk'U]": 1}, "metadata": {"[knk'U]":{"isBase":false,"CODE":"[KNK'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Kunkel unit"],"properties":["arbitrary biologic activity"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[Btu_m]",
-          { type: "literal", value: "[Btu_m]", description: "\"[Btu_m]\"" },
-          function(u) {return {"value": 1, "units": {"[Btu_m]": 1}, "metadata": {"[Btu_m]":{"isBase":false,"CODE":"[BTU_M]","isMetric":"no","class":"heat","names":["mean British thermal unit"],"printSymbols":["Btu<sub>m</sub>"],"properties":["energy"],"values":[{"printable":"1.05587","numeric":1.05587}]}}};},
-          "[dr_av]",
-          { type: "literal", value: "[dr_av]", description: "\"[dr_av]\"" },
-          function(u) {return {"value": 1, "units": {"[dr_av]": 1}, "metadata": {"[dr_av]":{"isBase":false,"CODE":"[DR_AV]","isMetric":"no","class":"avoirdupois","names":["dram"],"properties":["mass"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[oz_av]",
-          { type: "literal", value: "[oz_av]", description: "\"[oz_av]\"" },
-          function(u) {return {"value": 1, "units": {"[oz_av]": 1}, "metadata": {"[oz_av]":{"isBase":false,"CODE":"[OZ_AV]","isMetric":"no","class":"avoirdupois","names":["ounce"],"printSymbols":["oz"],"properties":["mass"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[lb_av]",
-          { type: "literal", value: "[lb_av]", description: "\"[lb_av]\"" },
-          function(u) {return {"value": 1, "units": {"[lb_av]": 1}, "metadata": {"[lb_av]":{"isBase":false,"CODE":"[LB_AV]","isMetric":"no","class":"avoirdupois","names":["pound"],"printSymbols":["lb"],"properties":["mass"],"values":[{"printable":"7000","numeric":7000}]}}};},
-          "[dye'U]",
-          { type: "literal", value: "[dye'U]", description: "\"[dye'U]\"" },
-          function(u) {return {"value": 1, "units": {"[dye'U]": 1}, "metadata": {"[dye'U]":{"isBase":false,"CODE":"[DYE'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Dye unit"],"properties":["biologic activity of amylase"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[pk_us]",
-          { type: "literal", value: "[pk_us]", description: "\"[pk_us]\"" },
-          function(u) {return {"value": 1, "units": {"[pk_us]": 1}, "metadata": {"[pk_us]":{"isBase":false,"CODE":"[PK_US]","isMetric":"no","class":"us-volumes","names":["peck"],"properties":["dry volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[APL'U]",
-          { type: "literal", value: "[APL'U]", description: "\"[APL'U]\"" },
-          function(u) {return {"value": 1, "units": {"[APL'U]": 1}, "metadata": {"[APL'U]":{"isBase":false,"CODE":"[APL'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["APL unit"],"properties":["biologic activity of anticardiolipin IgA"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[bu_us]",
-          { type: "literal", value: "[bu_us]", description: "\"[bu_us]\"" },
-          function(u) {return {"value": 1, "units": {"[bu_us]": 1}, "metadata": {"[bu_us]":{"isBase":false,"CODE":"[BU_US]","isMetric":"no","class":"us-volumes","names":["bushel"],"properties":["dry volume"],"values":[{"printable":"2150.42","numeric":2150.42}]}}};},
-          "[pt_br]",
-          { type: "literal", value: "[pt_br]", description: "\"[pt_br]\"" },
-          function(u) {return {"value": 1, "units": {"[pt_br]": 1}, "metadata": {"[pt_br]":{"isBase":false,"CODE":"[PT_BR]","isMetric":"no","class":"brit-volumes","names":["pint"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[qt_br]",
-          { type: "literal", value: "[qt_br]", description: "\"[qt_br]\"" },
-          function(u) {return {"value": 1, "units": {"[qt_br]": 1}, "metadata": {"[qt_br]":{"isBase":false,"CODE":"[QT_BR]","isMetric":"no","class":"brit-volumes","names":["quart"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[bu_br]",
-          { type: "literal", value: "[bu_br]", description: "\"[bu_br]\"" },
-          function(u) {return {"value": 1, "units": {"[bu_br]": 1}, "metadata": {"[bu_br]":{"isBase":false,"CODE":"[BU_BR]","isMetric":"no","class":"brit-volumes","names":["bushel"],"properties":["volume"],"values":[{"printable":"4","numeric":4}]}}};},
-          "[hp'_X]",
-          { type: "literal", value: "[hp'_X]", description: "\"[hp'_X]\"" },
-          function(u) {return {"value": 1, "units": {"[hp'_X]": 1}, "metadata": {"[hp'_X]":{"isBase":false,"CODE":"[HP'_X]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["homeopathic potency of decimal series (retired)"],"printSymbols":["X"],"properties":["homeopathic potency (retired)"],"values":[{"printable":"<function name=\"hpX\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
-          "[MPL'U]",
-          { type: "literal", value: "[MPL'U]", description: "\"[MPL'U]\"" },
-          function(u) {return {"value": 1, "units": {"[MPL'U]": 1}, "metadata": {"[MPL'U]":{"isBase":false,"CODE":"[MPL'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["MPL unit"],"properties":["biologic activity of anticardiolipin IgM"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[GPL'U]",
-          { type: "literal", value: "[GPL'U]", description: "\"[GPL'U]\"" },
-          function(u) {return {"value": 1, "units": {"[GPL'U]": 1}, "metadata": {"[GPL'U]":{"isBase":false,"CODE":"[GPL'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["GPL unit"],"properties":["biologic activity of anticardiolipin IgG"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[USP'U]",
-          { type: "literal", value: "[USP'U]", description: "\"[USP'U]\"" },
-          function(u) {return {"value": 1, "units": {"[USP'U]": 1}, "metadata": {"[USP'U]":{"isBase":false,"CODE":"[USP'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["United States Pharmacopeia unit"],"printSymbols":["U.S.P."],"properties":["arbitrary"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[eps_0]",
-          { type: "literal", value: "[eps_0]", description: "\"[eps_0]\"" },
-          function(u) {return {"value": 1, "units": {"[eps_0]": 1}, "metadata": {"[eps_0]":{"isBase":false,"CODE":"[EPS_0]","isMetric":"yes","class":"const","names":["permittivity of vacuum"],"printSymbols":["<i>&#949;<sub>\n               <r>0</r>\n            </sub>\n         </i>"],"properties":["electric permittivity"],"values":[{"printable":"8.854187817 &#215; 10<sup>-12</sup>","numeric":8.854187817e-12}]}}};},
-          "[fth_i]",
-          { type: "literal", value: "[fth_i]", description: "\"[fth_i]\"" },
-          function(u) {return {"value": 1, "units": {"[fth_i]": 1}, "metadata": {"[fth_i]":{"isBase":false,"CODE":"[FTH_I]","isMetric":"no","class":"intcust","names":["fathom"],"printSymbols":["fth"],"properties":["depth of water"],"values":[{"printable":"6","numeric":6}]}}};},
-          "[nmi_i]",
-          { type: "literal", value: "[nmi_i]", description: "\"[nmi_i]\"" },
-          function(u) {return {"value": 1, "units": {"[nmi_i]": 1}, "metadata": {"[nmi_i]":{"isBase":false,"CODE":"[NMI_I]","isMetric":"no","class":"intcust","names":["nautical mile"],"printSymbols":["n.mi"],"properties":["length"],"values":[{"printable":"1852","numeric":1852}]}}};},
-          "[pt_us]",
-          { type: "literal", value: "[pt_us]", description: "\"[pt_us]\"" },
-          function(u) {return {"value": 1, "units": {"[pt_us]": 1}, "metadata": {"[pt_us]":{"isBase":false,"CODE":"[PT_US]","isMetric":"no","class":"us-volumes","names":["pint"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[sin_i]",
-          { type: "literal", value: "[sin_i]", description: "\"[sin_i]\"" },
-          function(u) {return {"value": 1, "units": {"[sin_i]": 1}, "metadata": {"[sin_i]":{"isBase":false,"CODE":"[SIN_I]","isMetric":"no","class":"intcust","names":["square inch"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[sft_i]",
-          { type: "literal", value: "[sft_i]", description: "\"[sft_i]\"" },
-          function(u) {return {"value": 1, "units": {"[sft_i]": 1}, "metadata": {"[sft_i]":{"isBase":false,"CODE":"[SFT_I]","isMetric":"no","class":"intcust","names":["square foot"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[syd_i]",
-          { type: "literal", value: "[syd_i]", description: "\"[syd_i]\"" },
-          function(u) {return {"value": 1, "units": {"[syd_i]": 1}, "metadata": {"[syd_i]":{"isBase":false,"CODE":"[SYD_I]","isMetric":"no","class":"intcust","names":["square yard"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[cin_i]",
-          { type: "literal", value: "[cin_i]", description: "\"[cin_i]\"" },
-          function(u) {return {"value": 1, "units": {"[cin_i]": 1}, "metadata": {"[cin_i]":{"isBase":false,"CODE":"[CIN_I]","isMetric":"no","class":"intcust","names":["cubic inch"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[cft_i]",
-          { type: "literal", value: "[cft_i]", description: "\"[cft_i]\"" },
-          function(u) {return {"value": 1, "units": {"[cft_i]": 1}, "metadata": {"[cft_i]":{"isBase":false,"CODE":"[CFT_I]","isMetric":"no","class":"intcust","names":["cubic foot"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[cyd_i]",
-          { type: "literal", value: "[cyd_i]", description: "\"[cyd_i]\"" },
-          function(u) {return {"value": 1, "units": {"[cyd_i]": 1}, "metadata": {"[cyd_i]":{"isBase":false,"CODE":"[CYD_I]","isMetric":"no","class":"intcust","names":["cubic yard"],"printSymbols":["cu.yd"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[qt_us]",
-          { type: "literal", value: "[qt_us]", description: "\"[qt_us]\"" },
-          function(u) {return {"value": 1, "units": {"[qt_us]": 1}, "metadata": {"[qt_us]":{"isBase":false,"CODE":"[QT_US]","isMetric":"no","class":"us-volumes","names":["quart"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[arb'U]",
-          { type: "literal", value: "[arb'U]", description: "\"[arb'U]\"" },
-          function(u) {return {"value": 1, "units": {"[arb'U]": 1}, "metadata": {"[arb'U]":{"isBase":false,"CODE":"[ARB'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["arbitary unit"],"printSymbols":["arb. U"],"properties":["arbitrary"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[mil_i]",
-          { type: "literal", value: "[mil_i]", description: "\"[mil_i]\"" },
-          function(u) {return {"value": 1, "units": {"[mil_i]": 1}, "metadata": {"[mil_i]":{"isBase":false,"CODE":"[MIL_I]","isMetric":"no","class":"intcust","names":["mil"],"printSymbols":["mil"],"properties":["length"],"values":[{"printable":"1 &#215; 10<sup>-3</sup>","numeric":0.001}]}}};},
-          "[cml_i]",
-          { type: "literal", value: "[cml_i]", description: "\"[cml_i]\"" },
-          function(u) {return {"value": 1, "units": {"[cml_i]": 1}, "metadata": {"[cml_i]":{"isBase":false,"CODE":"[CML_I]","isMetric":"no","class":"intcust","names":["circular mil"],"printSymbols":["circ.mil"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[kn_br]",
-          { type: "literal", value: "[kn_br]", description: "\"[kn_br]\"" },
-          function(u) {return {"value": 1, "units": {"[kn_br]": 1}, "metadata": {"[kn_br]":{"isBase":false,"CODE":"[KN_BR]","isMetric":"no","class":"brit-length","names":["knot"],"properties":["velocity"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[ft_us]",
-          { type: "literal", value: "[ft_us]", description: "\"[ft_us]\"" },
-          function(u) {return {"value": 1, "units": {"[ft_us]": 1}, "metadata": {"[ft_us]":{"isBase":false,"CODE":"[FT_US]","isMetric":"no","class":"us-lengths","names":["foot"],"printSymbols":["ft<sub>us</sub>"],"properties":["length"],"values":[{"printable":"1200","numeric":1200}]}}};},
-          "[pouce]",
-          { type: "literal", value: "[pouce]", description: "\"[pouce]\"" },
-          function(u) {return {"value": 1, "units": {"[pouce]": 1}, "metadata": {"[pouce]":{"isBase":false,"CODE":"[POUCE]","isMetric":"no","class":"typeset","names":["pouce","French inch"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[in_us]",
-          { type: "literal", value: "[in_us]", description: "\"[in_us]\"" },
-          function(u) {return {"value": 1, "units": {"[in_us]": 1}, "metadata": {"[in_us]":{"isBase":false,"CODE":"[IN_US]","isMetric":"no","class":"us-lengths","names":["inch"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[rd_us]",
-          { type: "literal", value: "[rd_us]", description: "\"[rd_us]\"" },
-          function(u) {return {"value": 1, "units": {"[rd_us]": 1}, "metadata": {"[rd_us]":{"isBase":false,"CODE":"[RD_US]","isMetric":"no","class":"us-lengths","names":["rod"],"properties":["length"],"values":[{"printable":"16.5","numeric":16.5}]}}};},
-          "[ch_us]",
-          { type: "literal", value: "[ch_us]", description: "\"[ch_us]\"" },
-          function(u) {return {"value": 1, "units": {"[ch_us]": 1}, "metadata": {"[ch_us]":{"isBase":false,"CODE":"[CH_US]","isMetric":"no","class":"us-lengths","names":["Gunter's chain","Surveyor's chain"],"properties":["length"],"values":[{"printable":"4","numeric":4}]}}};},
-          "[lk_us]",
-          { type: "literal", value: "[lk_us]", description: "\"[lk_us]\"" },
-          function(u) {return {"value": 1, "units": {"[lk_us]": 1}, "metadata": {"[lk_us]":{"isBase":false,"CODE":"[LK_US]","isMetric":"no","class":"us-lengths","names":["link for Gunter's chain"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[hp'_C]",
-          { type: "literal", value: "[hp'_C]", description: "\"[hp'_C]\"" },
-          function(u) {return {"value": 1, "units": {"[hp'_C]": 1}, "metadata": {"[hp'_C]":{"isBase":false,"CODE":"[HP'_C]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["homeopathic potency of centesimal series (retired)"],"printSymbols":["C"],"properties":["homeopathic potency (retired)"],"values":[{"printable":"<function name=\"hpC\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
-          "[hp'_M]",
-          { type: "literal", value: "[hp'_M]", description: "\"[hp'_M]\"" },
-          function(u) {return {"value": 1, "units": {"[hp'_M]": 1}, "metadata": {"[hp'_M]":{"isBase":false,"CODE":"[HP'_M]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["homeopathic potency of millesimal series (retired)"],"printSymbols":["M"],"properties":["homeopathic potency (retired)"],"values":[{"printable":"<function name=\"hpM\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
-          "[hp'_Q]",
-          { type: "literal", value: "[hp'_Q]", description: "\"[hp'_Q]\"" },
-          function(u) {return {"value": 1, "units": {"[hp'_Q]": 1}, "metadata": {"[hp'_Q]":{"isBase":false,"CODE":"[HP'_Q]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["homeopathic potency of quintamillesimal series (retired)"],"printSymbols":["Q"],"properties":["homeopathic potency (retired)"],"values":[{"printable":"<function name=\"hpQ\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
-          "[mi_br]",
-          { type: "literal", value: "[mi_br]", description: "\"[mi_br]\"" },
-          function(u) {return {"value": 1, "units": {"[mi_br]": 1}, "metadata": {"[mi_br]":{"isBase":false,"CODE":"[MI_BR]","isMetric":"no","class":"brit-length","names":["mile"],"properties":["length"],"values":[{"printable":"5280","numeric":5280}]}}};},
-          "[mi_us]",
-          { type: "literal", value: "[mi_us]", description: "\"[mi_us]\"" },
-          function(u) {return {"value": 1, "units": {"[mi_us]": 1}, "metadata": {"[mi_us]":{"isBase":false,"CODE":"[MI_US]","isMetric":"no","class":"us-lengths","names":["mile"],"properties":["length"],"values":[{"printable":"8","numeric":8}]}}};},
-          "[yd_br]",
-          { type: "literal", value: "[yd_br]", description: "\"[yd_br]\"" },
-          function(u) {return {"value": 1, "units": {"[yd_br]": 1}, "metadata": {"[yd_br]":{"isBase":false,"CODE":"[YD_BR]","isMetric":"no","class":"brit-length","names":["yard"],"properties":["length"],"values":[{"printable":"3","numeric":3}]}}};},
-          "[pk_br]",
-          { type: "literal", value: "[pk_br]", description: "\"[pk_br]\"" },
-          function(u) {return {"value": 1, "units": {"[pk_br]": 1}, "metadata": {"[pk_br]":{"isBase":false,"CODE":"[PK_BR]","isMetric":"no","class":"brit-volumes","names":["peck"],"properties":["volume"],"values":[{"printable":"2","numeric":2}]}}};},
-          "[pc_br]",
-          { type: "literal", value: "[pc_br]", description: "\"[pc_br]\"" },
-          function(u) {return {"value": 1, "units": {"[pc_br]": 1}, "metadata": {"[pc_br]":{"isBase":false,"CODE":"[PC_BR]","isMetric":"no","class":"brit-length","names":["pace"],"properties":["length"],"values":[{"printable":"2.5","numeric":2.5}]}}};},
-          "[lk_br]",
-          { type: "literal", value: "[lk_br]", description: "\"[lk_br]\"" },
-          function(u) {return {"value": 1, "units": {"[lk_br]": 1}, "metadata": {"[lk_br]":{"isBase":false,"CODE":"[LK_BR]","isMetric":"no","class":"brit-length","names":["link for Gunter's chain"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[in_br]",
-          { type: "literal", value: "[in_br]", description: "\"[in_br]\"" },
-          function(u) {return {"value": 1, "units": {"[in_br]": 1}, "metadata": {"[in_br]":{"isBase":false,"CODE":"[IN_BR]","isMetric":"no","class":"brit-length","names":["inch"],"properties":["length"],"values":[{"printable":"2.539998","numeric":2.539998}]}}};},
-          "[ft_br]",
-          { type: "literal", value: "[ft_br]", description: "\"[ft_br]\"" },
-          function(u) {return {"value": 1, "units": {"[ft_br]": 1}, "metadata": {"[ft_br]":{"isBase":false,"CODE":"[FT_BR]","isMetric":"no","class":"brit-length","names":["foot"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
-          "[rd_br]",
-          { type: "literal", value: "[rd_br]", description: "\"[rd_br]\"" },
-          function(u) {return {"value": 1, "units": {"[rd_br]": 1}, "metadata": {"[rd_br]":{"isBase":false,"CODE":"[RD_BR]","isMetric":"no","class":"brit-length","names":["rod"],"properties":["length"],"values":[{"printable":"16.5","numeric":16.5}]}}};},
-          "[ch_br]",
-          { type: "literal", value: "[ch_br]", description: "\"[ch_br]\"" },
-          function(u) {return {"value": 1, "units": {"[ch_br]": 1}, "metadata": {"[ch_br]":{"isBase":false,"CODE":"[CH_BR]","isMetric":"no","class":"brit-length","names":["Gunter's chain"],"properties":["length"],"values":[{"printable":"4","numeric":4}]}}};},
-          "[ft_i]",
-          { type: "literal", value: "[ft_i]", description: "\"[ft_i]\"" },
-          function(u) {return {"value": 1, "units": {"[ft_i]": 1}, "metadata": {"[ft_i]":{"isBase":false,"CODE":"[FT_I]","isMetric":"no","class":"intcust","names":["foot"],"printSymbols":["ft"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
-          "[hp_Q]",
-          { type: "literal", value: "[hp_Q]", description: "\"[hp_Q]\"" },
-          function(u) {return {"value": 1, "units": {"[hp_Q]": 1}, "metadata": {"[hp_Q]":{"isBase":false,"CODE":"[HP_Q]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of quintamillesimal hahnemannian series"],"printSymbols":["Q"],"properties":["homeopathic potency (Hahnemann)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[hp_M]",
-          { type: "literal", value: "[hp_M]", description: "\"[hp_M]\"" },
-          function(u) {return {"value": 1, "units": {"[hp_M]": 1}, "metadata": {"[hp_M]":{"isBase":false,"CODE":"[HP_M]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of millesimal hahnemannian series"],"printSymbols":["M"],"properties":["homeopathic potency (Hahnemann)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[hp_C]",
-          { type: "literal", value: "[hp_C]", description: "\"[hp_C]\"" },
-          function(u) {return {"value": 1, "units": {"[hp_C]": 1}, "metadata": {"[hp_C]":{"isBase":false,"CODE":"[HP_C]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of centesimal hahnemannian series"],"printSymbols":["C"],"properties":["homeopathic potency (Hahnemann)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[hp_X]",
-          { type: "literal", value: "[hp_X]", description: "\"[hp_X]\"" },
-          function(u) {return {"value": 1, "units": {"[hp_X]": 1}, "metadata": {"[hp_X]":{"isBase":false,"CODE":"[HP_X]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of decimal hahnemannian series"],"printSymbols":["X"],"properties":["homeopathic potency (Hahnemann)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[kp_C]",
-          { type: "literal", value: "[kp_C]", description: "\"[kp_C]\"" },
-          function(u) {return {"value": 1, "units": {"[kp_C]": 1}, "metadata": {"[kp_C]":{"isBase":false,"CODE":"[KP_C]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of centesimal korsakovian series"],"printSymbols":["C"],"properties":["homeopathic potency (Korsakov)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[hd_i]",
-          { type: "literal", value: "[hd_i]", description: "\"[hd_i]\"" },
-          function(u) {return {"value": 1, "units": {"[hd_i]": 1}, "metadata": {"[hd_i]":{"isBase":false,"CODE":"[HD_I]","isMetric":"no","class":"intcust","names":["hand"],"printSymbols":["hd"],"properties":["height of horses"],"values":[{"printable":"4","numeric":4}]}}};},
-          "[kp_M]",
-          { type: "literal", value: "[kp_M]", description: "\"[kp_M]\"" },
-          function(u) {return {"value": 1, "units": {"[kp_M]": 1}, "metadata": {"[kp_M]":{"isBase":false,"CODE":"[KP_M]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of millesimal korsakovian series"],"printSymbols":["M"],"properties":["homeopathic potency (Korsakov)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[kp_Q]",
-          { type: "literal", value: "[kp_Q]", description: "\"[kp_Q]\"" },
-          function(u) {return {"value": 1, "units": {"[kp_Q]": 1}, "metadata": {"[kp_Q]":{"isBase":false,"CODE":"[KP_Q]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of quintamillesimal korsakovian series"],"printSymbols":["Q"],"properties":["homeopathic potency (Korsakov)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[cr_i]",
-          { type: "literal", value: "[cr_i]", description: "\"[cr_i]\"" },
-          function(u) {return {"value": 1, "units": {"[cr_i]": 1}, "metadata": {"[cr_i]":{"isBase":false,"CODE":"[CR_I]","isMetric":"no","class":"intcust","names":["cord"],"properties":["volume"],"values":[{"printable":"128","numeric":128}]}}};},
-          "[bf_i]",
-          { type: "literal", value: "[bf_i]", description: "\"[bf_i]\"" },
-          function(u) {return {"value": 1, "units": {"[bf_i]": 1}, "metadata": {"[bf_i]":{"isBase":false,"CODE":"[BF_I]","isMetric":"no","class":"intcust","names":["board foot"],"properties":["volume"],"values":[{"printable":"144","numeric":144}]}}};},
-          "[kn_i]",
-          { type: "literal", value: "[kn_i]", description: "\"[kn_i]\"" },
-          function(u) {return {"value": 1, "units": {"[kn_i]": 1}, "metadata": {"[kn_i]":{"isBase":false,"CODE":"[KN_I]","isMetric":"no","class":"intcust","names":["knot"],"printSymbols":["knot"],"properties":["velocity"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[mu_0]",
-          { type: "literal", value: "[mu_0]", description: "\"[mu_0]\"" },
-          function(u) {return {"value": 1, "units": {"[mu_0]": 1}, "metadata": {"[mu_0]":{"isBase":false,"CODE":"[MU_0]","isMetric":"yes","class":"const","names":["permeability of vacuum"],"printSymbols":["<i>&#956;<sub>\n               <r>0</r>\n            </sub>\n         </i>"],"properties":["magnetic permeability"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[mi_i]",
-          { type: "literal", value: "[mi_i]", description: "\"[mi_i]\"" },
-          function(u) {return {"value": 1, "units": {"[mi_i]": 1}, "metadata": {"[mi_i]":{"isBase":false,"CODE":"[MI_I]","isMetric":"no","class":"intcust","names":["statute mile"],"printSymbols":["mi"],"properties":["length"],"values":[{"printable":"5280","numeric":5280}]}}};},
-          "[yd_i]",
-          { type: "literal", value: "[yd_i]", description: "\"[yd_i]\"" },
-          function(u) {return {"value": 1, "units": {"[yd_i]": 1}, "metadata": {"[yd_i]":{"isBase":false,"CODE":"[YD_I]","isMetric":"no","class":"intcust","names":["yard"],"printSymbols":["yd"],"properties":["length"],"values":[{"printable":"3","numeric":3}]}}};},
-          "[kp_X]",
-          { type: "literal", value: "[kp_X]", description: "\"[kp_X]\"" },
-          function(u) {return {"value": 1, "units": {"[kp_X]": 1}, "metadata": {"[kp_X]":{"isBase":false,"CODE":"[KP_X]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of decimal korsakovian series"],"printSymbols":["X"],"properties":["homeopathic potency (Korsakov)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[in_i]",
-          { type: "literal", value: "[in_i]", description: "\"[in_i]\"" },
-          function(u) {return {"value": 1, "units": {"[in_i]": 1}, "metadata": {"[in_i]":{"isBase":false,"CODE":"[IN_I]","isMetric":"no","class":"intcust","names":["inch"],"printSymbols":["in"],"properties":["length"],"values":[{"printable":"2.54","numeric":2.54}]}}};},
-          "[diop]",
-          { type: "literal", value: "[diop]", description: "\"[diop]\"" },
-          function(u) {return {"value": 1, "units": {"[diop]": 1}, "metadata": {"[diop]":{"isBase":false,"CODE":"[DIOP]","isMetric":"no","class":"clinical","names":["diopter"],"printSymbols":["dpt"],"properties":["refraction of a lens"],"values":[{"printable":"1","numeric":1}]}}};},
-          "cal_IT",
-          { type: "literal", value: "cal_IT", description: "\"cal_IT\"" },
-          function(u) {return {"value": 1, "units": {"cal_IT": 1}, "metadata": {"cal_IT":{"isBase":false,"CODE":"CAL_IT","isMetric":"yes","class":"heat","names":["international table calorie"],"printSymbols":["cal<sub>IT</sub>"],"properties":["energy"],"values":[{"printable":"4.1868","numeric":4.1868}]}}};},
-          "cal_th",
-          { type: "literal", value: "cal_th", description: "\"cal_th\"" },
-          function(u) {return {"value": 1, "units": {"cal_th": 1}, "metadata": {"cal_th":{"isBase":false,"CODE":"CAL_TH","isMetric":"yes","class":"heat","names":["thermochemical calorie"],"printSymbols":["cal<sub>th</sub>"],"properties":["energy"],"values":[{"printable":"4.184","numeric":4.184}]}}};},
-          "m[H2O]",
-          { type: "literal", value: "m[H2O]", description: "\"m[H2O]\"" },
-          function(u) {return {"value": 1, "units": {"m[H2O]": 1}, "metadata": {"m[H2O]":{"isBase":false,"CODE":"M[H2O]","isMetric":"yes","class":"clinical","names":["meter of water column"],"printSymbols":["m&#160;H<sub>\n            <r>2</r>\n         </sub>O"],"properties":["pressure"],"values":[{"printable":"9.80665","numeric":9.80665}]}}};},
-          "[ka'U]",
-          { type: "literal", value: "[ka'U]", description: "\"[ka'U]\"" },
-          function(u) {return {"value": 1, "units": {"[ka'U]": 1}, "metadata": {"[ka'U]":{"isBase":false,"CODE":"[KA'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["King-Armstrong unit"],"properties":["biologic activity of phosphatase"],"values":[{"printable":"1","numeric":1}]}}};},
-          "B[SPL]",
-          { type: "literal", value: "B[SPL]", description: "\"B[SPL]\"" },
-          function(u) {return {"value": 1, "units": {"B[SPL]": 1}, "metadata": {"B[SPL]":{"isBase":false,"CODE":"B[SPL]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel sound pressure"],"printSymbols":["B(SPL)"],"properties":["pressure level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"2\" Unit=\"10*-5.Pa\"/>","numeric":null}]}}};},
-          "[tb'U]",
-          { type: "literal", value: "[tb'U]", description: "\"[tb'U]\"" },
-          function(u) {return {"value": 1, "units": {"[tb'U]": 1}, "metadata": {"[tb'U]":{"isBase":false,"CODE":"[TB'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["tuberculin unit"],"properties":["biologic activity of tuberculin"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[degR]",
-          { type: "literal", value: "[degR]", description: "\"[degR]\"" },
-          function(u) {return {"value": 1, "units": {"[degR]": 1}, "metadata": {"[degR]":{"isBase":false,"CODE":"[degR]","isMetric":"no","class":"heat","names":["degree Rankine"],"printSymbols":["&#176;R"],"properties":["temperature"],"values":[{"printable":"5","numeric":5}]}}};},
-          "[degF]",
-          { type: "literal", value: "[degF]", description: "\"[degF]\"" },
-          function(u) {return {"value": 1, "units": {"[degF]": 1}, "metadata": {"[degF]":{"isBase":false,"CODE":"[DEGF]","isMetric":"no","isSpecial":"yes","class":"heat","names":["degree Fahrenheit"],"printSymbols":["&#176;F"],"properties":["temperature"],"values":[{"printable":"<function name=\"degF\" value=\"5\" Unit=\"K/9\"/>","numeric":null}]}}};},
-          "[pptr]",
-          { type: "literal", value: "[pptr]", description: "\"[pptr]\"" },
-          function(u) {return {"value": 1, "units": {"[pptr]": 1}, "metadata": {"[pptr]":{"isBase":false,"CODE":"[PPTR]","isMetric":"no","class":"dimless","names":["parts per trillion"],"printSymbols":["pptr"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[ppth]",
-          { type: "literal", value: "[ppth]", description: "\"[ppth]\"" },
-          function(u) {return {"value": 1, "units": {"[ppth]": 1}, "metadata": {"[ppth]":{"isBase":false,"CODE":"[PPTH]","isMetric":"no","class":"dimless","names":["parts per thousand"],"printSymbols":["ppth"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[oz_m]",
-          { type: "literal", value: "[oz_m]", description: "\"[oz_m]\"" },
-          function(u) {return {"value": 1, "units": {"[oz_m]": 1}, "metadata": {"[oz_m]":{"isBase":false,"CODE":"[OZ_M]","isMetric":"no","class":"apoth","names":["metric ounce"],"properties":["mass"],"values":[{"printable":"28","numeric":28}]}}};},
-          "[pied]",
-          { type: "literal", value: "[pied]", description: "\"[pied]\"" },
-          function(u) {return {"value": 1, "units": {"[pied]": 1}, "metadata": {"[pied]":{"isBase":false,"CODE":"[PIED]","isMetric":"no","class":"typeset","names":["pied","French foot"],"properties":["length"],"values":[{"printable":"32.48","numeric":32.48}]}}};},
-          "[ppm]",
-          { type: "literal", value: "[ppm]", description: "\"[ppm]\"" },
-          function(u) {return {"value": 1, "units": {"[ppm]": 1}, "metadata": {"[ppm]":{"isBase":false,"CODE":"[PPM]","isMetric":"no","class":"dimless","names":["parts per million"],"printSymbols":["ppm"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[ppb]",
-          { type: "literal", value: "[ppb]", description: "\"[ppb]\"" },
-          function(u) {return {"value": 1, "units": {"[ppb]": 1}, "metadata": {"[ppb]":{"isBase":false,"CODE":"[PPB]","isMetric":"no","class":"dimless","names":["parts per billion"],"printSymbols":["ppb"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
-          "bit_s",
-          { type: "literal", value: "bit_s", description: "\"bit_s\"" },
-          function(u) {return {"value": 1, "units": {"bit_s": 1}, "metadata": {"bit_s":{"isBase":false,"CODE":"BIT_S","isMetric":"no","isSpecial":"yes","class":"infotech","names":["bit"],"printSymbols":["bit<sub>s</sub>"],"properties":["amount of information"],"values":[{"printable":"<function name=\"ld\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
-          "[PNU]",
-          { type: "literal", value: "[PNU]", description: "\"[PNU]\"" },
-          function(u) {return {"value": 1, "units": {"[PNU]": 1}, "metadata": {"[PNU]":{"isBase":false,"CODE":"[PNU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["protein nitrogen unit"],"printSymbols":["PNU"],"properties":["procedure defined amount of a protein substance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[psi]",
-          { type: "literal", value: "[psi]", description: "\"[psi]\"" },
-          function(u) {return {"value": 1, "units": {"[psi]": 1}, "metadata": {"[psi]":{"isBase":false,"CODE":"[PSI]","isMetric":"no","class":"misc","names":["pound per sqare inch"],"printSymbols":["psi"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[BAU]",
-          { type: "literal", value: "[BAU]", description: "\"[BAU]\"" },
-          function(u) {return {"value": 1, "units": {"[BAU]": 1}, "metadata": {"[BAU]":{"isBase":false,"CODE":"[BAU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["bioequivalent allergen unit"],"printSymbols":["BAU"],"properties":["amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[Cal]",
-          { type: "literal", value: "[Cal]", description: "\"[Cal]\"" },
-          function(u) {return {"value": 1, "units": {"[Cal]": 1}, "metadata": {"[Cal]":{"isBase":false,"CODE":"[CAL]","isMetric":"no","class":"heat","names":["nutrition label Calories"],"printSymbols":["Cal"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
-          "B[mV]",
-          { type: "literal", value: "B[mV]", description: "\"B[mV]\"" },
-          function(u) {return {"value": 1, "units": {"B[mV]": 1}, "metadata": {"B[mV]":{"isBase":false,"CODE":"B[MV]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel millivolt"],"printSymbols":["B(mV)"],"properties":["electric potential level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"1\" Unit=\"mV\"/>","numeric":null}]}}};},
-          "B[uV]",
-          { type: "literal", value: "B[uV]", description: "\"B[uV]\"" },
-          function(u) {return {"value": 1, "units": {"B[uV]": 1}, "metadata": {"B[uV]":{"isBase":false,"CODE":"B[UV]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel microvolt"],"printSymbols":["B(&#956;V)"],"properties":["electric potential level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"1\" Unit=\"uV\"/>","numeric":null}]}}};},
-          "[CFU]",
-          { type: "literal", value: "[CFU]", description: "\"[CFU]\"" },
-          function(u) {return {"value": 1, "units": {"[CFU]": 1}, "metadata": {"[CFU]":{"isBase":false,"CODE":"[CFU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["colony forming units"],"printSymbols":["CFU"],"properties":["amount of a proliferating organism"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[FFU]",
-          { type: "literal", value: "[FFU]", description: "\"[FFU]\"" },
-          function(u) {return {"value": 1, "units": {"[FFU]": 1}, "metadata": {"[FFU]":{"isBase":false,"CODE":"[FFU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["focus forming units"],"printSymbols":["FFU"],"properties":["amount of an infectious agent"],"values":[{"printable":"1","numeric":1}]}}};},
-          "B[kW]",
-          { type: "literal", value: "B[kW]", description: "\"B[kW]\"" },
-          function(u) {return {"value": 1, "units": {"B[kW]": 1}, "metadata": {"B[kW]":{"isBase":false,"CODE":"B[KW]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel kilowatt"],"printSymbols":["B(kW)"],"properties":["power level"],"values":[{"printable":"<function name=\"lg\" value=\"1\" Unit=\"kW\"/>","numeric":null}]}}};},
-          "[PFU]",
-          { type: "literal", value: "[PFU]", description: "\"[PFU]\"" },
-          function(u) {return {"value": 1, "units": {"[PFU]": 1}, "metadata": {"[PFU]":{"isBase":false,"CODE":"[PFU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["plaque forming units"],"printSymbols":["PFU"],"properties":["amount of an infectious agent"],"values":[{"printable":"1","numeric":1}]}}};},
-          "cal_m",
-          { type: "literal", value: "cal_m", description: "\"cal_m\"" },
-          function(u) {return {"value": 1, "units": {"cal_m": 1}, "metadata": {"cal_m":{"isBase":false,"CODE":"CAL_M","isMetric":"yes","class":"heat","names":["mean calorie"],"printSymbols":["cal<sub>m</sub>"],"properties":["energy"],"values":[{"printable":"4.19002","numeric":4.19002}]}}};},
-          "[ELU]",
-          { type: "literal", value: "[ELU]", description: "\"[ELU]\"" },
-          function(u) {return {"value": 1, "units": {"[ELU]": 1}, "metadata": {"[ELU]":{"isBase":false,"CODE":"[ELU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["ELISA unit"],"printSymbols":[""],"properties":["arbitrary ELISA unit"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[FEU]",
-          { type: "literal", value: "[FEU]", description: "\"[FEU]\"" },
-          function(u) {return {"value": 1, "units": {"[FEU]": 1}, "metadata": {"[FEU]":{"isBase":false,"CODE":"[FEU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["fibrinogen equivalent unit"],"printSymbols":[""],"properties":["amount of fibrinogen broken down into the measured d-dimers"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[PRU]",
-          { type: "literal", value: "[PRU]", description: "\"[PRU]\"" },
-          function(u) {return {"value": 1, "units": {"[PRU]": 1}, "metadata": {"[PRU]":{"isBase":false,"CODE":"[PRU]","isMetric":"no","class":"clinical","names":["peripheral vascular resistance unit"],"printSymbols":["P.R.U."],"properties":["fluid resistance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[m_e]",
-          { type: "literal", value: "[m_e]", description: "\"[m_e]\"" },
-          function(u) {return {"value": 1, "units": {"[m_e]": 1}, "metadata": {"[m_e]":{"isBase":false,"CODE":"[M_E]","isMetric":"yes","class":"const","names":["electron mass"],"printSymbols":["<i>m<sub>\n               <r>e</r>\n            </sub>\n         </i>"],"properties":["mass"],"values":[{"printable":"9.1093897 &#215; 10<sup>-28</sup>","numeric":9.1093897e-28}]}}};},
-          "[m_p]",
-          { type: "literal", value: "[m_p]", description: "\"[m_p]\"" },
-          function(u) {return {"value": 1, "units": {"[m_p]": 1}, "metadata": {"[m_p]":{"isBase":false,"CODE":"[M_P]","isMetric":"yes","class":"const","names":["proton mass"],"printSymbols":["<i>m<sub>\n               <r>p</r>\n            </sub>\n         </i>"],"properties":["mass"],"values":[{"printable":"1.6726231 &#215; 10<sup>-24</sup>","numeric":1.6726231e-24}]}}};},
-          "m[Hg]",
-          { type: "literal", value: "m[Hg]", description: "\"m[Hg]\"" },
-          function(u) {return {"value": 1, "units": {"m[Hg]": 1}, "metadata": {"m[Hg]":{"isBase":false,"CODE":"M[HG]","isMetric":"yes","class":"clinical","names":["meter of mercury column"],"printSymbols":["m&#160;Hg"],"properties":["pressure"],"values":[{"printable":"133.3220","numeric":133.322}]}}};},
-          "[pca]",
-          { type: "literal", value: "[pca]", description: "\"[pca]\"" },
-          function(u) {return {"value": 1, "units": {"[pca]": 1}, "metadata": {"[pca]":{"isBase":false,"CODE":"[PCA]","isMetric":"no","class":"typeset","names":["pica"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
-          "[pnt]",
-          { type: "literal", value: "[pnt]", description: "\"[pnt]\"" },
-          function(u) {return {"value": 1, "units": {"[pnt]": 1}, "metadata": {"[pnt]":{"isBase":false,"CODE":"[PNT]","isMetric":"no","class":"typeset","names":["point"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[lne]",
-          { type: "literal", value: "[lne]", description: "\"[lne]\"" },
-          function(u) {return {"value": 1, "units": {"[lne]": 1}, "metadata": {"[lne]":{"isBase":false,"CODE":"[LNE]","isMetric":"no","class":"typeset","names":["line"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[LPF]",
-          { type: "literal", value: "[LPF]", description: "\"[LPF]\"" },
-          function(u) {return {"value": 1, "units": {"[LPF]": 1}, "metadata": {"[LPF]":{"isBase":false,"CODE":"[LPF]","isMetric":"no","class":"chemical","names":["low power field"],"printSymbols":["LPF"],"properties":["view area in microscope"],"values":[{"printable":"100","numeric":100}]}}};},
-          "[den]",
-          { type: "literal", value: "[den]", description: "\"[den]\"" },
-          function(u) {return {"value": 1, "units": {"[den]": 1}, "metadata": {"[den]":{"isBase":false,"CODE":"[DEN]","isMetric":"no","class":"heat","names":["Denier"],"printSymbols":["den"],"properties":["linear mass density (of textile thread)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[sct]",
-          { type: "literal", value: "[sct]", description: "\"[sct]\"" },
-          function(u) {return {"value": 1, "units": {"[sct]": 1}, "metadata": {"[sct]":{"isBase":false,"CODE":"[SCT]","isMetric":"no","class":"us-lengths","names":["section"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[twp]",
-          { type: "literal", value: "[twp]", description: "\"[twp]\"" },
-          function(u) {return {"value": 1, "units": {"[twp]": 1}, "metadata": {"[twp]":{"isBase":false,"CODE":"[TWP]","isMetric":"no","class":"us-lengths","names":["township"],"properties":["area"],"values":[{"printable":"36","numeric":36}]}}};},
-          "[Btu]",
-          { type: "literal", value: "[Btu]", description: "\"[Btu]\"" },
-          function(u) {return {"value": 1, "units": {"[Btu]": 1}, "metadata": {"[Btu]":{"isBase":false,"CODE":"[BTU]","isMetric":"no","class":"heat","names":["British thermal unit"],"printSymbols":["btu"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[MET]",
-          { type: "literal", value: "[MET]", description: "\"[MET]\"" },
-          function(u) {return {"value": 1, "units": {"[MET]": 1}, "metadata": {"[MET]":{"isBase":false,"CODE":"[MET]","isMetric":"no","class":"clinical","names":["metabolic equivalent"],"printSymbols":["MET"],"properties":["metabolic cost of physical activity"],"values":[{"printable":"3.5","numeric":3.5}]}}};},
-          "[HPF]",
-          { type: "literal", value: "[HPF]", description: "\"[HPF]\"" },
-          function(u) {return {"value": 1, "units": {"[HPF]": 1}, "metadata": {"[HPF]":{"isBase":false,"CODE":"[HPF]","isMetric":"no","class":"chemical","names":["high power field"],"printSymbols":["HPF"],"properties":["view area in microscope"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[drp]",
-          { type: "literal", value: "[drp]", description: "\"[drp]\"" },
-          function(u) {return {"value": 1, "units": {"[drp]": 1}, "metadata": {"[drp]":{"isBase":false,"CODE":"[DRP]","isMetric":"no","class":"clinical","names":["drop"],"printSymbols":["drp"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[AU]",
-          { type: "literal", value: "[AU]", description: "\"[AU]\"" },
-          function(u) {return {"value": 1, "units": {"[AU]": 1}, "metadata": {"[AU]":{"isBase":false,"CODE":"[AU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["allergen unit"],"printSymbols":["AU"],"properties":["procedure defined amount of an allergen using some reference standard"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[IU]",
-          { type: "literal", value: "[IU]", description: "\"[IU]\"" },
-          function(u) {return {"value": 1, "units": {"[IU]": 1}, "metadata": {"[IU]":{"isBase":false,"CODE":"[IU]","isMetric":"yes","isArbitrary":"yes","class":"chemical","names":["international unit"],"printSymbols":["i.U."],"properties":["arbitrary"],"values":[{"printable":"1","numeric":1}]}}};},
-          "mo_s",
-          { type: "literal", value: "mo_s", description: "\"mo_s\"" },
-          function(u) {return {"value": 1, "units": {"mo_s": 1}, "metadata": {"mo_s":{"isBase":false,"CODE":"MO_S","isMetric":"no","class":"iso1000","names":["synodal month"],"printSymbols":["mo<sub>s</sub>"],"properties":["time"],"values":[{"printable":"29.53059","numeric":29.53059}]}}};},
-          "[gr]",
-          { type: "literal", value: "[gr]", description: "\"[gr]\"" },
-          function(u) {return {"value": 1, "units": {"[gr]": 1}, "metadata": {"[gr]":{"isBase":false,"CODE":"[GR]","isMetric":"no","class":"avoirdupois","names":["grain"],"properties":["mass"],"values":[{"printable":"64.79891","numeric":64.79891}]}}};},
-          "circ",
-          { type: "literal", value: "circ", description: "\"circ\"" },
-          function(u) {return {"value": 1, "units": {"circ": 1}, "metadata": {"circ":{"isBase":false,"CODE":"CIRC","isMetric":"no","class":"misc","names":["circle"],"printSymbols":["circ"],"properties":["plane angle"],"values":[{"printable":"2","numeric":2}]}}};},
-          "[pi]",
-          { type: "literal", value: "[pi]", description: "\"[pi]\"" },
-          function(u) {return {"value": 1, "units": {"[pi]": 1}, "metadata": {"[pi]":{"isBase":false,"CODE":"[PI]","isMetric":"no","class":"dimless","names":["the number pi"],"printSymbols":["&#960;"],"properties":["number"],"values":[{"printable":"&#960;","numeric":3.141592653589793}]}}};},
-          "[EU]",
-          { type: "literal", value: "[EU]", description: "\"[EU]\"" },
-          function(u) {return {"value": 1, "units": {"[EU]": 1}, "metadata": {"[EU]":{"isBase":false,"CODE":"[EU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Ehrlich unit"],"printSymbols":[""],"properties":["Ehrlich unit"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[Lf]",
-          { type: "literal", value: "[Lf]", description: "\"[Lf]\"" },
-          function(u) {return {"value": 1, "units": {"[Lf]": 1}, "metadata": {"[Lf]":{"isBase":false,"CODE":"[LF]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Limit of flocculation"],"printSymbols":["Lf"],"properties":["procedure defined amount of an antigen substance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "mo_j",
-          { type: "literal", value: "mo_j", description: "\"mo_j\"" },
-          function(u) {return {"value": 1, "units": {"mo_j": 1}, "metadata": {"mo_j":{"isBase":false,"CODE":"MO_J","isMetric":"no","class":"iso1000","names":["mean Julian month"],"printSymbols":["mo<sub>j</sub>"],"properties":["time"],"values":[{"printable":"1","numeric":1}]}}};},
-          "B[W]",
-          { type: "literal", value: "B[W]", description: "\"B[W]\"" },
-          function(u) {return {"value": 1, "units": {"B[W]": 1}, "metadata": {"B[W]":{"isBase":false,"CODE":"B[W]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel watt"],"printSymbols":["B(W)"],"properties":["power level"],"values":[{"printable":"<function name=\"lg\" value=\"1\" Unit=\"W\"/>","numeric":null}]}}};},
-          "B[V]",
-          { type: "literal", value: "B[V]", description: "\"B[V]\"" },
-          function(u) {return {"value": 1, "units": {"B[V]": 1}, "metadata": {"B[V]":{"isBase":false,"CODE":"B[V]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel volt"],"printSymbols":["B(V)"],"properties":["electric potential level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"1\" Unit=\"V\"/>","numeric":null}]}}};},
-          "mo_g",
-          { type: "literal", value: "mo_g", description: "\"mo_g\"" },
-          function(u) {return {"value": 1, "units": {"mo_g": 1}, "metadata": {"mo_g":{"isBase":false,"CODE":"MO_G","isMetric":"no","class":"iso1000","names":["mean Gregorian month"],"printSymbols":["mo<sub>g</sub>"],"properties":["time"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[iU]",
-          { type: "literal", value: "[iU]", description: "\"[iU]\"" },
-          function(u) {return {"value": 1, "units": {"[iU]": 1}, "metadata": {"[iU]":{"isBase":false,"CODE":"[IU]","isMetric":"yes","isArbitrary":"yes","class":"chemical","names":["international unit"],"printSymbols":["IU"],"properties":["arbitrary"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[HP]",
-          { type: "literal", value: "[HP]", description: "\"[HP]\"" },
-          function(u) {return {"value": 1, "units": {"[HP]": 1}, "metadata": {"[HP]":{"isBase":false,"CODE":"[HP]","isMetric":"no","class":"heat","names":["horsepower"],"properties":["power"],"values":[{"printable":"550","numeric":550}]}}};},
-          "[Ch]",
-          { type: "literal", value: "[Ch]", description: "\"[Ch]\"" },
-          function(u) {return {"value": 1, "units": {"[Ch]": 1}, "metadata": {"[Ch]":{"isBase":false,"CODE":"[CH]","isMetric":"no","class":"clinical","names":["Charrière","french"],"printSymbols":["Ch"],"properties":["gauge of catheters"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[ly]",
-          { type: "literal", value: "[ly]", description: "\"[ly]\"" },
-          function(u) {return {"value": 1, "units": {"[ly]": 1}, "metadata": {"[ly]":{"isBase":false,"CODE":"[LY]","isMetric":"yes","class":"const","names":["light-year"],"printSymbols":["l.y."],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[pH]",
-          { type: "literal", value: "[pH]", description: "\"[pH]\"" },
-          function(u) {return {"value": 1, "units": {"[pH]": 1}, "metadata": {"[pH]":{"isBase":false,"CODE":"[PH]","isMetric":"no","isSpecial":"yes","class":"chemical","names":["pH"],"printSymbols":["pH"],"properties":["acidity"],"values":[{"printable":"<function name=\"pH\" value=\"1\" Unit=\"mol/l\"/>","numeric":null}]}}};},
-          "a_j",
-          { type: "literal", value: "a_j", description: "\"a_j\"" },
-          function(u) {return {"value": 1, "units": {"a_j": 1}, "metadata": {"a_j":{"isBase":false,"CODE":"ANN_J","isMetric":"no","class":"iso1000","names":["mean Julian year"],"printSymbols":["a<sub>j</sub>"],"properties":["time"],"values":[{"printable":"365.25","numeric":365.25}]}}};},
-          "rad",
-          { type: "literal", value: "rad", description: "\"rad\"" },
-          function(u) {return {"value": 1, "units": {"rad": 1}, "metadata": {"rad":{"isBase":true,"CODE":"RAD","dim":"A","names":["radian"],"printSymbols":["rad"],"properties":["plane angle"]}}};},
-          "a_t",
-          { type: "literal", value: "a_t", description: "\"a_t\"" },
-          function(u) {return {"value": 1, "units": {"a_t": 1}, "metadata": {"a_t":{"isBase":false,"CODE":"ANN_T","isMetric":"no","class":"iso1000","names":["tropical year"],"printSymbols":["a<sub>t</sub>"],"properties":["time"],"values":[{"printable":"365.24219","numeric":365.24219}]}}};},
-          "Ohm",
-          { type: "literal", value: "Ohm", description: "\"Ohm\"" },
-          function(u) {return {"value": 1, "units": {"Ohm": 1}, "metadata": {"Ohm":{"isBase":false,"CODE":"OHM","isMetric":"yes","class":"si","names":["Ohm"],"printSymbols":["&#937;"],"properties":["electric resistance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "sph",
-          { type: "literal", value: "sph", description: "\"sph\"" },
-          function(u) {return {"value": 1, "units": {"sph": 1}, "metadata": {"sph":{"isBase":false,"CODE":"SPH","isMetric":"no","class":"misc","names":["spere"],"printSymbols":["sph"],"properties":["solid angle"],"values":[{"printable":"4","numeric":4}]}}};},
-          "bit",
-          { type: "literal", value: "bit", description: "\"bit\"" },
-          function(u) {return {"value": 1, "units": {"bit": 1}, "metadata": {"bit":{"isBase":false,"CODE":"BIT","isMetric":"yes","class":"infotech","names":["bit"],"printSymbols":["bit"],"properties":["amount of information"],"values":[{"printable":"1","numeric":1}]}}};},
-          "mho",
-          { type: "literal", value: "mho", description: "\"mho\"" },
-          function(u) {return {"value": 1, "units": {"mho": 1}, "metadata": {"mho":{"isBase":false,"CODE":"MHO","isMetric":"yes","class":"misc","names":["mho"],"printSymbols":["mho"],"properties":["electric conductance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "min",
-          { type: "literal", value: "min", description: "\"min\"" },
-          function(u) {return {"value": 1, "units": {"min": 1}, "metadata": {"min":{"isBase":false,"CODE":"MIN","isMetric":"no","class":"iso1000","names":["minute"],"printSymbols":["min"],"properties":["time"],"values":[{"printable":"60","numeric":60}]}}};},
-          "mol",
-          { type: "literal", value: "mol", description: "\"mol\"" },
-          function(u) {return {"value": 1, "units": {"mol": 1}, "metadata": {"mol":{"isBase":false,"CODE":"MOL","isMetric":"yes","class":"si","names":["mole"],"printSymbols":["mol"],"properties":["amount of substance"],"values":[{"printable":"6.0221367","numeric":6.0221367}]}}};},
-          "deg",
-          { type: "literal", value: "deg", description: "\"deg\"" },
-          function(u) {return {"value": 1, "units": {"deg": 1}, "metadata": {"deg":{"isBase":false,"CODE":"DEG","isMetric":"no","class":"iso1000","names":["degree"],"printSymbols":["&#176;"],"properties":["plane angle"],"values":[{"printable":"2","numeric":2}]}}};},
-          "gon",
-          { type: "literal", value: "gon", description: "\"gon\"" },
-          function(u) {return {"value": 1, "units": {"gon": 1}, "metadata": {"gon":{"isBase":false,"CODE":"GON","isMetric":"no","class":"iso1000","names":["gon","grade"],"printSymbols":["&#9633;<sup>g</sup>"],"properties":["plane angle"],"values":[{"printable":"0.9","numeric":0.9}]}}};},
-          "Cel",
-          { type: "literal", value: "Cel", description: "\"Cel\"" },
-          function(u) {return {"value": 1, "units": {"Cel": 1}, "metadata": {"Cel":{"isBase":false,"CODE":"CEL","isMetric":"yes","isSpecial":"yes","class":"si","names":["degree Celsius"],"printSymbols":["&#176;C"],"properties":["temperature"],"values":[{"printable":"<function name=\"Cel\" value=\"1\" Unit=\"K\"/>","numeric":null}]}}};},
-          "kat",
-          { type: "literal", value: "kat", description: "\"kat\"" },
-          function(u) {return {"value": 1, "units": {"kat": 1}, "metadata": {"kat":{"isBase":false,"CODE":"KAT","isMetric":"yes","class":"chemical","names":["katal"],"printSymbols":["kat"],"properties":["catalytic activity"],"values":[{"printable":"1","numeric":1}]}}};},
-          "att",
-          { type: "literal", value: "att", description: "\"att\"" },
-          function(u) {return {"value": 1, "units": {"att": 1}, "metadata": {"att":{"isBase":false,"CODE":"ATT","isMetric":"no","class":"misc","names":["technical atmosphere"],"printSymbols":["at"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
-          "osm",
-          { type: "literal", value: "osm", description: "\"osm\"" },
-          function(u) {return {"value": 1, "units": {"osm": 1}, "metadata": {"osm":{"isBase":false,"CODE":"OSM","isMetric":"yes","class":"chemical","names":["osmole"],"printSymbols":["osm"],"properties":["amount of substance (dissolved particles)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "tex",
-          { type: "literal", value: "tex", description: "\"tex\"" },
-          function(u) {return {"value": 1, "units": {"tex": 1}, "metadata": {"tex":{"isBase":false,"CODE":"TEX","isMetric":"yes","class":"heat","names":["tex"],"printSymbols":["tex"],"properties":["linear mass density (of textile thread)"],"values":[{"printable":"1","numeric":1}]}}};},
-          "cal",
-          { type: "literal", value: "cal", description: "\"cal\"" },
-          function(u) {return {"value": 1, "units": {"cal": 1}, "metadata": {"cal":{"isBase":false,"CODE":"CAL","isMetric":"yes","class":"heat","names":["calorie"],"printSymbols":["cal"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
-          "REM",
-          { type: "literal", value: "REM", description: "\"REM\"" },
-          function(u) {return {"value": 1, "units": {"REM": 1}, "metadata": {"REM":{"isBase":false,"CODE":"[REM]","isMetric":"yes","class":"cgs","names":["radiation equivalent man"],"printSymbols":["REM"],"properties":["dose equivalent"],"values":[{"printable":"1","numeric":1}]}}};},
-          "RAD",
-          { type: "literal", value: "RAD", description: "\"RAD\"" },
-          function(u) {return {"value": 1, "units": {"RAD": 1}, "metadata": {"RAD":{"isBase":false,"CODE":"[RAD]","isMetric":"yes","class":"cgs","names":["radiation absorbed dose"],"printSymbols":["RAD"],"properties":["energy dose"],"values":[{"printable":"100","numeric":100}]}}};},
-          "a_g",
-          { type: "literal", value: "a_g", description: "\"a_g\"" },
-          function(u) {return {"value": 1, "units": {"a_g": 1}, "metadata": {"a_g":{"isBase":false,"CODE":"ANN_G","isMetric":"no","class":"iso1000","names":["mean Gregorian year"],"printSymbols":["a<sub>g</sub>"],"properties":["time"],"values":[{"printable":"365.2425","numeric":365.2425}]}}};},
-          "Lmb",
-          { type: "literal", value: "Lmb", description: "\"Lmb\"" },
-          function(u) {return {"value": 1, "units": {"Lmb": 1}, "metadata": {"Lmb":{"isBase":false,"CODE":"LMB","isMetric":"yes","class":"cgs","names":["Lambert"],"printSymbols":["L"],"properties":["brightness"],"values":[{"printable":"1","numeric":1}]}}};},
-          "atm",
-          { type: "literal", value: "atm", description: "\"atm\"" },
-          function(u) {return {"value": 1, "units": {"atm": 1}, "metadata": {"atm":{"isBase":false,"CODE":"ATM","isMetric":"no","class":"const","names":["standard atmosphere"],"printSymbols":["atm"],"properties":["pressure"],"values":[{"printable":"101325","numeric":101325}]}}};},
-          "erg",
-          { type: "literal", value: "erg", description: "\"erg\"" },
-          function(u) {return {"value": 1, "units": {"erg": 1}, "metadata": {"erg":{"isBase":false,"CODE":"ERG","isMetric":"yes","class":"cgs","names":["erg"],"printSymbols":["erg"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
-          "dyn",
-          { type: "literal", value: "dyn", description: "\"dyn\"" },
-          function(u) {return {"value": 1, "units": {"dyn": 1}, "metadata": {"dyn":{"isBase":false,"CODE":"DYN","isMetric":"yes","class":"cgs","names":["dyne"],"printSymbols":["dyn"],"properties":["force"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Gal",
-          { type: "literal", value: "Gal", description: "\"Gal\"" },
-          function(u) {return {"value": 1, "units": {"Gal": 1}, "metadata": {"Gal":{"isBase":false,"CODE":"GL","isMetric":"yes","class":"cgs","names":["Gal"],"printSymbols":["Gal"],"properties":["acceleration"],"values":[{"printable":"1","numeric":1}]}}};},
-          "10^",
-          { type: "literal", value: "10^", description: "\"10^\"" },
-          function(u) {return {"value": 1, "units": {"10^": 1}, "metadata": {"10^":{"isBase":false,"CODE":"10^","isMetric":"no","class":"dimless","names":["the number ten for arbitrary powers"],"printSymbols":["10"],"properties":["number"],"values":[{"printable":"10","numeric":10}]}}};},
-          "10*",
-          { type: "literal", value: "10*", description: "\"10*\"" },
-          function(u) {return {"value": 1, "units": {"10*": 1}, "metadata": {"10*":{"isBase":false,"CODE":"10*","isMetric":"no","class":"dimless","names":["the number ten for arbitrary powers"],"printSymbols":["10"],"properties":["number"],"values":[{"printable":"10","numeric":10}]}}};},
-          "[S]",
-          { type: "literal", value: "[S]", description: "\"[S]\"" },
-          function(u) {return {"value": 1, "units": {"[S]": 1}, "metadata": {"[S]":{"isBase":false,"CODE":"[S]","isMetric":"no","class":"chemical","names":["Svedberg unit"],"printSymbols":["S"],"properties":["sedimentation coefficient"],"values":[{"printable":"1","numeric":1}]}}};},
-          "[g]",
-          { type: "literal", value: "[g]", description: "\"[g]\"" },
-          function(u) {return {"value": 1, "units": {"[g]": 1}, "metadata": {"[g]":{"isBase":false,"CODE":"[G]","isMetric":"yes","class":"const","names":["standard acceleration of free fall"],"printSymbols":["<i>g<sub>n</sub>\n         </i>"],"properties":["acceleration"],"values":[{"printable":"9.80665","numeric":9.80665}]}}};},
-          "[G]",
-          { type: "literal", value: "[G]", description: "\"[G]\"" },
-          function(u) {return {"value": 1, "units": {"[G]": 1}, "metadata": {"[G]":{"isBase":false,"CODE":"[GC]","isMetric":"yes","class":"const","names":["Newtonian constant of gravitation"],"printSymbols":["<i>G</i>"],"properties":["(unclassified)"],"values":[{"printable":"6.67259 &#215; 10<sup>-11</sup>","numeric":6.67259e-11}]}}};},
-          "[e]",
-          { type: "literal", value: "[e]", description: "\"[e]\"" },
-          function(u) {return {"value": 1, "units": {"[e]": 1}, "metadata": {"[e]":{"isBase":false,"CODE":"[E]","isMetric":"yes","class":"const","names":["elementary charge"],"printSymbols":["<i>e</i>"],"properties":["electric charge"],"values":[{"printable":"1.60217733 &#215; 10<sup>-19</sup>","numeric":1.60217733e-19}]}}};},
-          "[k]",
-          { type: "literal", value: "[k]", description: "\"[k]\"" },
-          function(u) {return {"value": 1, "units": {"[k]": 1}, "metadata": {"[k]":{"isBase":false,"CODE":"[K]","isMetric":"yes","class":"const","names":["Boltzmann constant"],"printSymbols":["<i>k</i>"],"properties":["(unclassified)"],"values":[{"printable":"1.380658 &#215; 10<sup>-23</sup>","numeric":1.380658e-23}]}}};},
-          "[h]",
-          { type: "literal", value: "[h]", description: "\"[h]\"" },
-          function(u) {return {"value": 1, "units": {"[h]": 1}, "metadata": {"[h]":{"isBase":false,"CODE":"[H]","isMetric":"yes","class":"const","names":["Planck constant"],"printSymbols":["<i>h</i>"],"properties":["action"],"values":[{"printable":"6.6260755 &#215; 10<sup>-24</sup>","numeric":6.6260755e-24}]}}};},
-          "[c]",
-          { type: "literal", value: "[c]", description: "\"[c]\"" },
-          function(u) {return {"value": 1, "units": {"[c]": 1}, "metadata": {"[c]":{"isBase":false,"CODE":"[C]","isMetric":"yes","class":"const","names":["velocity of light"],"printSymbols":["<i>c</i>"],"properties":["velocity"],"values":[{"printable":"299792458","numeric":299792458}]}}};},
-          "bar",
-          { type: "literal", value: "bar", description: "\"bar\"" },
-          function(u) {return {"value": 1, "units": {"bar": 1}, "metadata": {"bar":{"isBase":false,"CODE":"BAR","isMetric":"yes","class":"iso1000","names":["bar"],"printSymbols":["bar"],"properties":["pressure"],"values":[{"printable":"1 &#215; 10<sup>5</sup>","numeric":100000}]}}};},
-          "lm",
-          { type: "literal", value: "lm", description: "\"lm\"" },
-          function(u) {return {"value": 1, "units": {"lm": 1}, "metadata": {"lm":{"isBase":false,"CODE":"LM","isMetric":"yes","class":"si","names":["lumen"],"printSymbols":["lm"],"properties":["luminous flux"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Ci",
-          { type: "literal", value: "Ci", description: "\"Ci\"" },
-          function(u) {return {"value": 1, "units": {"Ci": 1}, "metadata": {"Ci":{"isBase":false,"CODE":"CI","isMetric":"yes","class":"cgs","names":["Curie"],"printSymbols":["Ci"],"properties":["radioactivity"],"values":[{"printable":"3.7 &#215; 10<sup>10</sup>","numeric":37000000000}]}}};},
-          "ph",
-          { type: "literal", value: "ph", description: "\"ph\"" },
-          function(u) {return {"value": 1, "units": {"ph": 1}, "metadata": {"ph":{"isBase":false,"CODE":"PHT","isMetric":"yes","class":"cgs","names":["phot"],"printSymbols":["ph"],"properties":["illuminance"],"values":[{"printable":"1 &#215; 10<sup>-4</sup>","numeric":0.0001}]}}};},
-          "cd",
-          { type: "literal", value: "cd", description: "\"cd\"" },
-          function(u) {return {"value": 1, "units": {"cd": 1}, "metadata": {"cd":{"isBase":true,"CODE":"CD","dim":"F","names":["candela"],"printSymbols":["cd"],"properties":["luminous intensity"]}}};},
-          "Ao",
-          { type: "literal", value: "Ao", description: "\"Ao\"" },
-          function(u) {return {"value": 1, "units": {"Ao": 1}, "metadata": {"Ao":{"isBase":false,"CODE":"AO","isMetric":"no","class":"misc","names":["Ångström"],"printSymbols":["&#197;"],"properties":["length"],"values":[{"printable":"0.1","numeric":0.1}]}}};},
-          "Wb",
-          { type: "literal", value: "Wb", description: "\"Wb\"" },
-          function(u) {return {"value": 1, "units": {"Wb": 1}, "metadata": {"Wb":{"isBase":false,"CODE":"WB","isMetric":"yes","class":"si","names":["Weber"],"printSymbols":["Wb"],"properties":["magentic flux"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Gb",
-          { type: "literal", value: "Gb", description: "\"Gb\"" },
-          function(u) {return {"value": 1, "units": {"Gb": 1}, "metadata": {"Gb":{"isBase":false,"CODE":"GB","isMetric":"yes","class":"cgs","names":["Gilbert"],"printSymbols":["Gb"],"properties":["magnetic tension"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Oe",
-          { type: "literal", value: "Oe", description: "\"Oe\"" },
-          function(u) {return {"value": 1, "units": {"Oe": 1}, "metadata": {"Oe":{"isBase":false,"CODE":"OE","isMetric":"yes","class":"cgs","names":["Oersted"],"printSymbols":["Oe"],"properties":["magnetic field intensity"],"values":[{"printable":"250","numeric":250}]}}};},
-          "lx",
-          { type: "literal", value: "lx", description: "\"lx\"" },
-          function(u) {return {"value": 1, "units": {"lx": 1}, "metadata": {"lx":{"isBase":false,"CODE":"LX","isMetric":"yes","class":"si","names":["lux"],"printSymbols":["lx"],"properties":["illuminance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Mx",
-          { type: "literal", value: "Mx", description: "\"Mx\"" },
-          function(u) {return {"value": 1, "units": {"Mx": 1}, "metadata": {"Mx":{"isBase":false,"CODE":"MX","isMetric":"yes","class":"cgs","names":["Maxwell"],"printSymbols":["Mx"],"properties":["flux of magnetic induction"],"values":[{"printable":"1 &#215; 10<sup>-8</sup>","numeric":1e-8}]}}};},
-          "St",
-          { type: "literal", value: "St", description: "\"St\"" },
-          function(u) {return {"value": 1, "units": {"St": 1}, "metadata": {"St":{"isBase":false,"CODE":"ST","isMetric":"yes","class":"cgs","names":["Stokes"],"printSymbols":["St"],"properties":["kinematic viscosity"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Bi",
-          { type: "literal", value: "Bi", description: "\"Bi\"" },
-          function(u) {return {"value": 1, "units": {"Bi": 1}, "metadata": {"Bi":{"isBase":false,"CODE":"BI","isMetric":"yes","class":"cgs","names":["Biot"],"printSymbols":["Bi"],"properties":["electric current"],"values":[{"printable":"10","numeric":10}]}}};},
-          "Bq",
-          { type: "literal", value: "Bq", description: "\"Bq\"" },
-          function(u) {return {"value": 1, "units": {"Bq": 1}, "metadata": {"Bq":{"isBase":false,"CODE":"BQ","isMetric":"yes","class":"si","names":["Becquerel"],"printSymbols":["Bq"],"properties":["radioactivity"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Np",
-          { type: "literal", value: "Np", description: "\"Np\"" },
-          function(u) {return {"value": 1, "units": {"Np": 1}, "metadata": {"Np":{"isBase":false,"CODE":"NEP","isMetric":"yes","isSpecial":"yes","class":"levels","names":["neper"],"printSymbols":["Np"],"properties":["level"],"values":[{"printable":"<function name=\"ln\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
-          "AU",
-          { type: "literal", value: "AU", description: "\"AU\"" },
-          function(u) {return {"value": 1, "units": {"AU": 1}, "metadata": {"AU":{"isBase":false,"CODE":"ASU","isMetric":"no","class":"iso1000","names":["astronomic unit"],"printSymbols":["AU"],"properties":["length"],"values":[{"printable":"149597.870691","numeric":149597.870691}]}}};},
-          "mo",
-          { type: "literal", value: "mo", description: "\"mo\"" },
-          function(u) {return {"value": 1, "units": {"mo": 1}, "metadata": {"mo":{"isBase":false,"CODE":"MO","isMetric":"no","class":"iso1000","names":["month"],"printSymbols":["mo"],"properties":["time"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Ky",
-          { type: "literal", value: "Ky", description: "\"Ky\"" },
-          function(u) {return {"value": 1, "units": {"Ky": 1}, "metadata": {"Ky":{"isBase":false,"CODE":"KY","isMetric":"yes","class":"cgs","names":["Kayser"],"printSymbols":["K"],"properties":["lineic number"],"values":[{"printable":"1","numeric":1}]}}};},
-          "gf",
-          { type: "literal", value: "gf", description: "\"gf\"" },
-          function(u) {return {"value": 1, "units": {"gf": 1}, "metadata": {"gf":{"isBase":false,"CODE":"GF","isMetric":"yes","class":"const","names":["gram-force"],"printSymbols":["gf"],"properties":["force"],"values":[{"printable":"1","numeric":1}]}}};},
-          "wk",
-          { type: "literal", value: "wk", description: "\"wk\"" },
-          function(u) {return {"value": 1, "units": {"wk": 1}, "metadata": {"wk":{"isBase":false,"CODE":"WK","isMetric":"no","class":"iso1000","names":["week"],"printSymbols":["wk"],"properties":["time"],"values":[{"printable":"7","numeric":7}]}}};},
-          "Pa",
-          { type: "literal", value: "Pa", description: "\"Pa\"" },
-          function(u) {return {"value": 1, "units": {"Pa": 1}, "metadata": {"Pa":{"isBase":false,"CODE":"PAL","isMetric":"yes","class":"si","names":["Pascal"],"printSymbols":["Pa"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
-          "g%",
-          { type: "literal", value: "g%", description: "\"g%\"" },
-          function(u) {return {"value": 1, "units": {"g%": 1}, "metadata": {"g%":{"isBase":false,"CODE":"G%","isMetric":"yes","class":"chemical","names":["gram percent"],"printSymbols":["g%"],"properties":["mass concentration"],"values":[{"printable":"1","numeric":1}]}}};},
-          "sr",
-          { type: "literal", value: "sr", description: "\"sr\"" },
-          function(u) {return {"value": 1, "units": {"sr": 1}, "metadata": {"sr":{"isBase":false,"CODE":"SR","isMetric":"yes","class":"si","names":["steradian"],"printSymbols":["sr"],"properties":["solid angle"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Bd",
-          { type: "literal", value: "Bd", description: "\"Bd\"" },
-          function(u) {return {"value": 1, "units": {"Bd": 1}, "metadata": {"Bd":{"isBase":false,"CODE":"BD","isMetric":"yes","class":"infotech","names":["baud"],"printSymbols":["Bd"],"properties":["signal transmission rate"],"values":[{"printable":"1","numeric":1}]}}};},
-          "eq",
-          { type: "literal", value: "eq", description: "\"eq\"" },
-          function(u) {return {"value": 1, "units": {"eq": 1}, "metadata": {"eq":{"isBase":false,"CODE":"EQ","isMetric":"yes","class":"chemical","names":["equivalents"],"printSymbols":["eq"],"properties":["amount of substance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "By",
-          { type: "literal", value: "By", description: "\"By\"" },
-          function(u) {return {"value": 1, "units": {"By": 1}, "metadata": {"By":{"isBase":false,"CODE":"BY","isMetric":"yes","class":"infotech","names":["byte"],"printSymbols":["B"],"properties":["amount of information"],"values":[{"printable":"8","numeric":8}]}}};},
-          "Hz",
-          { type: "literal", value: "Hz", description: "\"Hz\"" },
-          function(u) {return {"value": 1, "units": {"Hz": 1}, "metadata": {"Hz":{"isBase":false,"CODE":"HZ","isMetric":"yes","class":"si","names":["Hertz"],"printSymbols":["Hz"],"properties":["frequency"],"values":[{"printable":"1","numeric":1}]}}};},
-          "''",
-          { type: "literal", value: "''", description: "\"''\"" },
-          function(u) {return {"value": 1, "units": {"''": 1}, "metadata": {"''":{"isBase":false,"CODE":"''","isMetric":"no","class":"iso1000","names":["second"],"printSymbols":["''"],"properties":["plane angle"],"values":[{"printable":"1","numeric":1}]}}};},
-          "pc",
-          { type: "literal", value: "pc", description: "\"pc\"" },
-          function(u) {return {"value": 1, "units": {"pc": 1}, "metadata": {"pc":{"isBase":false,"CODE":"PRS","isMetric":"yes","class":"iso1000","names":["parsec"],"printSymbols":["pc"],"properties":["length"],"values":[{"printable":"3.085678 &#215; 10<sup>16</sup>","numeric":30856780000000000}]}}};},
-          "eV",
-          { type: "literal", value: "eV", description: "\"eV\"" },
-          function(u) {return {"value": 1, "units": {"eV": 1}, "metadata": {"eV":{"isBase":false,"CODE":"EV","isMetric":"yes","class":"iso1000","names":["electronvolt"],"printSymbols":["eV"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Gy",
-          { type: "literal", value: "Gy", description: "\"Gy\"" },
-          function(u) {return {"value": 1, "units": {"Gy": 1}, "metadata": {"Gy":{"isBase":false,"CODE":"GY","isMetric":"yes","class":"si","names":["Gray"],"printSymbols":["Gy"],"properties":["energy dose"],"values":[{"printable":"1","numeric":1}]}}};},
-          "st",
-          { type: "literal", value: "st", description: "\"st\"" },
-          function(u) {return {"value": 1, "units": {"st": 1}, "metadata": {"st":{"isBase":false,"CODE":"STR","isMetric":"yes","class":"misc","names":["stere"],"printSymbols":["st"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "Sv",
-          { type: "literal", value: "Sv", description: "\"Sv\"" },
-          function(u) {return {"value": 1, "units": {"Sv": 1}, "metadata": {"Sv":{"isBase":false,"CODE":"SV","isMetric":"yes","class":"si","names":["Sievert"],"printSymbols":["Sv"],"properties":["dose equivalent"],"values":[{"printable":"1","numeric":1}]}}};},
-          "ar",
-          { type: "literal", value: "ar", description: "\"ar\"" },
-          function(u) {return {"value": 1, "units": {"ar": 1}, "metadata": {"ar":{"isBase":false,"CODE":"AR","isMetric":"yes","class":"iso1000","names":["are"],"printSymbols":["a"],"properties":["area"],"values":[{"printable":"100","numeric":100}]}}};},
-          "sb",
-          { type: "literal", value: "sb", description: "\"sb\"" },
-          function(u) {return {"value": 1, "units": {"sb": 1}, "metadata": {"sb":{"isBase":false,"CODE":"SB","isMetric":"yes","class":"cgs","names":["stilb"],"printSymbols":["sb"],"properties":["lum. intensity density"],"values":[{"printable":"1","numeric":1}]}}};},
-          "L",
-          { type: "literal", value: "L", description: "\"L\"" },
-          function(u) {return {"value": 1, "units": {"L": 1}, "metadata": {"L":{"isBase":false,"isMetric":"yes","class":"iso1000","names":["liter"],"printSymbols":["L"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "t",
-          { type: "literal", value: "t", description: "\"t\"" },
-          function(u) {return {"value": 1, "units": {"t": 1}, "metadata": {"t":{"isBase":false,"CODE":"TNE","isMetric":"yes","class":"iso1000","names":["tonne"],"printSymbols":["t"],"properties":["mass"],"values":[{"printable":"1 &#215; 10<sup>3</sup>","numeric":1000}]}}};},
-          "u",
-          { type: "literal", value: "u", description: "\"u\"" },
-          function(u) {return {"value": 1, "units": {"u": 1}, "metadata": {"u":{"isBase":false,"CODE":"AMU","isMetric":"yes","class":"iso1000","names":["unified atomic mass unit"],"printSymbols":["u"],"properties":["mass"],"values":[{"printable":"1.6605402 &#215; 10<sup>-24</sup>","numeric":1.6605402e-24}]}}};},
-          "P",
-          { type: "literal", value: "P", description: "\"P\"" },
-          function(u) {return {"value": 1, "units": {"P": 1}, "metadata": {"P":{"isBase":false,"CODE":"P","isMetric":"yes","class":"cgs","names":["Poise"],"printSymbols":["P"],"properties":["dynamic viscosity"],"values":[{"printable":"1","numeric":1}]}}};},
-          "G",
-          { type: "literal", value: "G", description: "\"G\"" },
-          function(u) {return {"value": 1, "units": {"G": 1}, "metadata": {"G":{"isBase":false,"CODE":"GS","isMetric":"yes","class":"cgs","names":["Gauss"],"printSymbols":["Gs"],"properties":["magnetic flux density"],"values":[{"printable":"1 &#215; 10<sup>-4</sup>","numeric":0.0001}]}}};},
-          "R",
-          { type: "literal", value: "R", description: "\"R\"" },
-          function(u) {return {"value": 1, "units": {"R": 1}, "metadata": {"R":{"isBase":false,"CODE":"ROE","isMetric":"yes","class":"cgs","names":["Roentgen"],"printSymbols":["R"],"properties":["ion dose"],"values":[{"printable":"2.58 &#215; 10<sup>-4</sup>","numeric":0.000258}]}}};},
-          "H",
-          { type: "literal", value: "H", description: "\"H\"" },
-          function(u) {return {"value": 1, "units": {"H": 1}, "metadata": {"H":{"isBase":false,"CODE":"H","isMetric":"yes","class":"si","names":["Henry"],"printSymbols":["H"],"properties":["inductance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "T",
-          { type: "literal", value: "T", description: "\"T\"" },
-          function(u) {return {"value": 1, "units": {"T": 1}, "metadata": {"T":{"isBase":false,"CODE":"T","isMetric":"yes","class":"si","names":["Tesla"],"printSymbols":["T"],"properties":["magnetic flux density"],"values":[{"printable":"1","numeric":1}]}}};},
-          "U",
-          { type: "literal", value: "U", description: "\"U\"" },
-          function(u) {return {"value": 1, "units": {"U": 1}, "metadata": {"U":{"isBase":false,"CODE":"U","isMetric":"yes","class":"chemical","names":["Unit"],"printSymbols":["U"],"properties":["catalytic activity"],"values":[{"printable":"1","numeric":1}]}}};},
-          "B",
-          { type: "literal", value: "B", description: "\"B\"" },
-          function(u) {return {"value": 1, "units": {"B": 1}, "metadata": {"B":{"isBase":false,"CODE":"B","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel"],"printSymbols":["B"],"properties":["level"],"values":[{"printable":"<function name=\"lg\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
-          "S",
-          { type: "literal", value: "S", description: "\"S\"" },
-          function(u) {return {"value": 1, "units": {"S": 1}, "metadata": {"S":{"isBase":false,"CODE":"SIE","isMetric":"yes","class":"si","names":["Siemens"],"printSymbols":["S"],"properties":["electric conductance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "m",
-          { type: "literal", value: "m", description: "\"m\"" },
-          function(u) {return {"value": 1, "units": {"m": 1}, "metadata": {"m":{"isBase":true,"CODE":"M","dim":"L","names":["meter"],"printSymbols":["m"],"properties":["length"]}}};},
-          "s",
-          { type: "literal", value: "s", description: "\"s\"" },
-          function(u) {return {"value": 1, "units": {"s": 1}, "metadata": {"s":{"isBase":true,"CODE":"S","dim":"T","names":["second"],"printSymbols":["s"],"properties":["time"]}}};},
-          "F",
-          { type: "literal", value: "F", description: "\"F\"" },
-          function(u) {return {"value": 1, "units": {"F": 1}, "metadata": {"F":{"isBase":false,"CODE":"F","isMetric":"yes","class":"si","names":["Farad"],"printSymbols":["F"],"properties":["electric capacitance"],"values":[{"printable":"1","numeric":1}]}}};},
-          "l",
-          { type: "literal", value: "l", description: "\"l\"" },
-          function(u) {return {"value": 1, "units": {"l": 1}, "metadata": {"l":{"isBase":false,"CODE":"L","isMetric":"yes","class":"iso1000","names":["liter"],"printSymbols":["l"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
-          "V",
-          { type: "literal", value: "V", description: "\"V\"" },
-          function(u) {return {"value": 1, "units": {"V": 1}, "metadata": {"V":{"isBase":false,"CODE":"V","isMetric":"yes","class":"si","names":["Volt"],"printSymbols":["V"],"properties":["electric potential"],"values":[{"printable":"1","numeric":1}]}}};},
-          "A",
-          { type: "literal", value: "A", description: "\"A\"" },
-          function(u) {return {"value": 1, "units": {"A": 1}, "metadata": {"A":{"isBase":false,"CODE":"A","isMetric":"yes","class":"si","names":["Ampère"],"printSymbols":["A"],"properties":["electric current"],"values":[{"printable":"1","numeric":1}]}}};},
-          "W",
-          { type: "literal", value: "W", description: "\"W\"" },
-          function(u) {return {"value": 1, "units": {"W": 1}, "metadata": {"W":{"isBase":false,"CODE":"W","isMetric":"yes","class":"si","names":["Watt"],"printSymbols":["W"],"properties":["power"],"values":[{"printable":"1","numeric":1}]}}};},
-          "K",
-          { type: "literal", value: "K", description: "\"K\"" },
-          function(u) {return {"value": 1, "units": {"K": 1}, "metadata": {"K":{"isBase":true,"CODE":"K","dim":"C","names":["Kelvin"],"printSymbols":["K"],"properties":["temperature"]}}};},
-          "C",
-          { type: "literal", value: "C", description: "\"C\"" },
-          function(u) {return {"value": 1, "units": {"C": 1}, "metadata": {"C":{"isBase":true,"CODE":"C","dim":"Q","names":["Coulomb"],"printSymbols":["C"],"properties":["electric charge"]}}};},
-          "b",
-          { type: "literal", value: "b", description: "\"b\"" },
-          function(u) {return {"value": 1, "units": {"b": 1}, "metadata": {"b":{"isBase":false,"CODE":"BRN","isMetric":"no","class":"misc","names":["barn"],"printSymbols":["b"],"properties":["action area"],"values":[{"printable":"100","numeric":100}]}}};},
-          "%",
-          { type: "literal", value: "%", description: "\"%\"" },
-          function(u) {return {"value": 1, "units": {"%": 1}, "metadata": {"%":{"isBase":false,"CODE":"%","isMetric":"no","class":"dimless","names":["percent"],"printSymbols":["%"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
-          "J",
-          { type: "literal", value: "J", description: "\"J\"" },
-          function(u) {return {"value": 1, "units": {"J": 1}, "metadata": {"J":{"isBase":false,"CODE":"J","isMetric":"yes","class":"si","names":["Joule"],"printSymbols":["J"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
-          "'",
-          { type: "literal", value: "'", description: "\"'\"" },
-          function(u) {return {"value": 1, "units": {"'": 1}, "metadata": {"'":{"isBase":false,"CODE":"'","isMetric":"no","class":"iso1000","names":["minute"],"printSymbols":["'"],"properties":["plane angle"],"values":[{"printable":"1","numeric":1}]}}};},
-          "h",
-          { type: "literal", value: "h", description: "\"h\"" },
-          function(u) {return {"value": 1, "units": {"h": 1}, "metadata": {"h":{"isBase":false,"CODE":"HR","isMetric":"no","class":"iso1000","names":["hour"],"printSymbols":["h"],"properties":["time"],"values":[{"printable":"60","numeric":60}]}}};},
-          "d",
-          { type: "literal", value: "d", description: "\"d\"" },
-          function(u) {return {"value": 1, "units": {"d": 1}, "metadata": {"d":{"isBase":false,"CODE":"D","isMetric":"no","class":"iso1000","names":["day"],"printSymbols":["d"],"properties":["time"],"values":[{"printable":"24","numeric":24}]}}};},
-          "N",
-          { type: "literal", value: "N", description: "\"N\"" },
-          function(u) {return {"value": 1, "units": {"N": 1}, "metadata": {"N":{"isBase":false,"CODE":"N","isMetric":"yes","class":"si","names":["Newton"],"printSymbols":["N"],"properties":["force"],"values":[{"printable":"1","numeric":1}]}}};},
-          "a",
-          { type: "literal", value: "a", description: "\"a\"" },
-          function(u) {return {"value": 1, "units": {"a": 1}, "metadata": {"a":{"isBase":false,"CODE":"ANN","isMetric":"no","class":"iso1000","names":["year"],"printSymbols":["a"],"properties":["time"],"values":[{"printable":"1","numeric":1}]}}};},
-          "g",
-          { type: "literal", value: "g", description: "\"g\"" },
-          function(u) {return {"value": 1, "units": {"g": 1}, "metadata": {"g":{"isBase":true,"CODE":"G","dim":"M","names":["gram"],"printSymbols":["g"],"properties":["mass"]}}};},
-          "Y",
-          { type: "literal", value: "Y", description: "\"Y\"" },
-          "Z",
-          { type: "literal", value: "Z", description: "\"Z\"" },
-          "E",
-          { type: "literal", value: "E", description: "\"E\"" },
-          "M",
-          { type: "literal", value: "M", description: "\"M\"" },
-          "k",
-          { type: "literal", value: "k", description: "\"k\"" },
-          "da",
-          { type: "literal", value: "da", description: "\"da\"" },
-          "c",
-          { type: "literal", value: "c", description: "\"c\"" },
-          "n",
-          { type: "literal", value: "n", description: "\"n\"" },
-          "p",
-          { type: "literal", value: "p", description: "\"p\"" },
-          "f",
-          { type: "literal", value: "f", description: "\"f\"" },
-          "z",
-          { type: "literal", value: "z", description: "\"z\"" },
-          "y",
-          { type: "literal", value: "y", description: "\"y\"" },
-          "Ki",
-          { type: "literal", value: "Ki", description: "\"Ki\"" },
-          "Mi",
-          { type: "literal", value: "Mi", description: "\"Mi\"" },
-          "Gi",
-          { type: "literal", value: "Gi", description: "\"Gi\"" },
-          "Ti",
-          { type: "literal", value: "Ti", description: "\"Ti\"" }
-        ],
-
-        peg$bytecode = [
-          peg$decode("!7!+' 4!6 !! %"),
-          peg$decode("!.\"\"\"2\"3#+2$7#+(%4\"6$\"! %$\"# !\"# !*# \"7#"),
-          peg$decode("!.%\"\"2%3&+-$7$+#%'\"%$\"# !\"# !*> \"!.\"\"\"2\"3#+-$7$+#%'\"%$\"# !\"# !"),
-          peg$decode("!7$+;$ '7\",#&7\"\"+)%4\"6(\"\"! %$\"# !\"# !"),
-          peg$decode("!7%+c$7&*# \" )+S% '7),#&7)\"+A%56* \"\"!)##\" !\" ++)%4$6,$\"#\"%$$# !$## !$\"# !\"# !*E \"!7(+:$ '7),#&7)\"+(%4\"6-\"!!%$\"# !\"# !"),
-          peg$decode("!7'+' 4!6.!! %*Y \"!./\"\"2/30+B$7#+8%.1\"\"2132+(%4#63#!!%$## !$\"# !\"# !*# \"7)"),
-          peg$decode("!04\"\"1!35*# \" )+3$7(+)%4\"66\"\"! %$\"# !\"# !"),
-          peg$decode("!7+*# \" )+K$7*+A%567 \"! )##\" !\" ++)%4#68#\"\"!%$## !$\"# !\"# !*# \"7*"),
-          peg$decode("! '09\"\"1!3:+,$,)&09\"\"1!3:\"\"\" !+i$.;\"\"2;3<*# \" )+S%7&*# \" )+C%56= #\"! )##\" !\" ++*%4$6>$##\"!%$$# !$## !$\"# !\"# !"),
-          peg$decode("!.?\"\"2?3@+t$ '0A\"\"1!3B+,$,)&0A\"\"1!3B\"\"\" !+O%.C\"\"2C3D+?%56E !!)##\" !\" ++(%4$6F$!\"%$$# !$## !$\"# !\"# !"),
-          peg$decode("!.G\"\"2G3H+' 4!6I!! %*\u1CCD \"!.J\"\"2J3K+' 4!6L!! %*\u1CB5 \"!.M\"\"2M3N+' 4!6O!! %*\u1C9D \"!.P\"\"2P3Q+' 4!6R!! %*\u1C85 \"!.S\"\"2S3T+' 4!6U!! %*\u1C6D \"!.V\"\"2V3W+' 4!6X!! %*\u1C55 \"!.Y\"\"2Y3Z+' 4!6[!! %*\u1C3D \"!.\\\"\"2\\3]+' 4!6^!! %*\u1C25 \"!._\"\"2_3`+' 4!6a!! %*\u1C0D \"!.b\"\"2b3c+' 4!6d!! %*\u1BF5 \"!.e\"\"2e3f+' 4!6g!! %*\u1BDD \"!.h\"\"2h3i+' 4!6j!! %*\u1BC5 \"!.k\"\"2k3l+' 4!6m!! %*\u1BAD \"!.n\"\"2n3o+' 4!6p!! %*\u1B95 \"!.q\"\"2q3r+' 4!6s!! %*\u1B7D \"!.t\"\"2t3u+' 4!6v!! %*\u1B65 \"!.w\"\"2w3x+' 4!6y!! %*\u1B4D \"!.z\"\"2z3{+' 4!6|!! %*\u1B35 \"!.}\"\"2}3~+' 4!6!! %*\u1B1D \"!.\x80\"\"2\x803\x81+' 4!6\x82!! %*\u1B05 \"!.\x83\"\"2\x833\x84+' 4!6\x85!! %*\u1AED \"!.\x86\"\"2\x863\x87+' 4!6\x88!! %*\u1AD5 \"!.\x89\"\"2\x893\x8A+' 4!6\x8B!! %*\u1ABD \"!.\x8C\"\"2\x8C3\x8D+' 4!6\x8E!! %*\u1AA5 \"!.\x8F\"\"2\x8F3\x90+' 4!6\x91!! %*\u1A8D \"!.\x92\"\"2\x923\x93+' 4!6\x94!! %*\u1A75 \"!.\x95\"\"2\x953\x96+' 4!6\x97!! %*\u1A5D \"!.\x98\"\"2\x983\x99+' 4!6\x9A!! %*\u1A45 \"!.\x9B\"\"2\x9B3\x9C+' 4!6\x9D!! %*\u1A2D \"!.\x9E\"\"2\x9E3\x9F+' 4!6\xA0!! %*\u1A15 \"!.\xA1\"\"2\xA13\xA2+' 4!6\xA3!! %*\u19FD \"!.\xA4\"\"2\xA43\xA5+' 4!6\xA6!! %*\u19E5 \"!.\xA7\"\"2\xA73\xA8+' 4!6\xA9!! %*\u19CD \"!.\xAA\"\"2\xAA3\xAB+' 4!6\xAC!! %*\u19B5 \"!.\xAD\"\"2\xAD3\xAE+' 4!6\xAF!! %*\u199D \"!.\xB0\"\"2\xB03\xB1+' 4!6\xB2!! %*\u1985 \"!.\xB3\"\"2\xB33\xB4+' 4!6\xB5!! %*\u196D \"!.\xB6\"\"2\xB63\xB7+' 4!6\xB8!! %*\u1955 \"!.\xB9\"\"2\xB93\xBA+' 4!6\xBB!! %*\u193D \"!.\xBC\"\"2\xBC3\xBD+' 4!6\xBE!! %*\u1925 \"!.\xBF\"\"2\xBF3\xC0+' 4!6\xC1!! %*\u190D \"!.\xC2\"\"2\xC23\xC3+' 4!6\xC4!! %*\u18F5 \"!.\xC5\"\"2\xC53\xC6+' 4!6\xC7!! %*\u18DD \"!.\xC8\"\"2\xC83\xC9+' 4!6\xCA!! %*\u18C5 \"!.\xCB\"\"2\xCB3\xCC+' 4!6\xCD!! %*\u18AD \"!.\xCE\"\"2\xCE3\xCF+' 4!6\xD0!! %*\u1895 \"!.\xD1\"\"2\xD13\xD2+' 4!6\xD3!! %*\u187D \"!.\xD4\"\"2\xD43\xD5+' 4!6\xD6!! %*\u1865 \"!.\xD7\"\"2\xD73\xD8+' 4!6\xD9!! %*\u184D \"!.\xDA\"\"2\xDA3\xDB+' 4!6\xDC!! %*\u1835 \"!.\xDD\"\"2\xDD3\xDE+' 4!6\xDF!! %*\u181D \"!.\xE0\"\"2\xE03\xE1+' 4!6\xE2!! %*\u1805 \"!.\xE3\"\"2\xE33\xE4+' 4!6\xE5!! %*\u17ED \"!.\xE6\"\"2\xE63\xE7+' 4!6\xE8!! %*\u17D5 \"!.\xE9\"\"2\xE93\xEA+' 4!6\xEB!! %*\u17BD \"!.\xEC\"\"2\xEC3\xED+' 4!6\xEE!! %*\u17A5 \"!.\xEF\"\"2\xEF3\xF0+' 4!6\xF1!! %*\u178D \"!.\xF2\"\"2\xF23\xF3+' 4!6\xF4!! %*\u1775 \"!.\xF5\"\"2\xF53\xF6+' 4!6\xF7!! %*\u175D \"!.\xF8\"\"2\xF83\xF9+' 4!6\xFA!! %*\u1745 \"!.\xFB\"\"2\xFB3\xFC+' 4!6\xFD!! %*\u172D \"!.\xFE\"\"2\xFE3\xFF+' 4!6\u0100!! %*\u1715 \"!.\u0101\"\"2\u01013\u0102+' 4!6\u0103!! %*\u16FD \"!.\u0104\"\"2\u01043\u0105+' 4!6\u0106!! %*\u16E5 \"!.\u0107\"\"2\u01073\u0108+' 4!6\u0109!! %*\u16CD \"!.\u010A\"\"2\u010A3\u010B+' 4!6\u010C!! %*\u16B5 \"!.\u010D\"\"2\u010D3\u010E+' 4!6\u010F!! %*\u169D \"!.\u0110\"\"2\u01103\u0111+' 4!6\u0112!! %*\u1685 \"!.\u0113\"\"2\u01133\u0114+' 4!6\u0115!! %*\u166D \"!.\u0116\"\"2\u01163\u0117+' 4!6\u0118!! %*\u1655 \"!.\u0119\"\"2\u01193\u011A+' 4!6\u011B!! %*\u163D \"!.\u011C\"\"2\u011C3\u011D+' 4!6\u011E!! %*\u1625 \"!.\u011F\"\"2\u011F3\u0120+' 4!6\u0121!! %*\u160D \"!.\u0122\"\"2\u01223\u0123+' 4!6\u0124!! %*\u15F5 \"!.\u0125\"\"2\u01253\u0126+' 4!6\u0127!! %*\u15DD \"!.\u0128\"\"2\u01283\u0129+' 4!6\u012A!! %*\u15C5 \"!.\u012B\"\"2\u012B3\u012C+' 4!6\u012D!! %*\u15AD \"!.\u012E\"\"2\u012E3\u012F+' 4!6\u0130!! %*\u1595 \"!.\u0131\"\"2\u01313\u0132+' 4!6\u0133!! %*\u157D \"!.\u0134\"\"2\u01343\u0135+' 4!6\u0136!! %*\u1565 \"!.\u0137\"\"2\u01373\u0138+' 4!6\u0139!! %*\u154D \"!.\u013A\"\"2\u013A3\u013B+' 4!6\u013C!! %*\u1535 \"!.\u013D\"\"2\u013D3\u013E+' 4!6\u013F!! %*\u151D \"!.\u0140\"\"2\u01403\u0141+' 4!6\u0142!! %*\u1505 \"!.\u0143\"\"2\u01433\u0144+' 4!6\u0145!! %*\u14ED \"!.\u0146\"\"2\u01463\u0147+' 4!6\u0148!! %*\u14D5 \"!.\u0149\"\"2\u01493\u014A+' 4!6\u014B!! %*\u14BD \"!.\u014C\"\"2\u014C3\u014D+' 4!6\u014E!! %*\u14A5 \"!.\u014F\"\"2\u014F3\u0150+' 4!6\u0151!! %*\u148D \"!.\u0152\"\"2\u01523\u0153+' 4!6\u0154!! %*\u1475 \"!.\u0155\"\"2\u01553\u0156+' 4!6\u0157!! %*\u145D \"!.\u0158\"\"2\u01583\u0159+' 4!6\u015A!! %*\u1445 \"!.\u015B\"\"2\u015B3\u015C+' 4!6\u015D!! %*\u142D \"!.\u015E\"\"2\u015E3\u015F+' 4!6\u0160!! %*\u1415 \"!.\u0161\"\"2\u01613\u0162+' 4!6\u0163!! %*\u13FD \"!.\u0164\"\"2\u01643\u0165+' 4!6\u0166!! %*\u13E5 \"!.\u0167\"\"2\u01673\u0168+' 4!6\u0169!! %*\u13CD \"!.\u016A\"\"2\u016A3\u016B+' 4!6\u016C!! %*\u13B5 \"!.\u016D\"\"2\u016D3\u016E+' 4!6\u016F!! %*\u139D \"!.\u0170\"\"2\u01703\u0171+' 4!6\u0172!! %*\u1385 \"!.\u0173\"\"2\u01733\u0174+' 4!6\u0175!! %*\u136D \"!.\u0176\"\"2\u01763\u0177+' 4!6\u0178!! %*\u1355 \"!.\u0179\"\"2\u01793\u017A+' 4!6\u017B!! %*\u133D \"!.\u017C\"\"2\u017C3\u017D+' 4!6\u017E!! %*\u1325 \"!.\u017F\"\"2\u017F3\u0180+' 4!6\u0181!! %*\u130D \"!.\u0182\"\"2\u01823\u0183+' 4!6\u0184!! %*\u12F5 \"!.\u0185\"\"2\u01853\u0186+' 4!6\u0187!! %*\u12DD \"!.\u0188\"\"2\u01883\u0189+' 4!6\u018A!! %*\u12C5 \"!.\u018B\"\"2\u018B3\u018C+' 4!6\u018D!! %*\u12AD \"!.\u018E\"\"2\u018E3\u018F+' 4!6\u0190!! %*\u1295 \"!.\u0191\"\"2\u01913\u0192+' 4!6\u0193!! %*\u127D \"!.\u0194\"\"2\u01943\u0195+' 4!6\u0196!! %*\u1265 \"!.\u0197\"\"2\u01973\u0198+' 4!6\u0199!! %*\u124D \"!.\u019A\"\"2\u019A3\u019B+' 4!6\u019C!! %*\u1235 \"!.\u019D\"\"2\u019D3\u019E+' 4!6\u019F!! %*\u121D \"!.\u01A0\"\"2\u01A03\u01A1+' 4!6\u01A2!! %*\u1205 \"!.\u01A3\"\"2\u01A33\u01A4+' 4!6\u01A5!! %*\u11ED \"!.\u01A6\"\"2\u01A63\u01A7+' 4!6\u01A8!! %*\u11D5 \"!.\u01A9\"\"2\u01A93\u01AA+' 4!6\u01AB!! %*\u11BD \"!.\u01AC\"\"2\u01AC3\u01AD+' 4!6\u01AE!! %*\u11A5 \"!.\u01AF\"\"2\u01AF3\u01B0+' 4!6\u01B1!! %*\u118D \"!.\u01B2\"\"2\u01B23\u01B3+' 4!6\u01B4!! %*\u1175 \"!.\u01B5\"\"2\u01B53\u01B6+' 4!6\u01B7!! %*\u115D \"!.\u01B8\"\"2\u01B83\u01B9+' 4!6\u01BA!! %*\u1145 \"!.\u01BB\"\"2\u01BB3\u01BC+' 4!6\u01BD!! %*\u112D \"!.\u01BE\"\"2\u01BE3\u01BF+' 4!6\u01C0!! %*\u1115 \"!.\u01C1\"\"2\u01C13\u01C2+' 4!6\u01C3!! %*\u10FD \"!.\u01C4\"\"2\u01C43\u01C5+' 4!6\u01C6!! %*\u10E5 \"!.\u01C7\"\"2\u01C73\u01C8+' 4!6\u01C9!! %*\u10CD \"!.\u01CA\"\"2\u01CA3\u01CB+' 4!6\u01CC!! %*\u10B5 \"!.\u01CD\"\"2\u01CD3\u01CE+' 4!6\u01CF!! %*\u109D \"!.\u01D0\"\"2\u01D03\u01D1+' 4!6\u01D2!! %*\u1085 \"!.\u01D3\"\"2\u01D33\u01D4+' 4!6\u01D5!! %*\u106D \"!.\u01D6\"\"2\u01D63\u01D7+' 4!6\u01D8!! %*\u1055 \"!.\u01D9\"\"2\u01D93\u01DA+' 4!6\u01DB!! %*\u103D \"!.\u01DC\"\"2\u01DC3\u01DD+' 4!6\u01DE!! %*\u1025 \"!.\u01DF\"\"2\u01DF3\u01E0+' 4!6\u01E1!! %*\u100D \"!.\u01E2\"\"2\u01E23\u01E3+' 4!6\u01E4!! %*\u0FF5 \"!.\u01E5\"\"2\u01E53\u01E6+' 4!6\u01E7!! %*\u0FDD \"!.\u01E8\"\"2\u01E83\u01E9+' 4!6\u01EA!! %*\u0FC5 \"!.\u01EB\"\"2\u01EB3\u01EC+' 4!6\u01ED!! %*\u0FAD \"!.\u01EE\"\"2\u01EE3\u01EF+' 4!6\u01F0!! %*\u0F95 \"!.\u01F1\"\"2\u01F13\u01F2+' 4!6\u01F3!! %*\u0F7D \"!.\u01F4\"\"2\u01F43\u01F5+' 4!6\u01F6!! %*\u0F65 \"!.\u01F7\"\"2\u01F73\u01F8+' 4!6\u01F9!! %*\u0F4D \"!.\u01FA\"\"2\u01FA3\u01FB+' 4!6\u01FC!! %*\u0F35 \"!.\u01FD\"\"2\u01FD3\u01FE+' 4!6\u01FF!! %*\u0F1D \"!.\u0200\"\"2\u02003\u0201+' 4!6\u0202!! %*\u0F05 \"!.\u0203\"\"2\u02033\u0204+' 4!6\u0205!! %*\u0EED \"!.\u0206\"\"2\u02063\u0207+' 4!6\u0208!! %*\u0ED5 \"!.\u0209\"\"2\u02093\u020A+' 4!6\u020B!! %*\u0EBD \"!.\u020C\"\"2\u020C3\u020D+' 4!6\u020E!! %*\u0EA5 \"!.\u020F\"\"2\u020F3\u0210+' 4!6\u0211!! %*\u0E8D \"!.\u0212\"\"2\u02123\u0213+' 4!6\u0214!! %*\u0E75 \"!.\u0215\"\"2\u02153\u0216+' 4!6\u0217!! %*\u0E5D \"!.\u0218\"\"2\u02183\u0219+' 4!6\u021A!! %*\u0E45 \"!.\u021B\"\"2\u021B3\u021C+' 4!6\u021D!! %*\u0E2D \"!.\u021E\"\"2\u021E3\u021F+' 4!6\u0220!! %*\u0E15 \"!.\u0221\"\"2\u02213\u0222+' 4!6\u0223!! %*\u0DFD \"!.\u0224\"\"2\u02243\u0225+' 4!6\u0226!! %*\u0DE5 \"!.\u0227\"\"2\u02273\u0228+' 4!6\u0229!! %*\u0DCD \"!.\u022A\"\"2\u022A3\u022B+' 4!6\u022C!! %*\u0DB5 \"!.\u022D\"\"2\u022D3\u022E+' 4!6\u022F!! %*\u0D9D \"!.\u0230\"\"2\u02303\u0231+' 4!6\u0232!! %*\u0D85 \"!.\u0233\"\"2\u02333\u0234+' 4!6\u0235!! %*\u0D6D \"!.\u0236\"\"2\u02363\u0237+' 4!6\u0238!! %*\u0D55 \"!.\u0239\"\"2\u02393\u023A+' 4!6\u023B!! %*\u0D3D \"!.\u023C\"\"2\u023C3\u023D+' 4!6\u023E!! %*\u0D25 \"!.\u023F\"\"2\u023F3\u0240+' 4!6\u0241!! %*\u0D0D \"!.\u0242\"\"2\u02423\u0243+' 4!6\u0244!! %*\u0CF5 \"!.\u0245\"\"2\u02453\u0246+' 4!6\u0247!! %*\u0CDD \"!.\u0248\"\"2\u02483\u0249+' 4!6\u024A!! %*\u0CC5 \"!.\u024B\"\"2\u024B3\u024C+' 4!6\u024D!! %*\u0CAD \"!.\u024E\"\"2\u024E3\u024F+' 4!6\u0250!! %*\u0C95 \"!.\u0251\"\"2\u02513\u0252+' 4!6\u0253!! %*\u0C7D \"!.\u0254\"\"2\u02543\u0255+' 4!6\u0256!! %*\u0C65 \"!.\u0257\"\"2\u02573\u0258+' 4!6\u0259!! %*\u0C4D \"!.\u025A\"\"2\u025A3\u025B+' 4!6\u025C!! %*\u0C35 \"!.\u025D\"\"2\u025D3\u025E+' 4!6\u025F!! %*\u0C1D \"!.\u0260\"\"2\u02603\u0261+' 4!6\u0262!! %*\u0C05 \"!.\u0263\"\"2\u02633\u0264+' 4!6\u0265!! %*\u0BED \"!.\u0266\"\"2\u02663\u0267+' 4!6\u0268!! %*\u0BD5 \"!.\u0269\"\"2\u02693\u026A+' 4!6\u026B!! %*\u0BBD \"!.\u026C\"\"2\u026C3\u026D+' 4!6\u026E!! %*\u0BA5 \"!.\u026F\"\"2\u026F3\u0270+' 4!6\u0271!! %*\u0B8D \"!.\u0272\"\"2\u02723\u0273+' 4!6\u0274!! %*\u0B75 \"!.\u0275\"\"2\u02753\u0276+' 4!6\u0277!! %*\u0B5D \"!.\u0278\"\"2\u02783\u0279+' 4!6\u027A!! %*\u0B45 \"!.\u027B\"\"2\u027B3\u027C+' 4!6\u027D!! %*\u0B2D \"!.\u027E\"\"2\u027E3\u027F+' 4!6\u0280!! %*\u0B15 \"!.\u0281\"\"2\u02813\u0282+' 4!6\u0283!! %*\u0AFD \"!.\u0284\"\"2\u02843\u0285+' 4!6\u0286!! %*\u0AE5 \"!.\u0287\"\"2\u02873\u0288+' 4!6\u0289!! %*\u0ACD \"!.\u028A\"\"2\u028A3\u028B+' 4!6\u028C!! %*\u0AB5 \"!.\u028D\"\"2\u028D3\u028E+' 4!6\u028F!! %*\u0A9D \"!.\u0290\"\"2\u02903\u0291+' 4!6\u0292!! %*\u0A85 \"!.\u0293\"\"2\u02933\u0294+' 4!6\u0295!! %*\u0A6D \"!.\u0296\"\"2\u02963\u0297+' 4!6\u0298!! %*\u0A55 \"!.\u0299\"\"2\u02993\u029A+' 4!6\u029B!! %*\u0A3D \"!.\u029C\"\"2\u029C3\u029D+' 4!6\u029E!! %*\u0A25 \"!.\u029F\"\"2\u029F3\u02A0+' 4!6\u02A1!! %*\u0A0D \"!.\u02A2\"\"2\u02A23\u02A3+' 4!6\u02A4!! %*\u09F5 \"!.\u02A5\"\"2\u02A53\u02A6+' 4!6\u02A7!! %*\u09DD \"!.\u02A8\"\"2\u02A83\u02A9+' 4!6\u02AA!! %*\u09C5 \"!.\u02AB\"\"2\u02AB3\u02AC+' 4!6\u02AD!! %*\u09AD \"!.\u02AE\"\"2\u02AE3\u02AF+' 4!6\u02B0!! %*\u0995 \"!.\u02B1\"\"2\u02B13\u02B2+' 4!6\u02B3!! %*\u097D \"!.\u02B4\"\"2\u02B43\u02B5+' 4!6\u02B6!! %*\u0965 \"!.\u02B7\"\"2\u02B73\u02B8+' 4!6\u02B9!! %*\u094D \"!.\u02BA\"\"2\u02BA3\u02BB+' 4!6\u02BC!! %*\u0935 \"!.\u02BD\"\"2\u02BD3\u02BE+' 4!6\u02BF!! %*\u091D \"!.\u02C0\"\"2\u02C03\u02C1+' 4!6\u02C2!! %*\u0905 \"!.\u02C3\"\"2\u02C33\u02C4+' 4!6\u02C5!! %*\u08ED \"!.\u02C6\"\"2\u02C63\u02C7+' 4!6\u02C8!! %*\u08D5 \"!.\u02C9\"\"2\u02C93\u02CA+' 4!6\u02CB!! %*\u08BD \"!.\u02CC\"\"2\u02CC3\u02CD+' 4!6\u02CE!! %*\u08A5 \"!.\u02CF\"\"2\u02CF3\u02D0+' 4!6\u02D1!! %*\u088D \"!.\u02D2\"\"2\u02D23\u02D3+' 4!6\u02D4!! %*\u0875 \"!.\u02D5\"\"2\u02D53\u02D6+' 4!6\u02D7!! %*\u085D \"!.\u02D8\"\"2\u02D83\u02D9+' 4!6\u02DA!! %*\u0845 \"!.\u02DB\"\"2\u02DB3\u02DC+' 4!6\u02DD!! %*\u082D \"!.\u02DE\"\"2\u02DE3\u02DF+' 4!6\u02E0!! %*\u0815 \"!.\u02E1\"\"2\u02E13\u02E2+' 4!6\u02E3!! %*\u07FD \"!.\u02E4\"\"2\u02E43\u02E5+' 4!6\u02E6!! %*\u07E5 \"!.\u02E7\"\"2\u02E73\u02E8+' 4!6\u02E9!! %*\u07CD \"!.\u02EA\"\"2\u02EA3\u02EB+' 4!6\u02EC!! %*\u07B5 \"!.\u02ED\"\"2\u02ED3\u02EE+' 4!6\u02EF!! %*\u079D \"!.\u02F0\"\"2\u02F03\u02F1+' 4!6\u02F2!! %*\u0785 \"!.\u02F3\"\"2\u02F33\u02F4+' 4!6\u02F5!! %*\u076D \"!.\u02F6\"\"2\u02F63\u02F7+' 4!6\u02F8!! %*\u0755 \"!.\u02F9\"\"2\u02F93\u02FA+' 4!6\u02FB!! %*\u073D \"!.\u02FC\"\"2\u02FC3\u02FD+' 4!6\u02FE!! %*\u0725 \"!.\u02FF\"\"2\u02FF3\u0300+' 4!6\u0301!! %*\u070D \"!.\u0302\"\"2\u03023\u0303+' 4!6\u0304!! %*\u06F5 \"!.\u0305\"\"2\u03053\u0306+' 4!6\u0307!! %*\u06DD \"!.\u0308\"\"2\u03083\u0309+' 4!6\u030A!! %*\u06C5 \"!.\u030B\"\"2\u030B3\u030C+' 4!6\u030D!! %*\u06AD \"!.\u030E\"\"2\u030E3\u030F+' 4!6\u0310!! %*\u0695 \"!.\u0311\"\"2\u03113\u0312+' 4!6\u0313!! %*\u067D \"!.\u0314\"\"2\u03143\u0315+' 4!6\u0316!! %*\u0665 \"!.\u0317\"\"2\u03173\u0318+' 4!6\u0319!! %*\u064D \"!.\u031A\"\"2\u031A3\u031B+' 4!6\u031C!! %*\u0635 \"!.\u031D\"\"2\u031D3\u031E+' 4!6\u031F!! %*\u061D \"!.\u0320\"\"2\u03203\u0321+' 4!6\u0322!! %*\u0605 \"!.\u0323\"\"2\u03233\u0324+' 4!6\u0325!! %*\u05ED \"!.\u0326\"\"2\u03263\u0327+' 4!6\u0328!! %*\u05D5 \"!.\u0329\"\"2\u03293\u032A+' 4!6\u032B!! %*\u05BD \"!.\u032C\"\"2\u032C3\u032D+' 4!6\u032E!! %*\u05A5 \"!.\u032F\"\"2\u032F3\u0330+' 4!6\u0331!! %*\u058D \"!.\u0332\"\"2\u03323\u0333+' 4!6\u0334!! %*\u0575 \"!.\u0335\"\"2\u03353\u0336+' 4!6\u0337!! %*\u055D \"!.\u0338\"\"2\u03383\u0339+' 4!6\u033A!! %*\u0545 \"!.\u033B\"\"2\u033B3\u033C+' 4!6\u033D!! %*\u052D \"!.\u033E\"\"2\u033E3\u033F+' 4!6\u0340!! %*\u0515 \"!.\u0341\"\"2\u03413\u0342+' 4!6\u0343!! %*\u04FD \"!.\u0344\"\"2\u03443\u0345+' 4!6\u0346!! %*\u04E5 \"!.\u0347\"\"2\u03473\u0348+' 4!6\u0349!! %*\u04CD \"!.\u034A\"\"2\u034A3\u034B+' 4!6\u034C!! %*\u04B5 \"!.\u034D\"\"2\u034D3\u034E+' 4!6\u034F!! %*\u049D \"!.\u0350\"\"2\u03503\u0351+' 4!6\u0352!! %*\u0485 \"!.\u0353\"\"2\u03533\u0354+' 4!6\u0355!! %*\u046D \"!.\u0356\"\"2\u03563\u0357+' 4!6\u0358!! %*\u0455 \"!.\u0359\"\"2\u03593\u035A+' 4!6\u035B!! %*\u043D \"!.\u035C\"\"2\u035C3\u035D+' 4!6\u035E!! %*\u0425 \"!.\u035F\"\"2\u035F3\u0360+' 4!6\u0361!! %*\u040D \"!.\u0362\"\"2\u03623\u0363+' 4!6\u0364!! %*\u03F5 \"!.\u0365\"\"2\u03653\u0366+' 4!6\u0367!! %*\u03DD \"!.\u0368\"\"2\u03683\u0369+' 4!6\u036A!! %*\u03C5 \"!.\u036B\"\"2\u036B3\u036C+' 4!6\u036D!! %*\u03AD \"!.\u036E\"\"2\u036E3\u036F+' 4!6\u0370!! %*\u0395 \"!.\u0371\"\"2\u03713\u0372+' 4!6\u0373!! %*\u037D \"!.\u0374\"\"2\u03743\u0375+' 4!6\u0376!! %*\u0365 \"!.\u0377\"\"2\u03773\u0378+' 4!6\u0379!! %*\u034D \"!.\u037A\"\"2\u037A3\u037B+' 4!6\u037C!! %*\u0335 \"!.\u037D\"\"2\u037D3\u037E+' 4!6\u037F!! %*\u031D \"!.\u0380\"\"2\u03803\u0381+' 4!6\u0382!! %*\u0305 \"!.\u0383\"\"2\u03833\u0384+' 4!6\u0385!! %*\u02ED \"!.\u0386\"\"2\u03863\u0387+' 4!6\u0388!! %*\u02D5 \"!.\u0389\"\"2\u03893\u038A+' 4!6\u038B!! %*\u02BD \"!.\u038C\"\"2\u038C3\u038D+' 4!6\u038E!! %*\u02A5 \"!.\u038F\"\"2\u038F3\u0390+' 4!6\u0391!! %*\u028D \"!.\u0392\"\"2\u03923\u0393+' 4!6\u0394!! %*\u0275 \"!.\u0395\"\"2\u03953\u0396+' 4!6\u0397!! %*\u025D \"!.\u0398\"\"2\u03983\u0399+' 4!6\u039A!! %*\u0245 \"!.\u039B\"\"2\u039B3\u039C+' 4!6\u039D!! %*\u022D \"!.\u039E\"\"2\u039E3\u039F+' 4!6\u03A0!! %*\u0215 \"!.\u03A1\"\"2\u03A13\u03A2+' 4!6\u03A3!! %*\u01FD \"!.\u03A4\"\"2\u03A43\u03A5+' 4!6\u03A6!! %*\u01E5 \"!.\u03A7\"\"2\u03A73\u03A8+' 4!6\u03A9!! %*\u01CD \"!.\u03AA\"\"2\u03AA3\u03AB+' 4!6\u03AC!! %*\u01B5 \"!.\u03AD\"\"2\u03AD3\u03AE+' 4!6\u03AF!! %*\u019D \"!.\u03B0\"\"2\u03B03\u03B1+' 4!6\u03B2!! %*\u0185 \"!.\u03B3\"\"2\u03B33\u03B4+' 4!6\u03B5!! %*\u016D \"!.\u03B6\"\"2\u03B63\u03B7+' 4!6\u03B8!! %*\u0155 \"!.\u03B9\"\"2\u03B93\u03BA+' 4!6\u03BB!! %*\u013D \"!.\u03BC\"\"2\u03BC3\u03BD+' 4!6\u03BE!! %*\u0125 \"!.\u03BF\"\"2\u03BF3\u03C0+' 4!6\u03C1!! %*\u010D \"!.\u03C2\"\"2\u03C23\u03C3+' 4!6\u03C4!! %*\xF5 \"!.\u03C5\"\"2\u03C53\u03C6+' 4!6\u03C7!! %*\xDD \"!.\u03C8\"\"2\u03C83\u03C9+' 4!6\u03CA!! %*\xC5 \"!.\u03CB\"\"2\u03CB3\u03CC+' 4!6\u03CD!! %*\xAD \"!.\u03CE\"\"2\u03CE3\u03CF+' 4!6\u03D0!! %*\x95 \"!.\u03D1\"\"2\u03D13\u03D2+' 4!6\u03D3!! %*} \"!.\u03D4\"\"2\u03D43\u03D5+' 4!6\u03D6!! %*e \"!.\u03D7\"\"2\u03D73\u03D8+' 4!6\u03D9!! %*M \"!.\u03DA\"\"2\u03DA3\u03DB+' 4!6\u03DC!! %*5 \"!.\u03DD\"\"2\u03DD3\u03DE+' 4!6\u03DF!! %"),
-          peg$decode(".\u03E0\"\"2\u03E03\u03E1*\u0131 \".\u03E2\"\"2\u03E23\u03E3*\u0125 \".\u03E4\"\"2\u03E43\u03E5*\u0119 \".\u0392\"\"2\u03923\u0393*\u010D \".\u039E\"\"2\u039E3\u039F*\u0101 \".\u0395\"\"2\u03953\u0396*\xF5 \".\u03E6\"\"2\u03E63\u03E7*\xE9 \".\u03E8\"\"2\u03E83\u03E9*\xDD \".\u03D1\"\"2\u03D13\u03D2*\xD1 \".\u03EA\"\"2\u03EA3\u03EB*\xC5 \".\u03D4\"\"2\u03D43\u03D5*\xB9 \".\u03EC\"\"2\u03EC3\u03ED*\xAD \".\u03AA\"\"2\u03AA3\u03AB*\xA1 \".\u038F\"\"2\u038F3\u0390*\x95 \".\u03EE\"\"2\u03EE3\u03EF*\x89 \".\u03F0\"\"2\u03F03\u03F1*} \".\u03F2\"\"2\u03F23\u03F3*q \".\u03DA\"\"2\u03DA3\u03DB*e \".\u03F4\"\"2\u03F43\u03F5*Y \".\u03F6\"\"2\u03F63\u03F7*M \".\u03F8\"\"2\u03F83\u03F9*A \".\u03FA\"\"2\u03FA3\u03FB*5 \".\u03FC\"\"2\u03FC3\u03FD*) \".\u03FE\"\"2\u03FE3\u03FF")
-        ],
-
-        peg$currPos          = 0,
-        peg$reportedPos      = 0,
-        peg$cachedPos        = 0,
-        peg$cachedPosDetails = { line: 1, column: 1, seenCR: false },
-        peg$maxFailPos       = 0,
-        peg$maxFailExpected  = [],
-        peg$silentFails      = 0,
-
-        peg$result;
-
-    if ("startRule" in options) {
-      if (!(options.startRule in peg$startRuleIndices)) {
-        throw new Error("Can't start parsing from rule \"" + options.startRule + "\".");
-      }
-
-      peg$startRuleIndex = peg$startRuleIndices[options.startRule];
-    }
-
-    function text() {
-      return input.substring(peg$reportedPos, peg$currPos);
-    }
-
-    function offset() {
-      return peg$reportedPos;
-    }
-
-    function line() {
-      return peg$computePosDetails(peg$reportedPos).line;
-    }
-
-    function column() {
-      return peg$computePosDetails(peg$reportedPos).column;
-    }
-
-    function expected(description) {
-      throw peg$buildException(
-        null,
-        [{ type: "other", description: description }],
-        peg$reportedPos
-      );
-    }
-
-    function error(message) {
-      throw peg$buildException(message, null, peg$reportedPos);
-    }
-
-    function peg$computePosDetails(pos) {
-      function advance(details, startPos, endPos) {
-        var p, ch;
-
-        for (p = startPos; p < endPos; p++) {
-          ch = input.charAt(p);
-          if (ch === "\n") {
-            if (!details.seenCR) { details.line++; }
-            details.column = 1;
-            details.seenCR = false;
-          } else if (ch === "\r" || ch === "\u2028" || ch === "\u2029") {
-            details.line++;
-            details.column = 1;
-            details.seenCR = true;
-          } else {
-            details.column++;
-            details.seenCR = false;
-          }
-        }
-      }
-
-      if (peg$cachedPos !== pos) {
-        if (peg$cachedPos > pos) {
-          peg$cachedPos = 0;
-          peg$cachedPosDetails = { line: 1, column: 1, seenCR: false };
-        }
-        advance(peg$cachedPosDetails, peg$cachedPos, pos);
-        peg$cachedPos = pos;
-      }
-
-      return peg$cachedPosDetails;
-    }
-
-    function peg$fail(expected) {
-      if (peg$currPos < peg$maxFailPos) { return; }
-
-      if (peg$currPos > peg$maxFailPos) {
-        peg$maxFailPos = peg$currPos;
-        peg$maxFailExpected = [];
-      }
-
-      peg$maxFailExpected.push(expected);
-    }
-
-    function peg$buildException(message, expected, pos) {
-      function cleanupExpected(expected) {
-        var i = 1;
-
-        expected.sort(function(a, b) {
-          if (a.description < b.description) {
-            return -1;
-          } else if (a.description > b.description) {
-            return 1;
-          } else {
-            return 0;
-          }
-        });
-
-        while (i < expected.length) {
-          if (expected[i - 1] === expected[i]) {
-            expected.splice(i, 1);
-          } else {
-            i++;
-          }
-        }
-      }
-
-      function buildMessage(expected, found) {
-        function stringEscape(s) {
-          function hex(ch) { return ch.charCodeAt(0).toString(16).toUpperCase(); }
-
-          return s
-            .replace(/\\/g,   '\\\\')
-            .replace(/"/g,    '\\"')
-            .replace(/\x08/g, '\\b')
-            .replace(/\t/g,   '\\t')
-            .replace(/\n/g,   '\\n')
-            .replace(/\f/g,   '\\f')
-            .replace(/\r/g,   '\\r')
-            .replace(/[\x00-\x07\x0B\x0E\x0F]/g, function(ch) { return '\\x0' + hex(ch); })
-            .replace(/[\x10-\x1F\x80-\xFF]/g,    function(ch) { return '\\x'  + hex(ch); })
-            .replace(/[\u0180-\u0FFF]/g,         function(ch) { return '\\u0' + hex(ch); })
-            .replace(/[\u1080-\uFFFF]/g,         function(ch) { return '\\u'  + hex(ch); });
-        }
-
-        var expectedDescs = new Array(expected.length),
-            expectedDesc, foundDesc, i;
-
-        for (i = 0; i < expected.length; i++) {
-          expectedDescs[i] = expected[i].description;
-        }
-
-        expectedDesc = expected.length > 1
-          ? expectedDescs.slice(0, -1).join(", ")
-              + " or "
-              + expectedDescs[expected.length - 1]
-          : expectedDescs[0];
-
-        foundDesc = found ? "\"" + stringEscape(found) + "\"" : "end of input";
-
-        return "Expected " + expectedDesc + " but " + foundDesc + " found.";
-      }
-
-      var posDetails = peg$computePosDetails(pos),
-          found      = pos < input.length ? input.charAt(pos) : null;
-
-      if (expected !== null) {
-        cleanupExpected(expected);
-      }
-
-      return new SyntaxError(
-        message !== null ? message : buildMessage(expected, found),
-        expected,
-        found,
-        pos,
-        posDetails.line,
-        posDetails.column
-      );
-    }
-
-    function peg$decode(s) {
-      var bc = new Array(s.length), i;
-
-      for (i = 0; i < s.length; i++) {
-        bc[i] = s.charCodeAt(i) - 32;
-      }
-
-      return bc;
-    }
-
-    function peg$parseRule(index) {
-      var bc    = peg$bytecode[index],
-          ip    = 0,
-          ips   = [],
-          end   = bc.length,
-          ends  = [],
-          stack = [],
-          params, i;
-
-      function protect(object) {
-        return Object.prototype.toString.apply(object) === "[object Array]" ? [] : object;
-      }
-
-      while (true) {
-        while (ip < end) {
-          switch (bc[ip]) {
-            case 0:
-              stack.push(protect(peg$consts[bc[ip + 1]]));
-              ip += 2;
-              break;
-
-            case 1:
-              stack.push(peg$currPos);
-              ip++;
-              break;
-
-            case 2:
-              stack.pop();
-              ip++;
-              break;
-
-            case 3:
-              peg$currPos = stack.pop();
-              ip++;
-              break;
-
-            case 4:
-              stack.length -= bc[ip + 1];
-              ip += 2;
-              break;
-
-            case 5:
-              stack.splice(-2, 1);
-              ip++;
-              break;
-
-            case 6:
-              stack[stack.length - 2].push(stack.pop());
-              ip++;
-              break;
-
-            case 7:
-              stack.push(stack.splice(stack.length - bc[ip + 1], bc[ip + 1]));
-              ip += 2;
-              break;
-
-            case 8:
-              stack.pop();
-              stack.push(input.substring(stack[stack.length - 1], peg$currPos));
-              ip++;
-              break;
-
-            case 9:
-              ends.push(end);
-              ips.push(ip + 3 + bc[ip + 1] + bc[ip + 2]);
-
-              if (stack[stack.length - 1]) {
-                end = ip + 3 + bc[ip + 1];
-                ip += 3;
-              } else {
-                end = ip + 3 + bc[ip + 1] + bc[ip + 2];
-                ip += 3 + bc[ip + 1];
-              }
-
-              break;
-
-            case 10:
-              ends.push(end);
-              ips.push(ip + 3 + bc[ip + 1] + bc[ip + 2]);
-
-              if (stack[stack.length - 1] === peg$FAILED) {
-                end = ip + 3 + bc[ip + 1];
-                ip += 3;
-              } else {
-                end = ip + 3 + bc[ip + 1] + bc[ip + 2];
-                ip += 3 + bc[ip + 1];
-              }
-
-              break;
-
-            case 11:
-              ends.push(end);
-              ips.push(ip + 3 + bc[ip + 1] + bc[ip + 2]);
-
-              if (stack[stack.length - 1] !== peg$FAILED) {
-                end = ip + 3 + bc[ip + 1];
-                ip += 3;
-              } else {
-                end = ip + 3 + bc[ip + 1] + bc[ip + 2];
-                ip += 3 + bc[ip + 1];
-              }
-
-              break;
-
-            case 12:
-              if (stack[stack.length - 1] !== peg$FAILED) {
-                ends.push(end);
-                ips.push(ip);
-
-                end = ip + 2 + bc[ip + 1];
-                ip += 2;
-              } else {
-                ip += 2 + bc[ip + 1];
-              }
-
-              break;
-
-            case 13:
-              ends.push(end);
-              ips.push(ip + 3 + bc[ip + 1] + bc[ip + 2]);
-
-              if (input.length > peg$currPos) {
-                end = ip + 3 + bc[ip + 1];
-                ip += 3;
-              } else {
-                end = ip + 3 + bc[ip + 1] + bc[ip + 2];
-                ip += 3 + bc[ip + 1];
-              }
-
-              break;
-
-            case 14:
-              ends.push(end);
-              ips.push(ip + 4 + bc[ip + 2] + bc[ip + 3]);
-
-              if (input.substr(peg$currPos, peg$consts[bc[ip + 1]].length) === peg$consts[bc[ip + 1]]) {
-                end = ip + 4 + bc[ip + 2];
-                ip += 4;
-              } else {
-                end = ip + 4 + bc[ip + 2] + bc[ip + 3];
-                ip += 4 + bc[ip + 2];
-              }
-
-              break;
-
-            case 15:
-              ends.push(end);
-              ips.push(ip + 4 + bc[ip + 2] + bc[ip + 3]);
-
-              if (input.substr(peg$currPos, peg$consts[bc[ip + 1]].length).toLowerCase() === peg$consts[bc[ip + 1]]) {
-                end = ip + 4 + bc[ip + 2];
-                ip += 4;
-              } else {
-                end = ip + 4 + bc[ip + 2] + bc[ip + 3];
-                ip += 4 + bc[ip + 2];
-              }
-
-              break;
-
-            case 16:
-              ends.push(end);
-              ips.push(ip + 4 + bc[ip + 2] + bc[ip + 3]);
-
-              if (peg$consts[bc[ip + 1]].test(input.charAt(peg$currPos))) {
-                end = ip + 4 + bc[ip + 2];
-                ip += 4;
-              } else {
-                end = ip + 4 + bc[ip + 2] + bc[ip + 3];
-                ip += 4 + bc[ip + 2];
-              }
-
-              break;
-
-            case 17:
-              stack.push(input.substr(peg$currPos, bc[ip + 1]));
-              peg$currPos += bc[ip + 1];
-              ip += 2;
-              break;
-
-            case 18:
-              stack.push(peg$consts[bc[ip + 1]]);
-              peg$currPos += peg$consts[bc[ip + 1]].length;
-              ip += 2;
-              break;
-
-            case 19:
-              stack.push(peg$FAILED);
-              if (peg$silentFails === 0) {
-                peg$fail(peg$consts[bc[ip + 1]]);
-              }
-              ip += 2;
-              break;
-
-            case 20:
-              peg$reportedPos = stack[stack.length - 1 - bc[ip + 1]];
-              ip += 2;
-              break;
-
-            case 21:
-              peg$reportedPos = peg$currPos;
-              ip++;
-              break;
-
-            case 22:
-              params = bc.slice(ip + 4, ip + 4 + bc[ip + 3]);
-              for (i = 0; i < bc[ip + 3]; i++) {
-                params[i] = stack[stack.length - 1 - params[i]];
-              }
-
-              stack.splice(
-                stack.length - bc[ip + 2],
-                bc[ip + 2],
-                peg$consts[bc[ip + 1]].apply(null, params)
-              );
-
-              ip += 4 + bc[ip + 3];
-              break;
-
-            case 23:
-              stack.push(peg$parseRule(bc[ip + 1]));
-              ip += 2;
-              break;
-
-            case 24:
-              peg$silentFails++;
-              ip++;
-              break;
-
-            case 25:
-              peg$silentFails--;
-              ip++;
-              break;
-
-            default:
-              throw new Error("Invalid opcode: " + bc[ip] + ".");
-          }
-        }
-
-        if (ends.length > 0) {
-          end = ends.pop();
-          ip = ips.pop();
-        } else {
-          break;
-        }
-      }
-
-      return stack[0];
-    }
-
-
-      helpers = require('../lib/helpers');
-      prefixes = require('./prefixes.json');
-      prefixMetadata = require('./prefixMetadata.json');
-      unitMetadata = require('./unitMetadata.json');
-      metrics = require('./metrics.json');
-      multiply = helpers.multiply;
-      topower = helpers.topower;
-      cleanup = helpers.cleanup;
-      ismetric = helpers.ismetric(metrics);
-
-
-    peg$result = peg$parseRule(peg$startRuleIndex);
-
-    if (peg$result !== peg$FAILED && peg$currPos === input.length) {
-      return peg$result;
-    } else {
-      if (peg$result !== peg$FAILED && peg$currPos < input.length) {
-        peg$fail({ type: "end", description: "end of input" });
-      }
-
-      throw peg$buildException(null, peg$maxFailExpected, peg$maxFailPos);
-    }
-  }
-
-  return {
-    SyntaxError: SyntaxError,
-    parse:       parse
-  };
-})();
-
-},{"../lib/helpers":179,"./metrics.json":174,"./prefixMetadata.json":175,"./prefixes.json":176,"./unitMetadata.json":178}],178:[function(require,module,exports){
-module.exports={
-  "10*": {
-    "isBase": false,
-    "CODE": "10*",
-    "isMetric": "no",
-    "class": "dimless",
-    "names": [
-      "the number ten for arbitrary powers"
-    ],
-    "printSymbols": [
-      "10"
-    ],
-    "properties": [
-      "number"
-    ],
-    "values": [
-      {
-        "printable": "10",
-        "numeric": 10
-      }
-    ]
-  },
-  "10^": {
-    "isBase": false,
-    "CODE": "10^",
-    "isMetric": "no",
-    "class": "dimless",
-    "names": [
-      "the number ten for arbitrary powers"
-    ],
-    "printSymbols": [
-      "10"
-    ],
-    "properties": [
-      "number"
-    ],
-    "values": [
-      {
-        "printable": "10",
-        "numeric": 10
-      }
-    ]
-  },
-  "[pi]": {
-    "isBase": false,
-    "CODE": "[PI]",
-    "isMetric": "no",
-    "class": "dimless",
-    "names": [
-      "the number pi"
-    ],
-    "printSymbols": [
-      "&#960;"
-    ],
-    "properties": [
-      "number"
-    ],
-    "values": [
-      {
-        "printable": "&#960;",
-        "numeric": 3.141592653589793
-      }
-    ]
-  },
-  "%": {
-    "isBase": false,
-    "CODE": "%",
-    "isMetric": "no",
-    "class": "dimless",
-    "names": [
-      "percent"
-    ],
-    "printSymbols": [
-      "%"
-    ],
-    "properties": [
-      "fraction"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[ppth]": {
-    "isBase": false,
-    "CODE": "[PPTH]",
-    "isMetric": "no",
-    "class": "dimless",
-    "names": [
-      "parts per thousand"
-    ],
-    "printSymbols": [
-      "ppth"
-    ],
-    "properties": [
-      "fraction"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[ppm]": {
-    "isBase": false,
-    "CODE": "[PPM]",
-    "isMetric": "no",
-    "class": "dimless",
-    "names": [
-      "parts per million"
-    ],
-    "printSymbols": [
-      "ppm"
-    ],
-    "properties": [
-      "fraction"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[ppb]": {
-    "isBase": false,
-    "CODE": "[PPB]",
-    "isMetric": "no",
-    "class": "dimless",
-    "names": [
-      "parts per billion"
-    ],
-    "printSymbols": [
-      "ppb"
-    ],
-    "properties": [
-      "fraction"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[pptr]": {
-    "isBase": false,
-    "CODE": "[PPTR]",
-    "isMetric": "no",
-    "class": "dimless",
-    "names": [
-      "parts per trillion"
-    ],
-    "printSymbols": [
-      "pptr"
-    ],
-    "properties": [
-      "fraction"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "mol": {
-    "isBase": false,
-    "CODE": "MOL",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "mole"
-    ],
-    "printSymbols": [
-      "mol"
-    ],
-    "properties": [
-      "amount of substance"
-    ],
-    "values": [
-      {
-        "printable": "6.0221367",
-        "numeric": 6.0221367
-      }
-    ]
-  },
-  "sr": {
-    "isBase": false,
-    "CODE": "SR",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "steradian"
-    ],
-    "printSymbols": [
-      "sr"
-    ],
-    "properties": [
-      "solid angle"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Hz": {
-    "isBase": false,
-    "CODE": "HZ",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Hertz"
-    ],
-    "printSymbols": [
-      "Hz"
-    ],
-    "properties": [
-      "frequency"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "N": {
-    "isBase": false,
-    "CODE": "N",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Newton"
-    ],
-    "printSymbols": [
-      "N"
-    ],
-    "properties": [
-      "force"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Pa": {
-    "isBase": false,
-    "CODE": "PAL",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Pascal"
-    ],
-    "printSymbols": [
-      "Pa"
-    ],
-    "properties": [
-      "pressure"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "J": {
-    "isBase": false,
-    "CODE": "J",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Joule"
-    ],
-    "printSymbols": [
-      "J"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "W": {
-    "isBase": false,
-    "CODE": "W",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Watt"
-    ],
-    "printSymbols": [
-      "W"
-    ],
-    "properties": [
-      "power"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "A": {
-    "isBase": false,
-    "CODE": "A",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Ampère"
-    ],
-    "printSymbols": [
-      "A"
-    ],
-    "properties": [
-      "electric current"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "V": {
-    "isBase": false,
-    "CODE": "V",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Volt"
-    ],
-    "printSymbols": [
-      "V"
-    ],
-    "properties": [
-      "electric potential"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "F": {
-    "isBase": false,
-    "CODE": "F",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Farad"
-    ],
-    "printSymbols": [
-      "F"
-    ],
-    "properties": [
-      "electric capacitance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Ohm": {
-    "isBase": false,
-    "CODE": "OHM",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Ohm"
-    ],
-    "printSymbols": [
-      "&#937;"
-    ],
-    "properties": [
-      "electric resistance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "S": {
-    "isBase": false,
-    "CODE": "SIE",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Siemens"
-    ],
-    "printSymbols": [
-      "S"
-    ],
-    "properties": [
-      "electric conductance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Wb": {
-    "isBase": false,
-    "CODE": "WB",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Weber"
-    ],
-    "printSymbols": [
-      "Wb"
-    ],
-    "properties": [
-      "magentic flux"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Cel": {
-    "isBase": false,
-    "CODE": "CEL",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "si",
-    "names": [
-      "degree Celsius"
-    ],
-    "printSymbols": [
-      "&#176;C"
-    ],
-    "properties": [
-      "temperature"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"Cel\" value=\"1\" Unit=\"K\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "T": {
-    "isBase": false,
-    "CODE": "T",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Tesla"
-    ],
-    "printSymbols": [
-      "T"
-    ],
-    "properties": [
-      "magnetic flux density"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "H": {
-    "isBase": false,
-    "CODE": "H",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Henry"
-    ],
-    "printSymbols": [
-      "H"
-    ],
-    "properties": [
-      "inductance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "lm": {
-    "isBase": false,
-    "CODE": "LM",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "lumen"
-    ],
-    "printSymbols": [
-      "lm"
-    ],
-    "properties": [
-      "luminous flux"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "lx": {
-    "isBase": false,
-    "CODE": "LX",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "lux"
-    ],
-    "printSymbols": [
-      "lx"
-    ],
-    "properties": [
-      "illuminance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Bq": {
-    "isBase": false,
-    "CODE": "BQ",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Becquerel"
-    ],
-    "printSymbols": [
-      "Bq"
-    ],
-    "properties": [
-      "radioactivity"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Gy": {
-    "isBase": false,
-    "CODE": "GY",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Gray"
-    ],
-    "printSymbols": [
-      "Gy"
-    ],
-    "properties": [
-      "energy dose"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Sv": {
-    "isBase": false,
-    "CODE": "SV",
-    "isMetric": "yes",
-    "class": "si",
-    "names": [
-      "Sievert"
-    ],
-    "printSymbols": [
-      "Sv"
-    ],
-    "properties": [
-      "dose equivalent"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "gon": {
-    "isBase": false,
-    "CODE": "GON",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "gon",
-      "grade"
-    ],
-    "printSymbols": [
-      "&#9633;<sup>g</sup>"
-    ],
-    "properties": [
-      "plane angle"
-    ],
-    "values": [
-      {
-        "printable": "0.9",
-        "numeric": 0.9
-      }
-    ]
-  },
-  "deg": {
-    "isBase": false,
-    "CODE": "DEG",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "degree"
-    ],
-    "printSymbols": [
-      "&#176;"
-    ],
-    "properties": [
-      "plane angle"
-    ],
-    "values": [
-      {
-        "printable": "2",
-        "numeric": 2
-      }
-    ]
-  },
-  "'": {
-    "isBase": false,
-    "CODE": "'",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "minute"
-    ],
-    "printSymbols": [
-      "'"
-    ],
-    "properties": [
-      "plane angle"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "''": {
-    "isBase": false,
-    "CODE": "''",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "second"
-    ],
-    "printSymbols": [
-      "''"
-    ],
-    "properties": [
-      "plane angle"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "l": {
-    "isBase": false,
-    "CODE": "L",
-    "isMetric": "yes",
-    "class": "iso1000",
-    "names": [
-      "liter"
-    ],
-    "printSymbols": [
-      "l"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "L": {
-    "isBase": false,
-    "isMetric": "yes",
-    "class": "iso1000",
-    "names": [
-      "liter"
-    ],
-    "printSymbols": [
-      "L"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "ar": {
-    "isBase": false,
-    "CODE": "AR",
-    "isMetric": "yes",
-    "class": "iso1000",
-    "names": [
-      "are"
-    ],
-    "printSymbols": [
-      "a"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "100",
-        "numeric": 100
-      }
-    ]
-  },
-  "min": {
-    "isBase": false,
-    "CODE": "MIN",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "minute"
-    ],
-    "printSymbols": [
-      "min"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "60",
-        "numeric": 60
-      }
-    ]
-  },
-  "h": {
-    "isBase": false,
-    "CODE": "HR",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "hour"
-    ],
-    "printSymbols": [
-      "h"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "60",
-        "numeric": 60
-      }
-    ]
-  },
-  "d": {
-    "isBase": false,
-    "CODE": "D",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "day"
-    ],
-    "printSymbols": [
-      "d"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "24",
-        "numeric": 24
-      }
-    ]
-  },
-  "a_t": {
-    "isBase": false,
-    "CODE": "ANN_T",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "tropical year"
-    ],
-    "printSymbols": [
-      "a<sub>t</sub>"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "365.24219",
-        "numeric": 365.24219
-      }
-    ]
-  },
-  "a_j": {
-    "isBase": false,
-    "CODE": "ANN_J",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "mean Julian year"
-    ],
-    "printSymbols": [
-      "a<sub>j</sub>"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "365.25",
-        "numeric": 365.25
-      }
-    ]
-  },
-  "a_g": {
-    "isBase": false,
-    "CODE": "ANN_G",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "mean Gregorian year"
-    ],
-    "printSymbols": [
-      "a<sub>g</sub>"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "365.2425",
-        "numeric": 365.2425
-      }
-    ]
-  },
-  "a": {
-    "isBase": false,
-    "CODE": "ANN",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "year"
-    ],
-    "printSymbols": [
-      "a"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "wk": {
-    "isBase": false,
-    "CODE": "WK",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "week"
-    ],
-    "printSymbols": [
-      "wk"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "7",
-        "numeric": 7
-      }
-    ]
-  },
-  "mo_s": {
-    "isBase": false,
-    "CODE": "MO_S",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "synodal month"
-    ],
-    "printSymbols": [
-      "mo<sub>s</sub>"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "29.53059",
-        "numeric": 29.53059
-      }
-    ]
-  },
-  "mo_j": {
-    "isBase": false,
-    "CODE": "MO_J",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "mean Julian month"
-    ],
-    "printSymbols": [
-      "mo<sub>j</sub>"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "mo_g": {
-    "isBase": false,
-    "CODE": "MO_G",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "mean Gregorian month"
-    ],
-    "printSymbols": [
-      "mo<sub>g</sub>"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "mo": {
-    "isBase": false,
-    "CODE": "MO",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "month"
-    ],
-    "printSymbols": [
-      "mo"
-    ],
-    "properties": [
-      "time"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "t": {
-    "isBase": false,
-    "CODE": "TNE",
-    "isMetric": "yes",
-    "class": "iso1000",
-    "names": [
-      "tonne"
-    ],
-    "printSymbols": [
-      "t"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>3</sup>",
-        "numeric": 1000
-      }
-    ]
-  },
-  "bar": {
-    "isBase": false,
-    "CODE": "BAR",
-    "isMetric": "yes",
-    "class": "iso1000",
-    "names": [
-      "bar"
-    ],
-    "printSymbols": [
-      "bar"
-    ],
-    "properties": [
-      "pressure"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>5</sup>",
-        "numeric": 100000
-      }
-    ]
-  },
-  "u": {
-    "isBase": false,
-    "CODE": "AMU",
-    "isMetric": "yes",
-    "class": "iso1000",
-    "names": [
-      "unified atomic mass unit"
-    ],
-    "printSymbols": [
-      "u"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "1.6605402 &#215; 10<sup>-24</sup>",
-        "numeric": 1.6605402e-24
-      }
-    ]
-  },
-  "eV": {
-    "isBase": false,
-    "CODE": "EV",
-    "isMetric": "yes",
-    "class": "iso1000",
-    "names": [
-      "electronvolt"
-    ],
-    "printSymbols": [
-      "eV"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "AU": {
-    "isBase": false,
-    "CODE": "ASU",
-    "isMetric": "no",
-    "class": "iso1000",
-    "names": [
-      "astronomic unit"
-    ],
-    "printSymbols": [
-      "AU"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "149597.870691",
-        "numeric": 149597.870691
-      }
-    ]
-  },
-  "pc": {
-    "isBase": false,
-    "CODE": "PRS",
-    "isMetric": "yes",
-    "class": "iso1000",
-    "names": [
-      "parsec"
-    ],
-    "printSymbols": [
-      "pc"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "3.085678 &#215; 10<sup>16</sup>",
-        "numeric": 30856780000000000
-      }
-    ]
-  },
-  "[c]": {
-    "isBase": false,
-    "CODE": "[C]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "velocity of light"
-    ],
-    "printSymbols": [
-      "<i>c</i>"
-    ],
-    "properties": [
-      "velocity"
-    ],
-    "values": [
-      {
-        "printable": "299792458",
-        "numeric": 299792458
-      }
-    ]
-  },
-  "[h]": {
-    "isBase": false,
-    "CODE": "[H]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "Planck constant"
-    ],
-    "printSymbols": [
-      "<i>h</i>"
-    ],
-    "properties": [
-      "action"
-    ],
-    "values": [
-      {
-        "printable": "6.6260755 &#215; 10<sup>-24</sup>",
-        "numeric": 6.6260755e-24
-      }
-    ]
-  },
-  "[k]": {
-    "isBase": false,
-    "CODE": "[K]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "Boltzmann constant"
-    ],
-    "printSymbols": [
-      "<i>k</i>"
-    ],
-    "properties": [
-      "(unclassified)"
-    ],
-    "values": [
-      {
-        "printable": "1.380658 &#215; 10<sup>-23</sup>",
-        "numeric": 1.380658e-23
-      }
-    ]
-  },
-  "[eps_0]": {
-    "isBase": false,
-    "CODE": "[EPS_0]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "permittivity of vacuum"
-    ],
-    "printSymbols": [
-      "<i>&#949;<sub>\n               <r>0</r>\n            </sub>\n         </i>"
-    ],
-    "properties": [
-      "electric permittivity"
-    ],
-    "values": [
-      {
-        "printable": "8.854187817 &#215; 10<sup>-12</sup>",
-        "numeric": 8.854187817e-12
-      }
-    ]
-  },
-  "[mu_0]": {
-    "isBase": false,
-    "CODE": "[MU_0]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "permeability of vacuum"
-    ],
-    "printSymbols": [
-      "<i>&#956;<sub>\n               <r>0</r>\n            </sub>\n         </i>"
-    ],
-    "properties": [
-      "magnetic permeability"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[e]": {
-    "isBase": false,
-    "CODE": "[E]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "elementary charge"
-    ],
-    "printSymbols": [
-      "<i>e</i>"
-    ],
-    "properties": [
-      "electric charge"
-    ],
-    "values": [
-      {
-        "printable": "1.60217733 &#215; 10<sup>-19</sup>",
-        "numeric": 1.60217733e-19
-      }
-    ]
-  },
-  "[m_e]": {
-    "isBase": false,
-    "CODE": "[M_E]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "electron mass"
-    ],
-    "printSymbols": [
-      "<i>m<sub>\n               <r>e</r>\n            </sub>\n         </i>"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "9.1093897 &#215; 10<sup>-28</sup>",
-        "numeric": 9.1093897e-28
-      }
-    ]
-  },
-  "[m_p]": {
-    "isBase": false,
-    "CODE": "[M_P]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "proton mass"
-    ],
-    "printSymbols": [
-      "<i>m<sub>\n               <r>p</r>\n            </sub>\n         </i>"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "1.6726231 &#215; 10<sup>-24</sup>",
-        "numeric": 1.6726231e-24
-      }
-    ]
-  },
-  "[G]": {
-    "isBase": false,
-    "CODE": "[GC]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "Newtonian constant of gravitation"
-    ],
-    "printSymbols": [
-      "<i>G</i>"
-    ],
-    "properties": [
-      "(unclassified)"
-    ],
-    "values": [
-      {
-        "printable": "6.67259 &#215; 10<sup>-11</sup>",
-        "numeric": 6.67259e-11
-      }
-    ]
-  },
-  "[g]": {
-    "isBase": false,
-    "CODE": "[G]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "standard acceleration of free fall"
-    ],
-    "printSymbols": [
-      "<i>g<sub>n</sub>\n         </i>"
-    ],
-    "properties": [
-      "acceleration"
-    ],
-    "values": [
-      {
-        "printable": "9.80665",
-        "numeric": 9.80665
-      }
-    ]
-  },
-  "atm": {
-    "isBase": false,
-    "CODE": "ATM",
-    "isMetric": "no",
-    "class": "const",
-    "names": [
-      "standard atmosphere"
-    ],
-    "printSymbols": [
-      "atm"
-    ],
-    "properties": [
-      "pressure"
-    ],
-    "values": [
-      {
-        "printable": "101325",
-        "numeric": 101325
-      }
-    ]
-  },
-  "[ly]": {
-    "isBase": false,
-    "CODE": "[LY]",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "light-year"
-    ],
-    "printSymbols": [
-      "l.y."
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "gf": {
-    "isBase": false,
-    "CODE": "GF",
-    "isMetric": "yes",
-    "class": "const",
-    "names": [
-      "gram-force"
-    ],
-    "printSymbols": [
-      "gf"
-    ],
-    "properties": [
-      "force"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[lbf_av]": {
-    "isBase": false,
-    "CODE": "[LBF_AV]",
-    "isMetric": "no",
-    "class": "const",
-    "names": [
-      "pound force"
-    ],
-    "printSymbols": [
-      "lbf"
-    ],
-    "properties": [
-      "force"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Ky": {
-    "isBase": false,
-    "CODE": "KY",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Kayser"
-    ],
-    "printSymbols": [
-      "K"
-    ],
-    "properties": [
-      "lineic number"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Gal": {
-    "isBase": false,
-    "CODE": "GL",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Gal"
-    ],
-    "printSymbols": [
-      "Gal"
-    ],
-    "properties": [
-      "acceleration"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "dyn": {
-    "isBase": false,
-    "CODE": "DYN",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "dyne"
-    ],
-    "printSymbols": [
-      "dyn"
-    ],
-    "properties": [
-      "force"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "erg": {
-    "isBase": false,
-    "CODE": "ERG",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "erg"
-    ],
-    "printSymbols": [
-      "erg"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "P": {
-    "isBase": false,
-    "CODE": "P",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Poise"
-    ],
-    "printSymbols": [
-      "P"
-    ],
-    "properties": [
-      "dynamic viscosity"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Bi": {
-    "isBase": false,
-    "CODE": "BI",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Biot"
-    ],
-    "printSymbols": [
-      "Bi"
-    ],
-    "properties": [
-      "electric current"
-    ],
-    "values": [
-      {
-        "printable": "10",
-        "numeric": 10
-      }
-    ]
-  },
-  "St": {
-    "isBase": false,
-    "CODE": "ST",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Stokes"
-    ],
-    "printSymbols": [
-      "St"
-    ],
-    "properties": [
-      "kinematic viscosity"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Mx": {
-    "isBase": false,
-    "CODE": "MX",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Maxwell"
-    ],
-    "printSymbols": [
-      "Mx"
-    ],
-    "properties": [
-      "flux of magnetic induction"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-8</sup>",
-        "numeric": 1e-8
-      }
-    ]
-  },
-  "G": {
-    "isBase": false,
-    "CODE": "GS",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Gauss"
-    ],
-    "printSymbols": [
-      "Gs"
-    ],
-    "properties": [
-      "magnetic flux density"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-4</sup>",
-        "numeric": 0.0001
-      }
-    ]
-  },
-  "Oe": {
-    "isBase": false,
-    "CODE": "OE",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Oersted"
-    ],
-    "printSymbols": [
-      "Oe"
-    ],
-    "properties": [
-      "magnetic field intensity"
-    ],
-    "values": [
-      {
-        "printable": "250",
-        "numeric": 250
-      }
-    ]
-  },
-  "Gb": {
-    "isBase": false,
-    "CODE": "GB",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Gilbert"
-    ],
-    "printSymbols": [
-      "Gb"
-    ],
-    "properties": [
-      "magnetic tension"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "sb": {
-    "isBase": false,
-    "CODE": "SB",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "stilb"
-    ],
-    "printSymbols": [
-      "sb"
-    ],
-    "properties": [
-      "lum. intensity density"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Lmb": {
-    "isBase": false,
-    "CODE": "LMB",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Lambert"
-    ],
-    "printSymbols": [
-      "L"
-    ],
-    "properties": [
-      "brightness"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "ph": {
-    "isBase": false,
-    "CODE": "PHT",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "phot"
-    ],
-    "printSymbols": [
-      "ph"
-    ],
-    "properties": [
-      "illuminance"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-4</sup>",
-        "numeric": 0.0001
-      }
-    ]
-  },
-  "Ci": {
-    "isBase": false,
-    "CODE": "CI",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Curie"
-    ],
-    "printSymbols": [
-      "Ci"
-    ],
-    "properties": [
-      "radioactivity"
-    ],
-    "values": [
-      {
-        "printable": "3.7 &#215; 10<sup>10</sup>",
-        "numeric": 37000000000
-      }
-    ]
-  },
-  "R": {
-    "isBase": false,
-    "CODE": "ROE",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "Roentgen"
-    ],
-    "printSymbols": [
-      "R"
-    ],
-    "properties": [
-      "ion dose"
-    ],
-    "values": [
-      {
-        "printable": "2.58 &#215; 10<sup>-4</sup>",
-        "numeric": 0.000258
-      }
-    ]
-  },
-  "RAD": {
-    "isBase": false,
-    "CODE": "[RAD]",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "radiation absorbed dose"
-    ],
-    "printSymbols": [
-      "RAD"
-    ],
-    "properties": [
-      "energy dose"
-    ],
-    "values": [
-      {
-        "printable": "100",
-        "numeric": 100
-      }
-    ]
-  },
-  "REM": {
-    "isBase": false,
-    "CODE": "[REM]",
-    "isMetric": "yes",
-    "class": "cgs",
-    "names": [
-      "radiation equivalent man"
-    ],
-    "printSymbols": [
-      "REM"
-    ],
-    "properties": [
-      "dose equivalent"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[in_i]": {
-    "isBase": false,
-    "CODE": "[IN_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "inch"
-    ],
-    "printSymbols": [
-      "in"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "2.54",
-        "numeric": 2.54
-      }
-    ]
-  },
-  "[ft_i]": {
-    "isBase": false,
-    "CODE": "[FT_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "foot"
-    ],
-    "printSymbols": [
-      "ft"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "12",
-        "numeric": 12
-      }
-    ]
-  },
-  "[yd_i]": {
-    "isBase": false,
-    "CODE": "[YD_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "yard"
-    ],
-    "printSymbols": [
-      "yd"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "3",
-        "numeric": 3
-      }
-    ]
-  },
-  "[mi_i]": {
-    "isBase": false,
-    "CODE": "[MI_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "statute mile"
-    ],
-    "printSymbols": [
-      "mi"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "5280",
-        "numeric": 5280
-      }
-    ]
-  },
-  "[fth_i]": {
-    "isBase": false,
-    "CODE": "[FTH_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "fathom"
-    ],
-    "printSymbols": [
-      "fth"
-    ],
-    "properties": [
-      "depth of water"
-    ],
-    "values": [
-      {
-        "printable": "6",
-        "numeric": 6
-      }
-    ]
-  },
-  "[nmi_i]": {
-    "isBase": false,
-    "CODE": "[NMI_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "nautical mile"
-    ],
-    "printSymbols": [
-      "n.mi"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1852",
-        "numeric": 1852
-      }
-    ]
-  },
-  "[kn_i]": {
-    "isBase": false,
-    "CODE": "[KN_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "knot"
-    ],
-    "printSymbols": [
-      "knot"
-    ],
-    "properties": [
-      "velocity"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[sin_i]": {
-    "isBase": false,
-    "CODE": "[SIN_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "square inch"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[sft_i]": {
-    "isBase": false,
-    "CODE": "[SFT_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "square foot"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[syd_i]": {
-    "isBase": false,
-    "CODE": "[SYD_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "square yard"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[cin_i]": {
-    "isBase": false,
-    "CODE": "[CIN_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "cubic inch"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[cft_i]": {
-    "isBase": false,
-    "CODE": "[CFT_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "cubic foot"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[cyd_i]": {
-    "isBase": false,
-    "CODE": "[CYD_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "cubic yard"
-    ],
-    "printSymbols": [
-      "cu.yd"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[bf_i]": {
-    "isBase": false,
-    "CODE": "[BF_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "board foot"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "144",
-        "numeric": 144
-      }
-    ]
-  },
-  "[cr_i]": {
-    "isBase": false,
-    "CODE": "[CR_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "cord"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "128",
-        "numeric": 128
-      }
-    ]
-  },
-  "[mil_i]": {
-    "isBase": false,
-    "CODE": "[MIL_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "mil"
-    ],
-    "printSymbols": [
-      "mil"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-3</sup>",
-        "numeric": 0.001
-      }
-    ]
-  },
-  "[cml_i]": {
-    "isBase": false,
-    "CODE": "[CML_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "circular mil"
-    ],
-    "printSymbols": [
-      "circ.mil"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[hd_i]": {
-    "isBase": false,
-    "CODE": "[HD_I]",
-    "isMetric": "no",
-    "class": "intcust",
-    "names": [
-      "hand"
-    ],
-    "printSymbols": [
-      "hd"
-    ],
-    "properties": [
-      "height of horses"
-    ],
-    "values": [
-      {
-        "printable": "4",
-        "numeric": 4
-      }
-    ]
-  },
-  "[ft_us]": {
-    "isBase": false,
-    "CODE": "[FT_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "foot"
-    ],
-    "printSymbols": [
-      "ft<sub>us</sub>"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1200",
-        "numeric": 1200
-      }
-    ]
-  },
-  "[yd_us]": {
-    "isBase": false,
-    "CODE": "[YD_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "yard"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "3",
-        "numeric": 3
-      }
-    ]
-  },
-  "[in_us]": {
-    "isBase": false,
-    "CODE": "[IN_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "inch"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[rd_us]": {
-    "isBase": false,
-    "CODE": "[RD_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "rod"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "16.5",
-        "numeric": 16.5
-      }
-    ]
-  },
-  "[ch_us]": {
-    "isBase": false,
-    "CODE": "[CH_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "Gunter's chain",
-      "Surveyor's chain"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "4",
-        "numeric": 4
-      }
-    ]
-  },
-  "[lk_us]": {
-    "isBase": false,
-    "CODE": "[LK_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "link for Gunter's chain"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[rch_us]": {
-    "isBase": false,
-    "CODE": "[RCH_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "Ramden's chain",
-      "Engineer's chain"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "100",
-        "numeric": 100
-      }
-    ]
-  },
-  "[rlk_us]": {
-    "isBase": false,
-    "CODE": "[RLK_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "link for Ramden's chain"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[fth_us]": {
-    "isBase": false,
-    "CODE": "[FTH_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "fathom"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "6",
-        "numeric": 6
-      }
-    ]
-  },
-  "[fur_us]": {
-    "isBase": false,
-    "CODE": "[FUR_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "furlong"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "40",
-        "numeric": 40
-      }
-    ]
-  },
-  "[mi_us]": {
-    "isBase": false,
-    "CODE": "[MI_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "mile"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "8",
-        "numeric": 8
-      }
-    ]
-  },
-  "[acr_us]": {
-    "isBase": false,
-    "CODE": "[ACR_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "acre"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "160",
-        "numeric": 160
-      }
-    ]
-  },
-  "[srd_us]": {
-    "isBase": false,
-    "CODE": "[SRD_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "square rod"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[smi_us]": {
-    "isBase": false,
-    "CODE": "[SMI_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "square mile"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[sct]": {
-    "isBase": false,
-    "CODE": "[SCT]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "section"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[twp]": {
-    "isBase": false,
-    "CODE": "[TWP]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "township"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "36",
-        "numeric": 36
-      }
-    ]
-  },
-  "[mil_us]": {
-    "isBase": false,
-    "CODE": "[MIL_US]",
-    "isMetric": "no",
-    "class": "us-lengths",
-    "names": [
-      "mil"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1 &#215; 10<sup>-3</sup>",
-        "numeric": 0.001
-      }
-    ]
-  },
-  "[in_br]": {
-    "isBase": false,
-    "CODE": "[IN_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "inch"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "2.539998",
-        "numeric": 2.539998
-      }
-    ]
-  },
-  "[ft_br]": {
-    "isBase": false,
-    "CODE": "[FT_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "foot"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "12",
-        "numeric": 12
-      }
-    ]
-  },
-  "[rd_br]": {
-    "isBase": false,
-    "CODE": "[RD_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "rod"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "16.5",
-        "numeric": 16.5
-      }
-    ]
-  },
-  "[ch_br]": {
-    "isBase": false,
-    "CODE": "[CH_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "Gunter's chain"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "4",
-        "numeric": 4
-      }
-    ]
-  },
-  "[lk_br]": {
-    "isBase": false,
-    "CODE": "[LK_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "link for Gunter's chain"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[fth_br]": {
-    "isBase": false,
-    "CODE": "[FTH_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "fathom"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "6",
-        "numeric": 6
-      }
-    ]
-  },
-  "[pc_br]": {
-    "isBase": false,
-    "CODE": "[PC_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "pace"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "2.5",
-        "numeric": 2.5
-      }
-    ]
-  },
-  "[yd_br]": {
-    "isBase": false,
-    "CODE": "[YD_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "yard"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "3",
-        "numeric": 3
-      }
-    ]
-  },
-  "[mi_br]": {
-    "isBase": false,
-    "CODE": "[MI_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "mile"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "5280",
-        "numeric": 5280
-      }
-    ]
-  },
-  "[nmi_br]": {
-    "isBase": false,
-    "CODE": "[NMI_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "nautical mile"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "6080",
-        "numeric": 6080
-      }
-    ]
-  },
-  "[kn_br]": {
-    "isBase": false,
-    "CODE": "[KN_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "knot"
-    ],
-    "properties": [
-      "velocity"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[acr_br]": {
-    "isBase": false,
-    "CODE": "[ACR_BR]",
-    "isMetric": "no",
-    "class": "brit-length",
-    "names": [
-      "acre"
-    ],
-    "properties": [
-      "area"
-    ],
-    "values": [
-      {
-        "printable": "4840",
-        "numeric": 4840
-      }
-    ]
-  },
-  "[gal_us]": {
-    "isBase": false,
-    "CODE": "[GAL_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "Queen Anne's wine gallon"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "231",
-        "numeric": 231
-      }
-    ]
-  },
-  "[bbl_us]": {
-    "isBase": false,
-    "CODE": "[BBL_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "barrel"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "42",
-        "numeric": 42
-      }
-    ]
-  },
-  "[qt_us]": {
-    "isBase": false,
-    "CODE": "[QT_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "quart"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[pt_us]": {
-    "isBase": false,
-    "CODE": "[PT_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "pint"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[gil_us]": {
-    "isBase": false,
-    "CODE": "[GIL_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "gill"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[foz_us]": {
-    "isBase": false,
-    "CODE": "[FOZ_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "fluid ounce"
-    ],
-    "printSymbols": [
-      "oz fl"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[fdr_us]": {
-    "isBase": false,
-    "CODE": "[FDR_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "fluid dram"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[min_us]": {
-    "isBase": false,
-    "CODE": "[MIN_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "minim"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[crd_us]": {
-    "isBase": false,
-    "CODE": "[CRD_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "cord"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "128",
-        "numeric": 128
-      }
-    ]
-  },
-  "[bu_us]": {
-    "isBase": false,
-    "CODE": "[BU_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "bushel"
-    ],
-    "properties": [
-      "dry volume"
-    ],
-    "values": [
-      {
-        "printable": "2150.42",
-        "numeric": 2150.42
-      }
-    ]
-  },
-  "[gal_wi]": {
-    "isBase": false,
-    "CODE": "[GAL_WI]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "historical winchester gallon"
-    ],
-    "properties": [
-      "dry volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[pk_us]": {
-    "isBase": false,
-    "CODE": "[PK_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "peck"
-    ],
-    "properties": [
-      "dry volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[dqt_us]": {
-    "isBase": false,
-    "CODE": "[DQT_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "dry quart"
-    ],
-    "properties": [
-      "dry volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[dpt_us]": {
-    "isBase": false,
-    "CODE": "[DPT_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "dry pint"
-    ],
-    "properties": [
-      "dry volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[tbs_us]": {
-    "isBase": false,
-    "CODE": "[TBS_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "tablespoon"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[tsp_us]": {
-    "isBase": false,
-    "CODE": "[TSP_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "teaspoon"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[cup_us]": {
-    "isBase": false,
-    "CODE": "[CUP_US]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "cup"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "16",
-        "numeric": 16
-      }
-    ]
-  },
-  "[foz_m]": {
-    "isBase": false,
-    "CODE": "[FOZ_M]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "metric fluid ounce"
-    ],
-    "printSymbols": [
-      "oz fl"
-    ],
-    "properties": [
-      "fluid volume"
-    ],
-    "values": [
-      {
-        "printable": "30",
-        "numeric": 30
-      }
-    ]
-  },
-  "[cup_m]": {
-    "isBase": false,
-    "CODE": "[CUP_M]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "metric cup"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "240",
-        "numeric": 240
-      }
-    ]
-  },
-  "[tsp_m]": {
-    "isBase": false,
-    "CODE": "[TSP_M]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "metric teaspoon"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "5",
-        "numeric": 5
-      }
-    ]
-  },
-  "[tbs_m]": {
-    "isBase": false,
-    "CODE": "[TBS_M]",
-    "isMetric": "no",
-    "class": "us-volumes",
-    "names": [
-      "metric tablespoon"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "15",
-        "numeric": 15
-      }
-    ]
-  },
-  "[gal_br]": {
-    "isBase": false,
-    "CODE": "[GAL_BR]",
-    "isMetric": "no",
-    "class": "brit-volumes",
-    "names": [
-      "gallon"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "4.54609",
-        "numeric": 4.54609
-      }
-    ]
-  },
-  "[pk_br]": {
-    "isBase": false,
-    "CODE": "[PK_BR]",
-    "isMetric": "no",
-    "class": "brit-volumes",
-    "names": [
-      "peck"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "2",
-        "numeric": 2
-      }
-    ]
-  },
-  "[bu_br]": {
-    "isBase": false,
-    "CODE": "[BU_BR]",
-    "isMetric": "no",
-    "class": "brit-volumes",
-    "names": [
-      "bushel"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "4",
-        "numeric": 4
-      }
-    ]
-  },
-  "[qt_br]": {
-    "isBase": false,
-    "CODE": "[QT_BR]",
-    "isMetric": "no",
-    "class": "brit-volumes",
-    "names": [
-      "quart"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[pt_br]": {
-    "isBase": false,
-    "CODE": "[PT_BR]",
-    "isMetric": "no",
-    "class": "brit-volumes",
-    "names": [
-      "pint"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[gil_br]": {
-    "isBase": false,
-    "CODE": "[GIL_BR]",
-    "isMetric": "no",
-    "class": "brit-volumes",
-    "names": [
-      "gill"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[foz_br]": {
-    "isBase": false,
-    "CODE": "[FOZ_BR]",
-    "isMetric": "no",
-    "class": "brit-volumes",
-    "names": [
-      "fluid ounce"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[fdr_br]": {
-    "isBase": false,
-    "CODE": "[FDR_BR]",
-    "isMetric": "no",
-    "class": "brit-volumes",
-    "names": [
-      "fluid dram"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[min_br]": {
-    "isBase": false,
-    "CODE": "[MIN_BR]",
-    "isMetric": "no",
-    "class": "brit-volumes",
-    "names": [
-      "minim"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[gr]": {
-    "isBase": false,
-    "CODE": "[GR]",
-    "isMetric": "no",
-    "class": "avoirdupois",
-    "names": [
-      "grain"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "64.79891",
-        "numeric": 64.79891
-      }
-    ]
-  },
-  "[lb_av]": {
-    "isBase": false,
-    "CODE": "[LB_AV]",
-    "isMetric": "no",
-    "class": "avoirdupois",
-    "names": [
-      "pound"
-    ],
-    "printSymbols": [
-      "lb"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "7000",
-        "numeric": 7000
-      }
-    ]
-  },
-  "[oz_av]": {
-    "isBase": false,
-    "CODE": "[OZ_AV]",
-    "isMetric": "no",
-    "class": "avoirdupois",
-    "names": [
-      "ounce"
-    ],
-    "printSymbols": [
-      "oz"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[dr_av]": {
-    "isBase": false,
-    "CODE": "[DR_AV]",
-    "isMetric": "no",
-    "class": "avoirdupois",
-    "names": [
-      "dram"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[scwt_av]": {
-    "isBase": false,
-    "CODE": "[SCWT_AV]",
-    "isMetric": "no",
-    "class": "avoirdupois",
-    "names": [
-      "short hundredweight",
-      "U.S. hundredweight"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "100",
-        "numeric": 100
-      }
-    ]
-  },
-  "[lcwt_av]": {
-    "isBase": false,
-    "CODE": "[LCWT_AV]",
-    "isMetric": "no",
-    "class": "avoirdupois",
-    "names": [
-      "long hundredweight",
-      "British hundredweight"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "112",
-        "numeric": 112
-      }
-    ]
-  },
-  "[ston_av]": {
-    "isBase": false,
-    "CODE": "[STON_AV]",
-    "isMetric": "no",
-    "class": "avoirdupois",
-    "names": [
-      "short ton",
-      "U.S. ton"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "20",
-        "numeric": 20
-      }
-    ]
-  },
-  "[lton_av]": {
-    "isBase": false,
-    "CODE": "[LTON_AV]",
-    "isMetric": "no",
-    "class": "avoirdupois",
-    "names": [
-      "long ton",
-      "British ton"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "20",
-        "numeric": 20
-      }
-    ]
-  },
-  "[stone_av]": {
-    "isBase": false,
-    "CODE": "[STONE_AV]",
-    "isMetric": "no",
-    "class": "avoirdupois",
-    "names": [
-      "stone",
-      "British stone"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "14",
-        "numeric": 14
-      }
-    ]
-  },
-  "[pwt_tr]": {
-    "isBase": false,
-    "CODE": "[PWT_TR]",
-    "isMetric": "no",
-    "class": "troy",
-    "names": [
-      "pennyweight"
-    ],
-    "printSymbols": [
-      "dwt"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "24",
-        "numeric": 24
-      }
-    ]
-  },
-  "[oz_tr]": {
-    "isBase": false,
-    "CODE": "[OZ_TR]",
-    "isMetric": "no",
-    "class": "troy",
-    "names": [
-      "troy ounce"
-    ],
-    "printSymbols": [
-      "oz t"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "20",
-        "numeric": 20
-      }
-    ]
-  },
-  "[lb_tr]": {
-    "isBase": false,
-    "CODE": "[LB_TR]",
-    "isMetric": "no",
-    "class": "troy",
-    "names": [
-      "troy pound"
-    ],
-    "printSymbols": [
-      "lb t"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "12",
-        "numeric": 12
-      }
-    ]
-  },
-  "[sc_ap]": {
-    "isBase": false,
-    "CODE": "[SC_AP]",
-    "isMetric": "no",
-    "class": "apoth",
-    "names": [
-      "scruple"
-    ],
-    "printSymbols": [
-      "&#8456;"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "20",
-        "numeric": 20
-      }
-    ]
-  },
-  "[dr_ap]": {
-    "isBase": false,
-    "CODE": "[DR_AP]",
-    "isMetric": "no",
-    "class": "apoth",
-    "names": [
-      "dram",
-      "drachm"
-    ],
-    "printSymbols": [
-      "&#658;"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "3",
-        "numeric": 3
-      }
-    ]
-  },
-  "[oz_ap]": {
-    "isBase": false,
-    "CODE": "[OZ_AP]",
-    "isMetric": "no",
-    "class": "apoth",
-    "names": [
-      "ounce"
-    ],
-    "printSymbols": [
-      "&#8485;"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "8",
-        "numeric": 8
-      }
-    ]
-  },
-  "[lb_ap]": {
-    "isBase": false,
-    "CODE": "[LB_AP]",
-    "isMetric": "no",
-    "class": "apoth",
-    "names": [
-      "pound"
-    ],
-    "printSymbols": [
-      "<strike>lb</strike>"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "12",
-        "numeric": 12
-      }
-    ]
-  },
-  "[oz_m]": {
-    "isBase": false,
-    "CODE": "[OZ_M]",
-    "isMetric": "no",
-    "class": "apoth",
-    "names": [
-      "metric ounce"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "28",
-        "numeric": 28
-      }
-    ]
-  },
-  "[lne]": {
-    "isBase": false,
-    "CODE": "[LNE]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "line"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[pnt]": {
-    "isBase": false,
-    "CODE": "[PNT]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "point"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[pca]": {
-    "isBase": false,
-    "CODE": "[PCA]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "pica"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "12",
-        "numeric": 12
-      }
-    ]
-  },
-  "[pnt_pr]": {
-    "isBase": false,
-    "CODE": "[PNT_PR]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "Printer's point"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "0.013837",
-        "numeric": 0.013837
-      }
-    ]
-  },
-  "[pca_pr]": {
-    "isBase": false,
-    "CODE": "[PCA_PR]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "Printer's pica"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "12",
-        "numeric": 12
-      }
-    ]
-  },
-  "[pied]": {
-    "isBase": false,
-    "CODE": "[PIED]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "pied",
-      "French foot"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "32.48",
-        "numeric": 32.48
-      }
-    ]
-  },
-  "[pouce]": {
-    "isBase": false,
-    "CODE": "[POUCE]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "pouce",
-      "French inch"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[ligne]": {
-    "isBase": false,
-    "CODE": "[LIGNE]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "ligne",
-      "French line"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[didot]": {
-    "isBase": false,
-    "CODE": "[DIDOT]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "didot",
-      "Didot's point"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[cicero]": {
-    "isBase": false,
-    "CODE": "[CICERO]",
-    "isMetric": "no",
-    "class": "typeset",
-    "names": [
-      "cicero",
-      "Didot's pica"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "12",
-        "numeric": 12
-      }
-    ]
-  },
-  "[degF]": {
-    "isBase": false,
-    "CODE": "[DEGF]",
-    "isMetric": "no",
-    "isSpecial": "yes",
-    "class": "heat",
-    "names": [
-      "degree Fahrenheit"
-    ],
-    "printSymbols": [
-      "&#176;F"
-    ],
-    "properties": [
-      "temperature"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"degF\" value=\"5\" Unit=\"K/9\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "[degR]": {
-    "isBase": false,
-    "CODE": "[degR]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "degree Rankine"
-    ],
-    "printSymbols": [
-      "&#176;R"
-    ],
-    "properties": [
-      "temperature"
-    ],
-    "values": [
-      {
-        "printable": "5",
-        "numeric": 5
-      }
-    ]
-  },
-  "cal_[15]": {
-    "isBase": false,
-    "CODE": "CAL_[15]",
-    "isMetric": "yes",
-    "class": "heat",
-    "names": [
-      "calorie at 15 °C"
-    ],
-    "printSymbols": [
-      "cal<sub>15&#176;C</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "4.18580",
-        "numeric": 4.1858
-      }
-    ]
-  },
-  "cal_[20]": {
-    "isBase": false,
-    "CODE": "CAL_[20]",
-    "isMetric": "yes",
-    "class": "heat",
-    "names": [
-      "calorie at 20 °C"
-    ],
-    "printSymbols": [
-      "cal<sub>20&#176;C</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "4.18190",
-        "numeric": 4.1819
-      }
-    ]
-  },
-  "cal_m": {
-    "isBase": false,
-    "CODE": "CAL_M",
-    "isMetric": "yes",
-    "class": "heat",
-    "names": [
-      "mean calorie"
-    ],
-    "printSymbols": [
-      "cal<sub>m</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "4.19002",
-        "numeric": 4.19002
-      }
-    ]
-  },
-  "cal_IT": {
-    "isBase": false,
-    "CODE": "CAL_IT",
-    "isMetric": "yes",
-    "class": "heat",
-    "names": [
-      "international table calorie"
-    ],
-    "printSymbols": [
-      "cal<sub>IT</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "4.1868",
-        "numeric": 4.1868
-      }
-    ]
-  },
-  "cal_th": {
-    "isBase": false,
-    "CODE": "CAL_TH",
-    "isMetric": "yes",
-    "class": "heat",
-    "names": [
-      "thermochemical calorie"
-    ],
-    "printSymbols": [
-      "cal<sub>th</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "4.184",
-        "numeric": 4.184
-      }
-    ]
-  },
-  "cal": {
-    "isBase": false,
-    "CODE": "CAL",
-    "isMetric": "yes",
-    "class": "heat",
-    "names": [
-      "calorie"
-    ],
-    "printSymbols": [
-      "cal"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[Cal]": {
-    "isBase": false,
-    "CODE": "[CAL]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "nutrition label Calories"
-    ],
-    "printSymbols": [
-      "Cal"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[Btu_39]": {
-    "isBase": false,
-    "CODE": "[BTU_39]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "British thermal unit at 39 °F"
-    ],
-    "printSymbols": [
-      "Btu<sub>39&#176;F</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1.05967",
-        "numeric": 1.05967
-      }
-    ]
-  },
-  "[Btu_59]": {
-    "isBase": false,
-    "CODE": "[BTU_59]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "British thermal unit at 59 °F"
-    ],
-    "printSymbols": [
-      "Btu<sub>59&#176;F</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1.05480",
-        "numeric": 1.0548
-      }
-    ]
-  },
-  "[Btu_60]": {
-    "isBase": false,
-    "CODE": "[BTU_60]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "British thermal unit at 60 °F"
-    ],
-    "printSymbols": [
-      "Btu<sub>60&#176;F</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1.05468",
-        "numeric": 1.05468
-      }
-    ]
-  },
-  "[Btu_m]": {
-    "isBase": false,
-    "CODE": "[BTU_M]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "mean British thermal unit"
-    ],
-    "printSymbols": [
-      "Btu<sub>m</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1.05587",
-        "numeric": 1.05587
-      }
-    ]
-  },
-  "[Btu_IT]": {
-    "isBase": false,
-    "CODE": "[BTU_IT]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "international table British thermal unit"
-    ],
-    "printSymbols": [
-      "Btu<sub>IT</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1.05505585262",
-        "numeric": 1.05505585262
-      }
-    ]
-  },
-  "[Btu_th]": {
-    "isBase": false,
-    "CODE": "[BTU_TH]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "thermochemical British thermal unit"
-    ],
-    "printSymbols": [
-      "Btu<sub>th</sub>"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1.054350",
-        "numeric": 1.05435
-      }
-    ]
-  },
-  "[Btu]": {
-    "isBase": false,
-    "CODE": "[BTU]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "British thermal unit"
-    ],
-    "printSymbols": [
-      "btu"
-    ],
-    "properties": [
-      "energy"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[HP]": {
-    "isBase": false,
-    "CODE": "[HP]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "horsepower"
-    ],
-    "properties": [
-      "power"
-    ],
-    "values": [
-      {
-        "printable": "550",
-        "numeric": 550
-      }
-    ]
-  },
-  "tex": {
-    "isBase": false,
-    "CODE": "TEX",
-    "isMetric": "yes",
-    "class": "heat",
-    "names": [
-      "tex"
-    ],
-    "printSymbols": [
-      "tex"
-    ],
-    "properties": [
-      "linear mass density (of textile thread)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[den]": {
-    "isBase": false,
-    "CODE": "[DEN]",
-    "isMetric": "no",
-    "class": "heat",
-    "names": [
-      "Denier"
-    ],
-    "printSymbols": [
-      "den"
-    ],
-    "properties": [
-      "linear mass density (of textile thread)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "m[H2O]": {
-    "isBase": false,
-    "CODE": "M[H2O]",
-    "isMetric": "yes",
-    "class": "clinical",
-    "names": [
-      "meter of water column"
-    ],
-    "printSymbols": [
-      "m&#160;H<sub>\n            <r>2</r>\n         </sub>O"
-    ],
-    "properties": [
-      "pressure"
-    ],
-    "values": [
-      {
-        "printable": "9.80665",
-        "numeric": 9.80665
-      }
-    ]
-  },
-  "m[Hg]": {
-    "isBase": false,
-    "CODE": "M[HG]",
-    "isMetric": "yes",
-    "class": "clinical",
-    "names": [
-      "meter of mercury column"
-    ],
-    "printSymbols": [
-      "m&#160;Hg"
-    ],
-    "properties": [
-      "pressure"
-    ],
-    "values": [
-      {
-        "printable": "133.3220",
-        "numeric": 133.322
-      }
-    ]
-  },
-  "[in_i'H2O]": {
-    "isBase": false,
-    "CODE": "[IN_I'H2O]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "inch of water column"
-    ],
-    "printSymbols": [
-      "in&#160;H<sub>\n            <r>2</r>\n         </sub>O"
-    ],
-    "properties": [
-      "pressure"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[in_i'Hg]": {
-    "isBase": false,
-    "CODE": "[IN_I'HG]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "inch of mercury column"
-    ],
-    "printSymbols": [
-      "in&#160;Hg"
-    ],
-    "properties": [
-      "pressure"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[PRU]": {
-    "isBase": false,
-    "CODE": "[PRU]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "peripheral vascular resistance unit"
-    ],
-    "printSymbols": [
-      "P.R.U."
-    ],
-    "properties": [
-      "fluid resistance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[wood'U]": {
-    "isBase": false,
-    "CODE": "[WOOD'U]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "Wood unit"
-    ],
-    "printSymbols": [
-      "Wood U."
-    ],
-    "properties": [
-      "fluid resistance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[diop]": {
-    "isBase": false,
-    "CODE": "[DIOP]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "diopter"
-    ],
-    "printSymbols": [
-      "dpt"
-    ],
-    "properties": [
-      "refraction of a lens"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[p'diop]": {
-    "isBase": false,
-    "CODE": "[P'DIOP]",
-    "isMetric": "no",
-    "isSpecial": "yes",
-    "class": "clinical",
-    "names": [
-      "prism diopter"
-    ],
-    "printSymbols": [
-      "PD"
-    ],
-    "properties": [
-      "refraction of a prism"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"tanTimes100\" value=\"1\" Unit=\"deg\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "%[slope]": {
-    "isBase": false,
-    "CODE": "%[SLOPE]",
-    "isMetric": "no",
-    "isSpecial": "yes",
-    "class": "clinical",
-    "names": [
-      "percent of slope"
-    ],
-    "printSymbols": [
-      "%"
-    ],
-    "properties": [
-      "slope"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"100tan\" value=\"1\" Unit=\"deg\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "[mesh_i]": {
-    "isBase": false,
-    "CODE": "[MESH_I]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "mesh"
-    ],
-    "properties": [
-      "lineic number"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[Ch]": {
-    "isBase": false,
-    "CODE": "[CH]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "Charrière",
-      "french"
-    ],
-    "printSymbols": [
-      "Ch"
-    ],
-    "properties": [
-      "gauge of catheters"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[drp]": {
-    "isBase": false,
-    "CODE": "[DRP]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "drop"
-    ],
-    "printSymbols": [
-      "drp"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[hnsf'U]": {
-    "isBase": false,
-    "CODE": "[HNSF'U]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "Hounsfield unit"
-    ],
-    "printSymbols": [
-      "HF"
-    ],
-    "properties": [
-      "x-ray attenuation"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[MET]": {
-    "isBase": false,
-    "CODE": "[MET]",
-    "isMetric": "no",
-    "class": "clinical",
-    "names": [
-      "metabolic equivalent"
-    ],
-    "printSymbols": [
-      "MET"
-    ],
-    "properties": [
-      "metabolic cost of physical activity"
-    ],
-    "values": [
-      {
-        "printable": "3.5",
-        "numeric": 3.5
-      }
-    ]
-  },
-  "[hp'_X]": {
-    "isBase": false,
-    "CODE": "[HP'_X]",
-    "isMetric": "no",
-    "isSpecial": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of decimal series (retired)"
-    ],
-    "printSymbols": [
-      "X"
-    ],
-    "properties": [
-      "homeopathic potency (retired)"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"hpX\" value=\"1\" Unit=\"1\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "[hp'_C]": {
-    "isBase": false,
-    "CODE": "[HP'_C]",
-    "isMetric": "no",
-    "isSpecial": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of centesimal series (retired)"
-    ],
-    "printSymbols": [
-      "C"
-    ],
-    "properties": [
-      "homeopathic potency (retired)"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"hpC\" value=\"1\" Unit=\"1\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "[hp'_M]": {
-    "isBase": false,
-    "CODE": "[HP'_M]",
-    "isMetric": "no",
-    "isSpecial": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of millesimal series (retired)"
-    ],
-    "printSymbols": [
-      "M"
-    ],
-    "properties": [
-      "homeopathic potency (retired)"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"hpM\" value=\"1\" Unit=\"1\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "[hp'_Q]": {
-    "isBase": false,
-    "CODE": "[HP'_Q]",
-    "isMetric": "no",
-    "isSpecial": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of quintamillesimal series (retired)"
-    ],
-    "printSymbols": [
-      "Q"
-    ],
-    "properties": [
-      "homeopathic potency (retired)"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"hpQ\" value=\"1\" Unit=\"1\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "[hp_X]": {
-    "isBase": false,
-    "CODE": "[HP_X]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of decimal hahnemannian series"
-    ],
-    "printSymbols": [
-      "X"
-    ],
-    "properties": [
-      "homeopathic potency (Hahnemann)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[hp_C]": {
-    "isBase": false,
-    "CODE": "[HP_C]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of centesimal hahnemannian series"
-    ],
-    "printSymbols": [
-      "C"
-    ],
-    "properties": [
-      "homeopathic potency (Hahnemann)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[hp_M]": {
-    "isBase": false,
-    "CODE": "[HP_M]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of millesimal hahnemannian series"
-    ],
-    "printSymbols": [
-      "M"
-    ],
-    "properties": [
-      "homeopathic potency (Hahnemann)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[hp_Q]": {
-    "isBase": false,
-    "CODE": "[HP_Q]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of quintamillesimal hahnemannian series"
-    ],
-    "printSymbols": [
-      "Q"
-    ],
-    "properties": [
-      "homeopathic potency (Hahnemann)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[kp_X]": {
-    "isBase": false,
-    "CODE": "[KP_X]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of decimal korsakovian series"
-    ],
-    "printSymbols": [
-      "X"
-    ],
-    "properties": [
-      "homeopathic potency (Korsakov)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[kp_C]": {
-    "isBase": false,
-    "CODE": "[KP_C]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of centesimal korsakovian series"
-    ],
-    "printSymbols": [
-      "C"
-    ],
-    "properties": [
-      "homeopathic potency (Korsakov)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[kp_M]": {
-    "isBase": false,
-    "CODE": "[KP_M]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of millesimal korsakovian series"
-    ],
-    "printSymbols": [
-      "M"
-    ],
-    "properties": [
-      "homeopathic potency (Korsakov)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[kp_Q]": {
-    "isBase": false,
-    "CODE": "[KP_Q]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "clinical",
-    "names": [
-      "homeopathic potency of quintamillesimal korsakovian series"
-    ],
-    "printSymbols": [
-      "Q"
-    ],
-    "properties": [
-      "homeopathic potency (Korsakov)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "eq": {
-    "isBase": false,
-    "CODE": "EQ",
-    "isMetric": "yes",
-    "class": "chemical",
-    "names": [
-      "equivalents"
-    ],
-    "printSymbols": [
-      "eq"
-    ],
-    "properties": [
-      "amount of substance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "osm": {
-    "isBase": false,
-    "CODE": "OSM",
-    "isMetric": "yes",
-    "class": "chemical",
-    "names": [
-      "osmole"
-    ],
-    "printSymbols": [
-      "osm"
-    ],
-    "properties": [
-      "amount of substance (dissolved particles)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[pH]": {
-    "isBase": false,
-    "CODE": "[PH]",
-    "isMetric": "no",
-    "isSpecial": "yes",
-    "class": "chemical",
-    "names": [
-      "pH"
-    ],
-    "printSymbols": [
-      "pH"
-    ],
-    "properties": [
-      "acidity"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"pH\" value=\"1\" Unit=\"mol/l\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "g%": {
-    "isBase": false,
-    "CODE": "G%",
-    "isMetric": "yes",
-    "class": "chemical",
-    "names": [
-      "gram percent"
-    ],
-    "printSymbols": [
-      "g%"
-    ],
-    "properties": [
-      "mass concentration"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[S]": {
-    "isBase": false,
-    "CODE": "[S]",
-    "isMetric": "no",
-    "class": "chemical",
-    "names": [
-      "Svedberg unit"
-    ],
-    "printSymbols": [
-      "S"
-    ],
-    "properties": [
-      "sedimentation coefficient"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[HPF]": {
-    "isBase": false,
-    "CODE": "[HPF]",
-    "isMetric": "no",
-    "class": "chemical",
-    "names": [
-      "high power field"
-    ],
-    "printSymbols": [
-      "HPF"
-    ],
-    "properties": [
-      "view area in microscope"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[LPF]": {
-    "isBase": false,
-    "CODE": "[LPF]",
-    "isMetric": "no",
-    "class": "chemical",
-    "names": [
-      "low power field"
-    ],
-    "printSymbols": [
-      "LPF"
-    ],
-    "properties": [
-      "view area in microscope"
-    ],
-    "values": [
-      {
-        "printable": "100",
-        "numeric": 100
-      }
-    ]
-  },
-  "kat": {
-    "isBase": false,
-    "CODE": "KAT",
-    "isMetric": "yes",
-    "class": "chemical",
-    "names": [
-      "katal"
-    ],
-    "printSymbols": [
-      "kat"
-    ],
-    "properties": [
-      "catalytic activity"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "U": {
-    "isBase": false,
-    "CODE": "U",
-    "isMetric": "yes",
-    "class": "chemical",
-    "names": [
-      "Unit"
-    ],
-    "printSymbols": [
-      "U"
-    ],
-    "properties": [
-      "catalytic activity"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[iU]": {
-    "isBase": false,
-    "CODE": "[IU]",
-    "isMetric": "yes",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "international unit"
-    ],
-    "printSymbols": [
-      "IU"
-    ],
-    "properties": [
-      "arbitrary"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[IU]": {
-    "isBase": false,
-    "CODE": "[IU]",
-    "isMetric": "yes",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "international unit"
-    ],
-    "printSymbols": [
-      "i.U."
-    ],
-    "properties": [
-      "arbitrary"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[arb'U]": {
-    "isBase": false,
-    "CODE": "[ARB'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "arbitary unit"
-    ],
-    "printSymbols": [
-      "arb. U"
-    ],
-    "properties": [
-      "arbitrary"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[USP'U]": {
-    "isBase": false,
-    "CODE": "[USP'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "United States Pharmacopeia unit"
-    ],
-    "printSymbols": [
-      "U.S.P."
-    ],
-    "properties": [
-      "arbitrary"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[GPL'U]": {
-    "isBase": false,
-    "CODE": "[GPL'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "GPL unit"
-    ],
-    "properties": [
-      "biologic activity of anticardiolipin IgG"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[MPL'U]": {
-    "isBase": false,
-    "CODE": "[MPL'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "MPL unit"
-    ],
-    "properties": [
-      "biologic activity of anticardiolipin IgM"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[APL'U]": {
-    "isBase": false,
-    "CODE": "[APL'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "APL unit"
-    ],
-    "properties": [
-      "biologic activity of anticardiolipin IgA"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[beth'U]": {
-    "isBase": false,
-    "CODE": "[BETH'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "Bethesda unit"
-    ],
-    "properties": [
-      "biologic activity of factor VIII inhibitor"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[anti'Xa'U]": {
-    "isBase": false,
-    "CODE": "[ANTI'XA'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "anti factor Xa unit"
-    ],
-    "properties": [
-      "biologic activity of factor Xa inhibitor (heparin)"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[todd'U]": {
-    "isBase": false,
-    "CODE": "[TODD'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "Todd unit"
-    ],
-    "properties": [
-      "biologic activity antistreptolysin O"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[dye'U]": {
-    "isBase": false,
-    "CODE": "[DYE'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "Dye unit"
-    ],
-    "properties": [
-      "biologic activity of amylase"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[smgy'U]": {
-    "isBase": false,
-    "CODE": "[SMGY'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "Somogyi unit"
-    ],
-    "properties": [
-      "biologic activity of amylase"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[bdsk'U]": {
-    "isBase": false,
-    "CODE": "[BDSK'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "Bodansky unit"
-    ],
-    "properties": [
-      "biologic activity of phosphatase"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[ka'U]": {
-    "isBase": false,
-    "CODE": "[KA'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "King-Armstrong unit"
-    ],
-    "properties": [
-      "biologic activity of phosphatase"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[knk'U]": {
-    "isBase": false,
-    "CODE": "[KNK'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "Kunkel unit"
-    ],
-    "properties": [
-      "arbitrary biologic activity"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[mclg'U]": {
-    "isBase": false,
-    "CODE": "[MCLG'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "Mac Lagan unit"
-    ],
-    "properties": [
-      "arbitrary biologic activity"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[tb'U]": {
-    "isBase": false,
-    "CODE": "[TB'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "tuberculin unit"
-    ],
-    "properties": [
-      "biologic activity of tuberculin"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[CCID_50]": {
-    "isBase": false,
-    "CODE": "[CCID_50]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "50% cell culture infectious dose"
-    ],
-    "printSymbols": [
-      "CCID<sub>50</sub>"
-    ],
-    "properties": [
-      "biologic activity (infectivity) of an infectious agent preparation"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[TCID_50]": {
-    "isBase": false,
-    "CODE": "[TCID_50]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "50% tissue culture infectious dose"
-    ],
-    "printSymbols": [
-      "TCID<sub>50</sub>"
-    ],
-    "properties": [
-      "biologic activity (infectivity) of an infectious agent preparation"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[EID_50]": {
-    "isBase": false,
-    "CODE": "[EID_50]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "50% embryo infectious dose"
-    ],
-    "printSymbols": [
-      "EID<sub>50</sub>"
-    ],
-    "properties": [
-      "biologic activity (infectivity) of an infectious agent preparation"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[PFU]": {
-    "isBase": false,
-    "CODE": "[PFU]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "plaque forming units"
-    ],
-    "printSymbols": [
-      "PFU"
-    ],
-    "properties": [
-      "amount of an infectious agent"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[FFU]": {
-    "isBase": false,
-    "CODE": "[FFU]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "focus forming units"
-    ],
-    "printSymbols": [
-      "FFU"
-    ],
-    "properties": [
-      "amount of an infectious agent"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[CFU]": {
-    "isBase": false,
-    "CODE": "[CFU]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "colony forming units"
-    ],
-    "printSymbols": [
-      "CFU"
-    ],
-    "properties": [
-      "amount of a proliferating organism"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[BAU]": {
-    "isBase": false,
-    "CODE": "[BAU]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "bioequivalent allergen unit"
-    ],
-    "printSymbols": [
-      "BAU"
-    ],
-    "properties": [
-      "amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[AU]": {
-    "isBase": false,
-    "CODE": "[AU]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "allergen unit"
-    ],
-    "printSymbols": [
-      "AU"
-    ],
-    "properties": [
-      "procedure defined amount of an allergen using some reference standard"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[Amb'a'1'U]": {
-    "isBase": false,
-    "CODE": "[AMB'A'1'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "allergen unit for Ambrosia artemisiifolia"
-    ],
-    "printSymbols": [
-      "Amb a 1 U"
-    ],
-    "properties": [
-      "procedure defined amount of the major allergen of ragweed."
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[PNU]": {
-    "isBase": false,
-    "CODE": "[PNU]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "protein nitrogen unit"
-    ],
-    "printSymbols": [
-      "PNU"
-    ],
-    "properties": [
-      "procedure defined amount of a protein substance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[Lf]": {
-    "isBase": false,
-    "CODE": "[LF]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "Limit of flocculation"
-    ],
-    "printSymbols": [
-      "Lf"
-    ],
-    "properties": [
-      "procedure defined amount of an antigen substance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[D'ag'U]": {
-    "isBase": false,
-    "CODE": "[D'AG'U]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "D-antigen unit"
-    ],
-    "printSymbols": [
-      ""
-    ],
-    "properties": [
-      "procedure defined amount of a poliomyelitis d-antigen substance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[FEU]": {
-    "isBase": false,
-    "CODE": "[FEU]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "fibrinogen equivalent unit"
-    ],
-    "printSymbols": [
-      ""
-    ],
-    "properties": [
-      "amount of fibrinogen broken down into the measured d-dimers"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[ELU]": {
-    "isBase": false,
-    "CODE": "[ELU]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "ELISA unit"
-    ],
-    "printSymbols": [
-      ""
-    ],
-    "properties": [
-      "arbitrary ELISA unit"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[EU]": {
-    "isBase": false,
-    "CODE": "[EU]",
-    "isMetric": "no",
-    "isArbitrary": "yes",
-    "class": "chemical",
-    "names": [
-      "Ehrlich unit"
-    ],
-    "printSymbols": [
-      ""
-    ],
-    "properties": [
-      "Ehrlich unit"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Np": {
-    "isBase": false,
-    "CODE": "NEP",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "levels",
-    "names": [
-      "neper"
-    ],
-    "printSymbols": [
-      "Np"
-    ],
-    "properties": [
-      "level"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"ln\" value=\"1\" Unit=\"1\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "B": {
-    "isBase": false,
-    "CODE": "B",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "levels",
-    "names": [
-      "bel"
-    ],
-    "printSymbols": [
-      "B"
-    ],
-    "properties": [
-      "level"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"lg\" value=\"1\" Unit=\"1\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "B[SPL]": {
-    "isBase": false,
-    "CODE": "B[SPL]",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "levels",
-    "names": [
-      "bel sound pressure"
-    ],
-    "printSymbols": [
-      "B(SPL)"
-    ],
-    "properties": [
-      "pressure level"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"lgTimes2\" value=\"2\" Unit=\"10*-5.Pa\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "B[V]": {
-    "isBase": false,
-    "CODE": "B[V]",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "levels",
-    "names": [
-      "bel volt"
-    ],
-    "printSymbols": [
-      "B(V)"
-    ],
-    "properties": [
-      "electric potential level"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"lgTimes2\" value=\"1\" Unit=\"V\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "B[mV]": {
-    "isBase": false,
-    "CODE": "B[MV]",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "levels",
-    "names": [
-      "bel millivolt"
-    ],
-    "printSymbols": [
-      "B(mV)"
-    ],
-    "properties": [
-      "electric potential level"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"lgTimes2\" value=\"1\" Unit=\"mV\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "B[uV]": {
-    "isBase": false,
-    "CODE": "B[UV]",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "levels",
-    "names": [
-      "bel microvolt"
-    ],
-    "printSymbols": [
-      "B(&#956;V)"
-    ],
-    "properties": [
-      "electric potential level"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"lgTimes2\" value=\"1\" Unit=\"uV\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "B[10.nV]": {
-    "isBase": false,
-    "CODE": "B[10.NV]",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "levels",
-    "names": [
-      "bel 10 nanovolt"
-    ],
-    "printSymbols": [
-      "B(10 nV)"
-    ],
-    "properties": [
-      "electric potential level"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"lgTimes2\" value=\"10\" Unit=\"nV\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "B[W]": {
-    "isBase": false,
-    "CODE": "B[W]",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "levels",
-    "names": [
-      "bel watt"
-    ],
-    "printSymbols": [
-      "B(W)"
-    ],
-    "properties": [
-      "power level"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"lg\" value=\"1\" Unit=\"W\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "B[kW]": {
-    "isBase": false,
-    "CODE": "B[KW]",
-    "isMetric": "yes",
-    "isSpecial": "yes",
-    "class": "levels",
-    "names": [
-      "bel kilowatt"
-    ],
-    "printSymbols": [
-      "B(kW)"
-    ],
-    "properties": [
-      "power level"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"lg\" value=\"1\" Unit=\"kW\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "st": {
-    "isBase": false,
-    "CODE": "STR",
-    "isMetric": "yes",
-    "class": "misc",
-    "names": [
-      "stere"
-    ],
-    "printSymbols": [
-      "st"
-    ],
-    "properties": [
-      "volume"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "Ao": {
-    "isBase": false,
-    "CODE": "AO",
-    "isMetric": "no",
-    "class": "misc",
-    "names": [
-      "Ångström"
-    ],
-    "printSymbols": [
-      "&#197;"
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "0.1",
-        "numeric": 0.1
-      }
-    ]
-  },
-  "b": {
-    "isBase": false,
-    "CODE": "BRN",
-    "isMetric": "no",
-    "class": "misc",
-    "names": [
-      "barn"
-    ],
-    "printSymbols": [
-      "b"
-    ],
-    "properties": [
-      "action area"
-    ],
-    "values": [
-      {
-        "printable": "100",
-        "numeric": 100
-      }
-    ]
-  },
-  "att": {
-    "isBase": false,
-    "CODE": "ATT",
-    "isMetric": "no",
-    "class": "misc",
-    "names": [
-      "technical atmosphere"
-    ],
-    "printSymbols": [
-      "at"
-    ],
-    "properties": [
-      "pressure"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "mho": {
-    "isBase": false,
-    "CODE": "MHO",
-    "isMetric": "yes",
-    "class": "misc",
-    "names": [
-      "mho"
-    ],
-    "printSymbols": [
-      "mho"
-    ],
-    "properties": [
-      "electric conductance"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[psi]": {
-    "isBase": false,
-    "CODE": "[PSI]",
-    "isMetric": "no",
-    "class": "misc",
-    "names": [
-      "pound per sqare inch"
-    ],
-    "printSymbols": [
-      "psi"
-    ],
-    "properties": [
-      "pressure"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "circ": {
-    "isBase": false,
-    "CODE": "CIRC",
-    "isMetric": "no",
-    "class": "misc",
-    "names": [
-      "circle"
-    ],
-    "printSymbols": [
-      "circ"
-    ],
-    "properties": [
-      "plane angle"
-    ],
-    "values": [
-      {
-        "printable": "2",
-        "numeric": 2
-      }
-    ]
-  },
-  "sph": {
-    "isBase": false,
-    "CODE": "SPH",
-    "isMetric": "no",
-    "class": "misc",
-    "names": [
-      "spere"
-    ],
-    "printSymbols": [
-      "sph"
-    ],
-    "properties": [
-      "solid angle"
-    ],
-    "values": [
-      {
-        "printable": "4",
-        "numeric": 4
-      }
-    ]
-  },
-  "[car_m]": {
-    "isBase": false,
-    "CODE": "[CAR_M]",
-    "isMetric": "no",
-    "class": "misc",
-    "names": [
-      "metric carat"
-    ],
-    "printSymbols": [
-      "ct<sub>m</sub>"
-    ],
-    "properties": [
-      "mass"
-    ],
-    "values": [
-      {
-        "printable": "0.2",
-        "numeric": 0.2
-      }
-    ]
-  },
-  "[car_Au]": {
-    "isBase": false,
-    "CODE": "[CAR_AU]",
-    "isMetric": "no",
-    "class": "misc",
-    "names": [
-      "carat of gold alloys"
-    ],
-    "printSymbols": [
-      "ct<sub>\n            <r>Au</r>\n         </sub>"
-    ],
-    "properties": [
-      "mass fraction"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "[smoot]": {
-    "isBase": false,
-    "CODE": "[SMOOT]",
-    "isMetric": "no",
-    "class": "misc",
-    "names": [
-      "Smoot"
-    ],
-    "printSymbols": [
-      ""
-    ],
-    "properties": [
-      "length"
-    ],
-    "values": [
-      {
-        "printable": "67",
-        "numeric": 67
-      }
-    ]
-  },
-  "bit_s": {
-    "isBase": false,
-    "CODE": "BIT_S",
-    "isMetric": "no",
-    "isSpecial": "yes",
-    "class": "infotech",
-    "names": [
-      "bit"
-    ],
-    "printSymbols": [
-      "bit<sub>s</sub>"
-    ],
-    "properties": [
-      "amount of information"
-    ],
-    "values": [
-      {
-        "printable": "<function name=\"ld\" value=\"1\" Unit=\"1\"/>",
-        "numeric": null
-      }
-    ]
-  },
-  "bit": {
-    "isBase": false,
-    "CODE": "BIT",
-    "isMetric": "yes",
-    "class": "infotech",
-    "names": [
-      "bit"
-    ],
-    "printSymbols": [
-      "bit"
-    ],
-    "properties": [
-      "amount of information"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "By": {
-    "isBase": false,
-    "CODE": "BY",
-    "isMetric": "yes",
-    "class": "infotech",
-    "names": [
-      "byte"
-    ],
-    "printSymbols": [
-      "B"
-    ],
-    "properties": [
-      "amount of information"
-    ],
-    "values": [
-      {
-        "printable": "8",
-        "numeric": 8
-      }
-    ]
-  },
-  "Bd": {
-    "isBase": false,
-    "CODE": "BD",
-    "isMetric": "yes",
-    "class": "infotech",
-    "names": [
-      "baud"
-    ],
-    "printSymbols": [
-      "Bd"
-    ],
-    "properties": [
-      "signal transmission rate"
-    ],
-    "values": [
-      {
-        "printable": "1",
-        "numeric": 1
-      }
-    ]
-  },
-  "m": {
-    "isBase": true,
-    "CODE": "M",
-    "dim": "L",
-    "names": [
-      "meter"
-    ],
-    "printSymbols": [
-      "m"
-    ],
-    "properties": [
-      "length"
-    ]
-  },
-  "s": {
-    "isBase": true,
-    "CODE": "S",
-    "dim": "T",
-    "names": [
-      "second"
-    ],
-    "printSymbols": [
-      "s"
-    ],
-    "properties": [
-      "time"
-    ]
-  },
-  "g": {
-    "isBase": true,
-    "CODE": "G",
-    "dim": "M",
-    "names": [
-      "gram"
-    ],
-    "printSymbols": [
-      "g"
-    ],
-    "properties": [
-      "mass"
-    ]
-  },
-  "rad": {
-    "isBase": true,
-    "CODE": "RAD",
-    "dim": "A",
-    "names": [
-      "radian"
-    ],
-    "printSymbols": [
-      "rad"
-    ],
-    "properties": [
-      "plane angle"
-    ]
-  },
-  "K": {
-    "isBase": true,
-    "CODE": "K",
-    "dim": "C",
-    "names": [
-      "Kelvin"
-    ],
-    "printSymbols": [
-      "K"
-    ],
-    "properties": [
-      "temperature"
-    ]
-  },
-  "C": {
-    "isBase": true,
-    "CODE": "C",
-    "dim": "Q",
-    "names": [
-      "Coulomb"
-    ],
-    "printSymbols": [
-      "C"
-    ],
-    "properties": [
-      "electric charge"
-    ]
-  },
-  "cd": {
-    "isBase": true,
-    "CODE": "CD",
-    "dim": "F",
-    "names": [
-      "candela"
-    ],
-    "printSymbols": [
-      "cd"
-    ],
-    "properties": [
-      "luminous intensity"
-    ]
-  }
-}
-
-},{}],179:[function(require,module,exports){
-module.exports = {
-
-  multiply: function multiply(t, ms) {
-    //console.log("Multiply: ", JSON.stringify(t), JSON.stringify(ms));
-    if (ms.length == 0) return t;
-
-    var ret = t;
-    ms.forEach(function(mterm){
-
-      var sign = (mterm[0] == "." ? 1 : -1);
-      var b = mterm[1];
-
-      ret.value *= Math.pow(b.value, sign);
-      //console.log("b = ", JSON.stringify(b));
-      //console.log("ret = ", JSON.stringify(ret));
-      Object.keys(b.units).forEach(function(u){
-        ret.units[u] = ret.units[u] || 0;
-        ret.units[u] = ret.units[u] + sign*b.units[u];
-
-        if(!ret.metadata && b.metadata){
-          ret.metadata = {};
-          ret.metadata[u] = b.metadata[u];
-        }
-        else if(ret.metadata && b.metadata){
-          ret.metadata[u] = b.metadata[u];
-        }
-
-        if (ret.units[u] == 0){
-          delete ret.units[u];
-          if(ret.metadata) {
-            delete ret.metadata[u];
-          }
-        }
-      });
-
-    });
-
-    //console.log("Multiply ret: ", ret);
-    return ret;
-  },
-
-  topower: function topower(e, exp){
-    if (!exp) {exp = 1;}
-    var ret = e;
-    ret.value = Math.pow(ret.value, exp);
-    Object.keys(e.units).forEach(function(u){
-      ret.units[u] = e.units[u] * exp;
-    });
-
-    return ret;
-  },
-
-  cleanup: function cleanup(e) {
-    ["10^", "10*"].forEach(function(k){
-      if (e.units[k]) {
-        e.value *= Math.pow(10, e.units[k]);
-        delete e.units[k];
-      }
-    });
-    return e;
-  },
-
-  ismetric: function(metrics) {
-    return function(u) {
-      return metrics[Object.keys(u.units)[0]] !== undefined;
-    };
-  }
-}
-
-},{}],180:[function(require,module,exports){
-parser = require('./generated/ucum-parser.js');
-equivalents = require('./generated/equivalents.json');
-helpers = require('./lib/helpers.js');
-unitMetadata = require('./generated/unitMetadata.json');
-
-module.exports = {
-  parse: parse,
-  canonicalize: canonicalize,
-  convert: convert,
-  format: format,
-  unitQuery: unitQuery
-};
-
-function parse(value, units){
-
-  if (arguments.length === 1 || units === undefined){
-    units = value;
-    value = 1
-  }
-
-  if (units.match(/^\//)){
-    units = '1'+units;
-  }
-
-  if (units === '') units = '1';
-
-  var ret = parser.parse(units);
-  ret.value *= value;
-  return ret;
-}
-
-function nonBaseUnit(u){
-  return equivalents[u] !== undefined;
-}
-
-function remainingNonBaseUnits(value) {
-  return Object.keys(value.units).filter(nonBaseUnit)
-}
-
-function canonicalize(value, units){
-
-  value = parse(value, units);
-
-  var remaining = remainingNonBaseUnits(value);
-
-  while (remaining.length) {
-    if (remaining.length === 0) {
-      return false;
-    }
-
-    remaining.forEach(function(u){
-      var sub = parse(equivalents[u].ucum);
-      sub.value *= equivalents[u].value;
-      sub = helpers.topower(sub, value.units[u]);
-      value = helpers.multiply(value, [['.', sub]]);
-      delete value.units[u];
-    });
-
-    remaining = remainingNonBaseUnits(value);
-  }
-
-  // we should remove any prefix metadata that exists at this point
-  // because it represents residual artifacts of the above process
-  if(value.metadata){
-    Object.keys(value.metadata).forEach(function(u){
-      if(value.metadata[u]){
-        if(value.metadata[u].prefix) {
-          delete value.metadata[u].prefix;
-        }
-
-        // if it's not in the final array of units we should delete this metadata as well
-        if(Object.keys(value.units).indexOf(u) == -1){
-          delete value.metadata[u];
-        }
-      }
-    });
-  }
-
-  return value;
-}
-
-function conformant(a, b){
-  var ret = true;
-  Object.keys(a.units)
-  .concat(Object.keys(b.units))
-  .forEach(function(k){
-    if (a.units[k] !== b.units[k]) {
-      ret = false;
-    }
-  });
-  
-  return ret;
-}
-
-function convert(fromValue, fromUnits, toUnits){
- fromc = canonicalize(fromValue, fromUnits);
- toc = canonicalize(toUnits);
-
- if (!conformant(fromc, toc)){
-   throw "Non-conformant units; can't convert from " + fromUnits + " to " + toUnits ;
- }
-
- return fromc.value / toc.value;
-
-}
-
-// format returns a printable representation of the value
-// the resulting units are a single-line html rendering of the resultant units
-// can be invoked in the following supported ways, by example:
-// 1. ucum.format('[in_i]') -> 'in'
-// 2. ucum.format('[in_i]', true) -> '1 in'
-// 3. ucum.format(3, '[in_i]', true) -> '3 in'
-// 4. var x = ucum.parse(3, '[in_i]'); ucum.format(x) -> 'in'
-// 5. var x = ucum.parse(3, '[in_i]'); ucum.format(x, true) -> '3 in'
-function format(value, units, includeValue){
-  var obj;
-
-  if(typeof value === 'string'){
-    includeValue = units;
-    units = value;
-    value = 1;
-  }
-
-  if(typeof value === 'object'){
-    // treat it like a UCUM parse output
-    obj = value;
-    includeValue = units; // you would never provide units in this case, but you might provide includeValue
-  }
-  else{
-    // parse it first
-    obj = parse(value, units);
-  }
-
-  var units = Object.keys(obj.units);
-  var metadata = obj.metadata;
-  var numUnits = units.length;
-  var numeratorUnits = [];
-  var denominatorUnits = [];
-  var printableUnits = "";
-  
-  units.forEach(function(unit, index){
-    var exponent = obj.units[unit];
-    var absExponent = Math.abs(exponent);
-    var printable = metadata[unit].printSymbols ? metadata[unit].printSymbols[0] : metadata[unit].names[0];
-    var prefix = metadata[unit].prefix ? metadata[unit].prefix.printSymbols[0] : "";
-    pUnit = prefix + printable;
-    if(absExponent !== 1){      
-      pUnit += "<sup>";
-      pUnit += Math.abs(exponent);
-      pUnit += "</sup>";
-    }
-    
-    if(exponent > 0){
-      numeratorUnits.push(pUnit);
-    }
-    else{
-      denominatorUnits.push(pUnit);
-    }
-  });
-
-
-  if(numeratorUnits.length == 0){
-    printableUnits = "1";
-  }
-  else if(numeratorUnits.length > 0){
-    printableUnits = numeratorUnits.join("*");
-  }
-  
-  if(denominatorUnits.length > 0){
-    printableUnits += "/";
-  } 
-  
-  printableUnits += denominatorUnits.join("/");
-
-  if(includeValue){
-    printableUnits = obj.value + " " + printableUnits;
-  }
-
-  return printableUnits;
-}
-
-// searches the unit metadata for all unit metadata
-// criteria is an object like
-//   { properties: 'area', isMetric: 'yes' }
-// where the key/value pairs form a logical intersection, i.e. all criteria must be met
-// resultFields is an array to pre-reduce the result set fields
-function unitQuery(criteria, resultFields){
-  return Object.keys(unitMetadata).filter((unit) => {
-    var keys = Object.keys(criteria);
-    for(var ii = 0; ii < keys.length; ii++){
-      var key = keys[ii];
-      var val = unitMetadata[unit][key];
-      var value = criteria[key];
-      if(val && (typeof val === 'object')){
-        // it's a list of values, it's a match if the target value occurs in the list
-        if(val.indexOf(value) === -1){
-          return false;
-        }
-      }
-      else{
-        // it's a non-object, make a direct comparison
-        if(unitMetadata[unit][key] !== value){
-          return false;
-        }
-      }
-    }
-    return true;
-  }).map((key) => {
-    var obj = {};
-    if(resultFields){
-      if(resultFields.length) {
-        obj[key] = {};
-        resultFields.forEach((field) => {
-          if (unitMetadata[key][field] !== undefined) {
-            obj[key][field] = JSON.parse(JSON.stringify(unitMetadata[key][field]));
-          }
-        });
-      }
-      else{
-        // just return the keys if an empty array gets passed for resultSet
-        obj = key;
-      }
-    }
-    else{
-      obj[key] = JSON.parse(JSON.stringify(unitMetadata[key]));
-    }
-    return obj;
-  });
-}
-},{"./generated/equivalents.json":173,"./generated/ucum-parser.js":177,"./generated/unitMetadata.json":178,"./lib/helpers.js":179}],181:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -77889,7 +63718,7 @@ class AdverseEvent extends mongoose.Document {
 module.exports.AdverseEvent = AdverseEvent;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],182:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],173:[function(require,module,exports){
 module.exports.Identifier = require('./attributes/Identifier.js').Identifier;
 module.exports.IdentifierSchema = require('./attributes/Identifier.js').IdentifierSchema;
 module.exports.Entity = require('./attributes/Entity.js').Entity;
@@ -78019,7 +63848,7 @@ module.exports.PhysicalExamPerformedSchema = require('./PhysicalExamPerformed.js
 module.exports.QDMPatient = require('./QDMPatient.js').QDMPatient;
 module.exports.QDMPatientSchema = require('./QDMPatient.js').QDMPatientSchema;
 
-},{"./AdverseEvent.js":181,"./AllergyIntolerance.js":183,"./AssessmentOrder.js":184,"./AssessmentPerformed.js":185,"./AssessmentRecommended.js":186,"./CareGoal.js":187,"./CommunicationPerformed.js":188,"./DeviceApplied.js":189,"./DeviceOrder.js":190,"./DeviceRecommended.js":191,"./Diagnosis.js":192,"./DiagnosticStudyOrder.js":193,"./DiagnosticStudyPerformed.js":194,"./DiagnosticStudyRecommended.js":195,"./EncounterOrder.js":196,"./EncounterPerformed.js":197,"./EncounterRecommended.js":198,"./FamilyHistory.js":199,"./ImmunizationAdministered.js":200,"./ImmunizationOrder.js":201,"./InterventionOrder.js":202,"./InterventionPerformed.js":203,"./InterventionRecommended.js":204,"./LaboratoryTestOrder.js":205,"./LaboratoryTestPerformed.js":206,"./LaboratoryTestRecommended.js":207,"./MedicationActive.js":208,"./MedicationAdministered.js":209,"./MedicationDischarge.js":210,"./MedicationDispensed.js":211,"./MedicationOrder.js":212,"./Participation.js":213,"./PatientCareExperience.js":214,"./PatientCharacteristic.js":215,"./PatientCharacteristicBirthdate.js":216,"./PatientCharacteristicClinicalTrialParticipant.js":217,"./PatientCharacteristicEthnicity.js":218,"./PatientCharacteristicExpired.js":219,"./PatientCharacteristicPayer.js":220,"./PatientCharacteristicRace.js":221,"./PatientCharacteristicSex.js":222,"./PhysicalExamOrder.js":223,"./PhysicalExamPerformed.js":224,"./PhysicalExamRecommended.js":225,"./ProcedureOrder.js":226,"./ProcedurePerformed.js":227,"./ProcedureRecommended.js":228,"./ProviderCareExperience.js":229,"./QDMPatient.js":230,"./RelatedPerson.js":231,"./SubstanceAdministered.js":233,"./SubstanceOrder.js":234,"./SubstanceRecommended.js":235,"./Symptom.js":236,"./attributes/CarePartner.js":237,"./attributes/Component.js":238,"./attributes/DiagnosisComponent.js":239,"./attributes/Entity.js":240,"./attributes/FacilityLocation.js":241,"./attributes/Identifier.js":242,"./attributes/Organization.js":243,"./attributes/PatientEntity.js":244,"./attributes/Practitioner.js":245,"./attributes/ResultComponent.js":246}],183:[function(require,module,exports){
+},{"./AdverseEvent.js":172,"./AllergyIntolerance.js":174,"./AssessmentOrder.js":175,"./AssessmentPerformed.js":176,"./AssessmentRecommended.js":177,"./CareGoal.js":178,"./CommunicationPerformed.js":179,"./DeviceApplied.js":180,"./DeviceOrder.js":181,"./DeviceRecommended.js":182,"./Diagnosis.js":183,"./DiagnosticStudyOrder.js":184,"./DiagnosticStudyPerformed.js":185,"./DiagnosticStudyRecommended.js":186,"./EncounterOrder.js":187,"./EncounterPerformed.js":188,"./EncounterRecommended.js":189,"./FamilyHistory.js":190,"./ImmunizationAdministered.js":191,"./ImmunizationOrder.js":192,"./InterventionOrder.js":193,"./InterventionPerformed.js":194,"./InterventionRecommended.js":195,"./LaboratoryTestOrder.js":196,"./LaboratoryTestPerformed.js":197,"./LaboratoryTestRecommended.js":198,"./MedicationActive.js":199,"./MedicationAdministered.js":200,"./MedicationDischarge.js":201,"./MedicationDispensed.js":202,"./MedicationOrder.js":203,"./Participation.js":204,"./PatientCareExperience.js":205,"./PatientCharacteristic.js":206,"./PatientCharacteristicBirthdate.js":207,"./PatientCharacteristicClinicalTrialParticipant.js":208,"./PatientCharacteristicEthnicity.js":209,"./PatientCharacteristicExpired.js":210,"./PatientCharacteristicPayer.js":211,"./PatientCharacteristicRace.js":212,"./PatientCharacteristicSex.js":213,"./PhysicalExamOrder.js":214,"./PhysicalExamPerformed.js":215,"./PhysicalExamRecommended.js":216,"./ProcedureOrder.js":217,"./ProcedurePerformed.js":218,"./ProcedureRecommended.js":219,"./ProviderCareExperience.js":220,"./QDMPatient.js":221,"./RelatedPerson.js":222,"./SubstanceAdministered.js":224,"./SubstanceOrder.js":225,"./SubstanceRecommended.js":226,"./Symptom.js":227,"./attributes/CarePartner.js":228,"./attributes/Component.js":229,"./attributes/DiagnosisComponent.js":230,"./attributes/Entity.js":231,"./attributes/FacilityLocation.js":232,"./attributes/Identifier.js":233,"./attributes/Organization.js":234,"./attributes/PatientEntity.js":235,"./attributes/Practitioner.js":236,"./attributes/ResultComponent.js":237}],174:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78067,7 +63896,7 @@ class AllergyIntolerance extends mongoose.Document {
 module.exports.AllergyIntolerance = AllergyIntolerance;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],184:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],175:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78114,7 +63943,7 @@ class AssessmentOrder extends mongoose.Document {
 module.exports.AssessmentOrder = AssessmentOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],185:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],176:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78167,7 +63996,7 @@ class AssessmentPerformed extends mongoose.Document {
 module.exports.AssessmentPerformed = AssessmentPerformed;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],186:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],177:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78214,7 +64043,7 @@ class AssessmentRecommended extends mongoose.Document {
 module.exports.AssessmentRecommended = AssessmentRecommended;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],187:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],178:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78261,7 +64090,7 @@ class CareGoal extends mongoose.Document {
 module.exports.CareGoal = CareGoal;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],188:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],179:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78313,7 +64142,7 @@ class CommunicationPerformed extends mongoose.Document {
 module.exports.CommunicationPerformed = CommunicationPerformed;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],189:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],180:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78363,7 +64192,7 @@ class DeviceApplied extends mongoose.Document {
 module.exports.DeviceApplied = DeviceApplied;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],190:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],181:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78410,7 +64239,7 @@ class DeviceOrder extends mongoose.Document {
 module.exports.DeviceOrder = DeviceOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],191:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],182:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78457,7 +64286,7 @@ class DeviceRecommended extends mongoose.Document {
 module.exports.DeviceRecommended = DeviceRecommended;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],192:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],183:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78505,7 +64334,7 @@ class Diagnosis extends mongoose.Document {
 module.exports.Diagnosis = Diagnosis;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],193:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],184:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78552,7 +64381,7 @@ class DiagnosticStudyOrder extends mongoose.Document {
 module.exports.DiagnosticStudyOrder = DiagnosticStudyOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],194:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],185:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78607,7 +64436,7 @@ class DiagnosticStudyPerformed extends mongoose.Document {
 module.exports.DiagnosticStudyPerformed = DiagnosticStudyPerformed;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],195:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],186:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78654,7 +64483,7 @@ class DiagnosticStudyRecommended extends mongoose.Document {
 module.exports.DiagnosticStudyRecommended = DiagnosticStudyRecommended;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],196:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],187:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78703,7 +64532,7 @@ class EncounterOrder extends mongoose.Document {
 module.exports.EncounterOrder = EncounterOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],197:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],188:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78756,7 +64585,7 @@ class EncounterPerformed extends mongoose.Document {
 module.exports.EncounterPerformed = EncounterPerformed;
 
 
-},{"./attributes/Component":238,"./attributes/DiagnosisComponent":239,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],198:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/DiagnosisComponent":230,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],189:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78804,7 +64633,7 @@ class EncounterRecommended extends mongoose.Document {
 module.exports.EncounterRecommended = EncounterRecommended;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],199:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],190:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78850,7 +64679,7 @@ class FamilyHistory extends mongoose.Document {
 module.exports.FamilyHistory = FamilyHistory;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],200:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],191:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78901,7 +64730,7 @@ class ImmunizationAdministered extends mongoose.Document {
 module.exports.ImmunizationAdministered = ImmunizationAdministered;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],201:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],192:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78952,7 +64781,7 @@ class ImmunizationOrder extends mongoose.Document {
 module.exports.ImmunizationOrder = ImmunizationOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],202:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],193:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -78999,7 +64828,7 @@ class InterventionOrder extends mongoose.Document {
 module.exports.InterventionOrder = InterventionOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],203:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],194:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79050,7 +64879,7 @@ class InterventionPerformed extends mongoose.Document {
 module.exports.InterventionPerformed = InterventionPerformed;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],204:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],195:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79097,7 +64926,7 @@ class InterventionRecommended extends mongoose.Document {
 module.exports.InterventionRecommended = InterventionRecommended;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],205:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],196:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79144,7 +64973,7 @@ class LaboratoryTestOrder extends mongoose.Document {
 module.exports.LaboratoryTestOrder = LaboratoryTestOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],206:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],197:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79199,7 +65028,7 @@ class LaboratoryTestPerformed extends mongoose.Document {
 module.exports.LaboratoryTestPerformed = LaboratoryTestPerformed;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],207:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],198:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79246,7 +65075,7 @@ class LaboratoryTestRecommended extends mongoose.Document {
 module.exports.LaboratoryTestRecommended = LaboratoryTestRecommended;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],208:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],199:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79295,7 +65124,7 @@ class MedicationActive extends mongoose.Document {
 module.exports.MedicationActive = MedicationActive;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],209:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],200:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79347,7 +65176,7 @@ class MedicationAdministered extends mongoose.Document {
 module.exports.MedicationAdministered = MedicationAdministered;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],210:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],201:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79400,7 +65229,7 @@ class MedicationDischarge extends mongoose.Document {
 module.exports.MedicationDischarge = MedicationDischarge;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],211:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],202:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79455,7 +65284,7 @@ class MedicationDispensed extends mongoose.Document {
 module.exports.MedicationDispensed = MedicationDispensed;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],212:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],203:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79510,7 +65339,7 @@ class MedicationOrder extends mongoose.Document {
 module.exports.MedicationOrder = MedicationOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],213:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],204:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79554,7 +65383,7 @@ class Participation extends mongoose.Document {
 module.exports.Participation = Participation;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],214:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],205:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79598,7 +65427,7 @@ class PatientCareExperience extends mongoose.Document {
 module.exports.PatientCareExperience = PatientCareExperience;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],215:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],206:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79641,7 +65470,7 @@ class PatientCharacteristic extends mongoose.Document {
 module.exports.PatientCharacteristic = PatientCharacteristic;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],216:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],207:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79685,7 +65514,7 @@ class PatientCharacteristicBirthdate extends mongoose.Document {
 module.exports.PatientCharacteristicBirthdate = PatientCharacteristicBirthdate;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],217:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],208:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79731,7 +65560,7 @@ class PatientCharacteristicClinicalTrialParticipant extends mongoose.Document {
 module.exports.PatientCharacteristicClinicalTrialParticipant = PatientCharacteristicClinicalTrialParticipant;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],218:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],209:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79774,7 +65603,7 @@ class PatientCharacteristicEthnicity extends mongoose.Document {
 module.exports.PatientCharacteristicEthnicity = PatientCharacteristicEthnicity;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],219:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],210:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79819,7 +65648,7 @@ class PatientCharacteristicExpired extends mongoose.Document {
 module.exports.PatientCharacteristicExpired = PatientCharacteristicExpired;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],220:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],211:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79863,7 +65692,7 @@ class PatientCharacteristicPayer extends mongoose.Document {
 module.exports.PatientCharacteristicPayer = PatientCharacteristicPayer;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],221:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],212:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79906,7 +65735,7 @@ class PatientCharacteristicRace extends mongoose.Document {
 module.exports.PatientCharacteristicRace = PatientCharacteristicRace;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],222:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],213:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79949,7 +65778,7 @@ class PatientCharacteristicSex extends mongoose.Document {
 module.exports.PatientCharacteristicSex = PatientCharacteristicSex;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],223:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],214:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -79997,7 +65826,7 @@ class PhysicalExamOrder extends mongoose.Document {
 module.exports.PhysicalExamOrder = PhysicalExamOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],224:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],215:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80050,7 +65879,7 @@ class PhysicalExamPerformed extends mongoose.Document {
 module.exports.PhysicalExamPerformed = PhysicalExamPerformed;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],225:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],216:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80098,7 +65927,7 @@ class PhysicalExamRecommended extends mongoose.Document {
 module.exports.PhysicalExamRecommended = PhysicalExamRecommended;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],226:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],217:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80148,7 +65977,7 @@ class ProcedureOrder extends mongoose.Document {
 module.exports.ProcedureOrder = ProcedureOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],227:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],218:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80205,7 +66034,7 @@ class ProcedurePerformed extends mongoose.Document {
 module.exports.ProcedurePerformed = ProcedurePerformed;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],228:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],219:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80254,7 +66083,7 @@ class ProcedureRecommended extends mongoose.Document {
 module.exports.ProcedureRecommended = ProcedureRecommended;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],229:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],220:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80298,7 +66127,7 @@ class ProviderCareExperience extends mongoose.Document {
 module.exports.ProviderCareExperience = ProviderCareExperience;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],230:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],221:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('./basetypes/Code');
 const Interval = require('./basetypes/Interval');
@@ -80578,7 +66407,7 @@ class QDMPatient extends mongoose.Document {
 }
 module.exports.QDMPatient = QDMPatient;
 
-},{"./AllDataElements":182,"./basetypes/Code":249,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/Quantity":254,"mongoose/browser":274}],231:[function(require,module,exports){
+},{"./AllDataElements":173,"./basetypes/Code":240,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/Quantity":245,"mongoose/browser":265}],222:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80622,7 +66451,7 @@ class RelatedPerson extends mongoose.Document {
 module.exports.RelatedPerson = RelatedPerson;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],232:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],223:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const PlaceholderResultSchema = mongoose.Schema({
@@ -80657,7 +66486,7 @@ class PlaceholderResult extends mongoose.Document {
 }
 module.exports.PlaceholderResult = PlaceholderResult;
 
-},{"mongoose/browser":274}],233:[function(require,module,exports){
+},{"mongoose/browser":265}],224:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80708,7 +66537,7 @@ class SubstanceAdministered extends mongoose.Document {
 module.exports.SubstanceAdministered = SubstanceAdministered;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],234:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],225:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80761,7 +66590,7 @@ class SubstanceOrder extends mongoose.Document {
 module.exports.SubstanceOrder = SubstanceOrder;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],235:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],226:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80812,7 +66641,7 @@ class SubstanceRecommended extends mongoose.Document {
 module.exports.SubstanceRecommended = SubstanceRecommended;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],236:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],227:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -80858,7 +66687,7 @@ class Symptom extends mongoose.Document {
 module.exports.Symptom = Symptom;
 
 
-},{"./attributes/Component":238,"./attributes/Entity":240,"./attributes/FacilityLocation":241,"./attributes/Identifier":242,"./basetypes/Any":247,"./basetypes/AnyEntity":248,"./basetypes/Code":249,"./basetypes/DataElement":250,"./basetypes/DateTime":251,"./basetypes/Interval":252,"./basetypes/QDMDate":253,"./basetypes/Quantity":254,"mongoose/browser":274}],237:[function(require,module,exports){
+},{"./attributes/Component":229,"./attributes/Entity":231,"./attributes/FacilityLocation":232,"./attributes/Identifier":233,"./basetypes/Any":238,"./basetypes/AnyEntity":239,"./basetypes/Code":240,"./basetypes/DataElement":241,"./basetypes/DateTime":242,"./basetypes/Interval":243,"./basetypes/QDMDate":244,"./basetypes/Quantity":245,"mongoose/browser":265}],228:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { EntitySchemaFunction } = require('./Entity');
@@ -80893,7 +66722,7 @@ class CarePartner extends mongoose.Document {
 module.exports.CarePartner = CarePartner;
 
 
-},{"../basetypes/Any":247,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/QDMDate":253,"../basetypes/Quantity":254,"./Entity":240,"mongoose/browser":274}],238:[function(require,module,exports){
+},{"../basetypes/Any":238,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/QDMDate":244,"../basetypes/Quantity":245,"./Entity":231,"mongoose/browser":265}],229:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const Code = require('../basetypes/Code');
@@ -80946,7 +66775,7 @@ function ComponentSchemaFunction(add, options) {
 module.exports.Component = Component;
 module.exports.ComponentSchemaFunction = ComponentSchemaFunction;
 
-},{"../basetypes/Any":247,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/QDMDate":253,"../basetypes/Quantity":254,"mongoose/browser":274}],239:[function(require,module,exports){
+},{"../basetypes/Any":238,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/QDMDate":244,"../basetypes/Quantity":245,"mongoose/browser":265}],230:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const Code = require('../basetypes/Code');
@@ -80982,7 +66811,7 @@ class DiagnosisComponent extends mongoose.Document {
 module.exports.DiagnosisComponent = DiagnosisComponent;
 
 
-},{"../basetypes/Any":247,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/QDMDate":253,"../basetypes/Quantity":254,"mongoose/browser":274}],240:[function(require,module,exports){
+},{"../basetypes/Any":238,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/QDMDate":244,"../basetypes/Quantity":245,"mongoose/browser":265}],231:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./Identifier');
@@ -81042,7 +66871,7 @@ function EntitySchemaFunction(add, options) {
 module.exports.Entity = Entity;
 module.exports.EntitySchemaFunction = EntitySchemaFunction;
 
-},{"../basetypes/Any":247,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/QDMDate":253,"../basetypes/Quantity":254,"./Identifier":242,"mongoose/browser":274}],241:[function(require,module,exports){
+},{"../basetypes/Any":238,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/QDMDate":244,"../basetypes/Quantity":245,"./Identifier":233,"mongoose/browser":265}],232:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const Code = require('../basetypes/Code');
@@ -81077,7 +66906,7 @@ class FacilityLocation extends mongoose.Document {
 module.exports.FacilityLocation = FacilityLocation;
 
 
-},{"../basetypes/Any":247,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/QDMDate":253,"../basetypes/Quantity":254,"mongoose/browser":274}],242:[function(require,module,exports){
+},{"../basetypes/Any":238,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/QDMDate":244,"../basetypes/Quantity":245,"mongoose/browser":265}],233:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const [Number, String] = [
@@ -81102,7 +66931,7 @@ class Identifier extends mongoose.Document {
 }
 module.exports.Identifier = Identifier;
 
-},{"mongoose/browser":274}],243:[function(require,module,exports){
+},{"mongoose/browser":265}],234:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { EntitySchemaFunction } = require('./Entity');
@@ -81137,7 +66966,7 @@ class Organization extends mongoose.Document {
 module.exports.Organization = Organization;
 
 
-},{"../basetypes/Any":247,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/QDMDate":253,"../basetypes/Quantity":254,"./Entity":240,"mongoose/browser":274}],244:[function(require,module,exports){
+},{"../basetypes/Any":238,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/QDMDate":244,"../basetypes/Quantity":245,"./Entity":231,"mongoose/browser":265}],235:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { EntitySchemaFunction } = require('./Entity');
@@ -81171,7 +67000,7 @@ class PatientEntity extends mongoose.Document {
 module.exports.PatientEntity = PatientEntity;
 
 
-},{"../basetypes/Any":247,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/QDMDate":253,"../basetypes/Quantity":254,"./Entity":240,"mongoose/browser":274}],245:[function(require,module,exports){
+},{"../basetypes/Any":238,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/QDMDate":244,"../basetypes/Quantity":245,"./Entity":231,"mongoose/browser":265}],236:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { EntitySchemaFunction } = require('./Entity');
@@ -81208,7 +67037,7 @@ class Practitioner extends mongoose.Document {
 module.exports.Practitioner = Practitioner;
 
 
-},{"../basetypes/Any":247,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/QDMDate":253,"../basetypes/Quantity":254,"./Entity":240,"mongoose/browser":274}],246:[function(require,module,exports){
+},{"../basetypes/Any":238,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/QDMDate":244,"../basetypes/Quantity":245,"./Entity":231,"mongoose/browser":265}],237:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { ComponentSchemaFunction } = require('./Component');
@@ -81241,7 +67070,7 @@ class ResultComponent extends mongoose.Document {
 module.exports.ResultComponent = ResultComponent;
 
 
-},{"../basetypes/Any":247,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/QDMDate":253,"../basetypes/Quantity":254,"./Component":238,"mongoose/browser":274}],247:[function(require,module,exports){
+},{"../basetypes/Any":238,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/QDMDate":244,"../basetypes/Quantity":245,"./Component":229,"mongoose/browser":265}],238:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -81320,7 +67149,7 @@ Any.prototype.cast = any => RecursiveCast(any);
 mongoose.Schema.Types.Any = Any;
 module.exports = Any;
 
-},{"cql-execution":38,"mongoose/browser":274}],248:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":265}],239:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { PatientEntity } = require('../attributes/PatientEntity');
 const { Practitioner } = require('../attributes/Practitioner');
@@ -81366,7 +67195,7 @@ AnyEntity.prototype.cast = (entity) => {
 mongoose.Schema.Types.AnyEntity = AnyEntity;
 module.exports = AnyEntity;
 
-},{"../attributes/CarePartner":237,"../attributes/Organization":243,"../attributes/PatientEntity":244,"../attributes/Practitioner":245,"mongoose/browser":274}],249:[function(require,module,exports){
+},{"../attributes/CarePartner":228,"../attributes/Organization":234,"../attributes/PatientEntity":235,"../attributes/Practitioner":236,"mongoose/browser":265}],240:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -81399,7 +67228,7 @@ Code.prototype.cast = (code) => {
 mongoose.Schema.Types.Code = Code;
 module.exports = Code;
 
-},{"cql-execution":38,"mongoose/browser":274}],250:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":265}],241:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('./Code.js');
 const cql = require('cql-execution');
@@ -81456,7 +67285,7 @@ function DataElementSchema(add, options) {
 
 module.exports.DataElementSchema = DataElementSchema;
 
-},{"../attributes/Identifier":242,"./Code.js":249,"cql-execution":38,"mongoose/browser":274}],251:[function(require,module,exports){
+},{"../attributes/Identifier":233,"./Code.js":240,"cql-execution":38,"mongoose/browser":265}],242:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -81480,7 +67309,7 @@ DateTime.prototype.cast = (dateTime) => {
 mongoose.Schema.Types.DateTime = DateTime;
 module.exports = DateTime;
 
-},{"cql-execution":38,"mongoose/browser":274}],252:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":265}],243:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 const DateTime = require('./DateTime');
@@ -81519,7 +67348,7 @@ Interval.prototype.cast = (interval) => {
 mongoose.Schema.Types.Interval = Interval;
 module.exports = Interval;
 
-},{"./DateTime":251,"cql-execution":38,"mongoose/browser":274}],253:[function(require,module,exports){
+},{"./DateTime":242,"cql-execution":38,"mongoose/browser":265}],244:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -81557,7 +67386,7 @@ QDMDate.prototype.cast = (date) => {
 mongoose.Schema.Types.QDMDate = QDMDate;
 module.exports = QDMDate;
 
-},{"cql-execution":38,"mongoose/browser":274}],254:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":265}],245:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -81579,7 +67408,7 @@ Quantity.prototype.cast = (quantity) => {
 mongoose.Schema.Types.Quantity = Quantity;
 module.exports = Quantity;
 
-},{"cql-execution":38,"mongoose/browser":274}],255:[function(require,module,exports){
+},{"cql-execution":38,"mongoose/browser":265}],246:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { StatementDependencySchema } = require('./CQLStatementDependency');
 
@@ -81613,7 +67442,7 @@ class CQLLibrary extends mongoose.Document {
 }
 module.exports.CQLLibrary = CQLLibrary;
 
-},{"./CQLStatementDependency":256,"mongoose/browser":274}],256:[function(require,module,exports){
+},{"./CQLStatementDependency":247,"mongoose/browser":265}],247:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const StatementReferenceSchema = new mongoose.Schema({
@@ -81643,7 +67472,7 @@ class StatementDependency extends mongoose.Document {
 }
 module.exports.StatementDependency = StatementDependency;
 
-},{"mongoose/browser":274}],257:[function(require,module,exports){
+},{"mongoose/browser":265}],248:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const [String, Mixed] = [
@@ -81673,7 +67502,7 @@ class ClauseResult extends mongoose.Document {
 }
 module.exports.ClauseResult = ClauseResult;
 
-},{"mongoose/browser":274}],258:[function(require,module,exports){
+},{"mongoose/browser":265}],249:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const ConceptSchema = new mongoose.Schema({
@@ -81692,7 +67521,7 @@ class Concept extends mongoose.Document {
 }
 module.exports.Concept = Concept;
 
-},{"mongoose/browser":274}],259:[function(require,module,exports){
+},{"mongoose/browser":265}],250:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const { ClauseResultSchema } = require('./ClauseResult');
 const { StatementResultSchema } = require('./StatementResult');
@@ -81782,7 +67611,7 @@ class IndividualResult extends mongoose.Document {
 }
 module.exports.IndividualResult = IndividualResult;
 
-},{"./ClauseResult":257,"./StatementResult":265,"mongoose/browser":274}],260:[function(require,module,exports){
+},{"./ClauseResult":248,"./StatementResult":256,"mongoose/browser":265}],251:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('../basetypes/Code');
 const Interval = require('../basetypes/Interval');
@@ -81892,7 +67721,7 @@ class Measure extends mongoose.Document {
 }
 module.exports.Measure = Measure;
 
-},{"../AllDataElements":182,"../basetypes/Code":249,"../basetypes/DataElement":250,"../basetypes/Interval":252,"../basetypes/Quantity":254,"./CQLLibrary":255,"./PopulationSet":263,"mongoose/browser":274}],261:[function(require,module,exports){
+},{"../AllDataElements":173,"../basetypes/Code":240,"../basetypes/DataElement":241,"../basetypes/Interval":243,"../basetypes/Quantity":245,"./CQLLibrary":246,"./PopulationSet":254,"mongoose/browser":265}],252:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 // using mBuffer to not conflict with system Buffer
@@ -81920,7 +67749,7 @@ class MeasurePackage extends mongoose.Document {
 }
 module.exports.MeasurePackage = MeasurePackage;
 
-},{"mongoose/browser":274}],262:[function(require,module,exports){
+},{"mongoose/browser":265}],253:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('../basetypes/Code');
 const Interval = require('../basetypes/Interval');
@@ -81960,7 +67789,7 @@ class Patient extends mongoose.Document {
 }
 module.exports.Patient = Patient;
 
-},{"../QDMPatient":230,"../basetypes/Code":249,"../basetypes/DateTime":251,"../basetypes/Interval":252,"../basetypes/Quantity":254,"./Provider":264,"mongoose/browser":274}],263:[function(require,module,exports){
+},{"../QDMPatient":221,"../basetypes/Code":240,"../basetypes/DateTime":242,"../basetypes/Interval":243,"../basetypes/Quantity":245,"./Provider":255,"mongoose/browser":265}],254:[function(require,module,exports){
 /* eslint-disable no-unused-vars, no-param-reassign */
 const mongoose = require('mongoose/browser');
 const { StatementReferenceSchema } = require('./CQLStatementDependency');
@@ -82050,7 +67879,7 @@ class PopulationSet extends mongoose.Document {
 }
 module.exports.PopulationSet = PopulationSet;
 
-},{"./CQLStatementDependency":256,"mongoose/browser":274}],264:[function(require,module,exports){
+},{"./CQLStatementDependency":247,"mongoose/browser":265}],255:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const [Schema, String, Boolean] = [
@@ -82094,7 +67923,7 @@ class Provider extends mongoose.Document {
 }
 module.exports.Provider = Provider;
 
-},{"mongoose/browser":274}],265:[function(require,module,exports){
+},{"mongoose/browser":265}],256:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const [String, Mixed] = [
@@ -82137,7 +67966,7 @@ class StatementResult extends mongoose.Document {
 }
 module.exports.StatementResult = StatementResult;
 
-},{"mongoose/browser":274}],266:[function(require,module,exports){
+},{"mongoose/browser":265}],257:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Concept = require('./Concept.js');
 
@@ -82165,7 +67994,7 @@ class ValueSet extends mongoose.Document {
 }
 module.exports.ValueSet = ValueSet;
 
-},{"./Concept.js":258,"mongoose/browser":274}],267:[function(require,module,exports){
+},{"./Concept.js":249,"mongoose/browser":265}],258:[function(require,module,exports){
 module.exports = require('./AllDataElements.js');
 module.exports.CQL = require('cql-execution');
 module.exports.Result = require('./Result.js').Result;
@@ -82195,7 +68024,7 @@ module.exports.ClauseResultSchema = require('./cqm/ClauseResult.js').ClauseResul
 module.exports.StatementResult = require('./cqm/StatementResult.js').StatementResult;
 module.exports.StatementResultSchema = require('./cqm/StatementResult.js').StatementResultchema;
 
-},{"./AllDataElements.js":182,"./Result.js":232,"./cqm/CQLLibrary.js":255,"./cqm/CQLStatementDependency.js":256,"./cqm/ClauseResult.js":257,"./cqm/Concept.js":258,"./cqm/IndividualResult.js":259,"./cqm/Measure.js":260,"./cqm/MeasurePackage.js":261,"./cqm/Patient.js":262,"./cqm/PopulationSet.js":263,"./cqm/Provider.js":264,"./cqm/StatementResult.js":265,"./cqm/ValueSet.js":266,"cql-execution":38}],268:[function(require,module,exports){
+},{"./AllDataElements.js":173,"./Result.js":223,"./cqm/CQLLibrary.js":246,"./cqm/CQLStatementDependency.js":247,"./cqm/ClauseResult.js":248,"./cqm/Concept.js":249,"./cqm/IndividualResult.js":250,"./cqm/Measure.js":251,"./cqm/MeasurePackage.js":252,"./cqm/Patient.js":253,"./cqm/PopulationSet.js":254,"./cqm/Provider.js":255,"./cqm/StatementResult.js":256,"./cqm/ValueSet.js":257,"cql-execution":38}],259:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -82720,7 +68549,7 @@ function functionBindPolyfill(context) {
   };
 }
 
-},{}],269:[function(require,module,exports){
+},{}],260:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -82806,7 +68635,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],270:[function(require,module,exports){
+},{}],261:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -82829,7 +68658,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],271:[function(require,module,exports){
+},{}],262:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -83344,7 +69173,7 @@ function decorateNextFn(fn) {
 module.exports = Kareem;
 
 }).call(this,require('_process'))
-},{"_process":413}],272:[function(require,module,exports){
+},{"_process":404}],263:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -100509,7 +86338,7 @@ module.exports = Kareem;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],273:[function(require,module,exports){
+},{}],264:[function(require,module,exports){
 //! moment.js
 //! version : 2.27.0
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -106179,7 +92008,7 @@ module.exports = Kareem;
 
 })));
 
-},{}],274:[function(require,module,exports){
+},{}],265:[function(require,module,exports){
 /**
  * Export lib/mongoose
  *
@@ -106189,7 +92018,7 @@ module.exports = Kareem;
 
 module.exports = require('./lib/browser');
 
-},{"./lib/browser":275}],275:[function(require,module,exports){
+},{"./lib/browser":266}],266:[function(require,module,exports){
 (function (Buffer){
 /* eslint-env browser */
 
@@ -106348,7 +92177,7 @@ if (typeof window !== 'undefined') {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./document_provider.js":285,"./driver":286,"./drivers/browser":290,"./error/index":294,"./promise_provider":361,"./schema":363,"./schematype.js":384,"./types":392,"./utils.js":396,"./virtualtype":397,"buffer":34}],276:[function(require,module,exports){
+},{"./document_provider.js":276,"./driver":277,"./drivers/browser":281,"./error/index":285,"./promise_provider":352,"./schema":354,"./schematype.js":375,"./types":383,"./utils.js":387,"./virtualtype":388,"buffer":34}],267:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -106450,7 +92279,7 @@ Document.$emitter = new EventEmitter();
 Document.ValidationError = ValidationError;
 module.exports = exports = Document;
 
-},{"./document":284,"./error/index":294,"./helpers/isObject":324,"./helpers/model/applyHooks":326,"./schema":363,"./types/objectid":394,"events":268}],277:[function(require,module,exports){
+},{"./document":275,"./error/index":285,"./helpers/isObject":315,"./helpers/model/applyHooks":317,"./schema":354,"./types/objectid":385,"events":259}],268:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -106815,7 +92644,7 @@ function _cast(val, numbertype, context) {
     }
   }
 }
-},{"./error/cast":292,"./error/strict":304,"./helpers/discriminator/getSchemaDiscriminatorByValue":314,"./helpers/get":319,"./helpers/isMongooseObject":323,"./helpers/isObject":324,"./helpers/query/isOperator":333,"./schema/index":371,"./schema/operators/text":380,"util":420}],278:[function(require,module,exports){
+},{"./error/cast":283,"./error/strict":295,"./helpers/discriminator/getSchemaDiscriminatorByValue":305,"./helpers/get":310,"./helpers/isMongooseObject":314,"./helpers/isObject":315,"./helpers/query/isOperator":324,"./schema/index":362,"./schema/operators/text":371,"util":419}],269:[function(require,module,exports){
 'use strict';
 
 const CastError = require('../error/cast');
@@ -106849,7 +92678,7 @@ module.exports = function castBoolean(value, path) {
 module.exports.convertToTrue = new Set([true, 'true', 1, '1', 'yes']);
 module.exports.convertToFalse = new Set([false, 'false', 0, '0', 'no']);
 
-},{"../error/cast":292}],279:[function(require,module,exports){
+},{"../error/cast":283}],270:[function(require,module,exports){
 'use strict';
 
 const assert = require('assert');
@@ -106891,7 +92720,7 @@ module.exports = function castDate(value) {
 
   assert.ok(false);
 };
-},{"assert":8}],280:[function(require,module,exports){
+},{"assert":8}],271:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -106930,7 +92759,7 @@ module.exports = function castDecimal128(value) {
   assert.ok(false);
 };
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":270,"../types/decimal128":389,"assert":8}],281:[function(require,module,exports){
+},{"../../../is-buffer/index.js":261,"../types/decimal128":380,"assert":8}],272:[function(require,module,exports){
 'use strict';
 
 const assert = require('assert');
@@ -106975,7 +92804,7 @@ module.exports = function castNumber(val) {
   assert.ok(false);
 };
 
-},{"assert":8}],282:[function(require,module,exports){
+},{"assert":8}],273:[function(require,module,exports){
 'use strict';
 
 const ObjectId = require('../driver').get().ObjectId;
@@ -107005,7 +92834,7 @@ module.exports = function castObjectId(value) {
 
   assert.ok(false);
 };
-},{"../driver":286,"assert":8}],283:[function(require,module,exports){
+},{"../driver":277,"assert":8}],274:[function(require,module,exports){
 'use strict';
 
 const CastError = require('../error/cast');
@@ -107044,7 +92873,7 @@ module.exports = function castString(value, path) {
   throw new CastError('string', value, path);
 };
 
-},{"../error/cast":292}],284:[function(require,module,exports){
+},{"../error/cast":283}],275:[function(require,module,exports){
 (function (Buffer,process){
 'use strict';
 
@@ -111025,7 +96854,7 @@ Document.ValidationError = ValidationError;
 module.exports = exports = Document;
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")},require('_process'))
-},{"../../is-buffer/index.js":270,"./error/index":294,"./error/objectExpected":299,"./error/objectParameter":300,"./error/parallelValidate":303,"./error/strict":304,"./error/validation":305,"./error/validator":306,"./helpers/common":310,"./helpers/document/cleanModifiedSubpaths":315,"./helpers/document/compile":316,"./helpers/document/getEmbeddedDiscriminatorPath":317,"./helpers/document/handleSpreadDoc":318,"./helpers/get":319,"./helpers/isPromise":325,"./helpers/projection/isDefiningProjection":329,"./helpers/projection/isExclusive":330,"./helpers/promiseOrCallback":331,"./helpers/symbols":342,"./internal":345,"./options":346,"./plugins/idGetter":360,"./queryhelpers":362,"./schema":363,"./schema/mixed":373,"./types/array":386,"./types/documentarray":390,"./types/embedded":391,"./utils":396,"./virtualtype":397,"_process":413,"events":268,"mpath":399,"util":420}],285:[function(require,module,exports){
+},{"../../is-buffer/index.js":261,"./error/index":285,"./error/objectExpected":290,"./error/objectParameter":291,"./error/parallelValidate":294,"./error/strict":295,"./error/validation":296,"./error/validator":297,"./helpers/common":301,"./helpers/document/cleanModifiedSubpaths":306,"./helpers/document/compile":307,"./helpers/document/getEmbeddedDiscriminatorPath":308,"./helpers/document/handleSpreadDoc":309,"./helpers/get":310,"./helpers/isPromise":316,"./helpers/projection/isDefiningProjection":320,"./helpers/projection/isExclusive":321,"./helpers/promiseOrCallback":322,"./helpers/symbols":333,"./internal":336,"./options":337,"./plugins/idGetter":351,"./queryhelpers":353,"./schema":354,"./schema/mixed":364,"./types/array":377,"./types/documentarray":381,"./types/embedded":382,"./utils":387,"./virtualtype":388,"_process":404,"events":259,"mpath":390,"util":419}],276:[function(require,module,exports){
 'use strict';
 
 /* eslint-env browser */
@@ -111057,7 +96886,7 @@ module.exports.setBrowser = function(flag) {
   isBrowser = flag;
 };
 
-},{"./browserDocument.js":276,"./document.js":284}],286:[function(require,module,exports){
+},{"./browserDocument.js":267,"./document.js":275}],277:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -111074,7 +96903,7 @@ module.exports.set = function(v) {
   driver = v;
 };
 
-},{}],287:[function(require,module,exports){
+},{}],278:[function(require,module,exports){
 /*!
  * ignore
  */
@@ -111083,7 +96912,7 @@ module.exports.set = function(v) {
 
 module.exports = function() {};
 
-},{}],288:[function(require,module,exports){
+},{}],279:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -111099,7 +96928,7 @@ const Binary = require('bson').Binary;
 
 module.exports = exports = Binary;
 
-},{"bson":15}],289:[function(require,module,exports){
+},{"bson":15}],280:[function(require,module,exports){
 /*!
  * ignore
  */
@@ -111108,7 +96937,7 @@ module.exports = exports = Binary;
 
 module.exports = require('bson').Decimal128;
 
-},{"bson":15}],290:[function(require,module,exports){
+},{"bson":15}],281:[function(require,module,exports){
 /*!
  * Module exports.
  */
@@ -111123,7 +96952,7 @@ exports.Decimal128 = require('./decimal128');
 exports.ObjectId = require('./objectid');
 exports.ReadPreference = require('./ReadPreference');
 
-},{"./ReadPreference":287,"./binary":288,"./decimal128":289,"./objectid":291}],291:[function(require,module,exports){
+},{"./ReadPreference":278,"./binary":279,"./decimal128":280,"./objectid":282}],282:[function(require,module,exports){
 
 /*!
  * [node-mongodb-native](https://github.com/mongodb/node-mongodb-native) ObjectId
@@ -111153,7 +96982,7 @@ Object.defineProperty(ObjectId.prototype, '_id', {
 
 module.exports = exports = ObjectId;
 
-},{"bson":15}],292:[function(require,module,exports){
+},{"bson":15}],283:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -111275,7 +97104,7 @@ function formatMessage(model, kind, stringValue, path, messageFormat) {
 
 module.exports = CastError;
 
-},{"../helpers/get":319,"./mongooseError":297,"util":420}],293:[function(require,module,exports){
+},{"../helpers/get":310,"./mongooseError":288,"util":419}],284:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -111314,7 +97143,7 @@ Object.defineProperty(DivergentArrayError.prototype, 'name', {
 
 module.exports = DivergentArrayError;
 
-},{"./":294}],294:[function(require,module,exports){
+},{"./":285}],285:[function(require,module,exports){
 'use strict';
 
 /**
@@ -111521,7 +97350,7 @@ MongooseError.DivergentArrayError = require('./divergentArray');
 
 MongooseError.StrictModeError = require('./strict');
 
-},{"./cast":292,"./divergentArray":293,"./messages":295,"./missingSchema":296,"./mongooseError":297,"./notFound":298,"./overwriteModel":301,"./parallelSave":302,"./strict":304,"./validation":305,"./validator":306,"./version":307}],295:[function(require,module,exports){
+},{"./cast":283,"./divergentArray":284,"./messages":286,"./missingSchema":287,"./mongooseError":288,"./notFound":289,"./overwriteModel":292,"./parallelSave":293,"./strict":295,"./validation":296,"./validator":297,"./version":298}],286:[function(require,module,exports){
 
 /**
  * The default built-in validator error messages. These may be customized.
@@ -111570,7 +97399,7 @@ msg.String.match = 'Path `{PATH}` is invalid ({VALUE}).';
 msg.String.minlength = 'Path `{PATH}` (`{VALUE}`) is shorter than the minimum allowed length ({MINLENGTH}).';
 msg.String.maxlength = 'Path `{PATH}` (`{VALUE}`) is longer than the maximum allowed length ({MAXLENGTH}).';
 
-},{}],296:[function(require,module,exports){
+},{}],287:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -111602,7 +97431,7 @@ Object.defineProperty(MissingSchemaError.prototype, 'name', {
 
 module.exports = MissingSchemaError;
 
-},{"./":294}],297:[function(require,module,exports){
+},{"./":285}],288:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -111617,7 +97446,7 @@ Object.defineProperty(MongooseError.prototype, 'name', {
 
 module.exports = MongooseError;
 
-},{}],298:[function(require,module,exports){
+},{}],289:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -111663,7 +97492,7 @@ Object.defineProperty(DocumentNotFoundError.prototype, 'name', {
 
 module.exports = DocumentNotFoundError;
 
-},{"./":294,"util":420}],299:[function(require,module,exports){
+},{"./":285,"util":419}],290:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -111695,7 +97524,7 @@ Object.defineProperty(ObjectExpectedError.prototype, 'name', {
 
 module.exports = ObjectExpectedError;
 
-},{"./":294}],300:[function(require,module,exports){
+},{"./":285}],291:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -111727,7 +97556,7 @@ Object.defineProperty(ObjectParameterError.prototype, 'name', {
 
 module.exports = ObjectParameterError;
 
-},{"./":294}],301:[function(require,module,exports){
+},{"./":285}],292:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -111758,7 +97587,7 @@ Object.defineProperty(OverwriteModelError.prototype, 'name', {
 
 module.exports = OverwriteModelError;
 
-},{"./":294}],302:[function(require,module,exports){
+},{"./":285}],293:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -111790,7 +97619,7 @@ Object.defineProperty(ParallelSaveError.prototype, 'name', {
 
 module.exports = ParallelSaveError;
 
-},{"./":294}],303:[function(require,module,exports){
+},{"./":285}],294:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -111822,7 +97651,7 @@ Object.defineProperty(ParallelValidateError.prototype, 'name', {
  */
 
 module.exports = ParallelValidateError;
-},{"./mongooseError":297}],304:[function(require,module,exports){
+},{"./mongooseError":288}],295:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -111857,7 +97686,7 @@ Object.defineProperty(StrictModeError.prototype, 'name', {
 
 module.exports = StrictModeError;
 
-},{"./":294}],305:[function(require,module,exports){
+},{"./":285}],296:[function(require,module,exports){
 /*!
  * Module requirements
  */
@@ -111969,7 +97798,7 @@ function _generateMessage(err) {
 
 module.exports = ValidationError;
 
-},{"./mongooseError":297,"util":420}],306:[function(require,module,exports){
+},{"./mongooseError":288,"util":419}],297:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -112065,7 +97894,7 @@ function formatMessage(msg, properties) {
 
 module.exports = ValidatorError;
 
-},{"./":294}],307:[function(require,module,exports){
+},{"./":285}],298:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112103,7 +97932,7 @@ Object.defineProperty(VersionError.prototype, 'name', {
 
 module.exports = VersionError;
 
-},{"./":294}],308:[function(require,module,exports){
+},{"./":285}],299:[function(require,module,exports){
 'use strict';
 
 module.exports = arrayDepth;
@@ -112134,7 +97963,7 @@ function arrayDepth(arr) {
 
   return res;
 }
-},{}],309:[function(require,module,exports){
+},{}],300:[function(require,module,exports){
 'use strict';
 
 
@@ -112272,7 +98101,7 @@ function cloneArray(arr, options) {
 
   return ret;
 }
-},{"../types/decimal128":389,"../types/objectid":394,"./getFunctionName":320,"./isBsonType":322,"./isMongooseObject":323,"./isObject":324,"./specialProperties":341,"./symbols":342,"regexp-clone":414}],310:[function(require,module,exports){
+},{"../types/decimal128":380,"../types/objectid":385,"./getFunctionName":311,"./isBsonType":313,"./isMongooseObject":314,"./isObject":315,"./specialProperties":332,"./symbols":333,"regexp-clone":405}],301:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -112382,7 +98211,7 @@ function shouldFlatten(val) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../driver":286,"../types/decimal128":389,"../types/objectid":394,"./isMongooseObject":323,"buffer":34}],311:[function(require,module,exports){
+},{"../driver":277,"../types/decimal128":380,"../types/objectid":385,"./isMongooseObject":314,"buffer":34}],302:[function(require,module,exports){
 'use strict';
 
 module.exports = function checkEmbeddedDiscriminatorKeyProjection(userProjection, path, schema, selected, addedPaths) {
@@ -112395,7 +98224,7 @@ module.exports = function checkEmbeddedDiscriminatorKeyProjection(userProjection
     selected.splice(selected.indexOf(_discriminatorKey), 1);
   }
 };
-},{}],312:[function(require,module,exports){
+},{}],303:[function(require,module,exports){
 'use strict';
 
 const getDiscriminatorByValue = require('./getDiscriminatorByValue');
@@ -112421,7 +98250,7 @@ module.exports = function getConstructor(Constructor, value) {
 
   return Constructor;
 };
-},{"./getDiscriminatorByValue":313}],313:[function(require,module,exports){
+},{"./getDiscriminatorByValue":304}],304:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112449,7 +98278,7 @@ module.exports = function getDiscriminatorByValue(model, value) {
   }
   return discriminator;
 };
-},{}],314:[function(require,module,exports){
+},{}],305:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112474,7 +98303,7 @@ module.exports = function getSchemaDiscriminatorByValue(schema, value) {
   }
   return null;
 };
-},{}],315:[function(require,module,exports){
+},{}],306:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112504,7 +98333,7 @@ module.exports = function cleanModifiedSubpaths(doc, path, options) {
   return deleted;
 };
 
-},{}],316:[function(require,module,exports){
+},{}],307:[function(require,module,exports){
 'use strict';
 
 const documentSchemaSymbol = require('../../helpers/symbols').documentSchemaSymbol;
@@ -112696,7 +98525,7 @@ function getOwnPropertyDescriptors(object) {
   return result;
 }
 
-},{"../../document":284,"../../helpers/get":319,"../../helpers/symbols":342,"../../utils":396}],317:[function(require,module,exports){
+},{"../../document":275,"../../helpers/get":310,"../../helpers/symbols":333,"../../utils":387}],308:[function(require,module,exports){
 'use strict';
 
 const get = require('../get');
@@ -112741,7 +98570,7 @@ module.exports = function getEmbeddedDiscriminatorPath(doc, path, options) {
   return typeOnly ? type : schema;
 };
 
-},{"../get":319}],318:[function(require,module,exports){
+},{"../get":310}],309:[function(require,module,exports){
 'use strict';
 
 const utils = require('../../utils');
@@ -112759,7 +98588,7 @@ module.exports = function handleSpreadDoc(v) {
 
   return v;
 };
-},{"../../utils":396}],319:[function(require,module,exports){
+},{"../../utils":387}],310:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112799,7 +98628,7 @@ function getProperty(obj, prop) {
   }
   return obj[prop];
 }
-},{}],320:[function(require,module,exports){
+},{}],311:[function(require,module,exports){
 'use strict';
 
 module.exports = function(fn) {
@@ -112809,7 +98638,7 @@ module.exports = function(fn) {
   return (fn.toString().trim().match(/^function\s*([^\s(]+)/) || [])[1];
 };
 
-},{}],321:[function(require,module,exports){
+},{}],312:[function(require,module,exports){
 (function (process){
 /*!
  * Centralize this so we can more easily work around issues with people
@@ -112825,7 +98654,7 @@ module.exports = function immediate(cb) {
 };
 
 }).call(this,require('_process'))
-},{"_process":413}],322:[function(require,module,exports){
+},{"_process":404}],313:[function(require,module,exports){
 'use strict';
 
 const get = require('./get');
@@ -112840,7 +98669,7 @@ function isBsonType(obj, typename) {
 
 module.exports = isBsonType;
 
-},{"./get":319}],323:[function(require,module,exports){
+},{"./get":310}],314:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -112862,7 +98691,7 @@ module.exports = function(v) {
     v.isMongooseBuffer || // Buffer
     v.$isMongooseMap; // Map
 };
-},{}],324:[function(require,module,exports){
+},{}],315:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -112881,14 +98710,14 @@ module.exports = function(arg) {
   return Object.prototype.toString.call(arg) === '[object Object]';
 };
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":270}],325:[function(require,module,exports){
+},{"../../../is-buffer/index.js":261}],316:[function(require,module,exports){
 'use strict';
 function isPromise(val) {
   return !!val && (typeof val === 'object' || typeof val === 'function') && typeof val.then === 'function';
 }
 
 module.exports = isPromise;
-},{}],326:[function(require,module,exports){
+},{}],317:[function(require,module,exports){
 'use strict';
 
 const symbols = require('../../schema/symbols');
@@ -113024,7 +98853,7 @@ function applyHooks(model, schema, options) {
       createWrapper(method, originalMethod, null, customMethodOptions);
   }
 }
-},{"../../schema/symbols":383,"../promiseOrCallback":331}],327:[function(require,module,exports){
+},{"../../schema/symbols":374,"../promiseOrCallback":322}],318:[function(require,module,exports){
 'use strict';
 
 const defineKey = require('../document/compile').defineKey;
@@ -113227,7 +99056,7 @@ module.exports = function discriminator(model, name, schema, tiedValue, applyPlu
   return schema;
 };
 
-},{"../../utils":396,"../document/compile":316,"../get":319}],328:[function(require,module,exports){
+},{"../../utils":387,"../document/compile":307,"../get":310}],319:[function(require,module,exports){
 'use strict';
 
 const MongooseError = require('../../error/mongooseError');
@@ -113247,7 +99076,7 @@ function validateRef(ref, path) {
   throw new MongooseError('Invalid ref at path "' + path + '". Got ' +
     util.inspect(ref, { depth: 0 }));
 }
-},{"../../error/mongooseError":297,"util":420}],329:[function(require,module,exports){
+},{"../../error/mongooseError":288,"util":419}],320:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -113267,7 +99096,7 @@ module.exports = function isDefiningProjection(val) {
   return true;
 };
 
-},{}],330:[function(require,module,exports){
+},{}],321:[function(require,module,exports){
 'use strict';
 
 const isDefiningProjection = require('./isDefiningProjection');
@@ -113297,7 +99126,7 @@ module.exports = function isExclusive(projection) {
   return exclude;
 };
 
-},{"./isDefiningProjection":329}],331:[function(require,module,exports){
+},{"./isDefiningProjection":320}],322:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -113345,7 +99174,7 @@ module.exports = function promiseOrCallback(callback, fn, ee) {
   });
 };
 }).call(this,require('_process'))
-},{"../promise_provider":361,"_process":413}],332:[function(require,module,exports){
+},{"../promise_provider":352,"_process":404}],323:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -113436,7 +99265,7 @@ function _getContexts(hook) {
   }
   return ret;
 }
-},{}],333:[function(require,module,exports){
+},{}],324:[function(require,module,exports){
 'use strict';
 
 const specialKeys = new Set([
@@ -113448,7 +99277,7 @@ const specialKeys = new Set([
 module.exports = function isOperator(path) {
   return path.startsWith('$') && !specialKeys.has(path);
 };
-},{}],334:[function(require,module,exports){
+},{}],325:[function(require,module,exports){
 'use strict';
 
 module.exports = function addAutoId(schema) {
@@ -113456,7 +99285,7 @@ module.exports = function addAutoId(schema) {
   _obj._id[schema.options.typeKey] = 'ObjectId';
   schema.add(_obj);
 };
-},{}],335:[function(require,module,exports){
+},{}],326:[function(require,module,exports){
 'use strict';
 
 /**
@@ -113469,7 +99298,7 @@ module.exports = function cleanPositionalOperators(path) {
     replace(/\.\$(\[[^\]]*\])?\./g, '.0.').
     replace(/\.(\[[^\]]*\])?\$$/g, '.0');
 };
-},{}],336:[function(require,module,exports){
+},{}],327:[function(require,module,exports){
 'use strict';
 
 const get = require('../get');
@@ -113626,7 +99455,7 @@ module.exports = function getIndexes(schema) {
   }
 };
 
-},{"../get":319,"../isObject":324}],337:[function(require,module,exports){
+},{"../get":310,"../isObject":315}],328:[function(require,module,exports){
 'use strict';
 
 const addAutoId = require('./addAutoId');
@@ -113647,7 +99476,7 @@ module.exports = function handleIdOption(schema, options) {
 
   return schema;
 };
-},{"./addAutoId":334}],338:[function(require,module,exports){
+},{"./addAutoId":325}],329:[function(require,module,exports){
 'use strict';
 
 module.exports = handleTimestampOption;
@@ -113672,7 +99501,7 @@ function handleTimestampOption(arg, prop) {
   }
   return arg[prop];
 }
-},{}],339:[function(require,module,exports){
+},{}],330:[function(require,module,exports){
 'use strict';
 
 module.exports = function merge(s1, s2) {
@@ -113693,7 +99522,7 @@ module.exports = function merge(s1, s2) {
   s1.s.hooks.merge(s2.s.hooks, false);
 };
 
-},{}],340:[function(require,module,exports){
+},{}],331:[function(require,module,exports){
 'use strict';
 
 const StrictModeError = require('../../error/strict');
@@ -113740,11 +99569,11 @@ function createImmutableSetter(path, immutable) {
   };
 }
 
-},{"../../error/strict":304}],341:[function(require,module,exports){
+},{"../../error/strict":295}],332:[function(require,module,exports){
 'use strict';
 
 module.exports = new Set(['__proto__', 'constructor', 'prototype']);
-},{}],342:[function(require,module,exports){
+},{}],333:[function(require,module,exports){
 'use strict';
 
 exports.arrayAtomicsSymbol = Symbol('mongoose#Array#_atomics');
@@ -113761,7 +99590,7 @@ exports.schemaTypeSymbol = Symbol('mongoose#schemaType');
 exports.sessionNewDocuments = Symbol('mongoose:ClientSession#newDocuments');
 exports.scopeSymbol = Symbol('mongoose#Document#scope');
 exports.validatorErrorSymbol = Symbol('mongoose:validatorError');
-},{}],343:[function(require,module,exports){
+},{}],334:[function(require,module,exports){
 'use strict';
 
 const cleanPositionalOperators = require('../schema/cleanPositionalOperators');
@@ -113934,7 +99763,7 @@ function applyTimestampsToUpdateKey(schema, key, update, now) {
     }
   }
 }
-},{"../schema/cleanPositionalOperators":335,"../schema/handleTimestampOption":338}],344:[function(require,module,exports){
+},{"../schema/cleanPositionalOperators":326,"../schema/handleTimestampOption":329}],335:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -114055,7 +99884,7 @@ function applyTimestampsToUpdate(now, createdAt, updatedAt, currentUpdate, optio
   return updates;
 }
 
-},{"../get":319}],345:[function(require,module,exports){
+},{"../get":310}],336:[function(require,module,exports){
 /*!
  * Dependencies
  */
@@ -114095,7 +99924,7 @@ function InternalCache() {
   this.fullPath = undefined;
 }
 
-},{"./statemachine":385}],346:[function(require,module,exports){
+},{"./statemachine":376}],337:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -114111,7 +99940,7 @@ exports.internalToObjectOptions = {
   flattenDecimals: false
 };
 
-},{}],347:[function(require,module,exports){
+},{}],338:[function(require,module,exports){
 'use strict';
 
 const clone = require('../helpers/clone');
@@ -114148,7 +99977,7 @@ class PopulateOptions {
  */
 
 module.exports = PopulateOptions;
-},{"../helpers/clone":309}],348:[function(require,module,exports){
+},{"../helpers/clone":300}],339:[function(require,module,exports){
 'use strict';
 
 const SchemaTypeOptions = require('./SchemaTypeOptions');
@@ -114188,7 +100017,7 @@ Object.defineProperty(SchemaArrayOptions.prototype, 'enum', opts);
  */
 
 module.exports = SchemaArrayOptions;
-},{"./SchemaTypeOptions":357,"./propertyOptions":359}],349:[function(require,module,exports){
+},{"./SchemaTypeOptions":348,"./propertyOptions":350}],340:[function(require,module,exports){
 'use strict';
 
 const SchemaTypeOptions = require('./SchemaTypeOptions');
@@ -114227,7 +100056,7 @@ Object.defineProperty(SchemaBufferOptions.prototype, 'subtype', opts);
  */
 
 module.exports = SchemaBufferOptions;
-},{"./SchemaTypeOptions":357,"./propertyOptions":359}],350:[function(require,module,exports){
+},{"./SchemaTypeOptions":348,"./propertyOptions":350}],341:[function(require,module,exports){
 'use strict';
 
 const SchemaTypeOptions = require('./SchemaTypeOptions');
@@ -114292,7 +100121,7 @@ Object.defineProperty(SchemaDateOptions.prototype, 'expires', opts);
  */
 
 module.exports = SchemaDateOptions;
-},{"./SchemaTypeOptions":357,"./propertyOptions":359}],351:[function(require,module,exports){
+},{"./SchemaTypeOptions":348,"./propertyOptions":350}],342:[function(require,module,exports){
 'use strict';
 
 const SchemaTypeOptions = require('./SchemaTypeOptions');
@@ -114361,7 +100190,7 @@ Object.defineProperty(SchemaDocumentArrayOptions.prototype, '_id', opts);
  */
 
 module.exports = SchemaDocumentArrayOptions;
-},{"./SchemaTypeOptions":357,"./propertyOptions":359}],352:[function(require,module,exports){
+},{"./SchemaTypeOptions":348,"./propertyOptions":350}],343:[function(require,module,exports){
 'use strict';
 
 const SchemaTypeOptions = require('./SchemaTypeOptions');
@@ -114405,7 +100234,7 @@ const opts = require('./propertyOptions');
 Object.defineProperty(SchemaMapOptions.prototype, 'of', opts);
 
 module.exports = SchemaMapOptions;
-},{"./SchemaTypeOptions":357,"./propertyOptions":359}],353:[function(require,module,exports){
+},{"./SchemaTypeOptions":348,"./propertyOptions":350}],344:[function(require,module,exports){
 'use strict';
 
 const SchemaTypeOptions = require('./SchemaTypeOptions');
@@ -114480,7 +100309,7 @@ Object.defineProperty(SchemaNumberOptions.prototype, 'enum', opts);
  */
 
 module.exports = SchemaNumberOptions;
-},{"./SchemaTypeOptions":357,"./propertyOptions":359}],354:[function(require,module,exports){
+},{"./SchemaTypeOptions":348,"./propertyOptions":350}],345:[function(require,module,exports){
 'use strict';
 
 const SchemaTypeOptions = require('./SchemaTypeOptions');
@@ -114519,7 +100348,7 @@ Object.defineProperty(SchemaObjectIdOptions.prototype, 'auto', opts);
  */
 
 module.exports = SchemaObjectIdOptions;
-},{"./SchemaTypeOptions":357,"./propertyOptions":359}],355:[function(require,module,exports){
+},{"./SchemaTypeOptions":348,"./propertyOptions":350}],346:[function(require,module,exports){
 'use strict';
 
 const SchemaTypeOptions = require('./SchemaTypeOptions');
@@ -114562,7 +100391,7 @@ const opts = require('./propertyOptions');
 Object.defineProperty(SchemaSingleNestedOptions.prototype, '_id', opts);
 
 module.exports = SchemaSingleNestedOptions;
-},{"./SchemaTypeOptions":357,"./propertyOptions":359}],356:[function(require,module,exports){
+},{"./SchemaTypeOptions":348,"./propertyOptions":350}],347:[function(require,module,exports){
 'use strict';
 
 const SchemaTypeOptions = require('./SchemaTypeOptions');
@@ -114679,7 +100508,7 @@ Object.defineProperty(SchemaStringOptions.prototype, 'maxlength', opts);
  */
 
 module.exports = SchemaStringOptions;
-},{"./SchemaTypeOptions":357,"./propertyOptions":359}],357:[function(require,module,exports){
+},{"./SchemaTypeOptions":348,"./propertyOptions":350}],348:[function(require,module,exports){
 'use strict';
 
 const clone = require('../helpers/clone');
@@ -114912,7 +100741,7 @@ Object.defineProperty(SchemaTypeOptions.prototype, 'text', opts);
 Object.defineProperty(SchemaTypeOptions.prototype, 'transform', opts);
 
 module.exports = SchemaTypeOptions;
-},{"../helpers/clone":309,"./propertyOptions":359}],358:[function(require,module,exports){
+},{"../helpers/clone":300,"./propertyOptions":350}],349:[function(require,module,exports){
 'use strict';
 
 const opts = require('./propertyOptions');
@@ -115077,7 +100906,7 @@ Object.defineProperty(VirtualOptions.prototype, 'limit', opts);
 Object.defineProperty(VirtualOptions.prototype, 'perDocumentLimit', opts);
 
 module.exports = VirtualOptions;
-},{"./propertyOptions":359}],359:[function(require,module,exports){
+},{"./propertyOptions":350}],350:[function(require,module,exports){
 'use strict';
 
 module.exports = Object.freeze({
@@ -115086,7 +100915,7 @@ module.exports = Object.freeze({
   writable: true,
   value: void 0
 });
-},{}],360:[function(require,module,exports){
+},{}],351:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -115116,7 +100945,7 @@ function idGetter() {
   return null;
 }
 
-},{}],361:[function(require,module,exports){
+},{}],352:[function(require,module,exports){
 (function (global){
 /*!
  * ignore
@@ -115169,7 +100998,7 @@ store.set(global.Promise);
 module.exports = store;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"assert":8,"mquery":405}],362:[function(require,module,exports){
+},{"assert":8,"mquery":396}],353:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -115478,7 +101307,7 @@ exports.handleDeleteWriteOpResult = function handleDeleteWriteOpResult(callback)
   };
 };
 
-},{"./helpers/clone":309,"./helpers/discriminator/checkEmbeddedDiscriminatorKeyProjection":311,"./helpers/discriminator/getDiscriminatorByValue":313,"./helpers/get":319,"./helpers/projection/isDefiningProjection":329}],363:[function(require,module,exports){
+},{"./helpers/clone":300,"./helpers/discriminator/checkEmbeddedDiscriminatorKeyProjection":302,"./helpers/discriminator/getDiscriminatorByValue":304,"./helpers/get":310,"./helpers/projection/isDefiningProjection":320}],354:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -117691,7 +103520,7 @@ Schema.Types = MongooseTypes = require('./schema/index');
 exports.ObjectId = MongooseTypes.ObjectId;
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":270,"./driver":286,"./error/mongooseError":297,"./helpers/get":319,"./helpers/model/applyHooks":326,"./helpers/populate/validateRef":328,"./helpers/query/applyQueryMiddleware":332,"./helpers/schema/addAutoId":334,"./helpers/schema/getIndexes":336,"./helpers/schema/handleTimestampOption":338,"./helpers/schema/merge":339,"./helpers/symbols":342,"./helpers/update/applyTimestampsToChildren":343,"./helpers/update/applyTimestampsToUpdate":344,"./options/SchemaTypeOptions":357,"./options/VirtualOptions":358,"./schema/index":371,"./schema/symbols":383,"./schematype":384,"./utils":396,"./virtualtype":397,"events":268,"kareem":271,"mpath":399,"util":420}],364:[function(require,module,exports){
+},{"../../is-buffer/index.js":261,"./driver":277,"./error/mongooseError":288,"./helpers/get":310,"./helpers/model/applyHooks":317,"./helpers/populate/validateRef":319,"./helpers/query/applyQueryMiddleware":323,"./helpers/schema/addAutoId":325,"./helpers/schema/getIndexes":327,"./helpers/schema/handleTimestampOption":329,"./helpers/schema/merge":330,"./helpers/symbols":333,"./helpers/update/applyTimestampsToChildren":334,"./helpers/update/applyTimestampsToUpdate":335,"./options/SchemaTypeOptions":348,"./options/VirtualOptions":349,"./schema/index":362,"./schema/symbols":374,"./schematype":375,"./utils":387,"./virtualtype":388,"events":259,"kareem":262,"mpath":390,"util":419}],355:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -118029,7 +103858,7 @@ SingleNestedPath.prototype.clone = function() {
   return schematype;
 };
 
-},{"../error/cast":292,"../error/objectExpected":299,"../helpers/discriminator/getConstructor":312,"../helpers/get":319,"../helpers/model/discriminator":327,"../helpers/schema/handleIdOption":337,"../options":346,"../options/SchemaSingleNestedOptions":355,"../schematype":384,"../types/subdocument":395,"./operators/exists":377,"./operators/geospatial":378,"./operators/helpers":379,"events":268}],365:[function(require,module,exports){
+},{"../error/cast":283,"../error/objectExpected":290,"../helpers/discriminator/getConstructor":303,"../helpers/get":310,"../helpers/model/discriminator":318,"../helpers/schema/handleIdOption":328,"../options":337,"../options/SchemaSingleNestedOptions":346,"../schematype":375,"../types/subdocument":386,"./operators/exists":368,"./operators/geospatial":369,"./operators/helpers":370,"events":259}],356:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -118614,7 +104443,7 @@ handle.$in = SchemaType.prototype.$conditionalHandlers.$in;
 
 module.exports = SchemaArray;
 
-},{"../cast":277,"../error/mongooseError":297,"../helpers/arrayDepth":308,"../helpers/discriminator/getDiscriminatorByValue":313,"../helpers/get":319,"../helpers/query/isOperator":333,"../options/SchemaArrayOptions":348,"../schematype":384,"../types":392,"../utils":396,"./index.js":371,"./mixed":373,"./operators/exists":377,"./operators/geospatial":378,"./operators/helpers":379,"./operators/type":381,"util":420}],366:[function(require,module,exports){
+},{"../cast":268,"../error/mongooseError":288,"../helpers/arrayDepth":299,"../helpers/discriminator/getDiscriminatorByValue":304,"../helpers/get":310,"../helpers/query/isOperator":324,"../options/SchemaArrayOptions":339,"../schematype":375,"../types":383,"../utils":387,"./index.js":362,"./mixed":364,"./operators/exists":368,"./operators/geospatial":369,"./operators/helpers":370,"./operators/type":372,"util":419}],357:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -118871,7 +104700,7 @@ SchemaBoolean.prototype._castNullish = function _castNullish(v) {
 
 module.exports = SchemaBoolean;
 
-},{"../cast/boolean":278,"../error/cast":292,"../schematype":384,"../utils":396}],367:[function(require,module,exports){
+},{"../cast/boolean":269,"../error/cast":283,"../schematype":375,"../utils":387}],358:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -119151,7 +104980,7 @@ SchemaBuffer.prototype.castForQuery = function($conditional, val) {
 module.exports = SchemaBuffer;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":270,"../helpers/symbols":342,"../options/SchemaBufferOptions":349,"../schematype":384,"../types/buffer":387,"../utils":396,"./../document":284,"./operators/bitwise":376}],368:[function(require,module,exports){
+},{"../../../is-buffer/index.js":261,"../helpers/symbols":333,"../options/SchemaBufferOptions":340,"../schematype":375,"../types/buffer":378,"../utils":387,"./../document":275,"./operators/bitwise":367}],359:[function(require,module,exports){
 /*!
  * Module requirements.
  */
@@ -119543,7 +105372,7 @@ SchemaDate.prototype.castForQuery = function($conditional, val) {
 
 module.exports = SchemaDate;
 
-},{"../cast/date":279,"../error/index":294,"../options/SchemaDateOptions":350,"../schematype":384,"../utils":396}],369:[function(require,module,exports){
+},{"../cast/date":270,"../error/index":285,"../options/SchemaDateOptions":341,"../schematype":375,"../utils":387}],360:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -119782,7 +105611,7 @@ Decimal128.prototype.$conditionalHandlers =
 module.exports = Decimal128;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":270,"../cast/decimal128":280,"../helpers/symbols":342,"../schematype":384,"../types/decimal128":389,"../utils":396,"./../document":284}],370:[function(require,module,exports){
+},{"../../../is-buffer/index.js":261,"../cast/decimal128":271,"../helpers/symbols":333,"../schematype":375,"../types/decimal128":380,"../utils":387,"./../document":275}],361:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -120329,7 +106158,7 @@ DocumentArrayPath.set = SchemaType.set;
 
 module.exports = DocumentArrayPath;
 
-},{"../error/cast":292,"../error/validation":305,"../helpers/discriminator/getConstructor":312,"../helpers/get":319,"../helpers/model/discriminator":327,"../helpers/schema/handleIdOption":337,"../helpers/symbols":342,"../options/SchemaDocumentArrayOptions":351,"../schematype":384,"../types/documentarray":390,"../types/embedded":391,"../utils":396,"./array":365,"events":268,"util":420}],371:[function(require,module,exports){
+},{"../error/cast":283,"../error/validation":296,"../helpers/discriminator/getConstructor":303,"../helpers/get":310,"../helpers/model/discriminator":318,"../helpers/schema/handleIdOption":328,"../helpers/symbols":333,"../options/SchemaDocumentArrayOptions":342,"../schematype":375,"../types/documentarray":381,"../types/embedded":382,"../utils":387,"./array":356,"events":259,"util":419}],362:[function(require,module,exports){
 
 /*!
  * Module exports.
@@ -120368,7 +106197,7 @@ exports.Object = exports.Mixed;
 exports.Bool = exports.Boolean;
 exports.ObjectID = exports.ObjectId;
 
-},{"./SingleNestedPath":364,"./array":365,"./boolean":366,"./buffer":367,"./date":368,"./decimal128":369,"./documentarray":370,"./map":372,"./mixed":373,"./number":374,"./objectid":375,"./string":382}],372:[function(require,module,exports){
+},{"./SingleNestedPath":355,"./array":356,"./boolean":357,"./buffer":358,"./date":359,"./decimal128":360,"./documentarray":361,"./map":363,"./mixed":364,"./number":365,"./objectid":366,"./string":373}],363:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -120434,7 +106263,7 @@ Map.defaultOptions = {};
 module.exports = Map;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../options/SchemaMapOptions":352,"../schematype":384,"../types/map":393}],373:[function(require,module,exports){
+},{"../options/SchemaMapOptions":343,"../schematype":375,"../types/map":384}],364:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -120564,7 +106393,7 @@ Mixed.prototype.castForQuery = function($cond, val) {
 
 module.exports = Mixed;
 
-},{"../helpers/isObject":324,"../schematype":384,"./symbols":383}],374:[function(require,module,exports){
+},{"../helpers/isObject":315,"../schematype":375,"./symbols":374}],365:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -121012,7 +106841,7 @@ SchemaNumber.prototype.castForQuery = function($conditional, val) {
 module.exports = SchemaNumber;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":270,"../cast/number":281,"../error/index":294,"../helpers/symbols":342,"../options/SchemaNumberOptions":353,"../schematype":384,"../utils":396,"./../document":284,"./operators/bitwise":376}],375:[function(require,module,exports){
+},{"../../../is-buffer/index.js":261,"../cast/number":272,"../error/index":285,"../helpers/symbols":333,"../options/SchemaNumberOptions":344,"../schematype":375,"../utils":387,"./../document":275,"./operators/bitwise":367}],366:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module dependencies.
@@ -121335,7 +107164,7 @@ function resetId(v) {
 module.exports = ObjectId;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":270,"../cast/objectid":282,"../helpers/symbols":342,"../options/SchemaObjectIdOptions":354,"../schematype":384,"../types/objectid":394,"../utils":396,"./../document":284}],376:[function(require,module,exports){
+},{"../../../is-buffer/index.js":261,"../cast/objectid":273,"../helpers/symbols":333,"../options/SchemaObjectIdOptions":345,"../schematype":375,"../types/objectid":385,"../utils":387,"./../document":275}],367:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Module requirements.
@@ -121377,7 +107206,7 @@ function _castNumber(path, num) {
 module.exports = handleBitwiseOperator;
 
 }).call(this,{"isBuffer":require("../../../../is-buffer/index.js")})
-},{"../../../../is-buffer/index.js":270,"../../error/cast":292}],377:[function(require,module,exports){
+},{"../../../../is-buffer/index.js":261,"../../error/cast":283}],368:[function(require,module,exports){
 'use strict';
 
 const castBoolean = require('../../cast/boolean');
@@ -121391,7 +107220,7 @@ module.exports = function(val) {
   return castBoolean(val, path);
 };
 
-},{"../../cast/boolean":278}],378:[function(require,module,exports){
+},{"../../cast/boolean":269}],369:[function(require,module,exports){
 /*!
  * Module requirements.
  */
@@ -121500,7 +107329,7 @@ function _castMinMaxDistance(self, val) {
   }
 }
 
-},{"../array":365,"./helpers":379}],379:[function(require,module,exports){
+},{"../array":356,"./helpers":370}],370:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -121534,7 +107363,7 @@ function castArraysOfNumbers(arr, self) {
   });
 }
 
-},{"../number":374}],380:[function(require,module,exports){
+},{"../number":365}],371:[function(require,module,exports){
 'use strict';
 
 const CastError = require('../../error/cast');
@@ -121575,7 +107404,7 @@ module.exports = function(val, path) {
   return val;
 };
 
-},{"../../cast/boolean":278,"../../cast/string":283,"../../error/cast":292}],381:[function(require,module,exports){
+},{"../../cast/boolean":269,"../../cast/string":274,"../../error/cast":283}],372:[function(require,module,exports){
 'use strict';
 
 /*!
@@ -121590,7 +107419,7 @@ module.exports = function(val) {
   return val;
 };
 
-},{}],382:[function(require,module,exports){
+},{}],373:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -122273,13 +108102,13 @@ SchemaString.prototype.castForQuery = function($conditional, val) {
 module.exports = SchemaString;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":270,"../cast/string":283,"../error/index":294,"../helpers/symbols":342,"../options/SchemaStringOptions":356,"../schematype":384,"../utils":396,"./../document":284}],383:[function(require,module,exports){
+},{"../../../is-buffer/index.js":261,"../cast/string":274,"../error/index":285,"../helpers/symbols":333,"../options/SchemaStringOptions":347,"../schematype":375,"../utils":387,"./../document":275}],374:[function(require,module,exports){
 'use strict';
 
 exports.schemaMixedSymbol = Symbol.for('mongoose:schema_mixed');
 
 exports.builtInMiddleware = Symbol.for('mongoose:built-in-middleware');
-},{}],384:[function(require,module,exports){
+},{}],375:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -123852,7 +109681,7 @@ exports.CastError = CastError;
 exports.ValidatorError = ValidatorError;
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":270,"./error/index":294,"./helpers/get":319,"./helpers/immediate":321,"./helpers/schematype/handleImmutable":340,"./helpers/symbols":342,"./options/SchemaTypeOptions":357,"./schema/operators/exists":377,"./schema/operators/type":381,"./utils":396,"util":420}],385:[function(require,module,exports){
+},{"../../is-buffer/index.js":261,"./error/index":285,"./helpers/get":310,"./helpers/immediate":312,"./helpers/schematype/handleImmutable":331,"./helpers/symbols":333,"./options/SchemaTypeOptions":348,"./schema/operators/exists":368,"./schema/operators/type":372,"./utils":387,"util":419}],376:[function(require,module,exports){
 
 /*!
  * Module dependencies.
@@ -124034,7 +109863,7 @@ StateMachine.prototype.map = function map() {
   return this.map.apply(this, arguments);
 };
 
-},{"./utils":396}],386:[function(require,module,exports){
+},{"./utils":387}],377:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -124102,7 +109931,7 @@ function MongooseArray(values, path, doc) {
 
 module.exports = exports = MongooseArray;
 
-},{"../document":284,"../helpers/symbols":342,"./core_array":388}],387:[function(require,module,exports){
+},{"../document":275,"../helpers/symbols":333,"./core_array":379}],378:[function(require,module,exports){
 /*!
  * Module dependencies.
  */
@@ -124380,7 +110209,7 @@ MongooseBuffer.Binary = Binary;
 
 module.exports = MongooseBuffer;
 
-},{"../driver":286,"../utils":396,"safe-buffer":415}],388:[function(require,module,exports){
+},{"../driver":277,"../utils":387,"safe-buffer":406}],379:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -125342,7 +111171,7 @@ function _checkManualPopulation(arr, docs) {
 module.exports = CoreMongooseArray;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":270,"../document":284,"../error/mongooseError":297,"../helpers/document/cleanModifiedSubpaths":315,"../helpers/get":319,"../helpers/symbols":342,"../options":346,"../utils":396,"./embedded":391,"./objectid":394,"util":420}],389:[function(require,module,exports){
+},{"../../../is-buffer/index.js":261,"../document":275,"../error/mongooseError":288,"../helpers/document/cleanModifiedSubpaths":306,"../helpers/get":310,"../helpers/symbols":333,"../options":337,"../utils":387,"./embedded":382,"./objectid":385,"util":419}],380:[function(require,module,exports){
 /**
  * ObjectId type constructor
  *
@@ -125357,7 +111186,7 @@ module.exports = CoreMongooseArray;
 
 module.exports = require('../driver').get().Decimal128;
 
-},{"../driver":286}],390:[function(require,module,exports){
+},{"../driver":277}],381:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -125782,7 +111611,7 @@ function MongooseDocumentArray(values, path, doc) {
 module.exports = MongooseDocumentArray;
 
 }).call(this,{"isBuffer":require("../../../is-buffer/index.js")})
-},{"../../../is-buffer/index.js":270,"../cast/objectid":282,"../document":284,"../helpers/discriminator/getDiscriminatorByValue":313,"../helpers/symbols":342,"../options":346,"../utils":396,"./core_array":388,"./objectid":394,"util":420}],391:[function(require,module,exports){
+},{"../../../is-buffer/index.js":261,"../cast/objectid":273,"../document":275,"../helpers/discriminator/getDiscriminatorByValue":304,"../helpers/symbols":333,"../options":337,"../utils":387,"./core_array":379,"./objectid":385,"util":419}],382:[function(require,module,exports){
 /* eslint no-func-assign: 1 */
 
 /*!
@@ -126229,7 +112058,7 @@ EmbeddedDocument.prototype.parentArray = function() {
 
 module.exports = EmbeddedDocument;
 
-},{"../document_provider":285,"../error/validation":305,"../helpers/get":319,"../helpers/immediate":321,"../helpers/promiseOrCallback":331,"../helpers/symbols":342,"../options":346,"events":268,"util":420}],392:[function(require,module,exports){
+},{"../document_provider":276,"../error/validation":296,"../helpers/get":310,"../helpers/immediate":312,"../helpers/promiseOrCallback":322,"../helpers/symbols":333,"../options":337,"events":259,"util":419}],383:[function(require,module,exports){
 
 /*!
  * Module exports.
@@ -126251,7 +112080,7 @@ exports.Map = require('./map');
 
 exports.Subdocument = require('./subdocument');
 
-},{"./array":386,"./buffer":387,"./decimal128":389,"./documentarray":390,"./embedded":391,"./map":393,"./objectid":394,"./subdocument":395}],393:[function(require,module,exports){
+},{"./array":377,"./buffer":378,"./decimal128":380,"./documentarray":381,"./embedded":382,"./map":384,"./objectid":385,"./subdocument":386}],384:[function(require,module,exports){
 'use strict';
 
 const Mixed = require('../schema/mixed');
@@ -126471,7 +112300,7 @@ function checkValidKey(key) {
 
 module.exports = MongooseMap;
 
-},{"../helpers/document/handleSpreadDoc":318,"../helpers/get":319,"../helpers/specialProperties":341,"../helpers/symbols":342,"../schema/mixed":373,"../utils":396,"util":420}],394:[function(require,module,exports){
+},{"../helpers/document/handleSpreadDoc":309,"../helpers/get":310,"../helpers/specialProperties":332,"../helpers/symbols":333,"../schema/mixed":364,"../utils":387,"util":419}],385:[function(require,module,exports){
 /**
  * ObjectId type constructor
  *
@@ -126503,7 +112332,7 @@ ObjectId.prototype[objectIdSymbol] = true;
 
 module.exports = ObjectId;
 
-},{"../driver":286,"../helpers/symbols":342}],395:[function(require,module,exports){
+},{"../driver":277,"../helpers/symbols":333}],386:[function(require,module,exports){
 'use strict';
 
 const Document = require('../document');
@@ -126795,7 +112624,7 @@ function registerRemoveListener(sub) {
   owner.on('remove', emitRemove);
 }
 
-},{"../document":284,"../helpers/immediate":321,"../helpers/promiseOrCallback":331,"../helpers/symbols":342,"../options":346}],396:[function(require,module,exports){
+},{"../document":275,"../helpers/immediate":312,"../helpers/promiseOrCallback":322,"../helpers/symbols":333,"../options":337}],387:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -127700,7 +113529,7 @@ exports.getOption = function(name) {
 exports.noop = function() {};
 
 }).call(this,require('_process'))
-},{"./document":284,"./helpers/clone":309,"./helpers/getFunctionName":320,"./helpers/isBsonType":322,"./helpers/isMongooseObject":323,"./helpers/isObject":324,"./helpers/promiseOrCallback":331,"./helpers/specialProperties":341,"./options/PopulateOptions":347,"./types/decimal128":389,"./types/objectid":394,"_process":413,"mpath":399,"ms":398,"safe-buffer":415,"sliced":416}],397:[function(require,module,exports){
+},{"./document":275,"./helpers/clone":300,"./helpers/getFunctionName":311,"./helpers/isBsonType":313,"./helpers/isMongooseObject":314,"./helpers/isObject":315,"./helpers/promiseOrCallback":322,"./helpers/specialProperties":332,"./options/PopulateOptions":338,"./types/decimal128":380,"./types/objectid":385,"_process":404,"mpath":390,"ms":389,"safe-buffer":406,"sliced":407}],388:[function(require,module,exports){
 'use strict';
 
 /**
@@ -127870,7 +113699,7 @@ VirtualType.prototype.applySetters = function(value, doc) {
 
 module.exports = VirtualType;
 
-},{}],398:[function(require,module,exports){
+},{}],389:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -128034,10 +113863,10 @@ function plural(ms, msAbs, n, name) {
   return Math.round(ms / n) + ' ' + name + (isPlural ? 's' : '');
 }
 
-},{}],399:[function(require,module,exports){
+},{}],390:[function(require,module,exports){
 module.exports = exports = require('./lib');
 
-},{"./lib":400}],400:[function(require,module,exports){
+},{"./lib":391}],391:[function(require,module,exports){
 // These properties are special and can open client libraries to security
 // issues
 var ignoreProperties = ['__proto__', 'constructor', 'prototype'];
@@ -128347,7 +114176,7 @@ function K (v) {
   return v;
 }
 
-},{}],401:[function(require,module,exports){
+},{}],392:[function(require,module,exports){
 'use strict';
 
 /**
@@ -128395,7 +114224,7 @@ function notImplemented(method) {
   };
 }
 
-},{}],402:[function(require,module,exports){
+},{}],393:[function(require,module,exports){
 'use strict';
 
 var env = require('../env');
@@ -128410,7 +114239,7 @@ module.exports =
       require('./collection');
 
 
-},{"../env":404,"./collection":401,"./node":403}],403:[function(require,module,exports){
+},{"../env":395,"./collection":392,"./node":394}],394:[function(require,module,exports){
 'use strict';
 
 /**
@@ -128563,7 +114392,7 @@ NodeCollection.prototype.findCursor = function(match, findOptions) {
 
 module.exports = exports = NodeCollection;
 
-},{"../utils":407,"./collection":401}],404:[function(require,module,exports){
+},{"../utils":398,"./collection":392}],395:[function(require,module,exports){
 (function (process,global,Buffer){
 'use strict';
 
@@ -128589,7 +114418,7 @@ exports.type = exports.isNode ? 'node'
       : 'unknown';
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"_process":413,"buffer":34}],405:[function(require,module,exports){
+},{"_process":404,"buffer":34}],396:[function(require,module,exports){
 'use strict';
 
 /**
@@ -131843,7 +117672,7 @@ module.exports = exports = Query;
 // TODO
 // test utils
 
-},{"./collection":402,"./collection/collection":401,"./env":404,"./permissions":406,"./utils":407,"assert":8,"bluebird":13,"debug":408,"sliced":416,"util":420}],406:[function(require,module,exports){
+},{"./collection":393,"./collection/collection":392,"./env":395,"./permissions":397,"./utils":398,"assert":8,"bluebird":13,"debug":399,"sliced":407,"util":419}],397:[function(require,module,exports){
 'use strict';
 
 var denied = exports;
@@ -131933,7 +117762,7 @@ denied.count.maxScan =
 denied.count.snapshot =
 denied.count.tailable = true;
 
-},{}],407:[function(require,module,exports){
+},{}],398:[function(require,module,exports){
 (function (process,setImmediate){
 'use strict';
 
@@ -132293,7 +118122,7 @@ exports.isArgumentsObject = function(v) {
 };
 
 }).call(this,require('_process'),require("timers").setImmediate)
-},{"_process":413,"regexp-clone":414,"safe-buffer":410,"timers":417}],408:[function(require,module,exports){
+},{"_process":404,"regexp-clone":405,"safe-buffer":401,"timers":408}],399:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -132492,7 +118321,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":409,"_process":413}],409:[function(require,module,exports){
+},{"./debug":400,"_process":404}],400:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -132719,7 +118548,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":411}],410:[function(require,module,exports){
+},{"ms":402}],401:[function(require,module,exports){
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
 var Buffer = buffer.Buffer
@@ -132783,7 +118612,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":34}],411:[function(require,module,exports){
+},{"buffer":34}],402:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -132937,7 +118766,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],412:[function(require,module,exports){
+},{}],403:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -133029,7 +118858,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],413:[function(require,module,exports){
+},{}],404:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -133215,7 +119044,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],414:[function(require,module,exports){
+},{}],405:[function(require,module,exports){
 
 const toString = Object.prototype.toString;
 
@@ -133244,7 +119073,7 @@ module.exports = exports = function (regexp) {
 }
 
 
-},{}],415:[function(require,module,exports){
+},{}],406:[function(require,module,exports){
 /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
@@ -133311,7 +119140,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":34}],416:[function(require,module,exports){
+},{"buffer":34}],407:[function(require,module,exports){
 
 /**
  * An Array.prototype.slice.call(arguments) alternative
@@ -133346,7 +119175,7 @@ module.exports = function (args, slice, sliceEnd) {
 }
 
 
-},{}],417:[function(require,module,exports){
+},{}],408:[function(require,module,exports){
 (function (setImmediate,clearImmediate){
 var nextTick = require('process/browser.js').nextTick;
 var apply = Function.prototype.apply;
@@ -133425,10 +119254,9644 @@ exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate :
   delete immediateIds[id];
 };
 }).call(this,require("timers").setImmediate,require("timers").clearImmediate)
-},{"process/browser.js":413,"timers":417}],418:[function(require,module,exports){
+},{"process/browser.js":404,"timers":408}],409:[function(require,module,exports){
+module.exports={
+  "10*": {
+    "value": 10,
+    "ucum": "1"
+  },
+  "10^": {
+    "value": 10,
+    "ucum": "1"
+  },
+  "[pi]": {
+    "value": 3.141592653589793,
+    "ucum": "1"
+  },
+  "%": {
+    "value": 1,
+    "ucum": "10*-2"
+  },
+  "[ppth]": {
+    "value": 1,
+    "ucum": "10*-3"
+  },
+  "[ppm]": {
+    "value": 1,
+    "ucum": "10*-6"
+  },
+  "[ppb]": {
+    "value": 1,
+    "ucum": "10*-9"
+  },
+  "[pptr]": {
+    "value": 1,
+    "ucum": "10*-12"
+  },
+  "mol": {
+    "value": 6.0221367,
+    "ucum": "10*23"
+  },
+  "sr": {
+    "value": 1,
+    "ucum": "rad2"
+  },
+  "Hz": {
+    "value": 1,
+    "ucum": "s-1"
+  },
+  "N": {
+    "value": 1,
+    "ucum": "kg.m/s2"
+  },
+  "Pa": {
+    "value": 1,
+    "ucum": "N/m2"
+  },
+  "J": {
+    "value": 1,
+    "ucum": "N.m"
+  },
+  "W": {
+    "value": 1,
+    "ucum": "J/s"
+  },
+  "A": {
+    "value": 1,
+    "ucum": "C/s"
+  },
+  "V": {
+    "value": 1,
+    "ucum": "J/C"
+  },
+  "F": {
+    "value": 1,
+    "ucum": "C/V"
+  },
+  "Ohm": {
+    "value": 1,
+    "ucum": "V/A"
+  },
+  "S": {
+    "value": 1,
+    "ucum": "Ohm-1"
+  },
+  "Wb": {
+    "value": 1,
+    "ucum": "V.s"
+  },
+  "Cel": {
+    "value": null,
+    "ucum": "cel(1 K)"
+  },
+  "T": {
+    "value": 1,
+    "ucum": "Wb/m2"
+  },
+  "H": {
+    "value": 1,
+    "ucum": "Wb/A"
+  },
+  "lm": {
+    "value": 1,
+    "ucum": "cd.sr"
+  },
+  "lx": {
+    "value": 1,
+    "ucum": "lm/m2"
+  },
+  "Bq": {
+    "value": 1,
+    "ucum": "s-1"
+  },
+  "Gy": {
+    "value": 1,
+    "ucum": "J/kg"
+  },
+  "Sv": {
+    "value": 1,
+    "ucum": "J/kg"
+  },
+  "gon": {
+    "value": 0.9,
+    "ucum": "deg"
+  },
+  "deg": {
+    "value": 2,
+    "ucum": "[pi].rad/360"
+  },
+  "'": {
+    "value": 1,
+    "ucum": "deg/60"
+  },
+  "''": {
+    "value": 1,
+    "ucum": "'/60"
+  },
+  "l": {
+    "value": 1,
+    "ucum": "dm3"
+  },
+  "L": {
+    "value": 1,
+    "ucum": "l"
+  },
+  "ar": {
+    "value": 100,
+    "ucum": "m2"
+  },
+  "min": {
+    "value": 60,
+    "ucum": "s"
+  },
+  "h": {
+    "value": 60,
+    "ucum": "min"
+  },
+  "d": {
+    "value": 24,
+    "ucum": "h"
+  },
+  "a_t": {
+    "value": 365.24219,
+    "ucum": "d"
+  },
+  "a_j": {
+    "value": 365.25,
+    "ucum": "d"
+  },
+  "a_g": {
+    "value": 365.2425,
+    "ucum": "d"
+  },
+  "a": {
+    "value": 1,
+    "ucum": "a_j"
+  },
+  "wk": {
+    "value": 7,
+    "ucum": "d"
+  },
+  "mo_s": {
+    "value": 29.53059,
+    "ucum": "d"
+  },
+  "mo_j": {
+    "value": 1,
+    "ucum": "a_j/12"
+  },
+  "mo_g": {
+    "value": 1,
+    "ucum": "a_g/12"
+  },
+  "mo": {
+    "value": 1,
+    "ucum": "mo_j"
+  },
+  "t": {
+    "value": 1000,
+    "ucum": "kg"
+  },
+  "bar": {
+    "value": 100000,
+    "ucum": "Pa"
+  },
+  "u": {
+    "value": 1.6605402e-24,
+    "ucum": "g"
+  },
+  "eV": {
+    "value": 1,
+    "ucum": "[e].V"
+  },
+  "AU": {
+    "value": 149597.870691,
+    "ucum": "Mm"
+  },
+  "pc": {
+    "value": 30856780000000000,
+    "ucum": "m"
+  },
+  "[c]": {
+    "value": 299792458,
+    "ucum": "m/s"
+  },
+  "[h]": {
+    "value": 6.6260755e-24,
+    "ucum": "J.s"
+  },
+  "[k]": {
+    "value": 1.380658e-23,
+    "ucum": "J/K"
+  },
+  "[eps_0]": {
+    "value": 8.854187817e-12,
+    "ucum": "F/m"
+  },
+  "[mu_0]": {
+    "value": 1,
+    "ucum": "4.[pi].10*-7.N/A2"
+  },
+  "[e]": {
+    "value": 1.60217733e-19,
+    "ucum": "C"
+  },
+  "[m_e]": {
+    "value": 9.1093897e-28,
+    "ucum": "g"
+  },
+  "[m_p]": {
+    "value": 1.6726231e-24,
+    "ucum": "g"
+  },
+  "[G]": {
+    "value": 6.67259e-11,
+    "ucum": "m3.kg-1.s-2"
+  },
+  "[g]": {
+    "value": 9.80665,
+    "ucum": "m/s2"
+  },
+  "atm": {
+    "value": 101325,
+    "ucum": "Pa"
+  },
+  "[ly]": {
+    "value": 1,
+    "ucum": "[c].a_j"
+  },
+  "gf": {
+    "value": 1,
+    "ucum": "g.[g]"
+  },
+  "[lbf_av]": {
+    "value": 1,
+    "ucum": "[lb_av].[g]"
+  },
+  "Ky": {
+    "value": 1,
+    "ucum": "cm-1"
+  },
+  "Gal": {
+    "value": 1,
+    "ucum": "cm/s2"
+  },
+  "dyn": {
+    "value": 1,
+    "ucum": "g.cm/s2"
+  },
+  "erg": {
+    "value": 1,
+    "ucum": "dyn.cm"
+  },
+  "P": {
+    "value": 1,
+    "ucum": "dyn.s/cm2"
+  },
+  "Bi": {
+    "value": 10,
+    "ucum": "A"
+  },
+  "St": {
+    "value": 1,
+    "ucum": "cm2/s"
+  },
+  "Mx": {
+    "value": 1e-8,
+    "ucum": "Wb"
+  },
+  "G": {
+    "value": 0.0001,
+    "ucum": "T"
+  },
+  "Oe": {
+    "value": 250,
+    "ucum": "/[pi].A/m"
+  },
+  "Gb": {
+    "value": 1,
+    "ucum": "Oe.cm"
+  },
+  "sb": {
+    "value": 1,
+    "ucum": "cd/cm2"
+  },
+  "Lmb": {
+    "value": 1,
+    "ucum": "cd/cm2/[pi]"
+  },
+  "ph": {
+    "value": 0.0001,
+    "ucum": "lx"
+  },
+  "Ci": {
+    "value": 37000000000,
+    "ucum": "Bq"
+  },
+  "R": {
+    "value": 0.000258,
+    "ucum": "C/kg"
+  },
+  "RAD": {
+    "value": 100,
+    "ucum": "erg/g"
+  },
+  "REM": {
+    "value": 1,
+    "ucum": "RAD"
+  },
+  "[in_i]": {
+    "value": 2.54,
+    "ucum": "cm"
+  },
+  "[ft_i]": {
+    "value": 12,
+    "ucum": "[in_i]"
+  },
+  "[yd_i]": {
+    "value": 3,
+    "ucum": "[ft_i]"
+  },
+  "[mi_i]": {
+    "value": 5280,
+    "ucum": "[ft_i]"
+  },
+  "[fth_i]": {
+    "value": 6,
+    "ucum": "[ft_i]"
+  },
+  "[nmi_i]": {
+    "value": 1852,
+    "ucum": "m"
+  },
+  "[kn_i]": {
+    "value": 1,
+    "ucum": "[nmi_i]/h"
+  },
+  "[sin_i]": {
+    "value": 1,
+    "ucum": "[in_i]2"
+  },
+  "[sft_i]": {
+    "value": 1,
+    "ucum": "[ft_i]2"
+  },
+  "[syd_i]": {
+    "value": 1,
+    "ucum": "[yd_i]2"
+  },
+  "[cin_i]": {
+    "value": 1,
+    "ucum": "[in_i]3"
+  },
+  "[cft_i]": {
+    "value": 1,
+    "ucum": "[ft_i]3"
+  },
+  "[cyd_i]": {
+    "value": 1,
+    "ucum": "[yd_i]3"
+  },
+  "[bf_i]": {
+    "value": 144,
+    "ucum": "[in_i]3"
+  },
+  "[cr_i]": {
+    "value": 128,
+    "ucum": "[ft_i]3"
+  },
+  "[mil_i]": {
+    "value": 0.001,
+    "ucum": "[in_i]"
+  },
+  "[cml_i]": {
+    "value": 1,
+    "ucum": "[pi]/4.[mil_i]2"
+  },
+  "[hd_i]": {
+    "value": 4,
+    "ucum": "[in_i]"
+  },
+  "[ft_us]": {
+    "value": 1200,
+    "ucum": "m/3937"
+  },
+  "[yd_us]": {
+    "value": 3,
+    "ucum": "[ft_us]"
+  },
+  "[in_us]": {
+    "value": 1,
+    "ucum": "[ft_us]/12"
+  },
+  "[rd_us]": {
+    "value": 16.5,
+    "ucum": "[ft_us]"
+  },
+  "[ch_us]": {
+    "value": 4,
+    "ucum": "[rd_us]"
+  },
+  "[lk_us]": {
+    "value": 1,
+    "ucum": "[ch_us]/100"
+  },
+  "[rch_us]": {
+    "value": 100,
+    "ucum": "[ft_us]"
+  },
+  "[rlk_us]": {
+    "value": 1,
+    "ucum": "[rch_us]/100"
+  },
+  "[fth_us]": {
+    "value": 6,
+    "ucum": "[ft_us]"
+  },
+  "[fur_us]": {
+    "value": 40,
+    "ucum": "[rd_us]"
+  },
+  "[mi_us]": {
+    "value": 8,
+    "ucum": "[fur_us]"
+  },
+  "[acr_us]": {
+    "value": 160,
+    "ucum": "[rd_us]2"
+  },
+  "[srd_us]": {
+    "value": 1,
+    "ucum": "[rd_us]2"
+  },
+  "[smi_us]": {
+    "value": 1,
+    "ucum": "[mi_us]2"
+  },
+  "[sct]": {
+    "value": 1,
+    "ucum": "[mi_us]2"
+  },
+  "[twp]": {
+    "value": 36,
+    "ucum": "[sct]"
+  },
+  "[mil_us]": {
+    "value": 0.001,
+    "ucum": "[in_us]"
+  },
+  "[in_br]": {
+    "value": 2.539998,
+    "ucum": "cm"
+  },
+  "[ft_br]": {
+    "value": 12,
+    "ucum": "[in_br]"
+  },
+  "[rd_br]": {
+    "value": 16.5,
+    "ucum": "[ft_br]"
+  },
+  "[ch_br]": {
+    "value": 4,
+    "ucum": "[rd_br]"
+  },
+  "[lk_br]": {
+    "value": 1,
+    "ucum": "[ch_br]/100"
+  },
+  "[fth_br]": {
+    "value": 6,
+    "ucum": "[ft_br]"
+  },
+  "[pc_br]": {
+    "value": 2.5,
+    "ucum": "[ft_br]"
+  },
+  "[yd_br]": {
+    "value": 3,
+    "ucum": "[ft_br]"
+  },
+  "[mi_br]": {
+    "value": 5280,
+    "ucum": "[ft_br]"
+  },
+  "[nmi_br]": {
+    "value": 6080,
+    "ucum": "[ft_br]"
+  },
+  "[kn_br]": {
+    "value": 1,
+    "ucum": "[nmi_br]/h"
+  },
+  "[acr_br]": {
+    "value": 4840,
+    "ucum": "[yd_br]2"
+  },
+  "[gal_us]": {
+    "value": 231,
+    "ucum": "[in_i]3"
+  },
+  "[bbl_us]": {
+    "value": 42,
+    "ucum": "[gal_us]"
+  },
+  "[qt_us]": {
+    "value": 1,
+    "ucum": "[gal_us]/4"
+  },
+  "[pt_us]": {
+    "value": 1,
+    "ucum": "[qt_us]/2"
+  },
+  "[gil_us]": {
+    "value": 1,
+    "ucum": "[pt_us]/4"
+  },
+  "[foz_us]": {
+    "value": 1,
+    "ucum": "[gil_us]/4"
+  },
+  "[fdr_us]": {
+    "value": 1,
+    "ucum": "[foz_us]/8"
+  },
+  "[min_us]": {
+    "value": 1,
+    "ucum": "[fdr_us]/60"
+  },
+  "[crd_us]": {
+    "value": 128,
+    "ucum": "[ft_i]3"
+  },
+  "[bu_us]": {
+    "value": 2150.42,
+    "ucum": "[in_i]3"
+  },
+  "[gal_wi]": {
+    "value": 1,
+    "ucum": "[bu_us]/8"
+  },
+  "[pk_us]": {
+    "value": 1,
+    "ucum": "[bu_us]/4"
+  },
+  "[dqt_us]": {
+    "value": 1,
+    "ucum": "[pk_us]/8"
+  },
+  "[dpt_us]": {
+    "value": 1,
+    "ucum": "[dqt_us]/2"
+  },
+  "[tbs_us]": {
+    "value": 1,
+    "ucum": "[foz_us]/2"
+  },
+  "[tsp_us]": {
+    "value": 1,
+    "ucum": "[tbs_us]/3"
+  },
+  "[cup_us]": {
+    "value": 16,
+    "ucum": "[tbs_us]"
+  },
+  "[foz_m]": {
+    "value": 30,
+    "ucum": "mL"
+  },
+  "[cup_m]": {
+    "value": 240,
+    "ucum": "mL"
+  },
+  "[tsp_m]": {
+    "value": 5,
+    "ucum": "mL"
+  },
+  "[tbs_m]": {
+    "value": 15,
+    "ucum": "mL"
+  },
+  "[gal_br]": {
+    "value": 4.54609,
+    "ucum": "l"
+  },
+  "[pk_br]": {
+    "value": 2,
+    "ucum": "[gal_br]"
+  },
+  "[bu_br]": {
+    "value": 4,
+    "ucum": "[pk_br]"
+  },
+  "[qt_br]": {
+    "value": 1,
+    "ucum": "[gal_br]/4"
+  },
+  "[pt_br]": {
+    "value": 1,
+    "ucum": "[qt_br]/2"
+  },
+  "[gil_br]": {
+    "value": 1,
+    "ucum": "[pt_br]/4"
+  },
+  "[foz_br]": {
+    "value": 1,
+    "ucum": "[gil_br]/5"
+  },
+  "[fdr_br]": {
+    "value": 1,
+    "ucum": "[foz_br]/8"
+  },
+  "[min_br]": {
+    "value": 1,
+    "ucum": "[fdr_br]/60"
+  },
+  "[gr]": {
+    "value": 64.79891,
+    "ucum": "mg"
+  },
+  "[lb_av]": {
+    "value": 7000,
+    "ucum": "[gr]"
+  },
+  "[oz_av]": {
+    "value": 1,
+    "ucum": "[lb_av]/16"
+  },
+  "[dr_av]": {
+    "value": 1,
+    "ucum": "[oz_av]/16"
+  },
+  "[scwt_av]": {
+    "value": 100,
+    "ucum": "[lb_av]"
+  },
+  "[lcwt_av]": {
+    "value": 112,
+    "ucum": "[lb_av]"
+  },
+  "[ston_av]": {
+    "value": 20,
+    "ucum": "[scwt_av]"
+  },
+  "[lton_av]": {
+    "value": 20,
+    "ucum": "[lcwt_av]"
+  },
+  "[stone_av]": {
+    "value": 14,
+    "ucum": "[lb_av]"
+  },
+  "[pwt_tr]": {
+    "value": 24,
+    "ucum": "[gr]"
+  },
+  "[oz_tr]": {
+    "value": 20,
+    "ucum": "[pwt_tr]"
+  },
+  "[lb_tr]": {
+    "value": 12,
+    "ucum": "[oz_tr]"
+  },
+  "[sc_ap]": {
+    "value": 20,
+    "ucum": "[gr]"
+  },
+  "[dr_ap]": {
+    "value": 3,
+    "ucum": "[sc_ap]"
+  },
+  "[oz_ap]": {
+    "value": 8,
+    "ucum": "[dr_ap]"
+  },
+  "[lb_ap]": {
+    "value": 12,
+    "ucum": "[oz_ap]"
+  },
+  "[oz_m]": {
+    "value": 28,
+    "ucum": "g"
+  },
+  "[lne]": {
+    "value": 1,
+    "ucum": "[in_i]/12"
+  },
+  "[pnt]": {
+    "value": 1,
+    "ucum": "[lne]/6"
+  },
+  "[pca]": {
+    "value": 12,
+    "ucum": "[pnt]"
+  },
+  "[pnt_pr]": {
+    "value": 0.013837,
+    "ucum": "[in_i]"
+  },
+  "[pca_pr]": {
+    "value": 12,
+    "ucum": "[pnt_pr]"
+  },
+  "[pied]": {
+    "value": 32.48,
+    "ucum": "cm"
+  },
+  "[pouce]": {
+    "value": 1,
+    "ucum": "[pied]/12"
+  },
+  "[ligne]": {
+    "value": 1,
+    "ucum": "[pouce]/12"
+  },
+  "[didot]": {
+    "value": 1,
+    "ucum": "[ligne]/6"
+  },
+  "[cicero]": {
+    "value": 12,
+    "ucum": "[didot]"
+  },
+  "[degF]": {
+    "value": null,
+    "ucum": "degf(5 K/9)"
+  },
+  "[degR]": {
+    "value": 5,
+    "ucum": "K/9"
+  },
+  "cal_[15]": {
+    "value": 4.1858,
+    "ucum": "J"
+  },
+  "cal_[20]": {
+    "value": 4.1819,
+    "ucum": "J"
+  },
+  "cal_m": {
+    "value": 4.19002,
+    "ucum": "J"
+  },
+  "cal_IT": {
+    "value": 4.1868,
+    "ucum": "J"
+  },
+  "cal_th": {
+    "value": 4.184,
+    "ucum": "J"
+  },
+  "cal": {
+    "value": 1,
+    "ucum": "cal_th"
+  },
+  "[Cal]": {
+    "value": 1,
+    "ucum": "kcal_th"
+  },
+  "[Btu_39]": {
+    "value": 1.05967,
+    "ucum": "kJ"
+  },
+  "[Btu_59]": {
+    "value": 1.0548,
+    "ucum": "kJ"
+  },
+  "[Btu_60]": {
+    "value": 1.05468,
+    "ucum": "kJ"
+  },
+  "[Btu_m]": {
+    "value": 1.05587,
+    "ucum": "kJ"
+  },
+  "[Btu_IT]": {
+    "value": 1.05505585262,
+    "ucum": "kJ"
+  },
+  "[Btu_th]": {
+    "value": 1.05435,
+    "ucum": "kJ"
+  },
+  "[Btu]": {
+    "value": 1,
+    "ucum": "[Btu_th]"
+  },
+  "[HP]": {
+    "value": 550,
+    "ucum": "[ft_i].[lbf_av]/s"
+  },
+  "tex": {
+    "value": 1,
+    "ucum": "g/km"
+  },
+  "[den]": {
+    "value": 1,
+    "ucum": "g/9/km"
+  },
+  "m[H2O]": {
+    "value": 9.80665,
+    "ucum": "kPa"
+  },
+  "m[Hg]": {
+    "value": 133.322,
+    "ucum": "kPa"
+  },
+  "[in_i'H2O]": {
+    "value": 1,
+    "ucum": "m[H2O].[in_i]/m"
+  },
+  "[in_i'Hg]": {
+    "value": 1,
+    "ucum": "m[Hg].[in_i]/m"
+  },
+  "[PRU]": {
+    "value": 1,
+    "ucum": "mm[Hg].s/ml"
+  },
+  "[wood'U]": {
+    "value": 1,
+    "ucum": "mm[Hg].min/L"
+  },
+  "[diop]": {
+    "value": 1,
+    "ucum": "/m"
+  },
+  "[p'diop]": {
+    "value": null,
+    "ucum": "100tan(1 rad)"
+  },
+  "%[slope]": {
+    "value": null,
+    "ucum": "100tan(1 rad)"
+  },
+  "[mesh_i]": {
+    "value": 1,
+    "ucum": "/[in_i]"
+  },
+  "[Ch]": {
+    "value": 1,
+    "ucum": "mm/3"
+  },
+  "[drp]": {
+    "value": 1,
+    "ucum": "ml/20"
+  },
+  "[hnsf'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[MET]": {
+    "value": 3.5,
+    "ucum": "mL/min/kg"
+  },
+  "[hp'_X]": {
+    "value": null,
+    "ucum": "hpX(1 1)"
+  },
+  "[hp'_C]": {
+    "value": null,
+    "ucum": "hpC(1 1)"
+  },
+  "[hp'_M]": {
+    "value": null,
+    "ucum": "hpM(1 1)"
+  },
+  "[hp'_Q]": {
+    "value": null,
+    "ucum": "hpQ(1 1)"
+  },
+  "[hp_X]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[hp_C]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[hp_M]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[hp_Q]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[kp_X]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[kp_C]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[kp_M]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[kp_Q]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "eq": {
+    "value": 1,
+    "ucum": "mol"
+  },
+  "osm": {
+    "value": 1,
+    "ucum": "mol"
+  },
+  "[pH]": {
+    "value": null,
+    "ucum": "pH(1 mol/l)"
+  },
+  "g%": {
+    "value": 1,
+    "ucum": "g/dl"
+  },
+  "[S]": {
+    "value": 1,
+    "ucum": "10*-13.s"
+  },
+  "[HPF]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[LPF]": {
+    "value": 100,
+    "ucum": "1"
+  },
+  "kat": {
+    "value": 1,
+    "ucum": "mol/s"
+  },
+  "U": {
+    "value": 1,
+    "ucum": "umol/min"
+  },
+  "[iU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[IU]": {
+    "value": 1,
+    "ucum": "[iU]"
+  },
+  "[arb'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[USP'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[GPL'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[MPL'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[APL'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[beth'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[anti'Xa'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[todd'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[dye'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[smgy'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[bdsk'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[ka'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[knk'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[mclg'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[tb'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[CCID_50]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[TCID_50]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[EID_50]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[PFU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[FFU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[CFU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[BAU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[AU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[Amb'a'1'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[PNU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[Lf]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[D'ag'U]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[FEU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[ELU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "[EU]": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "Np": {
+    "value": null,
+    "ucum": "ln(1 1)"
+  },
+  "B": {
+    "value": null,
+    "ucum": "lg(1 1)"
+  },
+  "B[SPL]": {
+    "value": null,
+    "ucum": "2lg(2 10*-5.Pa)"
+  },
+  "B[V]": {
+    "value": null,
+    "ucum": "2lg(1 V)"
+  },
+  "B[mV]": {
+    "value": null,
+    "ucum": "2lg(1 mV)"
+  },
+  "B[uV]": {
+    "value": null,
+    "ucum": "2lg(1 uV)"
+  },
+  "B[10.nV]": {
+    "value": null,
+    "ucum": "2lg(10 nV)"
+  },
+  "B[W]": {
+    "value": null,
+    "ucum": "lg(1 W)"
+  },
+  "B[kW]": {
+    "value": null,
+    "ucum": "lg(1 kW)"
+  },
+  "st": {
+    "value": 1,
+    "ucum": "m3"
+  },
+  "Ao": {
+    "value": 0.1,
+    "ucum": "nm"
+  },
+  "b": {
+    "value": 100,
+    "ucum": "fm2"
+  },
+  "att": {
+    "value": 1,
+    "ucum": "kgf/cm2"
+  },
+  "mho": {
+    "value": 1,
+    "ucum": "S"
+  },
+  "[psi]": {
+    "value": 1,
+    "ucum": "[lbf_av]/[in_i]2"
+  },
+  "circ": {
+    "value": 2,
+    "ucum": "[pi].rad"
+  },
+  "sph": {
+    "value": 4,
+    "ucum": "[pi].sr"
+  },
+  "[car_m]": {
+    "value": 0.2,
+    "ucum": "g"
+  },
+  "[car_Au]": {
+    "value": 1,
+    "ucum": "/24"
+  },
+  "[smoot]": {
+    "value": 67,
+    "ucum": "[in_i]"
+  },
+  "bit_s": {
+    "value": null,
+    "ucum": "ld(1 1)"
+  },
+  "bit": {
+    "value": 1,
+    "ucum": "1"
+  },
+  "By": {
+    "value": 8,
+    "ucum": "bit"
+  },
+  "Bd": {
+    "value": 1,
+    "ucum": "/s"
+  }
+}
+
+},{}],410:[function(require,module,exports){
+module.exports={"mol":true,"sr":true,"Hz":true,"N":true,"Pa":true,"J":true,"W":true,"A":true,"V":true,"F":true,"Ohm":true,"S":true,"Wb":true,"Cel":true,"T":true,"H":true,"lm":true,"lx":true,"Bq":true,"Gy":true,"Sv":true,"l":true,"L":true,"ar":true,"t":true,"bar":true,"u":true,"eV":true,"pc":true,"[c]":true,"[h]":true,"[k]":true,"[eps_0]":true,"[mu_0]":true,"[e]":true,"[m_e]":true,"[m_p]":true,"[G]":true,"[g]":true,"[ly]":true,"gf":true,"Ky":true,"Gal":true,"dyn":true,"erg":true,"P":true,"Bi":true,"St":true,"Mx":true,"G":true,"Oe":true,"Gb":true,"sb":true,"Lmb":true,"ph":true,"Ci":true,"R":true,"RAD":true,"REM":true,"cal_[15]":true,"cal_[20]":true,"cal_m":true,"cal_IT":true,"cal_th":true,"cal":true,"tex":true,"m[H2O]":true,"m[Hg]":true,"eq":true,"osm":true,"g%":true,"kat":true,"U":true,"[iU]":true,"[IU]":true,"Np":true,"B":true,"B[SPL]":true,"B[V]":true,"B[mV]":true,"B[uV]":true,"B[10.nV]":true,"B[W]":true,"B[kW]":true,"st":true,"mho":true,"bit":true,"By":true,"Bd":true,"m":true,"s":true,"g":true,"rad":true,"K":true,"C":true,"cd":true}
+
+},{}],411:[function(require,module,exports){
+module.exports={
+  "Y": {
+    "CODE": "YA",
+    "names": [
+      "yotta"
+    ],
+    "printSymbols": [
+      "Y"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>24</sup>",
+        "numeric": 1e+24
+      }
+    ]
+  },
+  "Z": {
+    "CODE": "ZA",
+    "names": [
+      "zetta"
+    ],
+    "printSymbols": [
+      "Z"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>21</sup>",
+        "numeric": 1e+21
+      }
+    ]
+  },
+  "E": {
+    "CODE": "EX",
+    "names": [
+      "exa"
+    ],
+    "printSymbols": [
+      "E"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>18</sup>",
+        "numeric": 1000000000000000000
+      }
+    ]
+  },
+  "P": {
+    "CODE": "PT",
+    "names": [
+      "peta"
+    ],
+    "printSymbols": [
+      "P"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>15</sup>",
+        "numeric": 1000000000000000
+      }
+    ]
+  },
+  "T": {
+    "CODE": "TR",
+    "names": [
+      "tera"
+    ],
+    "printSymbols": [
+      "T"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>12</sup>",
+        "numeric": 1000000000000
+      }
+    ]
+  },
+  "G": {
+    "CODE": "GA",
+    "names": [
+      "giga"
+    ],
+    "printSymbols": [
+      "G"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>9</sup>",
+        "numeric": 1000000000
+      }
+    ]
+  },
+  "M": {
+    "CODE": "MA",
+    "names": [
+      "mega"
+    ],
+    "printSymbols": [
+      "M"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>6</sup>",
+        "numeric": 1000000
+      }
+    ]
+  },
+  "k": {
+    "CODE": "K",
+    "names": [
+      "kilo"
+    ],
+    "printSymbols": [
+      "k"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>3</sup>",
+        "numeric": 1000
+      }
+    ]
+  },
+  "h": {
+    "CODE": "H",
+    "names": [
+      "hecto"
+    ],
+    "printSymbols": [
+      "h"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>2</sup>",
+        "numeric": 100
+      }
+    ]
+  },
+  "da": {
+    "CODE": "DA",
+    "names": [
+      "deka"
+    ],
+    "printSymbols": [
+      "da"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>1</sup>",
+        "numeric": 10
+      }
+    ]
+  },
+  "d": {
+    "CODE": "D",
+    "names": [
+      "deci"
+    ],
+    "printSymbols": [
+      "d"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-1</sup>",
+        "numeric": 0.1
+      }
+    ]
+  },
+  "c": {
+    "CODE": "C",
+    "names": [
+      "centi"
+    ],
+    "printSymbols": [
+      "c"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-2</sup>",
+        "numeric": 0.01
+      }
+    ]
+  },
+  "m": {
+    "CODE": "M",
+    "names": [
+      "milli"
+    ],
+    "printSymbols": [
+      "m"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-3</sup>",
+        "numeric": 0.001
+      }
+    ]
+  },
+  "u": {
+    "CODE": "U",
+    "names": [
+      "micro"
+    ],
+    "printSymbols": [
+      "&#956;"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-6</sup>",
+        "numeric": 0.000001
+      }
+    ]
+  },
+  "n": {
+    "CODE": "N",
+    "names": [
+      "nano"
+    ],
+    "printSymbols": [
+      "n"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-9</sup>",
+        "numeric": 1e-9
+      }
+    ]
+  },
+  "p": {
+    "CODE": "P",
+    "names": [
+      "pico"
+    ],
+    "printSymbols": [
+      "p"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-12</sup>",
+        "numeric": 1e-12
+      }
+    ]
+  },
+  "f": {
+    "CODE": "F",
+    "names": [
+      "femto"
+    ],
+    "printSymbols": [
+      "f"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-15</sup>",
+        "numeric": 1e-15
+      }
+    ]
+  },
+  "a": {
+    "CODE": "A",
+    "names": [
+      "atto"
+    ],
+    "printSymbols": [
+      "a"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-18</sup>",
+        "numeric": 1e-18
+      }
+    ]
+  },
+  "z": {
+    "CODE": "ZO",
+    "names": [
+      "zepto"
+    ],
+    "printSymbols": [
+      "z"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-21</sup>",
+        "numeric": 1e-21
+      }
+    ]
+  },
+  "y": {
+    "CODE": "YO",
+    "names": [
+      "yocto"
+    ],
+    "printSymbols": [
+      "y"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-24</sup>",
+        "numeric": 1e-24
+      }
+    ]
+  },
+  "Ki": {
+    "CODE": "KIB",
+    "names": [
+      "kibi"
+    ],
+    "printSymbols": [
+      "Ki"
+    ],
+    "values": [
+      {
+        "printable": "1024",
+        "numeric": 1024
+      }
+    ]
+  },
+  "Mi": {
+    "CODE": "MIB",
+    "names": [
+      "mebi"
+    ],
+    "printSymbols": [
+      "Mi"
+    ],
+    "values": [
+      {
+        "printable": "1048576",
+        "numeric": 1048576
+      }
+    ]
+  },
+  "Gi": {
+    "CODE": "GIB",
+    "names": [
+      "gibi"
+    ],
+    "printSymbols": [
+      "Gi"
+    ],
+    "values": [
+      {
+        "printable": "1073741824",
+        "numeric": 1073741824
+      }
+    ]
+  },
+  "Ti": {
+    "CODE": "TIB",
+    "names": [
+      "tebi"
+    ],
+    "printSymbols": [
+      "Ti"
+    ],
+    "values": [
+      {
+        "printable": "1099511627776",
+        "numeric": 1099511627776
+      }
+    ]
+  }
+}
+
+},{}],412:[function(require,module,exports){
+module.exports={
+  "Y": 1e+24,
+  "Z": 1e+21,
+  "E": 1000000000000000000,
+  "P": 1000000000000000,
+  "T": 1000000000000,
+  "G": 1000000000,
+  "M": 1000000,
+  "k": 1000,
+  "h": 100,
+  "da": 10,
+  "d": 0.1,
+  "c": 0.01,
+  "m": 0.001,
+  "u": 0.000001,
+  "n": 1e-9,
+  "p": 1e-12,
+  "f": 1e-15,
+  "a": 1e-18,
+  "z": 1e-21,
+  "y": 1e-24,
+  "Ki": 1024,
+  "Mi": 1048576,
+  "Gi": 1073741824,
+  "Ti": 1099511627776
+}
+
+},{}],413:[function(require,module,exports){
+module.exports = (function() {
+  /*
+   * Generated by PEG.js 0.8.0.
+   *
+   * http://pegjs.majda.cz/
+   */
+
+  function peg$subclass(child, parent) {
+    function ctor() { this.constructor = child; }
+    ctor.prototype = parent.prototype;
+    child.prototype = new ctor();
+  }
+
+  function SyntaxError(message, expected, found, offset, line, column) {
+    this.message  = message;
+    this.expected = expected;
+    this.found    = found;
+    this.offset   = offset;
+    this.line     = line;
+    this.column   = column;
+
+    this.name     = "SyntaxError";
+  }
+
+  peg$subclass(SyntaxError, Error);
+
+  function parse(input) {
+    var options = arguments.length > 1 ? arguments[1] : {},
+
+        peg$FAILED = {},
+
+        peg$startRuleIndices = { start: 0 },
+        peg$startRuleIndex   = 0,
+
+        peg$consts = [
+          function(e) {
+            return e ; // cleanup(e);
+          },
+          peg$FAILED,
+          "/",
+          { type: "literal", value: "/", description: "\"/\"" },
+          function(e) {return multiply({value:1, units:{}}, [["/", e]]);},
+          ".",
+          { type: "literal", value: ".", description: "\".\"" },
+          [],
+          function(t, ms) {
+            return multiply(t, ms);
+          },
+          null,
+          function(e, exp) {return e.ann && exp;},
+          void 0,
+          function(e, exp) {
+            return topower(e, exp);
+          },
+          function(d) {
+           var ret = {
+              value: d,
+              units: {}
+            };
+            return ret;
+          },
+          function(u) {return u;},
+          "(",
+          { type: "literal", value: "(", description: "\"(\"" },
+          ")",
+          { type: "literal", value: ")", description: "\")\"" },
+          function(e) {return e;},
+          /^[+\-]/,
+          { type: "class", value: "[+\\-]", description: "[+\\-]" },
+          function(s, d) {return (s=="-") ? (-1*d) : d},
+          function(p, a) {return(p && !ismetric(a));},
+          function(p, a) {
+            var ret = a;
+            var u = Object.keys(ret.units)[0];
+
+            // console.log("simpleUnit: p:", JSON.stringify(p, null, 2), "a: ", JSON.stringify(a, null, 2));
+
+            if (p){
+              ret.value = ret.value * prefixes[p];
+              ret.metadata = {};
+              if(prefixMetadata[p]){
+                // if this prefix has metadata, augment the return with it
+                Object.keys(prefixMetadata[p]).forEach(function(key){
+                  if(!ret.metadata[u]){
+                    ret.metadata[u] = { prefix: {} };
+                  }
+                  ret.metadata[u].prefix[key] = prefixMetadata[p][key];
+                });
+              }
+
+              // merge in the unit metadata
+              if(unitMetadata[u]){
+                //console.log("simpleUnit: ", JSON.stringify(unitMetadata[u], null ,2));
+                Object.keys(unitMetadata[u]).forEach(function(key){
+                  if(!ret.metadata[u]){
+                    ret.metadata[u] = {};
+                  }
+                  ret.metadata[u][key] = unitMetadata[u][key];
+                });
+              }
+            }
+
+            //console.log("simpleUnit: ret: ", JSON.stringify(ret, null ,2));
+            return ret;
+          },
+          /^[0-9]/,
+          { type: "class", value: "[0-9]", description: "[0-9]" },
+          "e",
+          { type: "literal", value: "e", description: "\"e\"" },
+          function(v, epresent, e) {return (!epresent && !!e);},
+          function(v, epresent, e) {
+            return parseInt(v.join(""))*Math.pow(10, e||0);
+          },
+          "{",
+          { type: "literal", value: "{", description: "\"{\"" },
+          /^[^}]/,
+          { type: "class", value: "[^}]", description: "[^}]" },
+          "}",
+          { type: "literal", value: "}", description: "\"}\"" },
+          function(m) {return /[^\x00-\x7F]/.test(m);},
+          function(m) { return {value: 1, units:{}, ann: m} },
+          "[anti'Xa'U]",
+          { type: "literal", value: "[anti'Xa'U]", description: "\"[anti'Xa'U]\"" },
+          function(u) {return {"value": 1, "units": {"[anti'Xa'U]": 1}, "metadata": {"[anti'Xa'U]":{"isBase":false,"CODE":"[ANTI'XA'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["anti factor Xa unit"],"properties":["biologic activity of factor Xa inhibitor (heparin)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[Amb'a'1'U]",
+          { type: "literal", value: "[Amb'a'1'U]", description: "\"[Amb'a'1'U]\"" },
+          function(u) {return {"value": 1, "units": {"[Amb'a'1'U]": 1}, "metadata": {"[Amb'a'1'U]":{"isBase":false,"CODE":"[AMB'A'1'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["allergen unit for Ambrosia artemisiifolia"],"printSymbols":["Amb a 1 U"],"properties":["procedure defined amount of the major allergen of ragweed."],"values":[{"printable":"1","numeric":1}]}}};},
+          "[stone_av]",
+          { type: "literal", value: "[stone_av]", description: "\"[stone_av]\"" },
+          function(u) {return {"value": 1, "units": {"[stone_av]": 1}, "metadata": {"[stone_av]":{"isBase":false,"CODE":"[STONE_AV]","isMetric":"no","class":"avoirdupois","names":["stone","British stone"],"properties":["mass"],"values":[{"printable":"14","numeric":14}]}}};},
+          "[in_i'H2O]",
+          { type: "literal", value: "[in_i'H2O]", description: "\"[in_i'H2O]\"" },
+          function(u) {return {"value": 1, "units": {"[in_i'H2O]": 1}, "metadata": {"[in_i'H2O]":{"isBase":false,"CODE":"[IN_I'H2O]","isMetric":"no","class":"clinical","names":["inch of water column"],"printSymbols":["in&#160;H<sub>\n            <r>2</r>\n         </sub>O"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[ston_av]",
+          { type: "literal", value: "[ston_av]", description: "\"[ston_av]\"" },
+          function(u) {return {"value": 1, "units": {"[ston_av]": 1}, "metadata": {"[ston_av]":{"isBase":false,"CODE":"[STON_AV]","isMetric":"no","class":"avoirdupois","names":["short ton","U.S. ton"],"properties":["mass"],"values":[{"printable":"20","numeric":20}]}}};},
+          "[TCID_50]",
+          { type: "literal", value: "[TCID_50]", description: "\"[TCID_50]\"" },
+          function(u) {return {"value": 1, "units": {"[TCID_50]": 1}, "metadata": {"[TCID_50]":{"isBase":false,"CODE":"[TCID_50]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["50% tissue culture infectious dose"],"printSymbols":["TCID<sub>50</sub>"],"properties":["biologic activity (infectivity) of an infectious agent preparation"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[CCID_50]",
+          { type: "literal", value: "[CCID_50]", description: "\"[CCID_50]\"" },
+          function(u) {return {"value": 1, "units": {"[CCID_50]": 1}, "metadata": {"[CCID_50]":{"isBase":false,"CODE":"[CCID_50]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["50% cell culture infectious dose"],"printSymbols":["CCID<sub>50</sub>"],"properties":["biologic activity (infectivity) of an infectious agent preparation"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[scwt_av]",
+          { type: "literal", value: "[scwt_av]", description: "\"[scwt_av]\"" },
+          function(u) {return {"value": 1, "units": {"[scwt_av]": 1}, "metadata": {"[scwt_av]":{"isBase":false,"CODE":"[SCWT_AV]","isMetric":"no","class":"avoirdupois","names":["short hundredweight","U.S. hundredweight"],"properties":["mass"],"values":[{"printable":"100","numeric":100}]}}};},
+          "[lcwt_av]",
+          { type: "literal", value: "[lcwt_av]", description: "\"[lcwt_av]\"" },
+          function(u) {return {"value": 1, "units": {"[lcwt_av]": 1}, "metadata": {"[lcwt_av]":{"isBase":false,"CODE":"[LCWT_AV]","isMetric":"no","class":"avoirdupois","names":["long hunderdweight","British hundredweight"],"properties":["mass"],"values":[{"printable":"112","numeric":112}]}}};},
+          "[lton_av]",
+          { type: "literal", value: "[lton_av]", description: "\"[lton_av]\"" },
+          function(u) {return {"value": 1, "units": {"[lton_av]": 1}, "metadata": {"[lton_av]":{"isBase":false,"CODE":"[LTON_AV]","isMetric":"no","class":"avoirdupois","names":["long ton","British ton"],"properties":["mass"],"values":[{"printable":"20","numeric":20}]}}};},
+          "[in_i'Hg]",
+          { type: "literal", value: "[in_i'Hg]", description: "\"[in_i'Hg]\"" },
+          function(u) {return {"value": 1, "units": {"[in_i'Hg]": 1}, "metadata": {"[in_i'Hg]":{"isBase":false,"CODE":"[IN_I'HG]","isMetric":"no","class":"clinical","names":["inch of mercury column"],"printSymbols":["in&#160;Hg"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[tbs_us]",
+          { type: "literal", value: "[tbs_us]", description: "\"[tbs_us]\"" },
+          function(u) {return {"value": 1, "units": {"[tbs_us]": 1}, "metadata": {"[tbs_us]":{"isBase":false,"CODE":"[TBS_US]","isMetric":"no","class":"us-volumes","names":["tablespoon"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[dpt_us]",
+          { type: "literal", value: "[dpt_us]", description: "\"[dpt_us]\"" },
+          function(u) {return {"value": 1, "units": {"[dpt_us]": 1}, "metadata": {"[dpt_us]":{"isBase":false,"CODE":"[DPT_US]","isMetric":"no","class":"us-volumes","names":["dry pint"],"properties":["dry volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[bdsk'U]",
+          { type: "literal", value: "[bdsk'U]", description: "\"[bdsk'U]\"" },
+          function(u) {return {"value": 1, "units": {"[bdsk'U]": 1}, "metadata": {"[bdsk'U]":{"isBase":false,"CODE":"[BDSK'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Bodansky unit"],"properties":["biologic activity of phosphatase"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[smgy'U]",
+          { type: "literal", value: "[smgy'U]", description: "\"[smgy'U]\"" },
+          function(u) {return {"value": 1, "units": {"[smgy'U]": 1}, "metadata": {"[smgy'U]":{"isBase":false,"CODE":"[SMGY'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Somogyi unit"],"properties":["biologic activity of amylase"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[dqt_us]",
+          { type: "literal", value: "[dqt_us]", description: "\"[dqt_us]\"" },
+          function(u) {return {"value": 1, "units": {"[dqt_us]": 1}, "metadata": {"[dqt_us]":{"isBase":false,"CODE":"[DQT_US]","isMetric":"no","class":"us-volumes","names":["dry quart"],"properties":["dry volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[todd'U]",
+          { type: "literal", value: "[todd'U]", description: "\"[todd'U]\"" },
+          function(u) {return {"value": 1, "units": {"[todd'U]": 1}, "metadata": {"[todd'U]":{"isBase":false,"CODE":"[TODD'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Todd unit"],"properties":["biologic activity antistreptolysin O"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[D'ag'U]",
+          { type: "literal", value: "[D'ag'U]", description: "\"[D'ag'U]\"" },
+          function(u) {return {"value": 1, "units": {"[D'ag'U]": 1}, "metadata": {"[D'ag'U]":{"isBase":false,"CODE":"[D'AG'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["D-antigen unit"],"printSymbols":[""],"properties":["procedure defined amount of a poliomyelitis d-antigen substance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[beth'U]",
+          { type: "literal", value: "[beth'U]", description: "\"[beth'U]\"" },
+          function(u) {return {"value": 1, "units": {"[beth'U]": 1}, "metadata": {"[beth'U]":{"isBase":false,"CODE":"[BETH'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Bethesda unit"],"properties":["biologic activity of factor VIII inhibitor"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[gal_wi]",
+          { type: "literal", value: "[gal_wi]", description: "\"[gal_wi]\"" },
+          function(u) {return {"value": 1, "units": {"[gal_wi]": 1}, "metadata": {"[gal_wi]":{"isBase":false,"CODE":"[GAL_WI]","isMetric":"no","class":"us-volumes","names":["historical winchester gallon"],"properties":["dry volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[crd_us]",
+          { type: "literal", value: "[crd_us]", description: "\"[crd_us]\"" },
+          function(u) {return {"value": 1, "units": {"[crd_us]": 1}, "metadata": {"[crd_us]":{"isBase":false,"CODE":"[CRD_US]","isMetric":"no","class":"us-volumes","names":["cord"],"properties":["fluid volume"],"values":[{"printable":"128","numeric":128}]}}};},
+          "[min_us]",
+          { type: "literal", value: "[min_us]", description: "\"[min_us]\"" },
+          function(u) {return {"value": 1, "units": {"[min_us]": 1}, "metadata": {"[min_us]":{"isBase":false,"CODE":"[MIN_US]","isMetric":"no","class":"us-volumes","names":["minim"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[fdr_us]",
+          { type: "literal", value: "[fdr_us]", description: "\"[fdr_us]\"" },
+          function(u) {return {"value": 1, "units": {"[fdr_us]": 1}, "metadata": {"[fdr_us]":{"isBase":false,"CODE":"[FDR_US]","isMetric":"no","class":"us-volumes","names":["fluid dram"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[foz_us]",
+          { type: "literal", value: "[foz_us]", description: "\"[foz_us]\"" },
+          function(u) {return {"value": 1, "units": {"[foz_us]": 1}, "metadata": {"[foz_us]":{"isBase":false,"CODE":"[FOZ_US]","isMetric":"no","class":"us-volumes","names":["fluid ounce"],"printSymbols":["oz fl"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[gil_us]",
+          { type: "literal", value: "[gil_us]", description: "\"[gil_us]\"" },
+          function(u) {return {"value": 1, "units": {"[gil_us]": 1}, "metadata": {"[gil_us]":{"isBase":false,"CODE":"[GIL_US]","isMetric":"no","class":"us-volumes","names":["gill"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[bbl_us]",
+          { type: "literal", value: "[bbl_us]", description: "\"[bbl_us]\"" },
+          function(u) {return {"value": 1, "units": {"[bbl_us]": 1}, "metadata": {"[bbl_us]":{"isBase":false,"CODE":"[BBL_US]","isMetric":"no","class":"us-volumes","names":["barrel"],"properties":["fluid volume"],"values":[{"printable":"42","numeric":42}]}}};},
+          "[gal_us]",
+          { type: "literal", value: "[gal_us]", description: "\"[gal_us]\"" },
+          function(u) {return {"value": 1, "units": {"[gal_us]": 1}, "metadata": {"[gal_us]":{"isBase":false,"CODE":"[GAL_US]","isMetric":"no","class":"us-volumes","names":["Queen Anne's wine gallon"],"properties":["fluid volume"],"values":[{"printable":"231","numeric":231}]}}};},
+          "[acr_br]",
+          { type: "literal", value: "[acr_br]", description: "\"[acr_br]\"" },
+          function(u) {return {"value": 1, "units": {"[acr_br]": 1}, "metadata": {"[acr_br]":{"isBase":false,"CODE":"[ACR_BR]","isMetric":"no","class":"brit-length","names":["acre"],"properties":["area"],"values":[{"printable":"4840","numeric":4840}]}}};},
+          "[nmi_br]",
+          { type: "literal", value: "[nmi_br]", description: "\"[nmi_br]\"" },
+          function(u) {return {"value": 1, "units": {"[nmi_br]": 1}, "metadata": {"[nmi_br]":{"isBase":false,"CODE":"[NMI_BR]","isMetric":"no","class":"brit-length","names":["nautical mile"],"properties":["length"],"values":[{"printable":"6080","numeric":6080}]}}};},
+          "[fth_br]",
+          { type: "literal", value: "[fth_br]", description: "\"[fth_br]\"" },
+          function(u) {return {"value": 1, "units": {"[fth_br]": 1}, "metadata": {"[fth_br]":{"isBase":false,"CODE":"[FTH_BR]","isMetric":"no","class":"brit-length","names":["fathom"],"properties":["length"],"values":[{"printable":"6","numeric":6}]}}};},
+          "[mil_us]",
+          { type: "literal", value: "[mil_us]", description: "\"[mil_us]\"" },
+          function(u) {return {"value": 1, "units": {"[mil_us]": 1}, "metadata": {"[mil_us]":{"isBase":false,"CODE":"[MIL_US]","isMetric":"no","class":"us-lengths","names":["mil"],"properties":["length"],"values":[{"printable":"1 &#215; 10<sup>-3</sup>","numeric":0.001}]}}};},
+          "[smi_us]",
+          { type: "literal", value: "[smi_us]", description: "\"[smi_us]\"" },
+          function(u) {return {"value": 1, "units": {"[smi_us]": 1}, "metadata": {"[smi_us]":{"isBase":false,"CODE":"[SMI_US]","isMetric":"no","class":"us-lengths","names":["square mile"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[acr_us]",
+          { type: "literal", value: "[acr_us]", description: "\"[acr_us]\"" },
+          function(u) {return {"value": 1, "units": {"[acr_us]": 1}, "metadata": {"[acr_us]":{"isBase":false,"CODE":"[ACR_US]","isMetric":"no","class":"us-lengths","names":["acre"],"properties":["area"],"values":[{"printable":"160","numeric":160}]}}};},
+          "[fur_us]",
+          { type: "literal", value: "[fur_us]", description: "\"[fur_us]\"" },
+          function(u) {return {"value": 1, "units": {"[fur_us]": 1}, "metadata": {"[fur_us]":{"isBase":false,"CODE":"[FUR_US]","isMetric":"no","class":"us-lengths","names":["furlong"],"properties":["length"],"values":[{"printable":"40","numeric":40}]}}};},
+          "[fth_us]",
+          { type: "literal", value: "[fth_us]", description: "\"[fth_us]\"" },
+          function(u) {return {"value": 1, "units": {"[fth_us]": 1}, "metadata": {"[fth_us]":{"isBase":false,"CODE":"[FTH_US]","isMetric":"no","class":"us-lengths","names":["fathom"],"properties":["length"],"values":[{"printable":"6","numeric":6}]}}};},
+          "[rlk_us]",
+          { type: "literal", value: "[rlk_us]", description: "\"[rlk_us]\"" },
+          function(u) {return {"value": 1, "units": {"[rlk_us]": 1}, "metadata": {"[rlk_us]":{"isBase":false,"CODE":"[RLK_US]","isMetric":"no","class":"us-lengths","names":["link for Ramden's chain"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[rch_us]",
+          { type: "literal", value: "[rch_us]", description: "\"[rch_us]\"" },
+          function(u) {return {"value": 1, "units": {"[rch_us]": 1}, "metadata": {"[rch_us]":{"isBase":false,"CODE":"[RCH_US]","isMetric":"no","class":"us-lengths","names":["Ramden's chain","Engineer's chain"],"properties":["length"],"values":[{"printable":"100","numeric":100}]}}};},
+          "[lbf_av]",
+          { type: "literal", value: "[lbf_av]", description: "\"[lbf_av]\"" },
+          function(u) {return {"value": 1, "units": {"[lbf_av]": 1}, "metadata": {"[lbf_av]":{"isBase":false,"CODE":"[LBF_AV]","isMetric":"no","class":"const","names":["pound force"],"printSymbols":["lbf"],"properties":["force"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[hnsf'U]",
+          { type: "literal", value: "[hnsf'U]", description: "\"[hnsf'U]\"" },
+          function(u) {return {"value": 1, "units": {"[hnsf'U]": 1}, "metadata": {"[hnsf'U]":{"isBase":false,"CODE":"[HNSF'U]","isMetric":"no","class":"clinical","names":["Hounsfield unit"],"printSymbols":["HF"],"properties":["x-ray attenuation"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[mesh_i]",
+          { type: "literal", value: "[mesh_i]", description: "\"[mesh_i]\"" },
+          function(u) {return {"value": 1, "units": {"[mesh_i]": 1}, "metadata": {"[mesh_i]":{"isBase":false,"CODE":"[MESH_I]","isMetric":"no","class":"clinical","names":["mesh"],"properties":["lineic number"],"values":[{"printable":"1","numeric":1}]}}};},
+          "%[slope]",
+          { type: "literal", value: "%[slope]", description: "\"%[slope]\"" },
+          function(u) {return {"value": 1, "units": {"%[slope]": 1}, "metadata": {"%[slope]":{"isBase":false,"CODE":"%[SLOPE]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["percent of slope"],"printSymbols":["%"],"properties":["slope"],"values":[{"printable":"<function name=\"100tan\" value=\"1\" Unit=\"deg\"/>","numeric":null}]}}};},
+          "[p'diop]",
+          { type: "literal", value: "[p'diop]", description: "\"[p'diop]\"" },
+          function(u) {return {"value": 1, "units": {"[p'diop]": 1}, "metadata": {"[p'diop]":{"isBase":false,"CODE":"[P'DIOP]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["prism diopter"],"printSymbols":["PD"],"properties":["refraction of a prism"],"values":[{"printable":"<function name=\"tanTimes100\" value=\"1\" Unit=\"deg\"/>","numeric":null}]}}};},
+          "[gil_br]",
+          { type: "literal", value: "[gil_br]", description: "\"[gil_br]\"" },
+          function(u) {return {"value": 1, "units": {"[gil_br]": 1}, "metadata": {"[gil_br]":{"isBase":false,"CODE":"[GIL_BR]","isMetric":"no","class":"brit-volumes","names":["gill"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[wood'U]",
+          { type: "literal", value: "[wood'U]", description: "\"[wood'U]\"" },
+          function(u) {return {"value": 1, "units": {"[wood'U]": 1}, "metadata": {"[wood'U]":{"isBase":false,"CODE":"[WOOD'U]","isMetric":"no","class":"clinical","names":["Wood unit"],"printSymbols":["Wood U."],"properties":["fluid resistance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "cal_[15]",
+          { type: "literal", value: "cal_[15]", description: "\"cal_[15]\"" },
+          function(u) {return {"value": 1, "units": {"cal_[15]": 1}, "metadata": {"cal_[15]":{"isBase":false,"CODE":"CAL_[15]","isMetric":"yes","class":"heat","names":["calorie at 15 °C"],"printSymbols":["cal<sub>15&#176;C</sub>"],"properties":["energy"],"values":[{"printable":"4.18580","numeric":4.1858}]}}};},
+          "cal_[20]",
+          { type: "literal", value: "cal_[20]", description: "\"cal_[20]\"" },
+          function(u) {return {"value": 1, "units": {"cal_[20]": 1}, "metadata": {"cal_[20]":{"isBase":false,"CODE":"CAL_[20]","isMetric":"yes","class":"heat","names":["calorie at 20 °C"],"printSymbols":["cal<sub>20&#176;C</sub>"],"properties":["energy"],"values":[{"printable":"4.18190","numeric":4.1819}]}}};},
+          "[foz_br]",
+          { type: "literal", value: "[foz_br]", description: "\"[foz_br]\"" },
+          function(u) {return {"value": 1, "units": {"[foz_br]": 1}, "metadata": {"[foz_br]":{"isBase":false,"CODE":"[FOZ_BR]","isMetric":"no","class":"brit-volumes","names":["fluid ounce"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[fdr_br]",
+          { type: "literal", value: "[fdr_br]", description: "\"[fdr_br]\"" },
+          function(u) {return {"value": 1, "units": {"[fdr_br]": 1}, "metadata": {"[fdr_br]":{"isBase":false,"CODE":"[FDR_BR]","isMetric":"no","class":"brit-volumes","names":["fluid dram"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[srd_us]",
+          { type: "literal", value: "[srd_us]", description: "\"[srd_us]\"" },
+          function(u) {return {"value": 1, "units": {"[srd_us]": 1}, "metadata": {"[srd_us]":{"isBase":false,"CODE":"[SRD_US]","isMetric":"no","class":"us-lengths","names":["square rod"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[min_br]",
+          { type: "literal", value: "[min_br]", description: "\"[min_br]\"" },
+          function(u) {return {"value": 1, "units": {"[min_br]": 1}, "metadata": {"[min_br]":{"isBase":false,"CODE":"[MIN_BR]","isMetric":"no","class":"brit-volumes","names":["minim"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[EID_50]",
+          { type: "literal", value: "[EID_50]", description: "\"[EID_50]\"" },
+          function(u) {return {"value": 1, "units": {"[EID_50]": 1}, "metadata": {"[EID_50]":{"isBase":false,"CODE":"[EID_50]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["50% embryo infectious dose"],"printSymbols":["EID<sub>50</sub>"],"properties":["biologic activity (infectivity) of an infectious agent preparation"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[Btu_th]",
+          { type: "literal", value: "[Btu_th]", description: "\"[Btu_th]\"" },
+          function(u) {return {"value": 1, "units": {"[Btu_th]": 1}, "metadata": {"[Btu_th]":{"isBase":false,"CODE":"[BTU_TH]","isMetric":"no","class":"heat","names":["thermochemical British thermal unit"],"printSymbols":["Btu<sub>th</sub>"],"properties":["energy"],"values":[{"printable":"1.054350","numeric":1.05435}]}}};},
+          "[Btu_IT]",
+          { type: "literal", value: "[Btu_IT]", description: "\"[Btu_IT]\"" },
+          function(u) {return {"value": 1, "units": {"[Btu_IT]": 1}, "metadata": {"[Btu_IT]":{"isBase":false,"CODE":"[BTU_IT]","isMetric":"no","class":"heat","names":["international table British thermal unit"],"printSymbols":["Btu<sub>IT</sub>"],"properties":["energy"],"values":[{"printable":"1.05505585262","numeric":1.05505585262}]}}};},
+          "[car_Au]",
+          { type: "literal", value: "[car_Au]", description: "\"[car_Au]\"" },
+          function(u) {return {"value": 1, "units": {"[car_Au]": 1}, "metadata": {"[car_Au]":{"isBase":false,"CODE":"[CAR_AU]","isMetric":"no","class":"misc","names":["carat of gold alloys"],"printSymbols":["ct<sub>\n            <r>Au</r>\n         </sub>"],"properties":["mass fraction"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[Btu_60]",
+          { type: "literal", value: "[Btu_60]", description: "\"[Btu_60]\"" },
+          function(u) {return {"value": 1, "units": {"[Btu_60]": 1}, "metadata": {"[Btu_60]":{"isBase":false,"CODE":"[BTU_60]","isMetric":"no","class":"heat","names":["British thermal unit at 60 °F"],"printSymbols":["Btu<sub>60&#176;F</sub>"],"properties":["energy"],"values":[{"printable":"1.05468","numeric":1.05468}]}}};},
+          "[Btu_59]",
+          { type: "literal", value: "[Btu_59]", description: "\"[Btu_59]\"" },
+          function(u) {return {"value": 1, "units": {"[Btu_59]": 1}, "metadata": {"[Btu_59]":{"isBase":false,"CODE":"[BTU_59]","isMetric":"no","class":"heat","names":["British thermal unit at 59 °F"],"printSymbols":["Btu<sub>59&#176;F</sub>"],"properties":["energy"],"values":[{"printable":"1.05480","numeric":1.0548}]}}};},
+          "[Btu_39]",
+          { type: "literal", value: "[Btu_39]", description: "\"[Btu_39]\"" },
+          function(u) {return {"value": 1, "units": {"[Btu_39]": 1}, "metadata": {"[Btu_39]":{"isBase":false,"CODE":"[BTU_39]","isMetric":"no","class":"heat","names":["British thermal unit at 39 °F"],"printSymbols":["Btu<sub>39&#176;F</sub>"],"properties":["energy"],"values":[{"printable":"1.05967","numeric":1.05967}]}}};},
+          "[cup_us]",
+          { type: "literal", value: "[cup_us]", description: "\"[cup_us]\"" },
+          function(u) {return {"value": 1, "units": {"[cup_us]": 1}, "metadata": {"[cup_us]":{"isBase":false,"CODE":"[CUP_US]","isMetric":"no","class":"us-volumes","names":["cup"],"properties":["volume"],"values":[{"printable":"16","numeric":16}]}}};},
+          "B[10.nV]",
+          { type: "literal", value: "B[10.nV]", description: "\"B[10.nV]\"" },
+          function(u) {return {"value": 1, "units": {"B[10.nV]": 1}, "metadata": {"B[10.nV]":{"isBase":false,"CODE":"B[10.NV]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel 10 nanovolt"],"printSymbols":["B(10 nV)"],"properties":["electric potential level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"10\" Unit=\"nV\"/>","numeric":null}]}}};},
+          "[tsp_us]",
+          { type: "literal", value: "[tsp_us]", description: "\"[tsp_us]\"" },
+          function(u) {return {"value": 1, "units": {"[tsp_us]": 1}, "metadata": {"[tsp_us]":{"isBase":false,"CODE":"[TSP_US]","isMetric":"no","class":"us-volumes","names":["teaspoon"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[mclg'U]",
+          { type: "literal", value: "[mclg'U]", description: "\"[mclg'U]\"" },
+          function(u) {return {"value": 1, "units": {"[mclg'U]": 1}, "metadata": {"[mclg'U]":{"isBase":false,"CODE":"[MCLG'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Mac Lagan unit"],"properties":["arbitrary biologic activity"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[cicero]",
+          { type: "literal", value: "[cicero]", description: "\"[cicero]\"" },
+          function(u) {return {"value": 1, "units": {"[cicero]": 1}, "metadata": {"[cicero]":{"isBase":false,"CODE":"[CICERO]","isMetric":"no","class":"typeset","names":["cicero","Didot's pica"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
+          "[pwt_tr]",
+          { type: "literal", value: "[pwt_tr]", description: "\"[pwt_tr]\"" },
+          function(u) {return {"value": 1, "units": {"[pwt_tr]": 1}, "metadata": {"[pwt_tr]":{"isBase":false,"CODE":"[PWT_TR]","isMetric":"no","class":"troy","names":["pennyweight"],"printSymbols":["dwt"],"properties":["mass"],"values":[{"printable":"24","numeric":24}]}}};},
+          "[pnt_pr]",
+          { type: "literal", value: "[pnt_pr]", description: "\"[pnt_pr]\"" },
+          function(u) {return {"value": 1, "units": {"[pnt_pr]": 1}, "metadata": {"[pnt_pr]":{"isBase":false,"CODE":"[PNT_PR]","isMetric":"no","class":"typeset","names":["Printer's point"],"properties":["length"],"values":[{"printable":"0.013837","numeric":0.013837}]}}};},
+          "[pca_pr]",
+          { type: "literal", value: "[pca_pr]", description: "\"[pca_pr]\"" },
+          function(u) {return {"value": 1, "units": {"[pca_pr]": 1}, "metadata": {"[pca_pr]":{"isBase":false,"CODE":"[PCA_PR]","isMetric":"no","class":"typeset","names":["Printer's pica"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
+          "[gal_br]",
+          { type: "literal", value: "[gal_br]", description: "\"[gal_br]\"" },
+          function(u) {return {"value": 1, "units": {"[gal_br]": 1}, "metadata": {"[gal_br]":{"isBase":false,"CODE":"[GAL_BR]","isMetric":"no","class":"brit-volumes","names":["gallon"],"properties":["volume"],"values":[{"printable":"4.54609","numeric":4.54609}]}}};},
+          "[yd_us]",
+          { type: "literal", value: "[yd_us]", description: "\"[yd_us]\"" },
+          function(u) {return {"value": 1, "units": {"[yd_us]": 1}, "metadata": {"[yd_us]":{"isBase":false,"CODE":"[YD_US]","isMetric":"no","class":"us-lengths","names":["yard"],"properties":["length"],"values":[{"printable":"3","numeric":3}]}}};},
+          "[ligne]",
+          { type: "literal", value: "[ligne]", description: "\"[ligne]\"" },
+          function(u) {return {"value": 1, "units": {"[ligne]": 1}, "metadata": {"[ligne]":{"isBase":false,"CODE":"[LIGNE]","isMetric":"no","class":"typeset","names":["ligne","French line"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[tbs_m]",
+          { type: "literal", value: "[tbs_m]", description: "\"[tbs_m]\"" },
+          function(u) {return {"value": 1, "units": {"[tbs_m]": 1}, "metadata": {"[tbs_m]":{"isBase":false,"CODE":"[TBS_M]","isMetric":"no","class":"us-volumes","names":["metric tablespoon"],"properties":["volume"],"values":[{"printable":"15","numeric":15}]}}};},
+          "[lb_ap]",
+          { type: "literal", value: "[lb_ap]", description: "\"[lb_ap]\"" },
+          function(u) {return {"value": 1, "units": {"[lb_ap]": 1}, "metadata": {"[lb_ap]":{"isBase":false,"CODE":"[LB_AP]","isMetric":"no","class":"apoth","names":["pound"],"printSymbols":["<strike>lb</strike>"],"properties":["mass"],"values":[{"printable":"12","numeric":12}]}}};},
+          "[oz_ap]",
+          { type: "literal", value: "[oz_ap]", description: "\"[oz_ap]\"" },
+          function(u) {return {"value": 1, "units": {"[oz_ap]": 1}, "metadata": {"[oz_ap]":{"isBase":false,"CODE":"[OZ_AP]","isMetric":"no","class":"apoth","names":["ounce"],"printSymbols":["&#8485;"],"properties":["mass"],"values":[{"printable":"8","numeric":8}]}}};},
+          "[dr_ap]",
+          { type: "literal", value: "[dr_ap]", description: "\"[dr_ap]\"" },
+          function(u) {return {"value": 1, "units": {"[dr_ap]": 1}, "metadata": {"[dr_ap]":{"isBase":false,"CODE":"[DR_AP]","isMetric":"no","class":"apoth","names":["dram","drachm"],"printSymbols":["&#658;"],"properties":["mass"],"values":[{"printable":"3","numeric":3}]}}};},
+          "[sc_ap]",
+          { type: "literal", value: "[sc_ap]", description: "\"[sc_ap]\"" },
+          function(u) {return {"value": 1, "units": {"[sc_ap]": 1}, "metadata": {"[sc_ap]":{"isBase":false,"CODE":"[SC_AP]","isMetric":"no","class":"apoth","names":["scruple"],"printSymbols":["&#8456;"],"properties":["mass"],"values":[{"printable":"20","numeric":20}]}}};},
+          "[tsp_m]",
+          { type: "literal", value: "[tsp_m]", description: "\"[tsp_m]\"" },
+          function(u) {return {"value": 1, "units": {"[tsp_m]": 1}, "metadata": {"[tsp_m]":{"isBase":false,"CODE":"[TSP_M]","isMetric":"no","class":"us-volumes","names":["metric teaspoon"],"properties":["volume"],"values":[{"printable":"5","numeric":5}]}}};},
+          "[cup_m]",
+          { type: "literal", value: "[cup_m]", description: "\"[cup_m]\"" },
+          function(u) {return {"value": 1, "units": {"[cup_m]": 1}, "metadata": {"[cup_m]":{"isBase":false,"CODE":"[CUP_M]","isMetric":"no","class":"us-volumes","names":["metric cup"],"properties":["volume"],"values":[{"printable":"240","numeric":240}]}}};},
+          "[lb_tr]",
+          { type: "literal", value: "[lb_tr]", description: "\"[lb_tr]\"" },
+          function(u) {return {"value": 1, "units": {"[lb_tr]": 1}, "metadata": {"[lb_tr]":{"isBase":false,"CODE":"[LB_TR]","isMetric":"no","class":"troy","names":["troy pound"],"printSymbols":["lb t"],"properties":["mass"],"values":[{"printable":"12","numeric":12}]}}};},
+          "[oz_tr]",
+          { type: "literal", value: "[oz_tr]", description: "\"[oz_tr]\"" },
+          function(u) {return {"value": 1, "units": {"[oz_tr]": 1}, "metadata": {"[oz_tr]":{"isBase":false,"CODE":"[OZ_TR]","isMetric":"no","class":"troy","names":["troy ounce"],"printSymbols":["oz t"],"properties":["mass"],"values":[{"printable":"20","numeric":20}]}}};},
+          "[didot]",
+          { type: "literal", value: "[didot]", description: "\"[didot]\"" },
+          function(u) {return {"value": 1, "units": {"[didot]": 1}, "metadata": {"[didot]":{"isBase":false,"CODE":"[DIDOT]","isMetric":"no","class":"typeset","names":["didot","Didot's point"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[foz_m]",
+          { type: "literal", value: "[foz_m]", description: "\"[foz_m]\"" },
+          function(u) {return {"value": 1, "units": {"[foz_m]": 1}, "metadata": {"[foz_m]":{"isBase":false,"CODE":"[FOZ_M]","isMetric":"no","class":"us-volumes","names":["metric fluid ounce"],"printSymbols":["oz fl"],"properties":["fluid volume"],"values":[{"printable":"30","numeric":30}]}}};},
+          "[car_m]",
+          { type: "literal", value: "[car_m]", description: "\"[car_m]\"" },
+          function(u) {return {"value": 1, "units": {"[car_m]": 1}, "metadata": {"[car_m]":{"isBase":false,"CODE":"[CAR_M]","isMetric":"no","class":"misc","names":["metric carat"],"printSymbols":["ct<sub>m</sub>"],"properties":["mass"],"values":[{"printable":"0.2","numeric":0.2}]}}};},
+          "[smoot]",
+          { type: "literal", value: "[smoot]", description: "\"[smoot]\"" },
+          function(u) {return {"value": 1, "units": {"[smoot]": 1}, "metadata": {"[smoot]":{"isBase":false,"CODE":"[SMOOT]","isMetric":"no","class":"misc","names":["Smoot"],"printSymbols":[""],"properties":["length"],"values":[{"printable":"67","numeric":67}]}}};},
+          "[knk'U]",
+          { type: "literal", value: "[knk'U]", description: "\"[knk'U]\"" },
+          function(u) {return {"value": 1, "units": {"[knk'U]": 1}, "metadata": {"[knk'U]":{"isBase":false,"CODE":"[KNK'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Kunkel unit"],"properties":["arbitrary biologic activity"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[Btu_m]",
+          { type: "literal", value: "[Btu_m]", description: "\"[Btu_m]\"" },
+          function(u) {return {"value": 1, "units": {"[Btu_m]": 1}, "metadata": {"[Btu_m]":{"isBase":false,"CODE":"[BTU_M]","isMetric":"no","class":"heat","names":["mean British thermal unit"],"printSymbols":["Btu<sub>m</sub>"],"properties":["energy"],"values":[{"printable":"1.05587","numeric":1.05587}]}}};},
+          "[dr_av]",
+          { type: "literal", value: "[dr_av]", description: "\"[dr_av]\"" },
+          function(u) {return {"value": 1, "units": {"[dr_av]": 1}, "metadata": {"[dr_av]":{"isBase":false,"CODE":"[DR_AV]","isMetric":"no","class":"avoirdupois","names":["dram"],"properties":["mass"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[oz_av]",
+          { type: "literal", value: "[oz_av]", description: "\"[oz_av]\"" },
+          function(u) {return {"value": 1, "units": {"[oz_av]": 1}, "metadata": {"[oz_av]":{"isBase":false,"CODE":"[OZ_AV]","isMetric":"no","class":"avoirdupois","names":["ounce"],"printSymbols":["oz"],"properties":["mass"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[lb_av]",
+          { type: "literal", value: "[lb_av]", description: "\"[lb_av]\"" },
+          function(u) {return {"value": 1, "units": {"[lb_av]": 1}, "metadata": {"[lb_av]":{"isBase":false,"CODE":"[LB_AV]","isMetric":"no","class":"avoirdupois","names":["pound"],"printSymbols":["lb"],"properties":["mass"],"values":[{"printable":"7000","numeric":7000}]}}};},
+          "[dye'U]",
+          { type: "literal", value: "[dye'U]", description: "\"[dye'U]\"" },
+          function(u) {return {"value": 1, "units": {"[dye'U]": 1}, "metadata": {"[dye'U]":{"isBase":false,"CODE":"[DYE'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Dye unit"],"properties":["biologic activity of amylase"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[pk_us]",
+          { type: "literal", value: "[pk_us]", description: "\"[pk_us]\"" },
+          function(u) {return {"value": 1, "units": {"[pk_us]": 1}, "metadata": {"[pk_us]":{"isBase":false,"CODE":"[PK_US]","isMetric":"no","class":"us-volumes","names":["peck"],"properties":["dry volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[APL'U]",
+          { type: "literal", value: "[APL'U]", description: "\"[APL'U]\"" },
+          function(u) {return {"value": 1, "units": {"[APL'U]": 1}, "metadata": {"[APL'U]":{"isBase":false,"CODE":"[APL'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["APL unit"],"properties":["biologic activity of anticardiolipin IgA"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[bu_us]",
+          { type: "literal", value: "[bu_us]", description: "\"[bu_us]\"" },
+          function(u) {return {"value": 1, "units": {"[bu_us]": 1}, "metadata": {"[bu_us]":{"isBase":false,"CODE":"[BU_US]","isMetric":"no","class":"us-volumes","names":["bushel"],"properties":["dry volume"],"values":[{"printable":"2150.42","numeric":2150.42}]}}};},
+          "[pt_br]",
+          { type: "literal", value: "[pt_br]", description: "\"[pt_br]\"" },
+          function(u) {return {"value": 1, "units": {"[pt_br]": 1}, "metadata": {"[pt_br]":{"isBase":false,"CODE":"[PT_BR]","isMetric":"no","class":"brit-volumes","names":["pint"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[qt_br]",
+          { type: "literal", value: "[qt_br]", description: "\"[qt_br]\"" },
+          function(u) {return {"value": 1, "units": {"[qt_br]": 1}, "metadata": {"[qt_br]":{"isBase":false,"CODE":"[QT_BR]","isMetric":"no","class":"brit-volumes","names":["quart"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[bu_br]",
+          { type: "literal", value: "[bu_br]", description: "\"[bu_br]\"" },
+          function(u) {return {"value": 1, "units": {"[bu_br]": 1}, "metadata": {"[bu_br]":{"isBase":false,"CODE":"[BU_BR]","isMetric":"no","class":"brit-volumes","names":["bushel"],"properties":["volume"],"values":[{"printable":"4","numeric":4}]}}};},
+          "[hp'_X]",
+          { type: "literal", value: "[hp'_X]", description: "\"[hp'_X]\"" },
+          function(u) {return {"value": 1, "units": {"[hp'_X]": 1}, "metadata": {"[hp'_X]":{"isBase":false,"CODE":"[HP'_X]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["homeopathic potency of decimal series (retired)"],"printSymbols":["X"],"properties":["homeopathic potency (retired)"],"values":[{"printable":"<function name=\"hpX\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
+          "[MPL'U]",
+          { type: "literal", value: "[MPL'U]", description: "\"[MPL'U]\"" },
+          function(u) {return {"value": 1, "units": {"[MPL'U]": 1}, "metadata": {"[MPL'U]":{"isBase":false,"CODE":"[MPL'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["MPL unit"],"properties":["biologic activity of anticardiolipin IgM"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[GPL'U]",
+          { type: "literal", value: "[GPL'U]", description: "\"[GPL'U]\"" },
+          function(u) {return {"value": 1, "units": {"[GPL'U]": 1}, "metadata": {"[GPL'U]":{"isBase":false,"CODE":"[GPL'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["GPL unit"],"properties":["biologic activity of anticardiolipin IgG"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[USP'U]",
+          { type: "literal", value: "[USP'U]", description: "\"[USP'U]\"" },
+          function(u) {return {"value": 1, "units": {"[USP'U]": 1}, "metadata": {"[USP'U]":{"isBase":false,"CODE":"[USP'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["United States Pharmacopeia unit"],"printSymbols":["U.S.P."],"properties":["arbitrary"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[eps_0]",
+          { type: "literal", value: "[eps_0]", description: "\"[eps_0]\"" },
+          function(u) {return {"value": 1, "units": {"[eps_0]": 1}, "metadata": {"[eps_0]":{"isBase":false,"CODE":"[EPS_0]","isMetric":"yes","class":"const","names":["permittivity of vacuum"],"printSymbols":["<i>&#949;<sub>\n               <r>0</r>\n            </sub>\n         </i>"],"properties":["electric permittivity"],"values":[{"printable":"8.854187817 &#215; 10<sup>-12</sup>","numeric":8.854187817e-12}]}}};},
+          "[fth_i]",
+          { type: "literal", value: "[fth_i]", description: "\"[fth_i]\"" },
+          function(u) {return {"value": 1, "units": {"[fth_i]": 1}, "metadata": {"[fth_i]":{"isBase":false,"CODE":"[FTH_I]","isMetric":"no","class":"intcust","names":["fathom"],"printSymbols":["fth"],"properties":["depth of water"],"values":[{"printable":"6","numeric":6}]}}};},
+          "[nmi_i]",
+          { type: "literal", value: "[nmi_i]", description: "\"[nmi_i]\"" },
+          function(u) {return {"value": 1, "units": {"[nmi_i]": 1}, "metadata": {"[nmi_i]":{"isBase":false,"CODE":"[NMI_I]","isMetric":"no","class":"intcust","names":["nautical mile"],"printSymbols":["n.mi"],"properties":["length"],"values":[{"printable":"1852","numeric":1852}]}}};},
+          "[pt_us]",
+          { type: "literal", value: "[pt_us]", description: "\"[pt_us]\"" },
+          function(u) {return {"value": 1, "units": {"[pt_us]": 1}, "metadata": {"[pt_us]":{"isBase":false,"CODE":"[PT_US]","isMetric":"no","class":"us-volumes","names":["pint"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[sin_i]",
+          { type: "literal", value: "[sin_i]", description: "\"[sin_i]\"" },
+          function(u) {return {"value": 1, "units": {"[sin_i]": 1}, "metadata": {"[sin_i]":{"isBase":false,"CODE":"[SIN_I]","isMetric":"no","class":"intcust","names":["square inch"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[sft_i]",
+          { type: "literal", value: "[sft_i]", description: "\"[sft_i]\"" },
+          function(u) {return {"value": 1, "units": {"[sft_i]": 1}, "metadata": {"[sft_i]":{"isBase":false,"CODE":"[SFT_I]","isMetric":"no","class":"intcust","names":["square foot"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[syd_i]",
+          { type: "literal", value: "[syd_i]", description: "\"[syd_i]\"" },
+          function(u) {return {"value": 1, "units": {"[syd_i]": 1}, "metadata": {"[syd_i]":{"isBase":false,"CODE":"[SYD_I]","isMetric":"no","class":"intcust","names":["square yard"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[cin_i]",
+          { type: "literal", value: "[cin_i]", description: "\"[cin_i]\"" },
+          function(u) {return {"value": 1, "units": {"[cin_i]": 1}, "metadata": {"[cin_i]":{"isBase":false,"CODE":"[CIN_I]","isMetric":"no","class":"intcust","names":["cubic inch"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[cft_i]",
+          { type: "literal", value: "[cft_i]", description: "\"[cft_i]\"" },
+          function(u) {return {"value": 1, "units": {"[cft_i]": 1}, "metadata": {"[cft_i]":{"isBase":false,"CODE":"[CFT_I]","isMetric":"no","class":"intcust","names":["cubic foot"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[cyd_i]",
+          { type: "literal", value: "[cyd_i]", description: "\"[cyd_i]\"" },
+          function(u) {return {"value": 1, "units": {"[cyd_i]": 1}, "metadata": {"[cyd_i]":{"isBase":false,"CODE":"[CYD_I]","isMetric":"no","class":"intcust","names":["cubic yard"],"printSymbols":["cu.yd"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[qt_us]",
+          { type: "literal", value: "[qt_us]", description: "\"[qt_us]\"" },
+          function(u) {return {"value": 1, "units": {"[qt_us]": 1}, "metadata": {"[qt_us]":{"isBase":false,"CODE":"[QT_US]","isMetric":"no","class":"us-volumes","names":["quart"],"properties":["fluid volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[arb'U]",
+          { type: "literal", value: "[arb'U]", description: "\"[arb'U]\"" },
+          function(u) {return {"value": 1, "units": {"[arb'U]": 1}, "metadata": {"[arb'U]":{"isBase":false,"CODE":"[ARB'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["arbitary unit"],"printSymbols":["arb. U"],"properties":["arbitrary"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[mil_i]",
+          { type: "literal", value: "[mil_i]", description: "\"[mil_i]\"" },
+          function(u) {return {"value": 1, "units": {"[mil_i]": 1}, "metadata": {"[mil_i]":{"isBase":false,"CODE":"[MIL_I]","isMetric":"no","class":"intcust","names":["mil"],"printSymbols":["mil"],"properties":["length"],"values":[{"printable":"1 &#215; 10<sup>-3</sup>","numeric":0.001}]}}};},
+          "[cml_i]",
+          { type: "literal", value: "[cml_i]", description: "\"[cml_i]\"" },
+          function(u) {return {"value": 1, "units": {"[cml_i]": 1}, "metadata": {"[cml_i]":{"isBase":false,"CODE":"[CML_I]","isMetric":"no","class":"intcust","names":["circular mil"],"printSymbols":["circ.mil"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[kn_br]",
+          { type: "literal", value: "[kn_br]", description: "\"[kn_br]\"" },
+          function(u) {return {"value": 1, "units": {"[kn_br]": 1}, "metadata": {"[kn_br]":{"isBase":false,"CODE":"[KN_BR]","isMetric":"no","class":"brit-length","names":["knot"],"properties":["velocity"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[ft_us]",
+          { type: "literal", value: "[ft_us]", description: "\"[ft_us]\"" },
+          function(u) {return {"value": 1, "units": {"[ft_us]": 1}, "metadata": {"[ft_us]":{"isBase":false,"CODE":"[FT_US]","isMetric":"no","class":"us-lengths","names":["foot"],"printSymbols":["ft<sub>us</sub>"],"properties":["length"],"values":[{"printable":"1200","numeric":1200}]}}};},
+          "[pouce]",
+          { type: "literal", value: "[pouce]", description: "\"[pouce]\"" },
+          function(u) {return {"value": 1, "units": {"[pouce]": 1}, "metadata": {"[pouce]":{"isBase":false,"CODE":"[POUCE]","isMetric":"no","class":"typeset","names":["pouce","French inch"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[in_us]",
+          { type: "literal", value: "[in_us]", description: "\"[in_us]\"" },
+          function(u) {return {"value": 1, "units": {"[in_us]": 1}, "metadata": {"[in_us]":{"isBase":false,"CODE":"[IN_US]","isMetric":"no","class":"us-lengths","names":["inch"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[rd_us]",
+          { type: "literal", value: "[rd_us]", description: "\"[rd_us]\"" },
+          function(u) {return {"value": 1, "units": {"[rd_us]": 1}, "metadata": {"[rd_us]":{"isBase":false,"CODE":"[RD_US]","isMetric":"no","class":"us-lengths","names":["rod"],"properties":["length"],"values":[{"printable":"16.5","numeric":16.5}]}}};},
+          "[ch_us]",
+          { type: "literal", value: "[ch_us]", description: "\"[ch_us]\"" },
+          function(u) {return {"value": 1, "units": {"[ch_us]": 1}, "metadata": {"[ch_us]":{"isBase":false,"CODE":"[CH_US]","isMetric":"no","class":"us-lengths","names":["Gunter's chain","Surveyor's chain"],"properties":["length"],"values":[{"printable":"4","numeric":4}]}}};},
+          "[lk_us]",
+          { type: "literal", value: "[lk_us]", description: "\"[lk_us]\"" },
+          function(u) {return {"value": 1, "units": {"[lk_us]": 1}, "metadata": {"[lk_us]":{"isBase":false,"CODE":"[LK_US]","isMetric":"no","class":"us-lengths","names":["link for Gunter's chain"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[hp'_C]",
+          { type: "literal", value: "[hp'_C]", description: "\"[hp'_C]\"" },
+          function(u) {return {"value": 1, "units": {"[hp'_C]": 1}, "metadata": {"[hp'_C]":{"isBase":false,"CODE":"[HP'_C]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["homeopathic potency of centesimal series (retired)"],"printSymbols":["C"],"properties":["homeopathic potency (retired)"],"values":[{"printable":"<function name=\"hpC\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
+          "[hp'_M]",
+          { type: "literal", value: "[hp'_M]", description: "\"[hp'_M]\"" },
+          function(u) {return {"value": 1, "units": {"[hp'_M]": 1}, "metadata": {"[hp'_M]":{"isBase":false,"CODE":"[HP'_M]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["homeopathic potency of millesimal series (retired)"],"printSymbols":["M"],"properties":["homeopathic potency (retired)"],"values":[{"printable":"<function name=\"hpM\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
+          "[hp'_Q]",
+          { type: "literal", value: "[hp'_Q]", description: "\"[hp'_Q]\"" },
+          function(u) {return {"value": 1, "units": {"[hp'_Q]": 1}, "metadata": {"[hp'_Q]":{"isBase":false,"CODE":"[HP'_Q]","isMetric":"no","isSpecial":"yes","class":"clinical","names":["homeopathic potency of quintamillesimal series (retired)"],"printSymbols":["Q"],"properties":["homeopathic potency (retired)"],"values":[{"printable":"<function name=\"hpQ\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
+          "[mi_br]",
+          { type: "literal", value: "[mi_br]", description: "\"[mi_br]\"" },
+          function(u) {return {"value": 1, "units": {"[mi_br]": 1}, "metadata": {"[mi_br]":{"isBase":false,"CODE":"[MI_BR]","isMetric":"no","class":"brit-length","names":["mile"],"properties":["length"],"values":[{"printable":"5280","numeric":5280}]}}};},
+          "[mi_us]",
+          { type: "literal", value: "[mi_us]", description: "\"[mi_us]\"" },
+          function(u) {return {"value": 1, "units": {"[mi_us]": 1}, "metadata": {"[mi_us]":{"isBase":false,"CODE":"[MI_US]","isMetric":"no","class":"us-lengths","names":["mile"],"properties":["length"],"values":[{"printable":"8","numeric":8}]}}};},
+          "[yd_br]",
+          { type: "literal", value: "[yd_br]", description: "\"[yd_br]\"" },
+          function(u) {return {"value": 1, "units": {"[yd_br]": 1}, "metadata": {"[yd_br]":{"isBase":false,"CODE":"[YD_BR]","isMetric":"no","class":"brit-length","names":["yard"],"properties":["length"],"values":[{"printable":"3","numeric":3}]}}};},
+          "[pk_br]",
+          { type: "literal", value: "[pk_br]", description: "\"[pk_br]\"" },
+          function(u) {return {"value": 1, "units": {"[pk_br]": 1}, "metadata": {"[pk_br]":{"isBase":false,"CODE":"[PK_BR]","isMetric":"no","class":"brit-volumes","names":["peck"],"properties":["volume"],"values":[{"printable":"2","numeric":2}]}}};},
+          "[pc_br]",
+          { type: "literal", value: "[pc_br]", description: "\"[pc_br]\"" },
+          function(u) {return {"value": 1, "units": {"[pc_br]": 1}, "metadata": {"[pc_br]":{"isBase":false,"CODE":"[PC_BR]","isMetric":"no","class":"brit-length","names":["pace"],"properties":["length"],"values":[{"printable":"2.5","numeric":2.5}]}}};},
+          "[lk_br]",
+          { type: "literal", value: "[lk_br]", description: "\"[lk_br]\"" },
+          function(u) {return {"value": 1, "units": {"[lk_br]": 1}, "metadata": {"[lk_br]":{"isBase":false,"CODE":"[LK_BR]","isMetric":"no","class":"brit-length","names":["link for Gunter's chain"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[in_br]",
+          { type: "literal", value: "[in_br]", description: "\"[in_br]\"" },
+          function(u) {return {"value": 1, "units": {"[in_br]": 1}, "metadata": {"[in_br]":{"isBase":false,"CODE":"[IN_BR]","isMetric":"no","class":"brit-length","names":["inch"],"properties":["length"],"values":[{"printable":"2.539998","numeric":2.539998}]}}};},
+          "[ft_br]",
+          { type: "literal", value: "[ft_br]", description: "\"[ft_br]\"" },
+          function(u) {return {"value": 1, "units": {"[ft_br]": 1}, "metadata": {"[ft_br]":{"isBase":false,"CODE":"[FT_BR]","isMetric":"no","class":"brit-length","names":["foot"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
+          "[rd_br]",
+          { type: "literal", value: "[rd_br]", description: "\"[rd_br]\"" },
+          function(u) {return {"value": 1, "units": {"[rd_br]": 1}, "metadata": {"[rd_br]":{"isBase":false,"CODE":"[RD_BR]","isMetric":"no","class":"brit-length","names":["rod"],"properties":["length"],"values":[{"printable":"16.5","numeric":16.5}]}}};},
+          "[ch_br]",
+          { type: "literal", value: "[ch_br]", description: "\"[ch_br]\"" },
+          function(u) {return {"value": 1, "units": {"[ch_br]": 1}, "metadata": {"[ch_br]":{"isBase":false,"CODE":"[CH_BR]","isMetric":"no","class":"brit-length","names":["Gunter's chain"],"properties":["length"],"values":[{"printable":"4","numeric":4}]}}};},
+          "[ft_i]",
+          { type: "literal", value: "[ft_i]", description: "\"[ft_i]\"" },
+          function(u) {return {"value": 1, "units": {"[ft_i]": 1}, "metadata": {"[ft_i]":{"isBase":false,"CODE":"[FT_I]","isMetric":"no","class":"intcust","names":["foot"],"printSymbols":["ft"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
+          "[hp_Q]",
+          { type: "literal", value: "[hp_Q]", description: "\"[hp_Q]\"" },
+          function(u) {return {"value": 1, "units": {"[hp_Q]": 1}, "metadata": {"[hp_Q]":{"isBase":false,"CODE":"[HP_Q]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of quintamillesimal hahnemannian series"],"printSymbols":["Q"],"properties":["homeopathic potency (Hahnemann)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[hp_M]",
+          { type: "literal", value: "[hp_M]", description: "\"[hp_M]\"" },
+          function(u) {return {"value": 1, "units": {"[hp_M]": 1}, "metadata": {"[hp_M]":{"isBase":false,"CODE":"[HP_M]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of millesimal hahnemannian series"],"printSymbols":["M"],"properties":["homeopathic potency (Hahnemann)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[hp_C]",
+          { type: "literal", value: "[hp_C]", description: "\"[hp_C]\"" },
+          function(u) {return {"value": 1, "units": {"[hp_C]": 1}, "metadata": {"[hp_C]":{"isBase":false,"CODE":"[HP_C]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of centesimal hahnemannian series"],"printSymbols":["C"],"properties":["homeopathic potency (Hahnemann)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[hp_X]",
+          { type: "literal", value: "[hp_X]", description: "\"[hp_X]\"" },
+          function(u) {return {"value": 1, "units": {"[hp_X]": 1}, "metadata": {"[hp_X]":{"isBase":false,"CODE":"[HP_X]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of decimal hahnemannian series"],"printSymbols":["X"],"properties":["homeopathic potency (Hahnemann)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[kp_C]",
+          { type: "literal", value: "[kp_C]", description: "\"[kp_C]\"" },
+          function(u) {return {"value": 1, "units": {"[kp_C]": 1}, "metadata": {"[kp_C]":{"isBase":false,"CODE":"[KP_C]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of centesimal korsakovian series"],"printSymbols":["C"],"properties":["homeopathic potency (Korsakov)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[hd_i]",
+          { type: "literal", value: "[hd_i]", description: "\"[hd_i]\"" },
+          function(u) {return {"value": 1, "units": {"[hd_i]": 1}, "metadata": {"[hd_i]":{"isBase":false,"CODE":"[HD_I]","isMetric":"no","class":"intcust","names":["hand"],"printSymbols":["hd"],"properties":["height of horses"],"values":[{"printable":"4","numeric":4}]}}};},
+          "[kp_M]",
+          { type: "literal", value: "[kp_M]", description: "\"[kp_M]\"" },
+          function(u) {return {"value": 1, "units": {"[kp_M]": 1}, "metadata": {"[kp_M]":{"isBase":false,"CODE":"[KP_M]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of millesimal korsakovian series"],"printSymbols":["M"],"properties":["homeopathic potency (Korsakov)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[kp_Q]",
+          { type: "literal", value: "[kp_Q]", description: "\"[kp_Q]\"" },
+          function(u) {return {"value": 1, "units": {"[kp_Q]": 1}, "metadata": {"[kp_Q]":{"isBase":false,"CODE":"[KP_Q]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of quintamillesimal korsakovian series"],"printSymbols":["Q"],"properties":["homeopathic potency (Korsakov)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[cr_i]",
+          { type: "literal", value: "[cr_i]", description: "\"[cr_i]\"" },
+          function(u) {return {"value": 1, "units": {"[cr_i]": 1}, "metadata": {"[cr_i]":{"isBase":false,"CODE":"[CR_I]","isMetric":"no","class":"intcust","names":["cord"],"properties":["volume"],"values":[{"printable":"128","numeric":128}]}}};},
+          "[bf_i]",
+          { type: "literal", value: "[bf_i]", description: "\"[bf_i]\"" },
+          function(u) {return {"value": 1, "units": {"[bf_i]": 1}, "metadata": {"[bf_i]":{"isBase":false,"CODE":"[BF_I]","isMetric":"no","class":"intcust","names":["board foot"],"properties":["volume"],"values":[{"printable":"144","numeric":144}]}}};},
+          "[kn_i]",
+          { type: "literal", value: "[kn_i]", description: "\"[kn_i]\"" },
+          function(u) {return {"value": 1, "units": {"[kn_i]": 1}, "metadata": {"[kn_i]":{"isBase":false,"CODE":"[KN_I]","isMetric":"no","class":"intcust","names":["knot"],"printSymbols":["knot"],"properties":["velocity"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[mu_0]",
+          { type: "literal", value: "[mu_0]", description: "\"[mu_0]\"" },
+          function(u) {return {"value": 1, "units": {"[mu_0]": 1}, "metadata": {"[mu_0]":{"isBase":false,"CODE":"[MU_0]","isMetric":"yes","class":"const","names":["permeability of vacuum"],"printSymbols":["<i>&#956;<sub>\n               <r>0</r>\n            </sub>\n         </i>"],"properties":["magnetic permeability"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[mi_i]",
+          { type: "literal", value: "[mi_i]", description: "\"[mi_i]\"" },
+          function(u) {return {"value": 1, "units": {"[mi_i]": 1}, "metadata": {"[mi_i]":{"isBase":false,"CODE":"[MI_I]","isMetric":"no","class":"intcust","names":["statute mile"],"printSymbols":["mi"],"properties":["length"],"values":[{"printable":"5280","numeric":5280}]}}};},
+          "[yd_i]",
+          { type: "literal", value: "[yd_i]", description: "\"[yd_i]\"" },
+          function(u) {return {"value": 1, "units": {"[yd_i]": 1}, "metadata": {"[yd_i]":{"isBase":false,"CODE":"[YD_I]","isMetric":"no","class":"intcust","names":["yard"],"printSymbols":["yd"],"properties":["length"],"values":[{"printable":"3","numeric":3}]}}};},
+          "[kp_X]",
+          { type: "literal", value: "[kp_X]", description: "\"[kp_X]\"" },
+          function(u) {return {"value": 1, "units": {"[kp_X]": 1}, "metadata": {"[kp_X]":{"isBase":false,"CODE":"[KP_X]","isMetric":"no","isArbitrary":"yes","class":"clinical","names":["homeopathic potency of decimal korsakovian series"],"printSymbols":["X"],"properties":["homeopathic potency (Korsakov)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[in_i]",
+          { type: "literal", value: "[in_i]", description: "\"[in_i]\"" },
+          function(u) {return {"value": 1, "units": {"[in_i]": 1}, "metadata": {"[in_i]":{"isBase":false,"CODE":"[IN_I]","isMetric":"no","class":"intcust","names":["inch"],"printSymbols":["in"],"properties":["length"],"values":[{"printable":"2.54","numeric":2.54}]}}};},
+          "[diop]",
+          { type: "literal", value: "[diop]", description: "\"[diop]\"" },
+          function(u) {return {"value": 1, "units": {"[diop]": 1}, "metadata": {"[diop]":{"isBase":false,"CODE":"[DIOP]","isMetric":"no","class":"clinical","names":["diopter"],"printSymbols":["dpt"],"properties":["refraction of a lens"],"values":[{"printable":"1","numeric":1}]}}};},
+          "cal_IT",
+          { type: "literal", value: "cal_IT", description: "\"cal_IT\"" },
+          function(u) {return {"value": 1, "units": {"cal_IT": 1}, "metadata": {"cal_IT":{"isBase":false,"CODE":"CAL_IT","isMetric":"yes","class":"heat","names":["international table calorie"],"printSymbols":["cal<sub>IT</sub>"],"properties":["energy"],"values":[{"printable":"4.1868","numeric":4.1868}]}}};},
+          "cal_th",
+          { type: "literal", value: "cal_th", description: "\"cal_th\"" },
+          function(u) {return {"value": 1, "units": {"cal_th": 1}, "metadata": {"cal_th":{"isBase":false,"CODE":"CAL_TH","isMetric":"yes","class":"heat","names":["thermochemical calorie"],"printSymbols":["cal<sub>th</sub>"],"properties":["energy"],"values":[{"printable":"4.184","numeric":4.184}]}}};},
+          "m[H2O]",
+          { type: "literal", value: "m[H2O]", description: "\"m[H2O]\"" },
+          function(u) {return {"value": 1, "units": {"m[H2O]": 1}, "metadata": {"m[H2O]":{"isBase":false,"CODE":"M[H2O]","isMetric":"yes","class":"clinical","names":["meter of water column"],"printSymbols":["m&#160;H<sub>\n            <r>2</r>\n         </sub>O"],"properties":["pressure"],"values":[{"printable":"9.80665","numeric":9.80665}]}}};},
+          "[ka'U]",
+          { type: "literal", value: "[ka'U]", description: "\"[ka'U]\"" },
+          function(u) {return {"value": 1, "units": {"[ka'U]": 1}, "metadata": {"[ka'U]":{"isBase":false,"CODE":"[KA'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["King-Armstrong unit"],"properties":["biologic activity of phosphatase"],"values":[{"printable":"1","numeric":1}]}}};},
+          "B[SPL]",
+          { type: "literal", value: "B[SPL]", description: "\"B[SPL]\"" },
+          function(u) {return {"value": 1, "units": {"B[SPL]": 1}, "metadata": {"B[SPL]":{"isBase":false,"CODE":"B[SPL]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel sound pressure"],"printSymbols":["B(SPL)"],"properties":["pressure level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"2\" Unit=\"10*-5.Pa\"/>","numeric":null}]}}};},
+          "[tb'U]",
+          { type: "literal", value: "[tb'U]", description: "\"[tb'U]\"" },
+          function(u) {return {"value": 1, "units": {"[tb'U]": 1}, "metadata": {"[tb'U]":{"isBase":false,"CODE":"[TB'U]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["tuberculin unit"],"properties":["biologic activity of tuberculin"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[degR]",
+          { type: "literal", value: "[degR]", description: "\"[degR]\"" },
+          function(u) {return {"value": 1, "units": {"[degR]": 1}, "metadata": {"[degR]":{"isBase":false,"CODE":"[degR]","isMetric":"no","class":"heat","names":["degree Rankine"],"printSymbols":["&#176;R"],"properties":["temperature"],"values":[{"printable":"5","numeric":5}]}}};},
+          "[degF]",
+          { type: "literal", value: "[degF]", description: "\"[degF]\"" },
+          function(u) {return {"value": 1, "units": {"[degF]": 1}, "metadata": {"[degF]":{"isBase":false,"CODE":"[DEGF]","isMetric":"no","isSpecial":"yes","class":"heat","names":["degree Fahrenheit"],"printSymbols":["&#176;F"],"properties":["temperature"],"values":[{"printable":"<function name=\"degF\" value=\"5\" Unit=\"K/9\"/>","numeric":null}]}}};},
+          "[pptr]",
+          { type: "literal", value: "[pptr]", description: "\"[pptr]\"" },
+          function(u) {return {"value": 1, "units": {"[pptr]": 1}, "metadata": {"[pptr]":{"isBase":false,"CODE":"[PPTR]","isMetric":"no","class":"dimless","names":["parts per trillion"],"printSymbols":["pptr"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[ppth]",
+          { type: "literal", value: "[ppth]", description: "\"[ppth]\"" },
+          function(u) {return {"value": 1, "units": {"[ppth]": 1}, "metadata": {"[ppth]":{"isBase":false,"CODE":"[PPTH]","isMetric":"no","class":"dimless","names":["parts per thousand"],"printSymbols":["ppth"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[oz_m]",
+          { type: "literal", value: "[oz_m]", description: "\"[oz_m]\"" },
+          function(u) {return {"value": 1, "units": {"[oz_m]": 1}, "metadata": {"[oz_m]":{"isBase":false,"CODE":"[OZ_M]","isMetric":"no","class":"apoth","names":["metric ounce"],"properties":["mass"],"values":[{"printable":"28","numeric":28}]}}};},
+          "[pied]",
+          { type: "literal", value: "[pied]", description: "\"[pied]\"" },
+          function(u) {return {"value": 1, "units": {"[pied]": 1}, "metadata": {"[pied]":{"isBase":false,"CODE":"[PIED]","isMetric":"no","class":"typeset","names":["pied","French foot"],"properties":["length"],"values":[{"printable":"32.48","numeric":32.48}]}}};},
+          "[ppm]",
+          { type: "literal", value: "[ppm]", description: "\"[ppm]\"" },
+          function(u) {return {"value": 1, "units": {"[ppm]": 1}, "metadata": {"[ppm]":{"isBase":false,"CODE":"[PPM]","isMetric":"no","class":"dimless","names":["parts per million"],"printSymbols":["ppm"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[ppb]",
+          { type: "literal", value: "[ppb]", description: "\"[ppb]\"" },
+          function(u) {return {"value": 1, "units": {"[ppb]": 1}, "metadata": {"[ppb]":{"isBase":false,"CODE":"[PPB]","isMetric":"no","class":"dimless","names":["parts per billion"],"printSymbols":["ppb"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
+          "bit_s",
+          { type: "literal", value: "bit_s", description: "\"bit_s\"" },
+          function(u) {return {"value": 1, "units": {"bit_s": 1}, "metadata": {"bit_s":{"isBase":false,"CODE":"BIT_S","isMetric":"no","isSpecial":"yes","class":"infotech","names":["bit"],"printSymbols":["bit<sub>s</sub>"],"properties":["amount of information"],"values":[{"printable":"<function name=\"ld\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
+          "[PNU]",
+          { type: "literal", value: "[PNU]", description: "\"[PNU]\"" },
+          function(u) {return {"value": 1, "units": {"[PNU]": 1}, "metadata": {"[PNU]":{"isBase":false,"CODE":"[PNU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["protein nitrogen unit"],"printSymbols":["PNU"],"properties":["procedure defined amount of a protein substance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[psi]",
+          { type: "literal", value: "[psi]", description: "\"[psi]\"" },
+          function(u) {return {"value": 1, "units": {"[psi]": 1}, "metadata": {"[psi]":{"isBase":false,"CODE":"[PSI]","isMetric":"no","class":"misc","names":["pound per sqare inch"],"printSymbols":["psi"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[BAU]",
+          { type: "literal", value: "[BAU]", description: "\"[BAU]\"" },
+          function(u) {return {"value": 1, "units": {"[BAU]": 1}, "metadata": {"[BAU]":{"isBase":false,"CODE":"[BAU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["bioequivalent allergen unit"],"printSymbols":["BAU"],"properties":["amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[Cal]",
+          { type: "literal", value: "[Cal]", description: "\"[Cal]\"" },
+          function(u) {return {"value": 1, "units": {"[Cal]": 1}, "metadata": {"[Cal]":{"isBase":false,"CODE":"[CAL]","isMetric":"no","class":"heat","names":["nutrition label Calories"],"printSymbols":["Cal"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
+          "B[mV]",
+          { type: "literal", value: "B[mV]", description: "\"B[mV]\"" },
+          function(u) {return {"value": 1, "units": {"B[mV]": 1}, "metadata": {"B[mV]":{"isBase":false,"CODE":"B[MV]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel millivolt"],"printSymbols":["B(mV)"],"properties":["electric potential level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"1\" Unit=\"mV\"/>","numeric":null}]}}};},
+          "B[uV]",
+          { type: "literal", value: "B[uV]", description: "\"B[uV]\"" },
+          function(u) {return {"value": 1, "units": {"B[uV]": 1}, "metadata": {"B[uV]":{"isBase":false,"CODE":"B[UV]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel microvolt"],"printSymbols":["B(&#956;V)"],"properties":["electric potential level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"1\" Unit=\"uV\"/>","numeric":null}]}}};},
+          "[CFU]",
+          { type: "literal", value: "[CFU]", description: "\"[CFU]\"" },
+          function(u) {return {"value": 1, "units": {"[CFU]": 1}, "metadata": {"[CFU]":{"isBase":false,"CODE":"[CFU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["colony forming units"],"printSymbols":["CFU"],"properties":["amount of a proliferating organism"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[FFU]",
+          { type: "literal", value: "[FFU]", description: "\"[FFU]\"" },
+          function(u) {return {"value": 1, "units": {"[FFU]": 1}, "metadata": {"[FFU]":{"isBase":false,"CODE":"[FFU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["focus forming units"],"printSymbols":["FFU"],"properties":["amount of an infectious agent"],"values":[{"printable":"1","numeric":1}]}}};},
+          "B[kW]",
+          { type: "literal", value: "B[kW]", description: "\"B[kW]\"" },
+          function(u) {return {"value": 1, "units": {"B[kW]": 1}, "metadata": {"B[kW]":{"isBase":false,"CODE":"B[KW]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel kilowatt"],"printSymbols":["B(kW)"],"properties":["power level"],"values":[{"printable":"<function name=\"lg\" value=\"1\" Unit=\"kW\"/>","numeric":null}]}}};},
+          "[PFU]",
+          { type: "literal", value: "[PFU]", description: "\"[PFU]\"" },
+          function(u) {return {"value": 1, "units": {"[PFU]": 1}, "metadata": {"[PFU]":{"isBase":false,"CODE":"[PFU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["plaque forming units"],"printSymbols":["PFU"],"properties":["amount of an infectious agent"],"values":[{"printable":"1","numeric":1}]}}};},
+          "cal_m",
+          { type: "literal", value: "cal_m", description: "\"cal_m\"" },
+          function(u) {return {"value": 1, "units": {"cal_m": 1}, "metadata": {"cal_m":{"isBase":false,"CODE":"CAL_M","isMetric":"yes","class":"heat","names":["mean calorie"],"printSymbols":["cal<sub>m</sub>"],"properties":["energy"],"values":[{"printable":"4.19002","numeric":4.19002}]}}};},
+          "[ELU]",
+          { type: "literal", value: "[ELU]", description: "\"[ELU]\"" },
+          function(u) {return {"value": 1, "units": {"[ELU]": 1}, "metadata": {"[ELU]":{"isBase":false,"CODE":"[ELU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["ELISA unit"],"printSymbols":[""],"properties":["arbitrary ELISA unit"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[FEU]",
+          { type: "literal", value: "[FEU]", description: "\"[FEU]\"" },
+          function(u) {return {"value": 1, "units": {"[FEU]": 1}, "metadata": {"[FEU]":{"isBase":false,"CODE":"[FEU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["fibrinogen equivalent unit"],"printSymbols":[""],"properties":["amount of fibrinogen broken down into the measured d-dimers"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[PRU]",
+          { type: "literal", value: "[PRU]", description: "\"[PRU]\"" },
+          function(u) {return {"value": 1, "units": {"[PRU]": 1}, "metadata": {"[PRU]":{"isBase":false,"CODE":"[PRU]","isMetric":"no","class":"clinical","names":["peripheral vascular resistance unit"],"printSymbols":["P.R.U."],"properties":["fluid resistance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[m_e]",
+          { type: "literal", value: "[m_e]", description: "\"[m_e]\"" },
+          function(u) {return {"value": 1, "units": {"[m_e]": 1}, "metadata": {"[m_e]":{"isBase":false,"CODE":"[M_E]","isMetric":"yes","class":"const","names":["electron mass"],"printSymbols":["<i>m<sub>\n               <r>e</r>\n            </sub>\n         </i>"],"properties":["mass"],"values":[{"printable":"9.1093897 &#215; 10<sup>-28</sup>","numeric":9.1093897e-28}]}}};},
+          "[m_p]",
+          { type: "literal", value: "[m_p]", description: "\"[m_p]\"" },
+          function(u) {return {"value": 1, "units": {"[m_p]": 1}, "metadata": {"[m_p]":{"isBase":false,"CODE":"[M_P]","isMetric":"yes","class":"const","names":["proton mass"],"printSymbols":["<i>m<sub>\n               <r>p</r>\n            </sub>\n         </i>"],"properties":["mass"],"values":[{"printable":"1.6726231 &#215; 10<sup>-24</sup>","numeric":1.6726231e-24}]}}};},
+          "m[Hg]",
+          { type: "literal", value: "m[Hg]", description: "\"m[Hg]\"" },
+          function(u) {return {"value": 1, "units": {"m[Hg]": 1}, "metadata": {"m[Hg]":{"isBase":false,"CODE":"M[HG]","isMetric":"yes","class":"clinical","names":["meter of mercury column"],"printSymbols":["m&#160;Hg"],"properties":["pressure"],"values":[{"printable":"133.3220","numeric":133.322}]}}};},
+          "[pca]",
+          { type: "literal", value: "[pca]", description: "\"[pca]\"" },
+          function(u) {return {"value": 1, "units": {"[pca]": 1}, "metadata": {"[pca]":{"isBase":false,"CODE":"[PCA]","isMetric":"no","class":"typeset","names":["pica"],"properties":["length"],"values":[{"printable":"12","numeric":12}]}}};},
+          "[pnt]",
+          { type: "literal", value: "[pnt]", description: "\"[pnt]\"" },
+          function(u) {return {"value": 1, "units": {"[pnt]": 1}, "metadata": {"[pnt]":{"isBase":false,"CODE":"[PNT]","isMetric":"no","class":"typeset","names":["point"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[lne]",
+          { type: "literal", value: "[lne]", description: "\"[lne]\"" },
+          function(u) {return {"value": 1, "units": {"[lne]": 1}, "metadata": {"[lne]":{"isBase":false,"CODE":"[LNE]","isMetric":"no","class":"typeset","names":["line"],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[LPF]",
+          { type: "literal", value: "[LPF]", description: "\"[LPF]\"" },
+          function(u) {return {"value": 1, "units": {"[LPF]": 1}, "metadata": {"[LPF]":{"isBase":false,"CODE":"[LPF]","isMetric":"no","class":"chemical","names":["low power field"],"printSymbols":["LPF"],"properties":["view area in microscope"],"values":[{"printable":"100","numeric":100}]}}};},
+          "[den]",
+          { type: "literal", value: "[den]", description: "\"[den]\"" },
+          function(u) {return {"value": 1, "units": {"[den]": 1}, "metadata": {"[den]":{"isBase":false,"CODE":"[DEN]","isMetric":"no","class":"heat","names":["Denier"],"printSymbols":["den"],"properties":["linear mass density (of textile thread)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[sct]",
+          { type: "literal", value: "[sct]", description: "\"[sct]\"" },
+          function(u) {return {"value": 1, "units": {"[sct]": 1}, "metadata": {"[sct]":{"isBase":false,"CODE":"[SCT]","isMetric":"no","class":"us-lengths","names":["section"],"properties":["area"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[twp]",
+          { type: "literal", value: "[twp]", description: "\"[twp]\"" },
+          function(u) {return {"value": 1, "units": {"[twp]": 1}, "metadata": {"[twp]":{"isBase":false,"CODE":"[TWP]","isMetric":"no","class":"us-lengths","names":["township"],"properties":["area"],"values":[{"printable":"36","numeric":36}]}}};},
+          "[Btu]",
+          { type: "literal", value: "[Btu]", description: "\"[Btu]\"" },
+          function(u) {return {"value": 1, "units": {"[Btu]": 1}, "metadata": {"[Btu]":{"isBase":false,"CODE":"[BTU]","isMetric":"no","class":"heat","names":["British thermal unit"],"printSymbols":["btu"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[MET]",
+          { type: "literal", value: "[MET]", description: "\"[MET]\"" },
+          function(u) {return {"value": 1, "units": {"[MET]": 1}, "metadata": {"[MET]":{"isBase":false,"CODE":"[MET]","isMetric":"no","class":"clinical","names":["metabolic equivalent"],"printSymbols":["MET"],"properties":["metabolic cost of physical activity"],"values":[{"printable":"3.5","numeric":3.5}]}}};},
+          "[HPF]",
+          { type: "literal", value: "[HPF]", description: "\"[HPF]\"" },
+          function(u) {return {"value": 1, "units": {"[HPF]": 1}, "metadata": {"[HPF]":{"isBase":false,"CODE":"[HPF]","isMetric":"no","class":"chemical","names":["high power field"],"printSymbols":["HPF"],"properties":["view area in microscope"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[drp]",
+          { type: "literal", value: "[drp]", description: "\"[drp]\"" },
+          function(u) {return {"value": 1, "units": {"[drp]": 1}, "metadata": {"[drp]":{"isBase":false,"CODE":"[DRP]","isMetric":"no","class":"clinical","names":["drop"],"printSymbols":["drp"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[AU]",
+          { type: "literal", value: "[AU]", description: "\"[AU]\"" },
+          function(u) {return {"value": 1, "units": {"[AU]": 1}, "metadata": {"[AU]":{"isBase":false,"CODE":"[AU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["allergen unit"],"printSymbols":["AU"],"properties":["procedure defined amount of an allergen using some reference standard"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[IU]",
+          { type: "literal", value: "[IU]", description: "\"[IU]\"" },
+          function(u) {return {"value": 1, "units": {"[IU]": 1}, "metadata": {"[IU]":{"isBase":false,"CODE":"[IU]","isMetric":"yes","isArbitrary":"yes","class":"chemical","names":["international unit"],"printSymbols":["i.U."],"properties":["arbitrary"],"values":[{"printable":"1","numeric":1}]}}};},
+          "mo_s",
+          { type: "literal", value: "mo_s", description: "\"mo_s\"" },
+          function(u) {return {"value": 1, "units": {"mo_s": 1}, "metadata": {"mo_s":{"isBase":false,"CODE":"MO_S","isMetric":"no","class":"iso1000","names":["synodal month"],"printSymbols":["mo<sub>s</sub>"],"properties":["time"],"values":[{"printable":"29.53059","numeric":29.53059}]}}};},
+          "[gr]",
+          { type: "literal", value: "[gr]", description: "\"[gr]\"" },
+          function(u) {return {"value": 1, "units": {"[gr]": 1}, "metadata": {"[gr]":{"isBase":false,"CODE":"[GR]","isMetric":"no","class":"avoirdupois","names":["grain"],"properties":["mass"],"values":[{"printable":"64.79891","numeric":64.79891}]}}};},
+          "circ",
+          { type: "literal", value: "circ", description: "\"circ\"" },
+          function(u) {return {"value": 1, "units": {"circ": 1}, "metadata": {"circ":{"isBase":false,"CODE":"CIRC","isMetric":"no","class":"misc","names":["circle"],"printSymbols":["circ"],"properties":["plane angle"],"values":[{"printable":"2","numeric":2}]}}};},
+          "[pi]",
+          { type: "literal", value: "[pi]", description: "\"[pi]\"" },
+          function(u) {return {"value": 1, "units": {"[pi]": 1}, "metadata": {"[pi]":{"isBase":false,"CODE":"[PI]","isMetric":"no","class":"dimless","names":["the number pi"],"printSymbols":["&#960;"],"properties":["number"],"values":[{"printable":"&#960;","numeric":3.141592653589793}]}}};},
+          "[EU]",
+          { type: "literal", value: "[EU]", description: "\"[EU]\"" },
+          function(u) {return {"value": 1, "units": {"[EU]": 1}, "metadata": {"[EU]":{"isBase":false,"CODE":"[EU]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Ehrlich unit"],"printSymbols":[""],"properties":["Ehrlich unit"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[Lf]",
+          { type: "literal", value: "[Lf]", description: "\"[Lf]\"" },
+          function(u) {return {"value": 1, "units": {"[Lf]": 1}, "metadata": {"[Lf]":{"isBase":false,"CODE":"[LF]","isMetric":"no","isArbitrary":"yes","class":"chemical","names":["Limit of flocculation"],"printSymbols":["Lf"],"properties":["procedure defined amount of an antigen substance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "mo_j",
+          { type: "literal", value: "mo_j", description: "\"mo_j\"" },
+          function(u) {return {"value": 1, "units": {"mo_j": 1}, "metadata": {"mo_j":{"isBase":false,"CODE":"MO_J","isMetric":"no","class":"iso1000","names":["mean Julian month"],"printSymbols":["mo<sub>j</sub>"],"properties":["time"],"values":[{"printable":"1","numeric":1}]}}};},
+          "B[W]",
+          { type: "literal", value: "B[W]", description: "\"B[W]\"" },
+          function(u) {return {"value": 1, "units": {"B[W]": 1}, "metadata": {"B[W]":{"isBase":false,"CODE":"B[W]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel watt"],"printSymbols":["B(W)"],"properties":["power level"],"values":[{"printable":"<function name=\"lg\" value=\"1\" Unit=\"W\"/>","numeric":null}]}}};},
+          "B[V]",
+          { type: "literal", value: "B[V]", description: "\"B[V]\"" },
+          function(u) {return {"value": 1, "units": {"B[V]": 1}, "metadata": {"B[V]":{"isBase":false,"CODE":"B[V]","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel volt"],"printSymbols":["B(V)"],"properties":["electric potential level"],"values":[{"printable":"<function name=\"lgTimes2\" value=\"1\" Unit=\"V\"/>","numeric":null}]}}};},
+          "mo_g",
+          { type: "literal", value: "mo_g", description: "\"mo_g\"" },
+          function(u) {return {"value": 1, "units": {"mo_g": 1}, "metadata": {"mo_g":{"isBase":false,"CODE":"MO_G","isMetric":"no","class":"iso1000","names":["mean Gregorian month"],"printSymbols":["mo<sub>g</sub>"],"properties":["time"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[iU]",
+          { type: "literal", value: "[iU]", description: "\"[iU]\"" },
+          function(u) {return {"value": 1, "units": {"[iU]": 1}, "metadata": {"[iU]":{"isBase":false,"CODE":"[IU]","isMetric":"yes","isArbitrary":"yes","class":"chemical","names":["international unit"],"printSymbols":["IU"],"properties":["arbitrary"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[HP]",
+          { type: "literal", value: "[HP]", description: "\"[HP]\"" },
+          function(u) {return {"value": 1, "units": {"[HP]": 1}, "metadata": {"[HP]":{"isBase":false,"CODE":"[HP]","isMetric":"no","class":"heat","names":["horsepower"],"properties":["power"],"values":[{"printable":"550","numeric":550}]}}};},
+          "[Ch]",
+          { type: "literal", value: "[Ch]", description: "\"[Ch]\"" },
+          function(u) {return {"value": 1, "units": {"[Ch]": 1}, "metadata": {"[Ch]":{"isBase":false,"CODE":"[CH]","isMetric":"no","class":"clinical","names":["Charrière","french"],"printSymbols":["Ch"],"properties":["gauge of catheters"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[ly]",
+          { type: "literal", value: "[ly]", description: "\"[ly]\"" },
+          function(u) {return {"value": 1, "units": {"[ly]": 1}, "metadata": {"[ly]":{"isBase":false,"CODE":"[LY]","isMetric":"yes","class":"const","names":["light-year"],"printSymbols":["l.y."],"properties":["length"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[pH]",
+          { type: "literal", value: "[pH]", description: "\"[pH]\"" },
+          function(u) {return {"value": 1, "units": {"[pH]": 1}, "metadata": {"[pH]":{"isBase":false,"CODE":"[PH]","isMetric":"no","isSpecial":"yes","class":"chemical","names":["pH"],"printSymbols":["pH"],"properties":["acidity"],"values":[{"printable":"<function name=\"pH\" value=\"1\" Unit=\"mol/l\"/>","numeric":null}]}}};},
+          "a_j",
+          { type: "literal", value: "a_j", description: "\"a_j\"" },
+          function(u) {return {"value": 1, "units": {"a_j": 1}, "metadata": {"a_j":{"isBase":false,"CODE":"ANN_J","isMetric":"no","class":"iso1000","names":["mean Julian year"],"printSymbols":["a<sub>j</sub>"],"properties":["time"],"values":[{"printable":"365.25","numeric":365.25}]}}};},
+          "rad",
+          { type: "literal", value: "rad", description: "\"rad\"" },
+          function(u) {return {"value": 1, "units": {"rad": 1}, "metadata": {"rad":{"isBase":true,"CODE":"RAD","dim":"A","names":["radian"],"printSymbols":["rad"],"properties":["plane angle"]}}};},
+          "a_t",
+          { type: "literal", value: "a_t", description: "\"a_t\"" },
+          function(u) {return {"value": 1, "units": {"a_t": 1}, "metadata": {"a_t":{"isBase":false,"CODE":"ANN_T","isMetric":"no","class":"iso1000","names":["tropical year"],"printSymbols":["a<sub>t</sub>"],"properties":["time"],"values":[{"printable":"365.24219","numeric":365.24219}]}}};},
+          "Ohm",
+          { type: "literal", value: "Ohm", description: "\"Ohm\"" },
+          function(u) {return {"value": 1, "units": {"Ohm": 1}, "metadata": {"Ohm":{"isBase":false,"CODE":"OHM","isMetric":"yes","class":"si","names":["Ohm"],"printSymbols":["&#937;"],"properties":["electric resistance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "sph",
+          { type: "literal", value: "sph", description: "\"sph\"" },
+          function(u) {return {"value": 1, "units": {"sph": 1}, "metadata": {"sph":{"isBase":false,"CODE":"SPH","isMetric":"no","class":"misc","names":["spere"],"printSymbols":["sph"],"properties":["solid angle"],"values":[{"printable":"4","numeric":4}]}}};},
+          "bit",
+          { type: "literal", value: "bit", description: "\"bit\"" },
+          function(u) {return {"value": 1, "units": {"bit": 1}, "metadata": {"bit":{"isBase":false,"CODE":"BIT","isMetric":"yes","class":"infotech","names":["bit"],"printSymbols":["bit"],"properties":["amount of information"],"values":[{"printable":"1","numeric":1}]}}};},
+          "mho",
+          { type: "literal", value: "mho", description: "\"mho\"" },
+          function(u) {return {"value": 1, "units": {"mho": 1}, "metadata": {"mho":{"isBase":false,"CODE":"MHO","isMetric":"yes","class":"misc","names":["mho"],"printSymbols":["mho"],"properties":["electric conductance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "min",
+          { type: "literal", value: "min", description: "\"min\"" },
+          function(u) {return {"value": 1, "units": {"min": 1}, "metadata": {"min":{"isBase":false,"CODE":"MIN","isMetric":"no","class":"iso1000","names":["minute"],"printSymbols":["min"],"properties":["time"],"values":[{"printable":"60","numeric":60}]}}};},
+          "mol",
+          { type: "literal", value: "mol", description: "\"mol\"" },
+          function(u) {return {"value": 1, "units": {"mol": 1}, "metadata": {"mol":{"isBase":false,"CODE":"MOL","isMetric":"yes","class":"si","names":["mole"],"printSymbols":["mol"],"properties":["amount of substance"],"values":[{"printable":"6.0221367","numeric":6.0221367}]}}};},
+          "deg",
+          { type: "literal", value: "deg", description: "\"deg\"" },
+          function(u) {return {"value": 1, "units": {"deg": 1}, "metadata": {"deg":{"isBase":false,"CODE":"DEG","isMetric":"no","class":"iso1000","names":["degree"],"printSymbols":["&#176;"],"properties":["plane angle"],"values":[{"printable":"2","numeric":2}]}}};},
+          "gon",
+          { type: "literal", value: "gon", description: "\"gon\"" },
+          function(u) {return {"value": 1, "units": {"gon": 1}, "metadata": {"gon":{"isBase":false,"CODE":"GON","isMetric":"no","class":"iso1000","names":["gon","grade"],"printSymbols":["&#9633;<sup>g</sup>"],"properties":["plane angle"],"values":[{"printable":"0.9","numeric":0.9}]}}};},
+          "Cel",
+          { type: "literal", value: "Cel", description: "\"Cel\"" },
+          function(u) {return {"value": 1, "units": {"Cel": 1}, "metadata": {"Cel":{"isBase":false,"CODE":"CEL","isMetric":"yes","isSpecial":"yes","class":"si","names":["degree Celsius"],"printSymbols":["&#176;C"],"properties":["temperature"],"values":[{"printable":"<function name=\"Cel\" value=\"1\" Unit=\"K\"/>","numeric":null}]}}};},
+          "kat",
+          { type: "literal", value: "kat", description: "\"kat\"" },
+          function(u) {return {"value": 1, "units": {"kat": 1}, "metadata": {"kat":{"isBase":false,"CODE":"KAT","isMetric":"yes","class":"chemical","names":["katal"],"printSymbols":["kat"],"properties":["catalytic activity"],"values":[{"printable":"1","numeric":1}]}}};},
+          "att",
+          { type: "literal", value: "att", description: "\"att\"" },
+          function(u) {return {"value": 1, "units": {"att": 1}, "metadata": {"att":{"isBase":false,"CODE":"ATT","isMetric":"no","class":"misc","names":["technical atmosphere"],"printSymbols":["at"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
+          "osm",
+          { type: "literal", value: "osm", description: "\"osm\"" },
+          function(u) {return {"value": 1, "units": {"osm": 1}, "metadata": {"osm":{"isBase":false,"CODE":"OSM","isMetric":"yes","class":"chemical","names":["osmole"],"printSymbols":["osm"],"properties":["amount of substance (dissolved particles)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "tex",
+          { type: "literal", value: "tex", description: "\"tex\"" },
+          function(u) {return {"value": 1, "units": {"tex": 1}, "metadata": {"tex":{"isBase":false,"CODE":"TEX","isMetric":"yes","class":"heat","names":["tex"],"printSymbols":["tex"],"properties":["linear mass density (of textile thread)"],"values":[{"printable":"1","numeric":1}]}}};},
+          "cal",
+          { type: "literal", value: "cal", description: "\"cal\"" },
+          function(u) {return {"value": 1, "units": {"cal": 1}, "metadata": {"cal":{"isBase":false,"CODE":"CAL","isMetric":"yes","class":"heat","names":["calorie"],"printSymbols":["cal"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
+          "REM",
+          { type: "literal", value: "REM", description: "\"REM\"" },
+          function(u) {return {"value": 1, "units": {"REM": 1}, "metadata": {"REM":{"isBase":false,"CODE":"[REM]","isMetric":"yes","class":"cgs","names":["radiation equivalent man"],"printSymbols":["REM"],"properties":["dose equivalent"],"values":[{"printable":"1","numeric":1}]}}};},
+          "RAD",
+          { type: "literal", value: "RAD", description: "\"RAD\"" },
+          function(u) {return {"value": 1, "units": {"RAD": 1}, "metadata": {"RAD":{"isBase":false,"CODE":"[RAD]","isMetric":"yes","class":"cgs","names":["radiation absorbed dose"],"printSymbols":["RAD"],"properties":["energy dose"],"values":[{"printable":"100","numeric":100}]}}};},
+          "a_g",
+          { type: "literal", value: "a_g", description: "\"a_g\"" },
+          function(u) {return {"value": 1, "units": {"a_g": 1}, "metadata": {"a_g":{"isBase":false,"CODE":"ANN_G","isMetric":"no","class":"iso1000","names":["mean Gregorian year"],"printSymbols":["a<sub>g</sub>"],"properties":["time"],"values":[{"printable":"365.2425","numeric":365.2425}]}}};},
+          "Lmb",
+          { type: "literal", value: "Lmb", description: "\"Lmb\"" },
+          function(u) {return {"value": 1, "units": {"Lmb": 1}, "metadata": {"Lmb":{"isBase":false,"CODE":"LMB","isMetric":"yes","class":"cgs","names":["Lambert"],"printSymbols":["L"],"properties":["brightness"],"values":[{"printable":"1","numeric":1}]}}};},
+          "atm",
+          { type: "literal", value: "atm", description: "\"atm\"" },
+          function(u) {return {"value": 1, "units": {"atm": 1}, "metadata": {"atm":{"isBase":false,"CODE":"ATM","isMetric":"no","class":"const","names":["standard atmosphere"],"printSymbols":["atm"],"properties":["pressure"],"values":[{"printable":"101325","numeric":101325}]}}};},
+          "erg",
+          { type: "literal", value: "erg", description: "\"erg\"" },
+          function(u) {return {"value": 1, "units": {"erg": 1}, "metadata": {"erg":{"isBase":false,"CODE":"ERG","isMetric":"yes","class":"cgs","names":["erg"],"printSymbols":["erg"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
+          "dyn",
+          { type: "literal", value: "dyn", description: "\"dyn\"" },
+          function(u) {return {"value": 1, "units": {"dyn": 1}, "metadata": {"dyn":{"isBase":false,"CODE":"DYN","isMetric":"yes","class":"cgs","names":["dyne"],"printSymbols":["dyn"],"properties":["force"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Gal",
+          { type: "literal", value: "Gal", description: "\"Gal\"" },
+          function(u) {return {"value": 1, "units": {"Gal": 1}, "metadata": {"Gal":{"isBase":false,"CODE":"GL","isMetric":"yes","class":"cgs","names":["Gal"],"printSymbols":["Gal"],"properties":["acceleration"],"values":[{"printable":"1","numeric":1}]}}};},
+          "10^",
+          { type: "literal", value: "10^", description: "\"10^\"" },
+          function(u) {return {"value": 1, "units": {"10^": 1}, "metadata": {"10^":{"isBase":false,"CODE":"10^","isMetric":"no","class":"dimless","names":["the number ten for arbitrary powers"],"printSymbols":["10"],"properties":["number"],"values":[{"printable":"10","numeric":10}]}}};},
+          "10*",
+          { type: "literal", value: "10*", description: "\"10*\"" },
+          function(u) {return {"value": 1, "units": {"10*": 1}, "metadata": {"10*":{"isBase":false,"CODE":"10*","isMetric":"no","class":"dimless","names":["the number ten for arbitrary powers"],"printSymbols":["10"],"properties":["number"],"values":[{"printable":"10","numeric":10}]}}};},
+          "[S]",
+          { type: "literal", value: "[S]", description: "\"[S]\"" },
+          function(u) {return {"value": 1, "units": {"[S]": 1}, "metadata": {"[S]":{"isBase":false,"CODE":"[S]","isMetric":"no","class":"chemical","names":["Svedberg unit"],"printSymbols":["S"],"properties":["sedimentation coefficient"],"values":[{"printable":"1","numeric":1}]}}};},
+          "[g]",
+          { type: "literal", value: "[g]", description: "\"[g]\"" },
+          function(u) {return {"value": 1, "units": {"[g]": 1}, "metadata": {"[g]":{"isBase":false,"CODE":"[G]","isMetric":"yes","class":"const","names":["standard acceleration of free fall"],"printSymbols":["<i>g<sub>n</sub>\n         </i>"],"properties":["acceleration"],"values":[{"printable":"9.80665","numeric":9.80665}]}}};},
+          "[G]",
+          { type: "literal", value: "[G]", description: "\"[G]\"" },
+          function(u) {return {"value": 1, "units": {"[G]": 1}, "metadata": {"[G]":{"isBase":false,"CODE":"[GC]","isMetric":"yes","class":"const","names":["Newtonian constant of gravitation"],"printSymbols":["<i>G</i>"],"properties":["(unclassified)"],"values":[{"printable":"6.67259 &#215; 10<sup>-11</sup>","numeric":6.67259e-11}]}}};},
+          "[e]",
+          { type: "literal", value: "[e]", description: "\"[e]\"" },
+          function(u) {return {"value": 1, "units": {"[e]": 1}, "metadata": {"[e]":{"isBase":false,"CODE":"[E]","isMetric":"yes","class":"const","names":["elementary charge"],"printSymbols":["<i>e</i>"],"properties":["electric charge"],"values":[{"printable":"1.60217733 &#215; 10<sup>-19</sup>","numeric":1.60217733e-19}]}}};},
+          "[k]",
+          { type: "literal", value: "[k]", description: "\"[k]\"" },
+          function(u) {return {"value": 1, "units": {"[k]": 1}, "metadata": {"[k]":{"isBase":false,"CODE":"[K]","isMetric":"yes","class":"const","names":["Boltzmann constant"],"printSymbols":["<i>k</i>"],"properties":["(unclassified)"],"values":[{"printable":"1.380658 &#215; 10<sup>-23</sup>","numeric":1.380658e-23}]}}};},
+          "[h]",
+          { type: "literal", value: "[h]", description: "\"[h]\"" },
+          function(u) {return {"value": 1, "units": {"[h]": 1}, "metadata": {"[h]":{"isBase":false,"CODE":"[H]","isMetric":"yes","class":"const","names":["Planck constant"],"printSymbols":["<i>h</i>"],"properties":["action"],"values":[{"printable":"6.6260755 &#215; 10<sup>-24</sup>","numeric":6.6260755e-24}]}}};},
+          "[c]",
+          { type: "literal", value: "[c]", description: "\"[c]\"" },
+          function(u) {return {"value": 1, "units": {"[c]": 1}, "metadata": {"[c]":{"isBase":false,"CODE":"[C]","isMetric":"yes","class":"const","names":["velocity of light"],"printSymbols":["<i>c</i>"],"properties":["velocity"],"values":[{"printable":"299792458","numeric":299792458}]}}};},
+          "bar",
+          { type: "literal", value: "bar", description: "\"bar\"" },
+          function(u) {return {"value": 1, "units": {"bar": 1}, "metadata": {"bar":{"isBase":false,"CODE":"BAR","isMetric":"yes","class":"iso1000","names":["bar"],"printSymbols":["bar"],"properties":["pressure"],"values":[{"printable":"1 &#215; 10<sup>5</sup>","numeric":100000}]}}};},
+          "lm",
+          { type: "literal", value: "lm", description: "\"lm\"" },
+          function(u) {return {"value": 1, "units": {"lm": 1}, "metadata": {"lm":{"isBase":false,"CODE":"LM","isMetric":"yes","class":"si","names":["lumen"],"printSymbols":["lm"],"properties":["luminous flux"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Ci",
+          { type: "literal", value: "Ci", description: "\"Ci\"" },
+          function(u) {return {"value": 1, "units": {"Ci": 1}, "metadata": {"Ci":{"isBase":false,"CODE":"CI","isMetric":"yes","class":"cgs","names":["Curie"],"printSymbols":["Ci"],"properties":["radioactivity"],"values":[{"printable":"3.7 &#215; 10<sup>10</sup>","numeric":37000000000}]}}};},
+          "ph",
+          { type: "literal", value: "ph", description: "\"ph\"" },
+          function(u) {return {"value": 1, "units": {"ph": 1}, "metadata": {"ph":{"isBase":false,"CODE":"PHT","isMetric":"yes","class":"cgs","names":["phot"],"printSymbols":["ph"],"properties":["illuminance"],"values":[{"printable":"1 &#215; 10<sup>-4</sup>","numeric":0.0001}]}}};},
+          "cd",
+          { type: "literal", value: "cd", description: "\"cd\"" },
+          function(u) {return {"value": 1, "units": {"cd": 1}, "metadata": {"cd":{"isBase":true,"CODE":"CD","dim":"F","names":["candela"],"printSymbols":["cd"],"properties":["luminous intensity"]}}};},
+          "Ao",
+          { type: "literal", value: "Ao", description: "\"Ao\"" },
+          function(u) {return {"value": 1, "units": {"Ao": 1}, "metadata": {"Ao":{"isBase":false,"CODE":"AO","isMetric":"no","class":"misc","names":["Ångström"],"printSymbols":["&#197;"],"properties":["length"],"values":[{"printable":"0.1","numeric":0.1}]}}};},
+          "Wb",
+          { type: "literal", value: "Wb", description: "\"Wb\"" },
+          function(u) {return {"value": 1, "units": {"Wb": 1}, "metadata": {"Wb":{"isBase":false,"CODE":"WB","isMetric":"yes","class":"si","names":["Weber"],"printSymbols":["Wb"],"properties":["magentic flux"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Gb",
+          { type: "literal", value: "Gb", description: "\"Gb\"" },
+          function(u) {return {"value": 1, "units": {"Gb": 1}, "metadata": {"Gb":{"isBase":false,"CODE":"GB","isMetric":"yes","class":"cgs","names":["Gilbert"],"printSymbols":["Gb"],"properties":["magnetic tension"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Oe",
+          { type: "literal", value: "Oe", description: "\"Oe\"" },
+          function(u) {return {"value": 1, "units": {"Oe": 1}, "metadata": {"Oe":{"isBase":false,"CODE":"OE","isMetric":"yes","class":"cgs","names":["Oersted"],"printSymbols":["Oe"],"properties":["magnetic field intensity"],"values":[{"printable":"250","numeric":250}]}}};},
+          "lx",
+          { type: "literal", value: "lx", description: "\"lx\"" },
+          function(u) {return {"value": 1, "units": {"lx": 1}, "metadata": {"lx":{"isBase":false,"CODE":"LX","isMetric":"yes","class":"si","names":["lux"],"printSymbols":["lx"],"properties":["illuminance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Mx",
+          { type: "literal", value: "Mx", description: "\"Mx\"" },
+          function(u) {return {"value": 1, "units": {"Mx": 1}, "metadata": {"Mx":{"isBase":false,"CODE":"MX","isMetric":"yes","class":"cgs","names":["Maxwell"],"printSymbols":["Mx"],"properties":["flux of magnetic induction"],"values":[{"printable":"1 &#215; 10<sup>-8</sup>","numeric":1e-8}]}}};},
+          "St",
+          { type: "literal", value: "St", description: "\"St\"" },
+          function(u) {return {"value": 1, "units": {"St": 1}, "metadata": {"St":{"isBase":false,"CODE":"ST","isMetric":"yes","class":"cgs","names":["Stokes"],"printSymbols":["St"],"properties":["kinematic viscosity"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Bi",
+          { type: "literal", value: "Bi", description: "\"Bi\"" },
+          function(u) {return {"value": 1, "units": {"Bi": 1}, "metadata": {"Bi":{"isBase":false,"CODE":"BI","isMetric":"yes","class":"cgs","names":["Biot"],"printSymbols":["Bi"],"properties":["electric current"],"values":[{"printable":"10","numeric":10}]}}};},
+          "Bq",
+          { type: "literal", value: "Bq", description: "\"Bq\"" },
+          function(u) {return {"value": 1, "units": {"Bq": 1}, "metadata": {"Bq":{"isBase":false,"CODE":"BQ","isMetric":"yes","class":"si","names":["Becquerel"],"printSymbols":["Bq"],"properties":["radioactivity"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Np",
+          { type: "literal", value: "Np", description: "\"Np\"" },
+          function(u) {return {"value": 1, "units": {"Np": 1}, "metadata": {"Np":{"isBase":false,"CODE":"NEP","isMetric":"yes","isSpecial":"yes","class":"levels","names":["neper"],"printSymbols":["Np"],"properties":["level"],"values":[{"printable":"<function name=\"ln\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
+          "AU",
+          { type: "literal", value: "AU", description: "\"AU\"" },
+          function(u) {return {"value": 1, "units": {"AU": 1}, "metadata": {"AU":{"isBase":false,"CODE":"ASU","isMetric":"no","class":"iso1000","names":["astronomic unit"],"printSymbols":["AU"],"properties":["length"],"values":[{"printable":"149597.870691","numeric":149597.870691}]}}};},
+          "mo",
+          { type: "literal", value: "mo", description: "\"mo\"" },
+          function(u) {return {"value": 1, "units": {"mo": 1}, "metadata": {"mo":{"isBase":false,"CODE":"MO","isMetric":"no","class":"iso1000","names":["month"],"printSymbols":["mo"],"properties":["time"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Ky",
+          { type: "literal", value: "Ky", description: "\"Ky\"" },
+          function(u) {return {"value": 1, "units": {"Ky": 1}, "metadata": {"Ky":{"isBase":false,"CODE":"KY","isMetric":"yes","class":"cgs","names":["Kayser"],"printSymbols":["K"],"properties":["lineic number"],"values":[{"printable":"1","numeric":1}]}}};},
+          "gf",
+          { type: "literal", value: "gf", description: "\"gf\"" },
+          function(u) {return {"value": 1, "units": {"gf": 1}, "metadata": {"gf":{"isBase":false,"CODE":"GF","isMetric":"yes","class":"const","names":["gram-force"],"printSymbols":["gf"],"properties":["force"],"values":[{"printable":"1","numeric":1}]}}};},
+          "wk",
+          { type: "literal", value: "wk", description: "\"wk\"" },
+          function(u) {return {"value": 1, "units": {"wk": 1}, "metadata": {"wk":{"isBase":false,"CODE":"WK","isMetric":"no","class":"iso1000","names":["week"],"printSymbols":["wk"],"properties":["time"],"values":[{"printable":"7","numeric":7}]}}};},
+          "Pa",
+          { type: "literal", value: "Pa", description: "\"Pa\"" },
+          function(u) {return {"value": 1, "units": {"Pa": 1}, "metadata": {"Pa":{"isBase":false,"CODE":"PAL","isMetric":"yes","class":"si","names":["Pascal"],"printSymbols":["Pa"],"properties":["pressure"],"values":[{"printable":"1","numeric":1}]}}};},
+          "g%",
+          { type: "literal", value: "g%", description: "\"g%\"" },
+          function(u) {return {"value": 1, "units": {"g%": 1}, "metadata": {"g%":{"isBase":false,"CODE":"G%","isMetric":"yes","class":"chemical","names":["gram percent"],"printSymbols":["g%"],"properties":["mass concentration"],"values":[{"printable":"1","numeric":1}]}}};},
+          "sr",
+          { type: "literal", value: "sr", description: "\"sr\"" },
+          function(u) {return {"value": 1, "units": {"sr": 1}, "metadata": {"sr":{"isBase":false,"CODE":"SR","isMetric":"yes","class":"si","names":["steradian"],"printSymbols":["sr"],"properties":["solid angle"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Bd",
+          { type: "literal", value: "Bd", description: "\"Bd\"" },
+          function(u) {return {"value": 1, "units": {"Bd": 1}, "metadata": {"Bd":{"isBase":false,"CODE":"BD","isMetric":"yes","class":"infotech","names":["baud"],"printSymbols":["Bd"],"properties":["signal transmission rate"],"values":[{"printable":"1","numeric":1}]}}};},
+          "eq",
+          { type: "literal", value: "eq", description: "\"eq\"" },
+          function(u) {return {"value": 1, "units": {"eq": 1}, "metadata": {"eq":{"isBase":false,"CODE":"EQ","isMetric":"yes","class":"chemical","names":["equivalents"],"printSymbols":["eq"],"properties":["amount of substance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "By",
+          { type: "literal", value: "By", description: "\"By\"" },
+          function(u) {return {"value": 1, "units": {"By": 1}, "metadata": {"By":{"isBase":false,"CODE":"BY","isMetric":"yes","class":"infotech","names":["byte"],"printSymbols":["B"],"properties":["amount of information"],"values":[{"printable":"8","numeric":8}]}}};},
+          "Hz",
+          { type: "literal", value: "Hz", description: "\"Hz\"" },
+          function(u) {return {"value": 1, "units": {"Hz": 1}, "metadata": {"Hz":{"isBase":false,"CODE":"HZ","isMetric":"yes","class":"si","names":["Hertz"],"printSymbols":["Hz"],"properties":["frequency"],"values":[{"printable":"1","numeric":1}]}}};},
+          "''",
+          { type: "literal", value: "''", description: "\"''\"" },
+          function(u) {return {"value": 1, "units": {"''": 1}, "metadata": {"''":{"isBase":false,"CODE":"''","isMetric":"no","class":"iso1000","names":["second"],"printSymbols":["''"],"properties":["plane angle"],"values":[{"printable":"1","numeric":1}]}}};},
+          "pc",
+          { type: "literal", value: "pc", description: "\"pc\"" },
+          function(u) {return {"value": 1, "units": {"pc": 1}, "metadata": {"pc":{"isBase":false,"CODE":"PRS","isMetric":"yes","class":"iso1000","names":["parsec"],"printSymbols":["pc"],"properties":["length"],"values":[{"printable":"3.085678 &#215; 10<sup>16</sup>","numeric":30856780000000000}]}}};},
+          "eV",
+          { type: "literal", value: "eV", description: "\"eV\"" },
+          function(u) {return {"value": 1, "units": {"eV": 1}, "metadata": {"eV":{"isBase":false,"CODE":"EV","isMetric":"yes","class":"iso1000","names":["electronvolt"],"printSymbols":["eV"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Gy",
+          { type: "literal", value: "Gy", description: "\"Gy\"" },
+          function(u) {return {"value": 1, "units": {"Gy": 1}, "metadata": {"Gy":{"isBase":false,"CODE":"GY","isMetric":"yes","class":"si","names":["Gray"],"printSymbols":["Gy"],"properties":["energy dose"],"values":[{"printable":"1","numeric":1}]}}};},
+          "st",
+          { type: "literal", value: "st", description: "\"st\"" },
+          function(u) {return {"value": 1, "units": {"st": 1}, "metadata": {"st":{"isBase":false,"CODE":"STR","isMetric":"yes","class":"misc","names":["stere"],"printSymbols":["st"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "Sv",
+          { type: "literal", value: "Sv", description: "\"Sv\"" },
+          function(u) {return {"value": 1, "units": {"Sv": 1}, "metadata": {"Sv":{"isBase":false,"CODE":"SV","isMetric":"yes","class":"si","names":["Sievert"],"printSymbols":["Sv"],"properties":["dose equivalent"],"values":[{"printable":"1","numeric":1}]}}};},
+          "ar",
+          { type: "literal", value: "ar", description: "\"ar\"" },
+          function(u) {return {"value": 1, "units": {"ar": 1}, "metadata": {"ar":{"isBase":false,"CODE":"AR","isMetric":"yes","class":"iso1000","names":["are"],"printSymbols":["a"],"properties":["area"],"values":[{"printable":"100","numeric":100}]}}};},
+          "sb",
+          { type: "literal", value: "sb", description: "\"sb\"" },
+          function(u) {return {"value": 1, "units": {"sb": 1}, "metadata": {"sb":{"isBase":false,"CODE":"SB","isMetric":"yes","class":"cgs","names":["stilb"],"printSymbols":["sb"],"properties":["lum. intensity density"],"values":[{"printable":"1","numeric":1}]}}};},
+          "L",
+          { type: "literal", value: "L", description: "\"L\"" },
+          function(u) {return {"value": 1, "units": {"L": 1}, "metadata": {"L":{"isBase":false,"isMetric":"yes","class":"iso1000","names":["liter"],"printSymbols":["L"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "t",
+          { type: "literal", value: "t", description: "\"t\"" },
+          function(u) {return {"value": 1, "units": {"t": 1}, "metadata": {"t":{"isBase":false,"CODE":"TNE","isMetric":"yes","class":"iso1000","names":["tonne"],"printSymbols":["t"],"properties":["mass"],"values":[{"printable":"1 &#215; 10<sup>3</sup>","numeric":1000}]}}};},
+          "u",
+          { type: "literal", value: "u", description: "\"u\"" },
+          function(u) {return {"value": 1, "units": {"u": 1}, "metadata": {"u":{"isBase":false,"CODE":"AMU","isMetric":"yes","class":"iso1000","names":["unified atomic mass unit"],"printSymbols":["u"],"properties":["mass"],"values":[{"printable":"1.6605402 &#215; 10<sup>-24</sup>","numeric":1.6605402e-24}]}}};},
+          "P",
+          { type: "literal", value: "P", description: "\"P\"" },
+          function(u) {return {"value": 1, "units": {"P": 1}, "metadata": {"P":{"isBase":false,"CODE":"P","isMetric":"yes","class":"cgs","names":["Poise"],"printSymbols":["P"],"properties":["dynamic viscosity"],"values":[{"printable":"1","numeric":1}]}}};},
+          "G",
+          { type: "literal", value: "G", description: "\"G\"" },
+          function(u) {return {"value": 1, "units": {"G": 1}, "metadata": {"G":{"isBase":false,"CODE":"GS","isMetric":"yes","class":"cgs","names":["Gauss"],"printSymbols":["Gs"],"properties":["magnetic flux density"],"values":[{"printable":"1 &#215; 10<sup>-4</sup>","numeric":0.0001}]}}};},
+          "R",
+          { type: "literal", value: "R", description: "\"R\"" },
+          function(u) {return {"value": 1, "units": {"R": 1}, "metadata": {"R":{"isBase":false,"CODE":"ROE","isMetric":"yes","class":"cgs","names":["Roentgen"],"printSymbols":["R"],"properties":["ion dose"],"values":[{"printable":"2.58 &#215; 10<sup>-4</sup>","numeric":0.000258}]}}};},
+          "H",
+          { type: "literal", value: "H", description: "\"H\"" },
+          function(u) {return {"value": 1, "units": {"H": 1}, "metadata": {"H":{"isBase":false,"CODE":"H","isMetric":"yes","class":"si","names":["Henry"],"printSymbols":["H"],"properties":["inductance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "T",
+          { type: "literal", value: "T", description: "\"T\"" },
+          function(u) {return {"value": 1, "units": {"T": 1}, "metadata": {"T":{"isBase":false,"CODE":"T","isMetric":"yes","class":"si","names":["Tesla"],"printSymbols":["T"],"properties":["magnetic flux density"],"values":[{"printable":"1","numeric":1}]}}};},
+          "U",
+          { type: "literal", value: "U", description: "\"U\"" },
+          function(u) {return {"value": 1, "units": {"U": 1}, "metadata": {"U":{"isBase":false,"CODE":"U","isMetric":"yes","class":"chemical","names":["Unit"],"printSymbols":["U"],"properties":["catalytic activity"],"values":[{"printable":"1","numeric":1}]}}};},
+          "B",
+          { type: "literal", value: "B", description: "\"B\"" },
+          function(u) {return {"value": 1, "units": {"B": 1}, "metadata": {"B":{"isBase":false,"CODE":"B","isMetric":"yes","isSpecial":"yes","class":"levels","names":["bel"],"printSymbols":["B"],"properties":["level"],"values":[{"printable":"<function name=\"lg\" value=\"1\" Unit=\"1\"/>","numeric":null}]}}};},
+          "S",
+          { type: "literal", value: "S", description: "\"S\"" },
+          function(u) {return {"value": 1, "units": {"S": 1}, "metadata": {"S":{"isBase":false,"CODE":"SIE","isMetric":"yes","class":"si","names":["Siemens"],"printSymbols":["S"],"properties":["electric conductance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "m",
+          { type: "literal", value: "m", description: "\"m\"" },
+          function(u) {return {"value": 1, "units": {"m": 1}, "metadata": {"m":{"isBase":true,"CODE":"M","dim":"L","names":["meter"],"printSymbols":["m"],"properties":["length"]}}};},
+          "s",
+          { type: "literal", value: "s", description: "\"s\"" },
+          function(u) {return {"value": 1, "units": {"s": 1}, "metadata": {"s":{"isBase":true,"CODE":"S","dim":"T","names":["second"],"printSymbols":["s"],"properties":["time"]}}};},
+          "F",
+          { type: "literal", value: "F", description: "\"F\"" },
+          function(u) {return {"value": 1, "units": {"F": 1}, "metadata": {"F":{"isBase":false,"CODE":"F","isMetric":"yes","class":"si","names":["Farad"],"printSymbols":["F"],"properties":["electric capacitance"],"values":[{"printable":"1","numeric":1}]}}};},
+          "l",
+          { type: "literal", value: "l", description: "\"l\"" },
+          function(u) {return {"value": 1, "units": {"l": 1}, "metadata": {"l":{"isBase":false,"CODE":"L","isMetric":"yes","class":"iso1000","names":["liter"],"printSymbols":["l"],"properties":["volume"],"values":[{"printable":"1","numeric":1}]}}};},
+          "V",
+          { type: "literal", value: "V", description: "\"V\"" },
+          function(u) {return {"value": 1, "units": {"V": 1}, "metadata": {"V":{"isBase":false,"CODE":"V","isMetric":"yes","class":"si","names":["Volt"],"printSymbols":["V"],"properties":["electric potential"],"values":[{"printable":"1","numeric":1}]}}};},
+          "A",
+          { type: "literal", value: "A", description: "\"A\"" },
+          function(u) {return {"value": 1, "units": {"A": 1}, "metadata": {"A":{"isBase":false,"CODE":"A","isMetric":"yes","class":"si","names":["Ampère"],"printSymbols":["A"],"properties":["electric current"],"values":[{"printable":"1","numeric":1}]}}};},
+          "W",
+          { type: "literal", value: "W", description: "\"W\"" },
+          function(u) {return {"value": 1, "units": {"W": 1}, "metadata": {"W":{"isBase":false,"CODE":"W","isMetric":"yes","class":"si","names":["Watt"],"printSymbols":["W"],"properties":["power"],"values":[{"printable":"1","numeric":1}]}}};},
+          "K",
+          { type: "literal", value: "K", description: "\"K\"" },
+          function(u) {return {"value": 1, "units": {"K": 1}, "metadata": {"K":{"isBase":true,"CODE":"K","dim":"C","names":["Kelvin"],"printSymbols":["K"],"properties":["temperature"]}}};},
+          "C",
+          { type: "literal", value: "C", description: "\"C\"" },
+          function(u) {return {"value": 1, "units": {"C": 1}, "metadata": {"C":{"isBase":true,"CODE":"C","dim":"Q","names":["Coulomb"],"printSymbols":["C"],"properties":["electric charge"]}}};},
+          "b",
+          { type: "literal", value: "b", description: "\"b\"" },
+          function(u) {return {"value": 1, "units": {"b": 1}, "metadata": {"b":{"isBase":false,"CODE":"BRN","isMetric":"no","class":"misc","names":["barn"],"printSymbols":["b"],"properties":["action area"],"values":[{"printable":"100","numeric":100}]}}};},
+          "%",
+          { type: "literal", value: "%", description: "\"%\"" },
+          function(u) {return {"value": 1, "units": {"%": 1}, "metadata": {"%":{"isBase":false,"CODE":"%","isMetric":"no","class":"dimless","names":["percent"],"printSymbols":["%"],"properties":["fraction"],"values":[{"printable":"1","numeric":1}]}}};},
+          "J",
+          { type: "literal", value: "J", description: "\"J\"" },
+          function(u) {return {"value": 1, "units": {"J": 1}, "metadata": {"J":{"isBase":false,"CODE":"J","isMetric":"yes","class":"si","names":["Joule"],"printSymbols":["J"],"properties":["energy"],"values":[{"printable":"1","numeric":1}]}}};},
+          "'",
+          { type: "literal", value: "'", description: "\"'\"" },
+          function(u) {return {"value": 1, "units": {"'": 1}, "metadata": {"'":{"isBase":false,"CODE":"'","isMetric":"no","class":"iso1000","names":["minute"],"printSymbols":["'"],"properties":["plane angle"],"values":[{"printable":"1","numeric":1}]}}};},
+          "h",
+          { type: "literal", value: "h", description: "\"h\"" },
+          function(u) {return {"value": 1, "units": {"h": 1}, "metadata": {"h":{"isBase":false,"CODE":"HR","isMetric":"no","class":"iso1000","names":["hour"],"printSymbols":["h"],"properties":["time"],"values":[{"printable":"60","numeric":60}]}}};},
+          "d",
+          { type: "literal", value: "d", description: "\"d\"" },
+          function(u) {return {"value": 1, "units": {"d": 1}, "metadata": {"d":{"isBase":false,"CODE":"D","isMetric":"no","class":"iso1000","names":["day"],"printSymbols":["d"],"properties":["time"],"values":[{"printable":"24","numeric":24}]}}};},
+          "N",
+          { type: "literal", value: "N", description: "\"N\"" },
+          function(u) {return {"value": 1, "units": {"N": 1}, "metadata": {"N":{"isBase":false,"CODE":"N","isMetric":"yes","class":"si","names":["Newton"],"printSymbols":["N"],"properties":["force"],"values":[{"printable":"1","numeric":1}]}}};},
+          "a",
+          { type: "literal", value: "a", description: "\"a\"" },
+          function(u) {return {"value": 1, "units": {"a": 1}, "metadata": {"a":{"isBase":false,"CODE":"ANN","isMetric":"no","class":"iso1000","names":["year"],"printSymbols":["a"],"properties":["time"],"values":[{"printable":"1","numeric":1}]}}};},
+          "g",
+          { type: "literal", value: "g", description: "\"g\"" },
+          function(u) {return {"value": 1, "units": {"g": 1}, "metadata": {"g":{"isBase":true,"CODE":"G","dim":"M","names":["gram"],"printSymbols":["g"],"properties":["mass"]}}};},
+          "Y",
+          { type: "literal", value: "Y", description: "\"Y\"" },
+          "Z",
+          { type: "literal", value: "Z", description: "\"Z\"" },
+          "E",
+          { type: "literal", value: "E", description: "\"E\"" },
+          "M",
+          { type: "literal", value: "M", description: "\"M\"" },
+          "k",
+          { type: "literal", value: "k", description: "\"k\"" },
+          "da",
+          { type: "literal", value: "da", description: "\"da\"" },
+          "c",
+          { type: "literal", value: "c", description: "\"c\"" },
+          "n",
+          { type: "literal", value: "n", description: "\"n\"" },
+          "p",
+          { type: "literal", value: "p", description: "\"p\"" },
+          "f",
+          { type: "literal", value: "f", description: "\"f\"" },
+          "z",
+          { type: "literal", value: "z", description: "\"z\"" },
+          "y",
+          { type: "literal", value: "y", description: "\"y\"" },
+          "Ki",
+          { type: "literal", value: "Ki", description: "\"Ki\"" },
+          "Mi",
+          { type: "literal", value: "Mi", description: "\"Mi\"" },
+          "Gi",
+          { type: "literal", value: "Gi", description: "\"Gi\"" },
+          "Ti",
+          { type: "literal", value: "Ti", description: "\"Ti\"" }
+        ],
+
+        peg$bytecode = [
+          peg$decode("!7!+' 4!6 !! %"),
+          peg$decode("!.\"\"\"2\"3#+2$7#+(%4\"6$\"! %$\"# !\"# !*# \"7#"),
+          peg$decode("!.%\"\"2%3&+-$7$+#%'\"%$\"# !\"# !*> \"!.\"\"\"2\"3#+-$7$+#%'\"%$\"# !\"# !"),
+          peg$decode("!7$+;$ '7\",#&7\"\"+)%4\"6(\"\"! %$\"# !\"# !"),
+          peg$decode("!7%+c$7&*# \" )+S% '7),#&7)\"+A%56* \"\"!)##\" !\" ++)%4$6,$\"#\"%$$# !$## !$\"# !\"# !*E \"!7(+:$ '7),#&7)\"+(%4\"6-\"!!%$\"# !\"# !"),
+          peg$decode("!7'+' 4!6.!! %*Y \"!./\"\"2/30+B$7#+8%.1\"\"2132+(%4#63#!!%$## !$\"# !\"# !*# \"7)"),
+          peg$decode("!04\"\"1!35*# \" )+3$7(+)%4\"66\"\"! %$\"# !\"# !"),
+          peg$decode("!7+*# \" )+K$7*+A%567 \"! )##\" !\" ++)%4#68#\"\"!%$## !$\"# !\"# !*# \"7*"),
+          peg$decode("! '09\"\"1!3:+,$,)&09\"\"1!3:\"\"\" !+i$.;\"\"2;3<*# \" )+S%7&*# \" )+C%56= #\"! )##\" !\" ++*%4$6>$##\"!%$$# !$## !$\"# !\"# !"),
+          peg$decode("!.?\"\"2?3@+t$ '0A\"\"1!3B+,$,)&0A\"\"1!3B\"\"\" !+O%.C\"\"2C3D+?%56E !!)##\" !\" ++(%4$6F$!\"%$$# !$## !$\"# !\"# !"),
+          peg$decode("!.G\"\"2G3H+' 4!6I!! %*\u1CCD \"!.J\"\"2J3K+' 4!6L!! %*\u1CB5 \"!.M\"\"2M3N+' 4!6O!! %*\u1C9D \"!.P\"\"2P3Q+' 4!6R!! %*\u1C85 \"!.S\"\"2S3T+' 4!6U!! %*\u1C6D \"!.V\"\"2V3W+' 4!6X!! %*\u1C55 \"!.Y\"\"2Y3Z+' 4!6[!! %*\u1C3D \"!.\\\"\"2\\3]+' 4!6^!! %*\u1C25 \"!._\"\"2_3`+' 4!6a!! %*\u1C0D \"!.b\"\"2b3c+' 4!6d!! %*\u1BF5 \"!.e\"\"2e3f+' 4!6g!! %*\u1BDD \"!.h\"\"2h3i+' 4!6j!! %*\u1BC5 \"!.k\"\"2k3l+' 4!6m!! %*\u1BAD \"!.n\"\"2n3o+' 4!6p!! %*\u1B95 \"!.q\"\"2q3r+' 4!6s!! %*\u1B7D \"!.t\"\"2t3u+' 4!6v!! %*\u1B65 \"!.w\"\"2w3x+' 4!6y!! %*\u1B4D \"!.z\"\"2z3{+' 4!6|!! %*\u1B35 \"!.}\"\"2}3~+' 4!6!! %*\u1B1D \"!.\x80\"\"2\x803\x81+' 4!6\x82!! %*\u1B05 \"!.\x83\"\"2\x833\x84+' 4!6\x85!! %*\u1AED \"!.\x86\"\"2\x863\x87+' 4!6\x88!! %*\u1AD5 \"!.\x89\"\"2\x893\x8A+' 4!6\x8B!! %*\u1ABD \"!.\x8C\"\"2\x8C3\x8D+' 4!6\x8E!! %*\u1AA5 \"!.\x8F\"\"2\x8F3\x90+' 4!6\x91!! %*\u1A8D \"!.\x92\"\"2\x923\x93+' 4!6\x94!! %*\u1A75 \"!.\x95\"\"2\x953\x96+' 4!6\x97!! %*\u1A5D \"!.\x98\"\"2\x983\x99+' 4!6\x9A!! %*\u1A45 \"!.\x9B\"\"2\x9B3\x9C+' 4!6\x9D!! %*\u1A2D \"!.\x9E\"\"2\x9E3\x9F+' 4!6\xA0!! %*\u1A15 \"!.\xA1\"\"2\xA13\xA2+' 4!6\xA3!! %*\u19FD \"!.\xA4\"\"2\xA43\xA5+' 4!6\xA6!! %*\u19E5 \"!.\xA7\"\"2\xA73\xA8+' 4!6\xA9!! %*\u19CD \"!.\xAA\"\"2\xAA3\xAB+' 4!6\xAC!! %*\u19B5 \"!.\xAD\"\"2\xAD3\xAE+' 4!6\xAF!! %*\u199D \"!.\xB0\"\"2\xB03\xB1+' 4!6\xB2!! %*\u1985 \"!.\xB3\"\"2\xB33\xB4+' 4!6\xB5!! %*\u196D \"!.\xB6\"\"2\xB63\xB7+' 4!6\xB8!! %*\u1955 \"!.\xB9\"\"2\xB93\xBA+' 4!6\xBB!! %*\u193D \"!.\xBC\"\"2\xBC3\xBD+' 4!6\xBE!! %*\u1925 \"!.\xBF\"\"2\xBF3\xC0+' 4!6\xC1!! %*\u190D \"!.\xC2\"\"2\xC23\xC3+' 4!6\xC4!! %*\u18F5 \"!.\xC5\"\"2\xC53\xC6+' 4!6\xC7!! %*\u18DD \"!.\xC8\"\"2\xC83\xC9+' 4!6\xCA!! %*\u18C5 \"!.\xCB\"\"2\xCB3\xCC+' 4!6\xCD!! %*\u18AD \"!.\xCE\"\"2\xCE3\xCF+' 4!6\xD0!! %*\u1895 \"!.\xD1\"\"2\xD13\xD2+' 4!6\xD3!! %*\u187D \"!.\xD4\"\"2\xD43\xD5+' 4!6\xD6!! %*\u1865 \"!.\xD7\"\"2\xD73\xD8+' 4!6\xD9!! %*\u184D \"!.\xDA\"\"2\xDA3\xDB+' 4!6\xDC!! %*\u1835 \"!.\xDD\"\"2\xDD3\xDE+' 4!6\xDF!! %*\u181D \"!.\xE0\"\"2\xE03\xE1+' 4!6\xE2!! %*\u1805 \"!.\xE3\"\"2\xE33\xE4+' 4!6\xE5!! %*\u17ED \"!.\xE6\"\"2\xE63\xE7+' 4!6\xE8!! %*\u17D5 \"!.\xE9\"\"2\xE93\xEA+' 4!6\xEB!! %*\u17BD \"!.\xEC\"\"2\xEC3\xED+' 4!6\xEE!! %*\u17A5 \"!.\xEF\"\"2\xEF3\xF0+' 4!6\xF1!! %*\u178D \"!.\xF2\"\"2\xF23\xF3+' 4!6\xF4!! %*\u1775 \"!.\xF5\"\"2\xF53\xF6+' 4!6\xF7!! %*\u175D \"!.\xF8\"\"2\xF83\xF9+' 4!6\xFA!! %*\u1745 \"!.\xFB\"\"2\xFB3\xFC+' 4!6\xFD!! %*\u172D \"!.\xFE\"\"2\xFE3\xFF+' 4!6\u0100!! %*\u1715 \"!.\u0101\"\"2\u01013\u0102+' 4!6\u0103!! %*\u16FD \"!.\u0104\"\"2\u01043\u0105+' 4!6\u0106!! %*\u16E5 \"!.\u0107\"\"2\u01073\u0108+' 4!6\u0109!! %*\u16CD \"!.\u010A\"\"2\u010A3\u010B+' 4!6\u010C!! %*\u16B5 \"!.\u010D\"\"2\u010D3\u010E+' 4!6\u010F!! %*\u169D \"!.\u0110\"\"2\u01103\u0111+' 4!6\u0112!! %*\u1685 \"!.\u0113\"\"2\u01133\u0114+' 4!6\u0115!! %*\u166D \"!.\u0116\"\"2\u01163\u0117+' 4!6\u0118!! %*\u1655 \"!.\u0119\"\"2\u01193\u011A+' 4!6\u011B!! %*\u163D \"!.\u011C\"\"2\u011C3\u011D+' 4!6\u011E!! %*\u1625 \"!.\u011F\"\"2\u011F3\u0120+' 4!6\u0121!! %*\u160D \"!.\u0122\"\"2\u01223\u0123+' 4!6\u0124!! %*\u15F5 \"!.\u0125\"\"2\u01253\u0126+' 4!6\u0127!! %*\u15DD \"!.\u0128\"\"2\u01283\u0129+' 4!6\u012A!! %*\u15C5 \"!.\u012B\"\"2\u012B3\u012C+' 4!6\u012D!! %*\u15AD \"!.\u012E\"\"2\u012E3\u012F+' 4!6\u0130!! %*\u1595 \"!.\u0131\"\"2\u01313\u0132+' 4!6\u0133!! %*\u157D \"!.\u0134\"\"2\u01343\u0135+' 4!6\u0136!! %*\u1565 \"!.\u0137\"\"2\u01373\u0138+' 4!6\u0139!! %*\u154D \"!.\u013A\"\"2\u013A3\u013B+' 4!6\u013C!! %*\u1535 \"!.\u013D\"\"2\u013D3\u013E+' 4!6\u013F!! %*\u151D \"!.\u0140\"\"2\u01403\u0141+' 4!6\u0142!! %*\u1505 \"!.\u0143\"\"2\u01433\u0144+' 4!6\u0145!! %*\u14ED \"!.\u0146\"\"2\u01463\u0147+' 4!6\u0148!! %*\u14D5 \"!.\u0149\"\"2\u01493\u014A+' 4!6\u014B!! %*\u14BD \"!.\u014C\"\"2\u014C3\u014D+' 4!6\u014E!! %*\u14A5 \"!.\u014F\"\"2\u014F3\u0150+' 4!6\u0151!! %*\u148D \"!.\u0152\"\"2\u01523\u0153+' 4!6\u0154!! %*\u1475 \"!.\u0155\"\"2\u01553\u0156+' 4!6\u0157!! %*\u145D \"!.\u0158\"\"2\u01583\u0159+' 4!6\u015A!! %*\u1445 \"!.\u015B\"\"2\u015B3\u015C+' 4!6\u015D!! %*\u142D \"!.\u015E\"\"2\u015E3\u015F+' 4!6\u0160!! %*\u1415 \"!.\u0161\"\"2\u01613\u0162+' 4!6\u0163!! %*\u13FD \"!.\u0164\"\"2\u01643\u0165+' 4!6\u0166!! %*\u13E5 \"!.\u0167\"\"2\u01673\u0168+' 4!6\u0169!! %*\u13CD \"!.\u016A\"\"2\u016A3\u016B+' 4!6\u016C!! %*\u13B5 \"!.\u016D\"\"2\u016D3\u016E+' 4!6\u016F!! %*\u139D \"!.\u0170\"\"2\u01703\u0171+' 4!6\u0172!! %*\u1385 \"!.\u0173\"\"2\u01733\u0174+' 4!6\u0175!! %*\u136D \"!.\u0176\"\"2\u01763\u0177+' 4!6\u0178!! %*\u1355 \"!.\u0179\"\"2\u01793\u017A+' 4!6\u017B!! %*\u133D \"!.\u017C\"\"2\u017C3\u017D+' 4!6\u017E!! %*\u1325 \"!.\u017F\"\"2\u017F3\u0180+' 4!6\u0181!! %*\u130D \"!.\u0182\"\"2\u01823\u0183+' 4!6\u0184!! %*\u12F5 \"!.\u0185\"\"2\u01853\u0186+' 4!6\u0187!! %*\u12DD \"!.\u0188\"\"2\u01883\u0189+' 4!6\u018A!! %*\u12C5 \"!.\u018B\"\"2\u018B3\u018C+' 4!6\u018D!! %*\u12AD \"!.\u018E\"\"2\u018E3\u018F+' 4!6\u0190!! %*\u1295 \"!.\u0191\"\"2\u01913\u0192+' 4!6\u0193!! %*\u127D \"!.\u0194\"\"2\u01943\u0195+' 4!6\u0196!! %*\u1265 \"!.\u0197\"\"2\u01973\u0198+' 4!6\u0199!! %*\u124D \"!.\u019A\"\"2\u019A3\u019B+' 4!6\u019C!! %*\u1235 \"!.\u019D\"\"2\u019D3\u019E+' 4!6\u019F!! %*\u121D \"!.\u01A0\"\"2\u01A03\u01A1+' 4!6\u01A2!! %*\u1205 \"!.\u01A3\"\"2\u01A33\u01A4+' 4!6\u01A5!! %*\u11ED \"!.\u01A6\"\"2\u01A63\u01A7+' 4!6\u01A8!! %*\u11D5 \"!.\u01A9\"\"2\u01A93\u01AA+' 4!6\u01AB!! %*\u11BD \"!.\u01AC\"\"2\u01AC3\u01AD+' 4!6\u01AE!! %*\u11A5 \"!.\u01AF\"\"2\u01AF3\u01B0+' 4!6\u01B1!! %*\u118D \"!.\u01B2\"\"2\u01B23\u01B3+' 4!6\u01B4!! %*\u1175 \"!.\u01B5\"\"2\u01B53\u01B6+' 4!6\u01B7!! %*\u115D \"!.\u01B8\"\"2\u01B83\u01B9+' 4!6\u01BA!! %*\u1145 \"!.\u01BB\"\"2\u01BB3\u01BC+' 4!6\u01BD!! %*\u112D \"!.\u01BE\"\"2\u01BE3\u01BF+' 4!6\u01C0!! %*\u1115 \"!.\u01C1\"\"2\u01C13\u01C2+' 4!6\u01C3!! %*\u10FD \"!.\u01C4\"\"2\u01C43\u01C5+' 4!6\u01C6!! %*\u10E5 \"!.\u01C7\"\"2\u01C73\u01C8+' 4!6\u01C9!! %*\u10CD \"!.\u01CA\"\"2\u01CA3\u01CB+' 4!6\u01CC!! %*\u10B5 \"!.\u01CD\"\"2\u01CD3\u01CE+' 4!6\u01CF!! %*\u109D \"!.\u01D0\"\"2\u01D03\u01D1+' 4!6\u01D2!! %*\u1085 \"!.\u01D3\"\"2\u01D33\u01D4+' 4!6\u01D5!! %*\u106D \"!.\u01D6\"\"2\u01D63\u01D7+' 4!6\u01D8!! %*\u1055 \"!.\u01D9\"\"2\u01D93\u01DA+' 4!6\u01DB!! %*\u103D \"!.\u01DC\"\"2\u01DC3\u01DD+' 4!6\u01DE!! %*\u1025 \"!.\u01DF\"\"2\u01DF3\u01E0+' 4!6\u01E1!! %*\u100D \"!.\u01E2\"\"2\u01E23\u01E3+' 4!6\u01E4!! %*\u0FF5 \"!.\u01E5\"\"2\u01E53\u01E6+' 4!6\u01E7!! %*\u0FDD \"!.\u01E8\"\"2\u01E83\u01E9+' 4!6\u01EA!! %*\u0FC5 \"!.\u01EB\"\"2\u01EB3\u01EC+' 4!6\u01ED!! %*\u0FAD \"!.\u01EE\"\"2\u01EE3\u01EF+' 4!6\u01F0!! %*\u0F95 \"!.\u01F1\"\"2\u01F13\u01F2+' 4!6\u01F3!! %*\u0F7D \"!.\u01F4\"\"2\u01F43\u01F5+' 4!6\u01F6!! %*\u0F65 \"!.\u01F7\"\"2\u01F73\u01F8+' 4!6\u01F9!! %*\u0F4D \"!.\u01FA\"\"2\u01FA3\u01FB+' 4!6\u01FC!! %*\u0F35 \"!.\u01FD\"\"2\u01FD3\u01FE+' 4!6\u01FF!! %*\u0F1D \"!.\u0200\"\"2\u02003\u0201+' 4!6\u0202!! %*\u0F05 \"!.\u0203\"\"2\u02033\u0204+' 4!6\u0205!! %*\u0EED \"!.\u0206\"\"2\u02063\u0207+' 4!6\u0208!! %*\u0ED5 \"!.\u0209\"\"2\u02093\u020A+' 4!6\u020B!! %*\u0EBD \"!.\u020C\"\"2\u020C3\u020D+' 4!6\u020E!! %*\u0EA5 \"!.\u020F\"\"2\u020F3\u0210+' 4!6\u0211!! %*\u0E8D \"!.\u0212\"\"2\u02123\u0213+' 4!6\u0214!! %*\u0E75 \"!.\u0215\"\"2\u02153\u0216+' 4!6\u0217!! %*\u0E5D \"!.\u0218\"\"2\u02183\u0219+' 4!6\u021A!! %*\u0E45 \"!.\u021B\"\"2\u021B3\u021C+' 4!6\u021D!! %*\u0E2D \"!.\u021E\"\"2\u021E3\u021F+' 4!6\u0220!! %*\u0E15 \"!.\u0221\"\"2\u02213\u0222+' 4!6\u0223!! %*\u0DFD \"!.\u0224\"\"2\u02243\u0225+' 4!6\u0226!! %*\u0DE5 \"!.\u0227\"\"2\u02273\u0228+' 4!6\u0229!! %*\u0DCD \"!.\u022A\"\"2\u022A3\u022B+' 4!6\u022C!! %*\u0DB5 \"!.\u022D\"\"2\u022D3\u022E+' 4!6\u022F!! %*\u0D9D \"!.\u0230\"\"2\u02303\u0231+' 4!6\u0232!! %*\u0D85 \"!.\u0233\"\"2\u02333\u0234+' 4!6\u0235!! %*\u0D6D \"!.\u0236\"\"2\u02363\u0237+' 4!6\u0238!! %*\u0D55 \"!.\u0239\"\"2\u02393\u023A+' 4!6\u023B!! %*\u0D3D \"!.\u023C\"\"2\u023C3\u023D+' 4!6\u023E!! %*\u0D25 \"!.\u023F\"\"2\u023F3\u0240+' 4!6\u0241!! %*\u0D0D \"!.\u0242\"\"2\u02423\u0243+' 4!6\u0244!! %*\u0CF5 \"!.\u0245\"\"2\u02453\u0246+' 4!6\u0247!! %*\u0CDD \"!.\u0248\"\"2\u02483\u0249+' 4!6\u024A!! %*\u0CC5 \"!.\u024B\"\"2\u024B3\u024C+' 4!6\u024D!! %*\u0CAD \"!.\u024E\"\"2\u024E3\u024F+' 4!6\u0250!! %*\u0C95 \"!.\u0251\"\"2\u02513\u0252+' 4!6\u0253!! %*\u0C7D \"!.\u0254\"\"2\u02543\u0255+' 4!6\u0256!! %*\u0C65 \"!.\u0257\"\"2\u02573\u0258+' 4!6\u0259!! %*\u0C4D \"!.\u025A\"\"2\u025A3\u025B+' 4!6\u025C!! %*\u0C35 \"!.\u025D\"\"2\u025D3\u025E+' 4!6\u025F!! %*\u0C1D \"!.\u0260\"\"2\u02603\u0261+' 4!6\u0262!! %*\u0C05 \"!.\u0263\"\"2\u02633\u0264+' 4!6\u0265!! %*\u0BED \"!.\u0266\"\"2\u02663\u0267+' 4!6\u0268!! %*\u0BD5 \"!.\u0269\"\"2\u02693\u026A+' 4!6\u026B!! %*\u0BBD \"!.\u026C\"\"2\u026C3\u026D+' 4!6\u026E!! %*\u0BA5 \"!.\u026F\"\"2\u026F3\u0270+' 4!6\u0271!! %*\u0B8D \"!.\u0272\"\"2\u02723\u0273+' 4!6\u0274!! %*\u0B75 \"!.\u0275\"\"2\u02753\u0276+' 4!6\u0277!! %*\u0B5D \"!.\u0278\"\"2\u02783\u0279+' 4!6\u027A!! %*\u0B45 \"!.\u027B\"\"2\u027B3\u027C+' 4!6\u027D!! %*\u0B2D \"!.\u027E\"\"2\u027E3\u027F+' 4!6\u0280!! %*\u0B15 \"!.\u0281\"\"2\u02813\u0282+' 4!6\u0283!! %*\u0AFD \"!.\u0284\"\"2\u02843\u0285+' 4!6\u0286!! %*\u0AE5 \"!.\u0287\"\"2\u02873\u0288+' 4!6\u0289!! %*\u0ACD \"!.\u028A\"\"2\u028A3\u028B+' 4!6\u028C!! %*\u0AB5 \"!.\u028D\"\"2\u028D3\u028E+' 4!6\u028F!! %*\u0A9D \"!.\u0290\"\"2\u02903\u0291+' 4!6\u0292!! %*\u0A85 \"!.\u0293\"\"2\u02933\u0294+' 4!6\u0295!! %*\u0A6D \"!.\u0296\"\"2\u02963\u0297+' 4!6\u0298!! %*\u0A55 \"!.\u0299\"\"2\u02993\u029A+' 4!6\u029B!! %*\u0A3D \"!.\u029C\"\"2\u029C3\u029D+' 4!6\u029E!! %*\u0A25 \"!.\u029F\"\"2\u029F3\u02A0+' 4!6\u02A1!! %*\u0A0D \"!.\u02A2\"\"2\u02A23\u02A3+' 4!6\u02A4!! %*\u09F5 \"!.\u02A5\"\"2\u02A53\u02A6+' 4!6\u02A7!! %*\u09DD \"!.\u02A8\"\"2\u02A83\u02A9+' 4!6\u02AA!! %*\u09C5 \"!.\u02AB\"\"2\u02AB3\u02AC+' 4!6\u02AD!! %*\u09AD \"!.\u02AE\"\"2\u02AE3\u02AF+' 4!6\u02B0!! %*\u0995 \"!.\u02B1\"\"2\u02B13\u02B2+' 4!6\u02B3!! %*\u097D \"!.\u02B4\"\"2\u02B43\u02B5+' 4!6\u02B6!! %*\u0965 \"!.\u02B7\"\"2\u02B73\u02B8+' 4!6\u02B9!! %*\u094D \"!.\u02BA\"\"2\u02BA3\u02BB+' 4!6\u02BC!! %*\u0935 \"!.\u02BD\"\"2\u02BD3\u02BE+' 4!6\u02BF!! %*\u091D \"!.\u02C0\"\"2\u02C03\u02C1+' 4!6\u02C2!! %*\u0905 \"!.\u02C3\"\"2\u02C33\u02C4+' 4!6\u02C5!! %*\u08ED \"!.\u02C6\"\"2\u02C63\u02C7+' 4!6\u02C8!! %*\u08D5 \"!.\u02C9\"\"2\u02C93\u02CA+' 4!6\u02CB!! %*\u08BD \"!.\u02CC\"\"2\u02CC3\u02CD+' 4!6\u02CE!! %*\u08A5 \"!.\u02CF\"\"2\u02CF3\u02D0+' 4!6\u02D1!! %*\u088D \"!.\u02D2\"\"2\u02D23\u02D3+' 4!6\u02D4!! %*\u0875 \"!.\u02D5\"\"2\u02D53\u02D6+' 4!6\u02D7!! %*\u085D \"!.\u02D8\"\"2\u02D83\u02D9+' 4!6\u02DA!! %*\u0845 \"!.\u02DB\"\"2\u02DB3\u02DC+' 4!6\u02DD!! %*\u082D \"!.\u02DE\"\"2\u02DE3\u02DF+' 4!6\u02E0!! %*\u0815 \"!.\u02E1\"\"2\u02E13\u02E2+' 4!6\u02E3!! %*\u07FD \"!.\u02E4\"\"2\u02E43\u02E5+' 4!6\u02E6!! %*\u07E5 \"!.\u02E7\"\"2\u02E73\u02E8+' 4!6\u02E9!! %*\u07CD \"!.\u02EA\"\"2\u02EA3\u02EB+' 4!6\u02EC!! %*\u07B5 \"!.\u02ED\"\"2\u02ED3\u02EE+' 4!6\u02EF!! %*\u079D \"!.\u02F0\"\"2\u02F03\u02F1+' 4!6\u02F2!! %*\u0785 \"!.\u02F3\"\"2\u02F33\u02F4+' 4!6\u02F5!! %*\u076D \"!.\u02F6\"\"2\u02F63\u02F7+' 4!6\u02F8!! %*\u0755 \"!.\u02F9\"\"2\u02F93\u02FA+' 4!6\u02FB!! %*\u073D \"!.\u02FC\"\"2\u02FC3\u02FD+' 4!6\u02FE!! %*\u0725 \"!.\u02FF\"\"2\u02FF3\u0300+' 4!6\u0301!! %*\u070D \"!.\u0302\"\"2\u03023\u0303+' 4!6\u0304!! %*\u06F5 \"!.\u0305\"\"2\u03053\u0306+' 4!6\u0307!! %*\u06DD \"!.\u0308\"\"2\u03083\u0309+' 4!6\u030A!! %*\u06C5 \"!.\u030B\"\"2\u030B3\u030C+' 4!6\u030D!! %*\u06AD \"!.\u030E\"\"2\u030E3\u030F+' 4!6\u0310!! %*\u0695 \"!.\u0311\"\"2\u03113\u0312+' 4!6\u0313!! %*\u067D \"!.\u0314\"\"2\u03143\u0315+' 4!6\u0316!! %*\u0665 \"!.\u0317\"\"2\u03173\u0318+' 4!6\u0319!! %*\u064D \"!.\u031A\"\"2\u031A3\u031B+' 4!6\u031C!! %*\u0635 \"!.\u031D\"\"2\u031D3\u031E+' 4!6\u031F!! %*\u061D \"!.\u0320\"\"2\u03203\u0321+' 4!6\u0322!! %*\u0605 \"!.\u0323\"\"2\u03233\u0324+' 4!6\u0325!! %*\u05ED \"!.\u0326\"\"2\u03263\u0327+' 4!6\u0328!! %*\u05D5 \"!.\u0329\"\"2\u03293\u032A+' 4!6\u032B!! %*\u05BD \"!.\u032C\"\"2\u032C3\u032D+' 4!6\u032E!! %*\u05A5 \"!.\u032F\"\"2\u032F3\u0330+' 4!6\u0331!! %*\u058D \"!.\u0332\"\"2\u03323\u0333+' 4!6\u0334!! %*\u0575 \"!.\u0335\"\"2\u03353\u0336+' 4!6\u0337!! %*\u055D \"!.\u0338\"\"2\u03383\u0339+' 4!6\u033A!! %*\u0545 \"!.\u033B\"\"2\u033B3\u033C+' 4!6\u033D!! %*\u052D \"!.\u033E\"\"2\u033E3\u033F+' 4!6\u0340!! %*\u0515 \"!.\u0341\"\"2\u03413\u0342+' 4!6\u0343!! %*\u04FD \"!.\u0344\"\"2\u03443\u0345+' 4!6\u0346!! %*\u04E5 \"!.\u0347\"\"2\u03473\u0348+' 4!6\u0349!! %*\u04CD \"!.\u034A\"\"2\u034A3\u034B+' 4!6\u034C!! %*\u04B5 \"!.\u034D\"\"2\u034D3\u034E+' 4!6\u034F!! %*\u049D \"!.\u0350\"\"2\u03503\u0351+' 4!6\u0352!! %*\u0485 \"!.\u0353\"\"2\u03533\u0354+' 4!6\u0355!! %*\u046D \"!.\u0356\"\"2\u03563\u0357+' 4!6\u0358!! %*\u0455 \"!.\u0359\"\"2\u03593\u035A+' 4!6\u035B!! %*\u043D \"!.\u035C\"\"2\u035C3\u035D+' 4!6\u035E!! %*\u0425 \"!.\u035F\"\"2\u035F3\u0360+' 4!6\u0361!! %*\u040D \"!.\u0362\"\"2\u03623\u0363+' 4!6\u0364!! %*\u03F5 \"!.\u0365\"\"2\u03653\u0366+' 4!6\u0367!! %*\u03DD \"!.\u0368\"\"2\u03683\u0369+' 4!6\u036A!! %*\u03C5 \"!.\u036B\"\"2\u036B3\u036C+' 4!6\u036D!! %*\u03AD \"!.\u036E\"\"2\u036E3\u036F+' 4!6\u0370!! %*\u0395 \"!.\u0371\"\"2\u03713\u0372+' 4!6\u0373!! %*\u037D \"!.\u0374\"\"2\u03743\u0375+' 4!6\u0376!! %*\u0365 \"!.\u0377\"\"2\u03773\u0378+' 4!6\u0379!! %*\u034D \"!.\u037A\"\"2\u037A3\u037B+' 4!6\u037C!! %*\u0335 \"!.\u037D\"\"2\u037D3\u037E+' 4!6\u037F!! %*\u031D \"!.\u0380\"\"2\u03803\u0381+' 4!6\u0382!! %*\u0305 \"!.\u0383\"\"2\u03833\u0384+' 4!6\u0385!! %*\u02ED \"!.\u0386\"\"2\u03863\u0387+' 4!6\u0388!! %*\u02D5 \"!.\u0389\"\"2\u03893\u038A+' 4!6\u038B!! %*\u02BD \"!.\u038C\"\"2\u038C3\u038D+' 4!6\u038E!! %*\u02A5 \"!.\u038F\"\"2\u038F3\u0390+' 4!6\u0391!! %*\u028D \"!.\u0392\"\"2\u03923\u0393+' 4!6\u0394!! %*\u0275 \"!.\u0395\"\"2\u03953\u0396+' 4!6\u0397!! %*\u025D \"!.\u0398\"\"2\u03983\u0399+' 4!6\u039A!! %*\u0245 \"!.\u039B\"\"2\u039B3\u039C+' 4!6\u039D!! %*\u022D \"!.\u039E\"\"2\u039E3\u039F+' 4!6\u03A0!! %*\u0215 \"!.\u03A1\"\"2\u03A13\u03A2+' 4!6\u03A3!! %*\u01FD \"!.\u03A4\"\"2\u03A43\u03A5+' 4!6\u03A6!! %*\u01E5 \"!.\u03A7\"\"2\u03A73\u03A8+' 4!6\u03A9!! %*\u01CD \"!.\u03AA\"\"2\u03AA3\u03AB+' 4!6\u03AC!! %*\u01B5 \"!.\u03AD\"\"2\u03AD3\u03AE+' 4!6\u03AF!! %*\u019D \"!.\u03B0\"\"2\u03B03\u03B1+' 4!6\u03B2!! %*\u0185 \"!.\u03B3\"\"2\u03B33\u03B4+' 4!6\u03B5!! %*\u016D \"!.\u03B6\"\"2\u03B63\u03B7+' 4!6\u03B8!! %*\u0155 \"!.\u03B9\"\"2\u03B93\u03BA+' 4!6\u03BB!! %*\u013D \"!.\u03BC\"\"2\u03BC3\u03BD+' 4!6\u03BE!! %*\u0125 \"!.\u03BF\"\"2\u03BF3\u03C0+' 4!6\u03C1!! %*\u010D \"!.\u03C2\"\"2\u03C23\u03C3+' 4!6\u03C4!! %*\xF5 \"!.\u03C5\"\"2\u03C53\u03C6+' 4!6\u03C7!! %*\xDD \"!.\u03C8\"\"2\u03C83\u03C9+' 4!6\u03CA!! %*\xC5 \"!.\u03CB\"\"2\u03CB3\u03CC+' 4!6\u03CD!! %*\xAD \"!.\u03CE\"\"2\u03CE3\u03CF+' 4!6\u03D0!! %*\x95 \"!.\u03D1\"\"2\u03D13\u03D2+' 4!6\u03D3!! %*} \"!.\u03D4\"\"2\u03D43\u03D5+' 4!6\u03D6!! %*e \"!.\u03D7\"\"2\u03D73\u03D8+' 4!6\u03D9!! %*M \"!.\u03DA\"\"2\u03DA3\u03DB+' 4!6\u03DC!! %*5 \"!.\u03DD\"\"2\u03DD3\u03DE+' 4!6\u03DF!! %"),
+          peg$decode(".\u03E0\"\"2\u03E03\u03E1*\u0131 \".\u03E2\"\"2\u03E23\u03E3*\u0125 \".\u03E4\"\"2\u03E43\u03E5*\u0119 \".\u0392\"\"2\u03923\u0393*\u010D \".\u039E\"\"2\u039E3\u039F*\u0101 \".\u0395\"\"2\u03953\u0396*\xF5 \".\u03E6\"\"2\u03E63\u03E7*\xE9 \".\u03E8\"\"2\u03E83\u03E9*\xDD \".\u03D1\"\"2\u03D13\u03D2*\xD1 \".\u03EA\"\"2\u03EA3\u03EB*\xC5 \".\u03D4\"\"2\u03D43\u03D5*\xB9 \".\u03EC\"\"2\u03EC3\u03ED*\xAD \".\u03AA\"\"2\u03AA3\u03AB*\xA1 \".\u038F\"\"2\u038F3\u0390*\x95 \".\u03EE\"\"2\u03EE3\u03EF*\x89 \".\u03F0\"\"2\u03F03\u03F1*} \".\u03F2\"\"2\u03F23\u03F3*q \".\u03DA\"\"2\u03DA3\u03DB*e \".\u03F4\"\"2\u03F43\u03F5*Y \".\u03F6\"\"2\u03F63\u03F7*M \".\u03F8\"\"2\u03F83\u03F9*A \".\u03FA\"\"2\u03FA3\u03FB*5 \".\u03FC\"\"2\u03FC3\u03FD*) \".\u03FE\"\"2\u03FE3\u03FF")
+        ],
+
+        peg$currPos          = 0,
+        peg$reportedPos      = 0,
+        peg$cachedPos        = 0,
+        peg$cachedPosDetails = { line: 1, column: 1, seenCR: false },
+        peg$maxFailPos       = 0,
+        peg$maxFailExpected  = [],
+        peg$silentFails      = 0,
+
+        peg$result;
+
+    if ("startRule" in options) {
+      if (!(options.startRule in peg$startRuleIndices)) {
+        throw new Error("Can't start parsing from rule \"" + options.startRule + "\".");
+      }
+
+      peg$startRuleIndex = peg$startRuleIndices[options.startRule];
+    }
+
+    function text() {
+      return input.substring(peg$reportedPos, peg$currPos);
+    }
+
+    function offset() {
+      return peg$reportedPos;
+    }
+
+    function line() {
+      return peg$computePosDetails(peg$reportedPos).line;
+    }
+
+    function column() {
+      return peg$computePosDetails(peg$reportedPos).column;
+    }
+
+    function expected(description) {
+      throw peg$buildException(
+        null,
+        [{ type: "other", description: description }],
+        peg$reportedPos
+      );
+    }
+
+    function error(message) {
+      throw peg$buildException(message, null, peg$reportedPos);
+    }
+
+    function peg$computePosDetails(pos) {
+      function advance(details, startPos, endPos) {
+        var p, ch;
+
+        for (p = startPos; p < endPos; p++) {
+          ch = input.charAt(p);
+          if (ch === "\n") {
+            if (!details.seenCR) { details.line++; }
+            details.column = 1;
+            details.seenCR = false;
+          } else if (ch === "\r" || ch === "\u2028" || ch === "\u2029") {
+            details.line++;
+            details.column = 1;
+            details.seenCR = true;
+          } else {
+            details.column++;
+            details.seenCR = false;
+          }
+        }
+      }
+
+      if (peg$cachedPos !== pos) {
+        if (peg$cachedPos > pos) {
+          peg$cachedPos = 0;
+          peg$cachedPosDetails = { line: 1, column: 1, seenCR: false };
+        }
+        advance(peg$cachedPosDetails, peg$cachedPos, pos);
+        peg$cachedPos = pos;
+      }
+
+      return peg$cachedPosDetails;
+    }
+
+    function peg$fail(expected) {
+      if (peg$currPos < peg$maxFailPos) { return; }
+
+      if (peg$currPos > peg$maxFailPos) {
+        peg$maxFailPos = peg$currPos;
+        peg$maxFailExpected = [];
+      }
+
+      peg$maxFailExpected.push(expected);
+    }
+
+    function peg$buildException(message, expected, pos) {
+      function cleanupExpected(expected) {
+        var i = 1;
+
+        expected.sort(function(a, b) {
+          if (a.description < b.description) {
+            return -1;
+          } else if (a.description > b.description) {
+            return 1;
+          } else {
+            return 0;
+          }
+        });
+
+        while (i < expected.length) {
+          if (expected[i - 1] === expected[i]) {
+            expected.splice(i, 1);
+          } else {
+            i++;
+          }
+        }
+      }
+
+      function buildMessage(expected, found) {
+        function stringEscape(s) {
+          function hex(ch) { return ch.charCodeAt(0).toString(16).toUpperCase(); }
+
+          return s
+            .replace(/\\/g,   '\\\\')
+            .replace(/"/g,    '\\"')
+            .replace(/\x08/g, '\\b')
+            .replace(/\t/g,   '\\t')
+            .replace(/\n/g,   '\\n')
+            .replace(/\f/g,   '\\f')
+            .replace(/\r/g,   '\\r')
+            .replace(/[\x00-\x07\x0B\x0E\x0F]/g, function(ch) { return '\\x0' + hex(ch); })
+            .replace(/[\x10-\x1F\x80-\xFF]/g,    function(ch) { return '\\x'  + hex(ch); })
+            .replace(/[\u0180-\u0FFF]/g,         function(ch) { return '\\u0' + hex(ch); })
+            .replace(/[\u1080-\uFFFF]/g,         function(ch) { return '\\u'  + hex(ch); });
+        }
+
+        var expectedDescs = new Array(expected.length),
+            expectedDesc, foundDesc, i;
+
+        for (i = 0; i < expected.length; i++) {
+          expectedDescs[i] = expected[i].description;
+        }
+
+        expectedDesc = expected.length > 1
+          ? expectedDescs.slice(0, -1).join(", ")
+              + " or "
+              + expectedDescs[expected.length - 1]
+          : expectedDescs[0];
+
+        foundDesc = found ? "\"" + stringEscape(found) + "\"" : "end of input";
+
+        return "Expected " + expectedDesc + " but " + foundDesc + " found.";
+      }
+
+      var posDetails = peg$computePosDetails(pos),
+          found      = pos < input.length ? input.charAt(pos) : null;
+
+      if (expected !== null) {
+        cleanupExpected(expected);
+      }
+
+      return new SyntaxError(
+        message !== null ? message : buildMessage(expected, found),
+        expected,
+        found,
+        pos,
+        posDetails.line,
+        posDetails.column
+      );
+    }
+
+    function peg$decode(s) {
+      var bc = new Array(s.length), i;
+
+      for (i = 0; i < s.length; i++) {
+        bc[i] = s.charCodeAt(i) - 32;
+      }
+
+      return bc;
+    }
+
+    function peg$parseRule(index) {
+      var bc    = peg$bytecode[index],
+          ip    = 0,
+          ips   = [],
+          end   = bc.length,
+          ends  = [],
+          stack = [],
+          params, i;
+
+      function protect(object) {
+        return Object.prototype.toString.apply(object) === "[object Array]" ? [] : object;
+      }
+
+      while (true) {
+        while (ip < end) {
+          switch (bc[ip]) {
+            case 0:
+              stack.push(protect(peg$consts[bc[ip + 1]]));
+              ip += 2;
+              break;
+
+            case 1:
+              stack.push(peg$currPos);
+              ip++;
+              break;
+
+            case 2:
+              stack.pop();
+              ip++;
+              break;
+
+            case 3:
+              peg$currPos = stack.pop();
+              ip++;
+              break;
+
+            case 4:
+              stack.length -= bc[ip + 1];
+              ip += 2;
+              break;
+
+            case 5:
+              stack.splice(-2, 1);
+              ip++;
+              break;
+
+            case 6:
+              stack[stack.length - 2].push(stack.pop());
+              ip++;
+              break;
+
+            case 7:
+              stack.push(stack.splice(stack.length - bc[ip + 1], bc[ip + 1]));
+              ip += 2;
+              break;
+
+            case 8:
+              stack.pop();
+              stack.push(input.substring(stack[stack.length - 1], peg$currPos));
+              ip++;
+              break;
+
+            case 9:
+              ends.push(end);
+              ips.push(ip + 3 + bc[ip + 1] + bc[ip + 2]);
+
+              if (stack[stack.length - 1]) {
+                end = ip + 3 + bc[ip + 1];
+                ip += 3;
+              } else {
+                end = ip + 3 + bc[ip + 1] + bc[ip + 2];
+                ip += 3 + bc[ip + 1];
+              }
+
+              break;
+
+            case 10:
+              ends.push(end);
+              ips.push(ip + 3 + bc[ip + 1] + bc[ip + 2]);
+
+              if (stack[stack.length - 1] === peg$FAILED) {
+                end = ip + 3 + bc[ip + 1];
+                ip += 3;
+              } else {
+                end = ip + 3 + bc[ip + 1] + bc[ip + 2];
+                ip += 3 + bc[ip + 1];
+              }
+
+              break;
+
+            case 11:
+              ends.push(end);
+              ips.push(ip + 3 + bc[ip + 1] + bc[ip + 2]);
+
+              if (stack[stack.length - 1] !== peg$FAILED) {
+                end = ip + 3 + bc[ip + 1];
+                ip += 3;
+              } else {
+                end = ip + 3 + bc[ip + 1] + bc[ip + 2];
+                ip += 3 + bc[ip + 1];
+              }
+
+              break;
+
+            case 12:
+              if (stack[stack.length - 1] !== peg$FAILED) {
+                ends.push(end);
+                ips.push(ip);
+
+                end = ip + 2 + bc[ip + 1];
+                ip += 2;
+              } else {
+                ip += 2 + bc[ip + 1];
+              }
+
+              break;
+
+            case 13:
+              ends.push(end);
+              ips.push(ip + 3 + bc[ip + 1] + bc[ip + 2]);
+
+              if (input.length > peg$currPos) {
+                end = ip + 3 + bc[ip + 1];
+                ip += 3;
+              } else {
+                end = ip + 3 + bc[ip + 1] + bc[ip + 2];
+                ip += 3 + bc[ip + 1];
+              }
+
+              break;
+
+            case 14:
+              ends.push(end);
+              ips.push(ip + 4 + bc[ip + 2] + bc[ip + 3]);
+
+              if (input.substr(peg$currPos, peg$consts[bc[ip + 1]].length) === peg$consts[bc[ip + 1]]) {
+                end = ip + 4 + bc[ip + 2];
+                ip += 4;
+              } else {
+                end = ip + 4 + bc[ip + 2] + bc[ip + 3];
+                ip += 4 + bc[ip + 2];
+              }
+
+              break;
+
+            case 15:
+              ends.push(end);
+              ips.push(ip + 4 + bc[ip + 2] + bc[ip + 3]);
+
+              if (input.substr(peg$currPos, peg$consts[bc[ip + 1]].length).toLowerCase() === peg$consts[bc[ip + 1]]) {
+                end = ip + 4 + bc[ip + 2];
+                ip += 4;
+              } else {
+                end = ip + 4 + bc[ip + 2] + bc[ip + 3];
+                ip += 4 + bc[ip + 2];
+              }
+
+              break;
+
+            case 16:
+              ends.push(end);
+              ips.push(ip + 4 + bc[ip + 2] + bc[ip + 3]);
+
+              if (peg$consts[bc[ip + 1]].test(input.charAt(peg$currPos))) {
+                end = ip + 4 + bc[ip + 2];
+                ip += 4;
+              } else {
+                end = ip + 4 + bc[ip + 2] + bc[ip + 3];
+                ip += 4 + bc[ip + 2];
+              }
+
+              break;
+
+            case 17:
+              stack.push(input.substr(peg$currPos, bc[ip + 1]));
+              peg$currPos += bc[ip + 1];
+              ip += 2;
+              break;
+
+            case 18:
+              stack.push(peg$consts[bc[ip + 1]]);
+              peg$currPos += peg$consts[bc[ip + 1]].length;
+              ip += 2;
+              break;
+
+            case 19:
+              stack.push(peg$FAILED);
+              if (peg$silentFails === 0) {
+                peg$fail(peg$consts[bc[ip + 1]]);
+              }
+              ip += 2;
+              break;
+
+            case 20:
+              peg$reportedPos = stack[stack.length - 1 - bc[ip + 1]];
+              ip += 2;
+              break;
+
+            case 21:
+              peg$reportedPos = peg$currPos;
+              ip++;
+              break;
+
+            case 22:
+              params = bc.slice(ip + 4, ip + 4 + bc[ip + 3]);
+              for (i = 0; i < bc[ip + 3]; i++) {
+                params[i] = stack[stack.length - 1 - params[i]];
+              }
+
+              stack.splice(
+                stack.length - bc[ip + 2],
+                bc[ip + 2],
+                peg$consts[bc[ip + 1]].apply(null, params)
+              );
+
+              ip += 4 + bc[ip + 3];
+              break;
+
+            case 23:
+              stack.push(peg$parseRule(bc[ip + 1]));
+              ip += 2;
+              break;
+
+            case 24:
+              peg$silentFails++;
+              ip++;
+              break;
+
+            case 25:
+              peg$silentFails--;
+              ip++;
+              break;
+
+            default:
+              throw new Error("Invalid opcode: " + bc[ip] + ".");
+          }
+        }
+
+        if (ends.length > 0) {
+          end = ends.pop();
+          ip = ips.pop();
+        } else {
+          break;
+        }
+      }
+
+      return stack[0];
+    }
+
+
+      helpers = require('../lib/helpers');
+      prefixes = require('./prefixes.json');
+      prefixMetadata = require('./prefixMetadata.json');
+      unitMetadata = require('./unitMetadata.json');
+      metrics = require('./metrics.json');
+      multiply = helpers.multiply;
+      topower = helpers.topower;
+      cleanup = helpers.cleanup;
+      ismetric = helpers.ismetric(metrics);
+
+
+    peg$result = peg$parseRule(peg$startRuleIndex);
+
+    if (peg$result !== peg$FAILED && peg$currPos === input.length) {
+      return peg$result;
+    } else {
+      if (peg$result !== peg$FAILED && peg$currPos < input.length) {
+        peg$fail({ type: "end", description: "end of input" });
+      }
+
+      throw peg$buildException(null, peg$maxFailExpected, peg$maxFailPos);
+    }
+  }
+
+  return {
+    SyntaxError: SyntaxError,
+    parse:       parse
+  };
+})();
+
+},{"../lib/helpers":415,"./metrics.json":410,"./prefixMetadata.json":411,"./prefixes.json":412,"./unitMetadata.json":414}],414:[function(require,module,exports){
+module.exports={
+  "10*": {
+    "isBase": false,
+    "CODE": "10*",
+    "isMetric": "no",
+    "class": "dimless",
+    "names": [
+      "the number ten for arbitrary powers"
+    ],
+    "printSymbols": [
+      "10"
+    ],
+    "properties": [
+      "number"
+    ],
+    "values": [
+      {
+        "printable": "10",
+        "numeric": 10
+      }
+    ]
+  },
+  "10^": {
+    "isBase": false,
+    "CODE": "10^",
+    "isMetric": "no",
+    "class": "dimless",
+    "names": [
+      "the number ten for arbitrary powers"
+    ],
+    "printSymbols": [
+      "10"
+    ],
+    "properties": [
+      "number"
+    ],
+    "values": [
+      {
+        "printable": "10",
+        "numeric": 10
+      }
+    ]
+  },
+  "[pi]": {
+    "isBase": false,
+    "CODE": "[PI]",
+    "isMetric": "no",
+    "class": "dimless",
+    "names": [
+      "the number pi"
+    ],
+    "printSymbols": [
+      "&#960;"
+    ],
+    "properties": [
+      "number"
+    ],
+    "values": [
+      {
+        "printable": "&#960;",
+        "numeric": 3.141592653589793
+      }
+    ]
+  },
+  "%": {
+    "isBase": false,
+    "CODE": "%",
+    "isMetric": "no",
+    "class": "dimless",
+    "names": [
+      "percent"
+    ],
+    "printSymbols": [
+      "%"
+    ],
+    "properties": [
+      "fraction"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[ppth]": {
+    "isBase": false,
+    "CODE": "[PPTH]",
+    "isMetric": "no",
+    "class": "dimless",
+    "names": [
+      "parts per thousand"
+    ],
+    "printSymbols": [
+      "ppth"
+    ],
+    "properties": [
+      "fraction"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[ppm]": {
+    "isBase": false,
+    "CODE": "[PPM]",
+    "isMetric": "no",
+    "class": "dimless",
+    "names": [
+      "parts per million"
+    ],
+    "printSymbols": [
+      "ppm"
+    ],
+    "properties": [
+      "fraction"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[ppb]": {
+    "isBase": false,
+    "CODE": "[PPB]",
+    "isMetric": "no",
+    "class": "dimless",
+    "names": [
+      "parts per billion"
+    ],
+    "printSymbols": [
+      "ppb"
+    ],
+    "properties": [
+      "fraction"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[pptr]": {
+    "isBase": false,
+    "CODE": "[PPTR]",
+    "isMetric": "no",
+    "class": "dimless",
+    "names": [
+      "parts per trillion"
+    ],
+    "printSymbols": [
+      "pptr"
+    ],
+    "properties": [
+      "fraction"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "mol": {
+    "isBase": false,
+    "CODE": "MOL",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "mole"
+    ],
+    "printSymbols": [
+      "mol"
+    ],
+    "properties": [
+      "amount of substance"
+    ],
+    "values": [
+      {
+        "printable": "6.0221367",
+        "numeric": 6.0221367
+      }
+    ]
+  },
+  "sr": {
+    "isBase": false,
+    "CODE": "SR",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "steradian"
+    ],
+    "printSymbols": [
+      "sr"
+    ],
+    "properties": [
+      "solid angle"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Hz": {
+    "isBase": false,
+    "CODE": "HZ",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Hertz"
+    ],
+    "printSymbols": [
+      "Hz"
+    ],
+    "properties": [
+      "frequency"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "N": {
+    "isBase": false,
+    "CODE": "N",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Newton"
+    ],
+    "printSymbols": [
+      "N"
+    ],
+    "properties": [
+      "force"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Pa": {
+    "isBase": false,
+    "CODE": "PAL",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Pascal"
+    ],
+    "printSymbols": [
+      "Pa"
+    ],
+    "properties": [
+      "pressure"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "J": {
+    "isBase": false,
+    "CODE": "J",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Joule"
+    ],
+    "printSymbols": [
+      "J"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "W": {
+    "isBase": false,
+    "CODE": "W",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Watt"
+    ],
+    "printSymbols": [
+      "W"
+    ],
+    "properties": [
+      "power"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "A": {
+    "isBase": false,
+    "CODE": "A",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Ampère"
+    ],
+    "printSymbols": [
+      "A"
+    ],
+    "properties": [
+      "electric current"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "V": {
+    "isBase": false,
+    "CODE": "V",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Volt"
+    ],
+    "printSymbols": [
+      "V"
+    ],
+    "properties": [
+      "electric potential"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "F": {
+    "isBase": false,
+    "CODE": "F",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Farad"
+    ],
+    "printSymbols": [
+      "F"
+    ],
+    "properties": [
+      "electric capacitance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Ohm": {
+    "isBase": false,
+    "CODE": "OHM",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Ohm"
+    ],
+    "printSymbols": [
+      "&#937;"
+    ],
+    "properties": [
+      "electric resistance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "S": {
+    "isBase": false,
+    "CODE": "SIE",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Siemens"
+    ],
+    "printSymbols": [
+      "S"
+    ],
+    "properties": [
+      "electric conductance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Wb": {
+    "isBase": false,
+    "CODE": "WB",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Weber"
+    ],
+    "printSymbols": [
+      "Wb"
+    ],
+    "properties": [
+      "magentic flux"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Cel": {
+    "isBase": false,
+    "CODE": "CEL",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "si",
+    "names": [
+      "degree Celsius"
+    ],
+    "printSymbols": [
+      "&#176;C"
+    ],
+    "properties": [
+      "temperature"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"Cel\" value=\"1\" Unit=\"K\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "T": {
+    "isBase": false,
+    "CODE": "T",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Tesla"
+    ],
+    "printSymbols": [
+      "T"
+    ],
+    "properties": [
+      "magnetic flux density"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "H": {
+    "isBase": false,
+    "CODE": "H",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Henry"
+    ],
+    "printSymbols": [
+      "H"
+    ],
+    "properties": [
+      "inductance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "lm": {
+    "isBase": false,
+    "CODE": "LM",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "lumen"
+    ],
+    "printSymbols": [
+      "lm"
+    ],
+    "properties": [
+      "luminous flux"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "lx": {
+    "isBase": false,
+    "CODE": "LX",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "lux"
+    ],
+    "printSymbols": [
+      "lx"
+    ],
+    "properties": [
+      "illuminance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Bq": {
+    "isBase": false,
+    "CODE": "BQ",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Becquerel"
+    ],
+    "printSymbols": [
+      "Bq"
+    ],
+    "properties": [
+      "radioactivity"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Gy": {
+    "isBase": false,
+    "CODE": "GY",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Gray"
+    ],
+    "printSymbols": [
+      "Gy"
+    ],
+    "properties": [
+      "energy dose"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Sv": {
+    "isBase": false,
+    "CODE": "SV",
+    "isMetric": "yes",
+    "class": "si",
+    "names": [
+      "Sievert"
+    ],
+    "printSymbols": [
+      "Sv"
+    ],
+    "properties": [
+      "dose equivalent"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "gon": {
+    "isBase": false,
+    "CODE": "GON",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "gon",
+      "grade"
+    ],
+    "printSymbols": [
+      "&#9633;<sup>g</sup>"
+    ],
+    "properties": [
+      "plane angle"
+    ],
+    "values": [
+      {
+        "printable": "0.9",
+        "numeric": 0.9
+      }
+    ]
+  },
+  "deg": {
+    "isBase": false,
+    "CODE": "DEG",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "degree"
+    ],
+    "printSymbols": [
+      "&#176;"
+    ],
+    "properties": [
+      "plane angle"
+    ],
+    "values": [
+      {
+        "printable": "2",
+        "numeric": 2
+      }
+    ]
+  },
+  "'": {
+    "isBase": false,
+    "CODE": "'",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "minute"
+    ],
+    "printSymbols": [
+      "'"
+    ],
+    "properties": [
+      "plane angle"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "''": {
+    "isBase": false,
+    "CODE": "''",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "second"
+    ],
+    "printSymbols": [
+      "''"
+    ],
+    "properties": [
+      "plane angle"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "l": {
+    "isBase": false,
+    "CODE": "L",
+    "isMetric": "yes",
+    "class": "iso1000",
+    "names": [
+      "liter"
+    ],
+    "printSymbols": [
+      "l"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "L": {
+    "isBase": false,
+    "isMetric": "yes",
+    "class": "iso1000",
+    "names": [
+      "liter"
+    ],
+    "printSymbols": [
+      "L"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "ar": {
+    "isBase": false,
+    "CODE": "AR",
+    "isMetric": "yes",
+    "class": "iso1000",
+    "names": [
+      "are"
+    ],
+    "printSymbols": [
+      "a"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "100",
+        "numeric": 100
+      }
+    ]
+  },
+  "min": {
+    "isBase": false,
+    "CODE": "MIN",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "minute"
+    ],
+    "printSymbols": [
+      "min"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "60",
+        "numeric": 60
+      }
+    ]
+  },
+  "h": {
+    "isBase": false,
+    "CODE": "HR",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "hour"
+    ],
+    "printSymbols": [
+      "h"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "60",
+        "numeric": 60
+      }
+    ]
+  },
+  "d": {
+    "isBase": false,
+    "CODE": "D",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "day"
+    ],
+    "printSymbols": [
+      "d"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "24",
+        "numeric": 24
+      }
+    ]
+  },
+  "a_t": {
+    "isBase": false,
+    "CODE": "ANN_T",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "tropical year"
+    ],
+    "printSymbols": [
+      "a<sub>t</sub>"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "365.24219",
+        "numeric": 365.24219
+      }
+    ]
+  },
+  "a_j": {
+    "isBase": false,
+    "CODE": "ANN_J",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "mean Julian year"
+    ],
+    "printSymbols": [
+      "a<sub>j</sub>"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "365.25",
+        "numeric": 365.25
+      }
+    ]
+  },
+  "a_g": {
+    "isBase": false,
+    "CODE": "ANN_G",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "mean Gregorian year"
+    ],
+    "printSymbols": [
+      "a<sub>g</sub>"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "365.2425",
+        "numeric": 365.2425
+      }
+    ]
+  },
+  "a": {
+    "isBase": false,
+    "CODE": "ANN",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "year"
+    ],
+    "printSymbols": [
+      "a"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "wk": {
+    "isBase": false,
+    "CODE": "WK",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "week"
+    ],
+    "printSymbols": [
+      "wk"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "7",
+        "numeric": 7
+      }
+    ]
+  },
+  "mo_s": {
+    "isBase": false,
+    "CODE": "MO_S",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "synodal month"
+    ],
+    "printSymbols": [
+      "mo<sub>s</sub>"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "29.53059",
+        "numeric": 29.53059
+      }
+    ]
+  },
+  "mo_j": {
+    "isBase": false,
+    "CODE": "MO_J",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "mean Julian month"
+    ],
+    "printSymbols": [
+      "mo<sub>j</sub>"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "mo_g": {
+    "isBase": false,
+    "CODE": "MO_G",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "mean Gregorian month"
+    ],
+    "printSymbols": [
+      "mo<sub>g</sub>"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "mo": {
+    "isBase": false,
+    "CODE": "MO",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "month"
+    ],
+    "printSymbols": [
+      "mo"
+    ],
+    "properties": [
+      "time"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "t": {
+    "isBase": false,
+    "CODE": "TNE",
+    "isMetric": "yes",
+    "class": "iso1000",
+    "names": [
+      "tonne"
+    ],
+    "printSymbols": [
+      "t"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>3</sup>",
+        "numeric": 1000
+      }
+    ]
+  },
+  "bar": {
+    "isBase": false,
+    "CODE": "BAR",
+    "isMetric": "yes",
+    "class": "iso1000",
+    "names": [
+      "bar"
+    ],
+    "printSymbols": [
+      "bar"
+    ],
+    "properties": [
+      "pressure"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>5</sup>",
+        "numeric": 100000
+      }
+    ]
+  },
+  "u": {
+    "isBase": false,
+    "CODE": "AMU",
+    "isMetric": "yes",
+    "class": "iso1000",
+    "names": [
+      "unified atomic mass unit"
+    ],
+    "printSymbols": [
+      "u"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "1.6605402 &#215; 10<sup>-24</sup>",
+        "numeric": 1.6605402e-24
+      }
+    ]
+  },
+  "eV": {
+    "isBase": false,
+    "CODE": "EV",
+    "isMetric": "yes",
+    "class": "iso1000",
+    "names": [
+      "electronvolt"
+    ],
+    "printSymbols": [
+      "eV"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "AU": {
+    "isBase": false,
+    "CODE": "ASU",
+    "isMetric": "no",
+    "class": "iso1000",
+    "names": [
+      "astronomic unit"
+    ],
+    "printSymbols": [
+      "AU"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "149597.870691",
+        "numeric": 149597.870691
+      }
+    ]
+  },
+  "pc": {
+    "isBase": false,
+    "CODE": "PRS",
+    "isMetric": "yes",
+    "class": "iso1000",
+    "names": [
+      "parsec"
+    ],
+    "printSymbols": [
+      "pc"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "3.085678 &#215; 10<sup>16</sup>",
+        "numeric": 30856780000000000
+      }
+    ]
+  },
+  "[c]": {
+    "isBase": false,
+    "CODE": "[C]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "velocity of light"
+    ],
+    "printSymbols": [
+      "<i>c</i>"
+    ],
+    "properties": [
+      "velocity"
+    ],
+    "values": [
+      {
+        "printable": "299792458",
+        "numeric": 299792458
+      }
+    ]
+  },
+  "[h]": {
+    "isBase": false,
+    "CODE": "[H]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "Planck constant"
+    ],
+    "printSymbols": [
+      "<i>h</i>"
+    ],
+    "properties": [
+      "action"
+    ],
+    "values": [
+      {
+        "printable": "6.6260755 &#215; 10<sup>-24</sup>",
+        "numeric": 6.6260755e-24
+      }
+    ]
+  },
+  "[k]": {
+    "isBase": false,
+    "CODE": "[K]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "Boltzmann constant"
+    ],
+    "printSymbols": [
+      "<i>k</i>"
+    ],
+    "properties": [
+      "(unclassified)"
+    ],
+    "values": [
+      {
+        "printable": "1.380658 &#215; 10<sup>-23</sup>",
+        "numeric": 1.380658e-23
+      }
+    ]
+  },
+  "[eps_0]": {
+    "isBase": false,
+    "CODE": "[EPS_0]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "permittivity of vacuum"
+    ],
+    "printSymbols": [
+      "<i>&#949;<sub>\n               <r>0</r>\n            </sub>\n         </i>"
+    ],
+    "properties": [
+      "electric permittivity"
+    ],
+    "values": [
+      {
+        "printable": "8.854187817 &#215; 10<sup>-12</sup>",
+        "numeric": 8.854187817e-12
+      }
+    ]
+  },
+  "[mu_0]": {
+    "isBase": false,
+    "CODE": "[MU_0]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "permeability of vacuum"
+    ],
+    "printSymbols": [
+      "<i>&#956;<sub>\n               <r>0</r>\n            </sub>\n         </i>"
+    ],
+    "properties": [
+      "magnetic permeability"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[e]": {
+    "isBase": false,
+    "CODE": "[E]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "elementary charge"
+    ],
+    "printSymbols": [
+      "<i>e</i>"
+    ],
+    "properties": [
+      "electric charge"
+    ],
+    "values": [
+      {
+        "printable": "1.60217733 &#215; 10<sup>-19</sup>",
+        "numeric": 1.60217733e-19
+      }
+    ]
+  },
+  "[m_e]": {
+    "isBase": false,
+    "CODE": "[M_E]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "electron mass"
+    ],
+    "printSymbols": [
+      "<i>m<sub>\n               <r>e</r>\n            </sub>\n         </i>"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "9.1093897 &#215; 10<sup>-28</sup>",
+        "numeric": 9.1093897e-28
+      }
+    ]
+  },
+  "[m_p]": {
+    "isBase": false,
+    "CODE": "[M_P]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "proton mass"
+    ],
+    "printSymbols": [
+      "<i>m<sub>\n               <r>p</r>\n            </sub>\n         </i>"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "1.6726231 &#215; 10<sup>-24</sup>",
+        "numeric": 1.6726231e-24
+      }
+    ]
+  },
+  "[G]": {
+    "isBase": false,
+    "CODE": "[GC]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "Newtonian constant of gravitation"
+    ],
+    "printSymbols": [
+      "<i>G</i>"
+    ],
+    "properties": [
+      "(unclassified)"
+    ],
+    "values": [
+      {
+        "printable": "6.67259 &#215; 10<sup>-11</sup>",
+        "numeric": 6.67259e-11
+      }
+    ]
+  },
+  "[g]": {
+    "isBase": false,
+    "CODE": "[G]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "standard acceleration of free fall"
+    ],
+    "printSymbols": [
+      "<i>g<sub>n</sub>\n         </i>"
+    ],
+    "properties": [
+      "acceleration"
+    ],
+    "values": [
+      {
+        "printable": "9.80665",
+        "numeric": 9.80665
+      }
+    ]
+  },
+  "atm": {
+    "isBase": false,
+    "CODE": "ATM",
+    "isMetric": "no",
+    "class": "const",
+    "names": [
+      "standard atmosphere"
+    ],
+    "printSymbols": [
+      "atm"
+    ],
+    "properties": [
+      "pressure"
+    ],
+    "values": [
+      {
+        "printable": "101325",
+        "numeric": 101325
+      }
+    ]
+  },
+  "[ly]": {
+    "isBase": false,
+    "CODE": "[LY]",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "light-year"
+    ],
+    "printSymbols": [
+      "l.y."
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "gf": {
+    "isBase": false,
+    "CODE": "GF",
+    "isMetric": "yes",
+    "class": "const",
+    "names": [
+      "gram-force"
+    ],
+    "printSymbols": [
+      "gf"
+    ],
+    "properties": [
+      "force"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[lbf_av]": {
+    "isBase": false,
+    "CODE": "[LBF_AV]",
+    "isMetric": "no",
+    "class": "const",
+    "names": [
+      "pound force"
+    ],
+    "printSymbols": [
+      "lbf"
+    ],
+    "properties": [
+      "force"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Ky": {
+    "isBase": false,
+    "CODE": "KY",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Kayser"
+    ],
+    "printSymbols": [
+      "K"
+    ],
+    "properties": [
+      "lineic number"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Gal": {
+    "isBase": false,
+    "CODE": "GL",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Gal"
+    ],
+    "printSymbols": [
+      "Gal"
+    ],
+    "properties": [
+      "acceleration"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "dyn": {
+    "isBase": false,
+    "CODE": "DYN",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "dyne"
+    ],
+    "printSymbols": [
+      "dyn"
+    ],
+    "properties": [
+      "force"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "erg": {
+    "isBase": false,
+    "CODE": "ERG",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "erg"
+    ],
+    "printSymbols": [
+      "erg"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "P": {
+    "isBase": false,
+    "CODE": "P",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Poise"
+    ],
+    "printSymbols": [
+      "P"
+    ],
+    "properties": [
+      "dynamic viscosity"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Bi": {
+    "isBase": false,
+    "CODE": "BI",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Biot"
+    ],
+    "printSymbols": [
+      "Bi"
+    ],
+    "properties": [
+      "electric current"
+    ],
+    "values": [
+      {
+        "printable": "10",
+        "numeric": 10
+      }
+    ]
+  },
+  "St": {
+    "isBase": false,
+    "CODE": "ST",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Stokes"
+    ],
+    "printSymbols": [
+      "St"
+    ],
+    "properties": [
+      "kinematic viscosity"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Mx": {
+    "isBase": false,
+    "CODE": "MX",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Maxwell"
+    ],
+    "printSymbols": [
+      "Mx"
+    ],
+    "properties": [
+      "flux of magnetic induction"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-8</sup>",
+        "numeric": 1e-8
+      }
+    ]
+  },
+  "G": {
+    "isBase": false,
+    "CODE": "GS",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Gauss"
+    ],
+    "printSymbols": [
+      "Gs"
+    ],
+    "properties": [
+      "magnetic flux density"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-4</sup>",
+        "numeric": 0.0001
+      }
+    ]
+  },
+  "Oe": {
+    "isBase": false,
+    "CODE": "OE",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Oersted"
+    ],
+    "printSymbols": [
+      "Oe"
+    ],
+    "properties": [
+      "magnetic field intensity"
+    ],
+    "values": [
+      {
+        "printable": "250",
+        "numeric": 250
+      }
+    ]
+  },
+  "Gb": {
+    "isBase": false,
+    "CODE": "GB",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Gilbert"
+    ],
+    "printSymbols": [
+      "Gb"
+    ],
+    "properties": [
+      "magnetic tension"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "sb": {
+    "isBase": false,
+    "CODE": "SB",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "stilb"
+    ],
+    "printSymbols": [
+      "sb"
+    ],
+    "properties": [
+      "lum. intensity density"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Lmb": {
+    "isBase": false,
+    "CODE": "LMB",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Lambert"
+    ],
+    "printSymbols": [
+      "L"
+    ],
+    "properties": [
+      "brightness"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "ph": {
+    "isBase": false,
+    "CODE": "PHT",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "phot"
+    ],
+    "printSymbols": [
+      "ph"
+    ],
+    "properties": [
+      "illuminance"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-4</sup>",
+        "numeric": 0.0001
+      }
+    ]
+  },
+  "Ci": {
+    "isBase": false,
+    "CODE": "CI",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Curie"
+    ],
+    "printSymbols": [
+      "Ci"
+    ],
+    "properties": [
+      "radioactivity"
+    ],
+    "values": [
+      {
+        "printable": "3.7 &#215; 10<sup>10</sup>",
+        "numeric": 37000000000
+      }
+    ]
+  },
+  "R": {
+    "isBase": false,
+    "CODE": "ROE",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "Roentgen"
+    ],
+    "printSymbols": [
+      "R"
+    ],
+    "properties": [
+      "ion dose"
+    ],
+    "values": [
+      {
+        "printable": "2.58 &#215; 10<sup>-4</sup>",
+        "numeric": 0.000258
+      }
+    ]
+  },
+  "RAD": {
+    "isBase": false,
+    "CODE": "[RAD]",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "radiation absorbed dose"
+    ],
+    "printSymbols": [
+      "RAD"
+    ],
+    "properties": [
+      "energy dose"
+    ],
+    "values": [
+      {
+        "printable": "100",
+        "numeric": 100
+      }
+    ]
+  },
+  "REM": {
+    "isBase": false,
+    "CODE": "[REM]",
+    "isMetric": "yes",
+    "class": "cgs",
+    "names": [
+      "radiation equivalent man"
+    ],
+    "printSymbols": [
+      "REM"
+    ],
+    "properties": [
+      "dose equivalent"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[in_i]": {
+    "isBase": false,
+    "CODE": "[IN_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "inch"
+    ],
+    "printSymbols": [
+      "in"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "2.54",
+        "numeric": 2.54
+      }
+    ]
+  },
+  "[ft_i]": {
+    "isBase": false,
+    "CODE": "[FT_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "foot"
+    ],
+    "printSymbols": [
+      "ft"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "12",
+        "numeric": 12
+      }
+    ]
+  },
+  "[yd_i]": {
+    "isBase": false,
+    "CODE": "[YD_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "yard"
+    ],
+    "printSymbols": [
+      "yd"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "3",
+        "numeric": 3
+      }
+    ]
+  },
+  "[mi_i]": {
+    "isBase": false,
+    "CODE": "[MI_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "statute mile"
+    ],
+    "printSymbols": [
+      "mi"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "5280",
+        "numeric": 5280
+      }
+    ]
+  },
+  "[fth_i]": {
+    "isBase": false,
+    "CODE": "[FTH_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "fathom"
+    ],
+    "printSymbols": [
+      "fth"
+    ],
+    "properties": [
+      "depth of water"
+    ],
+    "values": [
+      {
+        "printable": "6",
+        "numeric": 6
+      }
+    ]
+  },
+  "[nmi_i]": {
+    "isBase": false,
+    "CODE": "[NMI_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "nautical mile"
+    ],
+    "printSymbols": [
+      "n.mi"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1852",
+        "numeric": 1852
+      }
+    ]
+  },
+  "[kn_i]": {
+    "isBase": false,
+    "CODE": "[KN_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "knot"
+    ],
+    "printSymbols": [
+      "knot"
+    ],
+    "properties": [
+      "velocity"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[sin_i]": {
+    "isBase": false,
+    "CODE": "[SIN_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "square inch"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[sft_i]": {
+    "isBase": false,
+    "CODE": "[SFT_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "square foot"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[syd_i]": {
+    "isBase": false,
+    "CODE": "[SYD_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "square yard"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[cin_i]": {
+    "isBase": false,
+    "CODE": "[CIN_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "cubic inch"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[cft_i]": {
+    "isBase": false,
+    "CODE": "[CFT_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "cubic foot"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[cyd_i]": {
+    "isBase": false,
+    "CODE": "[CYD_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "cubic yard"
+    ],
+    "printSymbols": [
+      "cu.yd"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[bf_i]": {
+    "isBase": false,
+    "CODE": "[BF_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "board foot"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "144",
+        "numeric": 144
+      }
+    ]
+  },
+  "[cr_i]": {
+    "isBase": false,
+    "CODE": "[CR_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "cord"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "128",
+        "numeric": 128
+      }
+    ]
+  },
+  "[mil_i]": {
+    "isBase": false,
+    "CODE": "[MIL_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "mil"
+    ],
+    "printSymbols": [
+      "mil"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-3</sup>",
+        "numeric": 0.001
+      }
+    ]
+  },
+  "[cml_i]": {
+    "isBase": false,
+    "CODE": "[CML_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "circular mil"
+    ],
+    "printSymbols": [
+      "circ.mil"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[hd_i]": {
+    "isBase": false,
+    "CODE": "[HD_I]",
+    "isMetric": "no",
+    "class": "intcust",
+    "names": [
+      "hand"
+    ],
+    "printSymbols": [
+      "hd"
+    ],
+    "properties": [
+      "height of horses"
+    ],
+    "values": [
+      {
+        "printable": "4",
+        "numeric": 4
+      }
+    ]
+  },
+  "[ft_us]": {
+    "isBase": false,
+    "CODE": "[FT_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "foot"
+    ],
+    "printSymbols": [
+      "ft<sub>us</sub>"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1200",
+        "numeric": 1200
+      }
+    ]
+  },
+  "[yd_us]": {
+    "isBase": false,
+    "CODE": "[YD_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "yard"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "3",
+        "numeric": 3
+      }
+    ]
+  },
+  "[in_us]": {
+    "isBase": false,
+    "CODE": "[IN_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "inch"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[rd_us]": {
+    "isBase": false,
+    "CODE": "[RD_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "rod"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "16.5",
+        "numeric": 16.5
+      }
+    ]
+  },
+  "[ch_us]": {
+    "isBase": false,
+    "CODE": "[CH_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "Gunter's chain",
+      "Surveyor's chain"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "4",
+        "numeric": 4
+      }
+    ]
+  },
+  "[lk_us]": {
+    "isBase": false,
+    "CODE": "[LK_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "link for Gunter's chain"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[rch_us]": {
+    "isBase": false,
+    "CODE": "[RCH_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "Ramden's chain",
+      "Engineer's chain"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "100",
+        "numeric": 100
+      }
+    ]
+  },
+  "[rlk_us]": {
+    "isBase": false,
+    "CODE": "[RLK_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "link for Ramden's chain"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[fth_us]": {
+    "isBase": false,
+    "CODE": "[FTH_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "fathom"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "6",
+        "numeric": 6
+      }
+    ]
+  },
+  "[fur_us]": {
+    "isBase": false,
+    "CODE": "[FUR_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "furlong"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "40",
+        "numeric": 40
+      }
+    ]
+  },
+  "[mi_us]": {
+    "isBase": false,
+    "CODE": "[MI_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "mile"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "8",
+        "numeric": 8
+      }
+    ]
+  },
+  "[acr_us]": {
+    "isBase": false,
+    "CODE": "[ACR_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "acre"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "160",
+        "numeric": 160
+      }
+    ]
+  },
+  "[srd_us]": {
+    "isBase": false,
+    "CODE": "[SRD_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "square rod"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[smi_us]": {
+    "isBase": false,
+    "CODE": "[SMI_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "square mile"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[sct]": {
+    "isBase": false,
+    "CODE": "[SCT]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "section"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[twp]": {
+    "isBase": false,
+    "CODE": "[TWP]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "township"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "36",
+        "numeric": 36
+      }
+    ]
+  },
+  "[mil_us]": {
+    "isBase": false,
+    "CODE": "[MIL_US]",
+    "isMetric": "no",
+    "class": "us-lengths",
+    "names": [
+      "mil"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1 &#215; 10<sup>-3</sup>",
+        "numeric": 0.001
+      }
+    ]
+  },
+  "[in_br]": {
+    "isBase": false,
+    "CODE": "[IN_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "inch"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "2.539998",
+        "numeric": 2.539998
+      }
+    ]
+  },
+  "[ft_br]": {
+    "isBase": false,
+    "CODE": "[FT_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "foot"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "12",
+        "numeric": 12
+      }
+    ]
+  },
+  "[rd_br]": {
+    "isBase": false,
+    "CODE": "[RD_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "rod"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "16.5",
+        "numeric": 16.5
+      }
+    ]
+  },
+  "[ch_br]": {
+    "isBase": false,
+    "CODE": "[CH_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "Gunter's chain"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "4",
+        "numeric": 4
+      }
+    ]
+  },
+  "[lk_br]": {
+    "isBase": false,
+    "CODE": "[LK_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "link for Gunter's chain"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[fth_br]": {
+    "isBase": false,
+    "CODE": "[FTH_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "fathom"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "6",
+        "numeric": 6
+      }
+    ]
+  },
+  "[pc_br]": {
+    "isBase": false,
+    "CODE": "[PC_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "pace"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "2.5",
+        "numeric": 2.5
+      }
+    ]
+  },
+  "[yd_br]": {
+    "isBase": false,
+    "CODE": "[YD_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "yard"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "3",
+        "numeric": 3
+      }
+    ]
+  },
+  "[mi_br]": {
+    "isBase": false,
+    "CODE": "[MI_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "mile"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "5280",
+        "numeric": 5280
+      }
+    ]
+  },
+  "[nmi_br]": {
+    "isBase": false,
+    "CODE": "[NMI_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "nautical mile"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "6080",
+        "numeric": 6080
+      }
+    ]
+  },
+  "[kn_br]": {
+    "isBase": false,
+    "CODE": "[KN_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "knot"
+    ],
+    "properties": [
+      "velocity"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[acr_br]": {
+    "isBase": false,
+    "CODE": "[ACR_BR]",
+    "isMetric": "no",
+    "class": "brit-length",
+    "names": [
+      "acre"
+    ],
+    "properties": [
+      "area"
+    ],
+    "values": [
+      {
+        "printable": "4840",
+        "numeric": 4840
+      }
+    ]
+  },
+  "[gal_us]": {
+    "isBase": false,
+    "CODE": "[GAL_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "Queen Anne's wine gallon"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "231",
+        "numeric": 231
+      }
+    ]
+  },
+  "[bbl_us]": {
+    "isBase": false,
+    "CODE": "[BBL_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "barrel"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "42",
+        "numeric": 42
+      }
+    ]
+  },
+  "[qt_us]": {
+    "isBase": false,
+    "CODE": "[QT_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "quart"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[pt_us]": {
+    "isBase": false,
+    "CODE": "[PT_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "pint"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[gil_us]": {
+    "isBase": false,
+    "CODE": "[GIL_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "gill"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[foz_us]": {
+    "isBase": false,
+    "CODE": "[FOZ_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "fluid ounce"
+    ],
+    "printSymbols": [
+      "oz fl"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[fdr_us]": {
+    "isBase": false,
+    "CODE": "[FDR_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "fluid dram"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[min_us]": {
+    "isBase": false,
+    "CODE": "[MIN_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "minim"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[crd_us]": {
+    "isBase": false,
+    "CODE": "[CRD_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "cord"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "128",
+        "numeric": 128
+      }
+    ]
+  },
+  "[bu_us]": {
+    "isBase": false,
+    "CODE": "[BU_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "bushel"
+    ],
+    "properties": [
+      "dry volume"
+    ],
+    "values": [
+      {
+        "printable": "2150.42",
+        "numeric": 2150.42
+      }
+    ]
+  },
+  "[gal_wi]": {
+    "isBase": false,
+    "CODE": "[GAL_WI]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "historical winchester gallon"
+    ],
+    "properties": [
+      "dry volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[pk_us]": {
+    "isBase": false,
+    "CODE": "[PK_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "peck"
+    ],
+    "properties": [
+      "dry volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[dqt_us]": {
+    "isBase": false,
+    "CODE": "[DQT_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "dry quart"
+    ],
+    "properties": [
+      "dry volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[dpt_us]": {
+    "isBase": false,
+    "CODE": "[DPT_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "dry pint"
+    ],
+    "properties": [
+      "dry volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[tbs_us]": {
+    "isBase": false,
+    "CODE": "[TBS_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "tablespoon"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[tsp_us]": {
+    "isBase": false,
+    "CODE": "[TSP_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "teaspoon"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[cup_us]": {
+    "isBase": false,
+    "CODE": "[CUP_US]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "cup"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "16",
+        "numeric": 16
+      }
+    ]
+  },
+  "[foz_m]": {
+    "isBase": false,
+    "CODE": "[FOZ_M]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "metric fluid ounce"
+    ],
+    "printSymbols": [
+      "oz fl"
+    ],
+    "properties": [
+      "fluid volume"
+    ],
+    "values": [
+      {
+        "printable": "30",
+        "numeric": 30
+      }
+    ]
+  },
+  "[cup_m]": {
+    "isBase": false,
+    "CODE": "[CUP_M]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "metric cup"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "240",
+        "numeric": 240
+      }
+    ]
+  },
+  "[tsp_m]": {
+    "isBase": false,
+    "CODE": "[TSP_M]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "metric teaspoon"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "5",
+        "numeric": 5
+      }
+    ]
+  },
+  "[tbs_m]": {
+    "isBase": false,
+    "CODE": "[TBS_M]",
+    "isMetric": "no",
+    "class": "us-volumes",
+    "names": [
+      "metric tablespoon"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "15",
+        "numeric": 15
+      }
+    ]
+  },
+  "[gal_br]": {
+    "isBase": false,
+    "CODE": "[GAL_BR]",
+    "isMetric": "no",
+    "class": "brit-volumes",
+    "names": [
+      "gallon"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "4.54609",
+        "numeric": 4.54609
+      }
+    ]
+  },
+  "[pk_br]": {
+    "isBase": false,
+    "CODE": "[PK_BR]",
+    "isMetric": "no",
+    "class": "brit-volumes",
+    "names": [
+      "peck"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "2",
+        "numeric": 2
+      }
+    ]
+  },
+  "[bu_br]": {
+    "isBase": false,
+    "CODE": "[BU_BR]",
+    "isMetric": "no",
+    "class": "brit-volumes",
+    "names": [
+      "bushel"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "4",
+        "numeric": 4
+      }
+    ]
+  },
+  "[qt_br]": {
+    "isBase": false,
+    "CODE": "[QT_BR]",
+    "isMetric": "no",
+    "class": "brit-volumes",
+    "names": [
+      "quart"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[pt_br]": {
+    "isBase": false,
+    "CODE": "[PT_BR]",
+    "isMetric": "no",
+    "class": "brit-volumes",
+    "names": [
+      "pint"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[gil_br]": {
+    "isBase": false,
+    "CODE": "[GIL_BR]",
+    "isMetric": "no",
+    "class": "brit-volumes",
+    "names": [
+      "gill"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[foz_br]": {
+    "isBase": false,
+    "CODE": "[FOZ_BR]",
+    "isMetric": "no",
+    "class": "brit-volumes",
+    "names": [
+      "fluid ounce"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[fdr_br]": {
+    "isBase": false,
+    "CODE": "[FDR_BR]",
+    "isMetric": "no",
+    "class": "brit-volumes",
+    "names": [
+      "fluid dram"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[min_br]": {
+    "isBase": false,
+    "CODE": "[MIN_BR]",
+    "isMetric": "no",
+    "class": "brit-volumes",
+    "names": [
+      "minim"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[gr]": {
+    "isBase": false,
+    "CODE": "[GR]",
+    "isMetric": "no",
+    "class": "avoirdupois",
+    "names": [
+      "grain"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "64.79891",
+        "numeric": 64.79891
+      }
+    ]
+  },
+  "[lb_av]": {
+    "isBase": false,
+    "CODE": "[LB_AV]",
+    "isMetric": "no",
+    "class": "avoirdupois",
+    "names": [
+      "pound"
+    ],
+    "printSymbols": [
+      "lb"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "7000",
+        "numeric": 7000
+      }
+    ]
+  },
+  "[oz_av]": {
+    "isBase": false,
+    "CODE": "[OZ_AV]",
+    "isMetric": "no",
+    "class": "avoirdupois",
+    "names": [
+      "ounce"
+    ],
+    "printSymbols": [
+      "oz"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[dr_av]": {
+    "isBase": false,
+    "CODE": "[DR_AV]",
+    "isMetric": "no",
+    "class": "avoirdupois",
+    "names": [
+      "dram"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[scwt_av]": {
+    "isBase": false,
+    "CODE": "[SCWT_AV]",
+    "isMetric": "no",
+    "class": "avoirdupois",
+    "names": [
+      "short hundredweight",
+      "U.S. hundredweight"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "100",
+        "numeric": 100
+      }
+    ]
+  },
+  "[lcwt_av]": {
+    "isBase": false,
+    "CODE": "[LCWT_AV]",
+    "isMetric": "no",
+    "class": "avoirdupois",
+    "names": [
+      "long hundredweight",
+      "British hundredweight"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "112",
+        "numeric": 112
+      }
+    ]
+  },
+  "[ston_av]": {
+    "isBase": false,
+    "CODE": "[STON_AV]",
+    "isMetric": "no",
+    "class": "avoirdupois",
+    "names": [
+      "short ton",
+      "U.S. ton"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "20",
+        "numeric": 20
+      }
+    ]
+  },
+  "[lton_av]": {
+    "isBase": false,
+    "CODE": "[LTON_AV]",
+    "isMetric": "no",
+    "class": "avoirdupois",
+    "names": [
+      "long ton",
+      "British ton"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "20",
+        "numeric": 20
+      }
+    ]
+  },
+  "[stone_av]": {
+    "isBase": false,
+    "CODE": "[STONE_AV]",
+    "isMetric": "no",
+    "class": "avoirdupois",
+    "names": [
+      "stone",
+      "British stone"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "14",
+        "numeric": 14
+      }
+    ]
+  },
+  "[pwt_tr]": {
+    "isBase": false,
+    "CODE": "[PWT_TR]",
+    "isMetric": "no",
+    "class": "troy",
+    "names": [
+      "pennyweight"
+    ],
+    "printSymbols": [
+      "dwt"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "24",
+        "numeric": 24
+      }
+    ]
+  },
+  "[oz_tr]": {
+    "isBase": false,
+    "CODE": "[OZ_TR]",
+    "isMetric": "no",
+    "class": "troy",
+    "names": [
+      "troy ounce"
+    ],
+    "printSymbols": [
+      "oz t"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "20",
+        "numeric": 20
+      }
+    ]
+  },
+  "[lb_tr]": {
+    "isBase": false,
+    "CODE": "[LB_TR]",
+    "isMetric": "no",
+    "class": "troy",
+    "names": [
+      "troy pound"
+    ],
+    "printSymbols": [
+      "lb t"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "12",
+        "numeric": 12
+      }
+    ]
+  },
+  "[sc_ap]": {
+    "isBase": false,
+    "CODE": "[SC_AP]",
+    "isMetric": "no",
+    "class": "apoth",
+    "names": [
+      "scruple"
+    ],
+    "printSymbols": [
+      "&#8456;"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "20",
+        "numeric": 20
+      }
+    ]
+  },
+  "[dr_ap]": {
+    "isBase": false,
+    "CODE": "[DR_AP]",
+    "isMetric": "no",
+    "class": "apoth",
+    "names": [
+      "dram",
+      "drachm"
+    ],
+    "printSymbols": [
+      "&#658;"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "3",
+        "numeric": 3
+      }
+    ]
+  },
+  "[oz_ap]": {
+    "isBase": false,
+    "CODE": "[OZ_AP]",
+    "isMetric": "no",
+    "class": "apoth",
+    "names": [
+      "ounce"
+    ],
+    "printSymbols": [
+      "&#8485;"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "8",
+        "numeric": 8
+      }
+    ]
+  },
+  "[lb_ap]": {
+    "isBase": false,
+    "CODE": "[LB_AP]",
+    "isMetric": "no",
+    "class": "apoth",
+    "names": [
+      "pound"
+    ],
+    "printSymbols": [
+      "<strike>lb</strike>"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "12",
+        "numeric": 12
+      }
+    ]
+  },
+  "[oz_m]": {
+    "isBase": false,
+    "CODE": "[OZ_M]",
+    "isMetric": "no",
+    "class": "apoth",
+    "names": [
+      "metric ounce"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "28",
+        "numeric": 28
+      }
+    ]
+  },
+  "[lne]": {
+    "isBase": false,
+    "CODE": "[LNE]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "line"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[pnt]": {
+    "isBase": false,
+    "CODE": "[PNT]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "point"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[pca]": {
+    "isBase": false,
+    "CODE": "[PCA]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "pica"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "12",
+        "numeric": 12
+      }
+    ]
+  },
+  "[pnt_pr]": {
+    "isBase": false,
+    "CODE": "[PNT_PR]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "Printer's point"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "0.013837",
+        "numeric": 0.013837
+      }
+    ]
+  },
+  "[pca_pr]": {
+    "isBase": false,
+    "CODE": "[PCA_PR]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "Printer's pica"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "12",
+        "numeric": 12
+      }
+    ]
+  },
+  "[pied]": {
+    "isBase": false,
+    "CODE": "[PIED]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "pied",
+      "French foot"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "32.48",
+        "numeric": 32.48
+      }
+    ]
+  },
+  "[pouce]": {
+    "isBase": false,
+    "CODE": "[POUCE]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "pouce",
+      "French inch"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[ligne]": {
+    "isBase": false,
+    "CODE": "[LIGNE]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "ligne",
+      "French line"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[didot]": {
+    "isBase": false,
+    "CODE": "[DIDOT]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "didot",
+      "Didot's point"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[cicero]": {
+    "isBase": false,
+    "CODE": "[CICERO]",
+    "isMetric": "no",
+    "class": "typeset",
+    "names": [
+      "cicero",
+      "Didot's pica"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "12",
+        "numeric": 12
+      }
+    ]
+  },
+  "[degF]": {
+    "isBase": false,
+    "CODE": "[DEGF]",
+    "isMetric": "no",
+    "isSpecial": "yes",
+    "class": "heat",
+    "names": [
+      "degree Fahrenheit"
+    ],
+    "printSymbols": [
+      "&#176;F"
+    ],
+    "properties": [
+      "temperature"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"degF\" value=\"5\" Unit=\"K/9\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "[degR]": {
+    "isBase": false,
+    "CODE": "[degR]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "degree Rankine"
+    ],
+    "printSymbols": [
+      "&#176;R"
+    ],
+    "properties": [
+      "temperature"
+    ],
+    "values": [
+      {
+        "printable": "5",
+        "numeric": 5
+      }
+    ]
+  },
+  "cal_[15]": {
+    "isBase": false,
+    "CODE": "CAL_[15]",
+    "isMetric": "yes",
+    "class": "heat",
+    "names": [
+      "calorie at 15 °C"
+    ],
+    "printSymbols": [
+      "cal<sub>15&#176;C</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "4.18580",
+        "numeric": 4.1858
+      }
+    ]
+  },
+  "cal_[20]": {
+    "isBase": false,
+    "CODE": "CAL_[20]",
+    "isMetric": "yes",
+    "class": "heat",
+    "names": [
+      "calorie at 20 °C"
+    ],
+    "printSymbols": [
+      "cal<sub>20&#176;C</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "4.18190",
+        "numeric": 4.1819
+      }
+    ]
+  },
+  "cal_m": {
+    "isBase": false,
+    "CODE": "CAL_M",
+    "isMetric": "yes",
+    "class": "heat",
+    "names": [
+      "mean calorie"
+    ],
+    "printSymbols": [
+      "cal<sub>m</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "4.19002",
+        "numeric": 4.19002
+      }
+    ]
+  },
+  "cal_IT": {
+    "isBase": false,
+    "CODE": "CAL_IT",
+    "isMetric": "yes",
+    "class": "heat",
+    "names": [
+      "international table calorie"
+    ],
+    "printSymbols": [
+      "cal<sub>IT</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "4.1868",
+        "numeric": 4.1868
+      }
+    ]
+  },
+  "cal_th": {
+    "isBase": false,
+    "CODE": "CAL_TH",
+    "isMetric": "yes",
+    "class": "heat",
+    "names": [
+      "thermochemical calorie"
+    ],
+    "printSymbols": [
+      "cal<sub>th</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "4.184",
+        "numeric": 4.184
+      }
+    ]
+  },
+  "cal": {
+    "isBase": false,
+    "CODE": "CAL",
+    "isMetric": "yes",
+    "class": "heat",
+    "names": [
+      "calorie"
+    ],
+    "printSymbols": [
+      "cal"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[Cal]": {
+    "isBase": false,
+    "CODE": "[CAL]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "nutrition label Calories"
+    ],
+    "printSymbols": [
+      "Cal"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[Btu_39]": {
+    "isBase": false,
+    "CODE": "[BTU_39]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "British thermal unit at 39 °F"
+    ],
+    "printSymbols": [
+      "Btu<sub>39&#176;F</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1.05967",
+        "numeric": 1.05967
+      }
+    ]
+  },
+  "[Btu_59]": {
+    "isBase": false,
+    "CODE": "[BTU_59]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "British thermal unit at 59 °F"
+    ],
+    "printSymbols": [
+      "Btu<sub>59&#176;F</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1.05480",
+        "numeric": 1.0548
+      }
+    ]
+  },
+  "[Btu_60]": {
+    "isBase": false,
+    "CODE": "[BTU_60]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "British thermal unit at 60 °F"
+    ],
+    "printSymbols": [
+      "Btu<sub>60&#176;F</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1.05468",
+        "numeric": 1.05468
+      }
+    ]
+  },
+  "[Btu_m]": {
+    "isBase": false,
+    "CODE": "[BTU_M]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "mean British thermal unit"
+    ],
+    "printSymbols": [
+      "Btu<sub>m</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1.05587",
+        "numeric": 1.05587
+      }
+    ]
+  },
+  "[Btu_IT]": {
+    "isBase": false,
+    "CODE": "[BTU_IT]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "international table British thermal unit"
+    ],
+    "printSymbols": [
+      "Btu<sub>IT</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1.05505585262",
+        "numeric": 1.05505585262
+      }
+    ]
+  },
+  "[Btu_th]": {
+    "isBase": false,
+    "CODE": "[BTU_TH]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "thermochemical British thermal unit"
+    ],
+    "printSymbols": [
+      "Btu<sub>th</sub>"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1.054350",
+        "numeric": 1.05435
+      }
+    ]
+  },
+  "[Btu]": {
+    "isBase": false,
+    "CODE": "[BTU]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "British thermal unit"
+    ],
+    "printSymbols": [
+      "btu"
+    ],
+    "properties": [
+      "energy"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[HP]": {
+    "isBase": false,
+    "CODE": "[HP]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "horsepower"
+    ],
+    "properties": [
+      "power"
+    ],
+    "values": [
+      {
+        "printable": "550",
+        "numeric": 550
+      }
+    ]
+  },
+  "tex": {
+    "isBase": false,
+    "CODE": "TEX",
+    "isMetric": "yes",
+    "class": "heat",
+    "names": [
+      "tex"
+    ],
+    "printSymbols": [
+      "tex"
+    ],
+    "properties": [
+      "linear mass density (of textile thread)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[den]": {
+    "isBase": false,
+    "CODE": "[DEN]",
+    "isMetric": "no",
+    "class": "heat",
+    "names": [
+      "Denier"
+    ],
+    "printSymbols": [
+      "den"
+    ],
+    "properties": [
+      "linear mass density (of textile thread)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "m[H2O]": {
+    "isBase": false,
+    "CODE": "M[H2O]",
+    "isMetric": "yes",
+    "class": "clinical",
+    "names": [
+      "meter of water column"
+    ],
+    "printSymbols": [
+      "m&#160;H<sub>\n            <r>2</r>\n         </sub>O"
+    ],
+    "properties": [
+      "pressure"
+    ],
+    "values": [
+      {
+        "printable": "9.80665",
+        "numeric": 9.80665
+      }
+    ]
+  },
+  "m[Hg]": {
+    "isBase": false,
+    "CODE": "M[HG]",
+    "isMetric": "yes",
+    "class": "clinical",
+    "names": [
+      "meter of mercury column"
+    ],
+    "printSymbols": [
+      "m&#160;Hg"
+    ],
+    "properties": [
+      "pressure"
+    ],
+    "values": [
+      {
+        "printable": "133.3220",
+        "numeric": 133.322
+      }
+    ]
+  },
+  "[in_i'H2O]": {
+    "isBase": false,
+    "CODE": "[IN_I'H2O]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "inch of water column"
+    ],
+    "printSymbols": [
+      "in&#160;H<sub>\n            <r>2</r>\n         </sub>O"
+    ],
+    "properties": [
+      "pressure"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[in_i'Hg]": {
+    "isBase": false,
+    "CODE": "[IN_I'HG]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "inch of mercury column"
+    ],
+    "printSymbols": [
+      "in&#160;Hg"
+    ],
+    "properties": [
+      "pressure"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[PRU]": {
+    "isBase": false,
+    "CODE": "[PRU]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "peripheral vascular resistance unit"
+    ],
+    "printSymbols": [
+      "P.R.U."
+    ],
+    "properties": [
+      "fluid resistance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[wood'U]": {
+    "isBase": false,
+    "CODE": "[WOOD'U]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "Wood unit"
+    ],
+    "printSymbols": [
+      "Wood U."
+    ],
+    "properties": [
+      "fluid resistance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[diop]": {
+    "isBase": false,
+    "CODE": "[DIOP]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "diopter"
+    ],
+    "printSymbols": [
+      "dpt"
+    ],
+    "properties": [
+      "refraction of a lens"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[p'diop]": {
+    "isBase": false,
+    "CODE": "[P'DIOP]",
+    "isMetric": "no",
+    "isSpecial": "yes",
+    "class": "clinical",
+    "names": [
+      "prism diopter"
+    ],
+    "printSymbols": [
+      "PD"
+    ],
+    "properties": [
+      "refraction of a prism"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"tanTimes100\" value=\"1\" Unit=\"deg\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "%[slope]": {
+    "isBase": false,
+    "CODE": "%[SLOPE]",
+    "isMetric": "no",
+    "isSpecial": "yes",
+    "class": "clinical",
+    "names": [
+      "percent of slope"
+    ],
+    "printSymbols": [
+      "%"
+    ],
+    "properties": [
+      "slope"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"100tan\" value=\"1\" Unit=\"deg\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "[mesh_i]": {
+    "isBase": false,
+    "CODE": "[MESH_I]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "mesh"
+    ],
+    "properties": [
+      "lineic number"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[Ch]": {
+    "isBase": false,
+    "CODE": "[CH]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "Charrière",
+      "french"
+    ],
+    "printSymbols": [
+      "Ch"
+    ],
+    "properties": [
+      "gauge of catheters"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[drp]": {
+    "isBase": false,
+    "CODE": "[DRP]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "drop"
+    ],
+    "printSymbols": [
+      "drp"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[hnsf'U]": {
+    "isBase": false,
+    "CODE": "[HNSF'U]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "Hounsfield unit"
+    ],
+    "printSymbols": [
+      "HF"
+    ],
+    "properties": [
+      "x-ray attenuation"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[MET]": {
+    "isBase": false,
+    "CODE": "[MET]",
+    "isMetric": "no",
+    "class": "clinical",
+    "names": [
+      "metabolic equivalent"
+    ],
+    "printSymbols": [
+      "MET"
+    ],
+    "properties": [
+      "metabolic cost of physical activity"
+    ],
+    "values": [
+      {
+        "printable": "3.5",
+        "numeric": 3.5
+      }
+    ]
+  },
+  "[hp'_X]": {
+    "isBase": false,
+    "CODE": "[HP'_X]",
+    "isMetric": "no",
+    "isSpecial": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of decimal series (retired)"
+    ],
+    "printSymbols": [
+      "X"
+    ],
+    "properties": [
+      "homeopathic potency (retired)"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"hpX\" value=\"1\" Unit=\"1\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "[hp'_C]": {
+    "isBase": false,
+    "CODE": "[HP'_C]",
+    "isMetric": "no",
+    "isSpecial": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of centesimal series (retired)"
+    ],
+    "printSymbols": [
+      "C"
+    ],
+    "properties": [
+      "homeopathic potency (retired)"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"hpC\" value=\"1\" Unit=\"1\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "[hp'_M]": {
+    "isBase": false,
+    "CODE": "[HP'_M]",
+    "isMetric": "no",
+    "isSpecial": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of millesimal series (retired)"
+    ],
+    "printSymbols": [
+      "M"
+    ],
+    "properties": [
+      "homeopathic potency (retired)"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"hpM\" value=\"1\" Unit=\"1\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "[hp'_Q]": {
+    "isBase": false,
+    "CODE": "[HP'_Q]",
+    "isMetric": "no",
+    "isSpecial": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of quintamillesimal series (retired)"
+    ],
+    "printSymbols": [
+      "Q"
+    ],
+    "properties": [
+      "homeopathic potency (retired)"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"hpQ\" value=\"1\" Unit=\"1\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "[hp_X]": {
+    "isBase": false,
+    "CODE": "[HP_X]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of decimal hahnemannian series"
+    ],
+    "printSymbols": [
+      "X"
+    ],
+    "properties": [
+      "homeopathic potency (Hahnemann)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[hp_C]": {
+    "isBase": false,
+    "CODE": "[HP_C]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of centesimal hahnemannian series"
+    ],
+    "printSymbols": [
+      "C"
+    ],
+    "properties": [
+      "homeopathic potency (Hahnemann)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[hp_M]": {
+    "isBase": false,
+    "CODE": "[HP_M]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of millesimal hahnemannian series"
+    ],
+    "printSymbols": [
+      "M"
+    ],
+    "properties": [
+      "homeopathic potency (Hahnemann)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[hp_Q]": {
+    "isBase": false,
+    "CODE": "[HP_Q]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of quintamillesimal hahnemannian series"
+    ],
+    "printSymbols": [
+      "Q"
+    ],
+    "properties": [
+      "homeopathic potency (Hahnemann)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[kp_X]": {
+    "isBase": false,
+    "CODE": "[KP_X]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of decimal korsakovian series"
+    ],
+    "printSymbols": [
+      "X"
+    ],
+    "properties": [
+      "homeopathic potency (Korsakov)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[kp_C]": {
+    "isBase": false,
+    "CODE": "[KP_C]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of centesimal korsakovian series"
+    ],
+    "printSymbols": [
+      "C"
+    ],
+    "properties": [
+      "homeopathic potency (Korsakov)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[kp_M]": {
+    "isBase": false,
+    "CODE": "[KP_M]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of millesimal korsakovian series"
+    ],
+    "printSymbols": [
+      "M"
+    ],
+    "properties": [
+      "homeopathic potency (Korsakov)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[kp_Q]": {
+    "isBase": false,
+    "CODE": "[KP_Q]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "clinical",
+    "names": [
+      "homeopathic potency of quintamillesimal korsakovian series"
+    ],
+    "printSymbols": [
+      "Q"
+    ],
+    "properties": [
+      "homeopathic potency (Korsakov)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "eq": {
+    "isBase": false,
+    "CODE": "EQ",
+    "isMetric": "yes",
+    "class": "chemical",
+    "names": [
+      "equivalents"
+    ],
+    "printSymbols": [
+      "eq"
+    ],
+    "properties": [
+      "amount of substance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "osm": {
+    "isBase": false,
+    "CODE": "OSM",
+    "isMetric": "yes",
+    "class": "chemical",
+    "names": [
+      "osmole"
+    ],
+    "printSymbols": [
+      "osm"
+    ],
+    "properties": [
+      "amount of substance (dissolved particles)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[pH]": {
+    "isBase": false,
+    "CODE": "[PH]",
+    "isMetric": "no",
+    "isSpecial": "yes",
+    "class": "chemical",
+    "names": [
+      "pH"
+    ],
+    "printSymbols": [
+      "pH"
+    ],
+    "properties": [
+      "acidity"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"pH\" value=\"1\" Unit=\"mol/l\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "g%": {
+    "isBase": false,
+    "CODE": "G%",
+    "isMetric": "yes",
+    "class": "chemical",
+    "names": [
+      "gram percent"
+    ],
+    "printSymbols": [
+      "g%"
+    ],
+    "properties": [
+      "mass concentration"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[S]": {
+    "isBase": false,
+    "CODE": "[S]",
+    "isMetric": "no",
+    "class": "chemical",
+    "names": [
+      "Svedberg unit"
+    ],
+    "printSymbols": [
+      "S"
+    ],
+    "properties": [
+      "sedimentation coefficient"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[HPF]": {
+    "isBase": false,
+    "CODE": "[HPF]",
+    "isMetric": "no",
+    "class": "chemical",
+    "names": [
+      "high power field"
+    ],
+    "printSymbols": [
+      "HPF"
+    ],
+    "properties": [
+      "view area in microscope"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[LPF]": {
+    "isBase": false,
+    "CODE": "[LPF]",
+    "isMetric": "no",
+    "class": "chemical",
+    "names": [
+      "low power field"
+    ],
+    "printSymbols": [
+      "LPF"
+    ],
+    "properties": [
+      "view area in microscope"
+    ],
+    "values": [
+      {
+        "printable": "100",
+        "numeric": 100
+      }
+    ]
+  },
+  "kat": {
+    "isBase": false,
+    "CODE": "KAT",
+    "isMetric": "yes",
+    "class": "chemical",
+    "names": [
+      "katal"
+    ],
+    "printSymbols": [
+      "kat"
+    ],
+    "properties": [
+      "catalytic activity"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "U": {
+    "isBase": false,
+    "CODE": "U",
+    "isMetric": "yes",
+    "class": "chemical",
+    "names": [
+      "Unit"
+    ],
+    "printSymbols": [
+      "U"
+    ],
+    "properties": [
+      "catalytic activity"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[iU]": {
+    "isBase": false,
+    "CODE": "[IU]",
+    "isMetric": "yes",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "international unit"
+    ],
+    "printSymbols": [
+      "IU"
+    ],
+    "properties": [
+      "arbitrary"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[IU]": {
+    "isBase": false,
+    "CODE": "[IU]",
+    "isMetric": "yes",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "international unit"
+    ],
+    "printSymbols": [
+      "i.U."
+    ],
+    "properties": [
+      "arbitrary"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[arb'U]": {
+    "isBase": false,
+    "CODE": "[ARB'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "arbitary unit"
+    ],
+    "printSymbols": [
+      "arb. U"
+    ],
+    "properties": [
+      "arbitrary"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[USP'U]": {
+    "isBase": false,
+    "CODE": "[USP'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "United States Pharmacopeia unit"
+    ],
+    "printSymbols": [
+      "U.S.P."
+    ],
+    "properties": [
+      "arbitrary"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[GPL'U]": {
+    "isBase": false,
+    "CODE": "[GPL'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "GPL unit"
+    ],
+    "properties": [
+      "biologic activity of anticardiolipin IgG"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[MPL'U]": {
+    "isBase": false,
+    "CODE": "[MPL'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "MPL unit"
+    ],
+    "properties": [
+      "biologic activity of anticardiolipin IgM"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[APL'U]": {
+    "isBase": false,
+    "CODE": "[APL'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "APL unit"
+    ],
+    "properties": [
+      "biologic activity of anticardiolipin IgA"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[beth'U]": {
+    "isBase": false,
+    "CODE": "[BETH'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "Bethesda unit"
+    ],
+    "properties": [
+      "biologic activity of factor VIII inhibitor"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[anti'Xa'U]": {
+    "isBase": false,
+    "CODE": "[ANTI'XA'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "anti factor Xa unit"
+    ],
+    "properties": [
+      "biologic activity of factor Xa inhibitor (heparin)"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[todd'U]": {
+    "isBase": false,
+    "CODE": "[TODD'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "Todd unit"
+    ],
+    "properties": [
+      "biologic activity antistreptolysin O"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[dye'U]": {
+    "isBase": false,
+    "CODE": "[DYE'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "Dye unit"
+    ],
+    "properties": [
+      "biologic activity of amylase"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[smgy'U]": {
+    "isBase": false,
+    "CODE": "[SMGY'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "Somogyi unit"
+    ],
+    "properties": [
+      "biologic activity of amylase"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[bdsk'U]": {
+    "isBase": false,
+    "CODE": "[BDSK'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "Bodansky unit"
+    ],
+    "properties": [
+      "biologic activity of phosphatase"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[ka'U]": {
+    "isBase": false,
+    "CODE": "[KA'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "King-Armstrong unit"
+    ],
+    "properties": [
+      "biologic activity of phosphatase"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[knk'U]": {
+    "isBase": false,
+    "CODE": "[KNK'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "Kunkel unit"
+    ],
+    "properties": [
+      "arbitrary biologic activity"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[mclg'U]": {
+    "isBase": false,
+    "CODE": "[MCLG'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "Mac Lagan unit"
+    ],
+    "properties": [
+      "arbitrary biologic activity"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[tb'U]": {
+    "isBase": false,
+    "CODE": "[TB'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "tuberculin unit"
+    ],
+    "properties": [
+      "biologic activity of tuberculin"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[CCID_50]": {
+    "isBase": false,
+    "CODE": "[CCID_50]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "50% cell culture infectious dose"
+    ],
+    "printSymbols": [
+      "CCID<sub>50</sub>"
+    ],
+    "properties": [
+      "biologic activity (infectivity) of an infectious agent preparation"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[TCID_50]": {
+    "isBase": false,
+    "CODE": "[TCID_50]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "50% tissue culture infectious dose"
+    ],
+    "printSymbols": [
+      "TCID<sub>50</sub>"
+    ],
+    "properties": [
+      "biologic activity (infectivity) of an infectious agent preparation"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[EID_50]": {
+    "isBase": false,
+    "CODE": "[EID_50]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "50% embryo infectious dose"
+    ],
+    "printSymbols": [
+      "EID<sub>50</sub>"
+    ],
+    "properties": [
+      "biologic activity (infectivity) of an infectious agent preparation"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[PFU]": {
+    "isBase": false,
+    "CODE": "[PFU]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "plaque forming units"
+    ],
+    "printSymbols": [
+      "PFU"
+    ],
+    "properties": [
+      "amount of an infectious agent"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[FFU]": {
+    "isBase": false,
+    "CODE": "[FFU]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "focus forming units"
+    ],
+    "printSymbols": [
+      "FFU"
+    ],
+    "properties": [
+      "amount of an infectious agent"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[CFU]": {
+    "isBase": false,
+    "CODE": "[CFU]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "colony forming units"
+    ],
+    "printSymbols": [
+      "CFU"
+    ],
+    "properties": [
+      "amount of a proliferating organism"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[BAU]": {
+    "isBase": false,
+    "CODE": "[BAU]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "bioequivalent allergen unit"
+    ],
+    "printSymbols": [
+      "BAU"
+    ],
+    "properties": [
+      "amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[AU]": {
+    "isBase": false,
+    "CODE": "[AU]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "allergen unit"
+    ],
+    "printSymbols": [
+      "AU"
+    ],
+    "properties": [
+      "procedure defined amount of an allergen using some reference standard"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[Amb'a'1'U]": {
+    "isBase": false,
+    "CODE": "[AMB'A'1'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "allergen unit for Ambrosia artemisiifolia"
+    ],
+    "printSymbols": [
+      "Amb a 1 U"
+    ],
+    "properties": [
+      "procedure defined amount of the major allergen of ragweed."
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[PNU]": {
+    "isBase": false,
+    "CODE": "[PNU]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "protein nitrogen unit"
+    ],
+    "printSymbols": [
+      "PNU"
+    ],
+    "properties": [
+      "procedure defined amount of a protein substance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[Lf]": {
+    "isBase": false,
+    "CODE": "[LF]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "Limit of flocculation"
+    ],
+    "printSymbols": [
+      "Lf"
+    ],
+    "properties": [
+      "procedure defined amount of an antigen substance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[D'ag'U]": {
+    "isBase": false,
+    "CODE": "[D'AG'U]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "D-antigen unit"
+    ],
+    "printSymbols": [
+      ""
+    ],
+    "properties": [
+      "procedure defined amount of a poliomyelitis d-antigen substance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[FEU]": {
+    "isBase": false,
+    "CODE": "[FEU]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "fibrinogen equivalent unit"
+    ],
+    "printSymbols": [
+      ""
+    ],
+    "properties": [
+      "amount of fibrinogen broken down into the measured d-dimers"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[ELU]": {
+    "isBase": false,
+    "CODE": "[ELU]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "ELISA unit"
+    ],
+    "printSymbols": [
+      ""
+    ],
+    "properties": [
+      "arbitrary ELISA unit"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[EU]": {
+    "isBase": false,
+    "CODE": "[EU]",
+    "isMetric": "no",
+    "isArbitrary": "yes",
+    "class": "chemical",
+    "names": [
+      "Ehrlich unit"
+    ],
+    "printSymbols": [
+      ""
+    ],
+    "properties": [
+      "Ehrlich unit"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Np": {
+    "isBase": false,
+    "CODE": "NEP",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "levels",
+    "names": [
+      "neper"
+    ],
+    "printSymbols": [
+      "Np"
+    ],
+    "properties": [
+      "level"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"ln\" value=\"1\" Unit=\"1\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "B": {
+    "isBase": false,
+    "CODE": "B",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "levels",
+    "names": [
+      "bel"
+    ],
+    "printSymbols": [
+      "B"
+    ],
+    "properties": [
+      "level"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"lg\" value=\"1\" Unit=\"1\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "B[SPL]": {
+    "isBase": false,
+    "CODE": "B[SPL]",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "levels",
+    "names": [
+      "bel sound pressure"
+    ],
+    "printSymbols": [
+      "B(SPL)"
+    ],
+    "properties": [
+      "pressure level"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"lgTimes2\" value=\"2\" Unit=\"10*-5.Pa\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "B[V]": {
+    "isBase": false,
+    "CODE": "B[V]",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "levels",
+    "names": [
+      "bel volt"
+    ],
+    "printSymbols": [
+      "B(V)"
+    ],
+    "properties": [
+      "electric potential level"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"lgTimes2\" value=\"1\" Unit=\"V\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "B[mV]": {
+    "isBase": false,
+    "CODE": "B[MV]",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "levels",
+    "names": [
+      "bel millivolt"
+    ],
+    "printSymbols": [
+      "B(mV)"
+    ],
+    "properties": [
+      "electric potential level"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"lgTimes2\" value=\"1\" Unit=\"mV\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "B[uV]": {
+    "isBase": false,
+    "CODE": "B[UV]",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "levels",
+    "names": [
+      "bel microvolt"
+    ],
+    "printSymbols": [
+      "B(&#956;V)"
+    ],
+    "properties": [
+      "electric potential level"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"lgTimes2\" value=\"1\" Unit=\"uV\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "B[10.nV]": {
+    "isBase": false,
+    "CODE": "B[10.NV]",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "levels",
+    "names": [
+      "bel 10 nanovolt"
+    ],
+    "printSymbols": [
+      "B(10 nV)"
+    ],
+    "properties": [
+      "electric potential level"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"lgTimes2\" value=\"10\" Unit=\"nV\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "B[W]": {
+    "isBase": false,
+    "CODE": "B[W]",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "levels",
+    "names": [
+      "bel watt"
+    ],
+    "printSymbols": [
+      "B(W)"
+    ],
+    "properties": [
+      "power level"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"lg\" value=\"1\" Unit=\"W\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "B[kW]": {
+    "isBase": false,
+    "CODE": "B[KW]",
+    "isMetric": "yes",
+    "isSpecial": "yes",
+    "class": "levels",
+    "names": [
+      "bel kilowatt"
+    ],
+    "printSymbols": [
+      "B(kW)"
+    ],
+    "properties": [
+      "power level"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"lg\" value=\"1\" Unit=\"kW\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "st": {
+    "isBase": false,
+    "CODE": "STR",
+    "isMetric": "yes",
+    "class": "misc",
+    "names": [
+      "stere"
+    ],
+    "printSymbols": [
+      "st"
+    ],
+    "properties": [
+      "volume"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "Ao": {
+    "isBase": false,
+    "CODE": "AO",
+    "isMetric": "no",
+    "class": "misc",
+    "names": [
+      "Ångström"
+    ],
+    "printSymbols": [
+      "&#197;"
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "0.1",
+        "numeric": 0.1
+      }
+    ]
+  },
+  "b": {
+    "isBase": false,
+    "CODE": "BRN",
+    "isMetric": "no",
+    "class": "misc",
+    "names": [
+      "barn"
+    ],
+    "printSymbols": [
+      "b"
+    ],
+    "properties": [
+      "action area"
+    ],
+    "values": [
+      {
+        "printable": "100",
+        "numeric": 100
+      }
+    ]
+  },
+  "att": {
+    "isBase": false,
+    "CODE": "ATT",
+    "isMetric": "no",
+    "class": "misc",
+    "names": [
+      "technical atmosphere"
+    ],
+    "printSymbols": [
+      "at"
+    ],
+    "properties": [
+      "pressure"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "mho": {
+    "isBase": false,
+    "CODE": "MHO",
+    "isMetric": "yes",
+    "class": "misc",
+    "names": [
+      "mho"
+    ],
+    "printSymbols": [
+      "mho"
+    ],
+    "properties": [
+      "electric conductance"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[psi]": {
+    "isBase": false,
+    "CODE": "[PSI]",
+    "isMetric": "no",
+    "class": "misc",
+    "names": [
+      "pound per sqare inch"
+    ],
+    "printSymbols": [
+      "psi"
+    ],
+    "properties": [
+      "pressure"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "circ": {
+    "isBase": false,
+    "CODE": "CIRC",
+    "isMetric": "no",
+    "class": "misc",
+    "names": [
+      "circle"
+    ],
+    "printSymbols": [
+      "circ"
+    ],
+    "properties": [
+      "plane angle"
+    ],
+    "values": [
+      {
+        "printable": "2",
+        "numeric": 2
+      }
+    ]
+  },
+  "sph": {
+    "isBase": false,
+    "CODE": "SPH",
+    "isMetric": "no",
+    "class": "misc",
+    "names": [
+      "spere"
+    ],
+    "printSymbols": [
+      "sph"
+    ],
+    "properties": [
+      "solid angle"
+    ],
+    "values": [
+      {
+        "printable": "4",
+        "numeric": 4
+      }
+    ]
+  },
+  "[car_m]": {
+    "isBase": false,
+    "CODE": "[CAR_M]",
+    "isMetric": "no",
+    "class": "misc",
+    "names": [
+      "metric carat"
+    ],
+    "printSymbols": [
+      "ct<sub>m</sub>"
+    ],
+    "properties": [
+      "mass"
+    ],
+    "values": [
+      {
+        "printable": "0.2",
+        "numeric": 0.2
+      }
+    ]
+  },
+  "[car_Au]": {
+    "isBase": false,
+    "CODE": "[CAR_AU]",
+    "isMetric": "no",
+    "class": "misc",
+    "names": [
+      "carat of gold alloys"
+    ],
+    "printSymbols": [
+      "ct<sub>\n            <r>Au</r>\n         </sub>"
+    ],
+    "properties": [
+      "mass fraction"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "[smoot]": {
+    "isBase": false,
+    "CODE": "[SMOOT]",
+    "isMetric": "no",
+    "class": "misc",
+    "names": [
+      "Smoot"
+    ],
+    "printSymbols": [
+      ""
+    ],
+    "properties": [
+      "length"
+    ],
+    "values": [
+      {
+        "printable": "67",
+        "numeric": 67
+      }
+    ]
+  },
+  "bit_s": {
+    "isBase": false,
+    "CODE": "BIT_S",
+    "isMetric": "no",
+    "isSpecial": "yes",
+    "class": "infotech",
+    "names": [
+      "bit"
+    ],
+    "printSymbols": [
+      "bit<sub>s</sub>"
+    ],
+    "properties": [
+      "amount of information"
+    ],
+    "values": [
+      {
+        "printable": "<function name=\"ld\" value=\"1\" Unit=\"1\"/>",
+        "numeric": null
+      }
+    ]
+  },
+  "bit": {
+    "isBase": false,
+    "CODE": "BIT",
+    "isMetric": "yes",
+    "class": "infotech",
+    "names": [
+      "bit"
+    ],
+    "printSymbols": [
+      "bit"
+    ],
+    "properties": [
+      "amount of information"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "By": {
+    "isBase": false,
+    "CODE": "BY",
+    "isMetric": "yes",
+    "class": "infotech",
+    "names": [
+      "byte"
+    ],
+    "printSymbols": [
+      "B"
+    ],
+    "properties": [
+      "amount of information"
+    ],
+    "values": [
+      {
+        "printable": "8",
+        "numeric": 8
+      }
+    ]
+  },
+  "Bd": {
+    "isBase": false,
+    "CODE": "BD",
+    "isMetric": "yes",
+    "class": "infotech",
+    "names": [
+      "baud"
+    ],
+    "printSymbols": [
+      "Bd"
+    ],
+    "properties": [
+      "signal transmission rate"
+    ],
+    "values": [
+      {
+        "printable": "1",
+        "numeric": 1
+      }
+    ]
+  },
+  "m": {
+    "isBase": true,
+    "CODE": "M",
+    "dim": "L",
+    "names": [
+      "meter"
+    ],
+    "printSymbols": [
+      "m"
+    ],
+    "properties": [
+      "length"
+    ]
+  },
+  "s": {
+    "isBase": true,
+    "CODE": "S",
+    "dim": "T",
+    "names": [
+      "second"
+    ],
+    "printSymbols": [
+      "s"
+    ],
+    "properties": [
+      "time"
+    ]
+  },
+  "g": {
+    "isBase": true,
+    "CODE": "G",
+    "dim": "M",
+    "names": [
+      "gram"
+    ],
+    "printSymbols": [
+      "g"
+    ],
+    "properties": [
+      "mass"
+    ]
+  },
+  "rad": {
+    "isBase": true,
+    "CODE": "RAD",
+    "dim": "A",
+    "names": [
+      "radian"
+    ],
+    "printSymbols": [
+      "rad"
+    ],
+    "properties": [
+      "plane angle"
+    ]
+  },
+  "K": {
+    "isBase": true,
+    "CODE": "K",
+    "dim": "C",
+    "names": [
+      "Kelvin"
+    ],
+    "printSymbols": [
+      "K"
+    ],
+    "properties": [
+      "temperature"
+    ]
+  },
+  "C": {
+    "isBase": true,
+    "CODE": "C",
+    "dim": "Q",
+    "names": [
+      "Coulomb"
+    ],
+    "printSymbols": [
+      "C"
+    ],
+    "properties": [
+      "electric charge"
+    ]
+  },
+  "cd": {
+    "isBase": true,
+    "CODE": "CD",
+    "dim": "F",
+    "names": [
+      "candela"
+    ],
+    "printSymbols": [
+      "cd"
+    ],
+    "properties": [
+      "luminous intensity"
+    ]
+  }
+}
+
+},{}],415:[function(require,module,exports){
+module.exports = {
+
+  multiply: function multiply(t, ms) {
+    //console.log("Multiply: ", JSON.stringify(t), JSON.stringify(ms));
+    if (ms.length == 0) return t;
+
+    var ret = t;
+    ms.forEach(function(mterm){
+
+      var sign = (mterm[0] == "." ? 1 : -1);
+      var b = mterm[1];
+
+      ret.value *= Math.pow(b.value, sign);
+      //console.log("b = ", JSON.stringify(b));
+      //console.log("ret = ", JSON.stringify(ret));
+      Object.keys(b.units).forEach(function(u){
+        ret.units[u] = ret.units[u] || 0;
+        ret.units[u] = ret.units[u] + sign*b.units[u];
+
+        if(!ret.metadata && b.metadata){
+          ret.metadata = {};
+          ret.metadata[u] = b.metadata[u];
+        }
+        else if(ret.metadata && b.metadata){
+          ret.metadata[u] = b.metadata[u];
+        }
+
+        if (ret.units[u] == 0){
+          delete ret.units[u];
+          if(ret.metadata) {
+            delete ret.metadata[u];
+          }
+        }
+      });
+
+    });
+
+    //console.log("Multiply ret: ", ret);
+    return ret;
+  },
+
+  topower: function topower(e, exp){
+    if (!exp) {exp = 1;}
+    var ret = e;
+    ret.value = Math.pow(ret.value, exp);
+    Object.keys(e.units).forEach(function(u){
+      ret.units[u] = e.units[u] * exp;
+    });
+
+    return ret;
+  },
+
+  cleanup: function cleanup(e) {
+    ["10^", "10*"].forEach(function(k){
+      if (e.units[k]) {
+        e.value *= Math.pow(10, e.units[k]);
+        delete e.units[k];
+      }
+    });
+    return e;
+  },
+
+  ismetric: function(metrics) {
+    return function(u) {
+      return metrics[Object.keys(u.units)[0]] !== undefined;
+    };
+  }
+}
+
+},{}],416:[function(require,module,exports){
+parser = require('./generated/ucum-parser.js');
+equivalents = require('./generated/equivalents.json');
+helpers = require('./lib/helpers.js');
+unitMetadata = require('./generated/unitMetadata.json');
+
+module.exports = {
+  parse: parse,
+  canonicalize: canonicalize,
+  convert: convert,
+  format: format,
+  unitQuery: unitQuery
+};
+
+function parse(value, units){
+
+  if (arguments.length === 1 || units === undefined){
+    units = value;
+    value = 1
+  }
+
+  if (units.match(/^\//)){
+    units = '1'+units;
+  }
+
+  if (units === '') units = '1';
+
+  var ret = parser.parse(units);
+  ret.value *= value;
+  return ret;
+}
+
+function nonBaseUnit(u){
+  return equivalents[u] !== undefined;
+}
+
+function remainingNonBaseUnits(value) {
+  return Object.keys(value.units).filter(nonBaseUnit)
+}
+
+function canonicalize(value, units){
+
+  value = parse(value, units);
+
+  var remaining = remainingNonBaseUnits(value);
+
+  while (remaining.length) {
+    if (remaining.length === 0) {
+      return false;
+    }
+
+    remaining.forEach(function(u){
+      var sub = parse(equivalents[u].ucum);
+      sub.value *= equivalents[u].value;
+      sub = helpers.topower(sub, value.units[u]);
+      value = helpers.multiply(value, [['.', sub]]);
+      delete value.units[u];
+    });
+
+    remaining = remainingNonBaseUnits(value);
+  }
+
+  // we should remove any prefix metadata that exists at this point
+  // because it represents residual artifacts of the above process
+  if(value.metadata){
+    Object.keys(value.metadata).forEach(function(u){
+      if(value.metadata[u]){
+        if(value.metadata[u].prefix) {
+          delete value.metadata[u].prefix;
+        }
+
+        // if it's not in the final array of units we should delete this metadata as well
+        if(Object.keys(value.units).indexOf(u) == -1){
+          delete value.metadata[u];
+        }
+      }
+    });
+  }
+
+  return value;
+}
+
+function conformant(a, b){
+  var ret = true;
+  Object.keys(a.units)
+  .concat(Object.keys(b.units))
+  .forEach(function(k){
+    if (a.units[k] !== b.units[k]) {
+      ret = false;
+    }
+  });
+  
+  return ret;
+}
+
+function convert(fromValue, fromUnits, toUnits){
+ fromc = canonicalize(fromValue, fromUnits);
+ toc = canonicalize(toUnits);
+
+ if (!conformant(fromc, toc)){
+   throw "Non-conformant units; can't convert from " + fromUnits + " to " + toUnits ;
+ }
+
+ return fromc.value / toc.value;
+
+}
+
+// format returns a printable representation of the value
+// the resulting units are a single-line html rendering of the resultant units
+// can be invoked in the following supported ways, by example:
+// 1. ucum.format('[in_i]') -> 'in'
+// 2. ucum.format('[in_i]', true) -> '1 in'
+// 3. ucum.format(3, '[in_i]', true) -> '3 in'
+// 4. var x = ucum.parse(3, '[in_i]'); ucum.format(x) -> 'in'
+// 5. var x = ucum.parse(3, '[in_i]'); ucum.format(x, true) -> '3 in'
+function format(value, units, includeValue){
+  var obj;
+
+  if(typeof value === 'string'){
+    includeValue = units;
+    units = value;
+    value = 1;
+  }
+
+  if(typeof value === 'object'){
+    // treat it like a UCUM parse output
+    obj = value;
+    includeValue = units; // you would never provide units in this case, but you might provide includeValue
+  }
+  else{
+    // parse it first
+    obj = parse(value, units);
+  }
+
+  var units = Object.keys(obj.units);
+  var metadata = obj.metadata;
+  var numUnits = units.length;
+  var numeratorUnits = [];
+  var denominatorUnits = [];
+  var printableUnits = "";
+  
+  units.forEach(function(unit, index){
+    var exponent = obj.units[unit];
+    var absExponent = Math.abs(exponent);
+    var printable = metadata[unit].printSymbols ? metadata[unit].printSymbols[0] : metadata[unit].names[0];
+    var prefix = metadata[unit].prefix ? metadata[unit].prefix.printSymbols[0] : "";
+    pUnit = prefix + printable;
+    if(absExponent !== 1){      
+      pUnit += "<sup>";
+      pUnit += Math.abs(exponent);
+      pUnit += "</sup>";
+    }
+    
+    if(exponent > 0){
+      numeratorUnits.push(pUnit);
+    }
+    else{
+      denominatorUnits.push(pUnit);
+    }
+  });
+
+
+  if(numeratorUnits.length == 0){
+    printableUnits = "1";
+  }
+  else if(numeratorUnits.length > 0){
+    printableUnits = numeratorUnits.join("*");
+  }
+  
+  if(denominatorUnits.length > 0){
+    printableUnits += "/";
+  } 
+  
+  printableUnits += denominatorUnits.join("/");
+
+  if(includeValue){
+    printableUnits = obj.value + " " + printableUnits;
+  }
+
+  return printableUnits;
+}
+
+// searches the unit metadata for all unit metadata
+// criteria is an object like
+//   { properties: 'area', isMetric: 'yes' }
+// where the key/value pairs form a logical intersection, i.e. all criteria must be met
+// resultFields is an array to pre-reduce the result set fields
+function unitQuery(criteria, resultFields){
+  return Object.keys(unitMetadata).filter((unit) => {
+    var keys = Object.keys(criteria);
+    for(var ii = 0; ii < keys.length; ii++){
+      var key = keys[ii];
+      var val = unitMetadata[unit][key];
+      var value = criteria[key];
+      if(val && (typeof val === 'object')){
+        // it's a list of values, it's a match if the target value occurs in the list
+        if(val.indexOf(value) === -1){
+          return false;
+        }
+      }
+      else{
+        // it's a non-object, make a direct comparison
+        if(unitMetadata[unit][key] !== value){
+          return false;
+        }
+      }
+    }
+    return true;
+  }).map((key) => {
+    var obj = {};
+    if(resultFields){
+      if(resultFields.length) {
+        obj[key] = {};
+        resultFields.forEach((field) => {
+          if (unitMetadata[key][field] !== undefined) {
+            obj[key][field] = JSON.parse(JSON.stringify(unitMetadata[key][field]));
+          }
+        });
+      }
+      else{
+        // just return the keys if an empty array gets passed for resultSet
+        obj = key;
+      }
+    }
+    else{
+      obj[key] = JSON.parse(JSON.stringify(unitMetadata[key]));
+    }
+    return obj;
+  });
+}
+},{"./generated/equivalents.json":409,"./generated/ucum-parser.js":413,"./generated/unitMetadata.json":414,"./lib/helpers.js":415}],417:[function(require,module,exports){
 arguments[4][9][0].apply(exports,arguments)
-},{"dup":9}],419:[function(require,module,exports){
+},{"dup":9}],418:[function(require,module,exports){
 arguments[4][10][0].apply(exports,arguments)
-},{"dup":10}],420:[function(require,module,exports){
+},{"dup":10}],419:[function(require,module,exports){
 arguments[4][11][0].apply(exports,arguments)
-},{"./support/isBuffer":419,"_process":413,"dup":11,"inherits":418}]},{},[1]);
+},{"./support/isBuffer":418,"_process":404,"dup":11,"inherits":417}]},{},[1]);
