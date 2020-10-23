@@ -2922,10 +2922,10 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-fhir-typescript-models@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/fhir-typescript-models/-/fhir-typescript-models-0.0.7.tgz#629a07d7f2fa7422e090946225c1f3530486d0ab"
-  integrity sha512-sUprJWF+HQEmbZLPMidYajV8igNYj0xrdOj+3IjWXyjILDPRXJ665JSXZ4ahjwDIfmj2ylJQy8mPkAedf+oloQ==
+fhir-typescript-models@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/fhir-typescript-models/-/fhir-typescript-models-0.0.8.tgz#a06ebeead8988ca05e7ae1ea732f736aac1576d5"
+  integrity sha512-4P7KqIMOD8CEq2Yw7tKlR+6V5R6OpcPvdPu/v1fa2VsrkfpRrlx2PRkOQKxh7kZDcQmNzie7aKoaY7oEaFIdaw==
 
 file-entry-cache@^5.0.1:
   version "5.0.1"
