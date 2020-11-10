@@ -25,9 +25,9 @@ describe("Calculator.EXM124TEST", () => {
     expect(result.NUMER).toEqual(0);
     expect(result.DENEX).toEqual(0);
     expect(result.patient).toEqual("5fa42748367e1946899d312a");
-    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE')
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE')
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true)
+    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE');
+    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE');
+    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true);
   });
 
   it("calculates patient-numer-EXM124", () => {
@@ -50,10 +50,26 @@ describe("Calculator.EXM124TEST", () => {
     expect(result.clause_results).toBeNull();
     expect(result.state).toEqual("complete");
     expect(result.IPP).toEqual(1);
+    expect(result.NUMER).toEqual(1);
     expect(result.patient).toEqual("numer-EXM124");
-    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE')
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE')
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true)
+    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE');
+    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE');
+    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true);
+  });
+
+  it("Bonnie Patient", () => {
+    const measure = getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/EXM124TEST.json");
+    const valueSets = measure.value_sets;
+    const patients = [];
+    patients.push(getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/bonnie-patient.json"));
+
+    const calculationResults = Calculator.calculate(measure, patients, valueSets, {});
+    const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+    expect(result.IPP).toEqual(1);
+    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE');
+    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE');
+    // expect(result.statement_results.AdultOutpatientEncountersFHIR4["Qualifying Encounters"].final).toEqual("TRUE");
   });
 
   it("calculates patient-denom-EXM124", () => {
