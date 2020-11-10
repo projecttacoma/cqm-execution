@@ -1,5 +1,5 @@
 {
-  "id": "5fa42748367e1946899d312a",
+  "id": "denomexcl-EXM124",
   "expected_values": [
     {
       "measure_id": "34378B47-1599-42A0-9215-6DF82882231F",
@@ -10,13 +10,18 @@
       "NUMER": 0
     }
   ],
-  "notes": "Female, correct age, qualifying encounter, has Hospice procedure overlaps MP.",
+  "notes": "connectathon denom patient.",
   "measure_ids": [
     "34378B47-1599-42A0-9215-6DF82882231F"
   ],
   "fhir_patient": {
-    "id": "5fa42748367e1946899d312a",
     "resourceType": "Patient",
+    "id": "denomexcl-EXM124",
+    "meta": {
+      "profile": [
+        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      ]
+    },
     "extension": [
       {
         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
@@ -45,16 +50,32 @@
         ]
       }
     ],
+    "identifier": [
+      {
+        "use": "usual",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "MR",
+              "display": "Medical Record Number"
+            }
+          ]
+        },
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999995"
+      }
+    ],
     "name": [
       {
-        "family": "DenExclPass",
+        "family": "Bertha",
         "given": [
-          "HospicePerformedOverlapsMP"
+          "Betty"
         ]
       }
     ],
-    "gender": "female",
-    "birthDate": "1976-08-26"
+    "birthDate": "1995-01-01",
+    "gender": "female"
   },
   "data_elements": [
     {
@@ -62,19 +83,25 @@
       "valueSetTitle": "Office Visit",
       "description": "Encounter: Office Visit",
       "fhir_resource": {
-        "id": "5fa42860367e1946899d312b",
         "resourceType": "Encounter",
+        "id": "denomexcl-EXM124-1",
+        "subject": {
+          "reference": "Patient/denomexcl-EXM124"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+          ]
+        },
         "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
         "type": [
           {
             "coding": [
-              {
-                "system": "http://snomed.info/sct",
-                "version": "2019-09",
-                "code": "185463005",
-                "display": "Visit out of hours (procedure)",
-                "userSelected": true
-              },
               {
                 "system": "http://www.ama-assn.org/go/cpt",
                 "code": "99201",
@@ -83,61 +110,49 @@
             ]
           }
         ],
-        "class": {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "version": "2019-09",
-          "code": "AMB",
-          "display": "ambulatory",
-          "userSelected": true
-        },
-        "subject": {
-          "reference": "5fa42748367e1946899d312a"
-        },
         "period": {
-          "start": "2019-01-01T08:00:00.000+00:00",
-          "end": "2019-01-01T08:30:00.000+00:00"
+          "start": "2019-01-01T01:00:00.0",
+          "end": "2019-01-02T01:00:00.0"
         }
       }
     },
     {
       "codeListId": "2.16.840.1.113762.1.4.1108.15",
-      "valueSetTitle": "Hospice care ambulatory",
-      "description": "Procedure: Hospice care ambulatory",
+      "valueSetTitle": "Condition: N/A",
+      "description": "Condition: N/A",
       "fhir_resource": {
-        "id": "5fa428e3367e1946899d312d",
-        "resourceType": "Procedure",
-        "status": "completed",
-        "code": {
+        "resourceType": "Condition",
+        "id": "denomexcl-EXM124-2",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+          ]
+        },
+        "verificationStatus": {
           "coding": [
             {
-              "system": "http://snomed.info/sct",
-              "version": "2019-09",
-              "code": "385763009",
-              "display": "Hospice care (regime/therapy)",
-              "userSelected": true
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
             }
           ]
         },
-        "category" : {
-
+        "code": {
           "coding": [
             {
-              "system": "http://snomed.info/sct",
-              "code": "409063005",
-              "display": "Counselling"
+              "system": "http://snomed.info/sct/731000124108",
+              "code": "37687000",
+              "display": "Congenital absence of cervix (disorder)"
             }
           ]
         },
         "subject": {
-          "reference": "5fa42748367e1946899d312a"
+          "reference": "Patient/denomexcl-EXM124"
         },
-        "performedPeriod": {
-          "start": "2019-01-21T08:00:00.000+00:00",
-          "end": "2019-12-02T11:00:00.000+00:00"
-        }
+        "onsetDateTime": "1995-01-01"
       }
     }
   ],
-  "created_at": "2020-11-05T16:33:27.689Z",
-  "updated_at": "2020-11-05T16:33:27.689Z"
+  "created_at": "2019-11-05T16:33:27.689Z",
+  "updated_at": "2019-11-05T16:33:27.689Z"
 }
