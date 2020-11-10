@@ -28,6 +28,7 @@ describe("Calculator.EXM124TEST", () => {
     expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE');
     expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE');
     expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true);
+    expect(result.statement_results.AdultOutpatientEncountersFHIR4["Qualifying Encounters"].final).toEqual("TRUE");
   });
 
   it("calculates patient-numer-EXM124", () => {
@@ -69,7 +70,7 @@ describe("Calculator.EXM124TEST", () => {
     expect(result.IPP).toEqual(1);
     expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE');
     expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE');
-    // expect(result.statement_results.AdultOutpatientEncountersFHIR4["Qualifying Encounters"].final).toEqual("TRUE");
+    expect(result.statement_results.AdultOutpatientEncountersFHIR4["Qualifying Encounters"].final).toEqual("TRUE");
   });
 
   it("calculates patient-denom-EXM124", () => {
