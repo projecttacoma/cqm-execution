@@ -13,7 +13,7 @@ describe("Calculator.CMS104", () => {
     const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
     // There will not be episode_results on the result object
-    expect(result["episode_results"]).toBeUndefined();
+    expect(result.episode_results).toEqual({});
     // The IPP should be the only relevant population
     expect(result.population_relevance).toEqual({
       IPP: true,
@@ -39,7 +39,7 @@ describe("Calculator.CMS104", () => {
     const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
     // There will not be episode_results on the result object
-    expect(result["episode_results"]).toBeUndefined();
+    expect(result.episode_results).toEqual({});
     // The IPP should be the only relevant population
     expect(result.population_relevance).toEqual({
       IPP: true,
