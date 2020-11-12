@@ -24,12 +24,57 @@ describe("Calculator.EXM124TEST", () => {
     expect(result.DENEX).toEqual(0);
     expect(result.NUMER).toEqual(0);
     expect(result.DENEX).toEqual(0);
-    expect(result.patient).toEqual("5fa42748367e1946899d312a");
+    expect(result.patient).toEqual("5fa44008d7559f753fca01e4");
     expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE');
     expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE');
     expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true);
     expect(result.statement_results.AdultOutpatientEncountersFHIR4["Qualifying Encounters"].final).toEqual("TRUE");
   });
+
+  xit("Run all tests from Mike", () => {
+    const measure = getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/EXM124TEST.json");
+    const valueSets = measure.value_sets;
+    const patientFiles = [
+      "patient-DenExclPass-AbsenceofCervixB4MP.json",
+      "patient-DenExclPass-DctoFacilityHospiceInptEncEndsDuringMP.json",
+      "patient-DenExclPass-DctoHomeHospiceInptEncEndsDuringMP.json",
+      "patient-DenExclPass-HospiceOrderDuringMP.json",
+      "patient-DenExclPass-HospicePerformedOverlapsMP.json",
+      "patient-DenExclPass-HPVless5YrsB4EndMP.json",
+      "patient-DenExclPass-HPVless5YrsB4EndMP_1.json",
+      "patient-DenExclPass-HPVless5YrsB4EndMP_2.json",
+      "patient-DenExclPass-HPVless5YrsB4EndMP_3.json",
+      "patient-DenExclPass-HystB4EndOfMP.json",
+      "patient-NumPass-Papless3YrsB4EndMP.json",
+      "patient-NumPass-Papless3YrsB4EndMP_1.json",
+      "patient-NumPass-Papless3YrsB4EndMP_2.json",
+      "patient-NumPass-Papless3YrsB4EndMP_3.json"
+    ]
+    const patients = [];
+    patientFiles.forEach((file) =>
+      patients.push(getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/" + file))
+    );
+
+    const calculationResults = Calculator.calculate(measure, patients, valueSets, {});
+    expect(Object.keys(calculationResults).length).toEqual(patientFiles.length);
+    // expect(Object.keys(calculationResults).length).toEqual(14);
+
+    for (let resNo = 0; resNo < patientFiles.length; resNo++) {
+      const id = Object.keys(calculationResults)[resNo];
+
+      const calculationResult = calculationResults[id];
+      expect(Object.keys(calculationResult)).toEqual(["PopulationSet_1"]);
+      const result = Object.values(calculationResult)[0];
+
+      const patient = patients[resNo];
+
+      expect(id).toEqual(patient.id);
+      expect(result.IPP).toEqual(patient.expected_values[0].IPP);
+      expect(result.DENEX).toEqual(patient.expected_values[0].DENEX);
+      expect(result.NUMER).toEqual(patient.expected_values[0].NUMER);
+      expect(result.DENEX).toEqual(patient.expected_values[0].DENEX);
+    }
+  })
 
   it("calculates patient-numer-EXM124", () => {
     const measure = getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/EXM124TEST.json");
