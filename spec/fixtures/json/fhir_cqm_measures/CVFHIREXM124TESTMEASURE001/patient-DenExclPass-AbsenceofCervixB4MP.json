@@ -1,8 +1,8 @@
 {
-  "id": "5fa465c1d7559f753fca01f3",
+  "id": "5faef5022da5dba2d0840d50",
   "expected_values": [
     {
-      "measure_id": "34378B47-1599-42A0-9215-6DF82882231F",
+      "measure_id": "4F661027-8C11-4FDB-A15D-14F2597007F7",
       "population_index": 0,
       "IPP": 1,
       "DENOM": 1,
@@ -12,10 +12,10 @@
   ],
   "notes": "Female, correct age, qualifying encounter, has Dx of congenital absence of cervix before end of MP.",
   "measure_ids": [
-    "34378B47-1599-42A0-9215-6DF82882231F"
+    "4F661027-8C11-4FDB-A15D-14F2597007F7"
   ],
   "fhir_patient": {
-    "id": "5fa465c1d7559f753fca01f3",
+    "id": "5faef5022da5dba2d0840d50",
     "resourceType": "Patient",
     "extension": [
       {
@@ -59,7 +59,7 @@
       {
         "family": "DenExclPass",
         "given": [
-          "AbsenceofCervixB4MP "
+          "AbsenceofCervixB4MP"
         ]
       }
     ],
@@ -72,7 +72,7 @@
       "valueSetTitle": "Preventive Care Services-Initial Office Visit, 18 and Up",
       "description": "Encounter: Preventive Care Services-Initial Office Visit, 18 and Up",
       "fhir_resource": {
-        "id": "5fa46627d7559f753fca01f4",
+        "id": "5faef74c86afb3bc3ea31042",
         "resourceType": "Encounter",
         "status": "finished",
         "class": {
@@ -99,8 +99,51 @@
           "end": "2019-01-01T08:30:00.000+00:00"
         }
       }
+    },
+    {
+      "codeListId": "drc-323543cb89f9e1c3fd9a121b53d52c577bf8d114a1182aae5f8d83a54c99abeb",
+      "valueSetTitle": "Congenital absence of cervix (disorder)",
+      "description": "Condition: Congenital absence of cervix (disorder)",
+      "fhir_resource": {
+        "id": "5faef79a86afb3bc3ea31043",
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": true
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "version": "4.0.1",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": true
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/731000124108/version/201709",
+              "code": "37687000",
+              "display": "Congenital absence of cervix (disorder)",
+              "userSelected": true
+            }
+          ]
+        },
+        "onsetDateTime": "2018-11-13T08:00:00.000+00:00",
+        "recordedDate": "2018-11-13T08:00:00.000+00:00"
+      }
     }
   ],
-  "created_at": "2020-11-05T21:21:01.486Z",
-  "updated_at": "2020-11-05T21:21:01.486Z"
+  "created_at": "2020-11-13T21:05:19.701Z",
+  "updated_at": "2020-11-13T21:05:19.701Z"
 }

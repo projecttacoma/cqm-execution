@@ -77,7 +77,6 @@
         "status": "finished",
         "class": {
           "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "version": null,
           "code": "EMER",
           "display": "emergency",
           "userSelected": true
@@ -111,7 +110,6 @@
         "status": "finished",
         "class": {
           "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "version": null,
           "code": "IMP",
           "display": "inpatient encounter",
           "userSelected": true
