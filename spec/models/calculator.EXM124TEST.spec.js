@@ -22,7 +22,6 @@ describe("Calculator.EXM124TEST", () => {
     expect(result.state).toEqual("complete");
     expect(result.IPP).toEqual(1);
     expect(result.DENOM).toEqual(1);
-    expect(result.NUMER).toEqual(0);
     expect(result.DENEX).toEqual(1);
     expect(result.patient).toEqual("5fa44008d7559f753fca01e4");
     expect(result.statement_relevance.EXM124['Initial Population']).toEqual('TRUE');
@@ -104,7 +103,7 @@ describe("Calculator.EXM124TEST", () => {
     expect(result.statement_results.EXM124['Initial Population'].raw).toBe(true);
   });
 
-  it("calculates a cqm-patient generated in Bonnie", () => {
+  it("calculates a cqm-patient generated in Bonnie that satisfies IPP", () => {
     const measure = getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/EXM124TEST.json");
     const valueSets = measure.value_sets;
     const patients = [];
@@ -163,13 +162,12 @@ describe("Calculator.EXM124TEST", () => {
       IPP: true,
       DENEX: true,
       DENOM: true,
-      NUMER: true,
+      NUMER: false,
     });
     expect(result.clause_results).toBeNull();
     expect(result.state).toEqual("complete");
     expect(result.IPP).toEqual(1);
-    // DENEX should be 1?
-    expect(result.DENEX).toEqual(0);
+    expect(result.DENEX).toEqual(1);
     expect(result.DENOM).toEqual(1);
     expect(result.NUMER).toEqual(0);
     expect(result.patient).toEqual("denomexcl-EXM124");
