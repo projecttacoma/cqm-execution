@@ -16,23 +16,23 @@ describe("Calculator.EXM124TEST", () => {
       IPP: true,
       DENEX: true,
       DENOM: true,
-      NUMER: true,
+      NUMER: false,
     });
     expect(result.clause_results).toBeNull();
     expect(result.state).toEqual("complete");
     expect(result.IPP).toEqual(1);
-    expect(result.DENEX).toEqual(0);
-    expect(result.NUMER).toEqual(0);
-    expect(result.DENEX).toEqual(0);
+    expect(result.DENOM).toEqual(1);
+    expect(result.DENEX).toEqual(1);
     expect(result.patient).toEqual("5fa44008d7559f753fca01e4");
-    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE');
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE');
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true);
+    expect(result.statement_relevance.EXM124['Initial Population']).toEqual('TRUE');
+    expect(result.statement_results.EXM124['Initial Population'].final).toBe('TRUE');
+    expect(result.statement_results.EXM124['Initial Population'].raw).toBe(true);
     expect(result.statement_results.AdultOutpatientEncountersFHIR4["Qualifying Encounters"].final).toEqual("TRUE");
   });
 
-  xit("Run all tests from Mike", () => {
+  it("Run all tests from Mike", () => {
     const measure = getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/EXM124TEST.json");
+    // const measure = getJSONFixture("fhir_cqm_measures/JK124/EXM124.json");
     const valueSets = measure.value_sets;
     const patientFiles = [
       "patient-DenExclPass-AbsenceofCervixB4MP.json",
@@ -49,7 +49,7 @@ describe("Calculator.EXM124TEST", () => {
       "patient-NumPass-Papless3YrsB4EndMP_1.json",
       "patient-NumPass-Papless3YrsB4EndMP_2.json",
       "patient-NumPass-Papless3YrsB4EndMP_3.json"
-    ]
+    ];
     const patients = [];
     patientFiles.forEach((file) =>
       patients.push(getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/" + file))
@@ -70,11 +70,11 @@ describe("Calculator.EXM124TEST", () => {
 
       expect(id).toEqual(patient.id);
       expect(result.IPP).toEqual(patient.expected_values[0].IPP);
-      expect(result.DENEX).toEqual(patient.expected_values[0].DENEX);
+      expect(result.DENOM).toEqual(patient.expected_values[0].DENOM);
       expect(result.NUMER).toEqual(patient.expected_values[0].NUMER);
       expect(result.DENEX).toEqual(patient.expected_values[0].DENEX);
     }
-  })
+  });
 
   it("calculates patient-numer-EXM124", () => {
     const measure = getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/EXM124TEST.json");
@@ -98,12 +98,12 @@ describe("Calculator.EXM124TEST", () => {
     expect(result.IPP).toEqual(1);
     expect(result.NUMER).toEqual(1);
     expect(result.patient).toEqual("numer-EXM124");
-    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE');
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE');
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true);
+    expect(result.statement_relevance.EXM124['Initial Population']).toEqual('TRUE');
+    expect(result.statement_results.EXM124['Initial Population'].final).toBe('TRUE');
+    expect(result.statement_results.EXM124['Initial Population'].raw).toBe(true);
   });
 
-  it("Bonnie Patient", () => {
+  it("calculates a cqm-patient generated in Bonnie that satisfies IPP", () => {
     const measure = getJSONFixture("fhir_cqm_measures/CVFHIREXM124TESTMEASURE001/EXM124TEST.json");
     const valueSets = measure.value_sets;
     const patients = [];
@@ -113,8 +113,8 @@ describe("Calculator.EXM124TEST", () => {
     const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
     expect(result.IPP).toEqual(1);
-    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE');
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE');
+    expect(result.statement_relevance.EXM124['Initial Population']).toEqual('TRUE');
+    expect(result.statement_results.EXM124['Initial Population'].final).toBe('TRUE');
     expect(result.statement_results.AdultOutpatientEncountersFHIR4["Qualifying Encounters"].final).toEqual("TRUE");
   });
 
@@ -141,11 +141,11 @@ describe("Calculator.EXM124TEST", () => {
     expect(result.NUMER).toEqual(0);
     expect(result.DENEX).toEqual(0);
     expect(result.patient).toEqual("denom-EXM124");
-    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE')
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE')
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true)
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Denominator'].final).toBe('TRUE')
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Denominator'].raw).toBe(true)
+    expect(result.statement_relevance.EXM124['Initial Population']).toEqual('TRUE');
+    expect(result.statement_results.EXM124['Initial Population'].final).toBe('TRUE');
+    expect(result.statement_results.EXM124['Initial Population'].raw).toBe(true);
+    expect(result.statement_results.EXM124['Denominator'].final).toBe('TRUE');
+    expect(result.statement_results.EXM124['Denominator'].raw).toBe(true);
   });
 
   it("calculates patient-denomexcl-EXM124", () => {
@@ -162,18 +162,17 @@ describe("Calculator.EXM124TEST", () => {
       IPP: true,
       DENEX: true,
       DENOM: true,
-      NUMER: true,
+      NUMER: false,
     });
     expect(result.clause_results).toBeNull();
     expect(result.state).toEqual("complete");
     expect(result.IPP).toEqual(1);
-    // DENEX should be 1?
-    expect(result.DENEX).toEqual(0);
+    expect(result.DENEX).toEqual(1);
     expect(result.DENOM).toEqual(1);
     expect(result.NUMER).toEqual(0);
     expect(result.patient).toEqual("denomexcl-EXM124");
-    expect(result.statement_relevance.CVFHIREXM124TESTMEASURE001['Initial Population']).toEqual('TRUE')
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].final).toBe('TRUE')
-    expect(result.statement_results.CVFHIREXM124TESTMEASURE001['Initial Population'].raw).toBe(true)
+    expect(result.statement_relevance.EXM124['Initial Population']).toEqual('TRUE');
+    expect(result.statement_results.EXM124['Initial Population'].final).toBe('TRUE');
+    expect(result.statement_results.EXM124['Initial Population'].raw).toBe(true);
   });
 });

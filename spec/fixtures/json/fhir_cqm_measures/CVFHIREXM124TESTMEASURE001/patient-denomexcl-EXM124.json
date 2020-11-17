@@ -140,7 +140,7 @@
         "code": {
           "coding": [
             {
-              "system": "http://snomed.info/sct/731000124108",
+              "system": "http://snomed.info/sct",
               "code": "37687000",
               "display": "Congenital absence of cervix (disorder)"
             }

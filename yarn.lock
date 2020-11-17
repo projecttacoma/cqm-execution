@@ -2185,10 +2185,10 @@ cql-exec-fhir@^1.5.0-beta.1:
     "@babel/preset-env" "^7.11.5"
     xml2js "~0.4.19"
 
-cql-execution@^2.0.0-beta.1:
-  version "2.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/cql-execution/-/cql-execution-2.0.0-beta.1.tgz#693c4576fb7f4bc63f055549333bbf859812ca7f"
-  integrity sha512-GscZH2MTNmJ4ySO5AHR/TDe60mCkdf9l5Hj2LwtjBw36kuiAxGEYh0Yz51LSpMFLu9GOdhdLLf2MASXuEfAqdA==
+cql-execution@^2.0.0-beta.2:
+  version "2.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/cql-execution/-/cql-execution-2.0.0-beta.2.tgz#e071f32707190bde9f01ecc5fe2e14e6a03ef5fb"
+  integrity sha512-tq6BS7jjsCvQWXVRhZkX7xpUtpYXmneXdHBNk3T3wFBvxWODEvTctwQ66i4+0j4ybCGhcdehGktdU5OeJVtZQQ==
   dependencies:
     moment "^2.27.0"
     ucum "^0.0.7"
