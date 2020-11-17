@@ -68,6 +68,49 @@
   },
   "data_elements": [
     {
+      "codeListId": "drc-323543cb89f9e1c3fd9a121b53d52c577bf8d114a1182aae5f8d83a54c99abeb",
+      "valueSetTitle": "Congenital absence of cervix (disorder)",
+      "description": "Condition: Congenital absence of cervix (disorder)",
+      "fhir_resource": {
+        "id": "5fb03904f0f4c92740a45d53",
+        "resourceType": "Condition",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active",
+              "userSelected": true
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "version": "4.0.1",
+              "code": "confirmed",
+              "display": "Confirmed",
+              "userSelected": true
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/731000124108/version/201709",
+              "code": "37687000",
+              "display": "Congenital absence of cervix (disorder)",
+              "userSelected": true
+            }
+          ]
+        },
+        "onsetDateTime": "2018-12-31T23:59:00.000+00:00",
+        "recordedDate": "2018-12-31T23:59:00.000+00:00"
+      }
+    },
+    {
       "codeListId": "2.16.840.1.113883.3.464.1003.101.12.1023",
       "valueSetTitle": "Preventive Care Services-Initial Office Visit, 18 and Up",
       "description": "Encounter: Preventive Care Services-Initial Office Visit, 18 and Up",
