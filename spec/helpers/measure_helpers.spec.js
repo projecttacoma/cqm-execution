@@ -65,6 +65,343 @@ describe("MeasureHelpers", () => {
       expect(localIds[42]).not.toBeUndefined();
       expect(localIds[42]).toEqual({ localId: "42" });
     });
+
+    it("clauses unsupported", () => {
+
+      const library = {
+        elm: {
+          library: {
+            identifier: {
+              id: "666"
+            },
+            statements: {
+              def: [
+                {
+                  name: "a statement",
+                  type: "FunctionDef",
+                  localId: "statement local id",
+                  libraryName: "statement library name",
+                  annotation: {
+                    r: "statement local id",
+                    s: [
+                      {
+                        s: {
+                          value: [ "statement library id" ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      };
+
+      const statementName = "a statement";
+
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(
+        library.elm,
+        statementName
+      );
+
+      expect(localIds).toEqual({
+           "statement local id": {
+             "isUnsupported": true,
+               "localId": "statement local id",
+            }
+       });
+    });
+
+    it("sort", () => {
+
+      const libraryName = "statement library name";
+      const statement = {
+          name: "a statement",
+          sort: {
+            localId: "sort local id",
+            other: {
+              localId: "nested sort local id"
+            },
+            onemore: [
+              {
+                localIds: "deeply nested local id"
+              }
+            ]
+          },
+          localId: "statement local id",
+          libraryName: "statement library name",
+          annotation: {
+            r: "statement local id",
+            s: [
+              {
+                s: {
+                  value: [ "statement library id" ]
+                }
+              }
+            ]
+          }
+        };
+
+      const statementName = "a statement";
+      const aliasMap = {};
+
+      const origLocalIds = [];
+      const emptyResultClauses = [];
+      const parentNode = {
+        localId: "rootParentId"
+      };
+      const localIds = MeasureHelpers.findAllLocalIdsInStatement(
+        statement,
+        libraryName,
+        statement.annotation,
+        origLocalIds,
+        aliasMap,
+        emptyResultClauses,
+        parentNode
+      );
+
+      expect(emptyResultClauses).toEqual([
+        {"aliasLocalId": "sort local id", "expressionLocalId": "rootParentId", "lib": "statement library name"},
+        {"aliasLocalId": "nested sort local id", "expressionLocalId": "rootParentId", "lib": "statement library name"},
+        {"aliasLocalId": undefined, "expressionLocalId": "rootParentId", "lib": "statement library name"},
+        {"aliasLocalId": undefined, "expressionLocalId": "rootParentId", "lib": "statement library name"}
+      ]);
+    });
+
+    it("first", () => {
+
+      const libraryName = "statement library name";
+      const statement = {
+        name: "a statement",
+        type: "First",
+        localId: "statement local id",
+        libraryName: "statement library name",
+        source: {
+          localId: "source local id"
+        },
+        annotation: {
+          r: "statement local id",
+          s: [
+            {
+              s: {
+                value: [ "statement library id" ]
+              }
+            }
+          ]
+        }
+      };
+
+      const statementName = "a statement";
+      const aliasMap = {};
+
+      const origLocalIds = [];
+      const emptyResultClauses = [];
+      const parentNode = {
+        localId: "rootParentId"
+      };
+      const localIds = MeasureHelpers.findAllLocalIdsInStatement(
+        statement,
+        libraryName,
+        statement.annotation,
+        origLocalIds,
+        aliasMap,
+        emptyResultClauses,
+        parentNode
+      );
+
+      expect(emptyResultClauses).toEqual([{ "aliasLocalId": "source local id", "expressionLocalId": "statement local id", "lib": "statement library name" }]);
+    });
+
+    it("last", () => {
+
+      const libraryName = "statement library name";
+      const statement = {
+        name: "a statement",
+        type: "Last",
+        localId: "statement local id",
+        libraryName: "statement library name",
+        source: {
+          localId: "source local id"
+        },
+        annotation: {
+          r: "statement local id",
+          s: [
+            {
+              s: {
+                value: [ "statement library id" ]
+              }
+            }
+          ]
+        }
+      };
+
+      const statementName = "a statement";
+      const aliasMap = {};
+
+      const origLocalIds = [];
+      const emptyResultClauses = [];
+      const parentNode = {
+        localId: "rootParentId"
+      };
+      const localIds = MeasureHelpers.findAllLocalIdsInStatement(
+        statement,
+        libraryName,
+        statement.annotation,
+        origLocalIds,
+        aliasMap,
+        emptyResultClauses,
+        parentNode
+      );
+
+      expect(emptyResultClauses).toEqual([{ "aliasLocalId": "source local id", "expressionLocalId": "statement local id", "lib": "statement library name" }]);
+    });
+
+    it("return", () => {
+
+      const libraryName = "statement library name";
+      const statement = {
+        name: "a statement",
+        localId: "statement local id",
+        libraryName: "statement library name",
+        return: {
+          localId: "return local id",
+          expression: {
+            localId: "return expression local id"
+          }
+        },
+        annotation: {
+          r: "statement local id",
+          s: [
+            {
+              s: {
+                value: [ "statement library id" ]
+              }
+            }
+          ]
+        }
+      };
+
+      const statementName = "a statement";
+      const aliasMap = {};
+
+      const origLocalIds = [];
+      const emptyResultClauses = [];
+      const parentNode = {
+        localId: "rootParentId"
+      };
+      const localIds = MeasureHelpers.findAllLocalIdsInStatement(
+        statement,
+        libraryName,
+        statement.annotation,
+        origLocalIds,
+        aliasMap,
+        emptyResultClauses,
+        parentNode
+      );
+
+      expect(emptyResultClauses).toEqual([{ "aliasLocalId": "return local id", "expressionLocalId": "return expression local id", "lib": "statement library name" }]);
+    });
+
+    it("let", () => {
+
+      const libraryName = "statement library name";
+      const statement = {
+        name: "a statement",
+        localId: "statement local id",
+        libraryName: "statement library name",
+        let: [
+          {
+            localId: "let local id 1",
+            expression: {
+              localId: "let 1 expression local id"
+            }
+          },
+          {
+            localId: "let local id 2",
+            expression: {
+              localId: "let 2 expression local id"
+            }
+          }
+        ],
+        annotation: {
+          r: "statement local id",
+          s: [
+            {
+              s: {
+                value: [ "statement library id" ]
+              }
+            }
+          ]
+        }
+      };
+
+      const statementName = "a statement";
+      const aliasMap = {};
+
+      const localIds = {};
+      const emptyResultClauses = [];
+      const parentNode = {
+        localId: "rootParentId"
+      };
+      MeasureHelpers.findAllLocalIdsInStatement(
+        statement,
+        libraryName,
+        statement.annotation,
+        localIds,
+        aliasMap,
+        emptyResultClauses,
+        parentNode
+      );
+
+      expect(localIds).toEqual({"let 1 expression local id": {"localId": "let 1 expression local id"}, "let 2 expression local id": {"localId": "let 2 expression local id"}, "let local id 1": {"localId": "let local id 1", "sourceLocalId": "let 1 expression local id"}, "let local id 2": {"localId": "let local id 2", "sourceLocalId": "let 2 expression local id"}, "statement local id": {"localId": "statement local id"}});
+    });
+
+    it("asTypeSpecifier", () => {
+
+      const libraryName = "statement library name";
+      const statement = {
+        name: "a statement",
+        localId: "statement local id",
+        libraryName: "statement library name",
+        asTypeSpecifier: {
+          localId: "13",
+          expression: {
+            localId: "return expression local id"
+          }
+        },
+        annotation: {
+          r: "statement local id",
+          s: [
+            {
+              s: {
+                value: [ "statement library id" ]
+              }
+            }
+          ]
+        }
+      };
+
+      const statementName = "a statement";
+      const aliasMap = {};
+
+      const origLocalIds = [];
+      const emptyResultClauses = [];
+      const parentNode = {
+        localId: "rootParentId"
+      };
+      const localIds = MeasureHelpers.findAllLocalIdsInStatement(
+        statement,
+        libraryName,
+        statement.annotation,
+        origLocalIds,
+        aliasMap,
+        emptyResultClauses,
+        parentNode
+      );
+
+      expect(emptyResultClauses).toEqual([{ "aliasLocalId": "13", "expressionLocalId": 12, "lib": "statement library name" }]);
+    });
   });
 
   describe("findLocalIdForLibraryRef for functionRefs", () => {
@@ -192,6 +529,114 @@ describe("MeasureHelpers", () => {
         "notTJC"
       );
       expect(ret).toBeNull();
+    });
+  });
+
+  describe("isStatementFunction", () => {
+    beforeEach(() => {
+      this.library = {
+        elm: {
+          library: {
+            statements: {
+              def: [
+                {
+                  name: "statement1",
+                  type: "FunctionDef"
+                },
+                {
+                  name: "statement2",
+                  type: "Other"
+                },
+                {
+                  name: "statement3",
+                  type: "FunctionDef"
+                }
+              ]
+            }
+          }
+        }
+      };
+    });
+
+    it("statement found for FunctionDef -> true", () => {
+      const statementName = "statement1";
+      expect(MeasureHelpers.isStatementFunction(this.library, statementName)).toBeTruthy();
+    });
+
+    it("statement2 found for not FunctionDef -> false", () => {
+      const statementName = "statement2";
+      expect(MeasureHelpers.isStatementFunction(this.library, statementName)).toBeFalsy();
+    });
+
+    it("statement not found -> false", () => {
+      const statementName = "statement_not_found";
+      expect(MeasureHelpers.isStatementFunction(this.library, statementName)).toBeFalsy();
+    });
+  });
+
+  describe("isSupplementalDataElementStatement", () => {
+    beforeEach(() => {
+      this.populationSets = [
+        {
+          supplemental_data_elements: [
+            {
+              statement_name: "set1_statement1",
+            },
+            {
+              statement_name: "set1_statement2",
+            }
+          ]
+        },
+        {
+          supplemental_data_elements: [
+            {
+              statement_name: "set2_statement1",
+            },
+            {
+              statement_name: "set2_statement2",
+            }
+          ]
+        },
+        {
+          supplemental_data_elements: []
+        },
+        {}
+      ];
+    });
+
+    it("statement found1 -> true", () => {
+      const statementName = "set1_statement1";
+      expect(MeasureHelpers.isSupplementalDataElementStatement(this.populationSets, statementName)).toBeTruthy();
+    });
+
+    it("statement found2 -> true", () => {
+      const statementName = "set1_statement2";
+      expect(MeasureHelpers.isSupplementalDataElementStatement(this.populationSets, statementName)).toBeTruthy();
+    });
+
+    it("statement found3 -> true", () => {
+      const statementName = "set2_statement2";
+      expect(MeasureHelpers.isSupplementalDataElementStatement(this.populationSets, statementName)).toBeTruthy();
+    });
+
+    it("statement not found -> false", () => {
+      const statementName = "not_found";
+      expect(MeasureHelpers.isSupplementalDataElementStatement(this.populationSets, statementName)).toBeFalsy();
+    });
+  });
+
+  describe("others", () => {
+    it("run findAllLocalIdsInSort", () => {
+      const statement = { localId: "statementLocalId" };
+      const libraryName = "statement1";
+      const localIds = { notModified: "notModified" };
+      const aliasMap = {}
+      const emptyResultClauses = []
+      const rootStatement = { localId: "rootStatementLocalId" }
+      const result = MeasureHelpers.findAllLocalIdsInSort(statement, libraryName, localIds, aliasMap, emptyResultClauses, rootStatement);
+      expect(result).toBeDefined();
+      expect(localIds).toEqual({ notModified: "notModified" });
+      expect(emptyResultClauses).toEqual([{"aliasLocalId": "statementLocalId", "expressionLocalId": "rootStatementLocalId", "lib": "statement1"}]);
     });
   });
 });

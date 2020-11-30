@@ -1,4 +1,6 @@
 const CalculatorHelpers = require('../../lib/helpers/calculator_helpers.js');
+const models = require("fhir-typescript-models");
+const PopulationMap = models.PopulationMap;
 
 describe('CalculatorHelpers', () => {
   describe('handlePopulationValues', () => {
@@ -217,4 +219,142 @@ describe('CalculatorHelpers', () => {
       expect(processedResults).toEqual(expectedResults);
     });
   });
+
+  describe("createPopulationValues", () => {
+    it("run createPopulationValues", () => {
+      const measure = {
+        calculation_method: "EPISODE_OF_CARE"
+      };
+      const populations = new PopulationMap();
+      populations.IPP = {
+        statement_name: "stm1"
+      };
+      populations.observation_values = {
+        statement_name: "stm2"
+      }
+      const populationSet = {
+        populations,
+        observations: [
+          {}, {}
+        ]
+      };
+      const patientResults = {
+        "stm1": [
+          {
+            id: { value: "1" },
+          }
+        ],
+        "stm2": [
+          {
+            id: { value: "2" },
+          }
+        ]
+      };
+      const observationDefs = [
+        "stm1",
+        "stm2"
+      ];
+      [populationResults, episodeResults] = CalculatorHelpers.createPopulationValues(
+        measure,
+        populationSet,
+        patientResults,
+        observationDefs
+      );
+
+      expect(populationResults).toEqual({ IPP: 1, observation_values: []});
+      expect(episodeResults).toEqual({
+        "1": {
+          "IPP": 1,
+          "observation_values": []
+        }
+      });
+    });
+  });
+
+  describe("createEpisodePopulationValues", () => {
+    it("test observations", () => {
+      const populations = new PopulationMap();
+      populations.IPP = {
+        statement_name: "stm1"
+      };
+      populations.observation_values = [];
+      const populationSet = {
+        populations,
+        observations: [
+          {}, {}
+        ]
+      };
+      const patientResults = {
+        "stm1": [
+          {
+            id: { value: "1" },
+            episode: {
+              id: {
+                value: "1"
+              }
+            },
+            observation: {
+            }
+          }
+        ],
+        "stm2": [
+          {
+            id: { value: "2" },
+            episode: {
+              id: {
+                value: "2"
+              }
+            },
+            observation: {
+            }
+          }
+        ]
+      };
+      const observationDefs = [
+        "stm1",
+        "stm2"
+      ];
+      CalculatorHelpers.createEpisodePopulationValues(populationSet, patientResults, observationDefs);
+    });
+  });
+
+  describe("setValueSetVersionsToUndefined", () => {
+    it("set version undefined to value sets", () => {
+      const elm = [
+        {
+          library: {
+            valueSets: {
+              def: [
+                {
+                  version: 1
+                },
+                {
+                  version: 2
+                }
+              ]
+            }
+          }
+        },
+        {
+          library: {
+            valueSets: {
+              def: [
+                {
+                  version: 3
+                },
+                {
+                  version: 4
+                }
+              ]
+            }
+          }
+        }
+      ];
+      CalculatorHelpers.setValueSetVersionsToUndefined(elm);
+      expect(elm[0].library.valueSets.def[0].version).toBeUndefined();
+      expect(elm[0].library.valueSets.def[1].version).toBeUndefined();
+      expect(elm[1].library.valueSets.def[0].version).toBeUndefined();
+      expect(elm[1].library.valueSets.def[1].version).toBeUndefined();
+    });
+  })
 });

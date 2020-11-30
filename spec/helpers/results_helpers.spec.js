@@ -216,6 +216,163 @@ describe("ResultsHelpers", () => {
     });
   });
 
+  describe("buildStatementAndClauseResults", () => {
+    it("Run buildStatementAndClauseResults", () => {
+      const measure = {
+        population_sets: [
+          {
+            supplemental_data_elements: [
+              {
+                statement_name: "STM1"
+              },
+              {
+                statement_name: "STM2"
+              }
+            ]
+          }
+        ],
+        cql_libraries: [
+          {
+            library_name: "LIB",
+            statement_dependencies: [
+              {
+                statement_name: "STM1"
+              },
+              {
+                statement_name: "STM2"
+              },
+              {
+                statement_name: "STM3"
+              },
+              {
+                statement_name: "STM4"
+              }
+            ],
+            elm: {
+              library: {
+                identifier: {
+                  id: 666
+                },
+                statements: {
+                  def: [
+                    {
+                      name: "STM1",
+                      localId: 111
+                    },
+                    {
+                      name: "STM2",
+                      localId: 222,
+                      type: "FunctionDef"
+                    },
+                    {
+                      name: "STM3",
+                      localId: 333,
+                      type: "FunctionDef"
+                    },
+                    {
+                      name: "STM4",
+                      localId: 444,
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      };
+      const rawClauseResults = {
+        LIB: {
+          111: true,
+          222: true,
+          333: false,
+          444: null
+        }
+      };
+      const statementRelevance = {
+        LIB: {
+          STM1: "NA",
+          STM2: "FALSE",
+          STM3: {}
+        }
+      };
+      const doPretty = true;
+      const includeClauseResults = true;
+      ResultsHelpers.buildStatementAndClauseResults(measure, rawClauseResults, statementRelevance, doPretty, includeClauseResults);
+    });
+  });
+
+  describe("setFinalResults", () => {
+    it("isUnsupported", () => {
+      const finalResult = ResultsHelpers.setFinalResults({
+        clause: {
+          isUnsupported: {
+          }
+        }
+      });
+      expect(finalResult).toEqual("NA");
+    });
+    it("statementRelevance NA", () => {
+      const finalResult = ResultsHelpers.setFinalResults({
+        clause: {},
+        statementRelevance: {
+          LIB: {
+            STMT: "NA"
+          }
+        },
+        library_name: "LIB",
+        statement_name: "STMT"
+      });
+      expect(finalResult).toEqual("NA");
+    });
+    it("statementRelevance FALSE -> UNHIT", () => {
+      const finalResult = ResultsHelpers.setFinalResults({
+        clause: {},
+        statementRelevance: {
+          LIB: {
+            STMT: "FALSE"
+          }
+        },
+        library_name: "LIB",
+        statement_name: "STMT"
+      });
+      expect(finalResult).toEqual("UNHIT");
+    });
+    it("rawClauseResults null -> UNHIT", () => {
+      // params.rawClauseResults[params.library_name] == null
+      const finalResult = ResultsHelpers.setFinalResults({
+        clause: {},
+        rawClauseResults: {
+          LIB: null
+        },
+        statementRelevance: {
+          LIB: {
+            STMT: "TRUE"
+          }
+        },
+        library_name: "LIB",
+        statement_name: "STMT"
+      });
+      expect(finalResult).toEqual("UNHIT");
+    });
+    it("doesResultPass -> TRUE", () => {
+      const finalResult = ResultsHelpers.setFinalResults({
+        clause: {},
+        rawResult: true,
+        rawClauseResults: {
+          LIB: "Other"
+        },
+        statementRelevance: {
+          LIB: {
+            STMT: "Other"
+          }
+        },
+        library_name: "LIB",
+        statement_name: "STMT"
+      });
+      expect(finalResult).toEqual("TRUE");
+    });
+  });
+
   describe("buildPopulationRelevanceMap", () => {
     it("marks NUMER, NUMEX, DENEXCEP not calculated if DENEX count matches DENOM", () => {
       const populationResults = {
@@ -468,6 +625,21 @@ describe("ResultsHelpers", () => {
       };
       const relevanceMap = ResultsHelpers.populationRelevanceForAllEpisodes(episodeResults);
       expect(relevanceMap).toEqual(expectedRelevanceMap);
+    });
+  });
+
+  describe("doesResultPass", () => {
+    it("single item array with null", () => {
+      expect(ResultsHelpers.doesResultPass([null])).toBe(false);
+    });
+    it("cql.Interval", () => {
+      expect(ResultsHelpers.doesResultPass(new cql.Interval())).toBe(true);
+    });
+    it("cql.Code", () => {
+      expect(ResultsHelpers.doesResultPass(new cql.Code())).toBe(false);
+    });
+    it("raw object", () => {
+      expect(ResultsHelpers.doesResultPass({})).toBe(true);
     });
   });
 });
