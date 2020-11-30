@@ -161,7 +161,12 @@ describe("MeasureHelpers", () => {
         parentNode
       );
 
-      expect(emptyResultClauses).toEqual([{"aliasLocalId": "sort local id", "expressionLocalId": "rootParentId", "lib": "statement library name"}]);
+      expect(emptyResultClauses).toEqual([
+        {"aliasLocalId": "sort local id", "expressionLocalId": "rootParentId", "lib": "statement library name"},
+        {"aliasLocalId": "nested sort local id", "expressionLocalId": "rootParentId", "lib": "statement library name"},
+        {"aliasLocalId": undefined, "expressionLocalId": "rootParentId", "lib": "statement library name"},
+        {"aliasLocalId": undefined, "expressionLocalId": "rootParentId", "lib": "statement library name"}
+      ]);
     });
 
     it("first", () => {
