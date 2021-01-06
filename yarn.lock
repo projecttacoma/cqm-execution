@@ -2175,20 +2175,20 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cql-exec-fhir@^1.5.0-beta.1:
-  version "1.5.0-beta.1"
-  resolved "https://registry.yarnpkg.com/cql-exec-fhir/-/cql-exec-fhir-1.5.0-beta.1.tgz#ad19458244e1a519627a7ca490872f59e906eb70"
-  integrity sha512-yfMErlXS1pDx3YZt5JDxKlh/m/6KlxPRPXEtB4t7wJ5C5Rt8809TCrewfOON3ujfoIB1uOl10mj1z6GVThp0Cg==
+cql-exec-fhir@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/cql-exec-fhir/-/cql-exec-fhir-1.5.0.tgz#1bc5a8acbfbbe2dca39e0c383f486b4078439a9c"
+  integrity sha512-8bfui0AOg8vW10Z5hwpHNUXyqJii4ynEOsIKP7whnChecQSeardTnzXWxFvrRtARD7HVzMTVNvBVRqNYA4Aklw==
   dependencies:
     "@babel/cli" "^7.11.6"
     "@babel/core" "^7.11.6"
     "@babel/preset-env" "^7.11.5"
     xml2js "~0.4.19"
 
-cql-execution@^2.0.0-beta.2:
-  version "2.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/cql-execution/-/cql-execution-2.0.0-beta.2.tgz#e071f32707190bde9f01ecc5fe2e14e6a03ef5fb"
-  integrity sha512-tq6BS7jjsCvQWXVRhZkX7xpUtpYXmneXdHBNk3T3wFBvxWODEvTctwQ66i4+0j4ybCGhcdehGktdU5OeJVtZQQ==
+cql-execution@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/cql-execution/-/cql-execution-2.1.0.tgz#361dec3dd3da1a098b71a062314650aa7ec50183"
+  integrity sha512-k/6Vm60SCqH+1/RWOrRYNx9DYK9slJAc+wsTZx5Flpu/vRW7rAmRwGRwPalCldDcSvRpdYoAmrWkXu65o32T3A==
   dependencies:
     moment "^2.27.0"
     ucum "^0.0.7"
