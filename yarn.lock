@@ -539,9 +539,10 @@ cql-execution@~1.4.5:
     moment "^2.20.1"
     ucum "0.0.7"
 
-"cqm-models@https://github.com/projecttacoma/cqm-models.git#2cc7a9e7317d567396c5a8b2270bed22825aa09e":
-  version "3.0.5"
-  resolved "https://github.com/projecttacoma/cqm-models.git#2cc7a9e7317d567396c5a8b2270bed22825aa09e"
+cqm-models@~3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/cqm-models/-/cqm-models-3.0.6.tgz#0ad26c40cb0f6192af2468b885a4b9af5a2c3196"
+  integrity sha512-p6GESds/IsuMVVNIQK0bz0mR2GVItz2zrvCtMWDP4nVfcKidJSZ0v9rhQd77P8JQ8n90E4wWIt1JHeghU7yTuQ==
   dependencies:
     cql-execution "~1.4.5"
     mongoose "^5.11.10"
