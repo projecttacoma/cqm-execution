@@ -1,7 +1,7 @@
 const Calculator = require("../../lib/models/calculator.js");
 const getJSONFixture = require("../support/spec_helper.js").getJSONFixture;
 
-describe("Calculator.EXM124TEST", () => {
+describe("Calculator.CMS111TEST", () => {
   it("Run patients", () => {
     const measure = getJSONFixture("fhir_cqm_measures/CMS111Simplified/CMS111.json");
     // const measure = getJSONFixture("fhir_cqm_measures/JK124/EXM124.json");
