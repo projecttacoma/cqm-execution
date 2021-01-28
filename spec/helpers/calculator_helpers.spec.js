@@ -3,6 +3,20 @@ const models = require("fhir-typescript-models");
 const PopulationMap = models.PopulationMap;
 
 describe('CalculatorHelpers', () => {
+
+  describe("handle measurement period", () => {
+    it("can parse measure period with seconds", () => {
+      const parsed = CalculatorHelpers.parseTimeStringAsUTC("2021-12-31T23:59:59");
+      expect(parsed.getUTCFullYear()).toEqual(2021);
+      // Zero based month
+      expect(parsed.getUTCMonth()).toEqual(11);
+      expect(parsed.getUTCDate()).toEqual(31);
+      expect(parsed.getUTCHours()).toEqual(23);
+      expect(parsed.getUTCMinutes()).toEqual(59);
+      expect(parsed.getUTCSeconds()).toEqual(59);
+    });
+  });
+
   describe('handlePopulationValues', () => {
     it('NUMER population not modified by inclusion in NUMEX', () => {
       const initialResults = {
