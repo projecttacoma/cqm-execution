@@ -2922,10 +2922,12 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-fhir-typescript-models@0.0.12:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/fhir-typescript-models/-/fhir-typescript-models-0.0.12.tgz#a517f6115cd51258a02d89daad5e1b446e18e3bf"
-  integrity sha512-KZ5MBVlRkmhd3P0LWO4dXuJQSCqVvXq3pQs3pfdSpxZEAq7ofiw0w0x82KRLFKqLqFKULyeB5ABYSoZkQNOoiQ==
+fhir-typescript-models@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/fhir-typescript-models/-/fhir-typescript-models-1.0.1.tgz#59aaee8800750052b67583b0393d608f2296c432"
+  integrity sha512-5sWoELOyrqEjU2rtSQMgPNIiy6V03d1aDVkrv9qjVTmLCLg+K49IO1nj6WHE4ZyVAyPyEWAYeK3ubFrSYmWS5Q==
+  dependencies:
+    reflect-metadata "^0.1.13"
 
 file-entry-cache@^5.0.1:
   version "5.0.1"
@@ -5178,6 +5180,11 @@ readdirp@^2.2.1:
     graceful-fs "^4.1.11"
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
+
+reflect-metadata@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
 regenerate-unicode-properties@^8.2.0:
   version "8.2.0"
