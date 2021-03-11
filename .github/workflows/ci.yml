@@ -1,8 +1,7 @@
 name: Continuous Integration
 on:
   pull_request:
-    branches:
-      - master
+    branches: [master, bonnie-on-fhir]
 
 jobs:
   build:
