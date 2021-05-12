@@ -851,17 +851,22 @@ describe('Calculator', () => {
 
   describe('Id objects', () => {
     it('properly calculate and print', () => {
-      const valueSets = getJSONFixture('cqm_measures/CMS108v7/value_sets.json');
-      const measure = getJSONFixture('cqm_measures/CMS108v7/CMS108v7.json');
-      const patients = [getJSONFixture('patients/CMS108v7/INR4no_decimal_DayOfAnes_NUMERPass.json')];
+      const valueSets = getJSONFixture('cqm_measures/CMS108v0/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMS108v0/CMS108v0.json');
+      const patients = [getJSONFixture('patients/CMS108v0/IPP_DENOME_NUMER_PASS_NoVTEPatientRefusal.json')];
       const options = { doPretty: true, requestDocument: true };
       const calculationResults = Calculator.calculate(measure, patients, valueSets, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
       const resultsByStatement = result.statement_results_by_statement();
+      let sampleResult = resultsByStatement['CMS108']['Admission Without VTE or Obstetrical Conditions'];
+      expect(sampleResult['pretty'])
+        .toEqual(`[Encounter, Performed: Encounter Inpatient\nSTART: 05/11/2012 8:00 AM
+STOP: 05/11/2012 8:15 AM\nCODE: SNOMEDCT 183452005]`);
 
-      const sampleResult = resultsByStatement['VenousThromboembolismProphylaxis']['Is In Low Risk for VTE or On Anticoagulant'];
-      const sampleResultId = sampleResult.raw[0].id;
-      expect(sampleResult['pretty']).toEqual(`[{\n  authorDatetime: 11/01/2012 10:00 AM,\n  id: "${sampleResultId}"\n}]`);
+      sampleResult = resultsByStatement['CMS108']['No VTE Prophylaxis Medication or Device Due to Patient Refusal'];
+      expect(sampleResult['pretty'])
+        .toEqual(`[Procedure, Performed: Intermittent pneumatic compression devices (IPC)
+START: 05/11/2012 8:00 AM\nSTOP: 05/11/2012 8:15 AM\nCODE: SNOMEDCT 428411000124104]`);
     });
   });
 
