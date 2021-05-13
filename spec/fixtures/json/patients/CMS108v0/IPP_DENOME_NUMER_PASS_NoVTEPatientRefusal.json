@@ -1,5 +1,5 @@
 {
-  "qdmVersion": "5.5",
+  "qdmVersion": "5.6",
   "dataElements": [
     {
       "dataElementCodes": [
@@ -11,11 +11,13 @@
         }
       ],
       "_id": "609ad73c31b0070000cee861",
+      "participant": [],
+      "relatedTo": [],
       "qdmTitle": "Encounter, Performed",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
-      "qdmVersion": "5.5",
+      "qdmVersion": "5.6",
       "_type": "QDM::EncounterPerformed",
       "facilityLocations": [],
       "admissionSource": null,
@@ -25,7 +27,6 @@
       "diagnoses": [],
       "dischargeDisposition": null,
       "lengthOfStay": null,
-      "negationRationale": null,
       "priority": null,
       "relevantPeriod": {
         "low": "2012-05-11T08:00:00.000+00:00",
@@ -45,11 +46,12 @@
         }
       ],
       "_id": "609ad85ed644e80000ab596b",
+      "performer": [],
       "qdmTitle": "Medication, Administered",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.45",
       "qdmCategory": "medication",
       "qdmStatus": "administered",
-      "qdmVersion": "5.5",
+      "qdmVersion": "5.6",
       "_type": "QDM::MedicationAdministered",
       "authorDatetime": "2012-05-11T08:00:00.000+00:00",
       "codeListId": "2.16.840.1.113762.1.4.1045.39",
@@ -83,11 +85,12 @@
         }
       ],
       "_id": "609ad92ed644e80000ab59e3",
+      "performer": [],
       "qdmTitle": "Medication, Administered",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.45",
       "qdmCategory": "medication",
       "qdmStatus": "administered",
-      "qdmVersion": "5.5",
+      "qdmVersion": "5.6",
       "_type": "QDM::MedicationAdministered",
       "authorDatetime": "2012-05-11T08:00:00.000+00:00",
       "codeListId": "2.16.840.1.113762.1.4.1045.39",
@@ -121,11 +124,13 @@
         }
       ],
       "_id": "609ad9a3d644e80000ab5a06",
+      "performer": [],
+      "relatedTo": [],
       "qdmTitle": "Procedure, Performed",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
       "qdmCategory": "procedure",
       "qdmStatus": "performed",
-      "qdmVersion": "5.5",
+      "qdmVersion": "5.6",
       "_type": "QDM::ProcedurePerformed",
       "anatomicalLocationSite": null,
       "authorDatetime": "2012-05-11T08:00:00.000+00:00",
@@ -140,7 +145,6 @@
         "version": null,
         "display": "Refusal of treatment by patient (situation)"
       },
-      "priority": null,
       "rank": null,
       "reason": null,
       "relevantDatetime": "2012-05-11T08:00:00.000+00:00",
@@ -163,16 +167,16 @@
           "display": "Female"
         }
       ],
-      "_id": "609ad816b78902a25d345ecb",
+      "_id": "609d95acb789028849ab7bc4",
       "qdmTitle": "Patient Characteristic Sex",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
-      "qdmVersion": "5.5",
+      "qdmVersion": "5.6",
       "_type": "QDM::PatientCharacteristicSex",
       "description": "Patient Characteristic Sex: ONCAdministrativeSex",
       "codeListId": "2.16.840.1.113762.1.4.1",
-      "id": "609ad816b78902a25d345ecb"
+      "id": "609d95acb789028849ab7bc4"
     },
     {
       "dataElementCodes": [
@@ -183,17 +187,17 @@
           "display": "Birth date"
         }
       ],
-      "_id": "609ad816b78902a25d345eeb",
+      "_id": "609d95acb789028849ab7be4",
       "qdmTitle": "Patient Characteristic Birthdate",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
-      "qdmVersion": "5.5",
+      "qdmVersion": "5.6",
       "_type": "QDM::PatientCharacteristicBirthdate",
       "description": "Patient Characteristic Birthdate: Birth date",
       "codeListId": "drc-c48426f721cede4d865df946157d5e2dc90bd32763ffcb982ca45b3bd97a29db",
       "birthDatetime": "1985-01-01T08:00:00.000+00:00",
-      "id": "609ad816b78902a25d345eeb"
+      "id": "609d95acb789028849ab7be4"
     },
     {
       "dataElementCodes": [
@@ -204,16 +208,16 @@
           "display": "American Indian or Alaska Native"
         }
       ],
-      "_id": "609ad816b78902a25d345ed3",
+      "_id": "609d95acb789028849ab7bcc",
       "qdmTitle": "Patient Characteristic Race",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
-      "qdmVersion": "5.5",
+      "qdmVersion": "5.6",
       "_type": "QDM::PatientCharacteristicRace",
       "description": "Patient Characteristic Race: Race",
       "codeListId": "2.16.840.1.114222.4.11.836",
-      "id": "609ad816b78902a25d345ed3"
+      "id": "609d95acb789028849ab7bcc"
     },
     {
       "dataElementCodes": [
@@ -224,19 +228,19 @@
           "display": "Hispanic or Latino"
         }
       ],
-      "_id": "609ad816b78902a25d345ee2",
+      "_id": "609d95acb789028849ab7bdb",
       "qdmTitle": "Patient Characteristic Ethnicity",
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
-      "qdmVersion": "5.5",
+      "qdmVersion": "5.6",
       "_type": "QDM::PatientCharacteristicEthnicity",
       "description": "Patient Characteristic Ethnicity: Ethnicity",
       "codeListId": "2.16.840.1.114222.4.11.837",
-      "id": "609ad816b78902a25d345ee2"
+      "id": "609d95acb789028849ab7bdb"
     }
   ],
-  "_id": "609ada56b78902a25d3470ec",
+  "_id": "609d979fb789028849ab8dd3",
   "birthDatetime": "1985-01-01T08:00:00.000+00:00",
   "extendedData": null
 }
