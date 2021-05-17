@@ -37045,11 +37045,11 @@ const AdverseEventSchema = DataElementSchema({
   severity: Code,
   facilityLocation: FacilityLocationSchema,
   type: Code,
-  recorder: AnyEntity,
+  recorder: [AnyEntity],
   qdmTitle: { type: String, default: 'Adverse Event' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.120' },
   qdmCategory: { type: String, default: 'adverse_event' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::AdverseEvent' },
 
 });
@@ -37065,7 +37065,7 @@ class AdverseEvent extends mongoose.Document {
 module.exports.AdverseEvent = AdverseEvent;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],97:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],97:[function(require,module,exports){
 module.exports.Identifier = require('./attributes/Identifier.js').Identifier;
 module.exports.IdentifierSchema = require('./attributes/Identifier.js').IdentifierSchema;
 module.exports.Entity = require('./attributes/Entity.js').Entity;
@@ -37080,6 +37080,8 @@ module.exports.Practitioner = require('./attributes/Practitioner.js').Practition
 module.exports.PractitionerSchema = require('./attributes/Practitioner.js').PractitionerSchema;
 module.exports.Organization = require('./attributes/Organization.js').Organization;
 module.exports.OrganizationSchema = require('./attributes/Organization.js').OrganizationSchema;
+module.exports.Location = require('./attributes/Location.js').Location;
+module.exports.LocationSchema = require('./attributes/Location.js').LocationSchema;
 module.exports.PhysicalExamOrder = require('./PhysicalExamOrder.js').PhysicalExamOrder;
 module.exports.PhysicalExamOrderSchema = require('./PhysicalExamOrder.js').PhysicalExamOrderSchema;
 module.exports.Participation = require('./Participation.js').Participation;
@@ -37164,8 +37166,6 @@ module.exports.AdverseEvent = require('./AdverseEvent.js').AdverseEvent;
 module.exports.AdverseEventSchema = require('./AdverseEvent.js').AdverseEventSchema;
 module.exports.DeviceRecommended = require('./DeviceRecommended.js').DeviceRecommended;
 module.exports.DeviceRecommendedSchema = require('./DeviceRecommended.js').DeviceRecommendedSchema;
-module.exports.DeviceApplied = require('./DeviceApplied.js').DeviceApplied;
-module.exports.DeviceAppliedSchema = require('./DeviceApplied.js').DeviceAppliedSchema;
 module.exports.MedicationDischarge = require('./MedicationDischarge.js').MedicationDischarge;
 module.exports.MedicationDischargeSchema = require('./MedicationDischarge.js').MedicationDischargeSchema;
 module.exports.InterventionPerformed = require('./InterventionPerformed.js').InterventionPerformed;
@@ -37195,7 +37195,7 @@ module.exports.PhysicalExamPerformedSchema = require('./PhysicalExamPerformed.js
 module.exports.QDMPatient = require('./QDMPatient.js').QDMPatient;
 module.exports.QDMPatientSchema = require('./QDMPatient.js').QDMPatientSchema;
 
-},{"./AdverseEvent.js":96,"./AllergyIntolerance.js":98,"./AssessmentOrder.js":99,"./AssessmentPerformed.js":100,"./AssessmentRecommended.js":101,"./CareGoal.js":102,"./CommunicationPerformed.js":103,"./DeviceApplied.js":104,"./DeviceOrder.js":105,"./DeviceRecommended.js":106,"./Diagnosis.js":107,"./DiagnosticStudyOrder.js":108,"./DiagnosticStudyPerformed.js":109,"./DiagnosticStudyRecommended.js":110,"./EncounterOrder.js":111,"./EncounterPerformed.js":112,"./EncounterRecommended.js":113,"./FamilyHistory.js":114,"./ImmunizationAdministered.js":115,"./ImmunizationOrder.js":116,"./InterventionOrder.js":117,"./InterventionPerformed.js":118,"./InterventionRecommended.js":119,"./LaboratoryTestOrder.js":120,"./LaboratoryTestPerformed.js":121,"./LaboratoryTestRecommended.js":122,"./MedicationActive.js":123,"./MedicationAdministered.js":124,"./MedicationDischarge.js":125,"./MedicationDispensed.js":126,"./MedicationOrder.js":127,"./Participation.js":128,"./PatientCareExperience.js":129,"./PatientCharacteristic.js":130,"./PatientCharacteristicBirthdate.js":131,"./PatientCharacteristicClinicalTrialParticipant.js":132,"./PatientCharacteristicEthnicity.js":133,"./PatientCharacteristicExpired.js":134,"./PatientCharacteristicPayer.js":135,"./PatientCharacteristicRace.js":136,"./PatientCharacteristicSex.js":137,"./PhysicalExamOrder.js":138,"./PhysicalExamPerformed.js":139,"./PhysicalExamRecommended.js":140,"./ProcedureOrder.js":141,"./ProcedurePerformed.js":142,"./ProcedureRecommended.js":143,"./ProviderCareExperience.js":144,"./QDMPatient.js":145,"./RelatedPerson.js":146,"./SubstanceAdministered.js":148,"./SubstanceOrder.js":149,"./SubstanceRecommended.js":150,"./Symptom.js":151,"./attributes/CarePartner.js":152,"./attributes/Component.js":153,"./attributes/DiagnosisComponent.js":154,"./attributes/Entity.js":155,"./attributes/FacilityLocation.js":156,"./attributes/Identifier.js":157,"./attributes/Organization.js":158,"./attributes/PatientEntity.js":159,"./attributes/Practitioner.js":160,"./attributes/ResultComponent.js":161}],98:[function(require,module,exports){
+},{"./AdverseEvent.js":96,"./AllergyIntolerance.js":98,"./AssessmentOrder.js":99,"./AssessmentPerformed.js":100,"./AssessmentRecommended.js":101,"./CareGoal.js":102,"./CommunicationPerformed.js":103,"./DeviceOrder.js":104,"./DeviceRecommended.js":105,"./Diagnosis.js":106,"./DiagnosticStudyOrder.js":107,"./DiagnosticStudyPerformed.js":108,"./DiagnosticStudyRecommended.js":109,"./EncounterOrder.js":110,"./EncounterPerformed.js":111,"./EncounterRecommended.js":112,"./FamilyHistory.js":113,"./ImmunizationAdministered.js":114,"./ImmunizationOrder.js":115,"./InterventionOrder.js":116,"./InterventionPerformed.js":117,"./InterventionRecommended.js":118,"./LaboratoryTestOrder.js":119,"./LaboratoryTestPerformed.js":120,"./LaboratoryTestRecommended.js":121,"./MedicationActive.js":122,"./MedicationAdministered.js":123,"./MedicationDischarge.js":124,"./MedicationDispensed.js":125,"./MedicationOrder.js":126,"./Participation.js":127,"./PatientCareExperience.js":128,"./PatientCharacteristic.js":129,"./PatientCharacteristicBirthdate.js":130,"./PatientCharacteristicClinicalTrialParticipant.js":131,"./PatientCharacteristicEthnicity.js":132,"./PatientCharacteristicExpired.js":133,"./PatientCharacteristicPayer.js":134,"./PatientCharacteristicRace.js":135,"./PatientCharacteristicSex.js":136,"./PhysicalExamOrder.js":137,"./PhysicalExamPerformed.js":138,"./PhysicalExamRecommended.js":139,"./ProcedureOrder.js":140,"./ProcedurePerformed.js":141,"./ProcedureRecommended.js":142,"./ProviderCareExperience.js":143,"./QDMPatient.js":144,"./RelatedPerson.js":145,"./SubstanceAdministered.js":147,"./SubstanceOrder.js":148,"./SubstanceRecommended.js":149,"./Symptom.js":150,"./attributes/CarePartner.js":151,"./attributes/Component.js":152,"./attributes/DiagnosisComponent.js":153,"./attributes/Entity.js":154,"./attributes/FacilityLocation.js":155,"./attributes/Identifier.js":156,"./attributes/Location.js":157,"./attributes/Organization.js":158,"./attributes/PatientEntity.js":159,"./attributes/Practitioner.js":160,"./attributes/ResultComponent.js":161}],98:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37222,12 +37222,12 @@ const AllergyIntoleranceSchema = DataElementSchema({
   prevalencePeriod: Interval,
   type: Code,
   severity: Code,
-  recorder: AnyEntity,
+  recorder: [AnyEntity],
   qdmTitle: { type: String, default: 'Allergy/Intolerance' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.119' },
   qdmCategory: { type: String, default: 'allergy' },
   qdmStatus: { type: String, default: 'intolerance' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::AllergyIntolerance' },
 
 });
@@ -37243,7 +37243,7 @@ class AllergyIntolerance extends mongoose.Document {
 module.exports.AllergyIntolerance = AllergyIntolerance;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],99:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],99:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37269,12 +37269,12 @@ const AssessmentOrderSchema = DataElementSchema({
   authorDatetime: DateTime,
   negationRationale: Code,
   reason: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Assessment, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.131' },
   qdmCategory: { type: String, default: 'assessment' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::AssessmentOrder' },
 
 });
@@ -37290,7 +37290,7 @@ class AssessmentOrder extends mongoose.Document {
 module.exports.AssessmentOrder = AssessmentOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],100:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],100:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37320,14 +37320,15 @@ const AssessmentPerformedSchema = DataElementSchema({
   reason: Code,
   method: Code,
   result: Any,
+  interpretation: Code,
   components: [ComponentSchema],
   relatedTo: [String],
-  performer: AnyEntity,
+  performer: [AnyEntity],
   qdmTitle: { type: String, default: 'Assessment, Performed' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.117' },
   qdmCategory: { type: String, default: 'assessment' },
   qdmStatus: { type: String, default: 'performed' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::AssessmentPerformed' },
 
 });
@@ -37343,7 +37344,7 @@ class AssessmentPerformed extends mongoose.Document {
 module.exports.AssessmentPerformed = AssessmentPerformed;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],101:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],101:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37369,12 +37370,12 @@ const AssessmentRecommendedSchema = DataElementSchema({
   authorDatetime: DateTime,
   negationRationale: Code,
   reason: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Assessment, Recommended' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.118' },
   qdmCategory: { type: String, default: 'assessment' },
   qdmStatus: { type: String, default: 'recommended' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::AssessmentRecommended' },
 
 });
@@ -37390,7 +37391,7 @@ class AssessmentRecommended extends mongoose.Document {
 module.exports.AssessmentRecommended = AssessmentRecommended;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],102:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],102:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37417,11 +37418,11 @@ const CareGoalSchema = DataElementSchema({
   relevantPeriod: Interval,
   relatedTo: [String],
   targetOutcome: Any,
-  performer: AnyEntity,
+  performer: [AnyEntity],
   qdmTitle: { type: String, default: 'Care Goal' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.7' },
   qdmCategory: { type: String, default: 'care_goal' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::CareGoal' },
 
 });
@@ -37437,7 +37438,7 @@ class CareGoal extends mongoose.Document {
 module.exports.CareGoal = CareGoal;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],103:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],103:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37463,8 +37464,8 @@ const CommunicationPerformedSchema = DataElementSchema({
   authorDatetime: DateTime,
   category: Code,
   medium: Code,
-  sender: AnyEntity,
-  recipient: AnyEntity,
+  sender: [AnyEntity],
+  recipient: [AnyEntity],
   relatedTo: [String],
   sentDatetime: DateTime,
   receivedDatetime: DateTime,
@@ -37473,7 +37474,7 @@ const CommunicationPerformedSchema = DataElementSchema({
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.132' },
   qdmCategory: { type: String, default: 'communication' },
   qdmStatus: { type: String, default: 'performed' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::CommunicationPerformed' },
 
 });
@@ -37489,57 +37490,7 @@ class CommunicationPerformed extends mongoose.Document {
 module.exports.CommunicationPerformed = CommunicationPerformed;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],104:[function(require,module,exports){
-const mongoose = require('mongoose/browser');
-
-const { IdentifierSchema } = require('./attributes/Identifier');
-const { DataElementSchema } = require('./basetypes/DataElement');
-const Code = require('./basetypes/Code');
-const Interval = require('./basetypes/Interval');
-const Quantity = require('./basetypes/Quantity');
-const DateTime = require('./basetypes/DateTime');
-const QDMDate = require('./basetypes/QDMDate');
-const Any = require('./basetypes/Any');
-const AnyEntity = require('./basetypes/AnyEntity');
-const { ComponentSchema } = require('./attributes/Component');
-const { FacilityLocationSchema } = require('./attributes/FacilityLocation');
-const { EntitySchema } = require('./attributes/Entity');
-
-
-const [Number, String] = [
-  mongoose.Schema.Types.Number,
-  mongoose.Schema.Types.String,
-];
-
-const DeviceAppliedSchema = DataElementSchema({
-  authorDatetime: DateTime,
-  relevantDatetime: DateTime,
-  relevantPeriod: Interval,
-  negationRationale: Code,
-  reason: Code,
-  anatomicalLocationSite: Code,
-  performer: AnyEntity,
-  qdmTitle: { type: String, default: 'Device, Applied' },
-  hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.13' },
-  qdmCategory: { type: String, default: 'device' },
-  qdmStatus: { type: String, default: 'applied' },
-  qdmVersion: { type: String, default: '5.5' },
-  _type: { type: String, default: 'QDM::DeviceApplied' },
-
-});
-
-module.exports.DeviceAppliedSchema = DeviceAppliedSchema;
-class DeviceApplied extends mongoose.Document {
-  constructor(object) {
-    super(object, DeviceAppliedSchema);
-    this._type = 'QDM::DeviceApplied';
-  }
-}
-
-module.exports.DeviceApplied = DeviceApplied;
-
-
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],105:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],104:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37565,12 +37516,12 @@ const DeviceOrderSchema = DataElementSchema({
   authorDatetime: DateTime,
   negationRationale: Code,
   reason: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Device, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.15' },
   qdmCategory: { type: String, default: 'device' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::DeviceOrder' },
 
 });
@@ -37586,7 +37537,7 @@ class DeviceOrder extends mongoose.Document {
 module.exports.DeviceOrder = DeviceOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],106:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],105:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37612,12 +37563,12 @@ const DeviceRecommendedSchema = DataElementSchema({
   authorDatetime: DateTime,
   negationRationale: Code,
   reason: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Device, Recommended' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.16' },
   qdmCategory: { type: String, default: 'device' },
   qdmStatus: { type: String, default: 'recommended' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::DeviceRecommended' },
 
 });
@@ -37633,7 +37584,7 @@ class DeviceRecommended extends mongoose.Document {
 module.exports.DeviceRecommended = DeviceRecommended;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],107:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],106:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37660,12 +37611,12 @@ const DiagnosisSchema = DataElementSchema({
   prevalencePeriod: Interval,
   anatomicalLocationSite: Code,
   severity: Code,
-  recorder: AnyEntity,
+  recorder: [AnyEntity],
   qdmTitle: { type: String, default: 'Diagnosis' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.110' },
   qrdaOid: { type: String, default: '2.16.840.1.113883.10.20.24.3.135' },
   qdmCategory: { type: String, default: 'condition' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::Diagnosis' },
 
 });
@@ -37681,7 +37632,7 @@ class Diagnosis extends mongoose.Document {
 module.exports.Diagnosis = Diagnosis;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],108:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],107:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37707,12 +37658,12 @@ const DiagnosticStudyOrderSchema = DataElementSchema({
   authorDatetime: DateTime,
   reason: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Diagnostic Study, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.22' },
   qdmCategory: { type: String, default: 'diagnostic_study' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::DiagnosticStudyOrder' },
 
 });
@@ -37728,7 +37679,7 @@ class DiagnosticStudyOrder extends mongoose.Document {
 module.exports.DiagnosticStudyOrder = DiagnosticStudyOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],109:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],108:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37757,17 +37708,19 @@ const DiagnosticStudyPerformedSchema = DataElementSchema({
   reason: Code,
   result: Any,
   resultDatetime: DateTime,
+  interpretation: Code,
   status: Code,
   method: Code,
   facilityLocation: FacilityLocationSchema,
   negationRationale: Code,
   components: [ComponentSchema],
-  performer: AnyEntity,
+  performer: [AnyEntity],
+  relatedTo: [String],
   qdmTitle: { type: String, default: 'Diagnostic Study, Performed' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.23' },
   qdmCategory: { type: String, default: 'diagnostic_study' },
   qdmStatus: { type: String, default: 'performed' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::DiagnosticStudyPerformed' },
 
 });
@@ -37783,7 +37736,7 @@ class DiagnosticStudyPerformed extends mongoose.Document {
 module.exports.DiagnosticStudyPerformed = DiagnosticStudyPerformed;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],110:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],109:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37808,13 +37761,13 @@ const [Number, String] = [
 const DiagnosticStudyRecommendedSchema = DataElementSchema({
   authorDatetime: DateTime,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Diagnostic Study, Recommended' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.24' },
   qrdaOid: { type: String, default: '2.16.840.1.113883.10.20.24.3.19' },
   qdmCategory: { type: String, default: 'diagnostic_study' },
   qdmStatus: { type: String, default: 'recommended' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::DiagnosticStudyRecommended' },
 
 });
@@ -37830,7 +37783,7 @@ class DiagnosticStudyRecommended extends mongoose.Document {
 module.exports.DiagnosticStudyRecommended = DiagnosticStudyRecommended;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],111:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],110:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37857,13 +37810,13 @@ const EncounterOrderSchema = DataElementSchema({
   reason: Code,
   facilityLocation: FacilityLocationSchema,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   priority: Code,
   qdmTitle: { type: String, default: 'Encounter, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.27' },
   qdmCategory: { type: String, default: 'encounter' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::EncounterOrder' },
 
 });
@@ -37879,7 +37832,7 @@ class EncounterOrder extends mongoose.Document {
 module.exports.EncounterOrder = EncounterOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],112:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],111:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37904,19 +37857,20 @@ const [Number, String] = [
 const EncounterPerformedSchema = DataElementSchema({
   authorDatetime: DateTime,
   admissionSource: Code,
+  class: Code,
   relevantPeriod: Interval,
   dischargeDisposition: Code,
   facilityLocations: [FacilityLocationSchema],
   diagnoses: [DiagnosisComponentSchema],
-  negationRationale: Code,
   lengthOfStay: Quantity,
   priority: Code,
-  participant: AnyEntity,
+  participant: [AnyEntity],
+  relatedTo: [String],
   qdmTitle: { type: String, default: 'Encounter, Performed' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.5' },
   qdmCategory: { type: String, default: 'encounter' },
   qdmStatus: { type: String, default: 'performed' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::EncounterPerformed' },
 
 });
@@ -37926,13 +37880,16 @@ class EncounterPerformed extends mongoose.Document {
   constructor(object) {
     super(object, EncounterPerformedSchema);
     this._type = 'QDM::EncounterPerformed';
+    if (object && object.clazz) {
+      this.class = object.clazz;
+    }
   }
 }
 
 module.exports.EncounterPerformed = EncounterPerformed;
 
 
-},{"./attributes/Component":153,"./attributes/DiagnosisComponent":154,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],113:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/DiagnosisComponent":153,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],112:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -37959,12 +37916,12 @@ const EncounterRecommendedSchema = DataElementSchema({
   reason: Code,
   facilityLocation: FacilityLocationSchema,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Encounter, Recommended' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.28' },
   qdmCategory: { type: String, default: 'encounter' },
   qdmStatus: { type: String, default: 'recommended' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::EncounterRecommended' },
 
 });
@@ -37980,7 +37937,7 @@ class EncounterRecommended extends mongoose.Document {
 module.exports.EncounterRecommended = EncounterRecommended;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],114:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],113:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38005,12 +37962,12 @@ const [Number, String] = [
 const FamilyHistorySchema = DataElementSchema({
   authorDatetime: DateTime,
   relationship: Code,
-  recorder: AnyEntity,
+  recorder: [AnyEntity],
   qdmTitle: { type: String, default: 'Family History' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.111' },
   qrdaOid: { type: String, default: '2.16.840.1.113883.10.20.24.3.12' },
   qdmCategory: { type: String, default: 'family_history' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::FamilyHistory' },
 
 });
@@ -38026,7 +37983,7 @@ class FamilyHistory extends mongoose.Document {
 module.exports.FamilyHistory = FamilyHistory;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],115:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],114:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38055,13 +38012,13 @@ const ImmunizationAdministeredSchema = DataElementSchema({
   dosage: Quantity,
   route: Code,
   negationRationale: Code,
-  performer: AnyEntity,
+  performer: [AnyEntity],
   qdmTitle: { type: String, default: 'Immunization, Administered' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.112' },
   qrdaOid: { type: String, default: '2.16.840.1.113883.10.20.24.3.140' },
   qdmCategory: { type: String, default: 'immunization' },
   qdmStatus: { type: String, default: 'administered' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::ImmunizationAdministered' },
 
 });
@@ -38077,7 +38034,7 @@ class ImmunizationAdministered extends mongoose.Document {
 module.exports.ImmunizationAdministered = ImmunizationAdministered;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],116:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],115:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38107,12 +38064,12 @@ const ImmunizationOrderSchema = DataElementSchema({
   reason: Code,
   route: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Immunization, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.113' },
   qdmCategory: { type: String, default: 'immunization' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::ImmunizationOrder' },
 
 });
@@ -38128,7 +38085,7 @@ class ImmunizationOrder extends mongoose.Document {
 module.exports.ImmunizationOrder = ImmunizationOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],117:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],116:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38154,12 +38111,12 @@ const InterventionOrderSchema = DataElementSchema({
   authorDatetime: DateTime,
   reason: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Intervention, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.35' },
   qdmCategory: { type: String, default: 'intervention' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::InterventionOrder' },
 
 });
@@ -38175,7 +38132,7 @@ class InterventionOrder extends mongoose.Document {
 module.exports.InterventionOrder = InterventionOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],118:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],117:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38205,12 +38162,13 @@ const InterventionPerformedSchema = DataElementSchema({
   result: Any,
   status: Code,
   negationRationale: Code,
-  performer: AnyEntity,
+  performer: [AnyEntity],
+  relatedTo: [String],
   qdmTitle: { type: String, default: 'Intervention, Performed' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.36' },
   qdmCategory: { type: String, default: 'intervention' },
   qdmStatus: { type: String, default: 'performed' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::InterventionPerformed' },
 
 });
@@ -38226,7 +38184,7 @@ class InterventionPerformed extends mongoose.Document {
 module.exports.InterventionPerformed = InterventionPerformed;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],119:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],118:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38252,12 +38210,12 @@ const InterventionRecommendedSchema = DataElementSchema({
   authorDatetime: DateTime,
   reason: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Intervention, Recommended' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.37' },
   qdmCategory: { type: String, default: 'intervention' },
   qdmStatus: { type: String, default: 'recommended' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::InterventionRecommended' },
 
 });
@@ -38273,7 +38231,7 @@ class InterventionRecommended extends mongoose.Document {
 module.exports.InterventionRecommended = InterventionRecommended;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],120:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],119:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38299,12 +38257,12 @@ const LaboratoryTestOrderSchema = DataElementSchema({
   authorDatetime: DateTime,
   reason: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Laboratory Test, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.41' },
   qdmCategory: { type: String, default: 'laboratory_test' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::LaboratoryTestOrder' },
 
 });
@@ -38320,7 +38278,7 @@ class LaboratoryTestOrder extends mongoose.Document {
 module.exports.LaboratoryTestOrder = LaboratoryTestOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],121:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],120:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38352,14 +38310,16 @@ const LaboratoryTestPerformedSchema = DataElementSchema({
   resultDatetime: DateTime,
   reason: Code,
   referenceRange: Interval,
+  interpretation: Code,
   negationRationale: Code,
   components: [ComponentSchema],
-  performer: AnyEntity,
+  performer: [AnyEntity],
+  relatedTo: [String],
   qdmTitle: { type: String, default: 'Laboratory Test, Performed' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.42' },
   qdmCategory: { type: String, default: 'laboratory_test' },
   qdmStatus: { type: String, default: 'performed' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::LaboratoryTestPerformed' },
 
 });
@@ -38375,7 +38335,7 @@ class LaboratoryTestPerformed extends mongoose.Document {
 module.exports.LaboratoryTestPerformed = LaboratoryTestPerformed;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],122:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],121:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38401,12 +38361,12 @@ const LaboratoryTestRecommendedSchema = DataElementSchema({
   authorDatetime: DateTime,
   reason: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Laboratory Test, Recommended' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.43' },
   qdmCategory: { type: String, default: 'laboratory_test' },
   qdmStatus: { type: String, default: 'recommended' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::LaboratoryTestRecommended' },
 
 });
@@ -38422,7 +38382,7 @@ class LaboratoryTestRecommended extends mongoose.Document {
 module.exports.LaboratoryTestRecommended = LaboratoryTestRecommended;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],123:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],122:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38450,12 +38410,12 @@ const MedicationActiveSchema = DataElementSchema({
   dosage: Quantity,
   frequency: Code,
   route: Code,
-  recorder: AnyEntity,
+  recorder: [AnyEntity],
   qdmTitle: { type: String, default: 'Medication, Active' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.44' },
   qdmCategory: { type: String, default: 'medication' },
   qdmStatus: { type: String, default: 'active' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::MedicationActive' },
 
 });
@@ -38471,7 +38431,7 @@ class MedicationActive extends mongoose.Document {
 module.exports.MedicationActive = MedicationActive;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],124:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],123:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38502,12 +38462,12 @@ const MedicationAdministeredSchema = DataElementSchema({
   route: Code,
   reason: Code,
   negationRationale: Code,
-  performer: AnyEntity,
+  performer: [AnyEntity],
   qdmTitle: { type: String, default: 'Medication, Administered' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.45' },
   qdmCategory: { type: String, default: 'medication' },
   qdmStatus: { type: String, default: 'administered' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::MedicationAdministered' },
 
 });
@@ -38523,7 +38483,7 @@ class MedicationAdministered extends mongoose.Document {
 module.exports.MedicationAdministered = MedicationAdministered;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],125:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],124:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38554,13 +38514,13 @@ const MedicationDischargeSchema = DataElementSchema({
   daysSupplied: Number,
   route: Code,
   negationRationale: Code,
-  prescriber: AnyEntity,
-  recorder: AnyEntity,
+  prescriber: [AnyEntity],
+  recorder: [AnyEntity],
   qdmTitle: { type: String, default: 'Medication, Discharge' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.48' },
   qdmCategory: { type: String, default: 'medication' },
   qdmStatus: { type: String, default: 'discharge' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::MedicationDischarge' },
 
 });
@@ -38576,7 +38536,7 @@ class MedicationDischarge extends mongoose.Document {
 module.exports.MedicationDischarge = MedicationDischarge;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],126:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],125:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38608,14 +38568,15 @@ const MedicationDispensedSchema = DataElementSchema({
   frequency: Code,
   daysSupplied: Number,
   route: Code,
-  prescriber: AnyEntity,
-  dispenser: AnyEntity,
+  prescriber: [AnyEntity],
+  dispenser: [AnyEntity],
   negationRationale: Code,
+  relatedTo: [String],
   qdmTitle: { type: String, default: 'Medication, Dispensed' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.49' },
   qdmCategory: { type: String, default: 'medication' },
   qdmStatus: { type: String, default: 'dispensed' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::MedicationDispensed' },
 
 });
@@ -38631,7 +38592,7 @@ class MedicationDispensed extends mongoose.Document {
 module.exports.MedicationDispensed = MedicationDispensed;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],127:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],126:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38665,12 +38626,13 @@ const MedicationOrderSchema = DataElementSchema({
   setting: Code,
   reason: Code,
   negationRationale: Code,
-  prescriber: AnyEntity,
+  prescriber: [AnyEntity],
+  relatedTo: [String],
   qdmTitle: { type: String, default: 'Medication, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.51' },
   qdmCategory: { type: String, default: 'medication' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::MedicationOrder' },
 
 });
@@ -38686,7 +38648,7 @@ class MedicationOrder extends mongoose.Document {
 module.exports.MedicationOrder = MedicationOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],128:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],127:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38710,11 +38672,10 @@ const [Number, String] = [
 
 const ParticipationSchema = DataElementSchema({
   participationPeriod: Interval,
-  recorder: AnyEntity,
   qdmTitle: { type: String, default: 'Participation' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.130' },
   qdmCategory: { type: String, default: 'participation' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::Participation' },
 
 });
@@ -38730,7 +38691,7 @@ class Participation extends mongoose.Document {
 module.exports.Participation = Participation;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],129:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],128:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38754,11 +38715,11 @@ const [Number, String] = [
 
 const PatientCareExperienceSchema = DataElementSchema({
   authorDatetime: DateTime,
-  recorder: AnyEntity,
+  recorder: [AnyEntity],
   qdmTitle: { type: String, default: 'Patient Care Experience' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.52' },
   qdmCategory: { type: String, default: 'care_experience' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PatientCareExperience' },
 
 });
@@ -38774,7 +38735,7 @@ class PatientCareExperience extends mongoose.Document {
 module.exports.PatientCareExperience = PatientCareExperience;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],130:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],129:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38801,7 +38762,7 @@ const PatientCharacteristicSchema = DataElementSchema({
   qdmTitle: { type: String, default: 'Patient Characteristic' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.53' },
   qdmCategory: { type: String, default: 'patient_characteristic' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PatientCharacteristic' },
 
 });
@@ -38817,7 +38778,7 @@ class PatientCharacteristic extends mongoose.Document {
 module.exports.PatientCharacteristic = PatientCharacteristic;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],131:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],130:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38845,7 +38806,7 @@ const PatientCharacteristicBirthdateSchema = DataElementSchema({
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.54' },
   qdmCategory: { type: String, default: 'patient_characteristic' },
   qdmStatus: { type: String, default: 'birthdate' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PatientCharacteristicBirthdate' },
 
 });
@@ -38861,7 +38822,7 @@ class PatientCharacteristicBirthdate extends mongoose.Document {
 module.exports.PatientCharacteristicBirthdate = PatientCharacteristicBirthdate;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],132:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],131:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38891,7 +38852,7 @@ const PatientCharacteristicClinicalTrialParticipantSchema = DataElementSchema({
   qrdaOid: { type: String, default: '2.16.840.1.113883.10.20.24.3.51' },
   qdmCategory: { type: String, default: 'patient_characteristic' },
   qdmStatus: { type: String, default: 'clinical_trial_participant' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PatientCharacteristicClinicalTrialParticipant' },
 
 });
@@ -38907,7 +38868,7 @@ class PatientCharacteristicClinicalTrialParticipant extends mongoose.Document {
 module.exports.PatientCharacteristicClinicalTrialParticipant = PatientCharacteristicClinicalTrialParticipant;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],133:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],132:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38934,7 +38895,7 @@ const PatientCharacteristicEthnicitySchema = DataElementSchema({
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.56' },
   qdmCategory: { type: String, default: 'patient_characteristic' },
   qdmStatus: { type: String, default: 'ethnicity' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PatientCharacteristicEthnicity' },
 
 });
@@ -38950,7 +38911,7 @@ class PatientCharacteristicEthnicity extends mongoose.Document {
 module.exports.PatientCharacteristicEthnicity = PatientCharacteristicEthnicity;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],134:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],133:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -38979,7 +38940,7 @@ const PatientCharacteristicExpiredSchema = DataElementSchema({
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.57' },
   qdmCategory: { type: String, default: 'patient_characteristic' },
   qdmStatus: { type: String, default: 'expired' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PatientCharacteristicExpired' },
 
 });
@@ -38995,7 +38956,7 @@ class PatientCharacteristicExpired extends mongoose.Document {
 module.exports.PatientCharacteristicExpired = PatientCharacteristicExpired;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],135:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],134:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39023,7 +38984,7 @@ const PatientCharacteristicPayerSchema = DataElementSchema({
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.58' },
   qdmCategory: { type: String, default: 'patient_characteristic' },
   qdmStatus: { type: String, default: 'payer' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PatientCharacteristicPayer' },
 
 });
@@ -39039,7 +39000,7 @@ class PatientCharacteristicPayer extends mongoose.Document {
 module.exports.PatientCharacteristicPayer = PatientCharacteristicPayer;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],136:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],135:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39066,7 +39027,7 @@ const PatientCharacteristicRaceSchema = DataElementSchema({
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.59' },
   qdmCategory: { type: String, default: 'patient_characteristic' },
   qdmStatus: { type: String, default: 'race' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PatientCharacteristicRace' },
 
 });
@@ -39082,7 +39043,7 @@ class PatientCharacteristicRace extends mongoose.Document {
 module.exports.PatientCharacteristicRace = PatientCharacteristicRace;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],137:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],136:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39109,7 +39070,7 @@ const PatientCharacteristicSexSchema = DataElementSchema({
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.55' },
   qdmCategory: { type: String, default: 'patient_characteristic' },
   qdmStatus: { type: String, default: 'gender' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PatientCharacteristicSex' },
 
 });
@@ -39125,7 +39086,7 @@ class PatientCharacteristicSex extends mongoose.Document {
 module.exports.PatientCharacteristicSex = PatientCharacteristicSex;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],138:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],137:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39152,12 +39113,12 @@ const PhysicalExamOrderSchema = DataElementSchema({
   reason: Code,
   anatomicalLocationSite: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Physical Exam, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.61' },
   qdmCategory: { type: String, default: 'physical_exam' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PhysicalExamOrder' },
 
 });
@@ -39173,7 +39134,7 @@ class PhysicalExamOrder extends mongoose.Document {
 module.exports.PhysicalExamOrder = PhysicalExamOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],139:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],138:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39205,12 +39166,13 @@ const PhysicalExamPerformedSchema = DataElementSchema({
   anatomicalLocationSite: Code,
   negationRationale: Code,
   components: [ComponentSchema],
-  performer: AnyEntity,
+  performer: [AnyEntity],
+  relatedTo: [String],
   qdmTitle: { type: String, default: 'Physical Exam, Performed' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.62' },
   qdmCategory: { type: String, default: 'physical_exam' },
   qdmStatus: { type: String, default: 'performed' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PhysicalExamPerformed' },
 
 });
@@ -39226,7 +39188,7 @@ class PhysicalExamPerformed extends mongoose.Document {
 module.exports.PhysicalExamPerformed = PhysicalExamPerformed;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],140:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],139:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39253,12 +39215,12 @@ const PhysicalExamRecommendedSchema = DataElementSchema({
   reason: Code,
   anatomicalLocationSite: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Physical Exam, Recommended' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.63' },
   qdmCategory: { type: String, default: 'physical_exam' },
   qdmStatus: { type: String, default: 'recommended' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::PhysicalExamRecommended' },
 
 });
@@ -39274,7 +39236,7 @@ class PhysicalExamRecommended extends mongoose.Document {
 module.exports.PhysicalExamRecommended = PhysicalExamRecommended;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],141:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],140:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39303,12 +39265,12 @@ const ProcedureOrderSchema = DataElementSchema({
   rank: Number,
   priority: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Procedure, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.66' },
   qdmCategory: { type: String, default: 'procedure' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::ProcedureOrder' },
 
 });
@@ -39324,7 +39286,7 @@ class ProcedureOrder extends mongoose.Document {
 module.exports.ProcedureOrder = ProcedureOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],142:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],141:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39356,16 +39318,16 @@ const ProcedurePerformedSchema = DataElementSchema({
   status: Code,
   anatomicalLocationSite: Code,
   rank: Number,
-  priority: Code,
   incisionDatetime: DateTime,
   negationRationale: Code,
   components: [ComponentSchema],
-  performer: AnyEntity,
+  performer: [AnyEntity],
+  relatedTo: [String],
   qdmTitle: { type: String, default: 'Procedure, Performed' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.67' },
   qdmCategory: { type: String, default: 'procedure' },
   qdmStatus: { type: String, default: 'performed' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::ProcedurePerformed' },
 
 });
@@ -39381,7 +39343,7 @@ class ProcedurePerformed extends mongoose.Document {
 module.exports.ProcedurePerformed = ProcedurePerformed;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],143:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],142:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39408,13 +39370,13 @@ const ProcedureRecommendedSchema = DataElementSchema({
   reason: Code,
   anatomicalLocationSite: Code,
   rank: Number,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   negationRationale: Code,
   qdmTitle: { type: String, default: 'Procedure, Recommended' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.68' },
   qdmCategory: { type: String, default: 'procedure' },
   qdmStatus: { type: String, default: 'recommended' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::ProcedureRecommended' },
 
 });
@@ -39430,7 +39392,7 @@ class ProcedureRecommended extends mongoose.Document {
 module.exports.ProcedureRecommended = ProcedureRecommended;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],144:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],143:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39454,11 +39416,11 @@ const [Number, String] = [
 
 const ProviderCareExperienceSchema = DataElementSchema({
   authorDatetime: DateTime,
-  recorder: AnyEntity,
+  recorder: [AnyEntity],
   qdmTitle: { type: String, default: 'Provider Care Experience' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.70' },
   qdmCategory: { type: String, default: 'care_experience' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::ProviderCareExperience' },
 
 });
@@ -39474,7 +39436,7 @@ class ProviderCareExperience extends mongoose.Document {
 module.exports.ProviderCareExperience = ProviderCareExperience;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],145:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],144:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const Code = require('./basetypes/Code');
 const Interval = require('./basetypes/Interval');
@@ -39491,7 +39453,7 @@ const [Schema, Number, String, Mixed] = [
 
 const QDMPatientSchema = new Schema({
   birthDatetime: DateTime,
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
 
   // These are the "data criteria", or QDM datatype elements that exist on a
   // patient.
@@ -39754,7 +39716,7 @@ class QDMPatient extends mongoose.Document {
 }
 module.exports.QDMPatient = QDMPatient;
 
-},{"./AllDataElements":97,"./basetypes/Code":164,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/Quantity":169,"mongoose/browser":192}],146:[function(require,module,exports){
+},{"./AllDataElements":97,"./basetypes/Code":164,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/Quantity":169,"mongoose/browser":192}],145:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39782,7 +39744,7 @@ const RelatedPersonSchema = DataElementSchema({
   qdmTitle: { type: String, default: 'Related Person' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.141' },
   qdmCategory: { type: String, default: 'related_person' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::RelatedPerson' },
 
 });
@@ -39798,7 +39760,7 @@ class RelatedPerson extends mongoose.Document {
 module.exports.RelatedPerson = RelatedPerson;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],147:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],146:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const PlaceholderResultSchema = mongoose.Schema({
@@ -39833,7 +39795,7 @@ class PlaceholderResult extends mongoose.Document {
 }
 module.exports.PlaceholderResult = PlaceholderResult;
 
-},{"mongoose/browser":192}],148:[function(require,module,exports){
+},{"mongoose/browser":192}],147:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39863,12 +39825,12 @@ const SubstanceAdministeredSchema = DataElementSchema({
   frequency: Code,
   route: Code,
   negationRationale: Code,
-  performer: AnyEntity,
+  performer: [AnyEntity],
   qdmTitle: { type: String, default: 'Substance, Administered' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.73' },
   qdmCategory: { type: String, default: 'substance' },
   qdmStatus: { type: String, default: 'administered' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::SubstanceAdministered' },
 
 });
@@ -39884,7 +39846,7 @@ class SubstanceAdministered extends mongoose.Document {
 module.exports.SubstanceAdministered = SubstanceAdministered;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],149:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],148:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39916,12 +39878,12 @@ const SubstanceOrderSchema = DataElementSchema({
   refills: Number,
   route: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Substance, Order' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.77' },
   qdmCategory: { type: String, default: 'substance' },
   qdmStatus: { type: String, default: 'order' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::SubstanceOrder' },
 
 });
@@ -39937,7 +39899,7 @@ class SubstanceOrder extends mongoose.Document {
 module.exports.SubstanceOrder = SubstanceOrder;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],150:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],149:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -39967,12 +39929,12 @@ const SubstanceRecommendedSchema = DataElementSchema({
   refills: Number,
   route: Code,
   negationRationale: Code,
-  requester: AnyEntity,
+  requester: [AnyEntity],
   qdmTitle: { type: String, default: 'Substance, Recommended' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.78' },
   qdmCategory: { type: String, default: 'substance' },
   qdmStatus: { type: String, default: 'recommended' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::SubstanceRecommended' },
 
 });
@@ -39988,7 +39950,7 @@ class SubstanceRecommended extends mongoose.Document {
 module.exports.SubstanceRecommended = SubstanceRecommended;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],151:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],150:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./attributes/Identifier');
@@ -40013,12 +39975,12 @@ const [Number, String] = [
 const SymptomSchema = DataElementSchema({
   prevalencePeriod: Interval,
   severity: Code,
-  recorder: AnyEntity,
+  recorder: [AnyEntity],
   qdmTitle: { type: String, default: 'Symptom' },
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.116' },
   qrdaOid: { type: String, default: '2.16.840.1.113883.10.20.24.3.136' },
   qdmCategory: { type: String, default: 'symptom' },
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::Symptom' },
 
 });
@@ -40034,7 +39996,7 @@ class Symptom extends mongoose.Document {
 module.exports.Symptom = Symptom;
 
 
-},{"./attributes/Component":153,"./attributes/Entity":155,"./attributes/FacilityLocation":156,"./attributes/Identifier":157,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],152:[function(require,module,exports){
+},{"./attributes/Component":152,"./attributes/Entity":154,"./attributes/FacilityLocation":155,"./attributes/Identifier":156,"./basetypes/Any":162,"./basetypes/AnyEntity":163,"./basetypes/Code":164,"./basetypes/DataElement":165,"./basetypes/DateTime":166,"./basetypes/Interval":167,"./basetypes/QDMDate":168,"./basetypes/Quantity":169,"mongoose/browser":192}],151:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { EntitySchemaFunction } = require('./Entity');
@@ -40069,7 +40031,7 @@ class CarePartner extends mongoose.Document {
 module.exports.CarePartner = CarePartner;
 
 
-},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Entity":155,"mongoose/browser":192}],153:[function(require,module,exports){
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Entity":154,"mongoose/browser":192}],152:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const Code = require('../basetypes/Code');
@@ -40089,7 +40051,7 @@ const [Number, String] = [
 const ComponentSchema = new mongoose.Schema({
   code: Code,
   result: Any,
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::Component' },
 
 });
@@ -40106,7 +40068,7 @@ function ComponentSchemaFunction(add, options) {
   const extended = new Schema({
     code: Code,
     result: Any,
-    qdmVersion: { type: String, default: '5.5' },
+    qdmVersion: { type: String, default: '5.6' },
     _type: { type: String, default: 'QDM::Component' },
 
 
@@ -40122,7 +40084,7 @@ function ComponentSchemaFunction(add, options) {
 module.exports.Component = Component;
 module.exports.ComponentSchemaFunction = ComponentSchemaFunction;
 
-},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"mongoose/browser":192}],154:[function(require,module,exports){
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"mongoose/browser":192}],153:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const Code = require('../basetypes/Code');
@@ -40142,7 +40104,7 @@ const DiagnosisComponentSchema = new mongoose.Schema({
   code: Code,
   presentOnAdmissionIndicator: Code,
   rank: Number,
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::DiagnosisComponent' },
 
 });
@@ -40158,7 +40120,7 @@ class DiagnosisComponent extends mongoose.Document {
 module.exports.DiagnosisComponent = DiagnosisComponent;
 
 
-},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"mongoose/browser":192}],155:[function(require,module,exports){
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"mongoose/browser":192}],154:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { IdentifierSchema } = require('./Identifier');
@@ -40179,7 +40141,7 @@ const [Number, String] = [
 const EntitySchema = new mongoose.Schema({
   id: String,
   identifier: IdentifierSchema,
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::Entity' },
 
 });
@@ -40195,7 +40157,7 @@ class Entity extends mongoose.Document {
 function EntitySchemaFunction(add, options) {
   const extended = new Schema({
     identifier: IdentifierSchema,
-    qdmVersion: { type: String, default: '5.5' },
+    qdmVersion: { type: String, default: '5.6' },
     _type: { type: String, default: 'QDM::Entity' },
 
 
@@ -40218,7 +40180,7 @@ function EntitySchemaFunction(add, options) {
 module.exports.Entity = Entity;
 module.exports.EntitySchemaFunction = EntitySchemaFunction;
 
-},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Identifier":157,"mongoose/browser":192}],156:[function(require,module,exports){
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Identifier":156,"mongoose/browser":192}],155:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const Code = require('../basetypes/Code');
@@ -40237,7 +40199,7 @@ const [Number, String] = [
 const FacilityLocationSchema = new mongoose.Schema({
   code: Code,
   locationPeriod: Interval,
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::FacilityLocation' },
 
 });
@@ -40253,7 +40215,7 @@ class FacilityLocation extends mongoose.Document {
 module.exports.FacilityLocation = FacilityLocation;
 
 
-},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"mongoose/browser":192}],157:[function(require,module,exports){
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"mongoose/browser":192}],156:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const [Number, String] = [
@@ -40264,7 +40226,7 @@ const [Number, String] = [
 const IdentifierSchema = mongoose.Schema({
   namingSystem: String,
   value: String,
-  qdmVersion: { type: String, default: '5.5' },
+  qdmVersion: { type: String, default: '5.6' },
   _type: { type: String, default: 'QDM::Identifier' },
 
 }, { _id: false, id: false });
@@ -40278,7 +40240,41 @@ class Identifier extends mongoose.Document {
 }
 module.exports.Identifier = Identifier;
 
-},{"mongoose/browser":192}],158:[function(require,module,exports){
+},{"mongoose/browser":192}],157:[function(require,module,exports){
+const mongoose = require('mongoose/browser');
+
+const { EntitySchemaFunction } = require('./Entity');
+const Code = require('../basetypes/Code');
+const Interval = require('../basetypes/Interval');
+const Quantity = require('../basetypes/Quantity');
+const DateTime = require('../basetypes/DateTime');
+const QDMDate = require('../basetypes/QDMDate');
+const Any = require('../basetypes/Any');
+
+const [Number, String] = [
+  mongoose.Schema.Types.Number,
+  mongoose.Schema.Types.String,
+];
+
+const LocationSchema = EntitySchemaFunction({
+  locationType: Code,
+  hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.142' },
+  _type: { type: String, default: 'QDM::Location' },
+
+});
+
+module.exports.LocationSchema = LocationSchema;
+class Location extends mongoose.Document {
+  constructor(object) {
+    super(object, LocationSchema);
+    this._type = 'QDM::Location';
+  }
+}
+
+module.exports.Location = Location;
+
+
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Entity":154,"mongoose/browser":192}],158:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { EntitySchemaFunction } = require('./Entity');
@@ -40295,7 +40291,7 @@ const [Number, String] = [
 ];
 
 const OrganizationSchema = EntitySchemaFunction({
-  type: Code,
+  organizationType: Code,
   hqmfOid: { type: String, default: '2.16.840.1.113883.10.20.28.4.135' },
   qrdaOid: { type: String, default: '2.16.840.1.113883.10.20.24.3.163' },
   _type: { type: String, default: 'QDM::Organization' },
@@ -40313,7 +40309,7 @@ class Organization extends mongoose.Document {
 module.exports.Organization = Organization;
 
 
-},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Entity":155,"mongoose/browser":192}],159:[function(require,module,exports){
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Entity":154,"mongoose/browser":192}],159:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { EntitySchemaFunction } = require('./Entity');
@@ -40347,7 +40343,7 @@ class PatientEntity extends mongoose.Document {
 module.exports.PatientEntity = PatientEntity;
 
 
-},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Entity":155,"mongoose/browser":192}],160:[function(require,module,exports){
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Entity":154,"mongoose/browser":192}],160:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { EntitySchemaFunction } = require('./Entity');
@@ -40384,7 +40380,7 @@ class Practitioner extends mongoose.Document {
 module.exports.Practitioner = Practitioner;
 
 
-},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Entity":155,"mongoose/browser":192}],161:[function(require,module,exports){
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Entity":154,"mongoose/browser":192}],161:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 
 const { ComponentSchemaFunction } = require('./Component');
@@ -40417,7 +40413,7 @@ class ResultComponent extends mongoose.Document {
 module.exports.ResultComponent = ResultComponent;
 
 
-},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Component":153,"mongoose/browser":192}],162:[function(require,module,exports){
+},{"../basetypes/Any":162,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/QDMDate":168,"../basetypes/Quantity":169,"./Component":152,"mongoose/browser":192}],162:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -40508,6 +40504,7 @@ const { PatientEntity } = require('../attributes/PatientEntity');
 const { Practitioner } = require('../attributes/Practitioner');
 const { CarePartner } = require('../attributes/CarePartner');
 const { Organization } = require('../attributes/Organization');
+const { Location } = require('../attributes/Location');
 
 function AnyEntity(key, options) {
   mongoose.SchemaType.call(this, key, options, 'AnyEntity');
@@ -40537,6 +40534,8 @@ AnyEntity.prototype.cast = (entity) => {
         return new CarePartner(entity);
       case 'QDM::Organization':
         return new Organization(entity);
+      case 'QDM::Location':
+        return new Location(entity);
       default:
         throw new Error(`Could not find entity type "${entity._type}".`);
     }
@@ -40548,7 +40547,7 @@ AnyEntity.prototype.cast = (entity) => {
 mongoose.Schema.Types.AnyEntity = AnyEntity;
 module.exports = AnyEntity;
 
-},{"../attributes/CarePartner":152,"../attributes/Organization":158,"../attributes/PatientEntity":159,"../attributes/Practitioner":160,"mongoose/browser":192}],164:[function(require,module,exports){
+},{"../attributes/CarePartner":151,"../attributes/Location":157,"../attributes/Organization":158,"../attributes/PatientEntity":159,"../attributes/Practitioner":160,"mongoose/browser":192}],164:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -40638,7 +40637,7 @@ function DataElementSchema(add, options) {
 
 module.exports.DataElementSchema = DataElementSchema;
 
-},{"../attributes/Identifier":157,"./Code.js":164,"cql-execution":51,"mongoose/browser":192}],166:[function(require,module,exports){
+},{"../attributes/Identifier":156,"./Code.js":164,"cql-execution":51,"mongoose/browser":192}],166:[function(require,module,exports){
 const mongoose = require('mongoose/browser');
 const cql = require('cql-execution');
 
@@ -41142,7 +41141,7 @@ class Patient extends mongoose.Document {
 }
 module.exports.Patient = Patient;
 
-},{"../QDMPatient":145,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/Quantity":169,"./Provider":179,"mongoose/browser":192}],178:[function(require,module,exports){
+},{"../QDMPatient":144,"../basetypes/Code":164,"../basetypes/DateTime":166,"../basetypes/Interval":167,"../basetypes/Quantity":169,"./Provider":179,"mongoose/browser":192}],178:[function(require,module,exports){
 /* eslint-disable no-unused-vars, no-param-reassign */
 const mongoose = require('mongoose/browser');
 const { StatementReferenceSchema } = require('./CQLStatementDependency');
@@ -41377,7 +41376,7 @@ module.exports.ClauseResultSchema = require('./cqm/ClauseResult.js').ClauseResul
 module.exports.StatementResult = require('./cqm/StatementResult.js').StatementResult;
 module.exports.StatementResultSchema = require('./cqm/StatementResult.js').StatementResultchema;
 
-},{"./AllDataElements.js":97,"./Result.js":147,"./cqm/CQLLibrary.js":170,"./cqm/CQLStatementDependency.js":171,"./cqm/ClauseResult.js":172,"./cqm/Concept.js":173,"./cqm/IndividualResult.js":174,"./cqm/Measure.js":175,"./cqm/MeasurePackage.js":176,"./cqm/Patient.js":177,"./cqm/PopulationSet.js":178,"./cqm/Provider.js":179,"./cqm/StatementResult.js":180,"./cqm/ValueSet.js":181,"cql-execution":51}],183:[function(require,module,exports){
+},{"./AllDataElements.js":97,"./Result.js":146,"./cqm/CQLLibrary.js":170,"./cqm/CQLStatementDependency.js":171,"./cqm/ClauseResult.js":172,"./cqm/Concept.js":173,"./cqm/IndividualResult.js":174,"./cqm/Measure.js":175,"./cqm/MeasurePackage.js":176,"./cqm/Patient.js":177,"./cqm/PopulationSet.js":178,"./cqm/Provider.js":179,"./cqm/StatementResult.js":180,"./cqm/ValueSet.js":181,"cql-execution":51}],183:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a

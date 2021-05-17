@@ -1,0 +1,246 @@
+{
+  "qdmVersion": "5.6",
+  "dataElements": [
+    {
+      "dataElementCodes": [
+        {
+          "code": "183452005",
+          "system": "2.16.840.1.113883.6.96",
+          "version": null,
+          "display": null
+        }
+      ],
+      "_id": "609ad73c31b0070000cee861",
+      "participant": [],
+      "relatedTo": [],
+      "qdmTitle": "Encounter, Performed",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+      "qdmCategory": "encounter",
+      "qdmStatus": "performed",
+      "qdmVersion": "5.6",
+      "_type": "QDM::EncounterPerformed",
+      "facilityLocations": [],
+      "admissionSource": null,
+      "authorDatetime": "2012-05-11T08:00:00.000+00:00",
+      "codeListId": "2.16.840.1.113883.3.666.5.307",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnoses": [],
+      "dischargeDisposition": null,
+      "lengthOfStay": null,
+      "priority": null,
+      "relevantPeriod": {
+        "low": "2012-05-11T08:00:00.000+00:00",
+        "high": "2012-05-11T08:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "id": "609ad73c31b0070000cee861"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "1361226",
+          "system": "2.16.840.1.113883.6.88",
+          "version": null,
+          "display": null
+        }
+      ],
+      "_id": "609ad85ed644e80000ab596b",
+      "performer": [],
+      "qdmTitle": "Medication, Administered",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.45",
+      "qdmCategory": "medication",
+      "qdmStatus": "administered",
+      "qdmVersion": "5.6",
+      "_type": "QDM::MedicationAdministered",
+      "authorDatetime": "2012-05-11T08:00:00.000+00:00",
+      "codeListId": "2.16.840.1.113762.1.4.1045.39",
+      "description": "Medication, Administered: Low Dose Unfractionated Heparin for VTE Prophylaxis",
+      "dosage": null,
+      "frequency": null,
+      "negationRationale": null,
+      "reason": null,
+      "relevantDatetime": "2012-05-11T08:00:00.000+00:00",
+      "relevantPeriod": {
+        "low": "2012-05-11T08:00:00.000+00:00",
+        "high": "2012-05-11T08:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": {
+        "code": "34206005",
+        "system": "2.16.840.1.113883.6.96",
+        "version": null,
+        "display": "Subcutaneous route (qualifier value)"
+      },
+      "id": "609ad85ed644e80000ab596b"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "1361226",
+          "system": "2.16.840.1.113883.6.88",
+          "version": null,
+          "display": null
+        }
+      ],
+      "_id": "609ad92ed644e80000ab59e3",
+      "performer": [],
+      "qdmTitle": "Medication, Administered",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.45",
+      "qdmCategory": "medication",
+      "qdmStatus": "administered",
+      "qdmVersion": "5.6",
+      "_type": "QDM::MedicationAdministered",
+      "authorDatetime": "2012-05-11T08:00:00.000+00:00",
+      "codeListId": "2.16.840.1.113762.1.4.1045.39",
+      "description": "Medication, Administered: Low Dose Unfractionated Heparin for VTE Prophylaxis",
+      "dosage": null,
+      "frequency": null,
+      "negationRationale": {
+        "code": "1361226",
+        "system": "2.16.840.1.113883.6.88",
+        "version": null,
+        "display": "heparin sodium, porcine 1000 UNT/ML Injectable Solution"
+      },
+      "reason": null,
+      "relevantDatetime": "2012-05-11T08:00:00.000+00:00",
+      "relevantPeriod": {
+        "low": "2012-05-11T08:00:00.000+00:00",
+        "high": "2012-05-11T08:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "route": null,
+      "id": "609ad92ed644e80000ab59e3"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "428411000124104",
+          "system": "2.16.840.1.113883.6.96",
+          "version": null,
+          "display": null
+        }
+      ],
+      "_id": "609ad9a3d644e80000ab5a06",
+      "performer": [],
+      "relatedTo": [],
+      "qdmTitle": "Procedure, Performed",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
+      "qdmCategory": "procedure",
+      "qdmStatus": "performed",
+      "qdmVersion": "5.6",
+      "_type": "QDM::ProcedurePerformed",
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-05-11T08:00:00.000+00:00",
+      "codeListId": "2.16.840.1.113883.3.117.1.7.1.214",
+      "components": [],
+      "description": "Procedure, Performed: Intermittent pneumatic compression devices (IPC)",
+      "incisionDatetime": null,
+      "method": null,
+      "negationRationale": {
+        "code": "105480006",
+        "system": "2.16.840.1.113883.6.96",
+        "version": null,
+        "display": "Refusal of treatment by patient (situation)"
+      },
+      "rank": null,
+      "reason": null,
+      "relevantDatetime": "2012-05-11T08:00:00.000+00:00",
+      "relevantPeriod": {
+        "low": "2012-05-11T08:00:00.000+00:00",
+        "high": "2012-05-11T08:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "status": null,
+      "id": "609ad9a3d644e80000ab5a06"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "F",
+          "system": "2.16.840.1.113883.5.1",
+          "version": null,
+          "display": "Female"
+        }
+      ],
+      "_id": "609d95acb789028849ab7bc4",
+      "qdmTitle": "Patient Characteristic Sex",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.6",
+      "_type": "QDM::PatientCharacteristicSex",
+      "description": "Patient Characteristic Sex: ONCAdministrativeSex",
+      "codeListId": "2.16.840.1.113762.1.4.1",
+      "id": "609d95acb789028849ab7bc4"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "system": "2.16.840.1.113883.6.1",
+          "version": null,
+          "display": "Birth date"
+        }
+      ],
+      "_id": "609d95acb789028849ab7be4",
+      "qdmTitle": "Patient Characteristic Birthdate",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.6",
+      "_type": "QDM::PatientCharacteristicBirthdate",
+      "description": "Patient Characteristic Birthdate: Birth date",
+      "codeListId": "drc-c48426f721cede4d865df946157d5e2dc90bd32763ffcb982ca45b3bd97a29db",
+      "birthDatetime": "1985-01-01T08:00:00.000+00:00",
+      "id": "609d95acb789028849ab7be4"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "1002-5",
+          "system": "2.16.840.1.113883.6.238",
+          "version": null,
+          "display": "American Indian or Alaska Native"
+        }
+      ],
+      "_id": "609d95acb789028849ab7bcc",
+      "qdmTitle": "Patient Characteristic Race",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "race",
+      "qdmVersion": "5.6",
+      "_type": "QDM::PatientCharacteristicRace",
+      "description": "Patient Characteristic Race: Race",
+      "codeListId": "2.16.840.1.114222.4.11.836",
+      "id": "609d95acb789028849ab7bcc"
+    },
+    {
+      "dataElementCodes": [
+        {
+          "code": "2135-2",
+          "system": "2.16.840.1.113883.6.238",
+          "version": null,
+          "display": "Hispanic or Latino"
+        }
+      ],
+      "_id": "609d95acb789028849ab7bdb",
+      "qdmTitle": "Patient Characteristic Ethnicity",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
+      "qdmCategory": "patient_characteristic",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.6",
+      "_type": "QDM::PatientCharacteristicEthnicity",
+      "description": "Patient Characteristic Ethnicity: Ethnicity",
+      "codeListId": "2.16.840.1.114222.4.11.837",
+      "id": "609d95acb789028849ab7bdb"
+    }
+  ],
+  "_id": "609d979fb789028849ab8dd3",
+  "birthDatetime": "1985-01-01T08:00:00.000+00:00",
+  "extendedData": null
+}

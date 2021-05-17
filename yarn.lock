@@ -560,10 +560,9 @@ cql-execution@~2.2.0:
     "@lhncbc/ucum-lhc" "^4.1.3"
     luxon "^1.25.0"
 
-cqm-models@~3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/cqm-models/-/cqm-models-3.1.0.tgz#b1ca284bd741c3efbcec09285e8911b8a0e48675"
-  integrity sha512-p719DH3F55Sf41Q6rhOfh6Zej/n28MjLVmtMIlTTAyffz8kcwsBwypI+eyFqaCId27FLPC0fBiLdJq846oHpFQ==
+"cqm-models@https://github.com/projecttacoma/cqm-models.git#c1b6383b0e91bdb968aa16ed390065e3ea47c72c":
+  version "4.0.0"
+  resolved "https://github.com/projecttacoma/cqm-models.git#c1b6383b0e91bdb968aa16ed390065e3ea47c72c"
   dependencies:
     cql-execution "~2.2.0"
     mongoose "^5.11.10"
