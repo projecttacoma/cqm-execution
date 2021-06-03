@@ -1676,15 +1676,18 @@ module.exports = class Calculator {
     if (observations) {
       observations.forEach((obs) => {
         const funcName = obs.observation_function.statement_name;
-        const parameter = obs.observation_parameter.statement_name;
-        generatedELMJSON = CalculatorHelpers.generateELMJSONFunction(funcName, parameter);
-        // Save the name of the generated define statement, so we can check
-        // its result later in the CQL calculation process. These added
-        // define statements are called 'obs_func_' followed by the
-        // name of the function - see the 'generateELMJSONFunction' function.
-        observationDefs.push(`obs_func_${funcName}`);
-        // Add the generated elm representing the observation function into the elm
-        mainLibraryElm.library.statements.def.push(generatedELMJSON);
+        if (measure.calculation_method !== 'PATIENT') {
+          // Don't calculate measure observations for patient based measures
+          const parameter = obs.observation_parameter.statement_name;
+          generatedELMJSON = CalculatorHelpers.generateELMJSONFunction(funcName, parameter);
+          // Save the name of the generated define statement, so we can check
+          // its result later in the CQL calculation process. These added
+          // define statements are called 'obs_func_' followed by the
+          // name of the function - see the 'generateELMJSONFunction' function.
+          observationDefs.push(`obs_func_${funcName}`);
+          // Add the generated elm representing the observation function into the elm
+          mainLibraryElm.library.statements.def.push(generatedELMJSON);
+        }
       });
     }
 
