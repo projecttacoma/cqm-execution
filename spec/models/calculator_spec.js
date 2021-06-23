@@ -46,6 +46,22 @@ describe('Calculator', () => {
   });
 
   describe('patient based relevance map', () => {
+    it('doesnt fail calculation of measure observations', () => {
+      const valueSets = getJSONFixture('cqm_measures/CombinedVTEandBleedingRatio/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CombinedVTEandBleedingRatio/CombinedVTEandBleedingRatio.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/CombinedVTEandBleedingRatio/first_last.json'));
+      const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+
+      // No results will be in the episode_results
+      expect(result['episode_results']).toBeUndefined();
+      // The IPP should be the only relevant population
+      expect(result.population_relevance).toEqual({
+        IPP: true, DENOM: false, DENEX: false, NUMER: false,  observation_values: false
+      });
+    });
+
     it('is correct', () => {
       const valueSets = getJSONFixture('cqm_measures/CMS735v0/value_sets.json');
       const measure = getJSONFixture('cqm_measures/CMS735v0/CMS735v0.json');
