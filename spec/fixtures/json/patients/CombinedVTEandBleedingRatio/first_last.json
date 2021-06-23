@@ -1,0 +1,195 @@
+{
+  "birthDatetime": "1970-01-01T03:00:00.000-05:00",
+  "bundleId": "59638a8b942c6d2e17000435",
+  "dataElements": [
+    {
+      "authorDatetime": "2012-08-23T04:00:00.000-04:00",
+      "category": "laboratory_test",
+      "components": [
+
+      ],
+      "dataElementCodes": [
+        {
+          "code": "12773-8",
+          "system": "2.16.840.1.113883.6.1"
+        }
+      ],
+      "description": "Laboratory Test, Performed: LDL Test",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.5",
+      "method": null,
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "reason": null,
+      "referenceRange": null,
+      "relevantPeriod": {
+        "low": "2012-08-23T08:00:00.000+00:00",
+        "high": "2012-08-23T08:15:00.000+00:00",
+        "lowClosed": true,
+        "highClosed": true
+      },
+      "result": null,
+      "resultDatetime": null,
+      "status": null,
+      "_type": "QDM::LaboratoryTestPerformed"
+    },
+    {
+      "birthDatetime": "1970-01-01T03:00:00.000-05:00",
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "display": null,
+          "system": "2.16.840.1.113883.6.1",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicBirthdate"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "2186-5",
+          "display": "Not Hispanic or Latino",
+          "system": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicEthnicity"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "1002-5",
+          "display": "American Indian or Alaska Native",
+          "system": "2.16.840.1.113883.6.238",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicRace"
+    },
+    {
+      "category": "patient_characteristic",
+      "dataElementCodes": [
+        {
+          "code": "M",
+          "display": "M",
+          "system": "2.16.840.1.113883.5.1",
+          "version": null,
+          "_type": "QDM::Code"
+        }
+      ],
+      "description": null,
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
+      "_type": "QDM::PatientCharacteristicSex"
+    }
+  ],
+  "extendedData": {
+    "type": null,
+    "measure_ids": [
+      "E075A7F3-D272-4B6C-A677-84C4BC780D4E",
+      null
+    ],
+    "source_data_criteria": [
+      {
+        "negation": false,
+        "definition": "laboratory_test",
+        "status": "performed",
+        "title": "LDL Test",
+        "description": "Laboratory Test, Performed: LDL Test",
+        "code_list_id": "2.16.840.1.113883.3.464.1003.198.11.1029",
+        "type": "laboratory_tests",
+        "id": "LDLTest_LaboratoryTestPerformed_dfc0eb1c_63c5_4b29_ac69_d74cc67a97fc_source",
+        "start_date": 1345708800000,
+        "end_date": 1345709700000,
+        "value": [
+
+        ],
+        "references": null,
+        "field_values": {
+        },
+        "hqmf_set_id": "E075A7F3-D272-4B6C-A677-84C4BC780D4E",
+        "cms_id": "CMS735v0",
+        "criteria_id": "15e10e21b84iy",
+        "codes": {
+          "LOINC": [
+            "12773-8"
+          ]
+        },
+        "negation_code_list_id": "",
+        "coded_entry_id": "599dec1ad7c8ac5456000004",
+        "code_source": "DEFAULT"
+      },
+      {
+        "id": "MeasurePeriod",
+        "start_date": 0,
+        "end_date": 0,
+        "references": null
+      }
+    ],
+    "expected_values": [
+      {
+        "measure_id": "E075A7F3-D272-4B6C-A677-84C4BC780D4E",
+        "population_index": 0,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "E075A7F3-D272-4B6C-A677-84C4BC780D4E",
+        "population_index": 1,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      },
+      {
+        "measure_id": "E075A7F3-D272-4B6C-A677-84C4BC780D4E",
+        "population_index": 2,
+        "IPP": 0,
+        "DENOM": 0,
+        "DENEX": 0,
+        "NUMER": 0,
+        "DENEXCEP": 0
+      }
+    ],
+    "notes": "",
+    "is_shared": null,
+    "origin_data": [
+
+    ],
+    "test_id": null,
+    "medical_record_number": "304b80402aae7cf71a37fc82556a7358",
+    "medical_record_assigner": "Bonnie",
+    "description": null,
+    "description_category": null,
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+  },
+  "familyName": "last",
+  "givenNames": [
+    "first"
+  ],
+  "qdmVersion": "5.3"
+}
