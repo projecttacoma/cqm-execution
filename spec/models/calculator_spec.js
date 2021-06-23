@@ -58,7 +58,7 @@ describe('Calculator', () => {
       expect(result['episode_results']).toBeUndefined();
       // The IPP should be the only relevant population
       expect(result.population_relevance).toEqual({
-        IPP: true, DENOM: false, DENEX: false, NUMER: false,  observation_values: false
+        IPP: true, DENOM: false, DENEX: false, NUMER: false, observation_values: false,
       });
     });
 
