@@ -195,8 +195,21 @@ module.exports = class CalculatorHelpers {
           patientResults != null
             ? patientResults[obDef]
             : undefined;
-
-        populationResults.observation_values.push(obsResults);
+        if (Array.isArray(obsResults)) {
+          obsResults.forEach((obsResult) => {
+            // Add the single result value to the values array on the results of
+            // this calculation (allowing for more than one possible observation).
+            if (obsResult != null ? Object.prototype.hasOwnProperty.call(obsResult, 'value') : undefined) {
+              // If result is a Cql.Quantity type, add its value
+              populationResults.observation_values.push(obsResult.observation.value);
+            } else {
+              // In all other cases, add result
+              populationResults.observation_values.push(obsResult.observation);
+            }
+          });
+        } else {
+          populationResults.observation_values.push(obsResults);
+        }
       });
     }
 
