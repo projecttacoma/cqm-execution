@@ -10,7 +10,7 @@ describe('MeasureHelpers', () => {
       const measure = getJSONFixture('cqm_measures/CMS723v0/CMS723v0.json');
 
       // Find the localid for the specific statement with the global function ref.
-      const library = measure.cql_libraries.find(lib => lib.library_name === 'AnticoagulationTherapyforAtrialFibrillationFlutter');
+      const library = measure.cql_libraries.find((lib) => lib.library_name === 'AnticoagulationTherapyforAtrialFibrillationFlutter');
       const statementName = 'Encounter with Principal Diagnosis and Age';
       const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
 
@@ -25,7 +25,7 @@ describe('MeasureHelpers', () => {
       const measure = getJSONFixture('cqm_measures/CMS13v2/CMS13v2.json');
 
       // Find the localid for the specific statement with the global function ref.
-      const library = measure.cql_libraries.find(lib => lib.library_name === 'Test104');
+      const library = measure.cql_libraries.find((lib) => lib.library_name === 'Test104');
       const statementName = 'Initial Population';
       const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
 
@@ -40,7 +40,7 @@ describe('MeasureHelpers', () => {
       const measure = getJSONFixture('cqm_measures/CMS13v2/CMS13v2.json');
 
       // Find the localid for the specific statement with the global function ref.
-      const library = measure.cql_libraries.find(lib => lib.library_name === 'Test104');
+      const library = measure.cql_libraries.find((lib) => lib.library_name === 'Test104');
       const statementName = 'Comfort Measures during Hospitalization';
       const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
 
@@ -49,7 +49,6 @@ describe('MeasureHelpers', () => {
       expect(localIds[42]).toEqual({ localId: '42' });
     });
   });
-
 
   describe('findLocalIdForLibraryRef for functionRefs', () => {
     beforeEach(() => {
