@@ -13804,7 +13804,7 @@ var ret = {
     domainBind: domainBind
 };
 ret.isRecentNode = ret.isNode && (function() {
-    var version = process.versions.node.split(".").map(Number);
+    var version = 'v16.13.0'.split(".").map(Number);
     return (version[0] === 0 && version[1] > 10) || (version[0] > 0);
 })();
 
@@ -96776,7 +96776,7 @@ exports.errorToPOJO = function errorToPOJO(error) {
   return ret;
 };
 
-exports.nodeMajorVersion = parseInt(process.versions.node.split('.')[0], 10);
+exports.nodeMajorVersion = parseInt('v16.13.0'.split('.')[0], 10);
 
 }).call(this)}).call(this,require('_process'))
 },{"./document":204,"./helpers/clone":229,"./helpers/getFunctionName":242,"./helpers/immediate":243,"./helpers/isBsonType":244,"./helpers/isMongooseObject":245,"./helpers/isObject":246,"./helpers/promiseOrCallback":253,"./helpers/schema/merge":261,"./helpers/specialProperties":263,"./options/PopulateOptions":270,"./types/decimal128":312,"./types/objectid":317,"_process":337,"mpath":322,"ms":321,"safe-buffer":339,"sliced":340}],320:[function(require,module,exports){
