@@ -1,10 +1,10 @@
 /* eslint dot-notation: 0 */ // --> OFF
 /* eslint quote-props: 0 */ // --> OFF
 
+const CqmModels = require('cqm-models');
 const Calculator = require('../../lib/models/calculator.js');
 const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 const getEpisodeResults = require('../support/spec_helper.js').getEpisodeResults;
-const CqmModels = require('cqm-models');
 
 describe('Calculator', () => {
   describe('episode of care based relevance map', () => {
@@ -330,7 +330,6 @@ describe('Calculator', () => {
     expect(visit2exclResults['PopulationCriteria1 - Stratification 3'].MSRPOPLEX).toBe(0);
     expect(getEpisodeResults(visit2exclResults['PopulationCriteria1 - Stratification 3'].episode_results)).toEqual([]);
 
-
     // Check Statement Relevance for Population Criteria 1
     expect(visit1EdResults.PopulationCriteria1.statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
       'ED Visit': 'TRUE',
@@ -364,7 +363,6 @@ describe('Calculator', () => {
       'Stratification 2': 'NA',
       'Stratification 3': 'NA',
     });
-
 
     // Check Statement Relevance for Population Set 1 Stratification 2
     expect(visit1EdResults['PopulationCriteria1 - Stratification 2'].statement_relevance.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients).toEqual({
@@ -605,7 +603,6 @@ describe('Calculator', () => {
     });
   });
 
-
   xit('single population EOC measure correctly', () => {
     // TODO: Find another measure to use. Diagnoses now contains DiagnosesComponents,
     // the measure logic used here asumes Diagnoses is a list of codes
@@ -750,7 +747,6 @@ describe('Calculator', () => {
     expect(denexPop18StratPassResults['PopulationCriteria2 - Stratification 2'].DENEX).toBe(1);
     expect(denexPop18StratPassResults['PopulationCriteria2 - Stratification 2'].STRAT).toBe(1);
 
-
     // Patient pop1PassResults
     expect(pop1PassResults['PopulationCriteria1'].IPP).toBe(1);
     expect(pop1PassResults['PopulationCriteria1'].DENOM).toBe(1);
@@ -798,14 +794,14 @@ describe('Calculator', () => {
       const calculationResults = Calculator.calculate(measure, patients, valueSets, options);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
       const conversionFactorResult = Object.values(calculationResults[Object.keys(calculationResults)[1]])[0];
-      const indentedResult = '[{' +
-      '\n  cmd: 233,' +
-      '\n  meds: [Medication, Order: Opioid Medications' +
-      '\n        START: 05/09/2012 8:00 AM' +
-      '\n        STOP: 12/28/2012 8:15 AM' +
-      '\n        CODE: RxNorm 1053647],' +
-      '\n  period: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM' +
-      '\n}]';
+      const indentedResult = '[{'
+      + '\n  cmd: 233,'
+      + '\n  meds: [Medication, Order: Opioid Medications'
+      + '\n        START: 05/09/2012 8:00 AM'
+      + '\n        STOP: 12/28/2012 8:15 AM'
+      + '\n        CODE: RxNorm 1053647],'
+      + '\n  period: INTERVAL: 05/09/2012 8:00 AM - 12/28/2012 8:15 AM'
+      + '\n}]';
       const resultsByStatement = result.statement_results_by_statement();
       const conversionFactorResultsByStatement = conversionFactorResult.statement_results_by_statement();
 

@@ -1,7 +1,7 @@
 /* eslint dot-notation: 0 */ // --> OFF
 
-const ResultsHelpers = require('../../lib/helpers/results_helpers');
 const cql = require('cqm-models').CQL;
+const ResultsHelpers = require('../../lib/helpers/results_helpers');
 const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 const Calculator = require('../../lib/models/calculator.js');
 
@@ -11,22 +11,20 @@ describe('ResultsHelpers', () => {
       const before = { a: 1, b: 2 };
       const beforeClone = { a: 1, b: 2 };
       ResultsHelpers.prettyResult(before);
-      Array.from(before).map((key, value) =>
-        expect(value).toEqual(beforeClone[key]));
+      Array.from(before).map((key, value) => expect(value).toEqual(beforeClone[key]));
     });
 
     it('should not destroy arrays passed in', () => {
       const before = [1, 2, 3];
       const beforeClone = [1, 2, 3];
       ResultsHelpers.prettyResult(before);
-      Array.from(before).map((item, index) =>
-        expect(item).toEqual(beforeClone[index]));
+      Array.from(before).map((item, index) => expect(item).toEqual(beforeClone[index]));
     });
 
     it('should properly indent nested objects', () => {
       const nestedObject = { one: 'single item', two: { nested: 'item', nested2: 'item' }, three: { doubleNested: { a: '1', b: '2', c: '3' }, nested: 'item' } };
-      const prettyNestedObject = '{\n  one: "single item",\n  three: {\n    doubleNested: {\n      a: "1",\n      b: "2",\n      c: "3"\n    },\n    nested: "item"\n  },\n' +
-      '  two: {\n    nested: "item",\n    nested2: "item"\n  }\n}';
+      const prettyNestedObject = '{\n  one: "single item",\n  three: {\n    doubleNested: {\n      a: "1",\n      b: "2",\n      c: "3"\n    },\n    nested: "item"\n  },\n'
+      + '  two: {\n    nested: "item",\n    nested2: "item"\n  }\n}';
       expect(ResultsHelpers.prettyResult(nestedObject)).toEqual(prettyNestedObject);
     });
 
@@ -61,8 +59,8 @@ describe('ResultsHelpers', () => {
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
 
-        expect(resultsByStatement.TJC_Overall['Encounter with Principal Diagnosis and Age'].pretty).toEqual('[Encounter, Performed: ' +
-        'Non-Elective Inpatient Encounter\nSTART: 10/10/2012 9:30 AM\nSTOP: 10/12/2012 12:15 AM\nCODE: SNOMEDCT 32485007]');
+        expect(resultsByStatement.TJC_Overall['Encounter with Principal Diagnosis and Age'].pretty).toEqual('[Encounter, Performed: '
+        + 'Non-Elective Inpatient Encounter\nSTART: 10/10/2012 9:30 AM\nSTOP: 10/12/2012 12:15 AM\nCODE: SNOMEDCT 32485007]');
         expect(resultsByStatement.StrokeEducation.Numerator.pretty).toEqual('UNHIT');
       });
 
@@ -99,8 +97,8 @@ describe('ResultsHelpers', () => {
         const resultsByStatement = result.statement_results_by_statement();
 
         expect(resultsByStatement.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Observation'].pretty).toEqual('FUNCTION');
-        expect(resultsByStatement.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['ED Visit'].pretty).toEqual('[Encounter, Performed: ' +
-        'Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMEDCT 4525004]');
+        expect(resultsByStatement.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['ED Visit'].pretty).toEqual('[Encounter, Performed: '
+        + 'Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMEDCT 4525004]');
         expect(resultsByStatement.MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Population Exclusions'].pretty).toEqual('FALSE ([])');
       });
 
@@ -113,8 +111,8 @@ describe('ResultsHelpers', () => {
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
         expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Observation'].pretty).toEqual('FUNCTION');
-        expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['ED Visit'].pretty).toEqual('[Encounter, Performed: ' +
-        'Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMEDCT 4525004]');
+        expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['ED Visit'].pretty).toEqual('[Encounter, Performed: '
+        + 'Emergency Department Visit\nSTART: 06/10/2012 5:00 AM\nSTOP: 06/10/2012 5:15 AM\nCODE: SNOMEDCT 4525004]');
         expect(result['statement_results'].MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients['Measure Population Exclusions'].pretty).toEqual('FALSE ([])');
       });
 
@@ -139,8 +137,8 @@ describe('ResultsHelpers', () => {
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
         const resultsByStatement = result.statement_results_by_statement();
 
-        expect(resultsByStatement.DayMonthTimings['Months Containing 29 Days'].pretty).toEqual('[1,\n2,\n3,\n4,\n5,\n6,\n7,\n8,\n9,\n10,\n11,\n12,\n13,\n14,\n15,\n16,' +
-          '\n17,\n18,\n19,\n20,\n21,\n22,\n23,\n24,\n25,\n26,\n27,\n28,\n29]');
+        expect(resultsByStatement.DayMonthTimings['Months Containing 29 Days'].pretty).toEqual('[1,\n2,\n3,\n4,\n5,\n6,\n7,\n8,\n9,\n10,\n11,\n12,\n13,\n14,\n15,\n16,'
+          + '\n17,\n18,\n19,\n20,\n21,\n22,\n23,\n24,\n25,\n26,\n27,\n28,\n29]');
         expect(resultsByStatement.PotentialOpioidOveruse['Prescription Days'].pretty).toContain('05/09/2012 12:00 AM');
         expect(resultsByStatement.PotentialOpioidOveruse['Prescription Days'].pretty).toContain('rxNormCode: CODE: RxNorm 1053647');
         expect(resultsByStatement.PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('conversionFactor: 0.13');
@@ -157,8 +155,8 @@ describe('ResultsHelpers', () => {
         const calculationResults = Calculator.calculate(measure, patients, valueSets, { doPretty: true });
         const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
 
-        expect(result['statement_results'].DayMonthTimings['Months Containing 29 Days'].pretty).toEqual('[1,\n2,\n3,\n4,\n5,\n6,\n7,\n8,\n9,\n10,\n11,\n12,\n13,\n14,\n15,\n16,' +
-          '\n17,\n18,\n19,\n20,\n21,\n22,\n23,\n24,\n25,\n26,\n27,\n28,\n29]');
+        expect(result['statement_results'].DayMonthTimings['Months Containing 29 Days'].pretty).toEqual('[1,\n2,\n3,\n4,\n5,\n6,\n7,\n8,\n9,\n10,\n11,\n12,\n13,\n14,\n15,\n16,'
+          + '\n17,\n18,\n19,\n20,\n21,\n22,\n23,\n24,\n25,\n26,\n27,\n28,\n29]');
         expect(result['statement_results'].PotentialOpioidOveruse['Prescription Days'].pretty).toContain('05/09/2012 12:00 AM');
         expect(result['statement_results'].PotentialOpioidOveruse['Prescription Days'].pretty).toContain('rxNormCode: CODE: RxNorm 1053647');
         expect(result['statement_results'].PotentialOpioidOveruse['Prescriptions with MME'].pretty).toContain('conversionFactor: 0.13');
@@ -209,19 +207,18 @@ describe('ResultsHelpers', () => {
       });
     });
 
-    describe('no pretty statement results when not requested', () =>
-      it('for CMS107 correctly', () => {
-        const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
-        const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
-        const patients = [];
-        patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
-        const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
-        const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
-        const resultsByStatement = result.statement_results_by_statement();
+    describe('no pretty statement results when not requested', () => it('for CMS107 correctly', () => {
+      const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
+      const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      const resultsByStatement = result.statement_results_by_statement();
 
-        expect(resultsByStatement.TJC_Overall['Encounter with Principal Diagnosis and Age'].pretty).toEqual(undefined);
-        expect(resultsByStatement.StrokeEducation.Numerator.pretty).toEqual(undefined);
-      }));
+      expect(resultsByStatement.TJC_Overall['Encounter with Principal Diagnosis and Age'].pretty).toEqual(undefined);
+      expect(resultsByStatement.StrokeEducation.Numerator.pretty).toEqual(undefined);
+    }));
   });
 
   describe('buildPopulationRelevanceMap', () => {

@@ -4,7 +4,6 @@ const resultsHelpers = require('../lib/index.js').ResultsHelpers;
 const patientSource = require('../lib/index.js').PatientSource;
 const calculator = require('../lib/index.js').Calculator;
 
-
 describe('Module exports', () => {
   it('can access all exports', () => {
     expect(calculatorHelpers).not.toBeNull();
