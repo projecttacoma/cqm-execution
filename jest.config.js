@@ -7,7 +7,7 @@ module.exports = {
   collectCoverageFrom: [
     'lib/**/*.js',
     '!lib/browser.js',
-    '!**/node_modules/**'
+    '!**/node_modules/**',
   ],
-  setupFilesAfterEnv: ['jest-extended']
+  setupFilesAfterEnv: ['jest-extended'],
 };
