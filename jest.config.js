@@ -1,13 +1,13 @@
 module.exports = {
-  name: "jest",
-  testEnvironment: "node",
+  name: 'jest',
+  testEnvironment: 'node',
   verbose: true,
-  roots: ["<rootDir>/lib/", "<rootDir>/spec/"],
-  modulePathIgnorePatterns: ["<rootDir>/dist/"],
+  roots: ['<rootDir>/lib/', '<rootDir>/spec/'],
+  modulePathIgnorePatterns: ['<rootDir>/dist/'],
   collectCoverageFrom: [
-    "lib/**/*.js",
-    "!lib/browser.js",
-    "!**/node_modules/**"
+    'lib/**/*.js',
+    '!lib/browser.js',
+    '!**/node_modules/**'
   ],
   setupFilesAfterEnv: ['jest-extended']
 };
