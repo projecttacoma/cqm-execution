@@ -1,5 +1,6 @@
 /* eslint dot-notation: 0 */ // --> OFF
 /* eslint quote-props: 0 */ // --> OFF
+/* eslint no-undef: 0 */ // -> OFF
 
 const CqmModels = require('cqm-models');
 const Calculator = require('../../lib/models/calculator.js');
@@ -7,6 +8,55 @@ const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
 const getEpisodeResults = require('../support/spec_helper.js').getEpisodeResults;
 
 describe('Calculator', () => {
+  describe('Continuous Variable Calculations', () => {
+    it('can handle single episodes observed', () => {
+      const valueSets = getJSONFixture('cqm_measures/CMS903v0/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMS903v0/CMS903v0.json'); // 5.6
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS903v0/Visit_1 ED.json').qdmPatient);
+
+      const calculationResults = Calculator.calculate(measure, patients, valueSets);
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      expect(result['observation_values']).toEqual([15]);
+      expect(result['population_relevance']['observation_values']).toBe(true);
+      expect(result['population_relevance']['MSRPOPL']).toBe(true);
+      expect(result['population_relevance']['MSRPOPLEX']).toBe(true);
+
+      // # check the results for the episode
+      const expectedEpisodeResults = {
+        IPP: 1, MSRPOPL: 1, MSRPOPLEX: 0, observation_values: [15],
+      };
+      expect(result['episode_results']['5d5af7364987880000ce1889']).toEqual(expectedEpisodeResults);
+    });
+
+    it('can handle multiple episodes observed', () => {
+      const valueSets = getJSONFixture('cqm_measures/CMS903v0/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMS903v0/CMS903v0.json'); // 5.6
+      const patient = getJSONFixture('patients/CMS903v0/Visits_2 ED.json').qdmPatient;
+      const patients = [];
+      patients.push(patient);
+      const calculationResults = Calculator.calculate(measure, patients, valueSets);
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      // values are ordered when created by the calculator
+      expect(result['observation_values']).toEqual([25, 15]);
+      expect(result['population_relevance']['observation_values']).toBe(true);
+      expect(result['population_relevance']['MSRPOPL']).toBe(true);
+      expect(result['population_relevance']['MSRPOPLEX']).toBe(true);
+
+      episodeIds = patient['dataElements'].map((de) => de['id']);
+      // check the results for the episode
+      expectedEpisodeResults = {
+        IPP: 1, MSRPOPL: 1, MSRPOPLEX: 0, observation_values: [15],
+      };
+      expect(result['episode_results'][episodeIds[2]]).toEqual(expectedEpisodeResults);
+      // check the results for the second episode
+      expectedEpisodeResults = {
+        IPP: 1, MSRPOPL: 1, MSRPOPLEX: 0, observation_values: [25],
+      };
+      expect(result['episode_results'][episodeIds[1]]).toEqual(expectedEpisodeResults);
+    });
+  });
+
   describe('episode of care based relevance map', () => {
     it('is correct for patient with no episodes', () => {
       const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
@@ -822,7 +872,7 @@ describe('Calculator', () => {
       const resultWithClauses = Object.values(calculationResultsWithClauses[Object.keys(calculationResultsWithClauses)[0]])[0];
 
       expect(resultNoClauses.clause_results).toEqual(null);
-      expect(resultWithClauses.clause_results).toEqual(jasmine.any(Array));
+      expect(resultWithClauses.clause_results).toEqual(expect.any(Array));
     });
 
     it('only if requested without document', () => {
@@ -836,7 +886,7 @@ describe('Calculator', () => {
       const resultWithClauses = Object.values(calculationResultsWithClauses[Object.keys(calculationResultsWithClauses)[0]])[0];
 
       expect(resultNoClauses.clause_results).toEqual(null);
-      expect(resultWithClauses.clause_results).toEqual(jasmine.any(Object));
+      expect(resultWithClauses.clause_results).toEqual(expect.any(Object));
     });
   });
 
