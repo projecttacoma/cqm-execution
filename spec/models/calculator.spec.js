@@ -3,9 +3,9 @@
 /* eslint no-undef: 0 */ // -> OFF
 
 const CqmModels = require('cqm-models');
-const Calculator = require('../../lib/models/calculator.js');
-const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
-const getEpisodeResults = require('../support/spec_helper.js').getEpisodeResults;
+const Calculator = require('../../lib/models/calculator');
+const getJSONFixture = require('../support/spec_helper').getJSONFixture;
+const getEpisodeResults = require('../support/spec_helper').getEpisodeResults;
 
 describe('Calculator', () => {
   describe('Continuous Variable Calculations', () => {

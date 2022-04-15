@@ -1,5 +1,5 @@
 const MeasureHelpers = require('../../lib/helpers/measure_helpers');
-const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
+const getJSONFixture = require('../support/spec_helper').getJSONFixture;
 
 describe('MeasureHelpers', () => {
   describe('findAllLocalIdsInStatementByName', () => {

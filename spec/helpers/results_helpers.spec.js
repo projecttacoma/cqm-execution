@@ -2,8 +2,8 @@
 
 const cql = require('cqm-models').CQL;
 const ResultsHelpers = require('../../lib/helpers/results_helpers');
-const getJSONFixture = require('../support/spec_helper.js').getJSONFixture;
-const Calculator = require('../../lib/models/calculator.js');
+const getJSONFixture = require('../support/spec_helper').getJSONFixture;
+const Calculator = require('../../lib/models/calculator');
 
 describe('ResultsHelpers', () => {
   describe('prettyResult', () => {
