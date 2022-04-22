@@ -1,8 +1,8 @@
-const calculatorHelpers = require('../lib/index.js').CalculatorHelpers;
-const measureHelpers = require('../lib/index.js').MeasureHelpers;
-const resultsHelpers = require('../lib/index.js').ResultsHelpers;
-const patientSource = require('../lib/index.js').PatientSource;
-const calculator = require('../lib/index.js').Calculator;
+const calculatorHelpers = require('../lib/index').CalculatorHelpers;
+const measureHelpers = require('../lib/index').MeasureHelpers;
+const resultsHelpers = require('../lib/index').ResultsHelpers;
+const patientSource = require('../lib/index').PatientSource;
+const calculator = require('../lib/index').Calculator;
 
 describe('Module exports', () => {
   it('can access all exports', () => {

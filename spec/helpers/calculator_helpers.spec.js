@@ -1,4 +1,4 @@
-const CalculatorHelpers = require('../../lib/helpers/calculator_helpers.js');
+const CalculatorHelpers = require('../../lib/helpers/calculator_helpers');
 
 describe('CalculatorHelpers', () => {
   describe('handlePopulationValues', () => {
