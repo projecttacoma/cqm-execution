@@ -55,6 +55,6 @@
   "dependencies": {
     "cqm-models": "4.1.1",
     "lodash": "^4.17.19",
-    "moment": "^2.21.0"
+    "moment": "^2.29.4"
   }
 }
