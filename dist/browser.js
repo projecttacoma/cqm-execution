@@ -36208,7 +36208,7 @@ function Any(key, options) {
 Any.prototype = Object.create(mongoose.SchemaType.prototype);
 
 function RecursiveCast(any) {
-  if (any && any.value && any.unit) {
+  if (any && any.value !== undefined && any.unit) {
     return new cql.Quantity(any.value, any.unit);
   }
 
@@ -64058,7 +64058,7 @@ exports.Zone = Zone;
 
 },{}],198:[function(require,module,exports){
 //! moment.js
-//! version : 2.29.3
+//! version : 2.29.4
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -66513,7 +66513,7 @@ exports.Zone = Zone;
     function preprocessRFC2822(s) {
         // Remove comments and folding whitespace and replace multiple-spaces with a single space
         return s
-            .replace(/\([^)]*\)|[\n\t]/g, ' ')
+            .replace(/\([^()]*\)|[\n\t]/g, ' ')
             .replace(/(\s\s+)/g, ' ')
             .replace(/^\s\s*/, '')
             .replace(/\s\s*$/, '');
@@ -69694,7 +69694,7 @@ exports.Zone = Zone;
 
     //! moment.js
 
-    hooks.version = '2.29.3';
+    hooks.version = '2.29.4';
 
     setHookCallback(createLocal);
 
