@@ -75,6 +75,8 @@ module.exports = class CalculatorHelpers {
    * values that should not be calculated are zeroed out.
    * @param {object} populationResults - The population results. Map of "POPNAME" to Integer result. Except for OBSERVs,
    *   their key is 'value' and value is an array of results.
+   * @param {String} measureScoring - can be PROPORTION RATIO CONTINUOUS_VARIABLE COHORT.  RATIO measures follow a different
+   * logic path
    * @returns {object} Population results in the same structure as passed in, but the appropiate values are zeroed out.
    */
   static handlePopulationValues(populationResults, measureScoring) {
@@ -91,6 +93,8 @@ module.exports = class CalculatorHelpers {
      */
     const populationResultsHandled = populationResults;
 
+    // RATIO measures do not follow the standard flow from IPP->DENOM->NUMER
+    // RATIO measures flow from IPP->DENOM-DENEX and IPP->NUMER->NUMEX
     if (measureScoring === 'RATIO') {
       if (populationResultsHandled.STRAT != null && this.isValueZero('STRAT', populationResults)) {
         // Set all values to 0
@@ -117,11 +121,13 @@ module.exports = class CalculatorHelpers {
           populationResultsHandled.DENEX = 0;
         }
         if ('observation_values' in populationResults) {
+          // DENOM observation will be the first of 2 observations
           populationResultsHandled.observation_values[0] = 0;
         }
       }
       if (populationResults.DENEX != null && !this.isValueZero('DENEX', populationResults) && populationResults.DENEX >= populationResults.DENOM) {
         if ('observation_values' in populationResults) {
+          // DENOM observation will be the first of 2 observations
           populationResultsHandled.observation_values[0] = 0;
         }
       }
@@ -130,11 +136,13 @@ module.exports = class CalculatorHelpers {
           populationResultsHandled.NUMEX = 0;
         }
         if ('observation_values' in populationResults) {
+          // NUMER observation will be the second of 2 observations
           populationResultsHandled.observation_values[1] = 0;
         }
       }
       if (populationResults.NUMER != null && !this.isValueZero('NUMEX', populationResults) && populationResults.NUMEX >= populationResults.NUMER) {
         if ('observation_values' in populationResults) {
+          // NUMER observation will be the second of 2 observations
           populationResultsHandled.observation_values[1] = 0;
         }
       }
@@ -275,6 +283,7 @@ module.exports = class CalculatorHelpers {
    * @param {Population} populationSet - The populationSet we are getting the values for.
    * @param {Object} patientResults - The raw results object for the patient from the calculation engine.
    * @param {Array} observationDefs - List of observation defines we add to the elm for calculation OBSERVs.
+   * @param {String} measureScoring - can be PROPORTION RATIO CONTINUOUS_VARIABLE COHORT.
    * @returns {Object} The episode results. Map of episode id to population results which is a map of "POPNAME"
    * to Integer result. Except for OBSERVs, their key is 'value' and value is an array of results.
    */
@@ -1470,6 +1479,7 @@ module.exports = class ResultsHelpers {
     * based on all episodes instead of just one
     * @private
     * @param {episodeResults} result - Population_results for each episode
+    * @param {String} measureScoring - can be PROPORTION RATIO CONTINUOUS_VARIABLE COHORT.
     * @returns {object} Map that tells if a population calculation was considered/relevant in any episode
     */
   static populationRelevanceForAllEpisodes(episodeResults, measureScoring) {
@@ -1511,6 +1521,7 @@ module.exports = class ResultsHelpers {
      * was kept to make it more maintainable.
      * @private
      * @param {Result} result - The `population_results` object.
+     * @param {String} measureScoring - can be PROPORTION RATIO CONTINUOUS_VARIABLE COHORT.
      * @returns {object} Map that tells if a population calculation was considered/relevant.
      */
   static buildPopulationRelevanceMap(result, measureScoring) {
@@ -1580,6 +1591,7 @@ module.exports = class ResultsHelpers {
 
     // If DENOM is 0 then DENEX, DENEXCEP, NUMER and NUMEX are not calculated
     if (result.DENOM != null && result.DENOM === 0) {
+      // Skip for RATIO measures. NUMER inclusion is not dependent on DENOM for RATIO measures.
       if (measureScoring !== 'RATIO') {
         if (resultShown.NUMER != null) {
           resultShown.NUMER = false;
@@ -1598,6 +1610,7 @@ module.exports = class ResultsHelpers {
 
     // If DENEX is greater than or equal to DENOM then NUMER, NUMEX and DENEXCEP not calculated
     if (result.DENEX != null && result.DENEX >= result.DENOM) {
+      // Skip for RATIO measures. NUMER inclusion is not dependent on DENOM for RATIO measures.
       if (measureScoring !== 'RATIO') {
         if (resultShown.NUMER != null) {
           resultShown.NUMER = false;
