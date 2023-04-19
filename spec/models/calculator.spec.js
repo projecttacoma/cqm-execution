@@ -57,6 +57,57 @@ describe('Calculator', () => {
     });
   });
 
+  describe('Ratio Calculations', () => {
+    it('can handle single episodes observed', () => {
+      const valueSets = getJSONFixture('cqm_measures/CMS871v2/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMS871v2/CMS871v2.json'); // 5.6
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS871v2/patient_1.json').qdmPatient);
+
+      const calculationResults = Calculator.calculate(measure, patients, valueSets);
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      expect(result['observation_values']).toEqual([0, 0]);
+      expect(result['population_relevance']['observation_values']).toBe(true);
+      expect(result['population_relevance']['IPP']).toBe(true);
+      expect(result['population_relevance']['DENOM']).toBe(true);
+      expect(result['population_relevance']['DENEX']).toBe(true);
+      expect(result['population_relevance']['NUMER']).toBe(true);
+
+      // # check the results for the episode
+      const expectedEpisodeResults = {
+        IPP: 1, DENOM: 1, DENEX: 1, NUMER: 1, observation_values: [0, 0],
+      };
+      expect(result['episode_results']['631a45a4d3e38f00007b382c']).toEqual(expectedEpisodeResults);
+    });
+
+    it('can handle multiple episodes observed', () => {
+      const valueSets = getJSONFixture('cqm_measures/CMS871v2/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/CMS871v2/CMS871v2.json'); // 5.6
+      const patients = [];
+      patients.push(getJSONFixture('patients/CMS871v2/patient_2.json').qdmPatient);
+
+      const calculationResults = Calculator.calculate(measure, patients, valueSets);
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      expect(result['observation_values']).toEqual([0, 0, 6, 1]);
+      expect(result['population_relevance']['observation_values']).toBe(true);
+      expect(result['population_relevance']['IPP']).toBe(true);
+      expect(result['population_relevance']['DENOM']).toBe(true);
+      expect(result['population_relevance']['DENEX']).toBe(true);
+      expect(result['population_relevance']['NUMER']).toBe(true);
+
+      // # check the results for the episode
+      const expectedEpisodeResults1 = {
+        IPP: 1, DENOM: 1, DENEX: 0, NUMER: 1, observation_values: [6, 1],
+      };
+      expect(result['episode_results']['631a45a4d3e38f00007b382c']).toEqual(expectedEpisodeResults1);
+
+      const expectedEpisodeResults2 = {
+        IPP: 1, DENOM: 1, DENEX: 1, NUMER: 0, observation_values: [0, 0],
+      };
+      expect(result['episode_results']['5ba41608b848467d6ae16d6f']).toEqual(expectedEpisodeResults2);
+    });
+  });
+
   describe('episode of care based relevance map', () => {
     it('is correct for patient with no episodes', () => {
       const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');

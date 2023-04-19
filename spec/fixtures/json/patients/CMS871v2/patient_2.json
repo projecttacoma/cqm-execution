@@ -1,0 +1,338 @@
+{
+    "_id" : "6377c6acf9a010f950c14cc4",
+    "givenNames" : [
+        "2EncWithGlucose1000ExclusionIsOne"
+    ],
+    "expectedValues" : [
+        {
+            "population_index" : 0,
+            "IPP" : 2,
+            "DENOM" : 2,
+            "NUMER" : 1,
+            "OBSERV_UNIT" : "",
+            "OBSERV" : [
+                0,
+                0,
+                1,
+                6
+            ],
+            "DENEX" : 1,
+            "measure_id" : "EF95493C-3F65-4440-9CCB-EAF1B9ED1210"
+        }
+    ],
+    "measure_ids" : [
+        "EF95493C-3F65-4440-9CCB-EAF1B9ED1210"
+    ],
+    "familyName" : "DENEXFail",
+    "notes" : "1st Enc w glucose 1000 within first 2 hours of enc start. Meets DENEX. \n2nd Enc with glucose 1100 two days after encounter start so does not meet DENEX.  This test verifies response to CQM-5566 ticket.\n",
+    "provider_ids" : [
+
+    ],
+    "group_id" : "636a6a04f9a010cc10d95cd6",
+    "qdmPatient" : {
+        "_id" : "6377d663f9a010f950c34692",
+        "qdmVersion" : "5.6",
+        "birthDatetime" : "2003-07-31T08:00:00.000+0000",
+        "extendedData" : {
+            "type" : null,
+            "is_shared" : null,
+            "origin_data" : null,
+            "test_id" : null,
+            "medical_record_number" : "6653100826797f18a135c66416e31bd97624ee0bc0656df8f4872bf6833e4cd8",
+            "medical_record_assigner" : "Bonnie",
+            "description" : null,
+            "description_category" : null,
+            "insurance_providers" : "[]"
+        },
+        "dataElements" : [
+            {
+                "_id" : "6377d6635844860000140893",
+                "dataElementCodes" : [
+
+                ],
+                "_type" : "QDM::PatientCharacteristicBirthdate",
+                "qdmTitle" : "Patient Characteristic Birthdate",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.54",
+                "qdmCategory" : "patient_characteristic",
+                "qdmStatus" : "birthdate",
+                "qdmVersion" : "5.6",
+                "birthDatetime" : "2003-07-31T08:00:00.000+0000"
+            },
+            {
+                "_id" : "6377d69bf9a010f950c346ba",
+                "dataElementCodes" : [
+                    {
+                        "code" : "1",
+                        "system" : "2.16.840.1.113883.3.221.5",
+                        "codeSystem" : "SOP"
+                    }
+                ],
+                "_type" : "QDM::PatientCharacteristicPayer",
+                "qdmTitle" : "Patient Characteristic Payer",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.58",
+                "qdmCategory" : "patient_characteristic",
+                "qdmStatus" : "payer",
+                "qdmVersion" : "5.6",
+                "relevantPeriod" : {
+                    "low" : "2003-07-31T08:00:00.000+0000",
+                    "high" : null,
+                    "lowClosed" : true,
+                    "highClosed" : true,
+                    "_type" : "QDM::Interval"
+                }
+            },
+            {
+                "_id" : "5ba41608b848467d6ae16d6e",
+                "dataElementCodes" : [
+                    {
+                        "code" : "46635009",
+                        "system" : "2.16.840.1.113883.6.96",
+                        "version" : null,
+                        "display" : null
+                    }
+                ],
+                "_type" : "QDM::Diagnosis",
+                "qdmTitle" : "Diagnosis",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.110",
+                "qrdaOid" : "2.16.840.1.113883.10.20.24.3.135",
+                "qdmCategory" : "condition",
+                "qdmVersion" : "5.6",
+                "anatomicalLocationSite" : null,
+                "authorDatetime" : null,
+                "codeListId" : "2.16.840.1.113883.3.464.1003.103.12.1001",
+                "description" : "Diagnosis: Diabetes",
+                "prevalencePeriod" : {
+                    "low" : "2023-07-09T08:00:00.000+0000",
+                    "high" : null,
+                    "lowClosed" : true,
+                    "highClosed" : true,
+                    "_type" : "QDM::Interval"
+                },
+                "severity" : null
+            },
+            {
+                "_id" : "5ba41608b848467d6ae16d6f",
+                "dataElementCodes" : [
+                    {
+                        "code" : "183452005",
+                        "system" : "2.16.840.1.113883.6.96",
+                        "version" : null,
+                        "display" : null
+                    }
+                ],
+                "_type" : "QDM::EncounterPerformed",
+                "facilityLocations" : null,
+                "qdmTitle" : "Encounter, Performed",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.5",
+                "qdmCategory" : "encounter",
+                "qdmStatus" : "performed",
+                "qdmVersion" : "5.6",
+                "relatedTo" : [
+
+                ],
+                "admissionSource" : null,
+                "authorDatetime" : null,
+                "codeListId" : "2.16.840.1.113883.3.666.5.307",
+                "description" : "Encounter, Performed: Encounter Inpatient",
+                "diagnoses" : null,
+                "dischargeDisposition" : null,
+                "lengthOfStay" : null,
+                "priority" : null,
+                "relevantPeriod" : {
+                    "low" : "2023-07-11T08:00:00.000+0000",
+                    "high" : "2023-07-15T09:00:00.000+0000",
+                    "lowClosed" : true,
+                    "highClosed" : true,
+                    "_type" : "QDM::Interval"
+                }
+            },
+            {
+                "_id" : "61bcc47f0342300000b46cd1",
+                "dataElementCodes" : [
+                    {
+                        "code" : "1556-0",
+                        "system" : "2.16.840.1.113883.6.1",
+                        "version" : null,
+                        "display" : null
+                    }
+                ],
+                "_type" : "QDM::LaboratoryTestPerformed",
+                "qdmTitle" : "Laboratory Test, Performed",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.42",
+                "qdmCategory" : "laboratory_test",
+                "qdmStatus" : "performed",
+                "qdmVersion" : "5.6",
+                "relatedTo" : [
+
+                ],
+                "authorDatetime" : null,
+                "codeListId" : "2.16.840.1.113762.1.4.1248.34",
+                "components" : [
+
+                ],
+                "description" : "Laboratory Test, Performed: Glucose Lab Test Mass Per Volume",
+                "interpretation" : null,
+                "method" : null,
+                "negationRationale" : null,
+                "reason" : null,
+                "referenceRange" : null,
+                "relevantDatetime" : "2023-07-11T10:00:00.000+0000",
+                "relevantPeriod" : {
+                    "low" : null,
+                    "high" : null,
+                    "lowClosed" : true,
+                    "highClosed" : true,
+                    "_type" : "QDM::Interval"
+                },
+                "result" : {
+                    "value" : 1000,
+                    "unit" : "mg/dL"
+                },
+                "resultDatetime" : null,
+                "status" : null
+            },
+            {
+                "_id" : "631a45a4d3e38f00007b382c",
+                "dataElementCodes" : [
+                    {
+                        "code" : "183452005",
+                        "system" : "2.16.840.1.113883.6.96",
+                        "version" : null,
+                        "display" : null
+                    }
+                ],
+                "_type" : "QDM::EncounterPerformed",
+                "facilityLocations" : [
+
+                ],
+                "qdmTitle" : "Encounter, Performed",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.5",
+                "qdmCategory" : "encounter",
+                "qdmStatus" : "performed",
+                "qdmVersion" : "5.6",
+                "relatedTo" : [
+
+                ],
+                "admissionSource" : null,
+                "authorDatetime" : null,
+                "codeListId" : "2.16.840.1.113883.3.666.5.307",
+                "description" : "Encounter, Performed: Encounter Inpatient",
+                "diagnoses" : [
+
+                ],
+                "dischargeDisposition" : null,
+                "lengthOfStay" : null,
+                "priority" : null,
+                "relevantPeriod" : {
+                    "low" : "2023-10-11T08:00:00.000+0000",
+                    "high" : "2023-10-18T08:15:00.000+0000",
+                    "lowClosed" : true,
+                    "highClosed" : true,
+                    "_type" : "QDM::Interval"
+                }
+            },
+            {
+                "_id" : "631a4a1104b6bf0000cb01bf",
+                "dataElementCodes" : [
+                    {
+                        "code" : "1556-0",
+                        "system" : "2.16.840.1.113883.6.1",
+                        "version" : null,
+                        "display" : null
+                    }
+                ],
+                "_type" : "QDM::LaboratoryTestPerformed",
+                "qdmTitle" : "Laboratory Test, Performed",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.42",
+                "qdmCategory" : "laboratory_test",
+                "qdmStatus" : "performed",
+                "qdmVersion" : "5.6",
+                "relatedTo" : [
+
+                ],
+                "authorDatetime" : null,
+                "codeListId" : "2.16.840.1.113762.1.4.1248.34",
+                "components" : [
+
+                ],
+                "description" : "Laboratory Test, Performed: Glucose Lab Test Mass Per Volume",
+                "interpretation" : null,
+                "method" : null,
+                "negationRationale" : null,
+                "reason" : null,
+                "referenceRange" : null,
+                "relevantDatetime" : "2023-10-13T08:00:00.000+0000",
+                "relevantPeriod" : {
+                    "low" : null,
+                    "high" : null,
+                    "lowClosed" : true,
+                    "highClosed" : true,
+                    "_type" : "QDM::Interval"
+                },
+                "result" : {
+                    "value" : 1100,
+                    "unit" : "mg/dL"
+                },
+                "resultDatetime" : null,
+                "status" : null
+            },
+            {
+                "_id" : "6377c69ff9a010f950c146ae",
+                "dataElementCodes" : [
+                    {
+                        "code" : "M",
+                        "system" : "2.16.840.1.113883.5.1",
+                        "version" : null,
+                        "display" : "Male"
+                    }
+                ],
+                "_type" : "QDM::PatientCharacteristicSex",
+                "qdmTitle" : "Patient Characteristic Sex",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.55",
+                "qdmCategory" : "patient_characteristic",
+                "qdmStatus" : "gender",
+                "qdmVersion" : "5.6",
+                "description" : "Patient Characteristic Sex: ONCAdministrativeSex",
+                "codeListId" : "2.16.840.1.113762.1.4.1"
+            },
+            {
+                "_id" : "6377c69ff9a010f950c146b2",
+                "dataElementCodes" : [
+                    {
+                        "code" : "2131-1",
+                        "system" : "2.16.840.1.113883.6.238",
+                        "version" : null,
+                        "display" : "Other Race"
+                    }
+                ],
+                "_type" : "QDM::PatientCharacteristicRace",
+                "qdmTitle" : "Patient Characteristic Race",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.59",
+                "qdmCategory" : "patient_characteristic",
+                "qdmStatus" : "race",
+                "qdmVersion" : "5.6",
+                "description" : "Patient Characteristic Race: Race",
+                "codeListId" : "2.16.840.1.114222.4.11.836"
+            },
+            {
+                "_id" : "6377c69ff9a010f950c146af",
+                "dataElementCodes" : [
+                    {
+                        "code" : "2186-5",
+                        "system" : "2.16.840.1.113883.6.238",
+                        "version" : null,
+                        "display" : "Not Hispanic or Latino"
+                    }
+                ],
+                "_type" : "QDM::PatientCharacteristicEthnicity",
+                "qdmTitle" : "Patient Characteristic Ethnicity",
+                "hqmfOid" : "2.16.840.1.113883.10.20.28.4.56",
+                "qdmCategory" : "patient_characteristic",
+                "qdmStatus" : "ethnicity",
+                "qdmVersion" : "5.6",
+                "description" : "Patient Characteristic Ethnicity: Ethnicity",
+                "codeListId" : "2.16.840.1.114222.4.11.837"
+            }
+        ]
+    }
+}
