@@ -48,6 +48,17 @@ describe('ResultsHelpers', () => {
       expect(ResultsHelpers.prettyResult(quantity)).toEqual('QUANTITY: 5');
     });
 
+    it('should pretty print any number value', () => {
+      expect(ResultsHelpers.prettyResult(1)).toEqual('1');
+      expect(ResultsHelpers.prettyResult(0)).toEqual('0');
+      expect(ResultsHelpers.prettyResult(-1)).toEqual('-1');
+    });
+
+    it('should pretty print null or undefined', () => {
+      expect(ResultsHelpers.prettyResult(null)).toEqual('null');
+      expect(ResultsHelpers.prettyResult(undefined)).toEqual('null');
+    });
+
     describe('pretty statement results when requested', () => {
       xit('for CMS107v6 correctly', () => {
         // TODO: Find another measure to use. PrincipalDiagnosis is no longer a QDM attribute and is used in this measure logic

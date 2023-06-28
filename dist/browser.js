@@ -1387,7 +1387,7 @@ module.exports = class ResultsHelpers {
       prettyResult += `${currentIndentation}}`;
       return prettyResult;
     }
-    if (result) {
+    if (result || result === 0) {
       return JSON.stringify(result, null, 2);
     }
     return 'null';
