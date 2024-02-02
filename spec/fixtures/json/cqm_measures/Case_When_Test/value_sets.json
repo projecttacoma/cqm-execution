@@ -1,0 +1,2126 @@
+[
+  {
+    "_id": "65ba97456068b16c755ed920",
+    "concepts": [
+      {
+        "_id": "65ba97456068b16c755ed936",
+        "code": "11397000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Autotransfusion of whole blood (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed937",
+        "code": "116788004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of albumin (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed938",
+        "code": "116795008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of cryoprecipitate (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed939",
+        "code": "116797000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of factor IX (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed93a",
+        "code": "116798005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of factor VII (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed93b",
+        "code": "116808005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of cryo-poor plasma (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed93c",
+        "code": "116810007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of plateletpheresis product (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed93d",
+        "code": "116861002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of fresh frozen plasma (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed93e",
+        "code": "116863004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of red blood cells (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed93f",
+        "code": "117078000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of platelet concentrate (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed940",
+        "code": "12719002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Platelet transfusion (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed941",
+        "code": "13569004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of plasma (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed942",
+        "code": "180206004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Intra-arterial blood transfusion (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed943",
+        "code": "180207008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Intravenous blood transfusion of packed cells (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed944",
+        "code": "180208003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Intravenous blood transfusion of platelets (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed945",
+        "code": "19647005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Therapeutic plasmapheresis using plasma as the major replacement fluid (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed946",
+        "code": "225284006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusing whole blood under pressure (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed947",
+        "code": "274501008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Serum transfusion (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed948",
+        "code": "274502001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Antihemophilic factor transfusion (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed949",
+        "code": "288170000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Packed blood cell transfusion (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed94a",
+        "code": "30233H0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Whole Blood into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed94b",
+        "code": "30233H1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Whole Blood into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed94c",
+        "code": "30233J0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Serum Albumin into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed94d",
+        "code": "30233J1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Serum Albumin into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed94e",
+        "code": "30233K0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Frozen Plasma into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed94f",
+        "code": "30233K1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Frozen Plasma into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed950",
+        "code": "30233L0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Fresh Plasma into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed951",
+        "code": "30233L1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Fresh Plasma into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed952",
+        "code": "30233M0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Plasma Cryoprecipitate into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed953",
+        "code": "30233M1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Plasma Cryoprecipitate into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed954",
+        "code": "30233N0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Red Blood Cells into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed955",
+        "code": "30233N1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Red Blood Cells into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed956",
+        "code": "30233P0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Frozen Red Cells into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed957",
+        "code": "30233P1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Frozen Red Cells into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed958",
+        "code": "30233Q0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous White Cells into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed959",
+        "code": "30233Q1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous White Cells into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed95a",
+        "code": "30233R0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Platelets into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed95b",
+        "code": "30233R1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Platelets into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed95c",
+        "code": "30233S0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Globulin into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed95d",
+        "code": "30233S1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Globulin into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed95e",
+        "code": "30233T0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Fibrinogen into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed95f",
+        "code": "30233T1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Fibrinogen into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed960",
+        "code": "30233V0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Antihemophilic Factors into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed961",
+        "code": "30233V1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Antihemophilic Factors into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed962",
+        "code": "30233W0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Factor IX into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed963",
+        "code": "30233W1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Factor IX into Peripheral Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed964",
+        "code": "30243H0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Whole Blood into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed965",
+        "code": "30243H1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Whole Blood into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed966",
+        "code": "30243J0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Serum Albumin into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed967",
+        "code": "30243J1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Serum Albumin into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed968",
+        "code": "30243K0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Frozen Plasma into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed969",
+        "code": "30243K1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Frozen Plasma into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed96a",
+        "code": "30243L0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Fresh Plasma into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed96b",
+        "code": "30243L1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Fresh Plasma into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed96c",
+        "code": "30243M0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Plasma Cryoprecipitate into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed96d",
+        "code": "30243M1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Plasma Cryoprecipitate into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed96e",
+        "code": "30243N0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Red Blood Cells into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed96f",
+        "code": "30243N1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Red Blood Cells into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed970",
+        "code": "30243P0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Frozen Red Cells into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed971",
+        "code": "30243P1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Frozen Red Cells into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed972",
+        "code": "30243Q0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous White Cells into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed973",
+        "code": "30243Q1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous White Cells into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed974",
+        "code": "30243R0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Platelets into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed975",
+        "code": "30243R1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Platelets into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed976",
+        "code": "30243S0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Globulin into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed977",
+        "code": "30243S1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Globulin into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed978",
+        "code": "30243T0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Fibrinogen into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed979",
+        "code": "30243T1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Fibrinogen into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed97a",
+        "code": "30243V0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Antihemophilic Factors into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed97b",
+        "code": "30243V1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Antihemophilic Factors into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed97c",
+        "code": "30243W0",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Autologous Factor IX into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed97d",
+        "code": "30243W1",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Transfusion of Nonautologous Factor IX into Central Vein, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed97e",
+        "code": "33389009",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of whole blood (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed97f",
+        "code": "35108008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of leukocytes (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed980",
+        "code": "425513008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of leucoreduced red blood cells (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed981",
+        "code": "425524005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion antithrombin III factor (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed982",
+        "code": "426290002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of washed red blood cells (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed983",
+        "code": "426518006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of granulocytes (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed984",
+        "code": "449017001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Autologous transfusion of blood components (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed985",
+        "code": "54790000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of blood component (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed986",
+        "code": "71493000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of packed red blood cells (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed987",
+        "code": "74287006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transfusion of coagulation factors (procedure)",
+        "hasLongDisplayName": false
+      }
+    ],
+    "display_name": "Blood Transfusion",
+    "group_id": "62154e3cf074ce0e63a20685",
+    "oid": "2.16.840.1.113762.1.4.1029.213",
+    "version": "Draft"
+  },
+  {
+    "_id": "65ba97456068b16c755ed921",
+    "concepts": [
+      {
+        "_id": "65ba97456068b16c755ed988",
+        "code": "250041003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Conversion of cardiac rhythm to sinus rhythm (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed989",
+        "code": "5A12012",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Performance of Cardiac Output, Single, Manual",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed98a",
+        "code": "5A2204Z",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Restoration of Cardiac Rhythm, Single",
+        "hasLongDisplayName": false
+      }
+    ],
+    "display_name": "Conversion of Cardiac Rhythm",
+    "group_id": "62154e3cf074ce0e63a20685",
+    "oid": "2.16.840.1.113762.1.4.1029.357",
+    "version": "Draft"
+  },
+  {
+    "_id": "65ba97456068b16c755ed922",
+    "concepts": [
+      {
+        "_id": "65ba97456068b16c755ed98b",
+        "code": "183452005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Emergency hospital admission (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed98c",
+        "code": "32485007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hospital admission (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed98d",
+        "code": "8715000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hospital admission, elective (procedure)",
+        "hasLongDisplayName": false
+      }
+    ],
+    "display_name": "Encounter Inpatient",
+    "group_id": "62154e3cf074ce0e63a20685",
+    "oid": "2.16.840.1.113883.3.666.5.307",
+    "version": "Draft"
+  },
+  {
+    "_id": "65ba97456068b16c755ed923",
+    "concepts": [
+      {
+        "_id": "65ba97456068b16c755ed98e",
+        "code": "0UT90ZZ",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Resection of Uterus, Open Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed98f",
+        "code": "0UT97ZL",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Resection of Uterus, Supracervical, Via Natural or Artificial Opening",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed990",
+        "code": "0UT97ZZ",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Resection of Uterus, Via Natural or Artificial Opening",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed991",
+        "code": "11050006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Closure of vesicouterine fistula with hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed992",
+        "code": "112918004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with colpo-urethrocystopexy, Marshall-Marchetti-Krantz type (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed993",
+        "code": "116140006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed994",
+        "code": "116141005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed995",
+        "code": "116142003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Radical hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed996",
+        "code": "116143008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total abdominal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed997",
+        "code": "116144002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total abdominal hysterectomy with bilateral salpingo-oophorectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed998",
+        "code": "13254001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy with colpo-urethrocystopexy, Marshall-Marchetti-Krantz type (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed999",
+        "code": "176795006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Subtotal abdominal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed99a",
+        "code": "176873000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transcervical resection endometrium (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed99b",
+        "code": "17744000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Subtotal hysterectomy after cesarean delivery (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed99c",
+        "code": "236886002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed99d",
+        "code": "236897002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Endometrial resection (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed99e",
+        "code": "236906003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Excision of rudimentary uterine horn (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed99f",
+        "code": "236987005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Emergency cesarean hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a0",
+        "code": "265056007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a1",
+        "code": "27185000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with partial colpectomy and repair of enterocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a2",
+        "code": "288042004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hysterectomy and fetus removal (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a3",
+        "code": "288043009",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hysterectomy in pregnancy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a4",
+        "code": "29529008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Supracervical hysterectomy with removal of both tubes and ovaries (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a5",
+        "code": "30160001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with total colpectomy and repair of enterocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a6",
+        "code": "302190000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy and right salpingo-oophorectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a7",
+        "code": "302191001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy and left salpingo-oophorectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a8",
+        "code": "307771009",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Radical abdominal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9a9",
+        "code": "309879006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterocolpectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9aa",
+        "code": "309880009",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterocolpectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ab",
+        "code": "31191000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Excision of septum of uterus (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ac",
+        "code": "35955002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Radical vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ad",
+        "code": "359971002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Ward-Mayo operation for vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ae",
+        "code": "359974005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Tuffier operation for vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9af",
+        "code": "359977003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Mayo operation for vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b0",
+        "code": "359980002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal panhysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b1",
+        "code": "359983000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Heaney operation for vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b2",
+        "code": "387643005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Partial hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b3",
+        "code": "387644004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Supracervical hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b4",
+        "code": "387646002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Uterine fundectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b5",
+        "code": "41059002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Cesarean hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b6",
+        "code": "413144006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy with conservation of ovaries (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b7",
+        "code": "413145007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with conservation of ovaries (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b8",
+        "code": "431316002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic subtotal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9b9",
+        "code": "43791001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with total colpectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ba",
+        "code": "441820006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopy assisted vaginal hysterectomy with bilateral salpingo-oophorectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9bb",
+        "code": "446446002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total abdominal hysterectomy and removal of vaginal cuff (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9bc",
+        "code": "447771005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy and excision of periuterine tissue (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9bd",
+        "code": "448539002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy and excision of periuterine tissue (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9be",
+        "code": "49493009",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Resection of cornua of bilateral fallopian tubes (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9bf",
+        "code": "54130005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hysteroscopy with resection of intrauterine septum (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c0",
+        "code": "54490004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with repair of enterocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c1",
+        "code": "608805000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic assisted vaginal hysterectomy with repair of cystocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c2",
+        "code": "608806004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic assisted vaginal hysterectomy with repair of rectocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c3",
+        "code": "608807008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic assisted vaginal hysterectomy with repair of cystocele and rectocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c4",
+        "code": "63516002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with colpo-urethrocystopexy, Pereyra type (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c5",
+        "code": "699789005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with repair of cystocele and rectocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c6",
+        "code": "708985003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic vaginal hysterectomy using robotic assistance (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c7",
+        "code": "713157005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic resection of uterine cornua (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c8",
+        "code": "75835007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic-assisted vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9c9",
+        "code": "77902002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with partial colpectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ca",
+        "code": "86477000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total hysterectomy with removal of both tubes and ovaries (procedure)",
+        "hasLongDisplayName": false
+      }
+    ],
+    "display_name": "Hysterectomy",
+    "group_id": "62154e3cf074ce0e63a20685",
+    "oid": "2.16.840.1.113762.1.4.1029.358",
+    "version": "Draft"
+  },
+  {
+    "_id": "65ba97456068b16c755ed924",
+    "concepts": [
+      {
+        "_id": "65ba97456068b16c755ed9cb",
+        "code": "0B110F4",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Bypass Trachea to Cutaneous with Tracheostomy Device, Open Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9cc",
+        "code": "0B113F4",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Bypass Trachea to Cutaneous with Tracheostomy Device, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9cd",
+        "code": "0B114F4",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Bypass Trachea to Cutaneous with Tracheostomy Device, Percutaneous Endoscopic Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ce",
+        "code": "0UT90ZZ",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Resection of Uterus, Open Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9cf",
+        "code": "0UT97ZL",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Resection of Uterus, Supracervical, Via Natural or Artificial Opening",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d0",
+        "code": "0UT97ZZ",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Resection of Uterus, Via Natural or Artificial Opening",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d1",
+        "code": "11050006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Closure of vesicouterine fistula with hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d2",
+        "code": "112918004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with colpo-urethrocystopexy, Marshall-Marchetti-Krantz type (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d3",
+        "code": "116140006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d4",
+        "code": "116141005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d5",
+        "code": "116142003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Radical hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d6",
+        "code": "116143008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total abdominal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d7",
+        "code": "116144002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total abdominal hysterectomy with bilateral salpingo-oophorectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d8",
+        "code": "13254001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy with colpo-urethrocystopexy, Marshall-Marchetti-Krantz type (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9d9",
+        "code": "176795006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Subtotal abdominal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9da",
+        "code": "176873000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Transcervical resection endometrium (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9db",
+        "code": "17744000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Subtotal hysterectomy after cesarean delivery (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9dc",
+        "code": "236886002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9dd",
+        "code": "236897002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Endometrial resection (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9de",
+        "code": "236906003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Excision of rudimentary uterine horn (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9df",
+        "code": "236987005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Emergency cesarean hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e0",
+        "code": "250041003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Conversion of cardiac rhythm to sinus rhythm (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e1",
+        "code": "265056007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e2",
+        "code": "27185000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with partial colpectomy and repair of enterocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e3",
+        "code": "288042004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hysterectomy and fetus removal (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e4",
+        "code": "288043009",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hysterectomy in pregnancy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e5",
+        "code": "29529008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Supracervical hysterectomy with removal of both tubes and ovaries (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e6",
+        "code": "30160001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with total colpectomy and repair of enterocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e7",
+        "code": "302190000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy and right salpingo-oophorectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e8",
+        "code": "302191001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy and left salpingo-oophorectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9e9",
+        "code": "307771009",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Radical abdominal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ea",
+        "code": "309879006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterocolpectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9eb",
+        "code": "309880009",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterocolpectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ec",
+        "code": "31191000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Excision of septum of uterus (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ed",
+        "code": "35955002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Radical vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ee",
+        "code": "359971002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Ward-Mayo operation for vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ef",
+        "code": "359974005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Tuffier operation for vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f0",
+        "code": "359977003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Mayo operation for vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f1",
+        "code": "359980002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal panhysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f2",
+        "code": "359983000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Heaney operation for vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f3",
+        "code": "387643005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Partial hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f4",
+        "code": "387644004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Supracervical hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f5",
+        "code": "387646002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Uterine fundectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f6",
+        "code": "41059002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Cesarean hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f7",
+        "code": "413144006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy with conservation of ovaries (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f8",
+        "code": "413145007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with conservation of ovaries (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9f9",
+        "code": "431316002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic subtotal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9fa",
+        "code": "43791001",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with total colpectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9fb",
+        "code": "43988005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Temporary tracheostomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9fc",
+        "code": "441820006",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopy assisted vaginal hysterectomy with bilateral salpingo-oophorectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9fd",
+        "code": "446446002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total abdominal hysterectomy and removal of vaginal cuff (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9fe",
+        "code": "447771005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Abdominal hysterectomy and excision of periuterine tissue (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755ed9ff",
+        "code": "448539002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy and excision of periuterine tissue (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda00",
+        "code": "47545007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Continuous positive airway pressure ventilation treatment (regime/therapy)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda01",
+        "code": "49493009",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Resection of cornua of bilateral fallopian tubes (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda02",
+        "code": "54130005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Hysteroscopy with resection of intrauterine septum (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda03",
+        "code": "54490004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with repair of enterocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda04",
+        "code": "5A12012",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Performance of Cardiac Output, Single, Manual",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda05",
+        "code": "5A1935Z",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Respiratory Ventilation, Less than 24 Consecutive Hours",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda06",
+        "code": "5A1945Z",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Respiratory Ventilation, 24-96 Consecutive Hours",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda07",
+        "code": "5A1955Z",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Respiratory Ventilation, Greater than 96 Consecutive Hours",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda08",
+        "code": "5A2204Z",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Restoration of Cardiac Rhythm, Single",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda09",
+        "code": "608805000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic assisted vaginal hysterectomy with repair of cystocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda0a",
+        "code": "608806004",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic assisted vaginal hysterectomy with repair of rectocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda0b",
+        "code": "608807008",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic assisted vaginal hysterectomy with repair of cystocele and rectocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda0c",
+        "code": "63516002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with colpo-urethrocystopexy, Pereyra type (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda0d",
+        "code": "699789005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with repair of cystocele and rectocele (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda0e",
+        "code": "708985003",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic vaginal hysterectomy using robotic assistance (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda0f",
+        "code": "713157005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic resection of uterine cornua (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda10",
+        "code": "75835007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Laparoscopic-assisted vaginal hysterectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda11",
+        "code": "77902002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Vaginal hysterectomy with partial colpectomy (procedure)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda12",
+        "code": "86477000",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Total hysterectomy with removal of both tubes and ovaries (procedure)",
+        "hasLongDisplayName": false
+      }
+    ],
+    "display_name": "Severe Maternal Morbidity Procedures",
+    "group_id": "62154e3cf074ce0e63a20685",
+    "oid": "2.16.840.1.113762.1.4.1029.256",
+    "version": "Draft"
+  },
+  {
+    "_id": "65ba97456068b16c755ed925",
+    "concepts": [
+      {
+        "_id": "65ba97456068b16c755eda13",
+        "code": "0B110F4",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Bypass Trachea to Cutaneous with Tracheostomy Device, Open Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda14",
+        "code": "0B113F4",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Bypass Trachea to Cutaneous with Tracheostomy Device, Percutaneous Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda15",
+        "code": "0B114F4",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Bypass Trachea to Cutaneous with Tracheostomy Device, Percutaneous Endoscopic Approach",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda16",
+        "code": "43988005",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Temporary tracheostomy (procedure)",
+        "hasLongDisplayName": false
+      }
+    ],
+    "display_name": "Tracheostomy",
+    "group_id": "62154e3cf074ce0e63a20685",
+    "oid": "2.16.840.1.113762.1.4.1029.359",
+    "version": "Draft"
+  },
+  {
+    "_id": "65ba97456068b16c755ed926",
+    "concepts": [
+      {
+        "_id": "65ba97456068b16c755eda17",
+        "code": "47545007",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2023-09",
+        "display_name": "Continuous positive airway pressure ventilation treatment (regime/therapy)",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda18",
+        "code": "5A1935Z",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Respiratory Ventilation, Less than 24 Consecutive Hours",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda19",
+        "code": "5A1945Z",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Respiratory Ventilation, 24-96 Consecutive Hours",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65ba97456068b16c755eda1a",
+        "code": "5A1955Z",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2024",
+        "display_name": "Respiratory Ventilation, Greater than 96 Consecutive Hours",
+        "hasLongDisplayName": false
+      }
+    ],
+    "display_name": "Ventilation",
+    "group_id": "62154e3cf074ce0e63a20685",
+    "oid": "2.16.840.1.113762.1.4.1029.360",
+    "version": "Draft"
+  }
+]

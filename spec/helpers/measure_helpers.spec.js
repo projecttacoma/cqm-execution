@@ -131,7 +131,16 @@ describe('MeasureHelpers', () => {
 
     it('returns null if it does not find the proper libraryName for the expressionRef', () => {
       const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '42', 'notTJC');
-      expect(ret).toBeNull();
+      expect(ret).toBeNull(); 
+    });
+  });
+  describe('case, when and null literals', () => {
+    it('executes the results correctly', () => {
+      const elm = getJSONFixture('elm/example.json');
+      
+      const results =MeasureHelpers.findAllLocalIdsInStatementByName(elm, "SDE SOC Procedure Detail") ; 
+      expect(results).not.toBeUndefined();
+      
     });
   });
 });

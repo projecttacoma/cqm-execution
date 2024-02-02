@@ -1,0 +1,157 @@
+{
+    "givenNames": [
+        "TheCase"
+    ],
+    "expectedValues": [
+        {
+            "population_index": 0,
+            "measure_id": "25B51662-1A12-411E-AC9D-22657E11EED8",
+            "IPP": 1,
+            "DENOM_OBSERV": [],
+            "NUMER_OBSERV": []
+        }
+    ],
+    "measure_ids": [
+        "25B51662-1A12-411E-AC9D-22657E11EED8"
+    ],
+    "_id": "65ba97abf3f95300004b62d4",
+    "bundleId": null,
+    "familyName": "TestWhen",
+    "notes": "",
+    "qdmPatient": {
+        "qdmVersion": "5.6",
+        "dataElements": [
+            {
+                "dataElementCodes": [
+                    {
+                        "code": "183452005",
+                        "system": "2.16.840.1.113883.6.96",
+                        "version": null,
+                        "display": null
+                    }
+                ],
+                "_id": "65ba97aff3f95300004b62dd",
+                "participant": [],
+                "relatedTo": [],
+                "qdmTitle": "Encounter, Performed",
+                "hqmfOid": "2.16.840.1.113883.10.20.28.4.5",
+                "qdmCategory": "encounter",
+                "qdmStatus": "performed",
+                "qdmVersion": "5.6",
+                "_type": "QDM::EncounterPerformed",
+                "admissionSource": null,
+                "authorDatetime": "2012-01-31T08:00:00.000+00:00",
+                "codeListId": "2.16.840.1.113883.3.666.5.307",
+                "description": "Encounter, Performed: Encounter Inpatient",
+                "diagnoses": [],
+                "dischargeDisposition": null,
+                "facilityLocations": [],
+                "id": "65ba97aff3f95300004b62dd",
+                "lengthOfStay": null,
+                "priority": null,
+                "relevantPeriod": {
+                    "low": "2012-01-31T08:00:00.000+00:00",
+                    "high": "2012-01-31T08:15:00.000+00:00",
+                    "lowClosed": true,
+                    "highClosed": true
+                }
+            },
+            {
+                "dataElementCodes": [
+                    {
+                        "code": "0B110F4",
+                        "system": "2.16.840.1.113883.6.4",
+                        "version": null,
+                        "display": null
+                    }
+                ],
+                "_id": "65ba97c1f3f95300004b62e0",
+                "performer": [],
+                "relatedTo": [],
+                "qdmTitle": "Procedure, Performed",
+                "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
+                "qdmCategory": "procedure",
+                "qdmStatus": "performed",
+                "qdmVersion": "5.6",
+                "_type": "QDM::ProcedurePerformed",
+                "anatomicalLocationSite": null,
+                "authorDatetime": "2012-01-31T08:00:00.000+00:00",
+                "codeListId": "2.16.840.1.113762.1.4.1029.256",
+                "components": [],
+                "description": "Procedure, Performed: Severe Maternal Morbidity Procedures",
+                "id": "65ba97c1f3f95300004b62e0",
+                "incisionDatetime": null,
+                "method": null,
+                "negationRationale": null,
+                "rank": null,
+                "reason": null,
+                "relevantDatetime": "2012-01-31T08:00:00.000+00:00",
+                "relevantPeriod": {
+                    "low": "2012-01-31T08:00:00.000+00:00",
+                    "high": "2012-01-31T08:15:00.000+00:00",
+                    "lowClosed": true,
+                    "highClosed": true
+                },
+                "result": null,
+                "status": null
+            },
+            {
+                "dataElementCodes": [
+                    {
+                        "code": "11397000",
+                        "system": "2.16.840.1.113883.6.96",
+                        "version": null,
+                        "display": null
+                    }
+                ],
+                "_id": "65ba97e1f3f95300004b62e4",
+                "performer": [],
+                "relatedTo": [],
+                "qdmTitle": "Procedure, Performed",
+                "hqmfOid": "2.16.840.1.113883.10.20.28.4.67",
+                "qdmCategory": "procedure",
+                "qdmStatus": "performed",
+                "qdmVersion": "5.6",
+                "_type": "QDM::ProcedurePerformed",
+                "anatomicalLocationSite": null,
+                "authorDatetime": "2012-01-31T08:00:00.000+00:00",
+                "codeListId": "2.16.840.1.113762.1.4.1029.213",
+                "components": [],
+                "description": "Procedure, Performed: Blood Transfusion",
+                "id": "65ba97e1f3f95300004b62e4",
+                "incisionDatetime": null,
+                "method": null,
+                "negationRationale": null,
+                "rank": null,
+                "reason": null,
+                "relevantDatetime": "2012-01-31T08:00:00.000+00:00",
+                "relevantPeriod": {
+                    "low": "2012-01-31T08:00:00.000+00:00",
+                    "high": "2012-01-31T08:15:00.000+00:00",
+                    "lowClosed": true,
+                    "highClosed": true
+                },
+                "result": null,
+                "status": null
+            },
+            {
+                "dataElementCodes": [],
+                "_id": "65ba982ef3f95300004b62f9",
+                "qdmTitle": "Patient Characteristic Birthdate",
+                "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
+                "qdmCategory": "patient_characteristic",
+                "qdmStatus": "birthdate",
+                "qdmVersion": "5.6",
+                "_type": "QDM::PatientCharacteristicBirthdate",
+                "birthDatetime": "2023-12-01T08:00:00.000+00:00",
+                "codeListId": null,
+                "description": null,
+                "id": "65ba982ef3f95300004b62f9"
+            }
+        ],
+        "_id": "65ba982e6068b16c755eda20",
+        "birthDatetime": "2023-12-01T08:00:00.000+00:00",
+        "extendedData": null
+    },
+    "providers": []
+}

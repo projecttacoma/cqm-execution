@@ -1,0 +1,1537 @@
+{
+    "library" : {
+      "annotation" : [ {
+        "translatorVersion" : "3.3.2"
+      } ],
+      "identifier" : {
+        "id" : "TestWhenCase",
+        "version" : "0.0.001"
+      },
+      "schemaIdentifier" : {
+        "id" : "urn:hl7-org:elm",
+        "version" : "r1"
+      },
+      "usings" : {
+        "def" : [ {
+          "localIdentifier" : "System",
+          "uri" : "urn:hl7-org:elm-types:r1"
+        }, {
+          "localId" : "1",
+          "locator" : "2:1-2:23",
+          "localIdentifier" : "QDM",
+          "uri" : "urn:healthit-gov:qdm:v5_6",
+          "version" : "5.6",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "1",
+              "s" : [ {
+                "value" : [ "", "using " ]
+              }, {
+                "s" : [ {
+                  "value" : [ "QDM" ]
+                } ]
+              }, {
+                "value" : [ " version '5.6'" ]
+              } ]
+            }
+          } ]
+        } ]
+      },
+      "parameters" : {
+        "def" : [ {
+          "localId" : "16",
+          "locator" : "15:1-15:49",
+          "name" : "Measurement Period",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "16",
+              "s" : [ {
+                "value" : [ "", "parameter ", "\"Measurement Period\"", " " ]
+              }, {
+                "r" : "15",
+                "s" : [ {
+                  "value" : [ "Interval<" ]
+                }, {
+                  "r" : "14",
+                  "s" : [ {
+                    "value" : [ "DateTime" ]
+                  } ]
+                }, {
+                  "value" : [ ">" ]
+                } ]
+              } ]
+            }
+          } ],
+          "resultTypeSpecifier" : {
+            "type" : "IntervalTypeSpecifier",
+            "pointType" : {
+              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+              "type" : "NamedTypeSpecifier"
+            }
+          },
+          "parameterTypeSpecifier" : {
+            "localId" : "15",
+            "locator" : "15:32-15:49",
+            "type" : "IntervalTypeSpecifier",
+            "resultTypeSpecifier" : {
+              "type" : "IntervalTypeSpecifier",
+              "pointType" : {
+                "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                "type" : "NamedTypeSpecifier"
+              }
+            },
+            "pointType" : {
+              "localId" : "14",
+              "locator" : "15:41-15:48",
+              "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+              "type" : "NamedTypeSpecifier"
+            }
+          }
+        } ]
+      },
+      "valueSets" : {
+        "def" : [ {
+          "localId" : "2",
+          "locator" : "3:1-3:70",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Blood Transfusion",
+          "id" : "urn:oid:2.16.840.1.113762.1.4.1029.213",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "2",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Blood Transfusion\"", ": ", "'urn:oid:2.16.840.1.113762.1.4.1029.213'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "3",
+          "locator" : "4:1-4:81",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Conversion of Cardiac Rhythm",
+          "id" : "urn:oid:2.16.840.1.113762.1.4.1029.357",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "3",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Conversion of Cardiac Rhythm\"", ": ", "'urn:oid:2.16.840.1.113762.1.4.1029.357'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "4",
+          "locator" : "5:1-5:71",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Encounter Inpatient",
+          "id" : "urn:oid:2.16.840.1.113883.3.666.5.307",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "4",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Encounter Inpatient\"", ": ", "'urn:oid:2.16.840.1.113883.3.666.5.307'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "5",
+          "locator" : "6:1-6:58",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Ethnicity",
+          "id" : "urn:oid:2.16.840.1.114222.4.11.837",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "5",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Ethnicity\"", ": ", "'urn:oid:2.16.840.1.114222.4.11.837'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "6",
+          "locator" : "7:1-7:65",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Hysterectomy",
+          "id" : "urn:oid:2.16.840.1.113762.1.4.1029.358",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "6",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Hysterectomy\"", ": ", "'urn:oid:2.16.840.1.113762.1.4.1029.358'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "7",
+          "locator" : "8:1-8:68",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "ONC Administrative Sex",
+          "id" : "urn:oid:2.16.840.1.113762.1.4.1",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "7",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"ONC Administrative Sex\"", ": ", "'urn:oid:2.16.840.1.113762.1.4.1'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "8",
+          "locator" : "9:1-9:60",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Payer Type",
+          "id" : "urn:oid:2.16.840.1.114222.4.11.3591",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "8",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Payer Type\"", ": ", "'urn:oid:2.16.840.1.114222.4.11.3591'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "9",
+          "locator" : "10:1-10:53",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Race",
+          "id" : "urn:oid:2.16.840.1.114222.4.11.836",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "9",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Race\"", ": ", "'urn:oid:2.16.840.1.114222.4.11.836'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "10",
+          "locator" : "11:1-11:88",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Severe Maternal Morbidity Diagnoses",
+          "id" : "urn:oid:2.16.840.1.113762.1.4.1029.255",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "10",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Severe Maternal Morbidity Diagnoses\"", ": ", "'urn:oid:2.16.840.1.113762.1.4.1029.255'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "11",
+          "locator" : "12:1-12:89",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Severe Maternal Morbidity Procedures",
+          "id" : "urn:oid:2.16.840.1.113762.1.4.1029.256",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "11",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Severe Maternal Morbidity Procedures\"", ": ", "'urn:oid:2.16.840.1.113762.1.4.1029.256'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "12",
+          "locator" : "13:1-13:65",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Tracheostomy",
+          "id" : "urn:oid:2.16.840.1.113762.1.4.1029.359",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "12",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Tracheostomy\"", ": ", "'urn:oid:2.16.840.1.113762.1.4.1029.359'" ]
+              } ]
+            }
+          } ]
+        }, {
+          "localId" : "13",
+          "locator" : "14:1-14:64",
+          "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+          "name" : "Ventilation",
+          "id" : "urn:oid:2.16.840.1.113762.1.4.1029.360",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "13",
+              "s" : [ {
+                "value" : [ "", "valueset ", "\"Ventilation\"", ": ", "'urn:oid:2.16.840.1.113762.1.4.1029.360'" ]
+              } ]
+            }
+          } ]
+        } ]
+      },
+      "contexts" : {
+        "def" : [ {
+          "locator" : "16:1-16:15",
+          "name" : "Patient"
+        } ]
+      },
+      "statements" : {
+        "def" : [ {
+          "locator" : "16:1-16:15",
+          "name" : "Patient",
+          "context" : "Patient",
+          "expression" : {
+            "type" : "SingletonFrom",
+            "operand" : {
+              "locator" : "16:1-16:15",
+              "dataType" : "{urn:healthit-gov:qdm:v5_6}Patient",
+              "templateId" : "Patient",
+              "type" : "Retrieve"
+            }
+          }
+        }, {
+          "localId" : "24",
+          "locator" : "17:1-19:67",
+          "name" : "Qualifying Encounters",
+          "context" : "Patient",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "24",
+              "s" : [ {
+                "value" : [ "", "define ", "\"Qualifying Encounters\"", ":\n  " ]
+              }, {
+                "r" : "23",
+                "s" : [ {
+                  "s" : [ {
+                    "r" : "18",
+                    "s" : [ {
+                      "r" : "17",
+                      "s" : [ {
+                        "r" : "17",
+                        "s" : [ {
+                          "value" : [ "[", "\"Encounter, Performed\"", ": " ]
+                        }, {
+                          "s" : [ {
+                            "value" : [ "\"Encounter Inpatient\"" ]
+                          } ]
+                        }, {
+                          "value" : [ "]" ]
+                        } ]
+                      } ]
+                    }, {
+                      "value" : [ " ", "Encounter" ]
+                    } ]
+                  } ]
+                }, {
+                  "value" : [ "\n    " ]
+                }, {
+                  "r" : "22",
+                  "s" : [ {
+                    "value" : [ "where " ]
+                  }, {
+                    "r" : "22",
+                    "s" : [ {
+                      "r" : "20",
+                      "s" : [ {
+                        "r" : "19",
+                        "s" : [ {
+                          "value" : [ "Encounter" ]
+                        } ]
+                      }, {
+                        "value" : [ "." ]
+                      }, {
+                        "r" : "20",
+                        "s" : [ {
+                          "value" : [ "relevantPeriod" ]
+                        } ]
+                      } ]
+                    }, {
+                      "r" : "22",
+                      "value" : [ " ", "ends during", " " ]
+                    }, {
+                      "r" : "21",
+                      "s" : [ {
+                        "value" : [ "\"Measurement Period\"" ]
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            }
+          } ],
+          "resultTypeSpecifier" : {
+            "type" : "ListTypeSpecifier",
+            "elementType" : {
+              "name" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+              "type" : "NamedTypeSpecifier"
+            }
+          },
+          "expression" : {
+            "localId" : "23",
+            "locator" : "18:3-19:67",
+            "type" : "Query",
+            "resultTypeSpecifier" : {
+              "type" : "ListTypeSpecifier",
+              "elementType" : {
+                "name" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                "type" : "NamedTypeSpecifier"
+              }
+            },
+            "source" : [ {
+              "localId" : "18",
+              "locator" : "18:3-18:59",
+              "alias" : "Encounter",
+              "resultTypeSpecifier" : {
+                "type" : "ListTypeSpecifier",
+                "elementType" : {
+                  "name" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                  "type" : "NamedTypeSpecifier"
+                }
+              },
+              "expression" : {
+                "localId" : "17",
+                "locator" : "18:3-18:49",
+                "dataType" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                "templateId" : "PositiveEncounterPerformed",
+                "codeProperty" : "code",
+                "codeComparator" : "in",
+                "type" : "Retrieve",
+                "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                    "name" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                    "type" : "NamedTypeSpecifier"
+                  }
+                },
+                "codes" : {
+                  "locator" : "18:28-18:48",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+                  "name" : "Encounter Inpatient",
+                  "preserve" : true,
+                  "type" : "ValueSetRef"
+                }
+              }
+            } ],
+            "relationship" : [ ],
+            "where" : {
+              "localId" : "22",
+              "locator" : "19:5-19:67",
+              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+              "type" : "In",
+              "operand" : [ {
+                "locator" : "19:36-19:39",
+                "type" : "End",
+                "operand" : {
+                  "localId" : "20",
+                  "locator" : "19:11-19:34",
+                  "path" : "relevantPeriod",
+                  "scope" : "Encounter",
+                  "type" : "Property",
+                  "resultTypeSpecifier" : {
+                    "type" : "IntervalTypeSpecifier",
+                    "pointType" : {
+                      "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                      "type" : "NamedTypeSpecifier"
+                    }
+                  }
+                }
+              }, {
+                "localId" : "21",
+                "locator" : "19:48-19:67",
+                "name" : "Measurement Period",
+                "type" : "ParameterRef",
+                "resultTypeSpecifier" : {
+                  "type" : "IntervalTypeSpecifier",
+                  "pointType" : {
+                    "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                    "type" : "NamedTypeSpecifier"
+                  }
+                }
+              } ]
+            }
+          }
+        }, {
+          "localId" : "87",
+          "locator" : "38:1-40:71",
+          "name" : "SOCProcedures",
+          "context" : "Patient",
+          "accessLevel" : "Public",
+          "type" : "FunctionDef",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "87",
+              "s" : [ {
+                "value" : [ "", "define function \"SOCProcedures\"(Encounter \"Encounter, Performed\" ):\n  " ]
+              }, {
+                "r" : "86",
+                "s" : [ {
+                  "r" : "86",
+                  "s" : [ {
+                    "s" : [ {
+                      "r" : "85",
+                      "s" : [ {
+                        "r" : "84",
+                        "s" : [ {
+                          "value" : [ "( " ]
+                        }, {
+                          "r" : "84",
+                          "s" : [ {
+                            "r" : "82",
+                            "s" : [ {
+                              "value" : [ "[", "\"Procedure, Performed\"", ": " ]
+                            }, {
+                              "s" : [ {
+                                "value" : [ "\"Severe Maternal Morbidity Procedures\"" ]
+                              } ]
+                            }, {
+                              "value" : [ "]" ]
+                            } ]
+                          }, {
+                            "value" : [ "\n    union " ]
+                          }, {
+                            "r" : "83",
+                            "s" : [ {
+                              "value" : [ "[", "\"Procedure, Performed\"", ": " ]
+                            }, {
+                              "s" : [ {
+                                "value" : [ "\"Blood Transfusion\"" ]
+                              } ]
+                            }, {
+                              "value" : [ "]" ]
+                            } ]
+                          } ]
+                        }, {
+                          "value" : [ " )" ]
+                        } ]
+                      }, {
+                        "value" : [ " ", "SMMProcedures" ]
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            }
+          } ],
+          "resultTypeSpecifier" : {
+            "type" : "ListTypeSpecifier",
+            "elementType" : {
+              "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+              "type" : "NamedTypeSpecifier"
+            }
+          },
+          "expression" : {
+            "localId" : "86",
+            "locator" : "39:3-40:71",
+            "type" : "Query",
+            "resultTypeSpecifier" : {
+              "type" : "ListTypeSpecifier",
+              "elementType" : {
+                "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                "type" : "NamedTypeSpecifier"
+              }
+            },
+            "source" : [ {
+              "localId" : "85",
+              "locator" : "39:3-40:71",
+              "alias" : "SMMProcedures",
+              "resultTypeSpecifier" : {
+                "type" : "ListTypeSpecifier",
+                "elementType" : {
+                  "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                  "type" : "NamedTypeSpecifier"
+                }
+              },
+              "expression" : {
+                "localId" : "84",
+                "locator" : "39:3-40:57",
+                "type" : "Union",
+                "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                    "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                    "type" : "NamedTypeSpecifier"
+                  }
+                },
+                "operand" : [ {
+                  "localId" : "82",
+                  "locator" : "39:5-39:68",
+                  "dataType" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                  "templateId" : "PositiveProcedurePerformed",
+                  "codeProperty" : "code",
+                  "codeComparator" : "in",
+                  "type" : "Retrieve",
+                  "resultTypeSpecifier" : {
+                    "type" : "ListTypeSpecifier",
+                    "elementType" : {
+                      "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                      "type" : "NamedTypeSpecifier"
+                    }
+                  },
+                  "codes" : {
+                    "locator" : "39:30-39:67",
+                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+                    "name" : "Severe Maternal Morbidity Procedures",
+                    "preserve" : true,
+                    "type" : "ValueSetRef"
+                  }
+                }, {
+                  "localId" : "83",
+                  "locator" : "40:11-40:55",
+                  "dataType" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                  "templateId" : "PositiveProcedurePerformed",
+                  "codeProperty" : "code",
+                  "codeComparator" : "in",
+                  "type" : "Retrieve",
+                  "resultTypeSpecifier" : {
+                    "type" : "ListTypeSpecifier",
+                    "elementType" : {
+                      "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                      "type" : "NamedTypeSpecifier"
+                    }
+                  },
+                  "codes" : {
+                    "locator" : "40:36-40:54",
+                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+                    "name" : "Blood Transfusion",
+                    "preserve" : true,
+                    "type" : "ValueSetRef"
+                  }
+                } ]
+              }
+            } ],
+            "relationship" : [ ]
+          },
+          "operand" : [ {
+            "name" : "Encounter",
+            "operandTypeSpecifier" : {
+              "localId" : "28",
+              "locator" : "38:43-38:64",
+              "resultTypeName" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+              "name" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+              "type" : "NamedTypeSpecifier"
+            }
+          } ]
+        }, {
+          "localId" : "81",
+          "locator" : "20:1-37:5",
+          "name" : "SDE SOC Procedure Detail",
+          "context" : "Patient",
+          "accessLevel" : "Public",
+          "annotation" : [ {
+            "type" : "Annotation",
+            "s" : {
+              "r" : "81",
+              "s" : [ {
+                "value" : [ "", "define ", "\"SDE SOC Procedure Detail\"", ":\n  " ]
+              }, {
+                "r" : "80",
+                "s" : [ {
+                  "s" : [ {
+                    "r" : "26",
+                    "s" : [ {
+                      "r" : "25",
+                      "s" : [ {
+                        "s" : [ {
+                          "value" : [ "\"Qualifying Encounters\"" ]
+                        } ]
+                      } ]
+                    }, {
+                      "value" : [ " ", "Encounter" ]
+                    } ]
+                  } ]
+                }, {
+                  "value" : [ "\n    " ]
+                }, {
+                  "s" : [ {
+                    "value" : [ "let " ]
+                  }, {
+                    "r" : "35",
+                    "s" : [ {
+                      "value" : [ "procedure", ": " ]
+                    }, {
+                      "r" : "34",
+                      "s" : [ {
+                        "value" : [ "\"SOCProcedures\"", "(" ]
+                      }, {
+                        "r" : "27",
+                        "s" : [ {
+                          "value" : [ "Encounter" ]
+                        } ]
+                      }, {
+                        "value" : [ ")" ]
+                      } ]
+                    } ]
+                  } ]
+                }, {
+                  "value" : [ "\n    " ]
+                }, {
+                  "r" : "79",
+                  "s" : [ {
+                    "value" : [ "return " ]
+                  }, {
+                    "r" : "78",
+                    "s" : [ {
+                      "value" : [ "{\n      " ]
+                    }, {
+                      "s" : [ {
+                        "value" : [ "id", ": " ]
+                      }, {
+                        "r" : "37",
+                        "s" : [ {
+                          "r" : "36",
+                          "s" : [ {
+                            "value" : [ "Encounter" ]
+                          } ]
+                        }, {
+                          "value" : [ "." ]
+                        }, {
+                          "r" : "37",
+                          "s" : [ {
+                            "value" : [ "id" ]
+                          } ]
+                        } ]
+                      } ]
+                    }, {
+                      "value" : [ ",\n      " ]
+                    }, {
+                      "s" : [ {
+                        "value" : [ "code", ": " ]
+                      }, {
+                        "r" : "39",
+                        "s" : [ {
+                          "r" : "38",
+                          "s" : [ {
+                            "value" : [ "Encounter" ]
+                          } ]
+                        }, {
+                          "value" : [ "." ]
+                        }, {
+                          "r" : "39",
+                          "s" : [ {
+                            "value" : [ "code" ]
+                          } ]
+                        } ]
+                      } ]
+                    }, {
+                      "value" : [ ",\n      " ]
+                    }, {
+                      "s" : [ {
+                        "value" : [ "procedures", ": " ]
+                      }, {
+                        "r" : "77",
+                        "s" : [ {
+                          "s" : [ {
+                            "r" : "41",
+                            "s" : [ {
+                              "r" : "40",
+                              "s" : [ {
+                                "s" : [ {
+                                  "value" : [ "procedure" ]
+                                } ]
+                              } ]
+                            }, {
+                              "value" : [ " ", "P" ]
+                            } ]
+                          } ]
+                        }, {
+                          "value" : [ "\n        " ]
+                        }, {
+                          "r" : "76",
+                          "s" : [ {
+                            "value" : [ "return " ]
+                          }, {
+                            "r" : "75",
+                            "s" : [ {
+                              "value" : [ "{\n          " ]
+                            }, {
+                              "s" : [ {
+                                "value" : [ "code", ": " ]
+                              }, {
+                                "r" : "42",
+                                "s" : [ {
+                                  "value" : [ "P" ]
+                                } ]
+                              } ]
+                            }, {
+                              "value" : [ ",\n          " ]
+                            }, {
+                              "s" : [ {
+                                "value" : [ "SOCCategory", ": " ]
+                              }, {
+                                "r" : "74",
+                                "s" : [ {
+                                  "value" : [ "case\n            " ]
+                                }, {
+                                  "r" : "48",
+                                  "s" : [ {
+                                    "value" : [ "when " ]
+                                  }, {
+                                    "r" : "46",
+                                    "s" : [ {
+                                      "r" : "44",
+                                      "s" : [ {
+                                        "r" : "43",
+                                        "s" : [ {
+                                          "value" : [ "P" ]
+                                        } ]
+                                      }, {
+                                        "value" : [ "." ]
+                                      }, {
+                                        "r" : "44",
+                                        "s" : [ {
+                                          "value" : [ "code" ]
+                                        } ]
+                                      } ]
+                                    }, {
+                                      "value" : [ " in " ]
+                                    }, {
+                                      "r" : "45",
+                                      "s" : [ {
+                                        "value" : [ "\"Blood Transfusion\"" ]
+                                      } ]
+                                    } ]
+                                  }, {
+                                    "value" : [ " then " ]
+                                  }, {
+                                    "r" : "47",
+                                    "s" : [ {
+                                      "value" : [ "'Blood Transfusion'" ]
+                                    } ]
+                                  } ]
+                                }, {
+                                  "value" : [ "\n            " ]
+                                }, {
+                                  "r" : "54",
+                                  "s" : [ {
+                                    "value" : [ "when " ]
+                                  }, {
+                                    "r" : "52",
+                                    "s" : [ {
+                                      "r" : "50",
+                                      "s" : [ {
+                                        "r" : "49",
+                                        "s" : [ {
+                                          "value" : [ "P" ]
+                                        } ]
+                                      }, {
+                                        "value" : [ "." ]
+                                      }, {
+                                        "r" : "50",
+                                        "s" : [ {
+                                          "value" : [ "code" ]
+                                        } ]
+                                      } ]
+                                    }, {
+                                      "value" : [ " in " ]
+                                    }, {
+                                      "r" : "51",
+                                      "s" : [ {
+                                        "value" : [ "\"Conversion of Cardiac Rhythm\"" ]
+                                      } ]
+                                    } ]
+                                  }, {
+                                    "value" : [ " then " ]
+                                  }, {
+                                    "r" : "53",
+                                    "s" : [ {
+                                      "value" : [ "'Conversion of cardiac rhythm'" ]
+                                    } ]
+                                  } ]
+                                }, {
+                                  "value" : [ "\n            " ]
+                                }, {
+                                  "r" : "60",
+                                  "s" : [ {
+                                    "value" : [ "when " ]
+                                  }, {
+                                    "r" : "58",
+                                    "s" : [ {
+                                      "r" : "56",
+                                      "s" : [ {
+                                        "r" : "55",
+                                        "s" : [ {
+                                          "value" : [ "P" ]
+                                        } ]
+                                      }, {
+                                        "value" : [ "." ]
+                                      }, {
+                                        "r" : "56",
+                                        "s" : [ {
+                                          "value" : [ "code" ]
+                                        } ]
+                                      } ]
+                                    }, {
+                                      "value" : [ " in " ]
+                                    }, {
+                                      "r" : "57",
+                                      "s" : [ {
+                                        "value" : [ "\"Hysterectomy\"" ]
+                                      } ]
+                                    } ]
+                                  }, {
+                                    "value" : [ " then " ]
+                                  }, {
+                                    "r" : "59",
+                                    "s" : [ {
+                                      "value" : [ "'Hysterectomy'" ]
+                                    } ]
+                                  } ]
+                                }, {
+                                  "value" : [ "\n            " ]
+                                }, {
+                                  "r" : "66",
+                                  "s" : [ {
+                                    "value" : [ "when " ]
+                                  }, {
+                                    "r" : "64",
+                                    "s" : [ {
+                                      "r" : "62",
+                                      "s" : [ {
+                                        "r" : "61",
+                                        "s" : [ {
+                                          "value" : [ "P" ]
+                                        } ]
+                                      }, {
+                                        "value" : [ "." ]
+                                      }, {
+                                        "r" : "62",
+                                        "s" : [ {
+                                          "value" : [ "code" ]
+                                        } ]
+                                      } ]
+                                    }, {
+                                      "value" : [ " in " ]
+                                    }, {
+                                      "r" : "63",
+                                      "s" : [ {
+                                        "value" : [ "\"Tracheostomy\"" ]
+                                      } ]
+                                    } ]
+                                  }, {
+                                    "value" : [ " then " ]
+                                  }, {
+                                    "r" : "65",
+                                    "s" : [ {
+                                      "value" : [ "'Tracheostomy'" ]
+                                    } ]
+                                  } ]
+                                }, {
+                                  "value" : [ "\n            " ]
+                                }, {
+                                  "r" : "72",
+                                  "s" : [ {
+                                    "value" : [ "when " ]
+                                  }, {
+                                    "r" : "70",
+                                    "s" : [ {
+                                      "r" : "68",
+                                      "s" : [ {
+                                        "r" : "67",
+                                        "s" : [ {
+                                          "value" : [ "P" ]
+                                        } ]
+                                      }, {
+                                        "value" : [ "." ]
+                                      }, {
+                                        "r" : "68",
+                                        "s" : [ {
+                                          "value" : [ "code" ]
+                                        } ]
+                                      } ]
+                                    }, {
+                                      "value" : [ " in " ]
+                                    }, {
+                                      "r" : "69",
+                                      "s" : [ {
+                                        "value" : [ "\"Ventilation\"" ]
+                                      } ]
+                                    } ]
+                                  }, {
+                                    "value" : [ " then " ]
+                                  }, {
+                                    "r" : "71",
+                                    "s" : [ {
+                                      "value" : [ "'Ventilation'" ]
+                                    } ]
+                                  } ]
+                                }, {
+                                  "r" : "73",
+                                  "value" : [ " \n            else ", "null", " end" ]
+                                } ]
+                              } ]
+                            }, {
+                              "value" : [ "\n        }" ]
+                            } ]
+                          } ]
+                        } ]
+                      } ]
+                    }, {
+                      "value" : [ "\n    }" ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            }
+          } ],
+          "resultTypeSpecifier" : {
+            "type" : "ListTypeSpecifier",
+            "elementType" : {
+              "type" : "TupleTypeSpecifier",
+              "element" : [ {
+                "name" : "id",
+                "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier"
+                }
+              }, {
+                "name" : "code",
+                "elementType" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+                }
+              }, {
+                "name" : "procedures",
+                "elementType" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                    "type" : "TupleTypeSpecifier",
+                    "element" : [ {
+                      "name" : "code",
+                      "elementType" : {
+                        "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                        "type" : "NamedTypeSpecifier"
+                      }
+                    }, {
+                      "name" : "SOCCategory",
+                      "elementType" : {
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                      }
+                    } ]
+                  }
+                }
+              } ]
+            }
+          },
+          "expression" : {
+            "localId" : "80",
+            "locator" : "21:3-37:5",
+            "type" : "Query",
+            "resultTypeSpecifier" : {
+              "type" : "ListTypeSpecifier",
+              "elementType" : {
+                "type" : "TupleTypeSpecifier",
+                "element" : [ {
+                  "name" : "id",
+                  "elementType" : {
+                    "name" : "{urn:hl7-org:elm-types:r1}String",
+                    "type" : "NamedTypeSpecifier"
+                  }
+                }, {
+                  "name" : "code",
+                  "elementType" : {
+                    "name" : "{urn:hl7-org:elm-types:r1}Code",
+                    "type" : "NamedTypeSpecifier"
+                  }
+                }, {
+                  "name" : "procedures",
+                  "elementType" : {
+                    "type" : "ListTypeSpecifier",
+                    "elementType" : {
+                      "type" : "TupleTypeSpecifier",
+                      "element" : [ {
+                        "name" : "code",
+                        "elementType" : {
+                          "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                          "type" : "NamedTypeSpecifier"
+                        }
+                      }, {
+                        "name" : "SOCCategory",
+                        "elementType" : {
+                          "name" : "{urn:hl7-org:elm-types:r1}String",
+                          "type" : "NamedTypeSpecifier"
+                        }
+                      } ]
+                    }
+                  }
+                } ]
+              }
+            },
+            "source" : [ {
+              "localId" : "26",
+              "locator" : "21:3-21:35",
+              "alias" : "Encounter",
+              "resultTypeSpecifier" : {
+                "type" : "ListTypeSpecifier",
+                "elementType" : {
+                  "name" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                  "type" : "NamedTypeSpecifier"
+                }
+              },
+              "expression" : {
+                "localId" : "25",
+                "locator" : "21:3-21:25",
+                "name" : "Qualifying Encounters",
+                "type" : "ExpressionRef",
+                "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                    "name" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                    "type" : "NamedTypeSpecifier"
+                  }
+                }
+              }
+            } ],
+            "let" : [ {
+              "localId" : "35",
+              "locator" : "22:9-22:45",
+              "identifier" : "procedure",
+              "resultTypeSpecifier" : {
+                "type" : "ListTypeSpecifier",
+                "elementType" : {
+                  "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                  "type" : "NamedTypeSpecifier"
+                }
+              },
+              "expression" : {
+                "localId" : "34",
+                "locator" : "22:20-22:45",
+                "name" : "SOCProcedures",
+                "type" : "FunctionRef",
+                "resultTypeSpecifier" : {
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                    "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                    "type" : "NamedTypeSpecifier"
+                  }
+                },
+                "operand" : [ {
+                  "localId" : "27",
+                  "locator" : "22:36-22:44",
+                  "resultTypeName" : "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                  "name" : "Encounter",
+                  "type" : "AliasRef"
+                } ]
+              }
+            } ],
+            "relationship" : [ ],
+            "return" : {
+              "localId" : "79",
+              "locator" : "23:5-37:5",
+              "resultTypeSpecifier" : {
+                "type" : "ListTypeSpecifier",
+                "elementType" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                    "name" : "id",
+                    "elementType" : {
+                      "name" : "{urn:hl7-org:elm-types:r1}String",
+                      "type" : "NamedTypeSpecifier"
+                    }
+                  }, {
+                    "name" : "code",
+                    "elementType" : {
+                      "name" : "{urn:hl7-org:elm-types:r1}Code",
+                      "type" : "NamedTypeSpecifier"
+                    }
+                  }, {
+                    "name" : "procedures",
+                    "elementType" : {
+                      "type" : "ListTypeSpecifier",
+                      "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                          "name" : "code",
+                          "elementType" : {
+                            "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                            "type" : "NamedTypeSpecifier"
+                          }
+                        }, {
+                          "name" : "SOCCategory",
+                          "elementType" : {
+                            "name" : "{urn:hl7-org:elm-types:r1}String",
+                            "type" : "NamedTypeSpecifier"
+                          }
+                        } ]
+                      }
+                    }
+                  } ]
+                }
+              },
+              "expression" : {
+                "localId" : "78",
+                "locator" : "23:12-37:5",
+                "type" : "Tuple",
+                "resultTypeSpecifier" : {
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                    "name" : "id",
+                    "elementType" : {
+                      "name" : "{urn:hl7-org:elm-types:r1}String",
+                      "type" : "NamedTypeSpecifier"
+                    }
+                  }, {
+                    "name" : "code",
+                    "elementType" : {
+                      "name" : "{urn:hl7-org:elm-types:r1}Code",
+                      "type" : "NamedTypeSpecifier"
+                    }
+                  }, {
+                    "name" : "procedures",
+                    "elementType" : {
+                      "type" : "ListTypeSpecifier",
+                      "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                          "name" : "code",
+                          "elementType" : {
+                            "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                            "type" : "NamedTypeSpecifier"
+                          }
+                        }, {
+                          "name" : "SOCCategory",
+                          "elementType" : {
+                            "name" : "{urn:hl7-org:elm-types:r1}String",
+                            "type" : "NamedTypeSpecifier"
+                          }
+                        } ]
+                      }
+                    }
+                  } ]
+                },
+                "element" : [ {
+                  "name" : "id",
+                  "value" : {
+                    "localId" : "37",
+                    "locator" : "24:11-24:22",
+                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
+                    "path" : "id",
+                    "scope" : "Encounter",
+                    "type" : "Property"
+                  }
+                }, {
+                  "name" : "code",
+                  "value" : {
+                    "localId" : "39",
+                    "locator" : "25:13-25:26",
+                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                    "path" : "code",
+                    "scope" : "Encounter",
+                    "type" : "Property"
+                  }
+                }, {
+                  "name" : "procedures",
+                  "value" : {
+                    "localId" : "77",
+                    "locator" : "26:19-36:9",
+                    "type" : "Query",
+                    "resultTypeSpecifier" : {
+                      "type" : "ListTypeSpecifier",
+                      "elementType" : {
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                          "name" : "code",
+                          "elementType" : {
+                            "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                            "type" : "NamedTypeSpecifier"
+                          }
+                        }, {
+                          "name" : "SOCCategory",
+                          "elementType" : {
+                            "name" : "{urn:hl7-org:elm-types:r1}String",
+                            "type" : "NamedTypeSpecifier"
+                          }
+                        } ]
+                      }
+                    },
+                    "source" : [ {
+                      "localId" : "41",
+                      "locator" : "26:19-26:29",
+                      "alias" : "P",
+                      "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                          "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                          "type" : "NamedTypeSpecifier"
+                        }
+                      },
+                      "expression" : {
+                        "localId" : "40",
+                        "locator" : "26:19-26:27",
+                        "name" : "procedure",
+                        "type" : "QueryLetRef",
+                        "resultTypeSpecifier" : {
+                          "type" : "ListTypeSpecifier",
+                          "elementType" : {
+                            "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                            "type" : "NamedTypeSpecifier"
+                          }
+                        }
+                      }
+                    } ],
+                    "relationship" : [ ],
+                    "return" : {
+                      "localId" : "76",
+                      "locator" : "27:9-36:9",
+                      "resultTypeSpecifier" : {
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                          "type" : "TupleTypeSpecifier",
+                          "element" : [ {
+                            "name" : "code",
+                            "elementType" : {
+                              "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                              "type" : "NamedTypeSpecifier"
+                            }
+                          }, {
+                            "name" : "SOCCategory",
+                            "elementType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                            }
+                          } ]
+                        }
+                      },
+                      "expression" : {
+                        "localId" : "75",
+                        "locator" : "27:16-36:9",
+                        "type" : "Tuple",
+                        "resultTypeSpecifier" : {
+                          "type" : "TupleTypeSpecifier",
+                          "element" : [ {
+                            "name" : "code",
+                            "elementType" : {
+                              "name" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                              "type" : "NamedTypeSpecifier"
+                            }
+                          }, {
+                            "name" : "SOCCategory",
+                            "elementType" : {
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                            }
+                          } ]
+                        },
+                        "element" : [ {
+                          "name" : "code",
+                          "value" : {
+                            "localId" : "42",
+                            "locator" : "28:17",
+                            "resultTypeName" : "{urn:healthit-gov:qdm:v5_6}PositiveProcedurePerformed",
+                            "name" : "P",
+                            "type" : "AliasRef"
+                          }
+                        }, {
+                          "name" : "SOCCategory",
+                          "value" : {
+                            "localId" : "74",
+                            "locator" : "29:24-35:25",
+                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
+                            "type" : "Case",
+                            "caseItem" : [ {
+                              "localId" : "48",
+                              "locator" : "30:13-30:71",
+                              "when" : {
+                                "localId" : "46",
+                                "locator" : "30:18-30:46",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                "type" : "InValueSet",
+                                "code" : {
+                                  "localId" : "44",
+                                  "locator" : "30:18-30:23",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                  "path" : "code",
+                                  "scope" : "P",
+                                  "type" : "Property"
+                                },
+                                "valueset" : {
+                                  "localId" : "45",
+                                  "locator" : "30:28-30:46",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+                                  "name" : "Blood Transfusion",
+                                  "preserve" : true
+                                }
+                              },
+                              "then" : {
+                                "localId" : "47",
+                                "locator" : "30:53-30:71",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
+                                "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                "value" : "Blood Transfusion",
+                                "type" : "Literal"
+                              }
+                            }, {
+                              "localId" : "54",
+                              "locator" : "31:13-31:93",
+                              "when" : {
+                                "localId" : "52",
+                                "locator" : "31:18-31:57",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                "type" : "InValueSet",
+                                "code" : {
+                                  "localId" : "50",
+                                  "locator" : "31:18-31:23",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                  "path" : "code",
+                                  "scope" : "P",
+                                  "type" : "Property"
+                                },
+                                "valueset" : {
+                                  "localId" : "51",
+                                  "locator" : "31:28-31:57",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+                                  "name" : "Conversion of Cardiac Rhythm",
+                                  "preserve" : true
+                                }
+                              },
+                              "then" : {
+                                "localId" : "53",
+                                "locator" : "31:64-31:93",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
+                                "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                "value" : "Conversion of cardiac rhythm",
+                                "type" : "Literal"
+                              }
+                            }, {
+                              "localId" : "60",
+                              "locator" : "32:13-32:61",
+                              "when" : {
+                                "localId" : "58",
+                                "locator" : "32:18-32:41",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                "type" : "InValueSet",
+                                "code" : {
+                                  "localId" : "56",
+                                  "locator" : "32:18-32:23",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                  "path" : "code",
+                                  "scope" : "P",
+                                  "type" : "Property"
+                                },
+                                "valueset" : {
+                                  "localId" : "57",
+                                  "locator" : "32:28-32:41",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+                                  "name" : "Hysterectomy",
+                                  "preserve" : true
+                                }
+                              },
+                              "then" : {
+                                "localId" : "59",
+                                "locator" : "32:48-32:61",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
+                                "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                "value" : "Hysterectomy",
+                                "type" : "Literal"
+                              }
+                            }, {
+                              "localId" : "66",
+                              "locator" : "33:13-33:61",
+                              "when" : {
+                                "localId" : "64",
+                                "locator" : "33:18-33:41",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                "type" : "InValueSet",
+                                "code" : {
+                                  "localId" : "62",
+                                  "locator" : "33:18-33:23",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                  "path" : "code",
+                                  "scope" : "P",
+                                  "type" : "Property"
+                                },
+                                "valueset" : {
+                                  "localId" : "63",
+                                  "locator" : "33:28-33:41",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+                                  "name" : "Tracheostomy",
+                                  "preserve" : true
+                                }
+                              },
+                              "then" : {
+                                "localId" : "65",
+                                "locator" : "33:48-33:61",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
+                                "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                "value" : "Tracheostomy",
+                                "type" : "Literal"
+                              }
+                            }, {
+                              "localId" : "72",
+                              "locator" : "34:13-34:59",
+                              "when" : {
+                                "localId" : "70",
+                                "locator" : "34:18-34:40",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                "type" : "InValueSet",
+                                "code" : {
+                                  "localId" : "68",
+                                  "locator" : "34:18-34:23",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                  "path" : "code",
+                                  "scope" : "P",
+                                  "type" : "Property"
+                                },
+                                "valueset" : {
+                                  "localId" : "69",
+                                  "locator" : "34:28-34:40",
+                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+                                  "name" : "Ventilation",
+                                  "preserve" : true
+                                }
+                              },
+                              "then" : {
+                                "localId" : "71",
+                                "locator" : "34:47-34:59",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
+                                "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                "value" : "Ventilation",
+                                "type" : "Literal"
+                              }
+                            } ],
+                            "else" : {
+                              "asType" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "As",
+                              "operand" : {
+                                "localId" : "73",
+                                "locator" : "35:18-35:21",
+                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
+                                "type" : "Null"
+                              }
+                            }
+                          }
+                        } ]
+                      }
+                    }
+                  }
+                } ]
+              }
+            }
+          }
+        } ]
+      }
+    },
+    "externalErrors" : [ ]
+  }

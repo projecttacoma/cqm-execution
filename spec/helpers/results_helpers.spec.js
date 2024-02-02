@@ -221,7 +221,7 @@ describe('ResultsHelpers', () => {
     describe('no pretty statement results when not requested', () => it('for CMS107 correctly', () => {
       const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
       const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
-      const patients = [];
+      const patients = []; 
       patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
@@ -231,7 +231,21 @@ describe('ResultsHelpers', () => {
       expect(resultsByStatement.StrokeEducation.Numerator.pretty).toEqual(undefined);
     }));
   });
-
+  describe('Calculate results for CQL with case when.. statements', () => {
+    it('should handle the case statement correctly', () => {
+      const valueSets = getJSONFixture('cqm_measures/Case_When_Test/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/Case_When_Test/Measure.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/Case_When_Test/patient.json').qdmPatient);
+      const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
+      expect(calculationResults).not.toBeUndefined();
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      const resultsByStatement = result.statement_results_by_statement();
+      expect(resultsByStatement).not.toBeUndefined();
+      expect(resultsByStatement.TestWhenCase['SDE SOC Procedure Detail']).not.toBeUndefined();
+      expect(resultsByStatement.TestWhenCase['SDE SOC Procedure Detail'].final).toBeTruthy();
+    });
+  });
   describe('buildPopulationRelevanceMap', () => {
     it('marks NUMER, NUMEX, DENEXCEP not calculated if DENEX count matches DENOM', () => {
       const populationResults = {
