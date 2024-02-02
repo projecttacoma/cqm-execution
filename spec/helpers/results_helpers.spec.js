@@ -221,7 +221,7 @@ describe('ResultsHelpers', () => {
     describe('no pretty statement results when not requested', () => it('for CMS107 correctly', () => {
       const valueSets = getJSONFixture('cqm_measures/CMS107v6/value_sets.json');
       const measure = getJSONFixture('cqm_measures/CMS107v6/CMS107v6.json');
-      const patients = []; 
+      const patients = [];
       patients.push(getJSONFixture('patients/CMS107v6/DENEXPass_CMOduringED.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
