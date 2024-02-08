@@ -134,7 +134,7 @@ describe('MeasureHelpers', () => {
       expect(ret).toBeNull();
     });
   });
-  describe('case, when and null literals', () => {
+  describe('case statement and null, false literals coverage', () => {
     it('executes the results correctly', () => {
       const measure = getJSONFixture('cqm_measures/Case_When_Test/measure.json');
       const elm = measure.cql_libraries[0].elm;
