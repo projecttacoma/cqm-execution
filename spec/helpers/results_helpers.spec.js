@@ -231,7 +231,7 @@ describe('ResultsHelpers', () => {
       expect(resultsByStatement.StrokeEducation.Numerator.pretty).toEqual(undefined);
     }));
   });
-  describe('Calculate results for CQL with case when.. statements', () => {
+  describe('Calculate results for CQL case statements, null & false literals', () => {
     it('should handle the case statement correctly', () => {
       const valueSets = getJSONFixture('cqm_measures/Case_When_Test/value_sets.json');
       const measure = getJSONFixture('cqm_measures/Case_When_Test/measure.json');
