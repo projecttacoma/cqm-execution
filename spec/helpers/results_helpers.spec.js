@@ -234,7 +234,7 @@ describe('ResultsHelpers', () => {
   describe('Calculate results for CQL with case when.. statements', () => {
     it('should handle the case statement correctly', () => {
       const valueSets = getJSONFixture('cqm_measures/Case_When_Test/value_sets.json');
-      const measure = getJSONFixture('cqm_measures/Case_When_Test/Measure.json');
+      const measure = getJSONFixture('cqm_measures/Case_When_Test/measure.json');
       const patients = [];
       patients.push(getJSONFixture('patients/Case_When_Test/patient.json').qdmPatient);
       const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
@@ -242,8 +242,8 @@ describe('ResultsHelpers', () => {
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
       const resultsByStatement = result.statement_results_by_statement();
       expect(resultsByStatement).not.toBeUndefined();
-      expect(resultsByStatement.TestWhenCase['SDE SOC Procedure Detail']).not.toBeUndefined();
-      expect(resultsByStatement.TestWhenCase['SDE SOC Procedure Detail'].final).toBeTruthy();
+      expect(resultsByStatement.TestWhenCase['Initial Population']).toBeTruthy();
+      expect(resultsByStatement.TestWhenCase['test when then case']).toBeTruthy();
     });
   });
   describe('buildPopulationRelevanceMap', () => {

@@ -747,7 +747,15 @@ module.exports = class MeasureHelpers {
           // the sourceLocalId is the FunctionRef itself to match how library statement references work.
           localIds[libraryClauseLocalId] = { localId: libraryClauseLocalId, sourceLocalId: statement.localId };
         }
-        // else if they key is localId push the value
+        // handle the `when` pieces of Case expression aka CaseItems.
+        // They have a `when` key that should be mapped to get a result from the expression that defines them
+      } else if (k === 'type' && v === 'Null' && statement.localId) {
+        // If this is a "Null" expression, mark that it `isFalsyLiteral` so we can interpret final results differently.
+        localIds[statement.localId] = { localId: statement.localId, isFalsyLiteral: true };
+      } else if (k === 'type' && v === 'Literal' && statement.localId && statement.value === 'false') {
+        // If this is a "Literal" expression whose value is false, mark that it `isFalsyLiteral` so we can interpret final results differently
+        localIds[statement.localId] = { localId: statement.localId, isFalsyLiteral: true };
+        // else if the key is localId, push the value
       } else if (k === 'localId') {
         localIds[v] = { localId: v };
         // if the value is an array or object, recurse
@@ -1423,8 +1431,12 @@ module.exports = class ResultsHelpers {
       finalResult = 'UNHIT';
     } else if (
       params.clause.isFalsyLiteral
-      && Object.prototype.hasOwnProperty.call(params.rawClauseResults[params.libraryName], params.clause.localId)
+      && Object.prototype.hasOwnProperty.call(params.rawClauseResults[params.library_name], params.clause.localId)
     ) {
+      // If this clause is a Null or Literal False we need to look for the existence of a result for the localId in the
+      // rawClauseResults instead. If the key for the localId exists then it was executed, and we will want to treat the
+      // `final` result as `TRUE` instead of `FALSE`. If the key is totally absent then it was not executed therefore
+      // `final` result should stay `FALSE`.
       finalResult = 'TRUE';
     } else if (this.doesResultPass(params.rawResult)) {
       finalResult = 'TRUE';
