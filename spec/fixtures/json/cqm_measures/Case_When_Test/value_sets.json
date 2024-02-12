@@ -1,0 +1,65 @@
+[
+  {
+    "_id": "65c4ea736068b11663b7481a",
+    "concepts": [
+      {
+        "_id": "65c4ea736068b11663b74828",
+        "code": "104208",
+        "code_system_name": "RXNORM",
+        "code_system_oid": "2.16.840.1.113883.6.88",
+        "code_system_version": "2024-01",
+        "display_name": "2 ML digoxin 0.25 MG/ML Injection",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65c4ea736068b11663b74829",
+        "code": "197604",
+        "code_system_name": "RXNORM",
+        "code_system_oid": "2.16.840.1.113883.6.88",
+        "code_system_version": "2024-01",
+        "display_name": "digoxin 0.125 MG Oral Tablet",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65c4ea736068b11663b7482a",
+        "code": "197606",
+        "code_system_name": "RXNORM",
+        "code_system_oid": "2.16.840.1.113883.6.88",
+        "code_system_version": "2024-01",
+        "display_name": "digoxin 0.25 MG Oral Tablet",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65c4ea736068b11663b7482b",
+        "code": "204504",
+        "code_system_name": "RXNORM",
+        "code_system_oid": "2.16.840.1.113883.6.88",
+        "code_system_version": "2024-01",
+        "display_name": "1 ML digoxin 0.1 MG/ML Injection",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65c4ea736068b11663b7482c",
+        "code": "245273",
+        "code_system_name": "RXNORM",
+        "code_system_oid": "2.16.840.1.113883.6.88",
+        "code_system_version": "2024-01",
+        "display_name": "digoxin 0.0625 MG Oral Tablet",
+        "hasLongDisplayName": false
+      },
+      {
+        "_id": "65c4ea736068b11663b7482d",
+        "code": "393245",
+        "code_system_name": "RXNORM",
+        "code_system_oid": "2.16.840.1.113883.6.88",
+        "code_system_version": "2024-01",
+        "display_name": "digoxin 0.05 MG/ML Oral Solution",
+        "hasLongDisplayName": false
+      }
+    ],
+    "display_name": "Digoxin Medications",
+    "group_id": "62154e3cf074ce0e63a20685",
+    "oid": "2.16.840.1.113883.3.464.1003.1065",
+    "version": "Draft"
+  }
+]

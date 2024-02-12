@@ -134,4 +134,20 @@ describe('MeasureHelpers', () => {
       expect(ret).toBeNull();
     });
   });
+  describe('case statement and null, false literals coverage', () => {
+    it('executes the results correctly', () => {
+      const measure = getJSONFixture('cqm_measures/Case_When_Test/measure.json');
+      const elm = measure.cql_libraries[0].elm;
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(elm, 'test when then case');
+      // finds localIds for case statement items and properly finds sourceLocalId for them
+      expect(localIds[91]).toEqual({ localId: '91', sourceLocalId: '89' });
+      expect(localIds[97]).toEqual({ localId: '97', sourceLocalId: '95' });
+
+      // finds localIds for null literals and properly sets isFalsyLiteral to true
+      expect(localIds[98]).toEqual({ localId: '98', isFalsyLiteral: true });
+
+      // finds localIds for false literals and properly sets isFalsyLiteral to true
+      expect(localIds[96]).toEqual({ localId: '96', isFalsyLiteral: true });
+    });
+  });
 });

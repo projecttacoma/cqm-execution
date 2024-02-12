@@ -231,7 +231,21 @@ describe('ResultsHelpers', () => {
       expect(resultsByStatement.StrokeEducation.Numerator.pretty).toEqual(undefined);
     }));
   });
-
+  describe('Calculate results for CQL case statements, null & false literals', () => {
+    it('should handle the case statement correctly', () => {
+      const valueSets = getJSONFixture('cqm_measures/Case_When_Test/value_sets.json');
+      const measure = getJSONFixture('cqm_measures/Case_When_Test/measure.json');
+      const patients = [];
+      patients.push(getJSONFixture('patients/Case_When_Test/patient.json').qdmPatient);
+      const calculationResults = Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
+      expect(calculationResults).not.toBeUndefined();
+      const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
+      const resultsByStatement = result.statement_results_by_statement();
+      expect(resultsByStatement).not.toBeUndefined();
+      expect(resultsByStatement.TestWhenCase['Initial Population']).toBeTruthy();
+      expect(resultsByStatement.TestWhenCase['test when then case']).toBeTruthy();
+    });
+  });
   describe('buildPopulationRelevanceMap', () => {
     it('marks NUMER, NUMEX, DENEXCEP not calculated if DENEX count matches DENOM', () => {
       const populationResults = {
