@@ -1,0 +1,158 @@
+{
+    "givenNames": [
+        "Test"
+    ],
+    "expectedValues": [
+        {
+            "population_index": 0,
+            "measure_id": "25B51662-1A12-411E-AC9D-22657E11EED8",
+            "IPP": 0,
+            "DENOM_OBSERV": [],
+            "NUMER_OBSERV": []
+        }
+    ],
+    "measure_ids": [
+        "25B51662-1A12-411E-AC9D-22657E11EED8"
+    ],
+    "_id": "65ba97abf3f95300004b62d4",
+    "bundleId": null,
+    "familyName": "CaseWhenThen",
+    "notes": "",
+    "qdmPatient": {
+        "qdmVersion": "5.6",
+        "dataElements": [
+            {
+                "dataElementCodes": [
+                    {
+                        "code": "197604",
+                        "system": "2.16.840.1.113883.6.88",
+                        "version": null,
+                        "display": null
+                    }
+                ],
+                "_id": "65c2594f3f2290000083f3b9",
+                "prescriber": [],
+                "relatedTo": [],
+                "qdmTitle": "Medication, Order",
+                "hqmfOid": "2.16.840.1.113883.10.20.28.4.51",
+                "qdmCategory": "medication",
+                "qdmStatus": "order",
+                "qdmVersion": "5.6",
+                "_type": "QDM::MedicationOrder",
+                "authorDatetime": "2012-02-06T08:00:00.000+00:00",
+                "codeListId": "2.16.840.1.113883.3.464.1003.1065",
+                "daysSupplied": null,
+                "description": "Medication, Order: Digoxin Medications",
+                "dosage": null,
+                "frequency": null,
+                "id": "65c2594f3f2290000083f3b9",
+                "negationRationale": null,
+                "reason": null,
+                "refills": 11,
+                "relevantPeriod": {
+                    "low": "2012-02-06T08:00:00.000+00:00",
+                    "high": "2012-02-06T08:15:00.000+00:00",
+                    "lowClosed": true,
+                    "highClosed": true
+                },
+                "route": null,
+                "setting": null,
+                "supply": null
+            },
+            {
+                "dataElementCodes": [
+                    {
+                        "code": "104208",
+                        "system": "2.16.840.1.113883.6.88",
+                        "version": null,
+                        "display": null
+                    }
+                ],
+                "_id": "65c259b3bff35300001b5172",
+                "prescriber": [],
+                "relatedTo": [],
+                "qdmTitle": "Medication, Order",
+                "hqmfOid": "2.16.840.1.113883.10.20.28.4.51",
+                "qdmCategory": "medication",
+                "qdmStatus": "order",
+                "qdmVersion": "5.6",
+                "_type": "QDM::MedicationOrder",
+                "authorDatetime": "2012-02-06T08:00:00.000+00:00",
+                "codeListId": "2.16.840.1.113883.3.464.1003.1065",
+                "daysSupplied": null,
+                "description": "Medication, Order: Digoxin Medications",
+                "dosage": null,
+                "frequency": null,
+                "id": "65c259b3bff35300001b5172",
+                "negationRationale": null,
+                "reason": null,
+                "refills": 2,
+                "relevantPeriod": {
+                    "low": "2012-02-06T08:00:00.000+00:00",
+                    "high": "2012-02-06T08:15:00.000+00:00",
+                    "lowClosed": true,
+                    "highClosed": true
+                },
+                "route": null,
+                "setting": null,
+                "supply": null
+            },
+            {
+                "dataElementCodes": [
+                    {
+                        "code": "104208",
+                        "system": "2.16.840.1.113883.6.88",
+                        "version": null,
+                        "display": null
+                    }
+                ],
+                "_id": "65c4e902456baf0000cd9819",
+                "prescriber": [],
+                "relatedTo": [],
+                "qdmTitle": "Medication, Order",
+                "hqmfOid": "2.16.840.1.113883.10.20.28.4.51",
+                "qdmCategory": "medication",
+                "qdmStatus": "order",
+                "qdmVersion": "5.6",
+                "_type": "QDM::MedicationOrder",
+                "authorDatetime": "2012-02-08T08:00:00.000+00:00",
+                "codeListId": "2.16.840.1.113883.3.464.1003.1065",
+                "daysSupplied": null,
+                "description": "Medication, Order: Digoxin Medications",
+                "dosage": null,
+                "frequency": null,
+                "id": "65c4e902456baf0000cd9819",
+                "negationRationale": null,
+                "reason": null,
+                "refills": null,
+                "relevantPeriod": {
+                    "low": "2012-02-08T08:00:00.000+00:00",
+                    "high": "2012-02-08T08:15:00.000+00:00",
+                    "lowClosed": true,
+                    "highClosed": true
+                },
+                "route": null,
+                "setting": null,
+                "supply": null
+            },
+            {
+                "dataElementCodes": [],
+                "_id": "65c504304b91bd00007e9c3f",
+                "qdmTitle": "Patient Characteristic Birthdate",
+                "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
+                "qdmCategory": "patient_characteristic",
+                "qdmStatus": "birthdate",
+                "qdmVersion": "5.6",
+                "_type": "QDM::PatientCharacteristicBirthdate",
+                "birthDatetime": "1998-12-01T01:00:00.000+00:00",
+                "codeListId": null,
+                "description": null,
+                "id": "65c504304b91bd00007e9c3f"
+            }
+        ],
+        "_id": "65c504306068b11663b74833",
+        "birthDatetime": "1998-12-01T01:00:00.000+00:00",
+        "extendedData": null
+    },
+    "providers": []
+}
