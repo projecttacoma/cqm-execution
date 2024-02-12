@@ -122,12 +122,14 @@ module.exports = class CalculatorHelpers {
         }
         if ('observation_values' in populationResults) {
           // DENOM observation will be the first of 2 observations
+          populationResultsHandled.observation_values[1] = populationResultsHandled.observation_values[0];
           populationResultsHandled.observation_values[0] = 0;
         }
       }
       if (populationResults.DENEX != null && !this.isValueZero('DENEX', populationResults) && populationResults.DENEX >= populationResults.DENOM) {
         if ('observation_values' in populationResults) {
           // DENOM observation will be the first of 2 observations
+          populationResultsHandled.observation_values[1] = populationResultsHandled.observation_values[0];
           populationResultsHandled.observation_values[0] = 0;
         }
       }
@@ -317,6 +319,7 @@ module.exports = class CalculatorHelpers {
         });
       }
     }
+
     if ((observationDefs != null ? observationDefs.length : undefined) > 0) {
       // Handle observations using the names of the define statements that
       // were added to the ELM to call the observation functions.
