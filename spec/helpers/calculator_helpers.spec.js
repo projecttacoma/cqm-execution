@@ -216,5 +216,68 @@ describe('CalculatorHelpers', () => {
       const processedResults = CalculatorHelpers.handlePopulationValues(initialResults);
       expect(processedResults).toEqual(expectedResults);
     });
+
+    it('Should remove DENEX and defaults denominator observation value if not a member of DENOM for RATIO measures', () => {
+      const initialResults = {
+        IPP: 1,
+        DENOM: 0,
+        DENEX: 7,
+        NUMER: 1,
+        NUMEX: 0,
+        observation_values: [4],
+      };
+      const expectedResults = {
+        IPP: 1,
+        DENOM: 0,
+        DENEX: 0,
+        NUMER: 1,
+        NUMEX: 0,
+        observation_values: [0, 4],
+      };
+      const processedResults = CalculatorHelpers.handlePopulationValues(initialResults, 'RATIO');
+      expect(processedResults).toEqual(expectedResults);
+    });
+
+    it('Should default denominator observation value if the episode is a member of DENOM and DENEX for RATIO measures', () => {
+      const initialResults = {
+        IPP: 1,
+        DENOM: 1,
+        DENEX: 1,
+        NUMER: 1,
+        NUMEX: 0,
+        observation_values: [2, 4],
+      };
+      const expectedResults = {
+        IPP: 1,
+        DENOM: 1,
+        DENEX: 1,
+        NUMER: 1,
+        NUMEX: 0,
+        observation_values: [0, 4],
+      };
+      const processedResults = CalculatorHelpers.handlePopulationValues(initialResults, 'RATIO');
+      expect(processedResults).toEqual(expectedResults);
+    });
+
+    it('Should remove NUMEX and updated Observation values if not a member of NUMER for RATIO measures', () => {
+      const initialResults = {
+        IPP: 1,
+        DENOM: 1,
+        DENEX: 0,
+        NUMER: 0,
+        NUMEX: 0,
+        observation_values: [4],
+      };
+      const expectedResults = {
+        IPP: 1,
+        DENOM: 1,
+        DENEX: 0,
+        NUMER: 0,
+        NUMEX: 0,
+        observation_values: [4, 0],
+      };
+      const processedResults = CalculatorHelpers.handlePopulationValues(initialResults, 'RATIO');
+      expect(processedResults).toEqual(expectedResults);
+    });
   });
 });
