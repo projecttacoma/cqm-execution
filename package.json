@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npx jest --coverage",
     "jest": "npx jest",
+    "format": "prettier --write .",
     "lint": "eslint 'lib/*.js' 'lib/**/*.js' 'spec/*.js' 'spec/**/*.js'",
     "build-cql": "cd ./node_modules/cql-execution && yarn install && cd ../../",
     "prepublish": "./bin/build_cql_execution.sh",
@@ -55,6 +56,8 @@
   "dependencies": {
     "cqm-models": "4.1.3",
     "lodash": "^4.17.19",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "prettier": "^3.3.2",
+    "yarn.lock": "^0.0.1-security"
   }
 }
