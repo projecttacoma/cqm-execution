@@ -14201,7 +14201,7 @@ var ret = {
     domainBind: domainBind
 };
 ret.isRecentNode = ret.isNode && (function() {
-    var version = 'v16.13.0'.split(".").map(Number);
+    var version = process.versions.node.split(".").map(Number);
     return (version[0] === 0 && version[1] > 10) || (version[0] > 0);
 })();
 
@@ -93708,7 +93708,7 @@ exports.errorToPOJO = function errorToPOJO(error) {
 };
 
 exports.nodeMajorVersion = function nodeMajorVersion() {
-  return parseInt('v16.13.0'.split('.')[0], 10);
+  return parseInt(process.versions.node.split('.')[0], 10);
 };
 
 }).call(this)}).call(this,require('_process'))
