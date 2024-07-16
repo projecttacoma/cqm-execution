@@ -55,6 +55,10 @@
   "dependencies": {
     "cqm-models": "4.1.3",
     "lodash": "^4.17.19",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "yarn.lock": "^0.0.1-security"
+  },
+  "resolutions": {
+      "braces": "3.0.3"
   }
 }

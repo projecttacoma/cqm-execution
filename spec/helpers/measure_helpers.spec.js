@@ -10,9 +10,15 @@ describe('MeasureHelpers', () => {
       const measure = getJSONFixture('cqm_measures/CMS723v0/CMS723v0.json');
 
       // Find the localid for the specific statement with the global function ref.
-      const library = measure.cql_libraries.find((lib) => lib.library_name === 'AnticoagulationTherapyforAtrialFibrillationFlutter');
+      const library = measure.cql_libraries.find(
+        (lib) => lib.library_name
+            === 'AnticoagulationTherapyforAtrialFibrillationFlutter'
+      );
       const statementName = 'Encounter with Principal Diagnosis and Age';
-      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(
+        library.elm,
+        statementName
+      );
 
       // For the fixture loaded for this test it is known that the library reference is 49 and the functionRef itself is 55.
       expect(localIds[49]).not.toBeUndefined();
@@ -25,9 +31,14 @@ describe('MeasureHelpers', () => {
       const measure = getJSONFixture('cqm_measures/CMS13v2/CMS13v2.json');
 
       // Find the localid for the specific statement with the global function ref.
-      const library = measure.cql_libraries.find((lib) => lib.library_name === 'Test104');
+      const library = measure.cql_libraries.find(
+        (lib) => lib.library_name === 'Test104'
+      );
       const statementName = 'Initial Population';
-      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(
+        library.elm,
+        statementName
+      );
 
       // For the fixture loaded for this test it is known that the library reference is 109 and the functionRef itself is 110.
       expect(localIds[109]).not.toBeUndefined();
@@ -40,9 +51,14 @@ describe('MeasureHelpers', () => {
       const measure = getJSONFixture('cqm_measures/CMS13v2/CMS13v2.json');
 
       // Find the localid for the specific statement with the global function ref.
-      const library = measure.cql_libraries.find((lib) => lib.library_name === 'Test104');
+      const library = measure.cql_libraries.find(
+        (lib) => lib.library_name === 'Test104'
+      );
       const statementName = 'Comfort Measures during Hospitalization';
-      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(library.elm, statementName);
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(
+        library.elm,
+        statementName
+      );
 
       // For the fixture loaded for this test it is known that the library reference is 109 and the functionRef itself is 110.
       expect(localIds[42]).not.toBeUndefined();
@@ -61,27 +77,47 @@ describe('MeasureHelpers', () => {
     });
 
     it('returns correct localId for functionRef if when found', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '55', 'global');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        this.annotationSnippet,
+        '55',
+        'global'
+      );
       expect(ret).toEqual('49');
     });
 
     it('returns null if it does not find the localId for the functionRef', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '23', 'global');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        this.annotationSnippet,
+        '23',
+        'global'
+      );
       expect(ret).toBeNull();
     });
 
     it('returns null if it does not find the proper libraryName for the functionRef', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '55', 'notGlobal');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        this.annotationSnippet,
+        '55',
+        'notGlobal'
+      );
       expect(ret).toBeNull();
     });
 
     it('returns null if annotation is empty', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef({}, '55', 'notGlobal');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        {},
+        '55',
+        'notGlobal'
+      );
       expect(ret).toBeNull();
     });
 
     it('returns null if there is no value associated with annotation', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '68', 'notGlobal');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        this.annotationSnippet,
+        '68',
+        'notGlobal'
+      );
       expect(ret).toBeNull();
     });
   });
@@ -98,17 +134,29 @@ describe('MeasureHelpers', () => {
     });
 
     it('returns correct localId for expressionRef when found', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '110', 'TJC');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        this.annotationSnippet,
+        '110',
+        'TJC'
+      );
       expect(ret).toEqual('109');
     });
 
     it('returns null if it does not find the localId for the expressionRef', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '21', 'TJC');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        this.annotationSnippet,
+        '21',
+        'TJC'
+      );
       expect(ret).toBeNull();
     });
 
     it('returns null if it does not find the proper libraryName for the expressionRef', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '110', 'notTJC');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        this.annotationSnippet,
+        '110',
+        'notTJC'
+      );
       expect(ret).toBeNull();
     });
   });
@@ -125,20 +173,33 @@ describe('MeasureHelpers', () => {
     });
 
     it('returns null for expressionRef when found yet it is embedded', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '42', 'TJC');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        this.annotationSnippet,
+        '42',
+        'TJC'
+      );
       expect(ret).toBeNull();
     });
 
     it('returns null if it does not find the proper libraryName for the expressionRef', () => {
-      const ret = MeasureHelpers.findLocalIdForLibraryRef(this.annotationSnippet, '42', 'notTJC');
+      const ret = MeasureHelpers.findLocalIdForLibraryRef(
+        this.annotationSnippet,
+        '42',
+        'notTJC'
+      );
       expect(ret).toBeNull();
     });
   });
   describe('case statement and null, false literals coverage', () => {
     it('executes the results correctly', () => {
-      const measure = getJSONFixture('cqm_measures/Case_When_Test/measure.json');
+      const measure = getJSONFixture(
+        'cqm_measures/Case_When_Test/measure.json'
+      );
       const elm = measure.cql_libraries[0].elm;
-      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(elm, 'test when then case');
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(
+        elm,
+        'test when then case'
+      );
       // finds localIds for case statement items and properly finds sourceLocalId for them
       expect(localIds[91]).toEqual({ localId: '91', sourceLocalId: '89' });
       expect(localIds[97]).toEqual({ localId: '97', sourceLocalId: '95' });
@@ -148,6 +209,34 @@ describe('MeasureHelpers', () => {
 
       // finds localIds for false literals and properly sets isFalsyLiteral to true
       expect(localIds[96]).toEqual({ localId: '96', isFalsyLiteral: true });
+    });
+  });
+  describe('Updates for Issue 264 - LocalIds and Coverage', () => {
+    it('executes the results correctlyfor a "With"', () => {
+      const measure = getJSONFixture(
+        'cqm_measures/Case_When_Test/measure.json'
+      );
+      const elm = measure.cql_libraries[0].elm;
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(
+        elm,
+        'More Than One Order'
+      );
+      expect(localIds).not.toBeUndefined();
+      expect(localIds[12]).toEqual({
+        localId: '12',
+        sourceLocalId: '11',
+        isUnsupported: true,
+      });
+    });
+    it('executes the results correctlyfor a "asTypeSpecifier"', () => {
+      const measure = getJSONFixture('cqm_measures/CMS105v7/CMS105v7.json');
+      const elm = measure.cql_libraries[0].elm;
+      const localIds = MeasureHelpers.findAllLocalIdsInStatementByName(
+        elm,
+        'Encounter with Max LDL less than 70 mg per dL'
+      );
+      expect(localIds).not.toBeUndefined();
+      expect(localIds[78]).toEqual({ localId: '78', sourceLocalId: '77' });
     });
   });
 });
