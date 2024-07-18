@@ -232,7 +232,7 @@ describe('CalculatorHelpers', () => {
         DENEX: 0,
         NUMER: 1,
         NUMEX: 0,
-        observation_values: [0, 4],
+        observation_values: [null, 4],
       };
       const processedResults = CalculatorHelpers.handlePopulationValues(initialResults, 'RATIO');
       expect(processedResults).toEqual(expectedResults);
@@ -253,7 +253,7 @@ describe('CalculatorHelpers', () => {
         DENEX: 1,
         NUMER: 1,
         NUMEX: 0,
-        observation_values: [0, 4],
+        observation_values: [null, 4],
       };
       const processedResults = CalculatorHelpers.handlePopulationValues(initialResults, 'RATIO');
       expect(processedResults).toEqual(expectedResults);
@@ -274,7 +274,7 @@ describe('CalculatorHelpers', () => {
         DENEX: 0,
         NUMER: 0,
         NUMEX: 0,
-        observation_values: [4, 0],
+        observation_values: [4, null],
       };
       const processedResults = CalculatorHelpers.handlePopulationValues(initialResults, 'RATIO');
       expect(processedResults).toEqual(expectedResults);

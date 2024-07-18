@@ -66,7 +66,7 @@ describe('Calculator', () => {
 
       const calculationResults = Calculator.calculate(measure, patients, valueSets);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
-      expect(result['observation_values']).toEqual([0, 0]);
+      expect(result['observation_values']).toEqual([null, 0]);
       expect(result['population_relevance']['observation_values']).toBe(true);
       expect(result['population_relevance']['IPP']).toBe(true);
       expect(result['population_relevance']['DENOM']).toBe(true);
@@ -75,7 +75,7 @@ describe('Calculator', () => {
 
       // # check the results for the episode
       const expectedEpisodeResults = {
-        IPP: 1, DENOM: 1, DENEX: 1, NUMER: 1, observation_values: [0, 0],
+        IPP: 1, DENOM: 1, DENEX: 1, NUMER: 1, observation_values: [null, 0],
       };
       expect(result['episode_results']['631a45a4d3e38f00007b382c']).toEqual(expectedEpisodeResults);
     });
@@ -88,7 +88,7 @@ describe('Calculator', () => {
 
       const calculationResults = Calculator.calculate(measure, patients, valueSets);
       const result = Object.values(calculationResults[Object.keys(calculationResults)[0]])[0];
-      expect(result['observation_values']).toEqual([0, 0, 6, 1]);
+      expect(result['observation_values']).toEqual([null, null, 6, 1]);
       expect(result['population_relevance']['observation_values']).toBe(true);
       expect(result['population_relevance']['IPP']).toBe(true);
       expect(result['population_relevance']['DENOM']).toBe(true);
@@ -102,7 +102,7 @@ describe('Calculator', () => {
       expect(result['episode_results']['631a45a4d3e38f00007b382c']).toEqual(expectedEpisodeResults1);
 
       const expectedEpisodeResults2 = {
-        IPP: 1, DENOM: 1, DENEX: 1, NUMER: 0, observation_values: [0, 0],
+        IPP: 1, DENOM: 1, DENEX: 1, NUMER: 0, observation_values: [null, null],
       };
       expect(result['episode_results']['5ba41608b848467d6ae16d6f']).toEqual(expectedEpisodeResults2);
     });
