@@ -674,6 +674,9 @@ module.exports = class MeasureHelpers {
     emptyResultClauses,
     parentNode,
   ) {
+    // Nearly all ELM nodes now have a localId. We can no longer rely on the presence or lack of a localId to determine
+    // whether a node's localId should be collected.
+
     // Stop recursing if this node happens to be any TypeSpecifier. We do not want to collect localIds for these clauses
     // as they are not executed and will negatively affect clause coverage if captured here. ChoiceTypeSpecifiers do not
     // identify their type and instead put [] at the `type` attribute which is a deprecated field.
@@ -684,6 +687,9 @@ module.exports = class MeasureHelpers {
     ) {
       return localIds;
     }
+    // Stop recursing if this node represents the Patient obj since it is not part of coverage consideration. 
+    if (statement?.name === "Patient") return localIds;
+
     // looking at the key and value of everything on this object or array
     for (const k in statement) {
       let alId;
@@ -872,7 +878,7 @@ module.exports = class MeasureHelpers {
       } else if (k === 'localId') {
         localIds[v] = { localId: v };
         // if the value is an array or object, recurse
-      } else if (Array.isArray(v) || typeof v === 'object') {
+      } else if (Array.isArray(v) || (typeof v === 'object' && k !== "codes")) {
         this.findAllLocalIdsInStatement(
           v,
           libraryName,
