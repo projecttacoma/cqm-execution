@@ -687,8 +687,8 @@ module.exports = class MeasureHelpers {
     ) {
       return localIds;
     }
-    // Stop recursing if this node represents the Patient obj since it is not part of coverage consideration. 
-    if (statement?.name === "Patient") return localIds;
+    // Stop recursing if this node represents the Patient obj since it is not part of coverage consideration.
+    if (statement.name && statement.name === 'Patient') return localIds;
 
     // looking at the key and value of everything on this object or array
     for (const k in statement) {
@@ -874,11 +874,18 @@ module.exports = class MeasureHelpers {
           localId: statement.localId,
           isFalsyLiteral: true,
         };
-        // else if the key is localId, push the value
+      // else if the key is localId, push the value
       } else if (k === 'localId') {
+        // skip IsNulls that immediately follow a Not operator so that users don't have to cover "null" when "not null" is covered.
+        if (statement.type && statement.type === 'IsNull' 
+          && typeof parentNode === 'object' 
+          && parentNode.type && parentNode.type === "Not") {
+            continue; // skip the localId on this node.
+          }
         localIds[v] = { localId: v };
         // if the value is an array or object, recurse
-      } else if (Array.isArray(v) || (typeof v === 'object' && k !== "codes")) {
+      } else if (Array.isArray(v)
+        || (typeof v === 'object' && k !== 'codes')) {
         this.findAllLocalIdsInStatement(
           v,
           libraryName,
