@@ -8,7 +8,7 @@ jobs:
   gitleaks_scan:
     runs-on: ubuntu-latest
     env:
-      REPO: https://github.com/MeasureAuthoringTool/madie-measure
+      REPO: https://github.com/projecttacoma/cqm-execution
       REMOTE_EXCLUDES_URL: https://raw.githubusercontent.com/semanticbits/bmat-gitleaks-automation/master/madie-measure/gitleaks.toml
       GITLEAKS_VERSION: v7.5.0
     steps:
