@@ -649,7 +649,37 @@ module.exports = class MeasureHelpers {
         clause.isUnsupported = true;
       }
     }
-    return localIds;
+    // find all localIds in the annotation
+    const allAnnotatedIds = statement ? this.findAnnotationLocalIds(statement.annotation) : [];
+    // filter out local ids that aren't in the annotation, we don't want to include such localIds for coverage
+    const annotatedLocalIds = {};
+    for (const [key, value] of Object.entries(localIds)) {
+      if (allAnnotatedIds.includes(key)) {
+        annotatedLocalIds[key] = value;
+      }
+    }
+    return annotatedLocalIds;
+  }
+
+  /**
+   * Recursively finds localIds that are in an annotation structure by pulling out all "r:"-keyed values
+   * @public
+   * @param {object} annotation - all or a subset of the annotation structure to search
+   * @return {Array} List of local ids in the annotation.
+   */
+  static findAnnotationLocalIds(annotation) {
+    if (Array.isArray(annotation)) {
+      return annotation.flatMap((ent) => this.findAnnotationLocalIds(ent));
+    }
+    if (typeof annotation === 'object') {
+      return Object.entries(annotation).flatMap((ent) => {
+        // if key is r, return value, else recurse
+        if (ent[0] === 'r') return ent[1].toString();
+        return this.findAnnotationLocalIds(ent[1]);
+      });
+    }
+    // default empty
+    return [];
   }
 
   /**
@@ -925,7 +955,9 @@ module.exports = class MeasureHelpers {
     emptyResultClauses.push({
       lib: libraryName,
       aliasLocalId: alId,
-      expressionLocalId: rootStatement.localId,
+      // for translator >=v3.14, if the rootStatement is alias(alias='$this'),
+      // looks for localId of expression where "sort by" is used
+      expressionLocalId: rootStatement.alias ? rootStatement.expression.localId : rootStatement.localId,
     });
     return (() => {
       const result = [];

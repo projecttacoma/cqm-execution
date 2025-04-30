@@ -1,0 +1,1295 @@
+{
+  "library": {
+    "annotation": [
+      {
+        "translatorVersion": "3.14.0",
+        "signatureLevel": "None",
+        "type": "CqlToElmInfo",
+        "translatorOptions": "EnableAnnotations,EnableLocators,EnableResultTypes,EnableDetailedErrors,DisableListDemotion,DisableListPromotion"
+      },
+      {
+        "s": {
+          "r": "222",
+          "s": [
+            {
+              "value": [
+                "",
+                "library TRANSLATOR3.14Fixes version '0.0.000'"
+              ]
+            }
+          ]
+        },
+        "type": "Annotation"
+      }
+    ],
+    "identifier": {
+      "id": "TRANSLATOR3.14Fixes",
+      "version": "0.0.000"
+    },
+    "usings": {
+      "def": [
+        {
+          "localIdentifier": "System",
+          "localId": "1",
+          "uri": "urn:hl7-org:elm-types:r1"
+        },
+        {
+          "annotation": [
+            {
+              "s": {
+                "r": "206",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "using "
+                    ]
+                  },
+                  {
+                    "s": [
+                      {
+                        "value": [
+                          "QDM"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "value": [
+                      " version '5.6'"
+                    ]
+                  }
+                ]
+              },
+              "type": "Annotation"
+            }
+          ],
+          "localIdentifier": "QDM",
+          "localId": "206",
+          "locator": "3:1-3:23",
+          "uri": "urn:healthit-gov:qdm:v5_6",
+          "version": "5.6"
+        }
+      ]
+    },
+    "valueSets": {
+      "def": [
+        {
+          "annotation": [
+            {
+              "s": {
+                "r": "209",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "valueset ",
+                      "\"Annual Wellness Visit\"",
+                      ": ",
+                      "'urn:oid:2.16.840.1.113883.3.526.3.1240'"
+                    ]
+                  }
+                ]
+              },
+              "type": "Annotation"
+            }
+          ],
+          "codeSystem": [],
+          "accessLevel": "Public",
+          "name": "Annual Wellness Visit",
+          "id": "2.16.840.1.113883.3.526.3.1240",
+          "resultTypeName": "{urn:hl7-org:elm-types:r1}ValueSet",
+          "localId": "209",
+          "locator": "8:1-8:74"
+        }
+      ]
+    },
+    "includes": {
+      "def": [
+        {
+          "annotation": [
+            {
+              "s": {
+                "r": "207",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "include "
+                    ]
+                  },
+                  {
+                    "s": [
+                      {
+                        "value": [
+                          "CQMCommonQDM"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "value": [
+                      " version ",
+                      "'9.0.000'",
+                      " called ",
+                      "Global"
+                    ]
+                  }
+                ]
+              },
+              "type": "Annotation"
+            }
+          ],
+          "path": "CQMCommonQDM",
+          "localIdentifier": "Global",
+          "localId": "207",
+          "locator": "5:1-5:52",
+          "version": "9.0.000"
+        },
+        {
+          "annotation": [
+            {
+              "s": {
+                "r": "208",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "include "
+                    ]
+                  },
+                  {
+                    "s": [
+                      {
+                        "value": [
+                          "HospiceQDM"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "value": [
+                      " version ",
+                      "'7.0.000'",
+                      " called ",
+                      "Hospice"
+                    ]
+                  }
+                ]
+              },
+              "type": "Annotation"
+            }
+          ],
+          "path": "HospiceQDM",
+          "localIdentifier": "Hospice",
+          "localId": "208",
+          "locator": "6:1-6:51",
+          "version": "7.0.000"
+        }
+      ]
+    },
+    "statements": {
+      "def": [
+        {
+          "expression": {
+            "signature": [],
+            "type": "SingletonFrom",
+            "localId": "219",
+            "operand": {
+              "otherFilter": [],
+              "include": [],
+              "dataType": "{urn:healthit-gov:qdm:v5_6}Patient",
+              "templateId": "Patient",
+              "type": "Retrieve",
+              "localId": "217",
+              "locator": "12:1-12:15",
+              "codeFilter": [],
+              "dateFilter": []
+            }
+          },
+          "name": "Patient",
+          "context": "Patient",
+          "localId": "218",
+          "locator": "12:1-12:15"
+        },
+        {
+          "annotation": [
+            {
+              "s": {
+                "r": "222",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "define ",
+                      "\"Initial Population\"",
+                      ":\n  "
+                    ]
+                  },
+                  {
+                    "r": "223",
+                    "s": [
+                      {
+                        "value": [
+                          "exists "
+                        ]
+                      },
+                      {
+                        "r": "252",
+                        "s": [
+                          {
+                            "value": [
+                              "( "
+                            ]
+                          },
+                          {
+                            "r": "252",
+                            "s": [
+                              {
+                                "s": [
+                                  {
+                                    "r": "224",
+                                    "s": [
+                                      {
+                                        "r": "227",
+                                        "s": [
+                                          {
+                                            "r": "227",
+                                            "s": [
+                                              {
+                                                "value": [
+                                                  "[",
+                                                  "\"Encounter, Performed\"",
+                                                  ": "
+                                                ]
+                                              },
+                                              {
+                                                "s": [
+                                                  {
+                                                    "value": [
+                                                      "\"Annual Wellness Visit\""
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "value": [
+                                                  "]"
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "value": [
+                                          " ",
+                                          "Enc"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  "\n      "
+                                ]
+                              },
+                              {
+                                "r": "245",
+                                "s": [
+                                  {
+                                    "value": [
+                                      "where "
+                                    ]
+                                  },
+                                  {
+                                    "r": "245",
+                                    "s": [
+                                      {
+                                        "r": "236",
+                                        "s": [
+                                          {
+                                            "r": "235",
+                                            "s": [
+                                              {
+                                                "value": [
+                                                  "Enc"
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "value": [
+                                              "."
+                                            ]
+                                          },
+                                          {
+                                            "r": "236",
+                                            "s": [
+                                              {
+                                                "value": [
+                                                  "relevantPeriod"
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "r": "245",
+                                        "value": [
+                                          " ",
+                                          "on or before",
+                                          " "
+                                        ]
+                                      },
+                                      {
+                                        "r": "241",
+                                        "s": [
+                                          {
+                                            "value": [
+                                              "end of "
+                                            ]
+                                          },
+                                          {
+                                            "r": "242",
+                                            "s": [
+                                              {
+                                                "value": [
+                                                  "\"Measurement Period\""
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              "\n  )"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "type": "Annotation"
+            }
+          ],
+          "expression": {
+            "signature": [],
+            "resultTypeName": "{urn:hl7-org:elm-types:r1}Boolean",
+            "type": "Exists",
+            "localId": "223",
+            "locator": "15:3-17:3",
+            "operand": {
+              "resultTypeSpecifier": {
+                "type": "ListTypeSpecifier",
+                "localId": "255",
+                "elementType": {
+                  "name": "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                  "type": "NamedTypeSpecifier",
+                  "localId": "256"
+                }
+              },
+              "let": [],
+              "where": {
+                "signature": [],
+                "resultTypeName": "{urn:hl7-org:elm-types:r1}Boolean",
+                "type": "SameOrBefore",
+                "localId": "245",
+                "locator": "16:7-16:71",
+                "operand": [
+                  {
+                    "path": "relevantPeriod",
+                    "resultTypeSpecifier": {
+                      "pointType": {
+                        "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type": "NamedTypeSpecifier",
+                        "localId": "240"
+                      },
+                      "type": "IntervalTypeSpecifier",
+                      "localId": "239"
+                    },
+                    "scope": "Enc",
+                    "type": "Property",
+                    "localId": "236",
+                    "locator": "16:13-16:30"
+                  },
+                  {
+                    "condition": {
+                      "signature": [],
+                      "type": "IsNull",
+                      "localId": "247",
+                      "operand": {
+                        "signature": [],
+                        "resultTypeName": "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type": "End",
+                        "localId": "241",
+                        "locator": "16:45-16:71",
+                        "operand": {
+                          "resultTypeSpecifier": {
+                            "pointType": {
+                              "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type": "NamedTypeSpecifier",
+                              "localId": "244"
+                            },
+                            "type": "IntervalTypeSpecifier",
+                            "localId": "243"
+                          },
+                          "name": "Measurement Period",
+                          "type": "ParameterRef",
+                          "localId": "242",
+                          "locator": "16:52-16:71"
+                        }
+                      }
+                    },
+                    "else": {
+                      "lowClosed": true,
+                      "high": {
+                        "signature": [],
+                        "resultTypeName": "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type": "End",
+                        "localId": "241",
+                        "locator": "16:45-16:71",
+                        "operand": {
+                          "resultTypeSpecifier": {
+                            "pointType": {
+                              "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type": "NamedTypeSpecifier",
+                              "localId": "244"
+                            },
+                            "type": "IntervalTypeSpecifier",
+                            "localId": "243"
+                          },
+                          "name": "Measurement Period",
+                          "type": "ParameterRef",
+                          "localId": "242",
+                          "locator": "16:52-16:71"
+                        }
+                      },
+                      "low": {
+                        "signature": [],
+                        "resultTypeName": "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type": "End",
+                        "localId": "241",
+                        "locator": "16:45-16:71",
+                        "operand": {
+                          "resultTypeSpecifier": {
+                            "pointType": {
+                              "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type": "NamedTypeSpecifier",
+                              "localId": "244"
+                            },
+                            "type": "IntervalTypeSpecifier",
+                            "localId": "243"
+                          },
+                          "name": "Measurement Period",
+                          "type": "ParameterRef",
+                          "localId": "242",
+                          "locator": "16:52-16:71"
+                        }
+                      },
+                      "type": "Interval",
+                      "localId": "251",
+                      "highClosed": true
+                    },
+                    "then": {
+                      "resultTypeSpecifier": {
+                        "pointType": {
+                          "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                          "type": "NamedTypeSpecifier",
+                          "localId": "250"
+                        },
+                        "type": "IntervalTypeSpecifier",
+                        "localId": "249"
+                      },
+                      "type": "Null",
+                      "localId": "248"
+                    },
+                    "type": "If",
+                    "localId": "246"
+                  }
+                ]
+              },
+              "source": [
+                {
+                  "resultTypeSpecifier": {
+                    "type": "ListTypeSpecifier",
+                    "localId": "233",
+                    "elementType": {
+                      "name": "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                      "type": "NamedTypeSpecifier",
+                      "localId": "234"
+                    }
+                  },
+                  "expression": {
+                    "otherFilter": [],
+                    "codes": {
+                      "name": "Annual Wellness Visit",
+                      "preserve": true,
+                      "resultTypeName": "{urn:hl7-org:elm-types:r1}ValueSet",
+                      "type": "ValueSetRef",
+                      "localId": "226",
+                      "locator": "15:37-15:59"
+                    },
+                    "include": [],
+                    "resultTypeSpecifier": {
+                      "type": "ListTypeSpecifier",
+                      "localId": "231",
+                      "elementType": {
+                        "name": "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                        "type": "NamedTypeSpecifier",
+                        "localId": "232"
+                      }
+                    },
+                    "dataType": "{urn:healthit-gov:qdm:v5_6}PositiveEncounterPerformed",
+                    "templateId": "PositiveEncounterPerformed",
+                    "type": "Retrieve",
+                    "localId": "227",
+                    "codeComparator": "in",
+                    "codeFilter": [],
+                    "dateFilter": [],
+                    "codeProperty": "code",
+                    "locator": "15:12-15:60"
+                  },
+                  "alias": "Enc",
+                  "localId": "224",
+                  "locator": "15:12-15:64"
+                }
+              ],
+              "type": "Query",
+              "relationship": [],
+              "localId": "252",
+              "locator": "15:10-17:3"
+            }
+          },
+          "accessLevel": "Public",
+          "name": "Initial Population",
+          "context": "Patient",
+          "resultTypeName": "{urn:hl7-org:elm-types:r1}Boolean",
+          "localId": "222",
+          "locator": "14:1-17:3"
+        },
+        {
+          "annotation": [
+            {
+              "s": {
+                "r": "224",
+                "s": [
+                  {
+                    "value": [
+                      "/*Index Prescription Start Date (IPSD)*/\n\n\n",
+                      "define ",
+                      "\"RolloutIntervals\"",
+                      ": \n   "
+                    ]
+                  },
+                  {
+                    "r": "294",
+                    "s": [
+                      {
+                        "r": "272",
+                        "s": [
+                          {
+                            "value": [
+                              "("
+                            ]
+                          },
+                          {
+                            "r": "272",
+                            "s": [
+                              {
+                                "s": [
+                                  {
+                                    "r": "225",
+                                    "s": [
+                                      {
+                                        "r": "228",
+                                        "s": [
+                                          {
+                                            "r": "228",
+                                            "s": [
+                                              {
+                                                "value": [
+                                                  "[",
+                                                  "\"Medication, Order\"",
+                                                  ": "
+                                                ]
+                                              },
+                                              {
+                                                "s": [
+                                                  {
+                                                    "value": [
+                                                      "\"Atomoxetine\""
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "value": [
+                                                  "]"
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "value": [
+                                          " ",
+                                          "AtomoxetineMed"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  "\n        "
+                                ]
+                              },
+                              {
+                                "r": "236",
+                                "s": [
+                                  {
+                                    "value": [
+                                      "return all "
+                                    ]
+                                  },
+                                  {
+                                    "r": "237",
+                                    "s": [
+                                      {
+                                        "value": [
+                                          "{\n          "
+                                        ]
+                                      },
+                                      {
+                                        "s": [
+                                          {
+                                            "value": [
+                                              "period",
+                                              ": "
+                                            ]
+                                          },
+                                          {
+                                            "r": "240",
+                                            "s": [
+                                              {
+                                                "r": "238",
+                                                "s": [
+                                                  {
+                                                    "value": [
+                                                      "CMD"
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "value": [
+                                                  "."
+                                                ]
+                                              },
+                                              {
+                                                "r": "240",
+                                                "s": [
+                                                  {
+                                                    "value": [
+                                                      "\"MedicationOrderPeriod\"",
+                                                      " ( "
+                                                    ]
+                                                  },
+                                                  {
+                                                    "r": "239",
+                                                    "s": [
+                                                      {
+                                                        "value": [
+                                                          "AtomoxetineMed"
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "value": [
+                                                      " )"
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "value": [
+                                          ",\n          "
+                                        ]
+                                      },
+                                      {
+                                        "s": [
+                                          {
+                                            "value": [
+                                              "periodStart",
+                                              ": "
+                                            ]
+                                          },
+                                          {
+                                            "r": "245",
+                                            "s": [
+                                              {
+                                                "value": [
+                                                  "start of "
+                                                ]
+                                              },
+                                              {
+                                                "r": "248",
+                                                "s": [
+                                                  {
+                                                    "r": "246",
+                                                    "s": [
+                                                      {
+                                                        "value": [
+                                                          "CMD"
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "value": [
+                                                      "."
+                                                    ]
+                                                  },
+                                                  {
+                                                    "r": "248",
+                                                    "s": [
+                                                      {
+                                                        "value": [
+                                                          "\"MedicationOrderPeriod\"",
+                                                          " ( "
+                                                        ]
+                                                      },
+                                                      {
+                                                        "r": "247",
+                                                        "s": [
+                                                          {
+                                                            "value": [
+                                                              "AtomoxetineMed"
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "value": [
+                                                          " )"
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "value": [
+                                          "\n        }"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "value": [
+                                  "\n        "
+                                ]
+                              },
+                              {
+                                "r": "268",
+                                "s": [
+                                  {
+                                    "value": [
+                                      "sort by "
+                                    ]
+                                  },
+                                  {
+                                    "r": "267",
+                                    "s": [
+                                      {
+                                        "r": "266",
+                                        "s": [
+                                          {
+                                            "value": [
+                                              "periodStart"
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "value": [
+                                          " asc"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "value": [
+                              "\n    \n    )"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          "."
+                        ]
+                      },
+                      {
+                        "r": "294",
+                        "s": [
+                          {
+                            "value": [
+                              "period"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "type": "Annotation"
+            }
+          ],
+          "resultTypeSpecifier": {
+            "type": "ListTypeSpecifier",
+            "localId": "302",
+            "elementType": {
+              "pointType": {
+                "name": "{urn:hl7-org:elm-types:r1}Date",
+                "type": "NamedTypeSpecifier",
+                "localId": "304"
+              },
+              "type": "IntervalTypeSpecifier",
+              "localId": "303"
+            }
+          },
+          "expression": {
+            "resultTypeSpecifier": {
+              "type": "ListTypeSpecifier",
+              "localId": "299",
+              "elementType": {
+                "pointType": {
+                  "name": "{urn:hl7-org:elm-types:r1}Date",
+                  "type": "NamedTypeSpecifier",
+                  "localId": "301"
+                },
+                "type": "IntervalTypeSpecifier",
+                "localId": "300"
+              }
+            },
+            "let": [],
+            "where": {
+              "signature": [],
+              "type": "Not",
+              "localId": "290",
+              "operand": {
+                "signature": [],
+                "type": "IsNull",
+                "localId": "289",
+                "operand": {
+                  "path": "period",
+                  "source": {
+                    "name": "$this",
+                    "type": "AliasRef",
+                    "localId": "287"
+                  },
+                  "type": "Property",
+                  "localId": "288"
+                }
+              }
+            },
+            "source": [
+              {
+                "expression": {
+                  "resultTypeSpecifier": {
+                    "type": "ListTypeSpecifier",
+                    "localId": "280",
+                    "elementType": {
+                      "type": "TupleTypeSpecifier",
+                      "localId": "281",
+                      "element": [
+                        {
+                          "name": "period",
+                          "localId": "282",
+                          "elementType": {
+                            "pointType": {
+                              "name": "{urn:hl7-org:elm-types:r1}Date",
+                              "type": "NamedTypeSpecifier",
+                              "localId": "284"
+                            },
+                            "type": "IntervalTypeSpecifier",
+                            "localId": "283"
+                          }
+                        },
+                        {
+                          "name": "periodStart",
+                          "localId": "285",
+                          "elementType": {
+                            "name": "{urn:hl7-org:elm-types:r1}Date",
+                            "type": "NamedTypeSpecifier",
+                            "localId": "286"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "let": [],
+                  "source": [
+                    {
+                      "resultTypeSpecifier": {
+                        "type": "ListTypeSpecifier",
+                        "localId": "234",
+                        "elementType": {
+                          "name": "{urn:healthit-gov:qdm:v5_6}PositiveMedicationOrder",
+                          "type": "NamedTypeSpecifier",
+                          "localId": "235"
+                        }
+                      },
+                      "expression": {
+                        "otherFilter": [],
+                        "codes": {
+                          "name": "Atomoxetine",
+                          "preserve": true,
+                          "resultTypeName": "{urn:hl7-org:elm-types:r1}ValueSet",
+                          "type": "ValueSetRef",
+                          "localId": "227",
+                          "locator": "23:27-23:39"
+                        },
+                        "include": [],
+                        "resultTypeSpecifier": {
+                          "type": "ListTypeSpecifier",
+                          "localId": "232",
+                          "elementType": {
+                            "name": "{urn:healthit-gov:qdm:v5_6}PositiveMedicationOrder",
+                            "type": "NamedTypeSpecifier",
+                            "localId": "233"
+                          }
+                        },
+                        "dataType": "{urn:healthit-gov:qdm:v5_6}PositiveMedicationOrder",
+                        "templateId": "PositiveMedicationOrder",
+                        "type": "Retrieve",
+                        "localId": "228",
+                        "codeComparator": "in",
+                        "codeFilter": [],
+                        "dateFilter": [],
+                        "codeProperty": "code",
+                        "locator": "23:5-23:40"
+                      },
+                      "alias": "AtomoxetineMed",
+                      "localId": "225",
+                      "locator": "23:5-23:55"
+                    }
+                  ],
+                  "sort": {
+                    "by": [
+                      {
+                        "path": "periodStart",
+                        "resultTypeName": "{urn:hl7-org:elm-types:r1}Date",
+                        "type": "ByColumn",
+                        "localId": "267",
+                        "locator": "28:17-28:31",
+                        "direction": "asc"
+                      }
+                    ],
+                    "localId": "268",
+                    "locator": "28:9-28:31"
+                  },
+                  "type": "Query",
+                  "relationship": [],
+                  "localId": "272",
+                  "locator": "23:4-30:5",
+                  "return": {
+                    "resultTypeSpecifier": {
+                      "type": "ListTypeSpecifier",
+                      "localId": "259",
+                      "elementType": {
+                        "type": "TupleTypeSpecifier",
+                        "localId": "260",
+                        "element": [
+                          {
+                            "name": "period",
+                            "localId": "261",
+                            "elementType": {
+                              "pointType": {
+                                "name": "{urn:hl7-org:elm-types:r1}Date",
+                                "type": "NamedTypeSpecifier",
+                                "localId": "263"
+                              },
+                              "type": "IntervalTypeSpecifier",
+                              "localId": "262"
+                            }
+                          },
+                          {
+                            "name": "periodStart",
+                            "localId": "264",
+                            "elementType": {
+                              "name": "{urn:hl7-org:elm-types:r1}Date",
+                              "type": "NamedTypeSpecifier",
+                              "localId": "265"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "expression": {
+                      "resultTypeSpecifier": {
+                        "type": "TupleTypeSpecifier",
+                        "localId": "253",
+                        "element": [
+                          {
+                            "name": "period",
+                            "localId": "254",
+                            "elementType": {
+                              "pointType": {
+                                "name": "{urn:hl7-org:elm-types:r1}Date",
+                                "type": "NamedTypeSpecifier",
+                                "localId": "256"
+                              },
+                              "type": "IntervalTypeSpecifier",
+                              "localId": "255"
+                            }
+                          },
+                          {
+                            "name": "periodStart",
+                            "localId": "257",
+                            "elementType": {
+                              "name": "{urn:hl7-org:elm-types:r1}Date",
+                              "type": "NamedTypeSpecifier",
+                              "localId": "258"
+                            }
+                          }
+                        ]
+                      },
+                      "type": "Tuple",
+                      "localId": "237",
+                      "locator": "24:20-27:9",
+                      "element": [
+                        {
+                          "name": "period",
+                          "value": {
+                            "libraryName": "CMD",
+                            "resultTypeSpecifier": {
+                              "pointType": {
+                                "name": "{urn:hl7-org:elm-types:r1}Date",
+                                "type": "NamedTypeSpecifier",
+                                "localId": "244"
+                              },
+                              "type": "IntervalTypeSpecifier",
+                              "localId": "243"
+                            },
+                            "signature": [],
+                            "name": "MedicationOrderPeriod",
+                            "type": "FunctionRef",
+                            "localId": "240",
+                            "locator": "25:19-25:64",
+                            "operand": [
+                              {
+                                "name": "AtomoxetineMed",
+                                "resultTypeName": "{urn:healthit-gov:qdm:v5_6}PositiveMedicationOrder",
+                                "type": "AliasRef",
+                                "localId": "239",
+                                "locator": "25:49-25:62"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "name": "periodStart",
+                          "value": {
+                            "signature": [],
+                            "resultTypeName": "{urn:hl7-org:elm-types:r1}Date",
+                            "type": "Start",
+                            "localId": "245",
+                            "locator": "26:24-26:78",
+                            "operand": {
+                              "libraryName": "CMD",
+                              "resultTypeSpecifier": {
+                                "pointType": {
+                                  "name": "{urn:hl7-org:elm-types:r1}Date",
+                                  "type": "NamedTypeSpecifier",
+                                  "localId": "252"
+                                },
+                                "type": "IntervalTypeSpecifier",
+                                "localId": "251"
+                              },
+                              "signature": [],
+                              "name": "MedicationOrderPeriod",
+                              "type": "FunctionRef",
+                              "localId": "248",
+                              "locator": "26:33-26:78",
+                              "operand": [
+                                {
+                                  "name": "AtomoxetineMed",
+                                  "resultTypeName": "{urn:healthit-gov:qdm:v5_6}PositiveMedicationOrder",
+                                  "type": "AliasRef",
+                                  "localId": "247",
+                                  "locator": "26:63-26:76"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "distinct": false,
+                    "localId": "236",
+                    "locator": "24:9-27:9"
+                  }
+                },
+                "alias": "$this",
+                "localId": "293"
+              }
+            ],
+            "type": "Query",
+            "relationship": [],
+            "localId": "294",
+            "locator": "23:4-30:12",
+            "return": {
+              "expression": {
+                "path": "period",
+                "source": {
+                  "name": "$this",
+                  "type": "AliasRef",
+                  "localId": "291"
+                },
+                "type": "Property",
+                "localId": "292"
+              },
+              "distinct": false,
+              "localId": "295"
+            }
+          },
+          "accessLevel": "Public",
+          "name": "RolloutIntervals",
+          "context": "Patient",
+          "localId": "224",
+          "locator": "22:1-30:12"
+        }
+      ]
+    },
+    "schemaIdentifier": {
+      "id": "urn:hl7-org:elm",
+      "version": "r1"
+    },
+    "contexts": {
+      "def": [
+        {
+          "name": "Patient",
+          "localId": "220",
+          "locator": "12:1-12:15"
+        }
+      ]
+    },
+    "localId": "0",
+    "parameters": {
+      "def": [
+        {
+          "annotation": [
+            {
+              "s": {
+                "r": "210",
+                "s": [
+                  {
+                    "value": [
+                      "",
+                      "parameter ",
+                      "\"Measurement Period\"",
+                      " "
+                    ]
+                  },
+                  {
+                    "r": "211",
+                    "s": [
+                      {
+                        "value": [
+                          "Interval<"
+                        ]
+                      },
+                      {
+                        "r": "212",
+                        "s": [
+                          {
+                            "value": [
+                              "DateTime"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "value": [
+                          ">"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "type": "Annotation"
+            }
+          ],
+          "resultTypeSpecifier": {
+            "pointType": {
+              "name": "{urn:hl7-org:elm-types:r1}DateTime",
+              "type": "NamedTypeSpecifier",
+              "localId": "216"
+            },
+            "type": "IntervalTypeSpecifier",
+            "localId": "215"
+          },
+          "accessLevel": "Public",
+          "name": "Measurement Period",
+          "parameterTypeSpecifier": {
+            "resultTypeSpecifier": {
+              "pointType": {
+                "name": "{urn:hl7-org:elm-types:r1}DateTime",
+                "type": "NamedTypeSpecifier",
+                "localId": "214"
+              },
+              "type": "IntervalTypeSpecifier",
+              "localId": "213"
+            },
+            "pointType": {
+              "name": "{urn:hl7-org:elm-types:r1}DateTime",
+              "resultTypeName": "{urn:hl7-org:elm-types:r1}DateTime",
+              "type": "NamedTypeSpecifier",
+              "localId": "212",
+              "locator": "10:41-10:48"
+            },
+            "type": "IntervalTypeSpecifier",
+            "localId": "211",
+            "locator": "10:32-10:49"
+          },
+          "localId": "210",
+          "locator": "10:1-10:49"
+        }
+      ]
+    }
+  }
+}

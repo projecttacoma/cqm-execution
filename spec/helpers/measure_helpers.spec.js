@@ -238,5 +238,43 @@ describe('MeasureHelpers', () => {
       expect(localIds).not.toBeUndefined();
       expect(localIds[78]).toEqual({ localId: '78', sourceLocalId: '77' });
     });
+
+    it('returns localIds only if it is present in annotations"', () => {
+      const elm = getJSONFixture('cqm_measures/MADiE2176/MADiE2176.json');
+      const statement = elm.library.statements.def.find(
+        (stat) => stat.name === 'Initial Population',
+      );
+      const aliasMap = {};
+      const emptyResultClauses = [];
+      const allLocalIds = MeasureHelpers.findAllLocalIdsInStatement(
+        statement,
+        elm.library.identifier.id,
+        statement.annotation,
+        {},
+        aliasMap,
+        emptyResultClauses,
+        null,
+      );
+      const annotatedLocalIds = MeasureHelpers.findAllLocalIdsInStatementByName(
+        elm,
+        statement.name
+      );
+      expect(Object.keys(allLocalIds).length).not.toBe(Object.keys(annotatedLocalIds).length);
+    });
+
+    it('returns localIds for "sort by" if present in expression with alias', () => {
+      /* [Encounter: "Inpatient"] E
+          return Tuple { id: E.identifier, lengthOfStay: duration in days of E.period }
+            sort by lengthOfStay */
+      const elm = getJSONFixture('cqm_measures/MADiE2176/MADiE2176.json');
+      const statement = elm.library.statements.def.find(
+        (stat) => stat.name === 'RolloutIntervals',
+      );
+      const annotatedLocalIds = MeasureHelpers.findAllLocalIdsInStatementByName(
+        elm,
+        statement.name
+      );
+      expect(annotatedLocalIds['268'].sourceLocalId).toBe('272');
+    });
   });
 });
