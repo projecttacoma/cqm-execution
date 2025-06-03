@@ -1399,10 +1399,10 @@ cql-execution@2.4.1:
     "@lhncbc/ucum-lhc" "^4.1.3"
     luxon "^1.25.0"
 
-cqm-models@4.2.3:
-  version "4.2.3"
-  resolved "https://registry.npmjs.org/cqm-models/-/cqm-models-4.2.3.tgz"
-  integrity sha512-Wa8GZTvn9ysI/g9zbuksyvUWiXOhCkmoQGj+Q/2/caBIG/9XFjLO67QrvkfXuojIBNKMMl9MSBTmYXm/Aomf5w==
+cqm-models@4.2.4:
+  version "4.2.4"
+  resolved "https://registry.npmjs.org/cqm-models/-/cqm-models-4.2.4.tgz"
+  integrity sha512-ZCC+3w/+D+9GU9mkxunnzCsDpebO3uDpOuZB2DO/uO2Mm6w7y3XAlZbqcMt0C/2DTY3wrO6yTTB/p0XKxU6qog==
   dependencies:
     cql-execution "2.4.1"
     mongoose "^7.8.4"
