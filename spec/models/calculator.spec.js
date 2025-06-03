@@ -792,7 +792,8 @@ describe('Calculator', () => {
 
     const resultsByStatement = result['PopulationCriteria1'].statement_results_by_statement();
 
-    expect(resultsByStatement['CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData']['IP Encounters']['pretty']).toEqual('[Encounter, Performed: Acute care hospital Inpatient Encounter\nSTART: 05/22/2012 8:00 AM\nSTOP: 05/22/2012 8:15 AM\nCODE: SNOMEDCT 112689000]');
+    expect(resultsByStatement['CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData']['IP Encounters']['pretty'])
+      .toEqual('[Encounter, Performed: Acute care hospital Inpatient Encounter\nSTART: 05/22/2012 8:00 AM\nSTOP: 05/22/2012 8:15 AM\nCODE: SNOMEDCT 112689000]');
     expect(resultsByStatement['CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData']['IP Encounters']['final']).toBe('TRUE');
   });
 
