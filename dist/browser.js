@@ -1125,6 +1125,27 @@ module.exports = class MeasureHelpers {
     return false;
   }
 
+  /**
+   * Figure out if a statement is in a Risk Adjustment Variable given the statement name.
+   * @public
+   * @param [PopulationSet] populationSets
+   * @param {string} statement - The statement to search for.
+   * @return {boolean} Statement does or does not belong to a Risk Adjustment Variables.
+   */
+  static isRiskAdjustmentVariableStatement(populationSets, statementName) {
+    for (const populationSet of populationSets) {
+      if (populationSet.risk_adjustment_variables) {
+        const ravStatement = populationSet.risk_adjustment_variables.find(
+          (rav) => rav.statement_name === statementName,
+        );
+        if (ravStatement !== undefined) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   static __guard__(value, transform) {
     return typeof value !== 'undefined' && value !== null
       ? transform(value)
@@ -1208,6 +1229,19 @@ module.exports = class ResultsHelpers {
     if (measure.calculate_sdes && populationSet.supplemental_data_elements) {
       for (const statement of Array.from(populationSet.supplemental_data_elements)) {
         // Mark all Supplemental Data Elements as relevant
+        this.markStatementRelevant(
+          measure.cql_libraries,
+          statementRelevance,
+          measure.main_cql_library,
+          statement.statement_name,
+          'TRUE'
+        );
+      }
+    }
+
+    if (measure.calculate_ravs && populationSet.risk_adjustment_variables) {
+      for (const statement of Array.from(populationSet.risk_adjustment_variables)) {
+        // Mark all Risk Adjustment Variables as relevant
         this.markStatementRelevant(
           measure.cql_libraries,
           statementRelevance,
@@ -1376,7 +1410,9 @@ module.exports = class ResultsHelpers {
           raw: rawStatementResult, library_name, statement_name, relevance,
         };
         const isSDE = MeasureHelpers.isSupplementalDataElementStatement(measure.population_sets, statement_name);
-        if ((!measure.calculate_sdes && isSDE) || relevance === 'NA') {
+        const isRAV = MeasureHelpers.isRiskAdjustmentVariableStatement(measure.population_sets, statement_name);
+
+        if ((!measure.calculate_sdes && isSDE) || (!measure.calculate_ravs && isRAV) || relevance === 'NA') {
           statementResult.final = 'NA';
           if (doPretty) {
             statementResult.pretty = 'NA';
@@ -40376,6 +40412,7 @@ const MeasureSchema = new mongoose.Schema(
       default: 'PATIENT',
     },
     calculate_sdes: Boolean,
+    calculate_ravs: Boolean,
 
     // ELM/CQL Measure-logic related data encapsulated in CQLLibrarySchema
     // Field name changed from 'cql' to 'cql_libraries' because the semantics of
