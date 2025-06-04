@@ -1,6 +1,6 @@
 {
   "calculate_sdes": false,
-  "calculate_ravs": false,
+  "calculate_ravs": true,
   "calculation_method": "EPISODE_OF_CARE",
   "cms_id": "CMS530v0",
   "component": false,

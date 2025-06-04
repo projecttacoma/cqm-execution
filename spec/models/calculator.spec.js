@@ -769,6 +769,7 @@ describe('Calculator', () => {
   it('measure that skips calculating risk adjustment variables if calculate_ravs is false in measure', () => {
     const valueSets = getJSONFixture('cqm_measures/CMS530/value_sets.json');
     const measure = getJSONFixture('cqm_measures/CMS530/CMS530v0.json');
+    measure.calculate_ravs = false;
     const passIppDenomNumer = getJSONFixture('patients/CMS530v0/Pass_IPP-DENOM-NUMER.json');
     const patients = [];
     patients.push(passIppDenomNumer.qdmPatient);
@@ -783,7 +784,7 @@ describe('Calculator', () => {
 
   it('measure that calculates risk adjustment variables correctly if calculate_ravs is true in measure', () => {
     const valueSets = getJSONFixture('cqm_measures/CMS530/value_sets.json');
-    const measure = getJSONFixture('cqm_measures/CMS530/CMS530v1.json');
+    const measure = getJSONFixture('cqm_measures/CMS530/CMS530v0.json');
     const passIppDenomNumer = getJSONFixture('patients/CMS530v0/Pass_IPP-DENOM-NUMER.json');
     const patients = [];
     patients.push(passIppDenomNumer.qdmPatient);
