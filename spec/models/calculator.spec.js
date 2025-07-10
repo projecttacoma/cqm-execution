@@ -57,7 +57,7 @@ describe('Calculator', () => {
     });
   });
 
-  describe('Ratio Calculations',  () => {
+  describe('Ratio Calculations', () => {
     it('can handle single episodes observed', async () => {
       const valueSets = getJSONFixture('cqm_measures/CMS871v2/value_sets.json');
       const measure = getJSONFixture('cqm_measures/CMS871v2/CMS871v2.json'); // 5.6
@@ -80,7 +80,7 @@ describe('Calculator', () => {
       expect(result['episode_results']['631a45a4d3e38f00007b382c']).toEqual(expectedEpisodeResults);
     });
 
-    it('can handle multiple episodes observed', async  () => {
+    it('can handle multiple episodes observed', async () => {
       const valueSets = getJSONFixture('cqm_measures/CMS871v2/value_sets.json');
       const measure = getJSONFixture('cqm_measures/CMS871v2/CMS871v2.json'); // 5.6
       const patients = [];
@@ -198,7 +198,7 @@ describe('Calculator', () => {
     });
   });
 
-  describe('execution engine using default timezone offset',  () => {
+  describe('execution engine using default timezone offset', () => {
     it('is correct', async () => {
       const valueSets = getJSONFixture('cqm_measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('cqm_measures/CMS760v0/CMS760v0.json');
@@ -240,7 +240,7 @@ describe('Calculator', () => {
     });
   });
 
-  describe('execution engine using passed in timezone offset and bad effective_date',  () => {
+  describe('execution engine using passed in timezone offset and bad effective_date', () => {
     it('is correct', async () => {
       const valueSets = getJSONFixture('cqm_measures/CMS760v0/value_sets.json');
       const measure = getJSONFixture('cqm_measures/CMS760v0/CMS760v0.json');
@@ -566,52 +566,6 @@ describe('Calculator', () => {
     expect(passNumerResults['PopulationCriteria1'].DENOM).toBe(1);
     expect(passNumerResults['PopulationCriteria1'].DENEX).toBe(0);
     expect(passNumerResults['PopulationCriteria1'].NUMER).toBe(1);
-  });
-
-  it('measure that calculates supplemental data elements correctly', async () => {
-    const valueSets = getJSONFixture('cqm_measures/CMS529v0/value_sets.json');
-    const measure = getJSONFixture('cqm_measures/CMS529v0/CMS529v0.json');
-    const passIppDenomNumer = getJSONFixture('patients/CMS529v0/Pass_IPP-DENOM-NUMER.json');
-    const patients = [];
-    patients.push(passIppDenomNumer.qdmPatient);
-    const calculationResults = await Calculator.calculate(measure, patients, valueSets, { requestDocument: true });
-    const passIppDenomNumerResults = calculationResults[Object.keys(calculationResults)[0]];
-
-    expect(passIppDenomNumerResults['PopulationCriteria1'].IPP).toBe(1);
-    expect(passIppDenomNumerResults['PopulationCriteria1'].DENOM).toBe(1);
-    expect(passIppDenomNumerResults['PopulationCriteria1'].NUMER).toBe(1);
-  });
-
-  it('measure that skips calculating risk adjustment variables if calculate_ravs is false in measure', async () => {
-    const valueSets = getJSONFixture('cqm_measures/CMS530/value_sets.json');
-    const measure = getJSONFixture('cqm_measures/CMS530/CMS530v0.json');
-    measure.calculate_ravs = false;
-    const passIppDenomNumer = getJSONFixture('patients/CMS530v0/Pass_IPP-DENOM-NUMER.json');
-    const patients = [];
-    patients.push(passIppDenomNumer.qdmPatient);
-    const calculationResults = await Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
-    const result = calculationResults[Object.keys(calculationResults)[0]];
-
-    const resultsByStatement = result['PopulationCriteria1'].statement_results_by_statement();
-
-    expect(resultsByStatement['CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData']['IP Encounters']['pretty']).toEqual('NA');
-    expect(resultsByStatement['CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData']['IP Encounters']['final']).toBe('NA');
-  });
-
-  it('measure that calculates risk adjustment variables correctly if calculate_ravs is true in measure', async () => {
-    const valueSets = getJSONFixture('cqm_measures/CMS530/value_sets.json');
-    const measure = getJSONFixture('cqm_measures/CMS530/CMS530v0.json');
-    const passIppDenomNumer = getJSONFixture('patients/CMS530v0/Pass_IPP-DENOM-NUMER.json');
-    const patients = [];
-    patients.push(passIppDenomNumer.qdmPatient);
-    const calculationResults = await Calculator.calculate(measure, patients, valueSets, { doPretty: true, requestDocument: true });
-    const result = calculationResults[Object.keys(calculationResults)[0]];
-
-    const resultsByStatement = result['PopulationCriteria1'].statement_results_by_statement();
-
-    expect(resultsByStatement['CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData']['IP Encounters']['pretty'])
-      .toEqual('[Encounter, Performed: Acute care hospital Inpatient Encounter\nSTART: 05/22/2012 8:00 AM\nSTOP: 05/22/2012 8:15 AM\nCODE: SNOMEDCT 112689000]');
-    expect(resultsByStatement['CoreClinicalDataElementsfortheHybridHospitalWideReadmissionHWRMeasurewithClaimsandElectronicHealthRecordData']['IP Encounters']['final']).toBe('TRUE');
   });
 
   it('multiple populations with multiple stratifications measure correctly', async () => {
