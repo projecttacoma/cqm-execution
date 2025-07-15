@@ -1400,10 +1400,10 @@ cql-execution@^3.2.0, cql-execution@3.2.0:
     immutable "^4.1.0"
     luxon "^1.28.1"
 
-cqm-models@4.2.6:
-  version "4.2.6"
-  resolved "https://registry.npmjs.org/cqm-models/-/cqm-models-4.2.6.tgz"
-  integrity sha512-p1ckhQ0jA8bYpTdTUHzl3hGF7FbFy6gK3U64EcEab378COKfxqdV9TPOwngGwjAeUeMWBOB+jS93nO+lnS/xNQ==
+cqm-models@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/cqm-models/-/cqm-models-4.3.0.tgz"
+  integrity sha512-LMTcz3wSKUvjqV1H6yKfqLluvPsTlbXhVFYFA11JMGJGf12OnHOOupegl/Lqx+TDGO8Rg5ni56ry+Uvd5EDwnA==
   dependencies:
     cql-execution "3.2.0"
     mongoose "^7.8.4"
