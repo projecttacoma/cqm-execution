@@ -163,6 +163,14 @@ describe('Calculator', () => {
       });
     });
 
+    it('throws error if ValueSet cannot be resolved', async () => {
+      const measure = getJSONFixture('cqm_measures/CombinedVTEandBleedingRatio/CombinedVTEandBleedingRatio.json');
+      const patients = [getJSONFixture('patients/CombinedVTEandBleedingRatio/first_last.json')];
+
+      await expect(Calculator.calculate(measure, patients, [], { requestDocument: true }))
+        .rejects.toThrow(/Unable to resolve expected valueset with id.*and version/);
+    });
+
     it('is correct', async () => {
       const valueSets = getJSONFixture('cqm_measures/CMS735v0/value_sets.json');
       const measure = getJSONFixture('cqm_measures/CMS735v0/CMS735v0.json');
