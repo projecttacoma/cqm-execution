@@ -1,6 +1,6 @@
 {
   "name": "cqm-execution",
-  "version": "4.4.0",
+  "version": "4.4.1",
   "description": "NPM module for calculating eCQMs (electronic clinical quality measures) written in CQL (clinical quality language).",
   "main": "lib/index.js",
   "scripts": {
@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/projecttacoma/cqm-execution#readme",
   "devDependencies": {
-    "browserify": "^17.0.0",
+    "browserify": "^17.0.1",
     "cql-execution": "^3.2.0",
     "eslint": "^8.53.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -54,11 +54,8 @@
     "require-directory": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "4.3.0",
+    "cqm-models": "4.3.1",
     "lodash": "^4.17.19",
     "moment": "^2.29.4"
-  },
-  "resolutions": {
-    "braces": "3.0.3"
   }
 }

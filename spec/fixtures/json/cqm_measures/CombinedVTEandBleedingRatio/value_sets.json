@@ -1,733 +1,5 @@
 [
   {
-    "_id": "5d289ce031fe5f8ba62f774c",
-    "concepts": [
-      {
-        "_id": "5d289ce031fe5f8ba62f7758",
-        "code": "10378005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, emergency, from emergency room, accidental injury (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7759",
-        "code": "112689000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, elective, with complete pre-admission work-up (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f775a",
-        "code": "112690009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, boarder, for social reasons (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f775b",
-        "code": "1505002",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission for isolation (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f775c",
-        "code": "15584006",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, elective, with partial pre-admission work-up (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f775d",
-        "code": "18083007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, emergency, indirect (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f775e",
-        "code": "183452005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f775f",
-        "code": "183455007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Psychiatric emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7760",
-        "code": "183457004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Geriatric emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7761",
-        "code": "183458009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Pediatric emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7762",
-        "code": "183459001",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Gynecological emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7763",
-        "code": "183460006",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Obstetric emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7764",
-        "code": "183461005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Orthopedic emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7765",
-        "code": "183462003",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Ear, nose and throat emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7766",
-        "code": "183463008",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Trauma emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7767",
-        "code": "183464002",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Ophthalmological emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7768",
-        "code": "183465001",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Rheumatology emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7769",
-        "code": "183466000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Dermatology emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f776a",
-        "code": "183467009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Neurology emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f776b",
-        "code": "183468004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Urology emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f776c",
-        "code": "183469007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Radiotherapy emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f776d",
-        "code": "183470008",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hematology emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f776e",
-        "code": "183471007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Plastic surgery emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f776f",
-        "code": "183472000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Diabetic emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7770",
-        "code": "183473005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Oral surgical emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7771",
-        "code": "183474004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Psychogeriatric emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7772",
-        "code": "183475003",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Renal medicine emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7773",
-        "code": "183476002",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Neurosurgical emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7774",
-        "code": "183477006",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Cardiothoracic emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7775",
-        "code": "183478001",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Emergency hospital admission for asthma (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7776",
-        "code": "183481006",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Non-urgent hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7777",
-        "code": "183497001",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Non-urgent trauma admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7778",
-        "code": "19951005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, emergency, from emergency room, medical nature (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7779",
-        "code": "2252009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, urgent, 48 hours (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f777a",
-        "code": "23473000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, for research investigation (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f777b",
-        "code": "25986004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, under police custody (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f777c",
-        "code": "2876009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, type unclassified, explain by report (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f777d",
-        "code": "304568006",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission for respite care (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f777e",
-        "code": "305335007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to establishment (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f777f",
-        "code": "305337004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to community hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7780",
-        "code": "305338009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to general practice hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7781",
-        "code": "305339001",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to private hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7782",
-        "code": "305340004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to long stay hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7783",
-        "code": "305341000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to tertiary referral hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7784",
-        "code": "305342007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to ward (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7785",
-        "code": "305343002",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to day ward (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7786",
-        "code": "305344008",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to day hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7787",
-        "code": "305345009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to psychiatric day hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7788",
-        "code": "305346005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to psychogeriatric day hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7789",
-        "code": "305347001",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to elderly severely mentally ill day hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f778a",
-        "code": "305348006",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Admission to care of the elderly day hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f778b",
-        "code": "313385005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Cardiology emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f778c",
-        "code": "3241000175106",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission from non-health care facility (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f778d",
-        "code": "32485007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f778e",
-        "code": "36723004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, pre-nursing home placement (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f778f",
-        "code": "405614004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Unexpected hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7790",
-        "code": "408489005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Respiratory emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7791",
-        "code": "408501008",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Emergency hospital admission for chronic obstructive pulmonary disease (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7792",
-        "code": "416683003",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Emergency hospital admission for heart failure (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7793",
-        "code": "417005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital re-admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7794",
-        "code": "432621000124105",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, transfer from dialysis facility (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7795",
-        "code": "432661000124104",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, transfer from emergency department (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7796",
-        "code": "442281000124108",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Emergency hospital admission from observation unit (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7797",
-        "code": "448381000124100",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Urgent hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7798",
-        "code": "448421000124105",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, transfer from physician office (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f7799",
-        "code": "448431000124108",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, transfer from assisted living facility (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f779a",
-        "code": "448441000124103",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, transfer from intermediate care facility (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f779b",
-        "code": "448851000124103",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission from observation unit (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f779c",
-        "code": "4563007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, transfer from other hospital or health care facility (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f779d",
-        "code": "45702004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, precertified by medical audit action (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f779e",
-        "code": "47348005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, mother, for observation, delivered outside of hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f779f",
-        "code": "48183000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, special (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a0",
-        "code": "50699000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, short-term (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a1",
-        "code": "51032003",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, donor for transplant organ (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a2",
-        "code": "51501005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, parent, for in-hospital child care (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a3",
-        "code": "52748007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, involuntary (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a4",
-        "code": "60059000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, infant, for observation, delivered outside of hospital (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a5",
-        "code": "63551005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, from remote area, by means of special transportation (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a6",
-        "code": "65043002",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, short-term, day care (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a7",
-        "code": "699122005",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Vascular surgery emergency hospital admission (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a8",
-        "code": "699245006",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Emergency hospital admission for ischemic heart disease (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77a9",
-        "code": "70755000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, by legal authority (commitment) (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77aa",
-        "code": "71290004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, limited to designated procedures (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77ab",
-        "code": "73607007",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, emergency, from emergency room (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77ac",
-        "code": "74857009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, short-term, 24 hours (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77ad",
-        "code": "76464004",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, for observation (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77ae",
-        "code": "78680009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, emergency, direct (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77af",
-        "code": "81672003",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, elective, without pre-admission work-up (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77b0",
-        "code": "82942009",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, blood donor (procedure)"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f77b1",
-        "code": "8715000",
-        "code_system_name": "SNOMED-CT",
-        "code_system_oid": "2.16.840.1.113883.6.96",
-        "code_system_version": "2017-09",
-        "display_name": "Hospital admission, elective (procedure)"
-      }
-    ],
-    "display_name": "Inpatient Encounter",
-    "oid": "2.16.840.1.113883.3.464.1003.101.12.1060",
-    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC3"
-  },
-  {
     "_id": "5d289ce031fe5f8ba62f774d",
     "concepts": [
       {
@@ -2097,46 +1369,6 @@
         "code_system_oid": "2.16.840.1.113883.6.238",
         "code_system_version": "1.1",
         "display_name": "American Indian or Alaska Native"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f785a",
-        "code": "2028-9",
-        "code_system_name": "CDC Race",
-        "code_system_oid": "2.16.840.1.113883.6.238",
-        "code_system_version": "1.1",
-        "display_name": "Asian"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f785b",
-        "code": "2054-5",
-        "code_system_name": "CDC Race",
-        "code_system_oid": "2.16.840.1.113883.6.238",
-        "code_system_version": "1.1",
-        "display_name": "Black or African American"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f785c",
-        "code": "2076-8",
-        "code_system_name": "CDC Race",
-        "code_system_oid": "2.16.840.1.113883.6.238",
-        "code_system_version": "1.1",
-        "display_name": "Native Hawaiian or Other Pacific Islander"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f785d",
-        "code": "2106-3",
-        "code_system_name": "CDC Race",
-        "code_system_oid": "2.16.840.1.113883.6.238",
-        "code_system_version": "1.1",
-        "display_name": "White"
-      },
-      {
-        "_id": "5d289ce031fe5f8ba62f785e",
-        "code": "2131-1",
-        "code_system_name": "CDC Race",
-        "code_system_oid": "2.16.840.1.113883.6.238",
-        "code_system_version": "1.1",
-        "display_name": "Other Race"
       }
     ],
     "display_name": "Race",
@@ -2144,19 +1376,265 @@
     "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC3"
   },
   {
-    "_id": "5d289ce031fe5f8ba62f7751",
     "concepts": [
       {
-        "_id": "5d289ce031fe5f8ba62f785f",
-        "code": "121",
-        "code_system_name": "Source of Payment Typology",
-        "code_system_oid": "2.16.840.1.113883.3.221.5",
-        "code_system_version": "7.0",
-        "display_name": "Medicare FFS"
+        "_id": "5d289ce031fe5f8ba62f785c",
+        "code": "0SR9019",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2026",
+        "display_name": "Replacement of Right Hip"
       }
     ],
-    "display_name": "Medicare Fee For Service",
-    "oid": "2.16.840.1.113883.3.1240.15.2.4008",
-    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC3"
+    "display_name": "Total Hip, Total Knee Replacement",
+    "oid": "2.16.840.1.113762.1.4.1029.96",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "_id": "5d289ce031fe5f8ba62f785d",
+        "code": "TEST123",
+        "code_system_name": "RandomSystem",
+        "code_system_oid": "1.2.3.4.5.6.7.8.9",
+        "code_system_version": "v1.0",
+        "display_name": "Zyphora Qwerton"
+      }
+    ],
+    "display_name": "Encounter Inpatient",
+    "oid": "2.16.840.1.113883.3.666.5.307",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "code": "N18.9",
+        "code_system_name": "ICD10CM",
+        "code_system_oid": "2.16.840.1.113883.6.90",
+        "code_system_version": "2024",
+        "display_name": "Chronic kidney disease, unspecified"
+      }
+    ],
+    "display_name": "Renal insufficiency",
+    "oid": "2.16.840.1.113883.3.3157.1330",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "code": "I48.91",
+        "code_system_name": "ICD10CM",
+        "code_system_oid": "2.16.840.1.113883.6.90",
+        "code_system_version": "2024",
+        "display_name": "Unspecified atrial fibrillation"
+      }
+    ],
+    "display_name": "Atrial Fibrillation",
+    "oid": "2.16.840.1.113883.17.4077.3.1001",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "code": "C78.00",
+        "code_system_name": "ICD10CM",
+        "code_system_oid": "2.16.840.1.113883.6.90",
+        "code_system_version": "2024",
+        "display_name": "Secondary malignant neoplasm of unspecified lung"
+      }
+    ],
+    "display_name": "Cancer",
+    "oid": "2.16.840.1.113883.3.526.3.1010",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "code": "5224",
+        "code_system_name": "RxNorm",
+        "code_system_oid": "2.16.840.1.113883.6.88",
+        "code_system_version": "2024",
+        "display_name": "Heparin"
+      }
+    ],
+    "display_name": "Anticoagulant Medications, Injection",
+    "oid": "2.16.840.1.113762.1.4.1206.21",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "_id": "GENERATE_UNIQUE_ID",
+        "code": "1191",
+        "code_system_name": "RxNorm",
+        "code_system_oid": "2.16.840.1.113883.6.88",
+        "code_system_version": "2024",
+        "display_name": "Aspirin"
+      }
+    ],
+    "display_name": "Anticoagulant Medications, Oral",
+    "oid": "2.16.840.1.113762.1.4.1206.20",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "code": "D68.9",
+        "code_system_name": "ICD10CM",
+        "code_system_oid": "2.16.840.1.113883.6.90",
+        "code_system_version": "2024",
+        "display_name": "Coagulation defect, unspecified"
+      }
+    ],
+    "display_name": "Coagulation Disorder Conditions",
+    "oid": "2.16.840.1.113762.1.4.1206.17",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "code": "T84.84XA",
+        "code_system_name": "ICD10CM",
+        "code_system_oid": "2.16.840.1.113883.6.90",
+        "code_system_version": "2024",
+        "display_name": "Pain due to internal orthopedic prosthetic devices, implants and grafts, initial encounter"
+      }
+    ],
+    "display_name": "Malignant Neoplasm Complications Related To Hip and Knee Procedures",
+    "oid": "2.16.840.1.113762.1.4.1206.7",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "code": "T84.050A",
+        "code_system_name": "ICD10CM",
+        "code_system_oid": "2.16.840.1.113883.6.90",
+        "code_system_version": "2024",
+        "display_name": "Periprosthetic osteolysis of internal prosthetic right hip joint, initial encounter"
+      }
+
+    ],
+    "display_name": "Mechanical Complications Related To Hip and Knee Procedures",
+    "oid": "2.16.840.1.113762.1.4.1206.1",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "code": "131148009",
+        "code_system_name": "SNOMED CT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2024-03",
+        "display_name": "Bleeding"
+      }
+    ],
+    "display_name": "Active Bleeding",
+    "oid": "2.16.840.1.113762.1.4.1206.2",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "code": "387713003",
+        "code_system_name": "SNOMED CT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2024-03",
+        "display_name": "General surgery"
+      }
+    ],
+    "display_name": "General Surgery",
+    "oid": "2.16.840.1.113762.1.4.1206.15",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "_id": "5d289ce031fe5f8ba62f785e",
+        "code": "TESTCODE",
+        "code_system_name": "TestSystem",
+        "code_system_oid": "1.2.3.4.5.6.7.8.10",
+        "code_system_version": "v1.0",
+        "display_name": "Test Concept"
+      }
+    ],
+    "display_name": "General Major Bleeding Events",
+    "oid": "2.16.840.1.113762.1.4.1179.5",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DC4"
+  },
+  {
+    "concepts": [
+      {
+        "_id": "5d289ce031fe5f8ba62f785l",
+        "code": "D78.21",
+        "code_system_name": "ICD10CM",
+        "code_system_oid": "2.16.840.1.113883.6.90",
+        "code_system_version": "2026",
+        "display_name": "Postprocedural hemorrhage of the spleen"
+      }
+    ],
+    "display_name": "Active Bleeding",
+    "oid": "2.16.840.1.113762.1.4.1206.28",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DCl"
+  },
+  {
+    "concepts": [
+      {
+        "_id": "5d289ce031fe5f8ba62f785m",
+        "code": "99024",
+        "code_system_name": "CPT",
+        "code_system_oid": "2.16.840.1.113883.6.12",
+        "code_system_version": "2025",
+        "display_name": "Postoperative follow-up visit"
+      }
+    ],
+    "display_name": "Postoperative Visit",
+    "oid": "2.16.840.1.113883.3.464.1003.101.12.1070",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DCm"
+  },
+  {
+    "concepts": [
+      {
+        "_id": "5d289ce031fe5f8ba62f785n",
+        "code": "00900ZZ",
+        "code_system_name": "ICD10PCS",
+        "code_system_oid": "2.16.840.1.113883.6.4",
+        "code_system_version": "2026",
+        "display_name": "Drainage of Brain, Open Approach"
+      }
+    ],
+    "display_name": "Treatment of Hemorrhage or Hematoma",
+    "oid": "2.16.840.1.113762.1.4.1206.14",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DCN"
+  },
+  {
+    "concepts": [
+      {
+        "_id": "5d289ce031fe5f8ba62f785y",
+        "code": "11029002",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2025-03",
+        "display_name": "Pulmonary apoplexy (disorder)"
+      }
+    ],
+    "display_name": "Venous Thromboembolism",
+    "oid": "2.16.840.1.113883.3.117.1.7.1.279",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DCY"
+  },
+  {
+    "concepts": [
+      {
+        "_id": "5d289ce031fe5f8ba62f785x",
+        "code": "1001000119102",
+        "code_system_name": "SNOMEDCT",
+        "code_system_oid": "2.16.840.1.113883.6.96",
+        "code_system_version": "2026",
+        "display_name": "Pulmonary embolism with pulmonary infarction (disorder)"
+      }
+    ],
+    "display_name": "Pulmonary Embolism or DVT\n",
+    "oid": "2.16.840.1.113883.17.4077.3.1036",
+    "version": "Draft-065C9002-603F-46A3-BA0F-E2A9F1732DCX"
   }
 ]
