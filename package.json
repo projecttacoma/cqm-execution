@@ -54,7 +54,7 @@
     "require-directory": "^2.1.1"
   },
   "dependencies": {
-    "cqm-models": "4.3.1",
+    "cqm-models": "projecttacoma/cqm-models#datetime_interval",
     "lodash": "^4.17.19",
     "moment": "^2.29.4"
   }
