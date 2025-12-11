@@ -1,5 +1,4 @@
 module.exports = {
-  name: 'jest',
   testEnvironment: 'node',
   verbose: true,
   roots: ['<rootDir>/lib/', '<rootDir>/spec/'],
