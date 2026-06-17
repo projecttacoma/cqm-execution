@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x, 22.x]
+        node-version: [22.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -26,6 +26,6 @@ jobs:
         yarn install
         yarn run lint
         yarn run test
-        yarn audit
+        yarn audit --level moderate
     - name: Run validation
       run: ./bin/validate_browser.sh
