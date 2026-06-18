@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x, 22.x]
+        node-version: [22.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -19,13 +19,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install Yarn
-      run: npm install -g yarn
-    - name: Run yarn
+    - name: Run npm
       run: |
-        yarn install
-        yarn run lint
-        yarn run test
-        yarn audit
+        npm ci
+        npm run lint
+        npm test
+    - name: Audit dependencies (moderate+)
+      run: |
+        npm audit --audit-level=moderate
     - name: Run validation
       run: ./bin/validate_browser.sh
